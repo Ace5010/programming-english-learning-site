@@ -1,0 +1,26 @@
+{
+  "name": "programming-english-learning-site",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "verify": "python tools/verify_project.py",
+    "generate:vocabulary": "node scripts/build-vocabulary.mjs",
+    "generate:audio": "python tools/generate_piper_audio.py --site . --model tools/models/en_US-lessac-medium.onnx"
+  },
+  "dependencies": {
+    "react": "19.2.6",
+    "react-dom": "19.2.6"
+  },
+  "devDependencies": {
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
+    "@vitejs/plugin-react": "6.0.2",
+    "opencc-js": "1.4.2",
+    "typescript": "5.9.3",
+    "vite": "8.2.2"
+  }
+}

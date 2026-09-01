@@ -1,0 +1,81 @@
+repository|代码仓库|GitHub 与版本控制|Clone the repository to your computer.|把代码仓库克隆到你的电脑。|rɪˈpɑːzətɔːri
+branch|分支|GitHub 与版本控制|Create a new branch for this feature.|为这个功能创建一个新分支。|bræntʃ
+commit|提交；提交记录|GitHub 与版本控制|Commit your changes with a clear message.|用清楚的说明提交你的更改。|kəˈmɪt
+clone|克隆；复制仓库|GitHub 与版本控制|Clone the project from GitHub.|从 GitHub 克隆这个项目。|kloʊn
+fork|复刻；派生仓库|GitHub 与版本控制|Fork the repository before you experiment.|试验之前先复刻这个仓库。|fɔːrk
+merge|合并|GitHub 与版本控制|Merge the branch after the review.|审查后合并这个分支。|mɜːrdʒ
+pull request|拉取请求；合并请求|GitHub 与版本控制|Open a pull request for your changes.|为你的更改创建一个拉取请求。|
+issue|议题；问题单|GitHub 与版本控制|Create an issue to report the bug.|创建一个问题单来报告这个缺陷。|ˈɪʃuː
+release|发布；发布版本|GitHub 与版本控制|Download the latest release.|下载最新发布版本。|rɪˈliːs
+tag|标签；版本标记|GitHub 与版本控制|The tag marks a stable version.|这个标签标记了一个稳定版本。|tæɡ
+checkout|切换分支或版本|GitHub 与版本控制|Check out the main branch before pulling.|拉取前先切换到主分支。|
+push|推送|GitHub 与版本控制|Push your local commits to GitHub.|把本地提交推送到 GitHub。|pʊʃ
+pull|拉取|GitHub 与版本控制|Pull the latest changes from the server.|从服务器拉取最新更改。|pʊl
+remote|远程仓库；远程的|GitHub 与版本控制|Add GitHub as a remote repository.|把 GitHub 添加为远程仓库。|rɪˈmoʊt
+origin|默认远程仓库名；来源|GitHub 与版本控制|Origin usually points to the cloned repository.|origin 通常指向被克隆的仓库。|ˈɔːrɪdʒɪn
+conflict|冲突|GitHub 与版本控制|Resolve the merge conflict before you continue.|继续之前先解决合并冲突。|ˈkɑːnflɪkt
+contributor|贡献者|GitHub 与版本控制|Every contributor can improve the project.|每位贡献者都可以改进项目。|kənˈtrɪbjətər
+maintainer|维护者|GitHub 与版本控制|The maintainer reviewed the pull request.|维护者审查了这个拉取请求。|meɪnˈteɪnər
+license|许可证|GitHub 与版本控制|Read the license before using the code.|使用代码前先阅读许可证。|ˈlaɪsns
+readme|项目说明文件|GitHub 与版本控制|The README explains how to install the project.|README 说明了如何安装项目。|
+function|函数|代码基础|This function returns the user name.|这个函数返回用户名。|ˈfʌŋkʃən
+variable|变量|代码基础|Store the value in a variable.|把这个值存入变量。|ˈveriəbəl
+constant|常量|代码基础|Use a constant for a value that never changes.|用常量保存永远不变的值。|ˈkɑːnstənt
+parameter|形参；参数|代码基础|The function accepts one parameter.|这个函数接受一个参数。|pəˈræmɪtər
+argument|实参；参数|代码基础|Pass the file name as an argument.|把文件名作为参数传入。|ˈɑːrɡjəmənt
+return|返回|代码基础|Return the result from the function.|从函数返回结果。|rɪˈtɜːrn
+class|类|代码基础|The class describes a user object.|这个类描述了用户对象。|klæs
+object|对象|代码基础|Create an object from the class.|根据这个类创建一个对象。|ˈɑːbdʒekt
+array|数组|代码基础|The array contains three values.|这个数组包含三个值。|əˈreɪ
+string|字符串|代码基础|Store the message as a string.|把消息存为字符串。|strɪŋ
+boolean|布尔值|代码基础|A Boolean value is either true or false.|布尔值只能是真或假。|ˈbuːliən
+integer|整数|代码基础|The count must be an integer.|计数必须是整数。|ˈɪntɪdʒər
+loop|循环|代码基础|The loop runs once for each item.|循环会为每个项目运行一次。|luːp
+condition|条件|代码基础|Check the condition before running the code.|运行代码前检查条件。|kənˈdɪʃən
+operator|运算符|代码基础|Use the plus operator to add values.|使用加号运算符来相加数值。|ˈɑːpəreɪtər
+syntax|语法|代码基础|The editor found a syntax error.|编辑器发现了一个语法错误。|ˈsɪntæks
+statement|语句|代码基础|Each statement performs an action.|每条语句执行一个操作。|ˈsteɪtmənt
+expression|表达式|代码基础|This expression calculates the total.|这个表达式计算总数。|ɪkˈspreʃən
+method|方法|代码基础|Call the method on the object.|调用这个对象的方法。|ˈmeθəd
+property|属性|代码基础|Read the name property from the object.|读取对象的 name 属性。|ˈprɑːpərti
+interface|接口|代码基础|The interface describes the required methods.|接口描述了必需的方法。|ˈɪntərfeɪs
+module|模块|代码基础|Import the module at the top of the file.|在文件顶部导入模块。|ˈmɑːdʒuːl
+package|软件包|命令行与开发工具|Install the package before running the project.|运行项目前先安装软件包。|ˈpækɪdʒ
+install|安装|命令行与开发工具|Install the dependencies first.|先安装依赖项。|ɪnˈstɔːl
+command|命令|命令行与开发工具|Run the command in your terminal.|在终端中运行这条命令。|kəˈmænd
+terminal|终端|命令行与开发工具|Open a terminal in the project folder.|在项目文件夹中打开终端。|ˈtɜːrmɪnl
+directory|目录|操作系统与文件|Change to the project directory.|切换到项目目录。|dəˈrektəri
+path|路径|操作系统与文件|Check that the file path is correct.|检查文件路径是否正确。|pæθ
+file|文件|操作系统与文件|Save the code in a new file.|把代码保存在新文件中。|faɪl
+folder|文件夹|操作系统与文件|Create a folder for the images.|为图片创建一个文件夹。|ˈfoʊldər
+dependency|依赖项|命令行与开发工具|The project needs this dependency.|项目需要这个依赖项。|dɪˈpendənsi
+build|构建|命令行与开发工具|Build the project for production.|为生产环境构建项目。|bɪld
+compile|编译|命令行与开发工具|Compile the source code into a program.|把源代码编译成程序。|kəmˈpaɪl
+run|运行|命令行与开发工具|Run the development server.|运行开发服务器。|rʌn
+script|脚本|命令行与开发工具|Run the setup script once.|运行一次安装脚本。|skrɪpt
+configuration|配置|命令行与开发工具|Update the configuration file.|更新配置文件。|kənˌfɪɡjəˈreɪʃən
+environment|环境|命令行与开发工具|Set the environment variable before starting.|启动前设置环境变量。|ɪnˈvaɪrənmənt
+component|组件|前端开发|This component displays a button.|这个组件显示一个按钮。|kəmˈpoʊnənt
+browser|浏览器|前端开发|Open the page in your browser.|在浏览器中打开页面。|ˈbraʊzər
+layout|布局|前端开发|The layout changes on small screens.|布局会在小屏幕上改变。|ˈleɪaʊt
+responsive|响应式的|前端开发|The page has a responsive design.|这个页面采用响应式设计。|rɪˈspɑːnsɪv
+database|数据库|后端与数据库|Store the user record in the database.|把用户记录存入数据库。|ˈdeɪtəbeɪs
+query|查询|后端与数据库|The query returns ten rows.|这个查询返回十行数据。|ˈkwɪri
+server|服务器|后端与数据库|The server receives the request.|服务器接收请求。|ˈsɜːrvər
+request|请求|网络与云服务|Send a request to the API.|向 API 发送请求。|rɪˈkwest
+response|响应|网络与云服务|The server returns a JSON response.|服务器返回一个 JSON 响应。|rɪˈspɑːns
+endpoint|端点；接口地址|网络与云服务|This endpoint creates a new user.|这个接口地址用于创建新用户。|ˈendpɔɪnt
+deploy|部署|网络与云服务|Deploy the application to the cloud.|把应用部署到云端。|dɪˈplɔɪ
+error|错误|测试与调试|The console shows an error message.|控制台显示了一条错误消息。|ˈerər
+bug|缺陷；程序错误|测试与调试|The test revealed a bug.|测试发现了一个程序缺陷。|bʌɡ
+debug|调试|测试与调试|Debug the function step by step.|逐步调试这个函数。|ˌdiːˈbʌɡ
+test|测试|测试与调试|Write a test for the new feature.|为新功能编写测试。|test
+warning|警告|测试与调试|Read the warning before continuing.|继续之前先阅读警告。|ˈwɔːrnɪŋ
+authentication|身份验证|安全与权限|Authentication confirms who the user is.|身份验证确认用户是谁。|ɔːˌθentɪˈkeɪʃən
+permission|权限|安全与权限|The app needs permission to read the file.|应用需要读取文件的权限。|pərˈmɪʃən
+token|令牌|安全与权限|Never share your access token.|切勿分享你的访问令牌。|ˈtoʊkən
+encryption|加密|安全与权限|Encryption protects sensitive data.|加密可以保护敏感数据。|ɪnˈkrɪpʃən
+algorithm|算法|数据、算法与 AI|The algorithm sorts the values.|这个算法对数值进行排序。|ˈælɡərɪðəm
+dataset|数据集|数据、算法与 AI|The model learns from a training dataset.|模型从训练数据集中学习。|ˈdeɪtəset
+model|模型|数据、算法与 AI|The model predicts the next word.|模型预测下一个单词。|ˈmɑːdl
+prompt|提示词；提示|数据、算法与 AI|Write a clear prompt for the model.|为模型编写清楚的提示词。|prɑːmpt
