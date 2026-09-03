@@ -114,12 +114,14 @@ export default function Home() {
         selection === '全部词汇' ||
         (selection === '今日学习' && todayIds.has(item.id)) ||
         (selection === '收藏夹' && favorites.has(item.id)) ||
+        (selection === '已掌握' && mastered.has(item.id)) ||
         item.category === selection;
+      const masteryMatch = selection === '已掌握' ? mastered.has(item.id) : !mastered.has(item.id);
       const tierMatch = tier === '全部' || item.tier === tier;
       const queryMatch = !normalized || (item.word + ' ' + item.meaning + ' ' + item.example).toLowerCase().includes(normalized);
-      return sourceMatch && tierMatch && queryMatch;
+      return sourceMatch && masteryMatch && tierMatch && queryMatch;
     });
-  }, [selection, tier, query, favorites, todayIds]);
+  }, [selection, tier, query, favorites, mastered, todayIds]);
 
   const playAudio = (fileName: string, slow = false, key = fileName) => {
     if (speaking === key && activeAudio.current) {
@@ -164,8 +166,17 @@ export default function Home() {
   };
 
   const startQuiz = () => {
-    const pool = filtered.length >= 10 ? filtered : vocabulary.filter((item) => item.tier === '核心');
-    setQuiz({ items: shuffled(pool).slice(0, 10), index: 0, score: 0, selected: null, finished: false });
+    const pool = selection === '已掌握'
+      ? filtered
+      : filtered.length >= 10
+        ? filtered
+        : vocabulary.filter((item) => item.tier === '核心' && !mastered.has(item.id));
+    const items = shuffled(pool).slice(0, 10);
+    if (items.length === 0) {
+      window.alert(selection === '已掌握' ? '还没有已掌握的单词，先去学习并标记几个吧。' : '当前没有可测验的单词。');
+      return;
+    }
+    setQuiz({ items, index: 0, score: 0, selected: null, finished: false });
   };
 
   const answerQuiz = (id: number) => {
@@ -216,6 +227,7 @@ export default function Home() {
           <p className="eyebrow">学习</p>
           <button className={selection === '今日学习' ? 'nav-item active' : 'nav-item'} onClick={() => changeSelection('今日学习')}><span className="nav-mark">◎</span><span>今日学习</span><em>12</em></button>
           <button className={selection === '收藏夹' ? 'nav-item active' : 'nav-item'} onClick={() => changeSelection('收藏夹')}><span className="nav-mark">☆</span><span>收藏夹</span><em>{favorites.size}</em></button>
+          <button className={selection === '已掌握' ? 'nav-item active' : 'nav-item'} onClick={() => changeSelection('已掌握')}><span className="nav-mark">✓</span><span>已掌握</span><em>{mastered.size}</em></button>
           <button className={selection === '全部词汇' ? 'nav-item active' : 'nav-item'} onClick={() => changeSelection('全部词汇')}><span className="nav-mark">AZ</span><span>全部词汇</span><em>{vocabulary.length}</em></button>
 
           <p className="eyebrow category-label">词汇分类</p>
@@ -244,7 +256,7 @@ export default function Home() {
           <div className="top-actions">
             <label className="search"><span>⌕</span><input value={query} onChange={(event) => { setQuery(event.target.value); setVisibleCount(24); }} placeholder="搜索单词、中文或例句…" /><kbd>Ctrl K</kbd></label>
             <button className="icon-button" onClick={() => setShowVoice(true)} title="美式语音设置">♪</button>
-            <button className="quiz-button" onClick={startQuiz}>开始测验 <span>→</span></button>
+            <button className="quiz-button" onClick={startQuiz}>{selection === '已掌握' ? '复习测验' : '开始测验'} <span>→</span></button>
           </div>
         </header>
 
@@ -261,12 +273,12 @@ export default function Home() {
         ) : (
           <section className="library-strip">
             <div><span>{categoryMarks[selection] ?? 'AZ'}</span><div><strong>{filtered.length.toLocaleString()}</strong><small>当前词汇</small></div></div>
-            <p>点击发音、阅读双语例句，再将熟悉的词标记为“已掌握”。</p>
+            <p>{selection === '已掌握' ? '这里保留所有已掌握的单词，可随时点读、测验复习，或移回学习列表。' : '点击发音、阅读双语例句，再将熟悉的词标记为“已掌握”。'}</p>
           </section>
         )}
 
         <div className="section-heading">
-          <div><h2>{query ? '搜索结果' : selection === '今日学习' ? '今日核心词汇' : '词汇列表'}</h2><p>单词、例句均可点读；慢速为 0.72 倍语速</p></div>
+          <div><h2>{query ? '搜索结果' : selection === '今日学习' ? '今日核心词汇' : selection === '已掌握' ? '已掌握词汇 · 随时复习' : '词汇列表'}</h2><p>{selection === '已掌握' ? '点击“重新学习”可将单词移回普通学习列表' : '单词、例句均可点读；慢速为 0.72 倍语速'}</p></div>
           <div className="filters" aria-label="词汇级别">
             {['全部', '核心', '专业', '基础'].map((value) => <button className={tier === value ? 'selected' : ''} onClick={() => { setTier(value); setVisibleCount(24); }} key={value}>{value}</button>)}
           </div>
@@ -293,14 +305,14 @@ export default function Home() {
                     <div><p>{item.example}</p><span>{item.exampleZh}</span></div>
                   </div>
                   <div className="spelling"><span>拼写</span><code>{item.word.split('').map((letter) => letter === ' ' ? ' / ' : letter).join(' · ')}</code></div>
-                  <div className="card-footer"><span>{item.category}</span><button className={mastered.has(item.id) ? 'known active' : 'known'} onClick={() => toggleSet(setMastered, item.id)}><i>✓</i>{mastered.has(item.id) ? '已掌握' : '标记掌握'}</button></div>
+                  <div className="card-footer"><span>{item.category}</span><button className={mastered.has(item.id) ? 'known active' : 'known'} onClick={() => toggleSet(setMastered, item.id)}><i>{mastered.has(item.id) ? '↻' : '✓'}</i>{mastered.has(item.id) ? '重新学习' : '标记掌握'}</button></div>
                 </article>
               ))}
             </section>
             {visibleCount < filtered.length && <button className="load-more" onClick={() => setVisibleCount((count) => count + 24)}>再显示 24 个 <span>当前 {Math.min(visibleCount, filtered.length)} / {filtered.length.toLocaleString()}</span></button>}
           </>
         ) : (
-          <section className="empty-state"><span>⌕</span><h2>没有找到匹配词汇</h2><p>试试更短的英文、中文关键词，或切换到“全部”级别。</p><button onClick={() => { setQuery(''); setTier('全部'); }}>清除筛选</button></section>
+          <section className="empty-state"><span>{selection === '已掌握' ? '✓' : '⌕'}</span><h2>{selection === '已掌握' && !query ? '还没有已掌握的单词' : '没有找到匹配词汇'}</h2><p>{selection === '已掌握' && !query ? '在学习列表点击“标记掌握”，单词会自动来到这里，方便以后复习。' : '试试更短的英文、中文关键词，或切换到“全部”级别。'}</p><button onClick={() => { if (selection === '已掌握' && !query) changeSelection('今日学习'); else { setQuery(''); setTier('全部'); } }}>{selection === '已掌握' && !query ? '去学习单词' : '清除筛选'}</button></section>
         )}
 
         <footer><span>CodeWords · 共 {vocabulary.length.toLocaleString()} 个词汇</span><span>专业术语参考香港数字政策办公室《英汉资讯科技词汇》2025 年 11 月版</span></footer>
