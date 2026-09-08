@@ -1031,7 +1031,7 @@ footer {
 /* ---------- 测验弹窗 ---------- */
 
 .quiz-modal { width: min(620px, 100%); padding: 28px 34px 30px; }
-.quiz-head { display: flex; justify-content: space-between; align-items: start; }
+.quiz-head { display: flex; justify-content: space-between; align-items: start; gap: 12px; padding-right: 28px; }
 .quiz-head .eyebrow { margin: 0 0 5px; }
 .quiz-head span { color: #7f776e; font-size: 12px; font-variant-numeric: tabular-nums; }
 .quiz-head > strong { color: var(--brass-deep); font-size: 15px; font-variant-numeric: tabular-nums; }
@@ -1068,6 +1068,19 @@ footer {
 .quiz-word p { margin: 0; color: #6d655c; font: 13px var(--mono); }
 
 .quiz-prompt { margin: 26px 0 12px; color: #5f5951; font-size: 13px; font-weight: 700; }
+.quiz-spelling label { display: block; }
+.quiz-spelling input { width: 100%; min-width: 0; padding: 12px; border: 1px solid var(--line); border-radius: var(--r); background: #fff; color: var(--ink); font: 20px/1.5 var(--mono); }
+.quiz-spelling input:focus { outline: 2px solid var(--brass); outline-offset: 2px; }
+.quiz-spelling > p { color: var(--muted); font-size: 12px; line-height: 1.6; }
+.quiz-spelling button:disabled { opacity: .5; cursor: not-allowed; }
+.spelling-slots, .letter-bank { display: flex; flex-wrap: wrap; gap: 7px; margin: 16px 0; align-items: center; }
+.spelling-slots button, .spelling-slots span, .letter-bank button, .spelling-slots input { display: inline-grid; place-items: center; width: 40px; min-height: 44px; padding: 5px; border: 1px solid var(--line); border-radius: var(--r-sm); background: var(--surface-2); color: var(--ink); font: 20px/1.5 var(--mono); text-align: center; }
+.spelling-slots input { background: #fff; border: 2px solid var(--brass); }
+.letter-bank button { background: #fff; border-bottom-width: 3px; }
+.spelling-slots .word-space { width: 16px; border: 0; background: transparent; }
+.letter-bank button:hover:not(:disabled) { background: var(--brass-soft); }
+.spelling-slots button:disabled { opacity: 1; }
+.quiz-feedback p, .quiz-feedback span { overflow-wrap: anywhere; min-width: 0; }
 
 .quiz-options { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
 .quiz-options button {

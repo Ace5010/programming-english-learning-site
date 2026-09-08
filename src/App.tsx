@@ -37,6 +37,7 @@ type QuizState = {
   items: VocabularyItem[];
   index: number;
   score: number;
+  helped: number;
   selected: number | null;
   finished: boolean;
 };
@@ -56,6 +57,82 @@ function shuffled<T>(items: T[]) {
     [copy[index], copy[target]] = [copy[target], copy[index]];
   }
   return copy;
+}
+
+// A shorter valid definition must never become a distractor for its fuller form.
+function meaningsOverlap(left: string, right: string) {
+  const parts = (meaning: string) => meaning.toLowerCase()
+    .replace(/\([^)]*\)|（[^）]*）|\[[^\]]*\]|〔[^〕]*〕/g, '')
+    .split(/[；;，,、。\n/]+/)
+    .map((part) => part.replace(/[^\p{L}\p{N}]/gu, ''))
+    .filter(Boolean);
+  return parts(left).some((a) => parts(right).some((b) => {
+    if (a.includes(b) || b.includes(a)) return true;
+    // Be conservative with shared Chinese phrases, e.g. 标签 / 标记标签.
+    const phrases = a.match(/[\u4e00-\u9fff]+/g) ?? [];
+    return phrases.some((phrase) => [...phrase].some((_, index) =>
+      index + 1 < phrase.length && b.includes(phrase.slice(index, index + 2))));
+  }));
+}
+
+function buildQuizOptions(current: VocabularyItem, candidates: VocabularyItem[]) {
+  const options = [current];
+  for (const candidate of candidates) {
+    if (options.some((option) => option.id === candidate.id
+      || option.word.toLowerCase() === candidate.word.toLowerCase()
+      || meaningsOverlap(option.meaning, candidate.meaning))) continue;
+    options.push(candidate);
+    if (options.length === 4) break;
+  }
+  return options;
+}
+
+function SpellingExercise({ item, mode, onComplete }: { item: VocabularyItem; mode: 'tiles' | 'gap'; onComplete: (helped: boolean) => void }) {
+  const letters = useMemo(() => [...item.word].map((char, index) => ({ char, index })).filter(({ char }) => /[a-z]/i.test(char)), [item]);
+  const tiles = useMemo(() => shuffled(letters), [letters]);
+  const gap = letters[Math.floor(letters.length / 2)]?.index ?? 0;
+  const [chosen, setChosen] = useState<number[]>([]);
+  const [answer, setAnswer] = useState('');
+  const [helped, setHelped] = useState(false);
+  const [message, setMessage] = useState('');
+  const [done, setDone] = useState(false);
+  const expected = mode === 'tiles' ? letters.map(({ char }) => char).join('') : item.word[gap];
+  const value = mode === 'tiles' ? chosen.map((id) => letters.find(({ index }) => index === id)!.char).join('') : answer;
+  const hint = () => {
+    setHelped(true);
+    if (mode === 'gap') {
+      setMessage(`这个空格填「${expected}」，试着输入它。`);
+    } else {
+      const wrong = letters.findIndex(({ char }, index) => value[index]?.toLowerCase() !== char.toLowerCase());
+      const position = wrong < 0 ? letters.length - 1 : wrong;
+      setMessage(`第 ${position + 1} 个字母是「${letters[position].char}」。已帮你保留正确的开头，继续拼吧。`);
+      setChosen(letters.slice(0, position + 1).map(({ index }) => index));
+    }
+  };
+  const submit = () => {
+    if (done || !value.trim()) return;
+    if (value.trim().toLowerCase() !== expected.toLowerCase()) { hint(); return; }
+    setDone(true);
+    setMessage(helped ? '✓ 提示后完成，下次试试自己拼！' : '✓ 独立完成！');
+    onComplete(helped);
+  };
+  let letterPosition = 0;
+  return <form className="quiz-spelling" onSubmit={(event) => { event.preventDefault(); submit(); }}>
+    <p className="quiz-prompt">{mode === 'tiles' ? '点击下方字母，按顺序拼出单词' : '只需补上一个字母'}</p>
+    <div className="spelling-slots" aria-label="单词拼写">
+      {[...item.word].map((char, index) => {
+        if (mode === 'gap') return index === gap ? <input key={index} aria-label="缺失的字母" autoFocus maxLength={1} value={answer} onChange={(event) => setAnswer(event.target.value)} disabled={done} autoComplete="off" autoCorrect="off" autoCapitalize="none" spellCheck={false} onKeyDown={(event) => { if (event.nativeEvent.isComposing && event.key === 'Enter') event.preventDefault(); }} /> : <span key={index} className={char === ' ' ? 'word-space' : ''}>{char}</span>;
+        if (!/[a-z]/i.test(char)) return <span key={index} className={char === ' ' ? 'word-space' : ''}>{char}</span>;
+        const position = letterPosition++;
+        const tile = letters.find(({ index: id }) => id === chosen[position]);
+        return <button key={index} type="button" disabled={done || !tile} aria-label={`第 ${position + 1} 格${tile ? `：${tile.char}，点击撤回` : '：待填'}`} onClick={() => setChosen(chosen.filter((_, n) => n !== position))}>{tile?.char ?? '＿'}</button>;
+      })}
+    </div>
+    {mode === 'tiles' && <div className="letter-bank" aria-label="可选字母">{tiles.map(({ char, index }) => <button type="button" key={index} disabled={done || chosen.includes(index)} onClick={() => setChosen([...chosen, index])}>{char}</button>)}</div>}
+    <p>{mode === 'tiles' ? '只有答案需要的字母，没有干扰项。点已填字母可以撤回。' : '其余字母已经给出，大小写都可以。'}</p>
+    <p role="status">{message}</p>
+    {!done && <div className="modal-actions"><button type="submit" disabled={mode === 'tiles' ? chosen.length !== letters.length : !answer.trim()}>检查答案</button><button type="button" onClick={hint}>给我提示</button></div>}
+  </form>;
 }
 
 export default function Home() {
@@ -176,7 +253,7 @@ export default function Home() {
       window.alert(selection === '已掌握' ? '还没有已掌握的单词，先去学习并标记几个吧。' : '当前没有可测验的单词。');
       return;
     }
-    setQuiz({ items, index: 0, score: 0, selected: null, finished: false });
+    setQuiz({ items, index: 0, score: 0, helped: 0, selected: null, finished: false });
   };
 
   const answerQuiz = (id: number) => {
@@ -186,7 +263,7 @@ export default function Home() {
   };
 
   const nextQuestion = () => {
-    if (!quiz) return;
+    if (!quiz || quiz.selected === null || quiz.finished) return;
     if (quiz.index === quiz.items.length - 1) {
       const sessions = quizSessions + 1;
       const best = Math.max(bestScore, quiz.score);
@@ -200,14 +277,20 @@ export default function Home() {
     setQuiz({ ...quiz, index: quiz.index + 1, selected: null });
   };
 
+  const isSpelling = quiz !== null && quiz.index % 2 === 0;
+  const completeSpelling = (helped: boolean) => {
+    if (!quiz || quiz.selected !== null) return;
+    setQuiz({ ...quiz, selected: quiz.items[quiz.index].id, score: quiz.score + (helped ? 0 : 1), helped: quiz.helped + (helped ? 1 : 0) });
+    playWord(quiz.items[quiz.index], false, `completed-${quiz.items[quiz.index].id}`);
+  };
+
   const quizItems = quiz?.items;
   const quizIndex = quiz?.index ?? 0;
   const quizFinished = quiz?.finished;
   const quizOptions = useMemo(() => {
     if (!quizItems || quizFinished) return [];
     const current = quizItems[quizIndex];
-    const alternatives = shuffled(vocabulary.filter((item) => item.id !== current.id && item.meaning !== current.meaning)).slice(0, 3);
-    return shuffled([current, ...alternatives]);
+    return shuffled(buildQuizOptions(current, shuffled(vocabulary)));
   }, [quizItems, quizIndex, quizFinished]);
 
   const currentTitle = selection === '今日学习' ? '今天学 12 个词' : selection;
@@ -353,9 +436,13 @@ export default function Home() {
             <button className="modal-close" onClick={() => setQuiz(null)}>×</button>
             {!quiz.finished ? (
               <>
-                <div className="quiz-head"><div><p className="eyebrow">词义选择</p><span>第 {quiz.index + 1} / {quiz.items.length} 题</span></div><strong>{quiz.score} 分</strong></div>
+                <div className="quiz-head"><div><p className="eyebrow">{isSpelling ? '拼写练习' : '词义选择'}</p><span>第 {quiz.index + 1} / {quiz.items.length} 题 · 词义与拼写交替</span></div><strong>{quiz.score} 分</strong></div>
                 <span className="quiz-track"><i style={{ width: ((quiz.index + 1) / quiz.items.length) * 100 + '%' }} /></span>
-                <div className="quiz-word"><button onClick={() => playWord(quiz.items[quiz.index])}>♪</button><h2>{quiz.items[quiz.index].word}</h2><p>{quiz.items[quiz.index].phonetic ? '/' + quiz.items[quiz.index].phonetic + '/' : '点击扬声器听发音'}</p></div>
+                {isSpelling ? <>
+                  <div className="quiz-word"><button aria-label="听单词发音" onClick={() => playWord(quiz.items[quiz.index])}>♪</button><h2>{quiz.items[quiz.index].meaning}</h2><p>可以反复听发音，再试着拼出来</p></div>
+                  <SpellingExercise key={`${quiz.items[quiz.index].id}-${quiz.index}`} item={quiz.items[quiz.index]} mode={quiz.index % 4 === 0 ? 'tiles' : 'gap'} onComplete={completeSpelling} />
+                </> : <>
+                <div className="quiz-word"><button aria-label="听单词发音" onClick={() => playWord(quiz.items[quiz.index])}>♪</button><h2>{quiz.items[quiz.index].word}</h2><p>{quiz.items[quiz.index].phonetic ? '/' + quiz.items[quiz.index].phonetic + '/' : '点击扬声器听发音'}</p></div>
                 <p className="quiz-prompt">请选择最合适的中文意思</p>
                 <div className="quiz-options">
                   {quizOptions.map((option, index) => {
@@ -365,10 +452,11 @@ export default function Home() {
                     return <button className={answered && isCorrect ? 'correct' : isWrong ? 'wrong' : ''} disabled={answered} onClick={() => answerQuiz(option.id)} key={option.id}><span>{String.fromCharCode(65 + index)}</span>{option.meaning}{answered && isCorrect && <i>✓</i>}{isWrong && <i>×</i>}</button>;
                   })}
                 </div>
-                {quiz.selected !== null && <div className="quiz-feedback"><p>{quiz.selected === quiz.items[quiz.index].id ? '回答正确！' : '记住这个词，下次一定可以。'}</p><span>{quiz.items[quiz.index].example}<br />{quiz.items[quiz.index].exampleZh}</span><button onClick={nextQuestion}>{quiz.index === quiz.items.length - 1 ? '查看成绩' : '下一题'} →</button></div>}
+                </>}
+                {quiz.selected !== null && <div className="quiz-feedback" role="status"><p>{quiz.selected === quiz.items[quiz.index].id ? '✓ 回答正确！' : '× 这题未答对，再记一遍。'}{isSpelling && <><br />正确拼写：{quiz.items[quiz.index].word}</>}</p><span>{quiz.items[quiz.index].example}<br />{quiz.items[quiz.index].exampleZh}</span><button onClick={nextQuestion}>{quiz.index === quiz.items.length - 1 ? '查看成绩' : '下一题'} →</button></div>}
               </>
             ) : (
-              <div className="quiz-result"><span className="result-mark">{quiz.score >= 8 ? '✓' : '↗'}</span><p className="eyebrow">测验完成</p><h2>{quiz.score >= 8 ? '太棒了，继续保持！' : '已经迈出了很好的一步'}</h2><strong>{quiz.score}<small>/10</small></strong><p>本次答对 {quiz.score} 个词，最佳成绩 {Math.max(bestScore, quiz.score)} 分。</p><div><button onClick={startQuiz}>再测一次</button><button onClick={() => setQuiz(null)}>返回学习</button></div></div>
+              <div className="quiz-result"><span className="result-mark">{quiz.score / quiz.items.length >= 0.8 ? '✓' : '↗'}</span><p className="eyebrow">测验完成</p><h2>{quiz.score / quiz.items.length >= 0.8 ? '太棒了，继续保持！' : '已经迈出了很好的一步'}</h2><strong>{quiz.score}<small>/{quiz.items.length}</small></strong><p>独立答对 {quiz.score} 题，提示后完成 {quiz.helped} 题。提示后完成不计入独立答对分数。</p><div><button onClick={startQuiz}>再测一次</button><button onClick={() => setQuiz(null)}>返回学习</button></div></div>
             )}
           </section>
         </div>
