@@ -2,6 +2,15 @@
 
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { vocabulary, type VocabularyItem } from './vocabulary';
+import learningFrequency from './learning-frequency.json';
+
+// Core concepts first; within each stage, prefer terms occurring in the sampled
+// official Git/Node/Python/TypeScript documentation. IDs break ties stably.
+const frequency: Record<string, number> = learningFrequency;
+const learningOrder = [...vocabulary].sort((a, b) => {
+  const stage = (item: VocabularyItem) => item.tier === '核心' ? 0 : (frequency[item.id] ?? 0) > 0 ? 1 : item.tier === '基础' ? 2 : 3;
+  return stage(a) - stage(b) || (frequency[b.id] ?? 0) - (frequency[a.id] ?? 0) || a.id - b.id;
+});
 
 const categoryOrder = [
   'GitHub 与版本控制',
@@ -35,6 +44,7 @@ const categoryMarks: Record<string, string> = {
 
 type QuizState = {
   items: VocabularyItem[];
+  pool: VocabularyItem[];
   index: number;
   score: number;
   helped: number;
@@ -47,6 +57,30 @@ function getStoredNumbers(key: string) {
     return new Set<number>(JSON.parse(localStorage.getItem(key) ?? '[]'));
   } catch {
     return new Set<number>();
+  }
+}
+
+const quizHistoryKey = 'codewords-quiz-last-tested';
+
+function readQuizHistory(): Record<string, number> {
+  const value: unknown = JSON.parse(localStorage.getItem(quizHistoryKey) ?? '{}');
+  if (!value || typeof value !== 'object' || Array.isArray(value)) throw new Error('Invalid quiz history');
+  return Object.fromEntries(Object.entries(value).filter(([id, time]) =>
+    /^\d+$/.test(id) && typeof time === 'number' && Number.isFinite(time) && time > 0));
+}
+
+function pickQuizItems(pool: VocabularyItem[], history: Record<string, number>) {
+  return [...pool].sort((a, b) => (history[a.id] ?? 0) - (history[b.id] ?? 0) || a.id - b.id).slice(0, 10);
+}
+
+function recordQuizAnswer(id: number) {
+  try {
+    const history = readQuizHistory();
+    // A monotonic timestamp keeps the rotation stable even if the clock moves back.
+    history[id] = Math.max(Date.now(), Math.max(0, ...Object.values(history)) + 1);
+    localStorage.setItem(quizHistoryKey, JSON.stringify(history));
+  } catch {
+    window.alert('本题已完成，但复习顺序未能保存。下次可能再次抽到此词，请检查浏览器是否允许保存网站数据。');
   }
 }
 
@@ -182,11 +216,12 @@ export default function Home() {
     return counts;
   }, []);
 
-  const todayIds = useMemo(() => new Set(vocabulary.filter((item) => item.tier === '核心').slice(0, 12).map((item) => item.id)), []);
+  const todayItems = useMemo(() => learningOrder.filter((item) => !mastered.has(item.id)).slice(0, 10), [mastered]);
+  const todayIds = useMemo(() => new Set(todayItems.map((item) => item.id)), [todayItems]);
 
   const filtered = useMemo(() => {
     const normalized = query.trim().toLowerCase();
-    return vocabulary.filter((item) => {
+    return (selection === '今日学习' ? todayItems : vocabulary).filter((item) => {
       const sourceMatch =
         selection === '全部词汇' ||
         (selection === '今日学习' && todayIds.has(item.id)) ||
@@ -194,11 +229,11 @@ export default function Home() {
         (selection === '已掌握' && mastered.has(item.id)) ||
         item.category === selection;
       const masteryMatch = selection === '已掌握' ? mastered.has(item.id) : !mastered.has(item.id);
-      const tierMatch = tier === '全部' || item.tier === tier;
+      const tierMatch = selection === '今日学习' || tier === '全部' || item.tier === tier;
       const queryMatch = !normalized || (item.word + ' ' + item.meaning + ' ' + item.example).toLowerCase().includes(normalized);
       return sourceMatch && masteryMatch && tierMatch && queryMatch;
     });
-  }, [selection, tier, query, favorites, mastered, todayIds]);
+  }, [selection, tier, query, favorites, mastered, todayIds, todayItems]);
 
   const playAudio = (fileName: string, slow = false, key = fileName) => {
     if (speaking === key && activeAudio.current) {
@@ -243,22 +278,26 @@ export default function Home() {
   };
 
   const startQuiz = () => {
-    const pool = selection === '已掌握'
-      ? filtered
-      : filtered.length >= 10
-        ? filtered
-        : vocabulary.filter((item) => item.tier === '核心' && !mastered.has(item.id));
-    const items = shuffled(pool).slice(0, 10);
-    if (items.length === 0) {
-      window.alert(selection === '已掌握' ? '还没有已掌握的单词，先去学习并标记几个吧。' : '当前没有可测验的单词。');
+    const pool = vocabulary.filter((item) => mastered.has(item.id));
+    let history: Record<string, number>;
+    try {
+      history = readQuizHistory();
+    } catch {
+      window.alert('无法读取复习记录，暂未开始测验，以免打乱复习顺序。请检查浏览器网站存储。');
       return;
     }
-    setQuiz({ items, index: 0, score: 0, helped: 0, selected: null, finished: false });
+    const items = pickQuizItems(pool, history);
+    if (items.length === 0) {
+      window.alert('测验只复习已掌握词汇。先学习并标记至少一个单词，再来测验吧。');
+      return;
+    }
+    setQuiz({ items, pool, index: 0, score: 0, helped: 0, selected: null, finished: false });
   };
 
   const answerQuiz = (id: number) => {
     if (!quiz || quiz.selected !== null) return;
     const correct = quiz.items[quiz.index].id === id;
+    recordQuizAnswer(quiz.items[quiz.index].id);
     setQuiz({ ...quiz, selected: id, score: quiz.score + (correct ? 1 : 0) });
   };
 
@@ -277,23 +316,26 @@ export default function Home() {
     setQuiz({ ...quiz, index: quiz.index + 1, selected: null });
   };
 
-  const isSpelling = quiz !== null && quiz.index % 2 === 0;
   const completeSpelling = (helped: boolean) => {
     if (!quiz || quiz.selected !== null) return;
+    recordQuizAnswer(quiz.items[quiz.index].id);
     setQuiz({ ...quiz, selected: quiz.items[quiz.index].id, score: quiz.score + (helped ? 0 : 1), helped: quiz.helped + (helped ? 1 : 0) });
     playWord(quiz.items[quiz.index], false, `completed-${quiz.items[quiz.index].id}`);
   };
 
   const quizItems = quiz?.items;
+  const quizPool = quiz?.pool;
   const quizIndex = quiz?.index ?? 0;
   const quizFinished = quiz?.finished;
   const quizOptions = useMemo(() => {
-    if (!quizItems || quizFinished) return [];
+    if (!quizItems || !quizPool || quizFinished) return [];
     const current = quizItems[quizIndex];
-    return shuffled(buildQuizOptions(current, shuffled(vocabulary)));
-  }, [quizItems, quizIndex, quizFinished]);
+    return shuffled(buildQuizOptions(current, shuffled(quizPool)));
+  }, [quizItems, quizPool, quizIndex, quizFinished]);
+  // If mastered definitions overlap too much for a choice, practice spelling instead.
+  const isSpelling = quiz !== null && (quiz.index % 2 === 0 || quizOptions.length < 2);
 
-  const currentTitle = selection === '今日学习' ? '今天学 12 个词' : selection;
+  const currentTitle = selection === '今日学习' ? `待学 ${todayItems.length} 个词` : selection;
   const progressPercent = Math.round((mastered.size / vocabulary.length) * 100);
 
   return (
@@ -308,7 +350,7 @@ export default function Home() {
 
         <nav aria-label="学习导航">
           <p className="eyebrow">学习</p>
-          <button className={selection === '今日学习' ? 'nav-item active' : 'nav-item'} onClick={() => changeSelection('今日学习')}><span className="nav-mark">◎</span><span>今日学习</span><em>12</em></button>
+          <button className={selection === '今日学习' ? 'nav-item active' : 'nav-item'} onClick={() => changeSelection('今日学习')}><span className="nav-mark">◎</span><span>今日学习</span><em>{todayItems.length}</em></button>
           <button className={selection === '收藏夹' ? 'nav-item active' : 'nav-item'} onClick={() => changeSelection('收藏夹')}><span className="nav-mark">☆</span><span>收藏夹</span><em>{favorites.size}</em></button>
           <button className={selection === '已掌握' ? 'nav-item active' : 'nav-item'} onClick={() => changeSelection('已掌握')}><span className="nav-mark">✓</span><span>已掌握</span><em>{mastered.size}</em></button>
           <button className={selection === '全部词汇' ? 'nav-item active' : 'nav-item'} onClick={() => changeSelection('全部词汇')}><span className="nav-mark">AZ</span><span>全部词汇</span><em>{vocabulary.length}</em></button>
@@ -346,12 +388,12 @@ export default function Home() {
         {selection === '今日学习' && !query ? (
           <section className="hero-card">
             <div>
-              <span className="lesson-pill">学习路径 · 第 1 课</span>
-              <h2>先看懂 GitHub 仓库</h2>
-              <p>点击单词听美式发音，再用一句真实开发场景理解它。</p>
-              <div className="hero-actions"><button onClick={() => playAudio('hero.mp3', true, 'hero')}>▶ 连续慢速听</button><button onClick={() => setShowProgress(true)}>查看学习进度</button></div>
+              <span className="lesson-pill">编程与技术文档 · 常用优先</span>
+              <h2>掌握一个，继续学下一个</h2>
+              <p>保留 10 个待学词，掌握后自动补充。先学核心词，再继续学习基础词和专业词。</p>
+              <div className="hero-actions"><button onClick={() => setShowProgress(true)}>查看学习进度</button></div>
             </div>
-            <div className="hero-stat"><strong>{[...todayIds].filter((id) => mastered.has(id)).length}<span>/12</span></strong><small>今日已掌握</small></div>
+            <div className="hero-stat"><strong>{mastered.size}</strong><small>累计已掌握</small></div>
           </section>
         ) : (
           <section className="library-strip">
@@ -361,10 +403,10 @@ export default function Home() {
         )}
 
         <div className="section-heading">
-          <div><h2>{query ? '搜索结果' : selection === '今日学习' ? '今日核心词汇' : selection === '已掌握' ? '已掌握词汇 · 随时复习' : '词汇列表'}</h2><p>{selection === '已掌握' ? '点击“重新学习”可将单词移回普通学习列表' : '单词、例句均可点读；慢速为 0.72 倍语速'}</p></div>
-          <div className="filters" aria-label="词汇级别">
+          <div><h2>{query ? '搜索结果' : selection === '今日学习' ? '当前待学词汇' : selection === '已掌握' ? '已掌握词汇 · 随时复习' : '词汇列表'}</h2><p>{selection === '已掌握' ? '点击“重新学习”可将单词移回普通学习列表' : '单词、例句均可点读；慢速为 0.72 倍语速'}</p></div>
+          {selection !== '今日学习' && <div className="filters" aria-label="词汇级别">
             {['全部', '核心', '专业', '基础'].map((value) => <button className={tier === value ? 'selected' : ''} onClick={() => { setTier(value); setVisibleCount(24); }} key={value}>{value}</button>)}
-          </div>
+          </div>}
         </div>
 
         {filtered.length > 0 ? (
@@ -394,6 +436,8 @@ export default function Home() {
             </section>
             {visibleCount < filtered.length && <button className="load-more" onClick={() => setVisibleCount((count) => count + 24)}>再显示 24 个 <span>当前 {Math.min(visibleCount, filtered.length)} / {filtered.length.toLocaleString()}</span></button>}
           </>
+        ) : selection === '今日学习' && !query && todayItems.length === 0 ? (
+          <section className="empty-state"><span>✓</span><h2>全部词汇已掌握</h2><p>可以继续测验，巩固已经学过的词汇。</p><button onClick={startQuiz}>复习已掌握词汇</button></section>
         ) : (
           <section className="empty-state"><span>{selection === '已掌握' ? '✓' : '⌕'}</span><h2>{selection === '已掌握' && !query ? '还没有已掌握的单词' : '没有找到匹配词汇'}</h2><p>{selection === '已掌握' && !query ? '在学习列表点击“标记掌握”，单词会自动来到这里，方便以后复习。' : '试试更短的英文、中文关键词，或切换到“全部”级别。'}</p><button onClick={() => { if (selection === '已掌握' && !query) changeSelection('今日学习'); else { setQuery(''); setTier('全部'); } }}>{selection === '已掌握' && !query ? '去学习单词' : '清除筛选'}</button></section>
         )}
@@ -436,7 +480,7 @@ export default function Home() {
             <button className="modal-close" onClick={() => setQuiz(null)}>×</button>
             {!quiz.finished ? (
               <>
-                <div className="quiz-head"><div><p className="eyebrow">{isSpelling ? '拼写练习' : '词义选择'}</p><span>第 {quiz.index + 1} / {quiz.items.length} 题 · 词义与拼写交替</span></div><strong>{quiz.score} 分</strong></div>
+                <div className="quiz-head"><div><p className="eyebrow">{isSpelling ? '拼写练习' : '词义选择'}</p><span>第 {quiz.index + 1} / {quiz.items.length} 题 · 仅复习已掌握词汇<br />未测过优先，再复习最久未测的词</span></div><strong>{quiz.score} 分</strong></div>
                 <span className="quiz-track"><i style={{ width: ((quiz.index + 1) / quiz.items.length) * 100 + '%' }} /></span>
                 {isSpelling ? <>
                   <div className="quiz-word"><button aria-label="听单词发音" onClick={() => playWord(quiz.items[quiz.index])}>♪</button><h2>{quiz.items[quiz.index].meaning}</h2><p>可以反复听发音，再试着拼出来</p></div>
