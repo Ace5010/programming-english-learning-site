@@ -51,6 +51,17 @@ def main() -> None:
             audio_missing.append(name)
 
     mp3_files = list(AUDIO.glob("*.mp3"))
+    for voice in ('aria', 'guy'):
+        folder = ROOT / 'public/audio' / voice
+        expected = ['voice-test.mp3'] + [f'{kind}-{item["id"]}.mp3' for item in vocabulary for kind in ('word', 'example')]
+        for name in expected:
+            path = folder / name
+            if not path.is_file() or path.stat().st_size == 0:
+                audio_missing.append(f'{voice}/{name}')
+        actual = list(folder.glob('*.mp3'))
+        if len(actual) != len(expected):
+            audio_missing.append(f'{voice}: expected {len(expected)} files, found {len(actual)}')
+        print(f'{voice}: {len(actual)} MP3')
     print(f"项目：编程英语学习网站")
     print(f"词汇：{len(vocabulary)}")
     print(f"语音：{len(mp3_files)}")

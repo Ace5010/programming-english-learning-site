@@ -182,6 +182,10 @@ export default function Home() {
   const [showProgress, setShowProgress] = useState(false);
   const [showVoice, setShowVoice] = useState(false);
   const [speaking, setSpeaking] = useState('');
+  const [voice, setVoice] = useState<'aria' | 'guy'>(() => {
+    try { return localStorage.getItem('codewords-voice') === 'guy' ? 'guy' : 'aria'; }
+    catch { return 'aria'; }
+  });
   const [hydrated, setHydrated] = useState(false);
   const [mobileNav, setMobileNav] = useState(false);
   const activeAudio = useRef<HTMLAudioElement | null>(null);
@@ -245,14 +249,15 @@ export default function Home() {
     }
 
     activeAudio.current?.pause();
-    const audio = new Audio(new URL(`audio/piper-lessac/${fileName}`, document.baseURI).href);
+    const audio = new Audio(new URL(`audio/${voice}/${fileName}`, document.baseURI).href);
     audio.playbackRate = slow ? 0.72 : 1;
     audio.preservesPitch = true;
-    audio.onended = () => { activeAudio.current = null; setSpeaking(''); };
-    audio.onerror = () => { activeAudio.current = null; setSpeaking(''); window.alert('语音文件加载失败，请检查网络后重试。'); };
+    audio.onended = () => { if (activeAudio.current !== audio) return; activeAudio.current = null; setSpeaking(''); };
+    audio.onerror = () => { if (activeAudio.current !== audio) return; activeAudio.current = null; setSpeaking(''); window.alert('语音文件加载失败，请检查网络后重试。'); };
     activeAudio.current = audio;
     setSpeaking(key);
     void audio.play().catch(() => {
+      if (activeAudio.current !== audio) return;
       activeAudio.current = null;
       setSpeaking('');
       window.alert('浏览器暂时无法播放语音，请再次点击播放。');
@@ -452,8 +457,17 @@ export default function Home() {
           <button className="backdrop" onClick={() => setShowVoice(false)} aria-label="关闭" />
           <section className="modal voice-modal">
             <button className="modal-close" onClick={() => setShowVoice(false)}>×</button>
-            <span className="modal-icon">♪</span><p className="eyebrow">固定发音</p><h2>Piper Lessac 美式英语</h2>
-            <p className="modal-copy">全站使用预先生成的同一套清晰美式语音，不再调用手机或电脑的系统朗读，因此不同设备听到的音色一致。</p>
+            <span className="modal-icon">♪</span><p className="eyebrow">美式发音</p><h2>选择你喜欢的声音</h2>
+            <p className="modal-copy">单词、例句和测验统一使用所选声音。正常播放保持原始语速，点击慢速可放慢聆听。</p>
+            <label className="voice-select"><span>点读声音</span><select value={voice} onChange={(event) => {
+              const next = event.target.value === 'guy' ? 'guy' : 'aria';
+              activeAudio.current?.pause();
+              activeAudio.current = null;
+              setSpeaking('');
+              setVoice(next);
+              try { localStorage.setItem('codewords-voice', next); }
+              catch { window.alert('声音已切换，但浏览器未能保存偏好，下次打开可能恢复默认声音。'); }
+            }}><option value="aria">Aria · 美式女声</option><option value="guy">Guy · 美式男声</option></select></label>
             <div className="voice-status"><span className="dot good" />固定音源已启用 · 无需安装语音包</div>
             <div className="modal-actions"><button onClick={() => playAudio('voice-test.mp3', false, 'voice-test')}>▶ 正常试听</button><button onClick={() => playAudio('voice-test.mp3', true, 'voice-test-slow')}>▶ 慢速试听</button></div>
           </section>

@@ -6,8 +6,8 @@
 
 - 3,560 个英语词汇，包含中文释义、分类、音标、双语例句和拼写展示
 - 单词点读、例句朗读和慢速播放
-- Piper `en_US-lessac-medium` 固定美式英语音源
-- 7,122 个 MP3 文件：3,560 个单词、3,560 个例句、2 个试听音频
+- Aria 美式女声 / Guy 美式男声，可切换并记住偏好
+- 双声线共 14,242 个 MP3：每套 3,560 个单词、3,560 个例句、1 个试听音频；旧 Piper 文件保留供回溯，不进入新版部署
 - 收藏、掌握标记、学习进度和十题测验
 - 手机与桌面响应式排版
 - 无访客登录、无运行时语音接口依赖
@@ -21,9 +21,12 @@
 ```text
 编程英语学习网站/
 ├─ src/                         网页源码与 3,560 词数据
-├─ public/audio/piper-lessac/  7,122 个固定语音文件
+├─ public/audio/aria/          7,121 个美式女声音频
+├─ public/audio/guy/           7,121 个美式男声音频
+├─ public/audio/piper-lessac/  7,122 个旧语音文件（保留）
 ├─ tools/
-│  ├─ generate_piper_audio.py  可续跑的语音生成器
+│  ├─ generate_neural_audio.py Aria / Guy 可续跑生成器（见 docs/NEURAL_AUDIO.md）
+│  ├─ generate_piper_audio.py  旧 Piper 语音生成器
 │  ├─ requirements.txt         Python 依赖
 │  └─ models/                  Lessac 模型和配置
 ├─ scripts/
@@ -69,6 +72,8 @@ npm run generate:vocabulary
 生成器只使用本项目 `sources` 内的资料，不依赖原工作目录。
 
 ## 重新生成固定语音
+
+当前 Aria / Guy 双声线的再生成方法见 [双声线说明](docs/NEURAL_AUDIO.md)。以下保留旧 Piper 音频的再生成方法，仅用于回溯。
 
 先创建 Python 环境并安装 Piper：
 

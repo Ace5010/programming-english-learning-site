@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && node scripts/prepare-deploy.mjs",
     "preview": "vite preview",
     "verify": "python tools/verify_project.py",
     "generate:vocabulary": "node scripts/build-vocabulary.mjs",
