@@ -1,0 +1,1149 @@
+{
+  "at": "2026-09-15T15:23:39.420Z",
+  "browser": "152.0.7977.83",
+  "input": "Synthetic existing course MP3 -> Web Audio -> native SpeechRecognition.start(audioTrack). No physical microphone, user profile, or result mocking.",
+  "results": [
+    "First lesson: native hello/goodbye, word highlights, refresh, four themes and three widths, completion recorded as speaking self-report, legacy state intact.",
+    "Native long sentence and free expression: complete multi-segment transcript, different learner name not compared against reference, editable textarea and refresh preserve text, completion remains self-assessment."
+  ],
+  "evidence": [
+    {
+      "label": "first lesson hello",
+      "events": [
+        {
+          "id": "hello",
+          "startedAt": 1789485819950,
+          "events": [
+            {
+              "type": "start",
+              "elapsedMs": 17
+            },
+            {
+              "type": "audiostart",
+              "elapsedMs": 19
+            },
+            {
+              "type": "speechstart",
+              "elapsedMs": 788
+            },
+            {
+              "type": "result",
+              "elapsedMs": 1287,
+              "results": [
+                {
+                  "final": false,
+                  "transcript": "hello",
+                  "confidence": 0.009999999776482582
+                }
+              ]
+            },
+            {
+              "type": "result",
+              "elapsedMs": 2024,
+              "results": [
+                {
+                  "final": false,
+                  "transcript": "hello",
+                  "confidence": 0.8999999761581421
+                }
+              ]
+            },
+            {
+              "type": "result",
+              "elapsedMs": 2087,
+              "results": [
+                {
+                  "final": true,
+                  "transcript": "hello",
+                  "confidence": 0.9721954464912415
+                }
+              ]
+            },
+            {
+              "type": "speechend",
+              "elapsedMs": 2090
+            },
+            {
+              "type": "audioend",
+              "elapsedMs": 2091
+            },
+            {
+              "type": "end",
+              "elapsedMs": 2260
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "first lesson goodbye after refresh",
+      "events": [
+        {
+          "id": "goodbye",
+          "startedAt": 1789485822409,
+          "events": [
+            {
+              "type": "start",
+              "elapsedMs": 19
+            },
+            {
+              "type": "audiostart",
+              "elapsedMs": 20
+            },
+            {
+              "type": "speechstart",
+              "elapsedMs": 809
+            },
+            {
+              "type": "result",
+              "elapsedMs": 1172,
+              "results": [
+                {
+                  "final": false,
+                  "transcript": "good",
+                  "confidence": 0.009999999776482582
+                }
+              ]
+            },
+            {
+              "type": "result",
+              "elapsedMs": 1461,
+              "results": [
+                {
+                  "final": false,
+                  "transcript": "goodby",
+                  "confidence": 0.009999999776482582
+                }
+              ]
+            },
+            {
+              "type": "result",
+              "elapsedMs": 1582,
+              "results": [
+                {
+                  "final": false,
+                  "transcript": "goodbye",
+                  "confidence": 0.009999999776482582
+                }
+              ]
+            },
+            {
+              "type": "result",
+              "elapsedMs": 2148,
+              "results": [
+                {
+                  "final": true,
+                  "transcript": "goodbye",
+                  "confidence": 0.9355003833770752
+                }
+              ]
+            },
+            {
+              "type": "speechend",
+              "elapsedMs": 2152
+            },
+            {
+              "type": "audioend",
+              "elapsedMs": 2153
+            },
+            {
+              "type": "end",
+              "elapsedMs": 2329
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "long sentence meet-ben",
+      "events": [
+        {
+          "id": "meet-ben",
+          "startedAt": 1789485826717,
+          "events": [
+            {
+              "type": "start",
+              "elapsedMs": 14
+            },
+            {
+              "type": "audiostart",
+              "elapsedMs": 15
+            },
+            {
+              "type": "speechstart",
+              "elapsedMs": 791
+            },
+            {
+              "type": "result",
+              "elapsedMs": 1635,
+              "results": [
+                {
+                  "final": false,
+                  "transcript": "hi",
+                  "confidence": 0.009999999776482582
+                }
+              ]
+            },
+            {
+              "type": "result",
+              "elapsedMs": 2095,
+              "results": [
+                {
+                  "final": true,
+                  "transcript": "hi",
+                  "confidence": 0.6971188187599182
+                }
+              ]
+            },
+            {
+              "type": "result",
+              "elapsedMs": 2683,
+              "results": [
+                {
+                  "final": true,
+                  "transcript": "hi",
+                  "confidence": 0.6971188187599182
+                },
+                {
+                  "final": false,
+                  "transcript": " my",
+                  "confidence": 0.009999999776482582
+                }
+              ]
+            },
+            {
+              "type": "result",
+              "elapsedMs": 2746,
+              "results": [
+                {
+                  "final": true,
+                  "transcript": "hi",
+                  "confidence": 0.6971188187599182
+                },
+                {
+                  "final": false,
+                  "transcript": " my name",
+                  "confidence": 0.009999999776482582
+                }
+              ]
+            },
+            {
+              "type": "result",
+              "elapsedMs": 2853,
+              "results": [
+                {
+                  "final": true,
+                  "transcript": "hi",
+                  "confidence": 0.6971188187599182
+                },
+                {
+                  "final": false,
+                  "transcript": " my name is",
+                  "confidence": 0.009999999776482582
+                }
+              ]
+            },
+            {
+              "type": "result",
+              "elapsedMs": 3431,
+              "results": [
+                {
+                  "final": true,
+                  "transcript": "hi",
+                  "confidence": 0.6971188187599182
+                },
+                {
+                  "final": false,
+                  "transcript": " my",
+                  "confidence": 0.8999999761581421
+                },
+                {
+                  "final": false,
+                  "transcript": " name is",
+                  "confidence": 0.009999999776482582
+                }
+              ]
+            },
+            {
+              "type": "result",
+              "elapsedMs": 3433,
+              "results": [
+                {
+                  "final": true,
+                  "transcript": "hi",
+                  "confidence": 0.6971188187599182
+                },
+                {
+                  "final": false,
+                  "transcript": " my name",
+                  "confidence": 0.8999999761581421
+                },
+                {
+                  "final": false,
+                  "transcript": " is Ben",
+                  "confidence": 0.009999999776482582
+                }
+              ]
+            },
+            {
+              "type": "result",
+              "elapsedMs": 3661,
+              "results": [
+                {
+                  "final": true,
+                  "transcript": "hi",
+                  "confidence": 0.6971188187599182
+                },
+                {
+                  "final": false,
+                  "transcript": " my name is",
+                  "confidence": 0.8999999761581421
+                },
+                {
+                  "final": false,
+                  "transcript": " Ben",
+                  "confidence": 0.009999999776482582
+                }
+              ]
+            },
+            {
+              "type": "result",
+              "elapsedMs": 3969,
+              "results": [
+                {
+                  "final": true,
+                  "transcript": "hi",
+                  "confidence": 0.6971188187599182
+                },
+                {
+                  "final": true,
+                  "transcript": " my name is Ben",
+                  "confidence": 0.9721954464912415
+                }
+              ]
+            },
+            {
+              "type": "result",
+              "elapsedMs": 4477,
+              "results": [
+                {
+                  "final": true,
+                  "transcript": "hi",
+                  "confidence": 0.6971188187599182
+                },
+                {
+                  "final": true,
+                  "transcript": " my name is Ben",
+                  "confidence": 0.9721954464912415
+                },
+                {
+                  "final": false,
+                  "transcript": " are",
+                  "confidence": 0.009999999776482582
+                }
+              ]
+            },
+            {
+              "type": "result",
+              "elapsedMs": 4830,
+              "results": [
+                {
+                  "final": true,
+                  "transcript": "hi",
+                  "confidence": 0.6971188187599182
+                },
+                {
+                  "final": true,
+                  "transcript": " my name is Ben",
+                  "confidence": 0.9721954464912415
+                },
+                {
+                  "final": false,
+                  "transcript": " are you",
+                  "confidence": 0.009999999776482582
+                }
+              ]
+            },
+            {
+              "type": "result",
+              "elapsedMs": 4968,
+              "results": [
+                {
+                  "final": true,
+                  "transcript": "hi",
+                  "confidence": 0.6971188187599182
+                },
+                {
+                  "final": true,
+                  "transcript": " my name is Ben",
+                  "confidence": 0.9721954464912415
+                },
+                {
+                  "final": false,
+                  "transcript": " are you m",
+                  "confidence": 0.009999999776482582
+                }
+              ]
+            },
+            {
+              "type": "result",
+              "elapsedMs": 5014,
+              "results": [
+                {
+                  "final": true,
+                  "transcript": "hi",
+                  "confidence": 0.6971188187599182
+                },
+                {
+                  "final": true,
+                  "transcript": " my name is Ben",
+                  "confidence": 0.9721954464912415
+                },
+                {
+                  "final": false,
+                  "transcript": " are you Mia",
+                  "confidence": 0.009999999776482582
+                }
+              ]
+            },
+            {
+              "type": "result",
+              "elapsedMs": 5076,
+              "results": [
+                {
+                  "final": true,
+                  "transcript": "hi",
+                  "confidence": 0.6971188187599182
+                },
+                {
+                  "final": true,
+                  "transcript": " my name is Ben",
+                  "confidence": 0.9721954464912415
+                },
+                {
+                  "final": false,
+                  "transcript": " are",
+                  "confidence": 0.8999999761581421
+                },
+                {
+                  "final": false,
+                  "transcript": " you Mia",
+                  "confidence": 0.009999999776482582
+                }
+              ]
+            },
+            {
+              "type": "result",
+              "elapsedMs": 5583,
+              "results": [
+                {
+                  "final": true,
+                  "transcript": "hi",
+                  "confidence": 0.6971188187599182
+                },
+                {
+                  "final": true,
+                  "transcript": " my name is Ben",
+                  "confidence": 0.9721954464912415
+                },
+                {
+                  "final": false,
+                  "transcript": " are you",
+                  "confidence": 0.8999999761581421
+                },
+                {
+                  "final": false,
+                  "transcript": " Mia",
+                  "confidence": 0.009999999776482582
+                }
+              ]
+            },
+            {
+              "type": "result",
+              "elapsedMs": 5585,
+              "results": [
+                {
+                  "final": true,
+                  "transcript": "hi",
+                  "confidence": 0.6971188187599182
+                },
+                {
+                  "final": true,
+                  "transcript": " my name is Ben",
+                  "confidence": 0.9721954464912415
+                },
+                {
+                  "final": true,
+                  "transcript": " are you Mia",
+                  "confidence": 0.9721954464912415
+                }
+              ]
+            },
+            {
+              "type": "speechend",
+              "elapsedMs": 5587
+            },
+            {
+              "type": "audioend",
+              "elapsedMs": 5587
+            },
+            {
+              "type": "end",
+              "elapsedMs": 5778
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "free expression with different name",
+      "events": [
+        {
+          "id": "meet-ben",
+          "startedAt": 1789485826717,
+          "events": [
+            {
+              "type": "start",
+              "elapsedMs": 14
+            },
+            {
+              "type": "audiostart",
+              "elapsedMs": 15
+            },
+            {
+              "type": "speechstart",
+              "elapsedMs": 791
+            },
+            {
+              "type": "result",
+              "elapsedMs": 1635,
+              "results": [
+                {
+                  "final": false,
+                  "transcript": "hi",
+                  "confidence": 0.009999999776482582
+                }
+              ]
+            },
+            {
+              "type": "result",
+              "elapsedMs": 2095,
+              "results": [
+                {
+                  "final": true,
+                  "transcript": "hi",
+                  "confidence": 0.6971188187599182
+                }
+              ]
+            },
+            {
+              "type": "result",
+              "elapsedMs": 2683,
+              "results": [
+                {
+                  "final": true,
+                  "transcript": "hi",
+                  "confidence": 0.6971188187599182
+                },
+                {
+                  "final": false,
+                  "transcript": " my",
+                  "confidence": 0.009999999776482582
+                }
+              ]
+            },
+            {
+              "type": "result",
+              "elapsedMs": 2746,
+              "results": [
+                {
+                  "final": true,
+                  "transcript": "hi",
+                  "confidence": 0.6971188187599182
+                },
+                {
+                  "final": false,
+                  "transcript": " my name",
+                  "confidence": 0.009999999776482582
+                }
+              ]
+            },
+            {
+              "type": "result",
+              "elapsedMs": 2853,
+              "results": [
+                {
+                  "final": true,
+                  "transcript": "hi",
+                  "confidence": 0.6971188187599182
+                },
+                {
+                  "final": false,
+                  "transcript": " my name is",
+                  "confidence": 0.009999999776482582
+                }
+              ]
+            },
+            {
+              "type": "result",
+              "elapsedMs": 3431,
+              "results": [
+                {
+                  "final": true,
+                  "transcript": "hi",
+                  "confidence": 0.6971188187599182
+                },
+                {
+                  "final": false,
+                  "transcript": " my",
+                  "confidence": 0.8999999761581421
+                },
+                {
+                  "final": false,
+                  "transcript": " name is",
+                  "confidence": 0.009999999776482582
+                }
+              ]
+            },
+            {
+              "type": "result",
+              "elapsedMs": 3433,
+              "results": [
+                {
+                  "final": true,
+                  "transcript": "hi",
+                  "confidence": 0.6971188187599182
+                },
+                {
+                  "final": false,
+                  "transcript": " my name",
+                  "confidence": 0.8999999761581421
+                },
+                {
+                  "final": false,
+                  "transcript": " is Ben",
+                  "confidence": 0.009999999776482582
+                }
+              ]
+            },
+            {
+              "type": "result",
+              "elapsedMs": 3661,
+              "results": [
+                {
+                  "final": true,
+                  "transcript": "hi",
+                  "confidence": 0.6971188187599182
+                },
+                {
+                  "final": false,
+                  "transcript": " my name is",
+                  "confidence": 0.8999999761581421
+                },
+                {
+                  "final": false,
+                  "transcript": " Ben",
+                  "confidence": 0.009999999776482582
+                }
+              ]
+            },
+            {
+              "type": "result",
+              "elapsedMs": 3969,
+              "results": [
+                {
+                  "final": true,
+                  "transcript": "hi",
+                  "confidence": 0.6971188187599182
+                },
+                {
+                  "final": true,
+                  "transcript": " my name is Ben",
+                  "confidence": 0.9721954464912415
+                }
+              ]
+            },
+            {
+              "type": "result",
+              "elapsedMs": 4477,
+              "results": [
+                {
+                  "final": true,
+                  "transcript": "hi",
+                  "confidence": 0.6971188187599182
+                },
+                {
+                  "final": true,
+                  "transcript": " my name is Ben",
+                  "confidence": 0.9721954464912415
+                },
+                {
+                  "final": false,
+                  "transcript": " are",
+                  "confidence": 0.009999999776482582
+                }
+              ]
+            },
+            {
+              "type": "result",
+              "elapsedMs": 4830,
+              "results": [
+                {
+                  "final": true,
+                  "transcript": "hi",
+                  "confidence": 0.6971188187599182
+                },
+                {
+                  "final": true,
+                  "transcript": " my name is Ben",
+                  "confidence": 0.9721954464912415
+                },
+                {
+                  "final": false,
+                  "transcript": " are you",
+                  "confidence": 0.009999999776482582
+                }
+              ]
+            },
+            {
+              "type": "result",
+              "elapsedMs": 4968,
+              "results": [
+                {
+                  "final": true,
+                  "transcript": "hi",
+                  "confidence": 0.6971188187599182
+                },
+                {
+                  "final": true,
+                  "transcript": " my name is Ben",
+                  "confidence": 0.9721954464912415
+                },
+                {
+                  "final": false,
+                  "transcript": " are you m",
+                  "confidence": 0.009999999776482582
+                }
+              ]
+            },
+            {
+              "type": "result",
+              "elapsedMs": 5014,
+              "results": [
+                {
+                  "final": true,
+                  "transcript": "hi",
+                  "confidence": 0.6971188187599182
+                },
+                {
+                  "final": true,
+                  "transcript": " my name is Ben",
+                  "confidence": 0.9721954464912415
+                },
+                {
+                  "final": false,
+                  "transcript": " are you Mia",
+                  "confidence": 0.009999999776482582
+                }
+              ]
+            },
+            {
+              "type": "result",
+              "elapsedMs": 5076,
+              "results": [
+                {
+                  "final": true,
+                  "transcript": "hi",
+                  "confidence": 0.6971188187599182
+                },
+                {
+                  "final": true,
+                  "transcript": " my name is Ben",
+                  "confidence": 0.9721954464912415
+                },
+                {
+                  "final": false,
+                  "transcript": " are",
+                  "confidence": 0.8999999761581421
+                },
+                {
+                  "final": false,
+                  "transcript": " you Mia",
+                  "confidence": 0.009999999776482582
+                }
+              ]
+            },
+            {
+              "type": "result",
+              "elapsedMs": 5583,
+              "results": [
+                {
+                  "final": true,
+                  "transcript": "hi",
+                  "confidence": 0.6971188187599182
+                },
+                {
+                  "final": true,
+                  "transcript": " my name is Ben",
+                  "confidence": 0.9721954464912415
+                },
+                {
+                  "final": false,
+                  "transcript": " are you",
+                  "confidence": 0.8999999761581421
+                },
+                {
+                  "final": false,
+                  "transcript": " Mia",
+                  "confidence": 0.009999999776482582
+                }
+              ]
+            },
+            {
+              "type": "result",
+              "elapsedMs": 5585,
+              "results": [
+                {
+                  "final": true,
+                  "transcript": "hi",
+                  "confidence": 0.6971188187599182
+                },
+                {
+                  "final": true,
+                  "transcript": " my name is Ben",
+                  "confidence": 0.9721954464912415
+                },
+                {
+                  "final": true,
+                  "transcript": " are you Mia",
+                  "confidence": 0.9721954464912415
+                }
+              ]
+            },
+            {
+              "type": "speechend",
+              "elapsedMs": 5587
+            },
+            {
+              "type": "audioend",
+              "elapsedMs": 5587
+            },
+            {
+              "type": "end",
+              "elapsedMs": 5778
+            }
+          ]
+        },
+        {
+          "id": "meet-mia",
+          "startedAt": 1789485832716,
+          "events": [
+            {
+              "type": "start",
+              "elapsedMs": 9
+            },
+            {
+              "type": "audiostart",
+              "elapsedMs": 12
+            },
+            {
+              "type": "speechstart",
+              "elapsedMs": 792
+            },
+            {
+              "type": "result",
+              "elapsedMs": 1337,
+              "results": [
+                {
+                  "final": false,
+                  "transcript": "hello",
+                  "confidence": 0.009999999776482582
+                }
+              ]
+            },
+            {
+              "type": "result",
+              "elapsedMs": 2085,
+              "results": [
+                {
+                  "final": false,
+                  "transcript": "hello",
+                  "confidence": 0.8999999761581421
+                }
+              ]
+            },
+            {
+              "type": "result",
+              "elapsedMs": 2086,
+              "results": [
+                {
+                  "final": true,
+                  "transcript": "hello",
+                  "confidence": 0.9721954464912415
+                }
+              ]
+            },
+            {
+              "type": "result",
+              "elapsedMs": 2791,
+              "results": [
+                {
+                  "final": true,
+                  "transcript": "hello",
+                  "confidence": 0.9721954464912415
+                },
+                {
+                  "final": false,
+                  "transcript": " I'm",
+                  "confidence": 0.009999999776482582
+                }
+              ]
+            },
+            {
+              "type": "result",
+              "elapsedMs": 3042,
+              "results": [
+                {
+                  "final": true,
+                  "transcript": "hello",
+                  "confidence": 0.9721954464912415
+                },
+                {
+                  "final": false,
+                  "transcript": " I'm Mia",
+                  "confidence": 0.009999999776482582
+                }
+              ]
+            },
+            {
+              "type": "result",
+              "elapsedMs": 3372,
+              "results": [
+                {
+                  "final": true,
+                  "transcript": "hello",
+                  "confidence": 0.9721954464912415
+                },
+                {
+                  "final": false,
+                  "transcript": " I'm",
+                  "confidence": 0.8999999761581421
+                },
+                {
+                  "final": false,
+                  "transcript": " Mia",
+                  "confidence": 0.009999999776482582
+                }
+              ]
+            },
+            {
+              "type": "result",
+              "elapsedMs": 3591,
+              "results": [
+                {
+                  "final": true,
+                  "transcript": "hello",
+                  "confidence": 0.9721954464912415
+                },
+                {
+                  "final": true,
+                  "transcript": " I'm Mia",
+                  "confidence": 0.9597170352935791
+                }
+              ]
+            },
+            {
+              "type": "result",
+              "elapsedMs": 4279,
+              "results": [
+                {
+                  "final": true,
+                  "transcript": "hello",
+                  "confidence": 0.9721954464912415
+                },
+                {
+                  "final": true,
+                  "transcript": " I'm Mia",
+                  "confidence": 0.9597170352935791
+                },
+                {
+                  "final": false,
+                  "transcript": " what's",
+                  "confidence": 0.009999999776482582
+                }
+              ]
+            },
+            {
+              "type": "result",
+              "elapsedMs": 4419,
+              "results": [
+                {
+                  "final": true,
+                  "transcript": "hello",
+                  "confidence": 0.9721954464912415
+                },
+                {
+                  "final": true,
+                  "transcript": " I'm Mia",
+                  "confidence": 0.9597170352935791
+                },
+                {
+                  "final": false,
+                  "transcript": " what's your",
+                  "confidence": 0.009999999776482582
+                }
+              ]
+            },
+            {
+              "type": "result",
+              "elapsedMs": 4464,
+              "results": [
+                {
+                  "final": true,
+                  "transcript": "hello",
+                  "confidence": 0.9721954464912415
+                },
+                {
+                  "final": true,
+                  "transcript": " I'm Mia",
+                  "confidence": 0.9597170352935791
+                },
+                {
+                  "final": false,
+                  "transcript": " what's your name",
+                  "confidence": 0.009999999776482582
+                }
+              ]
+            },
+            {
+              "type": "result",
+              "elapsedMs": 4882,
+              "results": [
+                {
+                  "final": true,
+                  "transcript": "hello",
+                  "confidence": 0.9721954464912415
+                },
+                {
+                  "final": true,
+                  "transcript": " I'm Mia",
+                  "confidence": 0.9597170352935791
+                },
+                {
+                  "final": false,
+                  "transcript": " what's",
+                  "confidence": 0.8999999761581421
+                },
+                {
+                  "final": false,
+                  "transcript": " your name",
+                  "confidence": 0.009999999776482582
+                }
+              ]
+            },
+            {
+              "type": "result",
+              "elapsedMs": 4992,
+              "results": [
+                {
+                  "final": true,
+                  "transcript": "hello",
+                  "confidence": 0.9721954464912415
+                },
+                {
+                  "final": true,
+                  "transcript": " I'm Mia",
+                  "confidence": 0.9597170352935791
+                },
+                {
+                  "final": false,
+                  "transcript": " what's your",
+                  "confidence": 0.8999999761581421
+                },
+                {
+                  "final": false,
+                  "transcript": " name",
+                  "confidence": 0.009999999776482582
+                }
+              ]
+            },
+            {
+              "type": "result",
+              "elapsedMs": 5050,
+              "results": [
+                {
+                  "final": true,
+                  "transcript": "hello",
+                  "confidence": 0.9721954464912415
+                },
+                {
+                  "final": true,
+                  "transcript": " I'm Mia",
+                  "confidence": 0.9597170352935791
+                },
+                {
+                  "final": false,
+                  "transcript": " what's your name",
+                  "confidence": 0.8999999761581421
+                }
+              ]
+            },
+            {
+              "type": "result",
+              "elapsedMs": 5325,
+              "results": [
+                {
+                  "final": true,
+                  "transcript": "hello",
+                  "confidence": 0.9721954464912415
+                },
+                {
+                  "final": true,
+                  "transcript": " I'm Mia",
+                  "confidence": 0.9597170352935791
+                },
+                {
+                  "final": true,
+                  "transcript": " what's your name",
+                  "confidence": 0.9721954464912415
+                }
+              ]
+            },
+            {
+              "type": "speechend",
+              "elapsedMs": 6857
+            },
+            {
+              "type": "audioend",
+              "elapsedMs": 6857
+            },
+            {
+              "type": "end",
+              "elapsedMs": 7054
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "screenshots": [
+    "before-read-1440.png",
+    "read-minimal-1440.png",
+    "read-sketch-1440.png",
+    "read-print-1440.png",
+    "read-graffiti-1440.png",
+    "read-minimal-1920.png",
+    "read-sketch-1920.png",
+    "read-print-1920.png",
+    "read-graffiti-1920.png",
+    "read-minimal-390.png",
+    "read-sketch-390.png",
+    "read-print-390.png",
+    "read-graffiti-390.png",
+    "read-complete-1440.png",
+    "long-read-1440.png",
+    "self-expression-1440.png"
+  ],
+  "status": "passed",
+  "browserErrors": []
+}

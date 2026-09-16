@@ -1,0 +1,31 @@
+Executed browser checks, 2026-09-15
+URL: http://localhost:5186/
+Browser: Chrome 152.0.7977.83; native Audio; disposable contexts only
+Node: 24.19.0
+Playwright: C:/Users/shenwuqiang/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright
+
+node tools/test-redesign-browser.mjs
+REDESIGN BROWSER PASS: 7 scenarios; 16 actual-playback checks
+Detailed per-scenario evidence and native media events: ../after/redesign-results.json
+
+node tools/test-review-browser.mjs
+BROWSER PASS: 12 scenarios; favicon errors: 10
+All five exercise types, pair error isolation, hint persistence, dictation correction,
+cloze context, early exit, damaged storage, write failure, mobile layout, longest
+dictation and actual selected voice/slow rate passed.
+Favicon 404 requests are excluded by this pre-existing regression script.
+No application page errors or failed audio assets were reported.
+
+node tools/test-compact-cards.mjs
+PASS: 8 scenarios; errors: []
+Favorite/spelling controls, click/keyboard audio, sentence cache version, text selection,
+voice/speed refresh, mastery/relearn, 1920-to-320 continuous list and 44px touch targets passed.
+
+node artifacts/busuu-redesign/compare-assets.mjs
+ASSET PASS: all 21365 files retain their exact SHA256 hashes.
+Changed: 0; missing: 0; added: 0.
+
+All 13 expected comparison filenames exist in both before/ and after/.
+Vocabulary, library and settings screenshots: empty isolated storage on both sides.
+Practice and feedback screenshots: mastered IDs [1,2,3,21,29] on both sides.
+See ../browser-qa.md for viewport and screenshot details.

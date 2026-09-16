@@ -1,8 +1,14 @@
 'use client';
 
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import { vocabulary, type VocabularyItem } from './vocabulary';
 import learningFrequency from './learning-frequency.json';
+import ReviewQuiz from './ReviewLesson';
+import Icon from './Icon';
+import ThemePicker, { readTheme, THEME_KEY, type Theme } from './ThemePicker';
+import { useThemeMotion } from './useThemeMotion';
+import DailyEnglish from './DailyEnglish';
+import type { DailyPhrase } from './dailyCourse';
 
 // Core concepts first; within each stage, prefer terms occurring in the sampled
 // official Git/Node/Python/TypeScript documentation. IDs break ties stably.
@@ -27,31 +33,6 @@ const categoryOrder = [
   '文档基础英语',
 ];
 
-const categoryMarks: Record<string, string> = {
-  'GitHub 与版本控制': 'GH',
-  '代码基础': '{ }',
-  '命令行与开发工具': '>_',
-  '前端开发': 'FE',
-  '后端与数据库': 'DB',
-  '网络与云服务': 'NW',
-  '操作系统与文件': 'OS',
-  '测试与调试': 'QA',
-  '安全与权限': 'SE',
-  '数据、算法与 AI': 'AI',
-  'IT 通用术语': 'IT',
-  '文档基础英语': 'EN',
-};
-
-type QuizState = {
-  items: VocabularyItem[];
-  pool: VocabularyItem[];
-  index: number;
-  score: number;
-  helped: number;
-  selected: number | null;
-  finished: boolean;
-};
-
 function getStoredNumbers(key: string) {
   try {
     return new Set<number>(JSON.parse(localStorage.getItem(key) ?? '[]'));
@@ -60,142 +41,68 @@ function getStoredNumbers(key: string) {
   }
 }
 
-const quizHistoryKey = 'codewords-quiz-last-tested';
-
-function readQuizHistory(): Record<string, number> {
-  const value: unknown = JSON.parse(localStorage.getItem(quizHistoryKey) ?? '{}');
-  if (!value || typeof value !== 'object' || Array.isArray(value)) throw new Error('Invalid quiz history');
-  return Object.fromEntries(Object.entries(value).filter(([id, time]) =>
-    /^\d+$/.test(id) && typeof time === 'number' && Number.isFinite(time) && time > 0));
-}
-
-function pickQuizItems(pool: VocabularyItem[], history: Record<string, number>) {
-  return [...pool].sort((a, b) => (history[a.id] ?? 0) - (history[b.id] ?? 0) || a.id - b.id).slice(0, 10);
-}
-
-function recordQuizAnswer(id: number) {
-  try {
-    const history = readQuizHistory();
-    // A monotonic timestamp keeps the rotation stable even if the clock moves back.
-    history[id] = Math.max(Date.now(), Math.max(0, ...Object.values(history)) + 1);
-    localStorage.setItem(quizHistoryKey, JSON.stringify(history));
-  } catch {
-    window.alert('本题已完成，但复习顺序未能保存。下次可能再次抽到此词，请检查浏览器是否允许保存网站数据。');
-  }
-}
-
-function shuffled<T>(items: T[]) {
-  const copy = [...items];
-  for (let index = copy.length - 1; index > 0; index -= 1) {
-    const target = Math.floor(Math.random() * (index + 1));
-    [copy[index], copy[target]] = [copy[target], copy[index]];
-  }
-  return copy;
-}
-
-// A shorter valid definition must never become a distractor for its fuller form.
-function meaningsOverlap(left: string, right: string) {
-  const parts = (meaning: string) => meaning.toLowerCase()
-    .replace(/\([^)]*\)|（[^）]*）|\[[^\]]*\]|〔[^〕]*〕/g, '')
-    .split(/[；;，,、。\n/]+/)
-    .map((part) => part.replace(/[^\p{L}\p{N}]/gu, ''))
-    .filter(Boolean);
-  return parts(left).some((a) => parts(right).some((b) => {
-    if (a.includes(b) || b.includes(a)) return true;
-    // Be conservative with shared Chinese phrases, e.g. 标签 / 标记标签.
-    const phrases = a.match(/[\u4e00-\u9fff]+/g) ?? [];
-    return phrases.some((phrase) => [...phrase].some((_, index) =>
-      index + 1 < phrase.length && b.includes(phrase.slice(index, index + 2))));
-  }));
-}
-
-function buildQuizOptions(current: VocabularyItem, candidates: VocabularyItem[]) {
-  const options = [current];
-  for (const candidate of candidates) {
-    if (options.some((option) => option.id === candidate.id
-      || option.word.toLowerCase() === candidate.word.toLowerCase()
-      || meaningsOverlap(option.meaning, candidate.meaning))) continue;
-    options.push(candidate);
-    if (options.length === 4) break;
-  }
-  return options;
-}
-
-function SpellingExercise({ item, mode, onComplete }: { item: VocabularyItem; mode: 'tiles' | 'gap'; onComplete: (helped: boolean) => void }) {
-  const letters = useMemo(() => [...item.word].map((char, index) => ({ char, index })).filter(({ char }) => /[a-z]/i.test(char)), [item]);
-  const tiles = useMemo(() => shuffled(letters), [letters]);
-  const gap = letters[Math.floor(letters.length / 2)]?.index ?? 0;
-  const [chosen, setChosen] = useState<number[]>([]);
-  const [answer, setAnswer] = useState('');
-  const [helped, setHelped] = useState(false);
-  const [message, setMessage] = useState('');
-  const [done, setDone] = useState(false);
-  const expected = mode === 'tiles' ? letters.map(({ char }) => char).join('') : item.word[gap];
-  const value = mode === 'tiles' ? chosen.map((id) => letters.find(({ index }) => index === id)!.char).join('') : answer;
-  const hint = () => {
-    setHelped(true);
-    if (mode === 'gap') {
-      setMessage(`这个空格填「${expected}」，试着输入它。`);
-    } else {
-      const wrong = letters.findIndex(({ char }, index) => value[index]?.toLowerCase() !== char.toLowerCase());
-      const position = wrong < 0 ? letters.length - 1 : wrong;
-      setMessage(`第 ${position + 1} 个字母是「${letters[position].char}」。已帮你保留正确的开头，继续拼吧。`);
-      setChosen(letters.slice(0, position + 1).map(({ index }) => index));
-    }
-  };
-  const submit = () => {
-    if (done || !value.trim()) return;
-    if (value.trim().toLowerCase() !== expected.toLowerCase()) { hint(); return; }
-    setDone(true);
-    setMessage(helped ? '✓ 提示后完成，下次试试自己拼！' : '✓ 独立完成！');
-    onComplete(helped);
-  };
-  let letterPosition = 0;
-  return <form className="quiz-spelling" onSubmit={(event) => { event.preventDefault(); submit(); }}>
-    <p className="quiz-prompt">{mode === 'tiles' ? '点击下方字母，按顺序拼出单词' : '只需补上一个字母'}</p>
-    <div className="spelling-slots" aria-label="单词拼写">
-      {[...item.word].map((char, index) => {
-        if (mode === 'gap') return index === gap ? <input key={index} aria-label="缺失的字母" autoFocus maxLength={1} value={answer} onChange={(event) => setAnswer(event.target.value)} disabled={done} autoComplete="off" autoCorrect="off" autoCapitalize="none" spellCheck={false} onKeyDown={(event) => { if (event.nativeEvent.isComposing && event.key === 'Enter') event.preventDefault(); }} /> : <span key={index} className={char === ' ' ? 'word-space' : ''}>{char}</span>;
-        if (!/[a-z]/i.test(char)) return <span key={index} className={char === ' ' ? 'word-space' : ''}>{char}</span>;
-        const position = letterPosition++;
-        const tile = letters.find(({ index: id }) => id === chosen[position]);
-        return <button key={index} type="button" disabled={done || !tile} aria-label={`第 ${position + 1} 格${tile ? `：${tile.char}，点击撤回` : '：待填'}`} onClick={() => setChosen(chosen.filter((_, n) => n !== position))}>{tile?.char ?? '＿'}</button>;
-      })}
-    </div>
-    {mode === 'tiles' && <div className="letter-bank" aria-label="可选字母">{tiles.map(({ char, index }) => <button type="button" key={index} disabled={done || chosen.includes(index)} onClick={() => setChosen([...chosen, index])}>{char}</button>)}</div>}
-    <p>{mode === 'tiles' ? '只有答案需要的字母，没有干扰项。点已填字母可以撤回。' : '其余字母已经给出，大小写都可以。'}</p>
-    <p role="status">{message}</p>
-    {!done && <div className="modal-actions"><button type="submit" disabled={mode === 'tiles' ? chosen.length !== letters.length : !answer.trim()}>检查答案</button><button type="button" onClick={hint}>给我提示</button></div>}
-  </form>;
-}
-
 export default function Home() {
   const [query, setQuery] = useState('');
+  const [section, setSection] = useState<'programming' | 'daily'>(() => {
+    try { return localStorage.getItem('codewords-section') === 'daily' ? 'daily' : 'programming'; }
+    catch { return 'programming'; }
+  });
+  const [dailyView, setDailyView] = useState<'course' | 'workbook' | 'review'>('course');
+  const [dailyNavigation, setDailyNavigation] = useState(0);
+  const [dailyVisited, setDailyVisited] = useState(section === 'daily');
+  const [theme, setTheme] = useState<Theme>(readTheme);
   const [selection, setSelection] = useState('今日学习');
   const [tier, setTier] = useState('全部');
   const [visibleCount, setVisibleCount] = useState(24);
   const [mastered, setMastered] = useState<Set<number>>(new Set());
   const [favorites, setFavorites] = useState<Set<number>>(new Set());
   const [quizSessions, setQuizSessions] = useState(0);
-  const [bestScore, setBestScore] = useState(0);
-  const [quiz, setQuiz] = useState<QuizState | null>(null);
-  const [showProgress, setShowProgress] = useState(false);
+  const [showQuiz, setShowQuiz] = useState(false);
   const [showVoice, setShowVoice] = useState(false);
   const [speaking, setSpeaking] = useState('');
   const [voice, setVoice] = useState<'aria' | 'guy'>(() => {
     try { return localStorage.getItem('codewords-voice') === 'guy' ? 'guy' : 'aria'; }
     catch { return 'aria'; }
   });
+  const [playbackSpeed, setPlaybackSpeed] = useState<'normal' | 'slow'>(() => {
+    try { return localStorage.getItem('codewords-playback-speed') === 'slow' ? 'slow' : 'normal'; }
+    catch { return 'normal'; }
+  });
   const [hydrated, setHydrated] = useState(false);
-  const [mobileNav, setMobileNav] = useState(false);
   const activeAudio = useRef<HTMLAudioElement | null>(null);
+  const reviewButton = useRef<HTMLButtonElement | null>(null);
+  const voiceDialog = useRef<HTMLElement | null>(null);
+  const audioKey = useRef('');
+  const navRef = useRef<HTMLElement>(null);
+  const contentRef = useRef<HTMLElement>(null);
+  const headingRef = useRef<HTMLElement>(null);
+
+  useLayoutEffect(() => { document.documentElement.dataset.theme = theme; }, [theme]);
+  const { replay } = useThemeMotion({ theme, selection: section === 'daily' ? dailyView : selection, navRef, contentRef, headingRef });
+  const stopAudio = useCallback(() => {
+    activeAudio.current?.pause();
+    activeAudio.current = null;
+    setSpeaking('');
+  }, []);
+  const changeSection = (next: 'programming' | 'daily') => {
+    if (next === section) return;
+    stopAudio();
+    if (next === 'daily') setDailyVisited(true);
+    setSection(next);
+    try { localStorage.setItem('codewords-section', next); } catch { /* Session navigation remains usable. */ }
+  };
+  const changeTheme = (value: Theme) => {
+    setTheme(value);
+    // Theme is an independent preference; existing learning keys stay untouched.
+    try { localStorage.setItem(THEME_KEY, value); }
+    catch { /* A blocked preference store must not interrupt an active exercise. */ }
+  };
 
   useEffect(() => {
     const frame = window.requestAnimationFrame(() => {
       setMastered(getStoredNumbers('codewords-mastered'));
       setFavorites(getStoredNumbers('codewords-favorites'));
       setQuizSessions(Number(localStorage.getItem('codewords-quiz-sessions') ?? 0));
-      setBestScore(Number(localStorage.getItem('codewords-best-score') ?? 0));
       setHydrated(true);
     });
     return () => {
@@ -214,14 +121,17 @@ export default function Home() {
     localStorage.setItem('codewords-favorites', JSON.stringify([...favorites]));
   }, [favorites, hydrated]);
 
-  const categoryCounts = useMemo(() => {
-    const counts = new Map<string, number>();
-    vocabulary.forEach((item) => counts.set(item.category, (counts.get(item.category) ?? 0) + 1));
-    return counts;
-  }, []);
-
   const todayItems = useMemo(() => learningOrder.filter((item) => !mastered.has(item.id)).slice(0, 10), [mastered]);
   const todayIds = useMemo(() => new Set(todayItems.map((item) => item.id)), [todayItems]);
+  const navigationCounts: Record<string, number> = useMemo(() => {
+    const masteredCount = vocabulary.filter(item => mastered.has(item.id)).length;
+    return {
+      '今日学习': todayItems.length,
+      '全部词汇': vocabulary.length - masteredCount,
+      '收藏夹': vocabulary.filter(item => favorites.has(item.id)).length,
+      '已掌握': masteredCount,
+    };
+  }, [todayItems.length, mastered, favorites]);
 
   const filtered = useMemo(() => {
     const normalized = query.trim().toLowerCase();
@@ -232,15 +142,15 @@ export default function Home() {
         (selection === '收藏夹' && favorites.has(item.id)) ||
         (selection === '已掌握' && mastered.has(item.id)) ||
         item.category === selection;
-      const masteryMatch = selection === '已掌握' ? mastered.has(item.id) : !mastered.has(item.id);
+      const masteryMatch = selection === '收藏夹' || (selection === '已掌握' ? mastered.has(item.id) : !mastered.has(item.id));
       const tierMatch = selection === '今日学习' || tier === '全部' || item.tier === tier;
       const queryMatch = !normalized || (item.word + ' ' + item.meaning + ' ' + item.example).toLowerCase().includes(normalized);
       return sourceMatch && masteryMatch && tierMatch && queryMatch;
     });
   }, [selection, tier, query, favorites, mastered, todayIds, todayItems]);
 
-  const playAudio = (fileName: string, slow = false, key = fileName) => {
-    if (speaking === key && activeAudio.current) {
+  const playAudio = (fileName: string, slow = false, key = fileName, daily = false) => {
+    if (audioKey.current === key && activeAudio.current) {
       activeAudio.current.pause();
       activeAudio.current.currentTime = 0;
       activeAudio.current = null;
@@ -249,13 +159,17 @@ export default function Home() {
     }
 
     activeAudio.current?.pause();
-    const audio = new Audio(new URL(`audio/${voice}/${fileName}`, document.baseURI).href);
+    const audio = new Audio(new URL(`audio/${daily ? 'daily/' : ''}${voice}/${fileName}`, document.baseURI).href);
     audio.playbackRate = slow ? 0.72 : 1;
     audio.preservesPitch = true;
     audio.onended = () => { if (activeAudio.current !== audio) return; activeAudio.current = null; setSpeaking(''); };
     audio.onerror = () => { if (activeAudio.current !== audio) return; activeAudio.current = null; setSpeaking(''); window.alert('语音文件加载失败，请检查网络后重试。'); };
+    // Only actual media events drive the visible playback state.
+    audio.onplaying = () => { if (activeAudio.current === audio) setSpeaking(key); };
+    audio.onpause = audio.onwaiting = () => { if (activeAudio.current === audio) setSpeaking(''); };
     activeAudio.current = audio;
-    setSpeaking(key);
+    audioKey.current = key;
+    setSpeaking('');
     void audio.play().catch(() => {
       if (activeAudio.current !== audio) return;
       activeAudio.current = null;
@@ -264,8 +178,10 @@ export default function Home() {
     });
   };
 
-  const playWord = (item: VocabularyItem, slow = false, key = `word-${item.id}`) => playAudio(`word-${item.id}.mp3`, slow, key);
-  const playExample = (item: VocabularyItem) => playAudio(`example-${item.id}.mp3`, false, `example-${item.id}`);
+  const playWord = (item: VocabularyItem, slow = playbackSpeed === 'slow', key = `word-${item.id}`) => playAudio(`word-${item.id}.mp3`, slow, key);
+  // A text revision must not replay an older MP3 cached under the same word ID.
+  const playExample = (item: VocabularyItem) => playAudio(`example-${item.id}.mp3?v=${encodeURIComponent(item.example)}`, playbackSpeed === 'slow', `example-${item.id}`);
+  const playDaily = (phrase: DailyPhrase, slow = playbackSpeed === 'slow') => playAudio(`${phrase.id}.mp3?v=${encodeURIComponent(phrase.en)}`, slow, `daily-${phrase.id}-${slow ? 'slow' : 'normal'}`, true);
 
   const toggleSet = (setter: React.Dispatch<React.SetStateAction<Set<number>>>, id: number) => {
     setter((current) => {
@@ -277,248 +193,189 @@ export default function Home() {
   };
 
   const changeSelection = (value: string) => {
+    if (value === selection) replay();
     setSelection(value);
     setVisibleCount(24);
-    setMobileNav(false);
+    setQuery('');
+    setTier('全部');
   };
 
   const startQuiz = () => {
-    const pool = vocabulary.filter((item) => mastered.has(item.id));
-    let history: Record<string, number>;
-    try {
-      history = readQuizHistory();
-    } catch {
-      window.alert('无法读取复习记录，暂未开始测验，以免打乱复习顺序。请检查浏览器网站存储。');
-      return;
-    }
-    const items = pickQuizItems(pool, history);
-    if (items.length === 0) {
-      window.alert('测验只复习已掌握词汇。先学习并标记至少一个单词，再来测验吧。');
-      return;
-    }
-    setQuiz({ items, pool, index: 0, score: 0, helped: 0, selected: null, finished: false });
+    activeAudio.current?.pause();
+    activeAudio.current = null;
+    setSpeaking('');
+    setShowQuiz(true);
+  };
+  const reviewPool = useMemo(() => vocabulary.filter((item) => mastered.has(item.id)), [mastered]);
+  const finishReview = () => {
+    const sessions = quizSessions + 1;
+    setQuizSessions(sessions);
+    try { localStorage.setItem('codewords-quiz-sessions', String(sessions)); }
+    catch { window.alert('本轮练习已完成，但完成次数未能保存。'); }
+  };
+  const closeReview = () => {
+    activeAudio.current?.pause();
+    activeAudio.current = null;
+    setSpeaking('');
+    setShowQuiz(false);
+    window.requestAnimationFrame(() => reviewButton.current?.focus());
   };
 
-  const answerQuiz = (id: number) => {
-    if (!quiz || quiz.selected !== null) return;
-    const correct = quiz.items[quiz.index].id === id;
-    recordQuizAnswer(quiz.items[quiz.index].id);
-    setQuiz({ ...quiz, selected: id, score: quiz.score + (correct ? 1 : 0) });
-  };
+  const currentTitle = selection === '全部词汇' ? '词库' : selection;
+  const isLibrary = selection === '全部词汇' || categoryOrder.includes(selection);
+  const pageDescription = selection === '今日学习'
+    ? '每次先学 10 个常用词，标记掌握后自动补充下一个。'
+    : selection === '收藏夹' ? '收藏需要多看的词，已掌握后仍会留在这里。'
+    : selection === '已掌握' ? '这里是你标记掌握的词；忘记了可点“重新学习”，移回待学列表。'
+    : '按分类或级别查找未掌握的词，已学会的词可在“已掌握”中查看。';
+  const masteredCount = navigationCounts['已掌握'];
+  const progressPercent = Math.round((masteredCount / vocabulary.length) * 1000) / 10;
+  const emptyCollection = !query && tier === '全部' && (selection === '收藏夹' || selection === '已掌握');
 
-  const nextQuestion = () => {
-    if (!quiz || quiz.selected === null || quiz.finished) return;
-    if (quiz.index === quiz.items.length - 1) {
-      const sessions = quizSessions + 1;
-      const best = Math.max(bestScore, quiz.score);
-      setQuizSessions(sessions);
-      setBestScore(best);
-      localStorage.setItem('codewords-quiz-sessions', String(sessions));
-      localStorage.setItem('codewords-best-score', String(best));
-      setQuiz({ ...quiz, finished: true });
-      return;
-    }
-    setQuiz({ ...quiz, index: quiz.index + 1, selected: null });
-  };
+  useEffect(() => {
+    if (!showVoice) return;
+    const previousFocus = document.activeElement as HTMLElement | null;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    voiceDialog.current?.querySelector<HTMLButtonElement>('button')?.focus();
+    const onKey = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') setShowVoice(false);
+      if (event.key !== 'Tab') return;
+      const controls = [...(voiceDialog.current?.querySelectorAll<HTMLElement>('button, select') ?? [])];
+      const first = controls[0], last = controls[controls.length - 1];
+      if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last?.focus(); }
+      else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first?.focus(); }
+    };
+    document.addEventListener('keydown', onKey);
+    return () => { document.body.style.overflow = previousOverflow; document.removeEventListener('keydown', onKey); previousFocus?.focus(); };
+  }, [showVoice]);
 
-  const completeSpelling = (helped: boolean) => {
-    if (!quiz || quiz.selected !== null) return;
-    recordQuizAnswer(quiz.items[quiz.index].id);
-    setQuiz({ ...quiz, selected: quiz.items[quiz.index].id, score: quiz.score + (helped ? 0 : 1), helped: quiz.helped + (helped ? 1 : 0) });
-    playWord(quiz.items[quiz.index], false, `completed-${quiz.items[quiz.index].id}`);
-  };
-
-  const quizItems = quiz?.items;
-  const quizPool = quiz?.pool;
-  const quizIndex = quiz?.index ?? 0;
-  const quizFinished = quiz?.finished;
-  const quizOptions = useMemo(() => {
-    if (!quizItems || !quizPool || quizFinished) return [];
-    const current = quizItems[quizIndex];
-    return shuffled(buildQuizOptions(current, shuffled(quizPool)));
-  }, [quizItems, quizPool, quizIndex, quizFinished]);
-  // If mastered definitions overlap too much for a choice, practice spelling instead.
-  const isSpelling = quiz !== null && (quiz.index % 2 === 0 || quizOptions.length < 2);
-
-  const currentTitle = selection === '今日学习' ? `待学 ${todayItems.length} 个词` : selection;
-  const progressPercent = Math.round((mastered.size / vocabulary.length) * 100);
-
+  const navigationIcons = ['today', 'library', 'star', 'check'] as const;
   return (
-    <main className="app-shell">
-      <aside className={mobileNav ? 'sidebar mobile-open' : 'sidebar'}>
-        <div className="brand-row">
-          <button className="brand" onClick={() => changeSelection('今日学习')}>
-            <span className="brand-mark">IT</span><span>CodeWords<small>计算机英语点读</small></span>
-          </button>
-          <button className="mobile-close" onClick={() => setMobileNav(false)} aria-label="关闭菜单">×</button>
+    <div className="app-shell">
+      <a className="skip-link" href={section === 'daily' ? '#daily-content' : '#vocabulary-content'}>跳到学习内容</a>
+      <header className="site-header">
+        <div className="header-inner">
+          <div className="section-switch" role="group" aria-label="学习分区">
+            <button aria-pressed={section === 'programming'} onClick={() => changeSection('programming')}><Icon name="book" />编程英语</button>
+            <button aria-pressed={section === 'daily'} onClick={() => changeSection('daily')}>日常英语</button>
+          </div>
+          <nav ref={navRef} className="main-nav" aria-label="学习导航">
+            {section === 'daily' ? (['course', 'workbook', 'review'] as const).map((value, index) => <button key={value} className={`nav-item${dailyView === value ? ' active' : ''}`} aria-current={dailyView === value ? 'page' : undefined} onClick={() => { if (dailyView === value) replay(); setDailyView(value); setDailyNavigation(count => count + 1); }}><Icon name={(['book', 'library', 'review'] as const)[index]} /><span>{({course: '课程', workbook: '练习册', review: '复习'})[value]}</span></button>) : ['今日学习', '全部词汇', '收藏夹', '已掌握'].map((value, index) => {
+              const selected = selection === value || (value === '全部词汇' && isLibrary);
+              return <button className={`nav-item${selected ? ' active' : ''}`} key={value}
+                aria-label={value === '全部词汇' ? '词库' : value} aria-describedby={'nav-count-' + value}
+                aria-current={selected ? 'page' : undefined} onClick={() => changeSelection(value)}>
+                <Icon name={navigationIcons[index]} /><span>{value === '全部词汇' ? '词库' : value}</span>
+                <span className="nav-count" id={'nav-count-' + value} title={value === '全部词汇' ? '尚未掌握的词汇数' : value + '的词汇数'}>{navigationCounts[value].toLocaleString()}</span>
+              </button>;
+            })}
+            <span className="nav-marker" aria-hidden="true"><span className="nav-marker-ink" /><span className="nav-marker-spray" /></span>
+          </nav>
+          <ThemePicker value={theme} onChange={changeTheme} />
         </div>
+      </header>
 
-        <nav aria-label="学习导航">
-          <p className="eyebrow">学习</p>
-          <button className={selection === '今日学习' ? 'nav-item active' : 'nav-item'} onClick={() => changeSelection('今日学习')}><span className="nav-mark">◎</span><span>今日学习</span><em>{todayItems.length}</em></button>
-          <button className={selection === '收藏夹' ? 'nav-item active' : 'nav-item'} onClick={() => changeSelection('收藏夹')}><span className="nav-mark">☆</span><span>收藏夹</span><em>{favorites.size}</em></button>
-          <button className={selection === '已掌握' ? 'nav-item active' : 'nav-item'} onClick={() => changeSelection('已掌握')}><span className="nav-mark">✓</span><span>已掌握</span><em>{mastered.size}</em></button>
-          <button className={selection === '全部词汇' ? 'nav-item active' : 'nav-item'} onClick={() => changeSelection('全部词汇')}><span className="nav-mark">AZ</span><span>全部词汇</span><em>{vocabulary.length}</em></button>
-
-          <p className="eyebrow category-label">词汇分类</p>
-          <div className="category-list">
-            {categoryOrder.map((category) => (
-              <button className={selection === category ? 'nav-item active' : 'nav-item'} onClick={() => changeSelection(category)} key={category}>
-                <span className="nav-mark code">{categoryMarks[category]}</span><span>{category}</span><em>{categoryCounts.get(category)}</em>
-              </button>
-            ))}
-          </div>
-        </nav>
-
-        <button className="sidebar-progress" onClick={() => setShowProgress(true)}>
-          <div><span>总学习进度</span><strong>{progressPercent}%</strong></div>
-          <span className="progress-track"><i style={{ width: Math.max(progressPercent, 1) + '%' }} /></span>
-          <small>已掌握 {mastered.size.toLocaleString()} / {vocabulary.length.toLocaleString()} 个词</small>
-        </button>
-      </aside>
-
-      <section className="content">
-        <header className="topbar">
-          <div className="title-group">
-            <button className="mobile-menu" onClick={() => setMobileNav(true)} aria-label="打开菜单">☰</button>
-            <div><p className="eyebrow">从零开始读懂 GitHub 和代码</p><h1>{currentTitle}</h1></div>
-          </div>
-          <div className="top-actions">
-            <label className="search"><span>⌕</span><input value={query} onChange={(event) => { setQuery(event.target.value); setVisibleCount(24); }} placeholder="搜索单词、中文或例句…" /><kbd>Ctrl K</kbd></label>
-            <button className="icon-button" onClick={() => setShowVoice(true)} title="美式语音设置">♪</button>
-            <button className="quiz-button" onClick={startQuiz}>{selection === '已掌握' ? '复习测验' : '开始测验'} <span>→</span></button>
-          </div>
+      <main ref={section === 'programming' ? contentRef : undefined} className="content" id="vocabulary-content" hidden={section !== 'programming'}>
+        <header ref={section === 'programming' ? headingRef : undefined} className="page-heading"><div className="page-heading-copy"><h1>{currentTitle}</h1><p>{pageDescription}</p></div>
+          <div className="page-heading-actions"><button className="voice-button" aria-label="语音设置" onClick={() => setShowVoice(true)}>
+            <Icon name="sound" /><span>语音设置<span className="voice-preference">{voice === 'aria' ? 'Aria' : 'Guy'} · {playbackSpeed === 'slow' ? '慢速' : '正常'}</span></span><Icon name="chevron" />
+          </button></div>
         </header>
-
-        {selection === '今日学习' && !query ? (
-          <section className="hero-card">
-            <div>
-              <span className="lesson-pill">编程与技术文档 · 常用优先</span>
-              <h2>掌握一个，继续学下一个</h2>
-              <p>保留 10 个待学词，掌握后自动补充。先学核心词，再继续学习基础词和专业词。</p>
-              <div className="hero-actions"><button onClick={() => setShowProgress(true)}>查看学习进度</button></div>
+        <div className="learning-layout">
+          <section className="vocabulary-panel" aria-label={currentTitle + '词汇列表'}>
+            <div className="library-tools">
+              <label className="search"><Icon name="search" /><input aria-label="搜索当前列表" value={query} onChange={event => { setQuery(event.target.value); setVisibleCount(24); }} placeholder="搜索单词、中文或例句" />
+                {query && <button aria-label="清除搜索" onClick={() => setQuery('')}><Icon name="close" /></button>}
+              </label>
+              {isLibrary && <label className="category-select"><span>分类</span><select aria-label="词汇分类" value={selection} onChange={event => changeSelection(event.target.value)}>
+                <option value="全部词汇">全部分类</option>{categoryOrder.map(category => <option value={category} key={category}>{category}</option>)}
+              </select></label>}
+              {selection !== '今日学习' && <label className="category-select tier-select"><span>级别</span><select aria-label="词汇级别" value={tier} onChange={event => { setTier(event.target.value); setVisibleCount(24); }}>
+                {['全部', '核心', '基础', '专业'].map(value => <option value={value} key={value}>{value}</option>)}
+              </select></label>}
             </div>
-            <div className="hero-stat"><strong>{mastered.size}</strong><small>累计已掌握</small></div>
-          </section>
-        ) : (
-          <section className="library-strip">
-            <div><span>{categoryMarks[selection] ?? 'AZ'}</span><div><strong>{filtered.length.toLocaleString()}</strong><small>当前词汇</small></div></div>
-            <p>{selection === '已掌握' ? '这里保留所有已掌握的单词，可随时点读、测验复习，或移回学习列表。' : '点击发音、阅读双语例句，再将熟悉的词标记为“已掌握”。'}</p>
-          </section>
-        )}
-
-        <div className="section-heading">
-          <div><h2>{query ? '搜索结果' : selection === '今日学习' ? '当前待学词汇' : selection === '已掌握' ? '已掌握词汇 · 随时复习' : '词汇列表'}</h2><p>{selection === '已掌握' ? '点击“重新学习”可将单词移回普通学习列表' : '单词、例句均可点读；慢速为 0.72 倍语速'}</p></div>
-          {selection !== '今日学习' && <div className="filters" aria-label="词汇级别">
-            {['全部', '核心', '专业', '基础'].map((value) => <button className={tier === value ? 'selected' : ''} onClick={() => { setTier(value); setVisibleCount(24); }} key={value}>{value}</button>)}
-          </div>}
-        </div>
-
-        {filtered.length > 0 ? (
-          <>
-            <section className="word-grid">
-              {filtered.slice(0, visibleCount).map((item, index) => (
-                <article className={mastered.has(item.id) ? 'word-card mastered' : 'word-card'} key={item.id}>
-                  <div className="card-top">
-                    <span className="number">{String(index + 1).padStart(2, '0')}</span>
-                    <div><span className={'tier ' + item.tier}>{item.tier}</span><button className={favorites.has(item.id) ? 'favorite active' : 'favorite'} onClick={() => toggleSet(setFavorites, item.id)} aria-label={favorites.has(item.id) ? '取消收藏' : '收藏'}>{favorites.has(item.id) ? '★' : '☆'}</button></div>
-                  </div>
+            <div className="list-guide"><span>{query ? '找到' : '共'} <strong>{filtered.length.toLocaleString()}</strong> 个词</span><p><Icon name="sound" />点单词听发音，点例句听整句</p></div>
+            {filtered.length > 0 ? <>
+              <div className="list-columns" aria-hidden="true"><span>单词 / 发音</span><span>中文释义</span><span>学习状态</span></div>
+              <section className="word-grid">
+                {filtered.slice(0, visibleCount).map(item => <article key={item.id}
+                  className={`word-card${mastered.has(item.id) ? ' mastered' : ''}${speaking === 'word-' + item.id ? ' word-playing' : ''}${speaking === 'example-' + item.id ? ' example-playing' : ''}`}
+                  onClick={event => {
+                    if ((event.target as HTMLElement).closest('button, a, input, select, summary, details')) return;
+                    if (window.getSelection()?.isCollapsed === false) return;
+                    playWord(item);
+                  }}>
                   <div className="word-row">
-                    <button className={speaking === 'word-' + item.id ? 'word-button playing' : 'word-button'} onClick={() => playWord(item)}>
-                      <span className="speaker">♪</span><span><strong>{item.word}</strong><small>{item.phonetic ? '/' + item.phonetic + '/' : 'en-US · 美式发音'}</small></span>
+                    <button className={`word-button${speaking === 'word-' + item.id ? ' playing' : ''}`} onClick={() => playWord(item)} aria-label={'朗读单词 ' + item.word} aria-pressed={speaking === 'word-' + item.id}>
+                      <span className="word-title"><strong>{item.word}</strong><Icon name="sound" /></span>
+                      {item.phonetic && <span className="phonetic">/{item.phonetic}/</span>}
                     </button>
-                    <button className="slow-button" onClick={() => playWord(item, true, 'slow-' + item.id)}><span>{speaking === 'slow-' + item.id ? '◼' : '▶'}</span> 慢速</button>
                   </div>
-                  <p className="meaning">{item.meaning}</p>
-                  <div className="example">
-                    <button className={speaking === 'example-' + item.id ? 'playing' : ''} onClick={() => playExample(item)} aria-label={'朗读例句 ' + item.example}>▶</button>
-                    <div><p>{item.example}</p><span>{item.exampleZh}</span></div>
+                  <div className="word-definition"><p className="meaning">{item.meaning}</p><p className="word-meta">{item.category}<span>·</span>{item.tier}</p></div>
+                  <div className="card-actions">
+                    <button className={`favorite${favorites.has(item.id) ? ' active' : ''}`} onClick={() => toggleSet(setFavorites, item.id)} aria-label={favorites.has(item.id) ? '取消收藏' : '收藏'} title={favorites.has(item.id) ? '取消收藏' : '收藏'} aria-pressed={favorites.has(item.id)}><Icon name="star" /></button>
+                    <button className={`known${mastered.has(item.id) ? ' active' : ''}`} onClick={() => toggleSet(setMastered, item.id)}><Icon name={mastered.has(item.id) ? 'review' : 'check'} />{mastered.has(item.id) ? '重新学习' : '标记掌握'}</button>
                   </div>
-                  <div className="spelling"><span>拼写</span><code>{item.word.split('').map((letter) => letter === ' ' ? ' / ' : letter).join(' · ')}</code></div>
-                  <div className="card-footer"><span>{item.category}</span><button className={mastered.has(item.id) ? 'known active' : 'known'} onClick={() => toggleSet(setMastered, item.id)}><i>{mastered.has(item.id) ? '↻' : '✓'}</i>{mastered.has(item.id) ? '重新学习' : '标记掌握'}</button></div>
-                </article>
-              ))}
+                  <div className="example"><button className={speaking === 'example-' + item.id ? 'playing' : ''} onClick={() => playExample(item)} aria-label={'朗读例句 ' + item.example} aria-pressed={speaking === 'example-' + item.id}>
+                    <span className="example-en">{item.example}</span><span className="example-zh">{item.exampleZh}</span><Icon name="sound" />
+                  </button></div>
+                </article>)}
+              </section>
+              {visibleCount < filtered.length && <div className="load-more-area"><button className="load-more" onClick={() => setVisibleCount(count => count + 24)}>再显示 24 个<Icon name="chevron" /></button><span>已显示 {Math.min(visibleCount, filtered.length)} / {filtered.length.toLocaleString()}</span></div>}
+            </> : selection === '今日学习' && !query && todayItems.length === 0 ? <section className="empty-state"><Icon name="check" /><h2>全部词汇已掌握</h2><p>继续复习已经学过的词义与拼写。</p><button onClick={startQuiz}>复习已掌握词汇<Icon name="arrow" /></button></section>
+            : <section className="empty-state"><Icon name={emptyCollection ? selection === '收藏夹' ? 'star' : 'book' : 'search'} />
+              <h2>{emptyCollection ? selection === '收藏夹' ? '还没有收藏的单词' : '还没有已掌握的单词' : '没有找到匹配词汇'}</h2>
+              <p>{emptyCollection ? selection === '收藏夹' ? '点击单词旁的星标，把需要多看的词放在这里。' : '在单词旁点击“标记掌握”，就可以在这里查看并参加复习。' : '搜索只查找当前列表。试试更短的关键词，或清除筛选。'}</p>
+              <button onClick={() => { if (emptyCollection) changeSelection('今日学习'); else { setQuery(''); setTier('全部'); } }}>{emptyCollection ? '去学习单词' : '清除筛选'}<Icon name="arrow" /></button>
+            </section>}
+          </section>
+
+          <aside className="study-rail" aria-label="学习进度与复习">
+            <section className="review-card">
+              <div className="rail-heading"><Icon name="review" /><h2>把学过的词记牢</h2></div>
+              <p id="review-description">通过配对、听音、拼写和填空，巩固已掌握的词汇。</p>
+              <button ref={reviewButton} className="quiz-button" onClick={startQuiz} aria-describedby="review-description">复习练习<Icon name="arrow" /></button>
+              <p className="review-note">{reviewPool.length ? '每轮最多 5 个词，难点会再次复查。' : '先标记掌握一个词，就能开始复习。'}</p>
             </section>
-            {visibleCount < filtered.length && <button className="load-more" onClick={() => setVisibleCount((count) => count + 24)}>再显示 24 个 <span>当前 {Math.min(visibleCount, filtered.length)} / {filtered.length.toLocaleString()}</span></button>}
-          </>
-        ) : selection === '今日学习' && !query && todayItems.length === 0 ? (
-          <section className="empty-state"><span>✓</span><h2>全部词汇已掌握</h2><p>可以继续测验，巩固已经学过的词汇。</p><button onClick={startQuiz}>复习已掌握词汇</button></section>
-        ) : (
-          <section className="empty-state"><span>{selection === '已掌握' ? '✓' : '⌕'}</span><h2>{selection === '已掌握' && !query ? '还没有已掌握的单词' : '没有找到匹配词汇'}</h2><p>{selection === '已掌握' && !query ? '在学习列表点击“标记掌握”，单词会自动来到这里，方便以后复习。' : '试试更短的英文、中文关键词，或切换到“全部”级别。'}</p><button onClick={() => { if (selection === '已掌握' && !query) changeSelection('今日学习'); else { setQuery(''); setTier('全部'); } }}>{selection === '已掌握' && !query ? '去学习单词' : '清除筛选'}</button></section>
-        )}
-
-        <footer><span>CodeWords · 共 {vocabulary.length.toLocaleString()} 个词汇</span><span>专业术语参考香港数字政策办公室《英汉资讯科技词汇》2025 年 11 月版</span></footer>
-      </section>
-
-      {mobileNav && <button className="backdrop mobile" onClick={() => setMobileNav(false)} aria-label="关闭菜单背景" />}
-
-      {showVoice && (
-        <div className="modal-layer" role="dialog" aria-modal="true" aria-label="美式语音设置">
-          <button className="backdrop" onClick={() => setShowVoice(false)} aria-label="关闭" />
-          <section className="modal voice-modal">
-            <button className="modal-close" onClick={() => setShowVoice(false)}>×</button>
-            <span className="modal-icon">♪</span><p className="eyebrow">美式发音</p><h2>选择你喜欢的声音</h2>
-            <p className="modal-copy">单词、例句和测验统一使用所选声音。正常播放保持原始语速，点击慢速可放慢聆听。</p>
-            <label className="voice-select"><span>点读声音</span><select value={voice} onChange={(event) => {
-              const next = event.target.value === 'guy' ? 'guy' : 'aria';
-              activeAudio.current?.pause();
-              activeAudio.current = null;
-              setSpeaking('');
-              setVoice(next);
-              try { localStorage.setItem('codewords-voice', next); }
-              catch { window.alert('声音已切换，但浏览器未能保存偏好，下次打开可能恢复默认声音。'); }
-            }}><option value="aria">Aria · 美式女声</option><option value="guy">Guy · 美式男声</option></select></label>
-            <div className="voice-status"><span className="dot good" />固定音源已启用 · 无需安装语音包</div>
-            <div className="modal-actions"><button onClick={() => playAudio('voice-test.mp3', false, 'voice-test')}>▶ 正常试听</button><button onClick={() => playAudio('voice-test.mp3', true, 'voice-test-slow')}>▶ 慢速试听</button></div>
-          </section>
+            <section className="progress-card">
+              <h2>我的学习进度</h2>
+              <p className="progress-number"><strong>{masteredCount.toLocaleString()}</strong><span>/ {vocabulary.length.toLocaleString()} 个词</span></p>
+              <div className="progress-caption"><span>已标记掌握</span><strong>{progressPercent}%</strong></div>
+              <span className="progress-track" role="progressbar" aria-label="词汇掌握进度" aria-valuemin={0} aria-valuemax={vocabulary.length} aria-valuenow={masteredCount}><i style={{ width: progressPercent + '%' }} /></span>
+              <div className="progress-sessions"><span>已完成复习</span><strong>{quizSessions} 次</strong></div>
+              <details className="progress-details"><summary>学习记录说明<Icon name="chevron" /></summary><p>记录自动保存在当前浏览器，不会自动同步到其他设备。“标记掌握”是你的学习标记，复习会分别记录词义和拼写表现。</p></details>
+            </section>
+          </aside>
         </div>
-      )}
+        <footer className="site-footer">专业术语参考香港数字政策办公室《英汉资讯科技词汇》2025 年 11 月版</footer>
+      </main>
 
-      {showProgress && (
-        <div className="modal-layer" role="dialog" aria-modal="true" aria-label="学习进度">
-          <button className="backdrop" onClick={() => setShowProgress(false)} aria-label="关闭" />
-          <section className="modal progress-modal">
-            <button className="modal-close" onClick={() => setShowProgress(false)}>×</button>
-            <p className="eyebrow">你的学习记录</p><h2>每掌握一个词，都更接近读懂代码</h2>
-            <div className="progress-ring" style={{ '--progress': progressPercent + '%' } as React.CSSProperties}><div><strong>{progressPercent}%</strong><span>总进度</span></div></div>
-            <div className="progress-stats"><div><strong>{mastered.size}</strong><span>已掌握</span></div><div><strong>{favorites.size}</strong><span>已收藏</span></div><div><strong>{quizSessions}</strong><span>完成测验</span></div><div><strong>{bestScore}/10</strong><span>最佳成绩</span></div></div>
-            <p className="save-note"><span>✓</span> 学习记录自动保存在当前浏览器中</p>
-          </section>
-        </div>
-      )}
+      {dailyVisited && <DailyEnglish active={section === 'daily'} view={dailyView} navigation={dailyNavigation} voice={voice} speed={playbackSpeed} speaking={speaking} play={playDaily} stopAudio={stopAudio} openVoice={() => setShowVoice(true)} contentRef={section === 'daily' ? contentRef : undefined} headingRef={section === 'daily' ? headingRef : undefined} />}
 
-      {quiz && (
-        <div className="modal-layer" role="dialog" aria-modal="true" aria-label="词汇测验">
-          <div className="backdrop solid" />
-          <section className="modal quiz-modal">
-            <button className="modal-close" onClick={() => setQuiz(null)}>×</button>
-            {!quiz.finished ? (
-              <>
-                <div className="quiz-head"><div><p className="eyebrow">{isSpelling ? '拼写练习' : '词义选择'}</p><span>第 {quiz.index + 1} / {quiz.items.length} 题 · 仅复习已掌握词汇<br />未测过优先，再复习最久未测的词</span></div><strong>{quiz.score} 分</strong></div>
-                <span className="quiz-track"><i style={{ width: ((quiz.index + 1) / quiz.items.length) * 100 + '%' }} /></span>
-                {isSpelling ? <>
-                  <div className="quiz-word"><button aria-label="听单词发音" onClick={() => playWord(quiz.items[quiz.index])}>♪</button><h2>{quiz.items[quiz.index].meaning}</h2><p>可以反复听发音，再试着拼出来</p></div>
-                  <SpellingExercise key={`${quiz.items[quiz.index].id}-${quiz.index}`} item={quiz.items[quiz.index]} mode={quiz.index % 4 === 0 ? 'tiles' : 'gap'} onComplete={completeSpelling} />
-                </> : <>
-                <div className="quiz-word"><button aria-label="听单词发音" onClick={() => playWord(quiz.items[quiz.index])}>♪</button><h2>{quiz.items[quiz.index].word}</h2><p>{quiz.items[quiz.index].phonetic ? '/' + quiz.items[quiz.index].phonetic + '/' : '点击扬声器听发音'}</p></div>
-                <p className="quiz-prompt">请选择最合适的中文意思</p>
-                <div className="quiz-options">
-                  {quizOptions.map((option, index) => {
-                    const answered = quiz.selected !== null;
-                    const isCorrect = option.id === quiz.items[quiz.index].id;
-                    const isWrong = answered && option.id === quiz.selected && !isCorrect;
-                    return <button className={answered && isCorrect ? 'correct' : isWrong ? 'wrong' : ''} disabled={answered} onClick={() => answerQuiz(option.id)} key={option.id}><span>{String.fromCharCode(65 + index)}</span>{option.meaning}{answered && isCorrect && <i>✓</i>}{isWrong && <i>×</i>}</button>;
-                  })}
-                </div>
-                </>}
-                {quiz.selected !== null && <div className="quiz-feedback" role="status"><p>{quiz.selected === quiz.items[quiz.index].id ? '✓ 回答正确！' : '× 这题未答对，再记一遍。'}{isSpelling && <><br />正确拼写：{quiz.items[quiz.index].word}</>}</p><span>{quiz.items[quiz.index].example}<br />{quiz.items[quiz.index].exampleZh}</span><button onClick={nextQuestion}>{quiz.index === quiz.items.length - 1 ? '查看成绩' : '下一题'} →</button></div>}
-              </>
-            ) : (
-              <div className="quiz-result"><span className="result-mark">{quiz.score / quiz.items.length >= 0.8 ? '✓' : '↗'}</span><p className="eyebrow">测验完成</p><h2>{quiz.score / quiz.items.length >= 0.8 ? '太棒了，继续保持！' : '已经迈出了很好的一步'}</h2><strong>{quiz.score}<small>/{quiz.items.length}</small></strong><p>独立答对 {quiz.score} 题，提示后完成 {quiz.helped} 题。提示后完成不计入独立答对分数。</p><div><button onClick={startQuiz}>再测一次</button><button onClick={() => setQuiz(null)}>返回学习</button></div></div>
-            )}
-          </section>
-        </div>
-      )}
-    </main>
+      {showVoice && <div className="modal-layer" role="dialog" aria-modal="true" aria-labelledby="voice-heading">
+        <button className="backdrop" onClick={() => setShowVoice(false)} aria-label="关闭" tabIndex={-1} />
+        <section ref={voiceDialog} className="modal voice-modal">
+          <button className="modal-close" aria-label="关闭语音设置" onClick={() => setShowVoice(false)}><Icon name="close" /></button>
+          <div className="modal-heading-icon"><Icon name="sound" /></div><h2 id="voice-heading">语音设置</h2>
+          <p className="modal-copy">选一个听着舒服的声音，按自己的节奏学习。</p>
+          <label className="voice-select"><span>点读声音</span><select aria-label="点读声音" value={voice} onChange={event => {
+            const next = event.target.value === 'guy' ? 'guy' : 'aria';
+            activeAudio.current?.pause(); activeAudio.current = null; setSpeaking(''); setVoice(next);
+            try { localStorage.setItem('codewords-voice', next); }
+            catch { window.alert('声音已切换，但浏览器未能保存偏好，下次打开可能恢复默认声音。'); }
+          }}><option value="aria">Aria · 美式女声</option><option value="guy">Guy · 美式男声</option></select></label>
+          <label className="voice-select"><span>点读语速</span><select aria-label="点读语速" value={playbackSpeed} onChange={event => {
+            const next = event.target.value === 'slow' ? 'slow' : 'normal';
+            activeAudio.current?.pause(); activeAudio.current = null; setSpeaking(''); setPlaybackSpeed(next);
+            try { localStorage.setItem('codewords-playback-speed', next); }
+            catch { window.alert('语速已切换，但浏览器未能保存偏好。'); }
+          }}><option value="normal">正常</option><option value="slow">慢速</option></select></label>
+          <div className="modal-actions"><button className={speaking === 'voice-test' ? 'playing' : ''} onClick={() => playAudio('voice-test.mp3', false, 'voice-test')}><Icon name="sound" />正常试听</button><button className={speaking === 'voice-test-slow' ? 'playing' : ''} onClick={() => playAudio('voice-test.mp3', true, 'voice-test-slow')}><Icon name="sound" />慢速试听</button></div>
+          <p className="voice-scope">声音与点读语速用于两个学习分区。练习中的“慢速”可单独使用，偏好自动保存。</p>
+        </section>
+      </div>}
+      {showQuiz && <ReviewQuiz pool={reviewPool} onClose={closeReview} onFinished={finishReview} playWord={playWord} playExample={playExample} speaking={speaking} theme={theme} onThemeChange={changeTheme} />}
+    </div>
   );
 }

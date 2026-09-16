@@ -1,0 +1,13 @@
+PASS: all five exercise types complete through the new footer flow
+PASS: one mismatched pair changes only that word and preserves individual outcomes
+PASS: dictation hints save difficulty immediately before any completed answer
+PASS: full dictation gives a brief letter-order correction and records the unfinished round
+PASS: scaffolded dictation remains assisted after using a hint and answering correctly
+PASS: cloze shows Chinese context by default without charging a hint
+PASS: leaving before answering changes neither completion count nor review progress
+PASS: damaged review storage survives an entire in-memory lesson
+PASS: storage write failure warns while the completed task remains usable
+PASS: all exercise types and feedback fit on a narrow phone
+PASS: long multiword dictation and its answer fit the phone
+PASS: actual audio retains the selected voice and slow playback rate
+BROWSER PASS: 12 scenarios; favicon errors: 10; screenshots: D:\coding项目\交互式英语学习网站\artifacts\keyboard-input\review

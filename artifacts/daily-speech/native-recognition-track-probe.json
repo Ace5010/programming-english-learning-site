@@ -1,0 +1,103 @@
+{
+  "at": "2026-09-15T15:11:09.094Z",
+  "input": "Existing synthetic Aria Hello! / Goodbye. concatenated with silence; fake audio device only; no user profile or microphone.",
+  "browser": "152.0.7977.83",
+  "capabilities": {
+    "secureContext": true,
+    "standard": true,
+    "prefixed": true,
+    "getUserMedia": true,
+    "processLocally": true,
+    "available": "function",
+    "install": "function",
+    "localAvailability": "downloadable",
+    "serviceAvailability": "available"
+  },
+  "fakeCapture": {
+    "bytes": 16740,
+    "mimeType": "audio/webm;codecs=opus",
+    "tracksStopped": true
+  },
+  "explicit-track": {
+    "reason": "end",
+    "events": [
+      {
+        "type": "start",
+        "elapsedMs": 40
+      },
+      {
+        "type": "audiostart",
+        "elapsedMs": 46
+      },
+      {
+        "type": "soundstart",
+        "elapsedMs": 1316
+      },
+      {
+        "type": "speechstart",
+        "elapsedMs": 1316
+      },
+      {
+        "type": "result",
+        "elapsedMs": 1833,
+        "results": [
+          {
+            "final": false,
+            "alternatives": [
+              {
+                "transcript": "hello",
+                "confidence": 0.009999999776482582
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "speechend",
+        "elapsedMs": 2296
+      },
+      {
+        "type": "soundend",
+        "elapsedMs": 2296
+      },
+      {
+        "type": "audioend",
+        "elapsedMs": 2296
+      },
+      {
+        "type": "result",
+        "elapsedMs": 2418,
+        "results": [
+          {
+            "final": false,
+            "alternatives": [
+              {
+                "transcript": "hello",
+                "confidence": 0.8999999761581421
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "result",
+        "elapsedMs": 2495,
+        "results": [
+          {
+            "final": true,
+            "alternatives": [
+              {
+                "transcript": "hello",
+                "confidence": 0.7690972685813904
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "end",
+        "elapsedMs": 2495
+      }
+    ]
+  }
+}

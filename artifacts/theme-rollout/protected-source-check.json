@@ -1,0 +1,32 @@
+[
+  {
+    "Path": "src\\vocabulary.ts",
+    "Unchanged": true,
+    "SHA256": "B9DB12FE3304C6D76EA78299865AAAFE3E31349F16C83D17A674BB1C550864B9"
+  },
+  {
+    "Path": "src\\review.ts",
+    "Unchanged": true,
+    "SHA256": "9A4EC223E4389DFDE08B2358681331F856A18C38DE93533D4C2F95F3B6C06D68"
+  },
+  {
+    "Path": "src\\lesson.ts",
+    "Unchanged": true,
+    "SHA256": "2A152CAACD8FF1C42F2EF26D0EE594B2DFC04B8DE7847B6B3D657C3ADB9CE5B3"
+  },
+  {
+    "Path": "src\\LessonExercise.tsx",
+    "Unchanged": true,
+    "SHA256": "E85789C90F79D3D2EF596A1040D2E9ED377C2F86FA048F1987CB516C26A36FF5"
+  },
+  {
+    "Path": "src\\lesson.css",
+    "Unchanged": true,
+    "SHA256": "1DDAAC063730D152FA7256601971ED4CE072D345523380BF20ADA526B471641F"
+  },
+  {
+    "Path": "vite.config.ts",
+    "Unchanged": true,
+    "SHA256": "EA9729A33B0068EFE5BD3E4C4059FE425E25390F0A7A95E32741E94B1498E7A4"
+  }
+]

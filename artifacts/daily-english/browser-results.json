@@ -1,0 +1,18 @@
+{
+  "scenarios": [
+    "24 real lessons complete through every UI exercise and survive reload",
+    "multi-blank keyboard flow, composition events, themes, section switch and draft restoration",
+    "errors append a different recheck; help and same-day review preserve original weakness",
+    "switching a currently playing prompt to slow starts real slow audio in one click",
+    "a newer tab record is protected and unsaved drafts can be exported",
+    "real audio playing/ended state, voice and speed preference are shared and durable",
+    "corrupted daily storage remains byte-identical while programming still works",
+    "layout 1440px, four skins and reduced motion",
+    "layout 1920px, four skins and reduced motion",
+    "layout 390px, four skins and reduced motion"
+  ],
+  "browserErrors": [],
+  "lessons": 24,
+  "mainExercises": 120,
+  "testedAt": "2026-09-15T15:46:37.533Z"
+}

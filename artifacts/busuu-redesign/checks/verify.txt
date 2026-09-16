@@ -1,0 +1,12 @@
+
+> programming-english-learning-site@1.0.0 verify
+> python tools/verify_project.py
+
+aria: 7121 MP3
+guy: 7121 MP3
+项目：编程英语学习网站
+词汇：3560
+语音：7122
+缺少项目文件：0
+缺少或损坏语音：0
+检查通过：完整项目已汇总。

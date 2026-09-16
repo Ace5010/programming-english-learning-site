@@ -1,0 +1,9 @@
+{
+  "url": "http://localhost:5186/dist/index.html",
+  "staticAudio": [
+    "http://localhost:5186/dist/audio/aria/word-49.mp3"
+  ],
+  "feedbackRestored": true,
+  "programmingPreserved": true,
+  "errors": []
+}

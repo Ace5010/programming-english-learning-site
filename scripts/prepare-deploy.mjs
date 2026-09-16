@@ -2,8 +2,11 @@
 import { rmSync, existsSync, readdirSync, statSync } from 'node:fs';
 import { resolve, relative, isAbsolute } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { verifyDailyAssets } from './verify-daily-assets.mjs';
 const root = fileURLToPath(new URL('../', import.meta.url));
 const dist = resolve(root, 'dist');
+const daily = verifyDailyAssets(resolve(dist, 'audio/daily'));
+console.log(`Daily English verified: ${daily.lessons} lessons, ${daily.audioFiles} audio files.`);
 for (const voice of ['aria', 'guy']) {
   const folder = resolve(dist, 'audio', voice);
   for (const name of ['voice-test.mp3', ...Array.from({ length: 3560 }, (_, i) => [`word-${i + 1}.mp3`, `example-${i + 1}.mp3`]).flat()]) {

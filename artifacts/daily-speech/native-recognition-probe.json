@@ -1,0 +1,250 @@
+{
+  "at": "2026-09-15T15:10:02.586Z",
+  "input": "Existing synthetic Aria Hello! / Goodbye. concatenated with silence; fake audio device only; no user profile or microphone.",
+  "browser": "152.0.7977.83",
+  "capabilities": {
+    "secureContext": true,
+    "standard": true,
+    "prefixed": true,
+    "getUserMedia": true,
+    "processLocally": true,
+    "available": "function",
+    "install": "function",
+    "localAvailability": "downloadable",
+    "serviceAvailability": "available"
+  },
+  "fakeCapture": {
+    "bytes": 16740,
+    "mimeType": "audio/webm;codecs=opus",
+    "tracksStopped": true
+  },
+  "default": {
+    "reason": "end",
+    "events": [
+      {
+        "type": "start",
+        "elapsedMs": 1
+      },
+      {
+        "type": "audiostart",
+        "elapsedMs": 160
+      },
+      {
+        "type": "soundstart",
+        "elapsedMs": 6760
+      },
+      {
+        "type": "speechstart",
+        "elapsedMs": 6760
+      },
+      {
+        "type": "result",
+        "elapsedMs": 6760,
+        "results": [
+          {
+            "final": false,
+            "alternatives": [
+              {
+                "transcript": "what's",
+                "confidence": 0.009999999776482582
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "result",
+        "elapsedMs": 6860,
+        "results": [
+          {
+            "final": false,
+            "alternatives": [
+              {
+                "transcript": "what's the",
+                "confidence": 0.009999999776482582
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "result",
+        "elapsedMs": 6960,
+        "results": [
+          {
+            "final": false,
+            "alternatives": [
+              {
+                "transcript": "what's on",
+                "confidence": 0.009999999776482582
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "result",
+        "elapsedMs": 7140,
+        "results": [
+          {
+            "final": false,
+            "alternatives": [
+              {
+                "transcript": "what's on my",
+                "confidence": 0.009999999776482582
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "result",
+        "elapsedMs": 7140,
+        "results": [
+          {
+            "final": false,
+            "alternatives": [
+              {
+                "transcript": "what's wrong with",
+                "confidence": 0.009999999776482582
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "result",
+        "elapsedMs": 7308,
+        "results": [
+          {
+            "final": false,
+            "alternatives": [
+              {
+                "transcript": "what's on my timer",
+                "confidence": 0.009999999776482582
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "result",
+        "elapsedMs": 7360,
+        "results": [
+          {
+            "final": false,
+            "alternatives": [
+              {
+                "transcript": "what's",
+                "confidence": 0.8999999761581421
+              }
+            ]
+          },
+          {
+            "final": false,
+            "alternatives": [
+              {
+                "transcript": " on my timer",
+                "confidence": 0.009999999776482582
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "result",
+        "elapsedMs": 7784,
+        "results": [
+          {
+            "final": false,
+            "alternatives": [
+              {
+                "transcript": "what's on my timer",
+                "confidence": 0.8999999761581421
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "result",
+        "elapsedMs": 7860,
+        "results": [
+          {
+            "final": false,
+            "alternatives": [
+              {
+                "transcript": "what's on my timer",
+                "confidence": 0.8999999761581421
+              }
+            ]
+          },
+          {
+            "final": false,
+            "alternatives": [
+              {
+                "transcript": " in Tennessee",
+                "confidence": 0.009999999776482582
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "speechend",
+        "elapsedMs": 7961
+      },
+      {
+        "type": "soundend",
+        "elapsedMs": 7961
+      },
+      {
+        "type": "audioend",
+        "elapsedMs": 7961
+      },
+      {
+        "type": "result",
+        "elapsedMs": 8171,
+        "results": [
+          {
+            "final": false,
+            "alternatives": [
+              {
+                "transcript": "what's on my timer",
+                "confidence": 0.8999999761581421
+              }
+            ]
+          },
+          {
+            "final": false,
+            "alternatives": [
+              {
+                "transcript": " in Tennessee please",
+                "confidence": 0.009999999776482582
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "result",
+        "elapsedMs": 8232,
+        "results": [
+          {
+            "final": true,
+            "alternatives": [
+              {
+                "transcript": "what's on my timer in Tennessee please",
+                "confidence": 0.1648208051919937
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "end",
+        "elapsedMs": 8232
+      }
+    ]
+  }
+}

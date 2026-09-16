@@ -2,10 +2,22 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import * as OpenCC from 'opencc-js';
+import { chooseExample } from './example-selection.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const toSimplified = OpenCC.Converter({ from: 'hk', to: 'cn' });
 const targetCount = 3560;
+const outputFlag = process.argv.indexOf('--output');
+if (outputFlag !== -1 && !process.argv[outputFlag + 1]) throw new Error('--output needs a file path');
+const outputPath = outputFlag === -1 ? path.join(root, 'src/vocabulary.ts') : path.resolve(process.argv[outputFlag + 1]);
+const simpleExamples = new Map();
+for (const row of fs.readFileSync(path.join(root, 'scripts/simple-examples.txt'), 'utf8').split(/\r?\n/)) {
+  if (!row.trim() || row.startsWith('#')) continue;
+  const [word, example, exampleZh] = row.split('|');
+  const key = word.toLowerCase();
+  if (!example || !exampleZh || simpleExamples.has(key)) throw new Error('Invalid example override: ' + row);
+  simpleExamples.set(key, { example, exampleZh });
+}
 
 const coreRows = fs.readFileSync(path.join(root, 'scripts/core-vocabulary.txt'), 'utf8')
   .trim()
@@ -34,7 +46,7 @@ function categoryFor(term) {
 
 function technicalExample(term, index) {
   const templates = [
-    ['The documentation explains ' + term + '.', '文档解释了“' + term + '”。'],
+    ['Read about ' + term + '.', '了解“' + term + '”。'],
     ['This project uses ' + term + '.', '这个项目使用了“' + term + '”。'],
     ['Check the settings for ' + term + '.', '检查“' + term + '”的设置。'],
     ['The team is testing ' + term + '.', '团队正在测试“' + term + '”。'],
@@ -67,7 +79,8 @@ for (const line of beginnerPaths.flatMap((file) => fs.readFileSync(file, 'utf8')
   if (!/^[A-Za-z][A-Za-z '-]*$/.test(word) || word.length > 30) continue;
   const firstMeaning = item.translations?.[0];
   if (!firstMeaning?.translation) continue;
-  const sentence = item.sentences?.find((entry) => entry.sentence && entry.translation);
+  const original = item.sentences?.find((entry) => entry.sentence && entry.translation);
+  const sentence = chooseExample(word, item.sentences ?? [], original);
   const example = sentence?.sentence ?? 'You may see the word “' + word + '” in technical documentation.';
   const exampleZh = sentence?.translation ?? '你可能会在技术文档中看到“' + word + '”这个词。';
   const category = categoryFor(word);
@@ -88,7 +101,7 @@ for (const item of [...coreRows, ...technical, ...basic]) {
   const key = item.word.toLowerCase();
   if (seen.has(key)) continue;
   seen.add(key);
-  vocabulary.push({ id: vocabulary.length + 1, ...item });
+  vocabulary.push({ id: vocabulary.length + 1, ...item, ...simpleExamples.get(key) });
   if (vocabulary.length === targetCount) break;
 }
 
@@ -100,7 +113,7 @@ const output = '// @ts-nocheck -- generated vocabulary dataset\n' +
   'export type VocabularyItem = {\n' +
   "  id: number; word: string; meaning: string; category: string; example: string; exampleZh: string; phonetic: string; tier: '核心' | '专业' | '基础';\n" +
   '};\n\nexport const vocabulary: VocabularyItem[] = ' + JSON.stringify(vocabulary) + ';\n';
-fs.writeFileSync(path.join(root, 'src/vocabulary.ts'), output, 'utf8');
+fs.writeFileSync(outputPath, output, 'utf8');
 
 const categories = [...new Set(vocabulary.map((item) => item.category))].sort();
 const counts = Object.fromEntries(categories.map((category) => [category, vocabulary.filter((item) => item.category === category).length]));

@@ -1,0 +1,23 @@
+{
+  "url": "http://localhost:5186/dist/index.html",
+  "cases": [
+    "reported-m",
+    "apostrophe-m",
+    "full-am",
+    "wrong-auxiliary",
+    "later-he",
+    "later-plural",
+    "unfinished-plural",
+    "country-full-name",
+    "written-im",
+    "equivalent-name",
+    "equivalent-negative",
+    "equivalent-nationality",
+    "omitted-its-apostrophe",
+    "omitted-were-apostrophe",
+    "wrong-meaning",
+    "wrong-name"
+  ],
+  "errors": [],
+  "testedAt": "2026-09-15T15:51:16.475Z"
+}

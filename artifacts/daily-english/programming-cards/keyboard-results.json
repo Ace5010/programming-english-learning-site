@@ -1,0 +1,39 @@
+{
+  "baseURL": "http://localhost:5186/",
+  "browser": "152.0.7977.83",
+  "results": [
+    {
+      "name": "level 0: type every missing letter, check and continue without mouse focus changes",
+      "passed": true
+    },
+    {
+      "name": "level 1: type every missing letter, check and continue without mouse focus changes",
+      "passed": true
+    },
+    {
+      "name": "level 2: type every missing letter, check and continue without mouse focus changes",
+      "passed": true
+    },
+    {
+      "name": "arrow keys, replacement, deletion, Tab and incomplete Enter preserve the answer and focus",
+      "passed": true
+    },
+    {
+      "name": "native IME commit advances after single or multiple letters without premature checking",
+      "passed": true
+    },
+    {
+      "name": "non-English IME text does not move focus or leave composition stuck",
+      "passed": true
+    },
+    {
+      "name": "batched text input fills consecutive editable gaps and fits on a phone",
+      "passed": true
+    },
+    {
+      "name": "full spelling keeps standard text editing and Enter check/continue",
+      "passed": true
+    }
+  ],
+  "errors": []
+}

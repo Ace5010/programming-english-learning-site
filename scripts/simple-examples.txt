@@ -1,0 +1,480 @@
+# 手工校对的短例句。格式：目标词|英文|中文。优先于词典例句。
+# 保留目标词的学习含义，尽量只引入基础词，不通过删除目标词缩短句子。
+repository|Open this repository.|打开这个代码仓库。
+branch|Make a new branch.|新建一个分支。
+commit|Commit your code.|提交你的代码。
+clone|Clone this project.|克隆这个项目。
+fork|Fork this project on GitHub.|在 GitHub 上复刻这个项目。
+merge|Merge these two branches.|合并这两个分支。
+pull request|Please check my pull request.|请检查我的拉取请求。
+issue|Open an issue for this bug.|为这个程序错误创建一个问题单。
+release|Try the new release.|试试新发布的版本。
+tag|Add a tag to this version.|给这个版本加一个标签。
+checkout|Use checkout to change branches.|用 checkout 命令切换分支。
+push|Push your code to GitHub.|把你的代码推送到 GitHub。
+pull|Pull the new code.|拉取新代码。
+remote|This remote has our code.|这个远程仓库存有我们的代码。
+origin|Push your code to origin.|把你的代码推送到 origin。
+conflict|There is a conflict in this file.|这个文件中有一处冲突。
+contributor|She is a new contributor.|她是一位新贡献者。
+maintainer|Ask the maintainer for help.|向维护者求助。
+license|Read the license first.|先阅读许可证。
+readme|Read the README for help.|阅读 README 获取帮助。
+function|This function adds two numbers.|这个函数把两个数相加。
+variable|Put your name in this variable.|把你的名字存入这个变量。
+constant|This constant is always five.|这个常量的值始终是五。
+parameter|This function has one parameter.|这个函数有一个参数。
+argument|Use your name as the argument.|用你的名字作为实参。
+return|Return the name.|返回名字。
+class|Make a class for users.|创建一个表示用户的类。
+object|This object has a name.|这个对象有一个名字。
+array|This array has three names.|这个数组里有三个名字。
+string|Your name is a string.|你的名字是一个字符串。
+boolean|A boolean can be true or false.|布尔值可以是真或假。
+integer|Five is an integer.|五是一个整数。
+loop|This loop runs ten times.|这个循环运行十次。
+condition|Check this condition first.|先检查这个条件。
+operator|Use the plus operator.|使用加号运算符。
+syntax|Check the syntax of this code.|检查这段代码的语法。
+statement|This statement prints your name.|这条语句会打印你的名字。
+expression|This expression adds two numbers.|这个表达式把两个数相加。
+method|This method saves the file.|这个方法会保存文件。
+property|Change the name property.|更改 name 属性。
+interface|This interface has two methods.|这个接口有两个方法。
+module|Add this module to your app.|把这个模块添加到你的应用中。
+package|This package is free.|这个软件包是免费的。
+install|Install this app.|安装这个应用。
+command|Run this command.|运行这条命令。
+terminal|Open a terminal here.|在这里打开终端。
+directory|Open this directory.|打开这个目录。
+path|Copy the file path.|复制文件路径。
+file|Save this file.|保存这个文件。
+folder|Make a new folder.|新建一个文件夹。
+dependency|This app needs one dependency.|这个应用需要一个依赖项。
+build|Build the app.|构建这个应用。
+compile|Compile this code.|编译这段代码。
+run|Run the app.|运行这个应用。
+script|Run this script once.|运行一次这个脚本。
+configuration|Save this configuration.|保存这个配置。
+environment|Set up the test environment.|搭建测试环境。
+component|This component shows a button.|这个组件显示一个按钮。
+browser|Open your browser.|打开你的浏览器。
+layout|I like this page layout.|我喜欢这个页面布局。
+responsive|A responsive page fits small screens.|响应式页面能适应小屏幕。
+database|Save the names in a database.|把这些名字存入数据库。
+query|This query finds all the names.|这个查询会找出所有名字。
+server|The server is down.|服务器无法正常运行。
+request|Send a request for help.|发送一个求助请求。
+response|The response says yes.|响应的内容是“是”。
+endpoint|Send your name to this endpoint.|把你的名字发送到这个接口地址。
+deploy|Deploy the app.|部署这个应用。
+error|There is an error here.|这里有一个错误。
+bug|I found a bug.|我发现了一个程序错误。
+debug|Debug this code.|调试这段代码。
+test|Write a test for this code.|为这段代码编写一个测试。
+warning|Read this warning.|阅读这条警告。
+authentication|This app uses password authentication.|这个应用使用密码验证身份。
+permission|Ask for permission first.|先请求权限。
+token|Keep your token safe.|保管好你的令牌。
+encryption|Use encryption to keep data safe.|使用加密来保护数据安全。
+algorithm|This algorithm sorts the names.|这个算法给名字排序。
+dataset|This dataset has ten names.|这个数据集中有十个名字。
+model|This model can read words.|这个模型可以识别单词。
+prompt|Write a short prompt.|写一条简短的提示词。
+ability|She has the ability to sing.|她有唱歌的能力。
+able|I am able to help.|我能够帮忙。
+about|This book is about cats.|这本书是关于猫的。
+absent|Tom is absent today.|汤姆今天缺席了。
+basketball|Let's play basketball.|我们打篮球吧。
+cabbage|I like cabbage soup.|我喜欢卷心菜汤。
+camel|The camel is very tall.|这只骆驼很高。
+CD|This CD has ten songs.|这张光盘里有十首歌。
+China|I live in China.|我住在中国。
+course|I like this English course.|我喜欢这门英语课。
+either|You can take either book.|这两本书你可以拿任意一本。
+England|She lives in England.|她住在英格兰。
+eraser|May I use your eraser?|我可以用你的橡皮吗？
+everybody|Everybody is here.|每个人都到了。
+goat|The goat is eating grass.|山羊正在吃草。
+hamburger|I want a hamburger.|我想要一个汉堡。
+himself|He made it himself.|这是他自己做的。
+Japan|He is from Japan.|他来自日本。
+lion|The lion is sleeping.|狮子正在睡觉。
+may|May I sit here?|我可以坐在这里吗？
+pancake|This pancake is hot.|这张薄饼很烫。
+should|You should get some sleep.|你应该睡一会儿。
+university|She goes to university.|她在上大学。
+VCD|We watched a film on VCD.|我们用视频光盘看了一部电影。
+violin|She can play the violin.|她会拉小提琴。
+whatever|Take whatever you need.|需要什么就拿什么。
+which|Which bag is yours?|哪个包是你的？
+anybody|Is anybody home?|有人在家吗？
+conjunction|And is a conjunction.|and 是一个连词。
+casually|He was dressed casually.|他穿得很随意。
+toward|Walk toward the door.|朝门口走。
+theater|Let's go to the theater.|我们去剧院吧。
+x-ray|I need an X-ray test.|我需要做一次 X 光检查。
+yeah|Yeah, I can help.|是的，我能帮忙。
+restroom|Where is the restroom?|洗手间在哪里？
+are|You are my friend.|你是我的朋友。
+color|What color is your bag?|你的包是什么颜色？
+am|I am at home.|我在家。
+is|This is my book.|这是我的书。
+yogurt|I eat yogurt every day.|我每天都吃酸奶。
+AD|This town was built in AD 100.|这座城镇建于公元 100 年。
+AIDS|He is learning about AIDS.|他正在了解艾滋病。
+analyze|Let's analyze this data.|我们来分析这些数据。
+approximately|It takes approximately ten days.|这大约需要十天。
+apron|Put on an apron.|穿上围裙。
+astronaut|She wants to be an astronaut.|她想成为一名宇航员。
+attentively|The children listened attentively.|孩子们认真地听着。
+bacterium|This bacterium is very small.|这个细菌很小。
+beddings|The shop sells beddings.|这家商店出售床上用品。
+birdcage|Clean the birdcage today.|今天把鸟笼清理一下。
+botany|She studies botany.|她学习植物学。
+boxing|He likes boxing.|他喜欢拳击。
+brewery|My dad works at a brewery.|我爸爸在一家啤酒厂工作。
+cheers|Cheers for your help!|谢谢你的帮助！
+above|The clock is above the door.|时钟在门的上方。
+accent|He has an American accent.|他有美国口音。
+accident|It was an accident.|那是一次意外。
+across|Walk across the street.|走到街对面。
+action|We need to take action.|我们需要采取行动。
+active|My dog is very active.|我的狗很活泼。
+activity|Reading is my favorite activity.|阅读是我最喜欢的活动。
+add|Add some water.|加一些水。
+address|Please address this letter to Tom.|请把这封信的收件人写成汤姆。
+advertisement|I saw an advertisement for this shop.|我看到过这家商店的广告。
+afford|I can't afford this car.|我买不起这辆车。
+after|I will call you after lunch.|午饭后我会打电话给你。
+against|Put the chair against the wall.|把椅子靠墙放。
+age|We are the same age.|我们同岁。
+ago|I saw him two days ago.|我两天前见过他。
+agree|I agree with you.|我同意你的看法。
+agreement|We have an agreement.|我们达成了一项协议。
+air|The air is cold today.|今天的空气很冷。
+airline|This airline is new.|这家航空公司是新开的。
+airplane|Look at that airplane.|看那架飞机。
+airport|Meet me at the airport.|到机场和我见面。
+all|All the books are here.|所有的书都在这里。
+aloud|Read this word aloud.|大声读这个词。
+already|I have already had lunch.|我已经吃过午饭了。
+also|I also like this book.|我也喜欢这本书。
+although|Although it is cold, I feel fine.|虽然天气冷，但我感觉还好。
+always|I always walk to school.|我总是走路上学。
+America|My friend lives in America.|我的朋友住在美国。
+American|She is an American student.|她是一名美国学生。
+among|I found it among my books.|我在我的书堆里找到了它。
+ancient|This is an ancient city.|这是一座古城。
+and|I like tea and milk.|我喜欢茶和牛奶。
+animal|A cat is an animal.|猫是一种动物。
+another|May I have another apple?|我可以再要一个苹果吗？
+answer|Please answer my question.|请回答我的问题。
+ant|There is an ant on my hand.|我手上有一只蚂蚁。
+any|Do you have any water?|你有水吗？
+anyway|Thanks anyway.|不管怎样，还是谢谢你。
+appear|Stars appear at night.|星星在夜间出现。
+apple|I eat an apple every day.|我每天吃一个苹果。
+April|My birthday is in April.|我的生日在四月。
+area|This area is quiet.|这个地区很安静。
+around|Let's walk around the park.|我们在公园里走走吧。
+arrive|Please arrive before ten.|请在十点之前到达。
+art|I like art class.|我喜欢美术课。
+article|Read this short article.|读一读这篇短文章。
+Asia|China is in Asia.|中国在亚洲。
+Asian|I like Asian food.|我喜欢亚洲食物。
+ask|Ask me a question.|问我一个问题吧。
+at|I am at school.|我在学校。
+Atlantic|This ship crosses the Atlantic.|这艘船横跨大西洋。
+attention|Please pay attention to the teacher.|请注意听老师讲课。
+August|It is hot in August.|八月很热。
+aunt|My aunt is a teacher.|我的阿姨是一名老师。
+Australia|My uncle lives in Australia.|我的叔叔住在澳大利亚。
+Australian|My friend is Australian.|我的朋友是澳大利亚人。
+autumn|I like autumn.|我喜欢秋天。
+available|Are you available today?|你今天有空吗？
+avoid|Try to avoid this road.|尽量避开这条路。
+back|Please come back tomorrow.|请明天再来。
+bag|This is my bag.|这是我的包。
+ball|Throw the ball to me.|把球扔给我。
+balloon|The balloon is red.|这个气球是红色的。
+banana|I want a banana.|我想要一根香蕉。
+bank|The bank is near my house.|银行在我家附近。
+basket|Put the apples in the basket.|把苹果放进篮子里。
+be|Please be quiet.|请安静。
+beach|Let's go to the beach.|我们去海滩吧。
+bear|These trees bear fruit every year.|这些树每年都结果。
+beautiful|This flower is beautiful.|这朵花很漂亮。
+because|I am happy because you are here.|你来了，我很开心。
+bedroom|My bedroom is small.|我的卧室很小。
+bee|A bee is on the flower.|一只蜜蜂在花上。
+beef|We had beef for dinner.|我们晚饭吃了牛肉。
+before|Wash your hands before dinner.|晚饭前洗手。
+behaviour|The teacher praised his good behaviour.|老师表扬了他的良好表现。
+behind|The cat is behind the door.|猫在门后面。
+bell|I can hear the bell.|我能听到铃声。
+below|Write your name below this line.|在这条线下面写上你的名字。
+besides|Who is coming besides you?|除了你，还有谁来？
+between|Sit between me and Tom.|坐在我和汤姆中间。
+beyond|The shop is beyond the school.|商店在学校的那一边。
+big|This is a big house.|这是一栋大房子。
+bird|A bird is in the tree.|树上有一只鸟。
+birth|What is your date of birth?|你的出生日期是什么？
+biscuit|Would you like a biscuit?|你想吃一块饼干吗？
+bitter|This tea tastes bitter.|这茶喝起来很苦。
+black|My bag is black.|我的包是黑色的。
+blackboard|Write your name on the blackboard.|在黑板上写上你的名字。
+blind|Her dog is blind.|她的狗看不见。
+blood|There is blood on his hand.|他的手上有血。
+board|Put the bread on this board.|把面包放在这块板上。
+boat|We are on a boat.|我们在一艘船上。
+body|Sleep is good for your body.|睡眠对你的身体有好处。
+book|This book is easy to read.|这本书容易读。
+born|I was born in May.|我出生在五月。
+both|We both like music.|我们俩都喜欢音乐。
+bottle|This bottle is empty.|这个瓶子是空的。
+bottom|My name is at the bottom.|我的名字在最下面。
+brain|Sleep helps your brain.|睡眠有助于大脑恢复。
+brave|You are very brave.|你很勇敢。
+breathe|Breathe in slowly.|慢慢吸气。
+bright|The room is bright.|房间很明亮。
+brown|The dog is brown.|这只狗是棕色的。
+brush|I need a new brush.|我需要一把新刷子。
+building|This building is very tall.|这栋楼很高。
+business|She runs a small business.|她经营着一家小公司。
+but|I like it, but it is expensive.|我喜欢它，但它很贵。
+butter|Put some butter on the bread.|在面包上抹些黄油。
+butterfly|Look at this butterfly.|看看这只蝴蝶。
+by|I go to school by bus.|我坐公交车上学。
+camera|This camera is easy to use.|这个相机很容易用。
+camp|Let's camp by the river.|我们在河边露营吧。
+Canada|She lives in Canada.|她住在加拿大。
+candle|Light the candle.|点燃蜡烛。
+candy|May I have some candy?|我可以吃点糖吗？
+capital|Beijing is the capital of China.|北京是中国的首都。
+captain|He is the captain of our team.|他是我们队的队长。
+card|This card is for you.|这张卡片是给你的。
+celebrate|Let's celebrate your birthday.|我们来庆祝你的生日吧。
+chance|Give me one more chance.|再给我一次机会。
+classmate|Tom is my classmate.|汤姆是我的同班同学。
+compare|Compare these two pictures.|比较这两张图片。
+cotton|This shirt is made of cotton.|这件衬衫是棉做的。
+create|Let's create a new page.|我们来创建一个新页面。
+culture|Food is part of our culture.|食物是我们文化的一部分。
+cup|This cup is for you.|这个杯子是给你的。
+danger|The dog is in danger.|这只狗处于危险中。
+each|Read each word slowly.|慢慢读每一个词。
+end|This is the end of the story.|故事到这里结束了。
+example|Here is an example.|这里有一个例子。
+experience|I have some experience with this work.|我有一些做这项工作的经验。
+fact|That is a fact.|那是一个事实。
+elephant|The elephant is very big.|这头大象很大。
+beehive|There is a beehive in the tree.|树上有一个蜂窝。
+backache|I have a backache.|我背痛。
+honor|We honor our teachers.|我们尊敬老师。
+sixteen|She is sixteen years old.|她十六岁了。
+fisherman|My dad is a fisherman.|我爸爸是一名渔夫。
+battleground|This field was a battleground.|这片田野曾是战场。
+percent|Ten percent of the class is absent.|班里百分之十的人缺席了。
+seventh|This is my seventh book.|这是我的第七本书。
+broom|Use a broom to clean the floor.|用扫帚扫地。
+cent|I have one cent left.|我还剩一美分。
+rise|Prices rise every year.|价格每年都上涨。
+case|This is a simple case.|这是一个简单的案例。
+dismiss|Please do not dismiss my idea.|请不要不考虑就否定我的想法。
+importance|We know the importance of sleep.|我们知道睡眠的重要性。
+comprehension|This test checks reading comprehension.|这个测试检查阅读理解能力。
+conclude|What can we conclude from this?|我们能从中得出什么结论？
+communist|He is a communist.|他是一名共产主义者。
+clarify|Please clarify your question.|请把你的问题说清楚。
+sandwich|Sandwich the cheese between two pieces of bread.|把奶酪夹在两片面包之间。
+attraction|This park is a popular attraction.|这个公园是一个热门景点。
+outdoor|I like outdoor games.|我喜欢户外游戏。
+expect|I expect him to come soon.|我预计他很快会来。
+kilometer|The school is one kilometer away.|学校在一公里外。
+science|Science is my favorite subject.|科学是我最喜欢的科目。
+instance|Try fruit, for instance, an apple.|试试水果，例如苹果。
+assume|Let's assume he is right.|我们先假设他是对的。
+speaker|The speaker is my teacher.|演讲者是我的老师。
+king|The king lives here.|国王住在这里。
+sense|This sentence makes sense.|这句话说得通。
+adaptation|This film is an adaptation of a book.|这部电影改编自一本书。
+sale|This house is for sale.|这栋房子正在出售。
+award|They will award her a prize.|他们将给她颁奖。
+arch|Walk under the arch.|从拱门下走过去。
+bachelor|My uncle is a bachelor.|我的叔叔是单身汉。
+conference|The conference starts at ten.|会议在十点开始。
+succeed|Keep trying and you will succeed.|继续尝试，你会成功的。
+though|It is cold, though the sun is out.|虽然出太阳了，但天气很冷。
+potato|Please wash this potato.|请把这个土豆洗一下。
+center|We center our work on this goal.|我们的工作围绕这个目标展开。
+thief|The thief took my bag.|小偷拿走了我的包。
+catch|Catch the ball.|接住球。
+arrival|We are waiting for his arrival.|我们正等着他到来。
+brake|Brake slowly.|慢慢刹车。
+engineer|My sister is an engineer.|我姐姐是一名工程师。
+tool|This tool is easy to use.|这个工具很好用。
+found|They want to found a new school.|他们想创办一所新学校。
+unable|I am unable to help today.|我今天没法帮忙。
+competition|She won the singing competition.|她赢得了歌唱比赛。
+acquire|You can acquire new skills here.|你可以在这里学到新技能。
+adolescence|My voice changed during adolescence.|我的声音在青春期发生了变化。
+lead|Follow her lead.|跟着她做。
+sixteenth|Today is my sixteenth birthday.|今天是我十六岁的生日。
+advantage|This plan has one advantage.|这个计划有一个优点。
+legend|The book tells an old legend.|这本书讲述了一个古老的传说。
+adolescent|This book is for adolescent readers.|这本书是给青少年读者看的。
+apparent|The reason soon became apparent.|原因很快就明了了。
+festival|We went to a music festival.|我们去参加了一个音乐节。
+near|My house is near the school.|我家在学校附近。
+anniversary|Today is our wedding anniversary.|今天是我们的结婚纪念日。
+chimney|Smoke comes out of the chimney.|烟从烟囱里冒出来。
+member|I am a new member.|我是一名新成员。
+party|Come to my birthday party.|来参加我的生日聚会吧。
+tent|We sleep in a tent.|我们睡在帐篷里。
+opinion|What is your opinion?|你的看法是什么？
+injure|Be careful not to injure your hand.|小心别弄伤你的手。
+anyhow|Thanks anyhow.|不管怎样，还是谢谢你。
+assumption|That is only an assumption.|那只是一个假设。
+cross|Draw a cross here.|在这里画一个十字。
+develop|We want to develop a new app.|我们想开发一个新应用。
+guard|A guard stands at the door.|一名守卫站在门口。
+public|This is a public park.|这是一个公共公园。
+report|Please read my report.|请读一读我的报告。
+scientist|She wants to be a scientist.|她想成为一名科学家。
+represent|These numbers represent days.|这些数字表示天数。
+throat|My throat hurts.|我嗓子疼。
+amount|These costs amount to ten dollars.|这些费用合计十美元。
+calendar|Check the date on the calendar.|看一下日历上的日期。
+reveal|Please do not reveal my password.|请不要泄露我的密码。
+basement|The old table is in the basement.|旧桌子在地下室里。
+bunch|I bought a bunch of flowers.|我买了一束花。
+classic|This is a classic story.|这是一个经典故事。
+collection|This is my book collection.|这是我收藏的书。
+cat|My cat is sleeping.|我的猫在睡觉。
+standard|This work meets our standard.|这项工作达到了我们的标准。
+winner|You are the winner.|你是获胜者。
+junk|Do not junk your old phone.|不要丢弃你的旧手机。
+win|I hope we win this game.|我希望我们赢得这场比赛。
+pierce|Use this needle to pierce the paper.|用这根针把纸刺穿。
+average|The average age is ten.|平均年龄是十岁。
+hope|I hope to see you soon.|我希望很快见到你。
+imagine|Imagine a big blue house.|想象一栋蓝色的大房子。
+nervous|I feel nervous before a test.|考试前我会紧张。
+patient|Please be patient with me.|请对我耐心一点。
+the|The book is on the table.|书在桌子上。
+of|I want a cup of tea.|我想要一杯茶。
+for|This book is for you.|这本书是给你的。
+in|The cat is in the box.|猫在箱子里。
+an|This is an apple.|这是一个苹果。
+will|I will help you.|我会帮你。
+this|This is my home.|这是我的家。
+with|Come with me.|跟我来。
+or|Do you want tea or milk?|你想要茶还是牛奶？
+it|It is a nice day.|今天天气很好。
+not|I am not tired.|我不累。
+that|That is my bag.|那是我的包。
+from|I am from China.|我来自中国。
+as|I saw her as I left.|我离开时看到了她。
+type|Type your name here.|在这里输入你的名字。
+no|No, thank you.|不用了，谢谢。
+number|What is your phone number?|你的电话号码是多少？
+true|That is true.|那是真的。
+see|I can see a bird.|我能看到一只鸟。
+use|May I use your pen?|我可以用你的笔吗？
+value|The value is ten.|数值是十。
+set|Set the cup on the table.|把杯子放在桌子上。
+name|My name is Tom.|我的名字是汤姆。
+only|I have only one pen.|我只有一支笔。
+open|The door is open.|门开着。
+read|Read this book.|读一读这本书。
+stream|A small stream runs by our house.|我家旁边流过一条小溪。
+more|I need more time.|我需要更多时间。
+write|Write your name here.|在这里写上你的名字。
+now|I am ready now.|我现在准备好了。
+list|Make a list of names.|列一个名字清单。
+used|I am used to this job.|我习惯了这份工作。
+close|We are close friends.|我们是亲密的朋友。
+new|I have a new phone.|我有一部新手机。
+position|Change the position of the chair.|换一下椅子的位置。
+other|Where is the other bag?|另一个包在哪里？
+agent|Ask your agent for help.|向你的代理人求助。
+instead|Let's walk instead.|我们改为走路吧。
+then|Eat first, then go to school.|先吃饭，然后去上学。
+than|I am taller than you.|我比你高。
+throw|Throw the ball to me.|把球扔给我。
+operation|This operation takes ten seconds.|这个操作需要十秒。
+copy|Copy this file.|复制这个文件。
+print|The print is too small.|印刷的字太小了。
+first|Read this first.|先读这个。
+same|We have the same name.|我们有相同的名字。
+have|I have a dog.|我有一只狗。
+require|These plants require water.|这些植物需要水。
+I|I like this book.|我喜欢这本书。
+one|I need a pen. Do you have one?|我需要一支笔。你有吗？
+there|Put the book there.|把书放在那里。
+time|What time is it?|现在几点？
+try|Try this again.|再试一次。
+whether|I don't know whether he is home.|我不知道他是否在家。
+some|Please give me some water.|请给我一些水。
+possible|Is it possible to walk there?|可以走路去那里吗？
+flag|Flag this file for review.|给这个文件做个标记，留待检查。
+access|You can access this file.|你可以访问这个文件。
+two|I have two cats.|我有两只猫。
+must|You must wash your hands.|你必须洗手。
+OK|Are you OK?|你还好吗？
+they|They are my friends.|他们是我的朋友。
+head|My head hurts.|我头疼。
+net|The net weight is one kilogram.|净重是一千克。
+call|Call me tomorrow.|明天给我打电话。
+so|I am so happy.|我很开心。
+Rusia|She lives in Rusia.|她住在鲁西亚。
+ninth|This is the ninth page.|这是第九页。
+beancurd|I like beancurd soup.|我喜欢豆腐汤。
+ballpoint|Please use a ballpoint pen.|请用圆珠笔。
+caption|Read the caption under the photo.|读一读照片下面的说明。
+fourteenth|Today is my fourteenth birthday.|今天是我十四岁的生日。
+carbon|Plants need carbon to grow.|植物生长需要碳。
+bookmark|Put a bookmark in your book.|在书里放一张书签。
+circumstance|We can help under any circumstance.|任何情况下我们都能帮忙。
+cut|Cut the apple in half.|把苹果切成两半。
+hero|My dad is my hero.|我爸爸是我心中的英雄。
+abandon|The children danced with abandon.|孩子们尽情地跳舞。
+edge|Do not sit on the edge.|不要坐在边缘上。
+Belgium|My friend lives in Belgium.|我的朋友住在比利时。
+complain|Please do not complain about the food.|请不要抱怨饭菜。
+relation|There is a relation between food and health.|食物和健康之间有关系。
+accuse|Do not accuse me of lying.|不要指责我说谎。
+put|Put the book on the table.|把书放在桌子上。
+boundary|This wall marks the boundary.|这面墙标示了边界。
+cloud|Look at that white cloud.|看那朵白云。
+plan|What is your plan for today?|你今天有什么计划？
+thick|He is in the thick of the crowd.|他在人群最拥挤的地方。
+Jew|My neighbor is a Jew.|我的邻居是一位犹太人。
+butcher|They butcher pigs for meat.|他们宰猪取肉。
+primary|My primary goal is to learn English.|我的主要目标是学英语。
+study|I study English every day.|我每天学英语。
+far|How far is your school?|你的学校有多远？
+establish|They want to establish a new school.|他们想建立一所新学校。
+admit|I admit I was wrong.|我承认我错了。
+barber|He can barber my hair.|他能给我理发。
+fair|That is not fair.|那不公平。
+bleed|The sharp edge can make your hand bleed.|锋利的边缘会使你的手流血。
+nature|I love nature.|我热爱大自然。
+hunger|They hunger for a better life.|他们渴望更好的生活。
+style|I like your style.|我喜欢你的风格。
+hallway|Please wait in the hallway.|请在走廊里等。
+survey|Please fill in this survey.|请填写这份调查问卷。
+teenager|My brother is a teenager.|我的弟弟是一名青少年。
+impress|He wants to impress his teacher.|他想给老师留下深刻印象。
+corner|The shop is on the corner.|商店在拐角处。
+money|I need some money.|我需要一些钱。
+rush|Do not rush your work.|做事不要太匆忙。
+whose|Whose bag is this?|这是谁的包？
+labor|This work needs a lot of labor.|这项工作需要大量劳动。
+polar|The polar bear is white.|北极熊是白色的。
+difference|What is the difference between these words?|这些词有什么区别？
+row|Sit in the front row.|坐在前排。
+panda|The panda is eating bamboo.|熊猫正在吃竹子。
+if|Stay home if it rains.|如果下雨，就待在家里。
+London|My friend lives in London.|我的朋友住在伦敦。

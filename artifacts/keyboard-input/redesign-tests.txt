@@ -1,0 +1,8 @@
+PASS: word and example play real local audio; visible playback follows playing, pause and ended
+PASS: voice and speed preferences control word/example playback and survive refresh
+PASS: favorites, mastery, progress and old storage survive refresh without resetting unrelated keys
+PASS: category, tier, search, paging and navigation counts retain actual vocabulary behavior
+PASS: desktop and mobile vocabulary screens stay readable without horizontal overflow
+PASS: a wrong answer receives feedback, a later corrective recheck, and a complete five-type round
+PASS: practice playback states use real normal/slow media and respect reduced motion and summary preferences
+REDESIGN BROWSER PASS: 7 scenarios; 16 actual-playback checks; screenshots: D:\coding项目\交互式英语学习网站\artifacts\keyboard-input\redesign

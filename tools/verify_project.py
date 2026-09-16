@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import subprocess
 from pathlib import Path
 
 
@@ -75,6 +76,7 @@ def main() -> None:
             print("语音问题：" + ", ".join(audio_missing[:20]))
         raise SystemExit(1)
 
+    subprocess.run(['node', str(ROOT / 'scripts/verify-daily-assets.mjs')], cwd=ROOT, check=True)
     print("检查通过：完整项目已汇总。")
 
 

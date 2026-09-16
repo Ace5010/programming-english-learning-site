@@ -1,0 +1,34 @@
+{
+  "url": "http://localhost:5186/dist/",
+  "themeURLs": [
+    "../themes/fonts/patrick-hand.woff2",
+    "../themes/fonts/knewave.woff2",
+    "../themes/fonts/wenkai-headings.woff2",
+    "../themes/fonts/kuaile-headings.woff2",
+    "../themes/graffiti-accent.webp"
+  ],
+  "themeAssets": [
+    {
+      "url": "http://localhost:5186/dist/themes/fonts/wenkai-headings.woff2",
+      "status": 200
+    },
+    {
+      "url": "http://localhost:5186/dist/themes/fonts/patrick-hand.woff2",
+      "status": 200
+    },
+    {
+      "url": "http://localhost:5186/dist/themes/graffiti-accent.webp",
+      "status": 200
+    },
+    {
+      "url": "http://localhost:5186/dist/themes/fonts/kuaile-headings.woff2",
+      "status": 200
+    },
+    {
+      "url": "http://localhost:5186/dist/themes/fonts/knewave.woff2",
+      "status": 200
+    }
+  ],
+  "errors": [],
+  "nativeAudio": "Guy slow playback passed"
+}

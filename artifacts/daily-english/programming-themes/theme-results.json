@@ -1,0 +1,10 @@
+{
+  "browser": "152.0.7977.83",
+  "baseURL": "http://localhost:5186/",
+  "results": [
+    "Four themes retain all learning keys, voice/speed, filters, search and pagination; native media works; theme survives reload.",
+    "Four distinct navigation effects respond immediately and cancel rapid clicks; 7 widths and longest word fit; live reduced motion suppresses all nav effects.",
+    "Theme changes preserve the actual dictation task, all answers, feedback and learning records; select Enter does not submit; keyboard check/continue and Escape still work."
+  ],
+  "errors": []
+}

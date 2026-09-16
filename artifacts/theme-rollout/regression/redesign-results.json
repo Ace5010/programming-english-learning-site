@@ -1,0 +1,501 @@
+{
+  "baseURL": "http://localhost:5186/",
+  "browser": "152.0.7977.83",
+  "results": [
+    {
+      "name": "word and example play real local audio; visible playback follows playing, pause and ended",
+      "passed": true
+    },
+    {
+      "name": "voice and speed preferences control word/example playback and survive refresh",
+      "passed": true
+    },
+    {
+      "name": "favorites, mastery, progress and old storage survive refresh without resetting unrelated keys",
+      "passed": true
+    },
+    {
+      "name": "category, tier, search, paging and navigation counts retain actual vocabulary behavior",
+      "passed": true
+    },
+    {
+      "name": "desktop and mobile vocabulary screens stay readable without horizontal overflow",
+      "passed": true
+    },
+    {
+      "name": "a wrong answer receives feedback, a later corrective recheck, and a complete five-type round",
+      "passed": true
+    },
+    {
+      "name": "practice playback states use real normal/slow media and respect reduced motion and summary preferences",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "mediaEvidence": [
+    {
+      "index": 0,
+      "src": "http://localhost:5186/audio/aria/word-1.mp3",
+      "rate": 1,
+      "currentTime": 0.001917,
+      "duration": 1.992,
+      "readyState": 4,
+      "preservesPitch": true,
+      "events": [
+        {
+          "index": 0,
+          "type": "waiting",
+          "src": "http://localhost:5186/audio/aria/word-1.mp3",
+          "currentTime": 0,
+          "rate": 1,
+          "paused": false,
+          "ended": false
+        },
+        {
+          "index": 0,
+          "type": "playing",
+          "src": "http://localhost:5186/audio/aria/word-1.mp3",
+          "currentTime": 0,
+          "rate": 1,
+          "paused": false,
+          "ended": false
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "src": "http://localhost:5186/audio/aria/example-1.mp3?v=Open%20this%20repository.",
+      "rate": 1,
+      "currentTime": 0.005734,
+      "duration": 2.424,
+      "readyState": 4,
+      "preservesPitch": true,
+      "events": [
+        {
+          "index": 1,
+          "type": "waiting",
+          "src": "http://localhost:5186/audio/aria/example-1.mp3?v=Open%20this%20repository.",
+          "currentTime": 0,
+          "rate": 1,
+          "paused": false,
+          "ended": false
+        },
+        {
+          "index": 1,
+          "type": "playing",
+          "src": "http://localhost:5186/audio/aria/example-1.mp3?v=Open%20this%20repository.",
+          "currentTime": 0,
+          "rate": 1,
+          "paused": false,
+          "ended": false
+        }
+      ]
+    },
+    {
+      "index": 0,
+      "src": "http://localhost:5186/audio/guy/word-1.mp3",
+      "rate": 0.72,
+      "currentTime": 0.002548,
+      "duration": 2.04,
+      "readyState": 4,
+      "preservesPitch": true,
+      "events": [
+        {
+          "index": 0,
+          "type": "waiting",
+          "src": "http://localhost:5186/audio/guy/word-1.mp3",
+          "currentTime": 0,
+          "rate": 0.72,
+          "paused": false,
+          "ended": false
+        },
+        {
+          "index": 0,
+          "type": "playing",
+          "src": "http://localhost:5186/audio/guy/word-1.mp3",
+          "currentTime": 0,
+          "rate": 0.72,
+          "paused": false,
+          "ended": false
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "src": "http://localhost:5186/audio/guy/example-1.mp3?v=Open%20this%20repository.",
+      "rate": 0.72,
+      "currentTime": 0.001376,
+      "duration": 2.52,
+      "readyState": 4,
+      "preservesPitch": true,
+      "events": [
+        {
+          "index": 1,
+          "type": "waiting",
+          "src": "http://localhost:5186/audio/guy/example-1.mp3?v=Open%20this%20repository.",
+          "currentTime": 0,
+          "rate": 0.72,
+          "paused": false,
+          "ended": false
+        },
+        {
+          "index": 1,
+          "type": "playing",
+          "src": "http://localhost:5186/audio/guy/example-1.mp3?v=Open%20this%20repository.",
+          "currentTime": 0,
+          "rate": 0.72,
+          "paused": false,
+          "ended": false
+        }
+      ]
+    },
+    {
+      "index": 0,
+      "src": "http://localhost:5186/audio/guy/word-1.mp3",
+      "rate": 0.72,
+      "currentTime": 0.002779,
+      "duration": 2.04,
+      "readyState": 4,
+      "preservesPitch": true,
+      "events": [
+        {
+          "index": 0,
+          "type": "waiting",
+          "src": "http://localhost:5186/audio/guy/word-1.mp3",
+          "currentTime": 0,
+          "rate": 0.72,
+          "paused": false,
+          "ended": false
+        },
+        {
+          "index": 0,
+          "type": "playing",
+          "src": "http://localhost:5186/audio/guy/word-1.mp3",
+          "currentTime": 0,
+          "rate": 0.72,
+          "paused": false,
+          "ended": false
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "src": "http://localhost:5186/audio/aria/word-1.mp3",
+      "rate": 1,
+      "currentTime": 0.00446,
+      "duration": 1.992,
+      "readyState": 4,
+      "preservesPitch": true,
+      "events": [
+        {
+          "index": 1,
+          "type": "waiting",
+          "src": "http://localhost:5186/audio/aria/word-1.mp3",
+          "currentTime": 0,
+          "rate": 1,
+          "paused": false,
+          "ended": false
+        },
+        {
+          "index": 1,
+          "type": "playing",
+          "src": "http://localhost:5186/audio/aria/word-1.mp3",
+          "currentTime": 0,
+          "rate": 1,
+          "paused": false,
+          "ended": false
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "src": "http://localhost:5186/audio/aria/example-1.mp3?v=Open%20this%20repository.",
+      "rate": 1,
+      "currentTime": 0.004167,
+      "duration": 2.424,
+      "readyState": 4,
+      "preservesPitch": true,
+      "events": [
+        {
+          "index": 2,
+          "type": "waiting",
+          "src": "http://localhost:5186/audio/aria/example-1.mp3?v=Open%20this%20repository.",
+          "currentTime": 0,
+          "rate": 1,
+          "paused": false,
+          "ended": false
+        },
+        {
+          "index": 2,
+          "type": "playing",
+          "src": "http://localhost:5186/audio/aria/example-1.mp3?v=Open%20this%20repository.",
+          "currentTime": 0,
+          "rate": 1,
+          "paused": false,
+          "ended": false
+        }
+      ]
+    },
+    {
+      "index": 0,
+      "src": "http://localhost:5186/audio/aria/word-1.mp3",
+      "rate": 1,
+      "currentTime": 0.008454,
+      "duration": 1.992,
+      "readyState": 4,
+      "preservesPitch": true,
+      "events": [
+        {
+          "index": 0,
+          "type": "waiting",
+          "src": "http://localhost:5186/audio/aria/word-1.mp3",
+          "currentTime": 0,
+          "rate": 1,
+          "paused": false,
+          "ended": false
+        },
+        {
+          "index": 0,
+          "type": "playing",
+          "src": "http://localhost:5186/audio/aria/word-1.mp3",
+          "currentTime": 0,
+          "rate": 1,
+          "paused": false,
+          "ended": false
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "src": "http://localhost:5186/audio/aria/word-1.mp3",
+      "rate": 1,
+      "currentTime": 0.004492,
+      "duration": 1.992,
+      "readyState": 4,
+      "preservesPitch": true,
+      "events": [
+        {
+          "index": 1,
+          "type": "waiting",
+          "src": "http://localhost:5186/audio/aria/word-1.mp3",
+          "currentTime": 0,
+          "rate": 1,
+          "paused": false,
+          "ended": false
+        },
+        {
+          "index": 1,
+          "type": "playing",
+          "src": "http://localhost:5186/audio/aria/word-1.mp3",
+          "currentTime": 0,
+          "rate": 1,
+          "paused": false,
+          "ended": false
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "src": "http://localhost:5186/audio/aria/word-3.mp3",
+      "rate": 1,
+      "currentTime": 0.001813,
+      "duration": 1.584,
+      "readyState": 4,
+      "preservesPitch": true,
+      "events": [
+        {
+          "index": 3,
+          "type": "waiting",
+          "src": "http://localhost:5186/audio/aria/word-3.mp3",
+          "currentTime": 0,
+          "rate": 1,
+          "paused": false,
+          "ended": false
+        },
+        {
+          "index": 3,
+          "type": "playing",
+          "src": "http://localhost:5186/audio/aria/word-3.mp3",
+          "currentTime": 0,
+          "rate": 1,
+          "paused": false,
+          "ended": false
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "src": "http://localhost:5186/audio/aria/word-29.mp3",
+      "rate": 1,
+      "currentTime": 0.00574,
+      "duration": 1.608,
+      "readyState": 4,
+      "preservesPitch": true,
+      "events": [
+        {
+          "index": 5,
+          "type": "waiting",
+          "src": "http://localhost:5186/audio/aria/word-29.mp3",
+          "currentTime": 0,
+          "rate": 1,
+          "paused": false,
+          "ended": false
+        },
+        {
+          "index": 5,
+          "type": "playing",
+          "src": "http://localhost:5186/audio/aria/word-29.mp3",
+          "currentTime": 0,
+          "rate": 1,
+          "paused": false,
+          "ended": false
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "src": "http://localhost:5186/audio/aria/word-1.mp3",
+      "rate": 1,
+      "currentTime": 0.001741,
+      "duration": 1.992,
+      "readyState": 4,
+      "preservesPitch": true,
+      "events": [
+        {
+          "index": 7,
+          "type": "waiting",
+          "src": "http://localhost:5186/audio/aria/word-1.mp3",
+          "currentTime": 0,
+          "rate": 1,
+          "paused": false,
+          "ended": false
+        },
+        {
+          "index": 7,
+          "type": "playing",
+          "src": "http://localhost:5186/audio/aria/word-1.mp3",
+          "currentTime": 0,
+          "rate": 1,
+          "paused": false,
+          "ended": false
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "src": "http://localhost:5186/audio/aria/word-2.mp3",
+      "rate": 1,
+      "currentTime": 0.004711,
+      "duration": 1.608,
+      "readyState": 4,
+      "preservesPitch": true,
+      "events": [
+        {
+          "index": 9,
+          "type": "waiting",
+          "src": "http://localhost:5186/audio/aria/word-2.mp3",
+          "currentTime": 0,
+          "rate": 1,
+          "paused": false,
+          "ended": false
+        },
+        {
+          "index": 9,
+          "type": "playing",
+          "src": "http://localhost:5186/audio/aria/word-2.mp3",
+          "currentTime": 0,
+          "rate": 1,
+          "paused": false,
+          "ended": false
+        }
+      ]
+    },
+    {
+      "index": 0,
+      "src": "http://localhost:5186/audio/guy/word-2.mp3",
+      "rate": 1,
+      "currentTime": 0.002339,
+      "duration": 1.584,
+      "readyState": 4,
+      "preservesPitch": true,
+      "events": [
+        {
+          "index": 0,
+          "type": "waiting",
+          "src": "http://localhost:5186/audio/guy/word-2.mp3",
+          "currentTime": 0,
+          "rate": 1,
+          "paused": false,
+          "ended": false
+        },
+        {
+          "index": 0,
+          "type": "playing",
+          "src": "http://localhost:5186/audio/guy/word-2.mp3",
+          "currentTime": 0,
+          "rate": 1,
+          "paused": false,
+          "ended": false
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "src": "http://localhost:5186/audio/guy/word-2.mp3",
+      "rate": 0.72,
+      "currentTime": 0.003651,
+      "duration": 1.584,
+      "readyState": 4,
+      "preservesPitch": true,
+      "events": [
+        {
+          "index": 1,
+          "type": "waiting",
+          "src": "http://localhost:5186/audio/guy/word-2.mp3",
+          "currentTime": 0,
+          "rate": 0.72,
+          "paused": false,
+          "ended": false
+        },
+        {
+          "index": 1,
+          "type": "playing",
+          "src": "http://localhost:5186/audio/guy/word-2.mp3",
+          "currentTime": 0,
+          "rate": 0.72,
+          "paused": false,
+          "ended": false
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "src": "http://localhost:5186/audio/guy/word-2.mp3",
+      "rate": 0.72,
+      "currentTime": 0.003795,
+      "duration": 1.584,
+      "readyState": 4,
+      "preservesPitch": true,
+      "events": [
+        {
+          "index": 4,
+          "type": "waiting",
+          "src": "http://localhost:5186/audio/guy/word-2.mp3",
+          "currentTime": 0,
+          "rate": 0.72,
+          "paused": false,
+          "ended": false
+        },
+        {
+          "index": 4,
+          "type": "playing",
+          "src": "http://localhost:5186/audio/guy/word-2.mp3",
+          "currentTime": 0,
+          "rate": 0.72,
+          "paused": false,
+          "ended": false
+        }
+      ]
+    }
+  ]
+}

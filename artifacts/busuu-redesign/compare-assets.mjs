@@ -1,0 +1,11 @@
+import assert from 'node:assert/strict';
+import { readFile, writeFile } from 'node:fs/promises';
+const before = JSON.parse(await readFile(new URL('./asset-hashes-before.json', import.meta.url), 'utf8'));
+const after = JSON.parse(await readFile(new URL('./asset-hashes-after.json', import.meta.url), 'utf8'));
+const changed = Object.keys(before).filter(file => after[file] && after[file] !== before[file]);
+const missing = Object.keys(before).filter(file => !after[file]);
+const added = Object.keys(after).filter(file => !before[file]);
+const result = { checkedFiles: Object.keys(before).length, changed, missing, added, identical: !changed.length && !missing.length && !added.length };
+await writeFile(new URL('./asset-integrity.json', import.meta.url), JSON.stringify(result, null, 2) + '\n');
+assert.equal(result.identical, true, JSON.stringify(result));
+console.log(`ASSET PASS: all ${result.checkedFiles} files retain their exact SHA256 hashes.`);
