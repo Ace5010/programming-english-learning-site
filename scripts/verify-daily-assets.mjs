@@ -1,11 +1,29 @@
 // Fast deployment integrity check. Full MP3 decoding remains in verify_daily_audio.py.
+// The course source is TypeScript. Transpile it with the project's own TypeScript
+// dependency instead of importing the .ts file directly, so the deployment build works
+// on any Node.js version the hosting platform provides (type stripping only became the
+// default in Node 22.18; Cloudflare Pages currently builds with an older 22.x).
 import { readFileSync, readdirSync } from 'node:fs';
 import { createHash } from 'node:crypto';
+import { createRequire } from 'node:module';
 import { resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { dailyPhrases, dailyLessons } from '../src/dailyCourse.ts';
+import ts from 'typescript';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
+
+function loadDailyCourse() {
+  const require = createRequire(import.meta.url);
+  const source = readFileSync(new URL('../src/dailyCourse.ts', import.meta.url), 'utf8');
+  const compiled = ts.transpileModule(source, {
+    compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2020 },
+  }).outputText;
+  const loaded = { exports: {} };
+  new Function('require', 'exports', 'module', compiled)(require, loaded.exports, loaded);
+  return loaded.exports;
+}
+
+const { dailyPhrases, dailyLessons } = loadDailyCourse();
 const hash = text => createHash('sha256').update(text).digest('hex');
 export function verifyDailyAssets(folder) {
   const manifest = JSON.parse(readFileSync(resolve(folder, 'neural-manifest.json'), 'utf8'));
