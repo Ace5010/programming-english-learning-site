@@ -96,6 +96,22 @@ try {
   });
   await page.waitForFunction(start => window.__playing.slice(start).some(event => event.rate === .72), htmlEvents);
   results.push('dedicated native audio takes priority, and a simulated decoder error falls back to the bundled MP3');
+  const beforeStall = await page.evaluate(() => window.__playing.length);
+  await target.getByRole('button', { name: /^听示范 / }).click();
+  await page.evaluate(() => {
+    const request = window.__audioNative.at(-1);
+    window.CodeWordsAudio.onmessage({ data: JSON.stringify({ id: request.id, event: 'playing', positionMs: 0 }) });
+  });
+  await page.waitForFunction(before => window.__playing.slice(before).some(event => event.rate === 1), beforeStall);
+  results.push('a simulated native start with no progress automatically recovers into real local MP3 playback');
+  const beforeException = await page.evaluate(() => {
+    window.CodeWordsAudio = { onmessage: null, postMessage() { throw new Error('simulated cold bridge exception'); } };
+    return window.__playing.length;
+  });
+  await target.getByRole('button', { name: /^慢速朗读 / }).click();
+  await page.waitForFunction(before => window.__playing.slice(before).some(event => event.rate === .72), beforeException);
+  results.push('a first-call bridge exception recovers within the user gesture');
+  await page.evaluate(() => { delete window.CodeWordsAudio; });
   for (const theme of ['minimal', 'sketch', 'print', 'graffiti']) {
     await page.getByLabel('界面风格', { exact: true }).selectOption(theme);
     assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth));

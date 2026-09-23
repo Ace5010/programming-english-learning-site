@@ -1,0 +1,107 @@
+--------- beginning of main
+09-23 13:58:27.185  7774  7774 I CodeWordsAudio: play audio-1 audio/aria/word-1.mp3 rate=1.0
+09-23 13:58:27.395  7774  7774 I CodeWordsAudio: playing audio-1 elapsed_ms=209 position_ms=194 rate=1.0
+09-23 13:58:27.596  7774  7774 I CodeWordsAudio: progress audio-1 elapsed_ms=410 position_ms=358 rate=1.0
+09-23 13:58:27.797  7774  7774 I CodeWordsAudio: progress audio-1 elapsed_ms=612 position_ms=566 rate=1.0
+09-23 13:58:27.998  7774  7774 I CodeWordsAudio: progress audio-1 elapsed_ms=813 position_ms=767 rate=1.0
+09-23 13:58:28.199  7774  7774 I CodeWordsAudio: progress audio-1 elapsed_ms=1014 position_ms=967 rate=1.0
+09-23 13:58:28.400  7774  7774 I CodeWordsAudio: progress audio-1 elapsed_ms=1215 position_ms=1170 rate=1.0
+09-23 13:58:28.600  7774  7774 I CodeWordsAudio: progress audio-1 elapsed_ms=1415 position_ms=1371 rate=1.0
+09-23 13:58:28.800  7774  7774 I CodeWordsAudio: progress audio-1 elapsed_ms=1615 position_ms=1571 rate=1.0
+09-23 13:58:29.000  7774  7774 I CodeWordsAudio: progress audio-1 elapsed_ms=1815 position_ms=1771 rate=1.0
+09-23 13:58:29.200  7774  7774 I CodeWordsAudio: progress audio-1 elapsed_ms=2015 position_ms=1971 rate=1.0
+09-23 13:58:29.252  7774  7774 I CodeWordsAudio: ended audio-1 elapsed_ms=2067 position_ms=2014 rate=1.0
+09-23 13:59:01.880  7774  7774 I CodeWordsAudio: play audio-2 audio/aria/word-1.mp3 rate=0.72
+09-23 13:59:02.089  7774  7774 I CodeWordsAudio: playing audio-2 elapsed_ms=209 position_ms=142 rate=0.72
+09-23 13:59:02.289  7774  7774 I CodeWordsAudio: progress audio-2 elapsed_ms=409 position_ms=298 rate=0.72
+09-23 13:59:02.489  7774  7774 I CodeWordsAudio: progress audio-2 elapsed_ms=609 position_ms=442 rate=0.72
+09-23 13:59:02.689  7774  7774 I CodeWordsAudio: progress audio-2 elapsed_ms=809 position_ms=586 rate=0.72
+09-23 13:59:02.891  7774  7774 I CodeWordsAudio: progress audio-2 elapsed_ms=1011 position_ms=732 rate=0.72
+09-23 13:59:03.091  7774  7774 I CodeWordsAudio: progress audio-2 elapsed_ms=1211 position_ms=887 rate=0.72
+09-23 13:59:03.293  7774  7774 I CodeWordsAudio: progress audio-2 elapsed_ms=1412 position_ms=1032 rate=0.72
+09-23 13:59:03.494  7774  7774 I CodeWordsAudio: progress audio-2 elapsed_ms=1614 position_ms=1161 rate=0.72
+09-23 13:59:03.695  7774  7774 I CodeWordsAudio: progress audio-2 elapsed_ms=1815 position_ms=1323 rate=0.72
+09-23 13:59:03.896  7774  7774 I CodeWordsAudio: progress audio-2 elapsed_ms=2016 position_ms=1469 rate=0.72
+09-23 13:59:04.098  7774  7774 I CodeWordsAudio: progress audio-2 elapsed_ms=2218 position_ms=1615 rate=0.72
+09-23 13:59:04.299  7774  7774 I CodeWordsAudio: progress audio-2 elapsed_ms=2419 position_ms=1760 rate=0.72
+09-23 13:59:04.481  7774  7774 I CodeWordsAudio: ended audio-2 elapsed_ms=2601 position_ms=1891 rate=0.72
+09-23 13:59:16.639  7774  7774 I CodeWordsAudio: play audio-3 audio/aria/word-2801.mp3 rate=1.0
+09-23 13:59:16.844  7774  7774 I CodeWordsAudio: playing audio-3 elapsed_ms=205 position_ms=161 rate=1.0
+09-23 13:59:17.045  7774  7774 I CodeWordsAudio: progress audio-3 elapsed_ms=406 position_ms=362 rate=1.0
+09-23 13:59:17.446  7774  7774 I CodeWordsAudio: progress audio-3 elapsed_ms=807 position_ms=515 rate=1.0
+09-23 13:59:17.648  7774  7774 I CodeWordsAudio: progress audio-3 elapsed_ms=1009 position_ms=718 rate=1.0
+09-23 13:59:17.849  7774  7774 I CodeWordsAudio: progress audio-3 elapsed_ms=1210 position_ms=918 rate=1.0
+09-23 13:59:18.049  7774  7774 I CodeWordsAudio: progress audio-3 elapsed_ms=1410 position_ms=1119 rate=1.0
+09-23 13:59:18.249  7774  7774 I CodeWordsAudio: progress audio-3 elapsed_ms=1610 position_ms=1319 rate=1.0
+09-23 13:59:18.450  7774  7774 I CodeWordsAudio: progress audio-3 elapsed_ms=1811 position_ms=1520 rate=1.0
+09-23 13:59:18.636  7774  7774 I CodeWordsAudio: ended audio-3 elapsed_ms=1997 position_ms=1702 rate=1.0
+09-23 13:59:36.018  7774  7774 I CodeWordsAudio: play audio-4 audio/aria/word-1.mp3 rate=1.0
+09-23 13:59:36.223  7774  7774 I CodeWordsAudio: playing audio-4 elapsed_ms=206 position_ms=163 rate=1.0
+09-23 13:59:36.425  7774  7774 I CodeWordsAudio: progress audio-4 elapsed_ms=407 position_ms=365 rate=1.0
+09-23 13:59:36.825  7774  7774 I CodeWordsAudio: progress audio-4 elapsed_ms=808 position_ms=429 rate=1.0
+09-23 13:59:37.028  7774  7774 I CodeWordsAudio: progress audio-4 elapsed_ms=1011 position_ms=632 rate=1.0
+09-23 13:59:37.230  7774  7774 I CodeWordsAudio: progress audio-4 elapsed_ms=1213 position_ms=837 rate=1.0
+09-23 13:59:37.432  7774  7774 I CodeWordsAudio: progress audio-4 elapsed_ms=1415 position_ms=1039 rate=1.0
+09-23 13:59:37.633  7774  7774 I CodeWordsAudio: progress audio-4 elapsed_ms=1615 position_ms=1240 rate=1.0
+09-23 13:59:37.833  7774  7774 I CodeWordsAudio: progress audio-4 elapsed_ms=1816 position_ms=1440 rate=1.0
+09-23 13:59:38.034  7774  7774 I CodeWordsAudio: progress audio-4 elapsed_ms=2017 position_ms=1642 rate=1.0
+09-23 13:59:38.235  7774  7774 I CodeWordsAudio: progress audio-4 elapsed_ms=2218 position_ms=1842 rate=1.0
+09-23 13:59:38.409  7774  7774 I CodeWordsAudio: ended audio-4 elapsed_ms=2392 position_ms=2014 rate=1.0
+09-23 14:02:39.051  7774  7774 I CodeWordsAudio: play audio-1 audio/aria/word-3561.mp3 rate=1.0
+09-23 14:02:39.257  7774  7774 I CodeWordsAudio: playing audio-1 elapsed_ms=205 position_ms=195 rate=1.0
+09-23 14:02:39.457  7774  7774 I CodeWordsAudio: progress audio-1 elapsed_ms=406 position_ms=396 rate=1.0
+09-23 14:02:39.858  7774  7774 I CodeWordsAudio: progress audio-1 elapsed_ms=806 position_ms=470 rate=1.0
+09-23 14:02:40.059  7774  7774 I CodeWordsAudio: progress audio-1 elapsed_ms=1008 position_ms=671 rate=1.0
+09-23 14:02:40.260  7774  7774 I CodeWordsAudio: progress audio-1 elapsed_ms=1209 position_ms=874 rate=1.0
+09-23 14:02:40.461  7774  7774 I CodeWordsAudio: progress audio-1 elapsed_ms=1410 position_ms=1075 rate=1.0
+09-23 14:02:40.661  7774  7774 I CodeWordsAudio: progress audio-1 elapsed_ms=1610 position_ms=1275 rate=1.0
+09-23 14:02:40.861  7774  7774 I CodeWordsAudio: progress audio-1 elapsed_ms=1810 position_ms=1475 rate=1.0
+09-23 14:02:41.061  7774  7774 I CodeWordsAudio: progress audio-1 elapsed_ms=2010 position_ms=1675 rate=1.0
+09-23 14:02:41.262  7774  7774 I CodeWordsAudio: progress audio-1 elapsed_ms=2211 position_ms=1876 rate=1.0
+09-23 14:02:41.283  7774  7774 I CodeWordsAudio: ended audio-1 elapsed_ms=2232 position_ms=1894 rate=1.0
+09-23 14:03:05.345  7774  7774 I CodeWordsAudio: play audio-2 audio/aria/word-3561.mp3 rate=0.72
+09-23 14:03:05.552  7774  7774 I CodeWordsAudio: playing audio-2 elapsed_ms=207 position_ms=140 rate=0.72
+09-23 14:03:05.752  7774  7774 I CodeWordsAudio: progress audio-2 elapsed_ms=407 position_ms=390 rate=0.72
+09-23 14:03:05.954  7774  7774 I CodeWordsAudio: progress audio-2 elapsed_ms=609 position_ms=535 rate=0.72
+09-23 14:03:06.757  7774  7774 I CodeWordsAudio: progress audio-2 elapsed_ms=1412 position_ms=659 rate=0.72
+09-23 14:03:06.957  7774  7774 I CodeWordsAudio: progress audio-2 elapsed_ms=1612 position_ms=803 rate=0.72
+09-23 14:03:07.158  7774  7774 I CodeWordsAudio: progress audio-2 elapsed_ms=1813 position_ms=948 rate=0.72
+09-23 14:03:07.359  7774  7774 I CodeWordsAudio: progress audio-2 elapsed_ms=2014 position_ms=1092 rate=0.72
+09-23 14:03:07.559  7774  7774 I CodeWordsAudio: progress audio-2 elapsed_ms=2214 position_ms=1237 rate=0.72
+09-23 14:03:07.759  7774  7774 I CodeWordsAudio: progress audio-2 elapsed_ms=2414 position_ms=1381 rate=0.72
+09-23 14:03:07.960  7774  7774 I CodeWordsAudio: progress audio-2 elapsed_ms=2615 position_ms=1528 rate=0.72
+09-23 14:03:08.161  7774  7774 I CodeWordsAudio: progress audio-2 elapsed_ms=2816 position_ms=1673 rate=0.72
+09-23 14:03:08.298  7774  7774 I CodeWordsAudio: ended audio-2 elapsed_ms=2953 position_ms=1771 rate=0.72
+09-23 14:03:30.982  7774  7774 I CodeWordsAudio: play audio-3 audio/aria/word-3561.mp3 rate=1.0
+09-23 14:03:31.190  7774  7774 I CodeWordsAudio: playing audio-3 elapsed_ms=208 position_ms=194 rate=1.0
+09-23 14:03:31.391  7774  7774 I CodeWordsAudio: progress audio-3 elapsed_ms=408 position_ms=394 rate=1.0
+09-23 14:03:31.792  7774  7774 I CodeWordsAudio: progress audio-3 elapsed_ms=810 position_ms=402 rate=1.0
+09-23 14:03:31.993  7774  7774 I CodeWordsAudio: progress audio-3 elapsed_ms=1011 position_ms=603 rate=1.0
+09-23 14:03:32.194  7774  7774 I CodeWordsAudio: progress audio-3 elapsed_ms=1212 position_ms=804 rate=1.0
+09-23 14:03:32.395  7774  7774 I CodeWordsAudio: progress audio-3 elapsed_ms=1413 position_ms=1005 rate=1.0
+09-23 14:03:32.596  7774  7774 I CodeWordsAudio: progress audio-3 elapsed_ms=1614 position_ms=1206 rate=1.0
+09-23 14:03:32.796  7774  7774 I CodeWordsAudio: progress audio-3 elapsed_ms=1814 position_ms=1406 rate=1.0
+09-23 14:03:32.996  7774  7774 I CodeWordsAudio: progress audio-3 elapsed_ms=2014 position_ms=1607 rate=1.0
+09-23 14:03:33.197  7774  7774 I CodeWordsAudio: progress audio-3 elapsed_ms=2215 position_ms=1807 rate=1.0
+09-23 14:03:33.289  7774  7774 I CodeWordsAudio: ended audio-3 elapsed_ms=2307 position_ms=1894 rate=1.0
+09-23 14:03:54.082  7774  7774 I CodeWordsAudio: play audio-4 audio/aria/word-20.mp3 rate=1.0
+09-23 14:03:54.287  7774  7774 I CodeWordsAudio: playing audio-4 elapsed_ms=205 position_ms=196 rate=1.0
+09-23 14:03:54.488  7774  7774 I CodeWordsAudio: progress audio-4 elapsed_ms=406 position_ms=397 rate=1.0
+09-23 14:03:54.888  7774  7774 I CodeWordsAudio: progress audio-4 elapsed_ms=806 position_ms=486 rate=1.0
+09-23 14:03:55.089  7774  7774 I CodeWordsAudio: progress audio-4 elapsed_ms=1007 position_ms=687 rate=1.0
+09-23 14:03:55.290  7774  7774 I CodeWordsAudio: progress audio-4 elapsed_ms=1208 position_ms=888 rate=1.0
+09-23 14:03:55.491  7774  7774 I CodeWordsAudio: progress audio-4 elapsed_ms=1409 position_ms=1089 rate=1.0
+09-23 14:03:55.691  7774  7774 I CodeWordsAudio: progress audio-4 elapsed_ms=1609 position_ms=1289 rate=1.0
+09-23 14:03:55.893  7774  7774 I CodeWordsAudio: progress audio-4 elapsed_ms=1810 position_ms=1490 rate=1.0
+09-23 14:03:56.039  7774  7774 I CodeWordsAudio: ended audio-4 elapsed_ms=1957 position_ms=1630 rate=1.0
+09-23 14:04:18.876  7774  7774 I CodeWordsAudio: play audio-5 audio/aria/word-20.mp3 rate=0.72
+09-23 14:04:19.082  7774  7774 I CodeWordsAudio: playing audio-5 elapsed_ms=206 position_ms=178 rate=0.72
+09-23 14:04:19.282  7774  7774 I CodeWordsAudio: progress audio-5 elapsed_ms=406 position_ms=391 rate=0.72
+09-23 14:04:19.483  7774  7774 I CodeWordsAudio: progress audio-5 elapsed_ms=607 position_ms=535 rate=0.72
+09-23 14:04:20.286  7774  7774 I CodeWordsAudio: progress audio-5 elapsed_ms=1410 position_ms=680 rate=0.72
+09-23 14:04:20.486  7774  7774 I CodeWordsAudio: progress audio-5 elapsed_ms=1610 position_ms=828 rate=0.72
+09-23 14:04:20.687  7774  7774 I CodeWordsAudio: progress audio-5 elapsed_ms=1811 position_ms=977 rate=0.72
+09-23 14:04:20.887  7774  7774 I CodeWordsAudio: progress audio-5 elapsed_ms=2011 position_ms=1121 rate=0.72
+09-23 14:04:21.087  7774  7774 I CodeWordsAudio: progress audio-5 elapsed_ms=2211 position_ms=1255 rate=0.72
+09-23 14:04:21.287  7774  7774 I CodeWordsAudio: progress audio-5 elapsed_ms=2411 position_ms=1398 rate=0.72
+09-23 14:04:21.448  7774  7774 I CodeWordsAudio: ended audio-5 elapsed_ms=2571 position_ms=1514 rate=0.72

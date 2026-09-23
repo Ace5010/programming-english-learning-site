@@ -1,7 +1,7 @@
 import type { NativeAudioStart } from './audioPlayback.ts';
 
 /** Narrow native bridge, injected only into the APK's bundled HTTPS origin. */
-type NativeMessage = { id: string; event: string; text?: string; code?: string };
+type NativeMessage = { id: string; event: string; text?: string; code?: string; positionMs?: number };
 type Bridge = { postMessage: (message: string) => void; onmessage: ((event: { data: string }) => void) | null };
 const listeners = new Map<string, (message: NativeMessage) => void>();
 let attached: Bridge | undefined;
@@ -46,14 +46,21 @@ export const startNativeAudio: NativeAudioStart = (url, rate, notify) => {
   const id = `audio-${++sequence}`;
   const send = (action: string, values = {}) => native.postMessage(JSON.stringify({ action, id, ...values }));
   audioListeners.set(id, message => {
-    if (!['playing', 'ended', 'stopped', 'error'].includes(message.event)) return;
-    if (message.event !== 'playing') audioListeners.delete(id);
-    notify(message.event as 'playing' | 'ended' | 'stopped' | 'error', message.code);
+    if (!['playing', 'progress', 'ended', 'stopped', 'error'].includes(message.event)) return;
+    if (message.event !== 'playing' && message.event !== 'progress') audioListeners.delete(id);
+    notify(message.event as 'playing' | 'progress' | 'ended' | 'stopped' | 'error', message.code, message.positionMs);
   });
-  send('play', { path, rate });
+  try { send('play', { path, rate }); }
+  catch (error) { audioListeners.delete(id); throw error; }
   return {
-    stop: () => { audioListeners.delete(id); send('stop'); },
-    setRate: next => send('rate', { rate: next }),
+    stop: () => {
+      audioListeners.delete(id);
+      try { send('stop'); } catch { /* The document/bridge may already have closed. */ }
+    },
+    setRate: next => {
+      try { send('rate', { rate: next }); }
+      catch { audioListeners.delete(id); notify('error', 'bridge-unavailable'); }
+    },
   };
 };
 

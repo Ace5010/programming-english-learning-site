@@ -1,6 +1,54 @@
 {
   "results": [
     {
+      "scenario": "first audio click in a fresh browser context",
+      "voice": "aria",
+      "word": "repository",
+      "completed": true
+    },
+    {
+      "scenario": "first audio click in a fresh browser context",
+      "voice": "aria",
+      "word": "project",
+      "completed": true
+    },
+    {
+      "scenario": "first audio click in a fresh browser context",
+      "voice": "aria",
+      "word": "code",
+      "completed": true
+    },
+    {
+      "scenario": "first audio click in a fresh browser context",
+      "voice": "aria",
+      "word": "readme",
+      "completed": true
+    },
+    {
+      "scenario": "first audio click in a fresh browser context",
+      "voice": "guy",
+      "word": "repository",
+      "completed": true
+    },
+    {
+      "scenario": "first audio click in a fresh browser context",
+      "voice": "guy",
+      "word": "project",
+      "completed": true
+    },
+    {
+      "scenario": "first audio click in a fresh browser context",
+      "voice": "guy",
+      "word": "code",
+      "completed": true
+    },
+    {
+      "scenario": "first audio click in a fresh browser context",
+      "voice": "guy",
+      "word": "readme",
+      "completed": true
+    },
+    {
       "voice": "aria",
       "text": "repository",
       "rate": 1,
@@ -197,6 +245,48 @@
     },
     {
       "scenario": "navigation stops playback; returning to the saved lesson can play again"
+    },
+    {
+      "scenario": "returning to an earlier word and repeating normal/slow",
+      "word": "repository",
+      "rate": 1,
+      "completed": true
+    },
+    {
+      "scenario": "returning to an earlier word and repeating normal/slow",
+      "word": "project",
+      "rate": 1,
+      "completed": true
+    },
+    {
+      "scenario": "returning to an earlier word and repeating normal/slow",
+      "word": "repository",
+      "rate": 1,
+      "completed": true
+    },
+    {
+      "scenario": "returning to an earlier word and repeating normal/slow",
+      "word": "code",
+      "rate": 1,
+      "completed": true
+    },
+    {
+      "scenario": "returning to an earlier word and repeating normal/slow",
+      "word": "code",
+      "rate": 0.72,
+      "completed": true
+    },
+    {
+      "scenario": "returning to an earlier word and repeating normal/slow",
+      "word": "code",
+      "rate": 1,
+      "completed": true
+    },
+    {
+      "scenario": "returning to an earlier word and repeating normal/slow",
+      "word": "code",
+      "rate": 1,
+      "completed": true
     }
   ],
   "errors": [],

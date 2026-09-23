@@ -1,11 +1,11 @@
 # 手机与网页进度同步
 
-2026-09-23。实际学习站点为 https://programming-english-learning-site.pages.dev/ 。Android 1.1.1 使用同一同步接口，仍保留完整离线资源与原有学习记录。
+2026-09-23。实际学习站点为 https://programming-english-learning-site.pages.dev/ 。Android 1.1.2 使用同一同步接口，仍保留完整离线资源与原有学习记录。
 
 ## 使用
 
 1. 在原来有学习进度的网页刷新一次，点击顶部“同步”→“开启同步”。等待“进度已同步”，再复制同步码。
-2. 安装 Android 1.1.1，在“同步”中粘贴这个码，点击“连接已有进度”。无需注册账号。
+2. 安装 Android 1.1.2，在“同步”中粘贴这个码，点击“连接已有进度”。无需注册账号。
 3. 之后学习变更会自动上传；页面回到前台、恢复联网、以及前台定期检查时拉取另一设备的更新。也可点击“立即同步”。后台或断网时不保证即时传输，但本机答题继续保存。
 
 同步范围包括旧的已掌握词、编程课程、词汇复习、练习统计、收藏和日常英语的课程、复习与收藏。两区原本的存储键及词汇 ID 相互独立。主题、声音、语速和当前导航保留为本机偏好。
@@ -39,7 +39,7 @@
 
 官方配置参考：[Pages 的 D1 绑定](https://developers.cloudflare.com/pages/functions/bindings/#d1-databases)、[D1 批次事务](https://developers.cloudflare.com/d1/worker-api/d1-database/#batch)、[Pages Wrangler 配置](https://developers.cloudflare.com/pages/functions/wrangler-configuration/)。
 
-1.1.1 的点读修复沿用这套同步协议、存储键及原签名；已配对设备覆盖升级后无需重新配对。此次音频专项没有重跑真实 D1 同步，既有端到端证据如下。
+1.1.2 的点读修复沿用这套同步协议、存储键及原签名；已配对设备覆盖升级后无需重新配对。点读期间暂缓应用远端进度，避免重建课程打断录音，结束后继续既有自动同步流程。此次通过隔离 SQLite 的 8 组浏览器同步检查，没有重跑真实 D1 同步；既有端到端证据如下。
 
 ## 验证
 

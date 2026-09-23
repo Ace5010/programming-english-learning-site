@@ -1,6 +1,6 @@
-# 安卓测试版 1.1.1
+# 安卓测试版 1.1.2
 
-2026-09-23。包名 `com.codewords.english`，版本号 3，最低 Android 8.0（API 26），目标 Android 15（API 35）。使用较新的 Android System WebView。APK 位于 `artifacts/android/codewords-1.1.1-release.apk`，约 203.4 MiB，包含所有课程、3,620 个词及双声线点读录音。
+2026-09-23。包名 `com.codewords.english`，版本号 4，最低 Android 8.0（API 26），目标 Android 15（API 35）。使用较新的 Android System WebView。APK 位于 `artifacts/android/codewords-1.1.2-release.apk`，约 203.4 MiB，包含所有课程、3,620 个词及双声线点读录音。
 
 ## 使用及记录
 
@@ -16,7 +16,29 @@
 - 课程、词级复习、词库、表达库、收藏和口语参考仍保留每条正常／慢速按钮，速度为 1 和 0.72，切换不丢练习。
 - 安卓内的导出走系统文件保存界面；跟读桥接安卓系统识别，不依赖 WebView 是否实现网页 SpeechRecognition。
 
-## 1.1.1 点读修复与回归
+## 1.1.2 首次点读与异常恢复
+
+用户在手机自带扬声器上仍反馈：打开后第一次点读无声；换词或先点慢速后有时恢复。这个完整的真机现象尚未在蓝叠重现，不能根据以下防御性修复认定已查明手机底层原因。
+
+代码中确认了恢复缺口：收到原生 `playing` 后关闭超时检查，但该事件原先紧接 `start()` 就发送，没有检查播放位置；同词、同速度的再次点击被无限忽略。新增故障注入测试在旧代码上复现了这类请求锁住、网页空转及无法手动重试的问题，修复后通过。桥接或浏览器初始化同步抛错的路径也已覆盖。
+
+- 加载中的连点和刚起播的双击合并处理；起播 750 ms 后主动再点原词可以从头重播，不要求先换词或切语速。
+- 原生每 200 ms 检查位置，首次推进后才报告播放，持续回报进度。停滞 2 秒释放原生请求并尝试包内 HTML 音频；前端也独立检查进度和桥接超时。回退后的旧回调不能取消新播放器。
+- 正常语速使用默认 `start()`；慢速由 `setPlaybackParams` 启动，不再在 Prepared 状态连续调用两种启动方式。Android 文档说明非零速度参数会使已准备的播放器开始播放，见 [MediaPlayer](https://developer.android.com/reference/android/media/MediaPlayer#setPlaybackParams(android.media.PlaybackParams))。这是一项兼容性调整，不是对手机根因的证明。
+- 原生错误时读取播放位置失败也会发送错误回复；桥接关闭、初始化异常都会释放前端状态。音频焦点拒绝仍尊重系统，不通过备用播放器绕过。
+- 录音加载和播放期间暂缓应用远端同步记录，防止刷新课程中断点读；结束后按既有自动同步流程继续。存储键、同步码、原始录音、声线及每条 1／0.72 语速保留。
+
+本次检查：101 项 Node 测试通过（播放器、原生适配、同步及两区课程/进度）；TypeScript、生产构建、完整性检查、Release/Debug 构建及 Android Lint 通过。最终 APK 的 14,665 个网页文件与 dist 逐字节一致，包含 14,648 个 MP3，v2 签名与既有版本一致。
+
+最终生产网页完成 49 项真实 MP3 播放检查，其中 8 项在独立的新浏览器上下文中分别把 repository、project、code、readme 作为第一次点读；另外覆盖两声线、两速度、切词返回、原词重播、1.2 秒加载延迟下连点及导航返回。局部语速/四种风格回归 12 组、44 次播放事件；包内路径和 CSP 回归 7 组，包含模拟原生卡住及首次桥接异常后实际 HTML MP3 回退；隔离 SQLite 同步浏览器回归 8 组，不涉及用户真实记录，未重跑真实 D1 服务。
+
+最终 APK 在蓝叠 5（Android 9 / WebView 129）覆盖安装，首次安装时间和原课程会话保留。完成 9 次原生播放：新进程首次点击 repository、其慢速、project、回点 repository 时快速双击仅产生一次请求；退出应用页面并重新打开后第一次直接点击 code，随后 code 慢速/正常、readme 正常/慢速。均有位置推进并结束，0 错误。第二次打开是新 Activity/WebView，进程保留；没有把它称为完整系统重启。最终包 SHA-256 为 `6c4548b32c805ade563d9d5577d91ec93bb955b5b460d11c4f100425e2b14b4c`。
+
+最终原生证据：`artifacts/audio-reliability/android-1.1.2-playback.txt`、`artifacts/audio-reliability/android-1.1.2-results.json`。先前候选包的 Guy 测试不计入这 9 次，记录保留在 `.runtime/android-audio-audit/android-1.1.2-candidate-native.txt`。未完成真机扬声器实听或原生播放中切后台的验证。
+
+其他证据：`artifacts/audio-reliability/browser-results.json`、`artifacts/local-audio-controls/browser-results-production.json`、`artifacts/android/web-bundle-results.json`、`artifacts/sync-audit/results.json`、`artifacts/android/apk-validation-1.1.2.json`。播放器进度及结束事件仍不等同于手机扬声器实听验证。
+
+## 1.1.1 点读修复与回归（历史）
 
 已复现旧播放器在录音尚未起播时第二次点击会暂停、清空当前请求，造成无声；网络延迟会扩大这个时间窗口。原 APK 的录音齐全，首课文件可以完整解码，不能将问题笼统归因于网络或缺录音。用户手机上“无论点多少次都无声”的完整现象仍未在本机模拟器重现。
 
@@ -56,7 +78,7 @@ Manifest 申请 `RECORD_AUDIO` 和同步所需的 `INTERNET`，不申请存储�
 npx tsc --noEmit
 node --test tools/test-audio-playback.mjs tools/test-native-android.mjs
 ./scripts/Build-Android.ps1 -SdkPath '<SDK 路径>' -JavaPath '<JDK 路径>' -GradlePath '<gradle.bat 路径>' -InitializeSigning -Validate
-python tools/verify_android.py artifacts/android/codewords-1.1.1-release.apk --output artifacts/android/apk-validation-1.1.1.json
+python tools/verify_android.py artifacts/android/codewords-1.1.2-release.apk --output artifacts/android/apk-validation-1.1.2.json
 # 使用 SDK 的 build-tools/35.0.0/apksigner.bat verify --verbose <apk> 验证签名。
 ```
 

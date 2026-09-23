@@ -90,3 +90,22 @@ test('native audio normal/slow, interruption and late replies keep request bound
   env.emit(env.sent.at(-1).id, 'error', { code: 'decoder' }); env.emit(id, 'playing'); next.stop();
   assert.deepEqual(events, ['playing', 'error']);
 });
+
+test('native progress preserves the listener until a terminal event and includes the playback position', () => {
+  const env = environment(); window.CodeWordsAudio = env.native; const events = [];
+  const audio = startNativeAudio('https://appassets.androidplatform.net/assets/web/audio/guy/word-1.mp3', 1,
+    (event, code, positionMs) => events.push({ event, code, positionMs }));
+  const id = env.sent[0].id;
+  for (const [event, positionMs] of [['playing', 100], ['progress', 300], ['ended', 2000], ['progress', 2100]]) env.emit(id, event, { positionMs });
+  assert.deepEqual(events.map(event => [event.event, event.positionMs]), [['playing', 100], ['progress', 300], ['ended', 2000]]);
+  audio.stop();
+});
+
+test('a bridge closing during stop or rate change cannot leave a stuck callback', () => {
+  const env = environment(); window.CodeWordsAudio = env.native; const events = [];
+  const audio = startNativeAudio('https://appassets.androidplatform.net/assets/web/audio/guy/word-1.mp3', 1, event => events.push(event));
+  const id = env.sent[0].id;
+  env.native.postMessage = () => { throw new Error('bridge closed'); };
+  audio.setRate(.72); audio.stop(); env.emit(id, 'playing');
+  assert.deepEqual(events, ['error']);
+});

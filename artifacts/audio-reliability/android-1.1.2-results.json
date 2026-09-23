@@ -1,0 +1,178 @@
+{
+  "version": "1.1.2",
+  "versionCode": 4,
+  "apkSha256": "6c4548b32c805ade563d9d5577d91ec93bb955b5b460d11c4f100425e2b14b4c",
+  "emulator": "BlueStacks 5 Pie64 / Android 9 / WebView 129.0.6668.70",
+  "package": "com.codewords.english",
+  "originalInstallTime": "2026-09-23 12:14:49",
+  "lastUpdateTime": "2026-09-23 13:57:26",
+  "courseSessionRestored": true,
+  "completedClips": 9,
+  "playbackErrors": 0,
+  "firstClicks": [
+    {
+      "clipIndex": 0,
+      "word": "repository",
+      "startup": "new process after final APK installation"
+    },
+    {
+      "clipIndex": 4,
+      "word": "code",
+      "startup": "exit confirmation then reopen: new Activity/WebView in retained process; no prior playback"
+    }
+  ],
+  "scenarios": [
+    "first repository normal",
+    "repository slow",
+    "switch to project",
+    "return to repository with rapid double tap: one request",
+    "first code normal after reopen",
+    "code slow",
+    "code back to normal",
+    "readme normal",
+    "readme slow"
+  ],
+  "clips": [
+    {
+      "at": "09-23 13:58:27.185",
+      "id": "audio-1",
+      "path": "audio/aria/word-1.mp3",
+      "rate": 1,
+      "progressEvents": 9,
+      "playing": {
+        "elapsedMs": 209,
+        "positionMs": 194
+      },
+      "ended": {
+        "elapsedMs": 2067,
+        "positionMs": 2014
+      }
+    },
+    {
+      "at": "09-23 13:59:01.880",
+      "id": "audio-2",
+      "path": "audio/aria/word-1.mp3",
+      "rate": 0.72,
+      "progressEvents": 11,
+      "playing": {
+        "elapsedMs": 209,
+        "positionMs": 142
+      },
+      "ended": {
+        "elapsedMs": 2601,
+        "positionMs": 1891
+      }
+    },
+    {
+      "at": "09-23 13:59:16.639",
+      "id": "audio-3",
+      "path": "audio/aria/word-2801.mp3",
+      "rate": 1,
+      "progressEvents": 7,
+      "playing": {
+        "elapsedMs": 205,
+        "positionMs": 161
+      },
+      "ended": {
+        "elapsedMs": 1997,
+        "positionMs": 1702
+      }
+    },
+    {
+      "at": "09-23 13:59:36.018",
+      "id": "audio-4",
+      "path": "audio/aria/word-1.mp3",
+      "rate": 1,
+      "progressEvents": 9,
+      "playing": {
+        "elapsedMs": 206,
+        "positionMs": 163
+      },
+      "ended": {
+        "elapsedMs": 2392,
+        "positionMs": 2014
+      }
+    },
+    {
+      "at": "09-23 14:02:39.051",
+      "id": "audio-1",
+      "path": "audio/aria/word-3561.mp3",
+      "rate": 1,
+      "progressEvents": 9,
+      "playing": {
+        "elapsedMs": 205,
+        "positionMs": 195
+      },
+      "ended": {
+        "elapsedMs": 2232,
+        "positionMs": 1894
+      }
+    },
+    {
+      "at": "09-23 14:03:05.345",
+      "id": "audio-2",
+      "path": "audio/aria/word-3561.mp3",
+      "rate": 0.72,
+      "progressEvents": 10,
+      "playing": {
+        "elapsedMs": 207,
+        "positionMs": 140
+      },
+      "ended": {
+        "elapsedMs": 2953,
+        "positionMs": 1771
+      }
+    },
+    {
+      "at": "09-23 14:03:30.982",
+      "id": "audio-3",
+      "path": "audio/aria/word-3561.mp3",
+      "rate": 1,
+      "progressEvents": 9,
+      "playing": {
+        "elapsedMs": 208,
+        "positionMs": 194
+      },
+      "ended": {
+        "elapsedMs": 2307,
+        "positionMs": 1894
+      }
+    },
+    {
+      "at": "09-23 14:03:54.082",
+      "id": "audio-4",
+      "path": "audio/aria/word-20.mp3",
+      "rate": 1,
+      "progressEvents": 7,
+      "playing": {
+        "elapsedMs": 205,
+        "positionMs": 196
+      },
+      "ended": {
+        "elapsedMs": 1957,
+        "positionMs": 1630
+      }
+    },
+    {
+      "at": "09-23 14:04:18.876",
+      "id": "audio-5",
+      "path": "audio/aria/word-20.mp3",
+      "rate": 0.72,
+      "progressEvents": 8,
+      "playing": {
+        "elapsedMs": 206,
+        "positionMs": 178
+      },
+      "ended": {
+        "elapsedMs": 2571,
+        "positionMs": 1514
+      }
+    }
+  ],
+  "limitations": [
+    "Playback position and completion are not speaker-output listening evidence.",
+    "The user physical-phone first-click silence was not reproduced; root cause remains unconfirmed.",
+    "No claim of full OS-reboot cold-start testing or native mid-clip interruption testing.",
+    "Earlier Guy-voice checks used the candidate APK before the final bridge-exception cleanup and are not counted here."
+  ]
+}

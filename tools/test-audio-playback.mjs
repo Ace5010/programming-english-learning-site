@@ -86,3 +86,75 @@ test('bounded warmup evicts inactive clips without interrupting the playing clip
   for (let group = 0; group < 4; group++) env.player.preload(Array.from({ length: 16 }, (_, index) => `${group}-${index}`));
   assert.equal(env.elements.filter(audio => audio.src).length, 32); assert.equal(env.elements[0].paused, false);
 });
+
+test('a native start acknowledgement without advancing playback cannot lock a word forever', t => {
+  t.mock.timers.enable({ apis: ['setTimeout', 'Date'] });
+  let callback, stopped = 0;
+  const env = setup(t, (_url, _rate, notify) => { callback = notify; return { stop: () => stopped++, setRate() {} }; });
+  env.player.play('code', 1, 'code-normal'); callback('playing');
+  t.mock.timers.tick(2600);
+  assert.equal(stopped, 1);
+  assert.equal(env.elements.length, 1, 'stuck native playback should fall back to the local recording');
+  env.elements[0].onplaying(); callback('ended');
+  assert.equal(env.events.at(-1), 'code-normal', 'a late native reply cannot cancel the fallback');
+});
+
+test('a deliberate second tap retries the same word without requiring another word or speed', t => {
+  t.mock.timers.enable({ apis: ['setTimeout', 'Date'] });
+  let callback, starts = 0;
+  const env = setup(t, (_url, _rate, notify) => { callback = notify; starts++; return { stop() {}, setRate() {} }; });
+  env.player.play('repository', 1, 'normal'); callback('playing');
+  t.mock.timers.tick(100); env.player.play('repository', 1, 'normal'); assert.equal(starts, 1);
+  t.mock.timers.tick(1000); env.player.play('repository', 1, 'normal'); assert.equal(starts, 2);
+});
+
+test('browser playing without a moving timeline also releases the request', t => {
+  t.mock.timers.enable({ apis: ['setTimeout', 'Date'] });
+  const env = setup(t); env.player.play('code', 1, 'normal'); env.elements[0].onplaying();
+  t.mock.timers.tick(2600);
+  assert.equal(env.errors(), 1); assert.equal(env.elements[0].paused, true);
+  env.player.play('code', 1, 'normal'); assert.equal(env.elements.length, 2);
+});
+
+test('a first-call native bridge exception falls back in the click and never locks the first word', t => {
+  const env = setup(t, () => { throw new Error('bridge unavailable'); });
+  env.player.play('repository', 1, 'normal');
+  assert.equal(env.elements.length, 1); assert.equal(env.elements[0].plays, 1);
+  env.elements[0].onplaying(); env.elements[0].onended();
+  env.player.play('repository', 1, 'normal'); assert.equal(env.elements[0].plays, 2);
+});
+
+test('only advancing native positions keep a long clip alive; repeated positions time out', t => {
+  t.mock.timers.enable({ apis: ['setTimeout', 'Date'] }); let callback;
+  const env = setup(t, (_url, _rate, notify) => { callback = notify; return { stop() {}, setRate() {} }; });
+  env.player.play('example', .72, 'slow'); callback('playing', undefined, 100);
+  for (let position = 1000; position <= 8000; position += 1000) {
+    t.mock.timers.tick(1000); callback('progress', undefined, position);
+  }
+  assert.equal(env.elements.length, 0);
+  t.mock.timers.tick(1000); callback('progress', undefined, 8000);
+  t.mock.timers.tick(1600); assert.equal(env.elements.length, 1);
+});
+
+test('loading and native fallback remain busy until completion, so sync cannot interrupt a first tap', t => {
+  const events = []; let callback;
+  const audio = { load() {}, pause() {}, removeAttribute() {}, play: () => Promise.resolve() };
+  const player = new AudioPlayback(() => {}, () => {}, (_url, _rate, notify) => {
+    callback = notify; return { stop() {}, setRate() {} };
+  }, () => audio, busy => events.push(busy));
+  t.after(() => player.dispose());
+  player.play('code', 1, 'normal'); assert.equal(events.at(-1), true);
+  const count = events.length;
+  callback('error', 'playback-stalled'); audio.onplaying();
+  assert.deepEqual(events.slice(count), []);
+  audio.onended(); assert.equal(events.at(-1), false);
+});
+
+test('a synchronous browser setup exception releases both audio and the sync blocker', t => {
+  const states = []; let errors = 0;
+  const player = new AudioPlayback(() => {}, () => errors++, undefined,
+    () => { throw new Error('media setup unavailable'); }, busy => states.push(busy));
+  t.after(() => player.dispose());
+  player.play('code', 1, 'normal'); player.play('code', 1, 'normal');
+  assert.equal(errors, 2); assert.equal(states.at(-1), false);
+});

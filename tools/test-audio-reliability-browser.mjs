@@ -30,6 +30,18 @@ async function open(voice, delayed = false) {
   return { context, page };
 }
 try {
+  for (const voice of ['aria', 'guy']) for (const word of ['repository', 'project', 'code', 'readme']) {
+    const { context, page } = await open(voice);
+    assert.equal(await page.evaluate(() => window.__audioAudit.events.filter(event => event.type === 'playing').length), 0);
+    await page.getByRole('button', { name: `朗读 ${word}`, exact: true }).click();
+    await page.waitForFunction(() => window.__audioAudit.events.some(event => event.type === 'ended'));
+    const events = await page.evaluate(() => window.__audioAudit.events);
+    assert.equal(events.filter(event => event.type === 'playing').length, 1);
+    assert.ok(events.find(event => event.type === 'ended').position > .1);
+    results.push({ scenario: 'first audio click in a fresh browser context', voice, word, completed: true });
+    await context.close();
+  }
+  console.log('PASS 8 fresh-context first clicks');
   for (const voice of ['aria', 'guy']) {
     const { context, page } = await open(voice);
     const before = await page.evaluate(() => localStorage.getItem('codewords-programming-course-v1'));
@@ -62,6 +74,13 @@ try {
   await page.locator('.daily-phrase-content').first().click();
   await page.waitForFunction(count => window.__audioAudit.events.slice(count).some(event => event.type === 'ended'), count);
   results.push({ scenario: 'navigation stops playback; returning to the saved lesson can play again' });
+  for (const [word, slow] of [['repository', false], ['project', false], ['repository', false], ['code', false], ['code', true], ['code', false], ['code', false]]) {
+    const count = await page.evaluate(() => window.__audioAudit.events.length);
+    const card = page.locator('.daily-phrase').filter({ has: page.getByRole('button', { name: `朗读 ${word}`, exact: true }) });
+    await card.locator(slow ? '.daily-inline-slow' : '.daily-phrase-content').click();
+    await page.waitForFunction(count => window.__audioAudit.events.slice(count).some(event => event.type === 'ended'), count);
+    results.push({ scenario: 'returning to an earlier word and repeating normal/slow', word, rate: slow ? .72 : 1, completed: true });
+  }
   await context.close(); assert.deepEqual(errors, []);
   await mkdir('artifacts/audio-reliability', { recursive: true });
   await writeFile('artifacts/audio-reliability/browser-results.json', JSON.stringify({ results, errors, note: 'Real MP3 browser playback; no claim of hearing the device speaker.' }, null, 2));

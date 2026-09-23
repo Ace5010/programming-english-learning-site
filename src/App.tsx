@@ -6,7 +6,7 @@ import ThemePicker, { readTheme, THEME_KEY, type Theme } from './ThemePicker';
 import { useThemeMotion } from './useThemeMotion';
 import { useMobileViewport } from './useMobileViewport';
 import SyncPanel from './SyncPanel';
-import { progressStorage, REMOTE_APPLIED } from './progressStorage';
+import { progressStorage, REMOTE_APPLIED, blockSyncApply } from './progressStorage';
 import { downloadRecord, hasNativeAudio, startNativeAudio } from './nativeAndroid';
 import { AudioPlayback } from './audioPlayback';
 import DailyEnglish from './DailyEnglish';
@@ -58,7 +58,7 @@ export default function Home() {
   const [speaking, setSpeaking] = useState('');
   const [voice, setVoice] = useState<'aria' | 'guy'>(() => { try { return localStorage.getItem('codewords-voice') === 'guy' ? 'guy' : 'aria'; } catch { return 'aria'; } });
   const [playbackSpeed, setPlaybackSpeed] = useState<PlaybackSpeed>(() => { try { return localStorage.getItem('codewords-playback-speed') === 'slow' ? 'slow' : 'normal'; } catch { return 'normal'; } });
-  const [player] = useState(() => new AudioPlayback(setSpeaking, () => window.alert('这次读音未能播放，请再点一次。若仍无声，请尝试切换声线。'), startNativeAudio));
+  const [player] = useState(() => new AudioPlayback(setSpeaking, () => window.alert('这次读音未能播放，请再点一次。'), startNativeAudio, undefined, busy => blockSyncApply('audio-playback', busy)));
   const reviewButton = useRef<HTMLButtonElement | null>(null);
   const quizTrigger = useRef<HTMLElement | null>(null);
   const voiceDialog = useRef<HTMLElement | null>(null);

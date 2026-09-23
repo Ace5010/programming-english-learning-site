@@ -1,9 +1,9 @@
-export type AudioEvent = 'playing' | 'ended' | 'stopped' | 'error';
+export type AudioEvent = 'playing' | 'progress' | 'ended' | 'stopped' | 'error';
 export type NativeAudioHandle = { stop: () => void; setRate: (rate: number) => void };
-export type NativeAudioStart = (url: string, rate: number, notify: (event: AudioEvent, code?: string) => void) => NativeAudioHandle | undefined;
-type Request = { url: string; key: string; rate: number; playing: boolean; audio?: HTMLAudioElement; native?: NativeAudioHandle; timer?: ReturnType<typeof setTimeout> };
+export type NativeAudioStart = (url: string, rate: number, notify: (event: AudioEvent, code?: string, positionMs?: number) => void) => NativeAudioHandle | undefined;
+type Request = { url: string; key: string; rate: number; playing: boolean; transport: 'native' | 'web'; startedAt?: number; positionMs: number; audio?: HTMLAudioElement; native?: NativeAudioHandle; timer?: ReturnType<typeof setTimeout> };
 
-/** One current request. Loading taps are idempotent; stale callbacks never control a later clip. */
+/** Coalesce loading/double taps, but let a deliberate repeat retry even a broken player. */
 export class AudioPlayback {
   private current?: Request;
   private cache = new Map<string, HTMLAudioElement>();
@@ -11,12 +11,14 @@ export class AudioPlayback {
   private onError: () => void;
   private nativeStart?: NativeAudioStart;
   private createAudio: (url: string) => HTMLAudioElement;
+  private busy: (value: boolean) => void;
   constructor(
     notify: (key: string) => void,
     onError: () => void,
     nativeStart?: NativeAudioStart,
     createAudio: (url: string) => HTMLAudioElement = url => new Audio(url),
-  ) { this.notify = notify; this.onError = onError; this.nativeStart = nativeStart; this.createAudio = createAudio; }
+    busy: (value: boolean) => void = () => {},
+  ) { this.notify = notify; this.onError = onError; this.nativeStart = nativeStart; this.createAudio = createAudio; this.busy = busy; }
 
   preload(urls: string[]) { for (const url of urls.slice(0, 16)) this.element(url); }
   private element(url: string) {
@@ -37,56 +39,71 @@ export class AudioPlayback {
   }
   play(url: string, rate: number, key: string) {
     if (this.current?.url === url && this.current.rate === rate && this.current.key === key) {
-      this.current.key = key;
-      if (this.current.playing) this.notify(key);
-      return;
+      if (this.current.startedAt === undefined || Date.now() - this.current.startedAt < 750) return;
     }
     this.stop();
-    const request: Request = { url, rate, key, playing: false };
-    this.current = request;
-    const native = this.nativeStart?.(url, rate, (event, code) => {
-      if (this.current !== request) return;
-      if (event === 'playing') this.playing(request);
+    const request: Request = { url, rate, key, playing: false, transport: 'native', positionMs: 0 };
+    this.current = request; this.busy(true);
+    let native: NativeAudioHandle | undefined;
+    try { native = this.nativeStart?.(url, rate, (event, code, positionMs) => {
+      if (this.current !== request || request.transport !== 'native') return;
+      if (event === 'playing') { this.playing(request); this.progress(request, positionMs); }
+      else if (event === 'progress') this.progress(request, positionMs);
       else if (event === 'error' && code !== 'focus-denied') {
         // A device decoder/bridge failure may still be playable by WebView.
-        clearTimeout(request.timer); request.native?.stop(); request.native = undefined;
-        this.playWeb(request);
+        this.fallback(request);
       } else if (event === 'error') this.fail(request);
       else this.stop();
-    });
+    }); } catch { this.fallback(request); return; }
     if (native) {
+      if (this.current !== request || request.transport !== 'native') { native.stop(); return; }
       request.native = native;
-      request.timer = setTimeout(() => {
-        if (this.current !== request || request.playing) return;
-        native.stop(); request.native = undefined; this.playWeb(request);
-      }, 4500);
-    } else this.playWeb(request);
+      if (!request.playing) this.watch(request, 4500);
+    } else if (request.transport !== 'web') this.playWeb(request);
   }
   private playing(request: Request) {
     if (this.current !== request) return;
-    clearTimeout(request.timer); request.playing = true; this.notify(request.key);
+    if (!request.playing) this.watch(request, 2500);
+    request.startedAt ??= Date.now(); request.playing = true; this.notify(request.key);
+  }
+  private progress(request: Request, positionMs?: number) {
+    if (this.current !== request || typeof positionMs !== 'number' || !Number.isFinite(positionMs) || positionMs <= request.positionMs) return;
+    request.positionMs = positionMs; this.watch(request, 2500);
+  }
+  private fallback(request: Request) {
+    if (this.current !== request || request.transport !== 'native') return;
+    request.transport = 'web'; // Invalidate even synchronous/late native replies before stopping.
+    clearTimeout(request.timer); request.native?.stop(); request.native = undefined;
+    request.playing = false; request.startedAt = undefined; request.positionMs = 0; this.notify('');
+    this.playWeb(request);
   }
   private playWeb(request: Request) {
     if (this.current !== request) return;
-    const audio = this.element(request.url);
-    request.audio = audio;
-    if (audio.error) audio.load();
-    audio.currentTime = 0; audio.playbackRate = request.rate; audio.preservesPitch = true;
-    audio.onplaying = () => this.playing(request);
-    audio.onended = () => { if (this.current === request) this.stop(); };
-    audio.onpause = () => { if (this.current === request && audio.paused) this.stop(); };
-    audio.onerror = () => this.fail(request);
-    audio.onwaiting = () => {
-      if (this.current !== request) return;
-      request.playing = false; this.notify(''); this.watch(request);
-    };
-    this.watch(request);
-    // Keep play() in the click handler so browsers retain the user's activation.
-    void audio.play().catch(() => this.fail(request));
+    request.transport = 'web';
+    try {
+      const audio = this.element(request.url);
+      request.audio = audio;
+      if (audio.error) audio.load();
+      audio.currentTime = 0; audio.playbackRate = request.rate; audio.preservesPitch = true;
+      audio.onplaying = () => this.playing(request);
+      audio.ontimeupdate = () => this.progress(request, audio.currentTime * 1000);
+      audio.onended = () => { if (this.current === request) this.stop(); };
+      audio.onpause = () => { if (this.current === request && audio.paused) this.stop(); };
+      audio.onerror = () => this.fail(request);
+      audio.onwaiting = () => {
+        if (this.current !== request) return;
+        request.playing = false; this.notify(''); this.watch(request);
+      };
+      this.watch(request);
+      // Keep play() in the click handler so browsers retain the user's activation.
+      void audio.play().catch(() => this.fail(request));
+    } catch { this.fail(request); }
   }
-  private watch(request: Request) {
+  private watch(request: Request, timeout = 10000) {
     clearTimeout(request.timer);
-    request.timer = setTimeout(() => this.fail(request), 10000);
+    request.timer = setTimeout(() => {
+      if (request.transport === 'native') this.fallback(request); else this.fail(request);
+    }, timeout);
   }
   private fail(request: Request) {
     if (this.current !== request) return;
@@ -107,11 +124,11 @@ export class AudioPlayback {
     if (request) {
       clearTimeout(request.timer); request.native?.stop();
       if (request.audio) {
-        request.audio.onplaying = request.audio.onended = request.audio.onerror = request.audio.onwaiting = request.audio.onpause = null;
+        request.audio.onplaying = request.audio.onended = request.audio.onerror = request.audio.onwaiting = request.audio.onpause = request.audio.ontimeupdate = null;
         request.audio.pause();
       }
     }
-    this.notify('');
+    this.busy(false); this.notify('');
   }
   dispose() {
     this.stop();

@@ -27,9 +27,27 @@ final class LocalAudio {
     private JavaScriptReplyProxy reply;
     private String id;
     private float rate;
-    private long requestedAt;
-    private boolean prepared, foreground = true;
+    private long requestedAt, lastAdvanceAt;
+    private int lastPosition;
+    private boolean prepared, started, foreground = true;
     private final Runnable timeout = () -> finish("error", "prepare-timeout");
+    private final Runnable monitor = new Runnable() {
+        @Override public void run() {
+            MediaPlayer media = player;
+            if (media == null || !prepared) return;
+            try {
+                int position = media.getCurrentPosition();
+                long now = SystemClock.elapsedRealtime();
+                if (position > lastPosition) {
+                    lastPosition = position; lastAdvanceAt = now;
+                    emit(started ? "progress" : "playing", null); started = true;
+                } else if (now - lastAdvanceAt >= 2000) {
+                    finish("error", "playback-stalled"); return;
+                }
+                handler.postDelayed(this, 200);
+            } catch (RuntimeException error) { finish("error", "playback-state"); }
+        }
+    };
 
     LocalAudio(Context context) {
         this.context = context;
@@ -61,16 +79,19 @@ final class LocalAudio {
                 candidate.setOnPreparedListener(media -> {
                     if (player != media) return;
                     handler.removeCallbacks(timeout); prepared = true;
-                    focus = new AudioFocusRequest.Builder(AudioManager.AUDIOFOCUS_GAIN_TRANSIENT)
+                    try {
+                        focus = new AudioFocusRequest.Builder(AudioManager.AUDIOFOCUS_GAIN_TRANSIENT)
                             .setAudioAttributes(attributes).setWillPauseWhenDucked(true)
                             .setOnAudioFocusChangeListener(change -> { if (change < 0 && player == media) finish("stopped", "focus-loss"); }, handler).build();
-                    if (manager.requestAudioFocus(focus) != AudioManager.AUDIOFOCUS_REQUEST_GRANTED) {
-                        finish("error", "focus-denied"); return;
-                    }
-                    try {
-                        media.setPlaybackParams(new PlaybackParams().setSpeed(rate).setPitch(1f));
-                        media.start();
-                        emit("playing", null);
+                        if (manager.requestAudioFocus(focus) != AudioManager.AUDIOFOCUS_REQUEST_GRANTED) {
+                            finish("error", "focus-denied"); return;
+                        }
+                        // Normal speed uses the default path. On a prepared MediaPlayer,
+                        // nonzero setPlaybackParams itself starts playback: do not start twice.
+                        if (rate == 1f) media.start();
+                        else media.setPlaybackParams(new PlaybackParams().setSpeed(rate).setPitch(1f));
+                        lastPosition = 0; lastAdvanceAt = SystemClock.elapsedRealtime();
+                        handler.post(monitor);
                     } catch (RuntimeException error) { finish("error", "start-failed"); }
                 });
                 handler.postDelayed(timeout, 3500);
@@ -82,7 +103,6 @@ final class LocalAudio {
                 rate = (float) requestedRate;
                 if (prepared) try {
                     player.setPlaybackParams(new PlaybackParams().setSpeed(rate).setPitch(1f));
-                    emit("playing", null);
                 } catch (RuntimeException error) { finish("error", "rate-failed"); }
             }
         }
@@ -91,8 +111,10 @@ final class LocalAudio {
     private void emit(String event, String code) {
         if (id == null || reply == null) return;
         try {
-            int position = prepared && player != null ? player.getCurrentPosition() : 0;
-            JSONObject message = new JSONObject().put("id", id).put("event", event);
+            int position = lastPosition;
+            // An Error-state query may throw; never let it swallow the error reply itself.
+            if (prepared && player != null) try { position = player.getCurrentPosition(); } catch (RuntimeException ignored) { }
+            JSONObject message = new JSONObject().put("id", id).put("event", event).put("positionMs", position);
             if (code != null) message.put("code", code);
             Log.i("CodeWordsAudio", event + " " + id + " elapsed_ms=" + (SystemClock.elapsedRealtime() - requestedAt)
                     + " position_ms=" + position + " rate=" + rate + (code == null ? "" : " code=" + code));
@@ -102,7 +124,8 @@ final class LocalAudio {
     private void finish(String event, String code) {
         emit(event, code);
         handler.removeCallbacks(timeout);
-        id = null; reply = null; prepared = false;
+        handler.removeCallbacks(monitor);
+        id = null; reply = null; prepared = false; started = false; lastPosition = 0;
         MediaPlayer previous = player; player = null;
         if (previous != null) previous.release();
         if (focus != null) { manager.abandonAudioFocusRequest(focus); focus = null; }
