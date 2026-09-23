@@ -1,5 +1,6 @@
 import { compareSpeech } from './speechComparison.ts';
 import { writtenAnswersMatch } from './writtenAnswer.ts';
+import type { AdaptivePlan, LearningState } from './learningTypes';
 
 /** Daily English owns this key only; programming-English records are never migrated. */
 export const DAILY_KEY = 'codewords-daily-v1';
@@ -20,11 +21,21 @@ export interface DailyExerciseSpec {
   sample?: string;
   checks?: string[];
   readAloud?: { id: string; en: string; zh: string }[];
+  /** Stable knowledge targets, when an exercise covers more than its audio phrase. */
+  knowledgeIds?: string[];
+  /** Adapted curricula may distinguish targets that share the same UI kind. */
+  ability?: 'meaning' | 'listening' | 'spelling' | 'context';
+  learningDifficulty?: 'recognition' | 'context' | 'recall';
+  learningSignature?: string;
 }
 export interface DailyLessonSpec {
   id: string;
   exercises: DailyExerciseSpec[];
   rechecks: DailyExerciseSpec[];
+  phrases?: { id: string; en: string; zh: string }[];
+  knowledgeIds?: string[];
+  practice?: DailyExerciseSpec[];
+  learningTargets?: string[];
 }
 export interface DailySkillProgress {
   attempts: number;
@@ -52,6 +63,11 @@ export interface DailyLessonProgress {
   lastPracticedAt: number;
   skills: Record<DailyAbility, DailySkillProgress>;
   errors: Record<string, DailyError>;
+}
+export interface DailyKnowledgeProgress {
+  firstLearnedAt: number;
+  lessonIds: string[];
+  skills: Record<DailyAbility, DailySkillProgress>;
 }
 export interface DailyDraft {
   choice: string | null;
@@ -94,12 +110,19 @@ export interface DailySession {
   answers: DailyAnswer[];
   draft: DailyDraft;
   feedback: DailyFeedback | null;
+  /** New focused review queues; absent on historical whole-lesson sessions. */
+  focused?: boolean;
+  adaptive?: AdaptivePlan;
 }
 export interface DailyProgress {
   version: 1;
   revision: number;
   lessons: Record<string, DailyLessonProgress>;
   session: DailySession | null;
+  /** Optional extensions leave existing course-level evidence intact. */
+  knowledge?: Record<string, DailyKnowledgeProgress>;
+  favorites?: string[];
+  learning?: LearningState;
 }
 export interface DailyParseResult {
   progress: DailyProgress;
@@ -129,6 +152,10 @@ function freshSkill(): DailySkillProgress {
   return { attempts: 0, independentAnswers: 0, assistedAnswers: 0, revealedAnswers: 0, selfReports: 0, successDays: 0, lastPracticedAt: 0, lastSuccessDay: '', lastDifficultyDay: '', dueAt: 0, needsPractice: false };
 }
 
+function freshSkills(): Record<DailyAbility, DailySkillProgress> {
+  return { meaning: freshSkill(), listening: freshSkill(), writing: freshSkill(), speaking: freshSkill() };
+}
+
 export function createDailyProgress(): DailyProgress {
   return { version: 1, revision: 0, lessons: {}, session: null };
 }
@@ -137,9 +164,89 @@ export function getDailyLessonProgress(progress: DailyProgress, lessonId: string
   return progress.lessons[lessonId] ?? {
     completedAt: 0,
     lastPracticedAt: 0,
-    skills: { meaning: freshSkill(), listening: freshSkill(), writing: freshSkill(), speaking: freshSkill() },
+    skills: freshSkills(),
     errors: {},
   };
+}
+
+export function dailyExerciseKnowledgeIds(lesson: DailyLessonSpec, exercise: DailyExerciseSpec): string[] {
+  if (exercise.knowledgeIds?.length) return [...new Set(exercise.knowledgeIds)];
+  if (exercise.audioId) return [exercise.audioId];
+  const answers = exercise.answers ?? [];
+  const phrases = (lesson.phrases ?? []).filter(phrase => answers.some(answer =>
+    normalizeDailyAnswer(answer) === normalizeDailyAnswer(phrase.en) || normalizeDailyAnswer(answer) === normalizeDailyAnswer(phrase.zh)));
+  return phrases.length ? phrases.map(phrase => phrase.id) : [`question-${exercise.id}`];
+}
+
+/** Confirming the teaching page records exposure, never a correct answer. */
+export function learnDailyLesson(progress: DailyProgress, lesson: DailyLessonSpec, now = Date.now()): DailyProgress {
+  const knowledge = { ...progress.knowledge };
+  const ids = new Set([
+    ...(lesson.knowledgeIds ?? []), ...(lesson.phrases ?? []).map(phrase => phrase.id),
+    ...lesson.exercises.flatMap(exercise => dailyExerciseKnowledgeIds(lesson, exercise)),
+  ]);
+  for (const id of ids) {
+    const previous = knowledge[id];
+    knowledge[id] = previous
+      ? { ...previous, lessonIds: [...new Set([...previous.lessonIds, lesson.id])] }
+      : { firstLearnedAt: now, lessonIds: [lesson.id], skills: freshSkills() };
+  }
+  return { ...progress, knowledge };
+}
+
+export function dailyLessonLearned(progress: DailyProgress, lesson: DailyLessonSpec): boolean {
+  const previous = progress.lessons[lesson.id];
+  return !!(previous?.completedAt || previous?.lastPracticedAt
+    || Object.values(progress.knowledge ?? {}).some(item => item.lessonIds.includes(lesson.id)));
+}
+
+export function dailyKnowledgeReviewable(progress: DailyProgress, id: string): boolean {
+  const target = progress.learning?.targets[id];
+  return target ? target.readyAt > 0 : !!progress.knowledge?.[id];
+}
+
+export function dailyLessonReviewable(progress: DailyProgress, lesson: DailyLessonSpec): boolean {
+  if (!progress.learning) return dailyLessonLearned(progress, lesson);
+  return [...lesson.exercises, ...(lesson.practice ?? [])].some(exercise => dailyExerciseKnowledgeIds(lesson, exercise)
+    .every(id => dailyKnowledgeReviewable(progress, id)));
+}
+
+export function nextDailyLesson<T extends DailyLessonSpec>(progress: DailyProgress, lessons: T[]): T | undefined {
+  return lessons.find(lesson => !progress.lessons[lesson.id]?.completedAt);
+}
+
+function knowledgeDue(item: DailyKnowledgeProgress, now: number, focus: DailyAbility | 'auto' = 'auto'): boolean {
+  const observed = abilities.filter(ability => ability !== 'speaking' && (focus === 'auto' || ability === focus) && item.skills[ability].dueAt > 0);
+  if (focus === 'speaking') return false;
+  return observed.length ? observed.some(ability => item.skills[ability].dueAt <= now) : afterDays(item.firstLearnedAt, 1) <= now;
+}
+
+/** The most useful exercise comes first; mastered-looking abilities do not crowd out weak ones. */
+export function createDailyReviewSession(
+  progress: DailyProgress, lesson: DailyLessonSpec, focus: DailyAbility | 'auto' = 'auto', now = Date.now(),
+): DailySession {
+  const record = getDailyLessonProgress(progress, lesson.id);
+  const priority = (exercise: DailyExerciseSpec): number => {
+    const ability = dailyExerciseAbility(exercise);
+    const error = record.errors[exercise.id];
+    if (error && !error.resolvedAt) return error.dueAt <= now ? 0 : 1;
+    const knowledge = dailyExerciseKnowledgeIds(lesson, exercise).map(id => progress.knowledge?.[id]).filter((item): item is DailyKnowledgeProgress => !!item);
+    const skills = knowledge.length ? knowledge.map(item => item.skills[ability]) : [record.skills[ability]];
+    if (skills.some(skill => skill.needsPractice)) return 1;
+    if (ability !== 'speaking' && skills.some(skill => skill.attempts > 0 && skill.dueAt <= now)) return 2;
+    if (ability !== 'speaking' && skills.some(skill => skill.attempts === 0)) return 3;
+    return ability === 'speaking' ? 5 : 4;
+  };
+  let exercises = [...new Map([...lesson.exercises, ...(lesson.practice ?? [])].map(exercise => [exercise.id, exercise])).values()].filter(exercise => (focus === 'auto' || dailyExerciseAbility(exercise) === focus)
+    && (!progress.learning || dailyExerciseKnowledgeIds(lesson, exercise).every(id => dailyKnowledgeReviewable(progress, id))));
+  exercises = [...exercises].sort((a, b) => priority(a) - priority(b));
+  if (focus === 'auto') {
+    const urgent = exercises.filter(exercise => priority(exercise) <= 2);
+    if (urgent.length) exercises = urgent;
+    // A short, targeted round remains available even before the due date.
+    exercises = exercises.slice(0, 5);
+  }
+  return { ...createDailySession({ ...lesson, exercises }, 'review', now), focused: true };
 }
 
 export function dailyExerciseAbility(exercise: DailyExerciseSpec): DailyAbility {
@@ -150,7 +257,7 @@ export function dailyExerciseAbility(exercise: DailyExerciseSpec): DailyAbility 
 }
 
 export function findDailyExercise(lesson: DailyLessonSpec, id: string): DailyExerciseSpec | undefined {
-  return [...lesson.exercises, ...lesson.rechecks].find(exercise => exercise.id === id);
+  return [...lesson.exercises, ...lesson.rechecks, ...(lesson.practice ?? [])].find(exercise => exercise.id === id);
 }
 
 export function createDailyDraft(exercise?: DailyExerciseSpec): DailyDraft {
@@ -260,6 +367,45 @@ function difficulty(record: DailyLessonProgress, exercise: DailyExerciseSpec, ou
   };
 }
 
+function recordKnowledge(
+  progress: DailyProgress, lesson: DailyLessonSpec, exercise: DailyExerciseSpec,
+  outcome: DailyOutcome, now: number, submitted: boolean,
+): Record<string, DailyKnowledgeProgress> {
+  const knowledge = { ...progress.knowledge };
+  const ability = dailyExerciseAbility(exercise);
+  const day = localDay(now);
+  for (const id of dailyExerciseKnowledgeIds(lesson, exercise)) {
+    const item = knowledge[id] ?? { firstLearnedAt: now, lessonIds: [lesson.id], skills: freshSkills() };
+    const previous = item.skills[ability];
+    let skill = { ...previous, lastPracticedAt: now };
+    if (submitted) {
+      skill.attempts++;
+      if (outcome === 'independent') skill.independentAnswers++;
+      if (outcome === 'assisted') skill.assistedAnswers++;
+      if (outcome === 'revealed') skill.revealedAnswers++;
+      if (outcome === 'self') skill.selfReports++;
+      const session = progress.session;
+      const entry = session?.queue[session.index];
+      const earlierExposure = session?.answers.some(answer => {
+        const task = findDailyExercise(lesson, answer.exerciseId);
+        return answer.ability === ability && task && dailyExerciseKnowledgeIds(lesson, task).includes(id);
+      });
+      const deferred = outcome === 'independent' && session?.mode !== 'lesson' && !entry?.retry && !earlierExposure
+        && previous.lastPracticedAt > 0 && localDay(previous.lastPracticedAt) !== day
+        && previous.dueAt <= now && previous.lastSuccessDay !== day && previous.lastDifficultyDay !== day;
+      if (deferred) {
+        const successDays = previous.successDays + 1;
+        skill = { ...skill, successDays, lastSuccessDay: day, needsPractice: false, dueAt: afterDays(now, intervals[Math.min(successDays - 1, intervals.length - 1)]) };
+      } else if (outcome !== 'self' && !skill.dueAt) skill.dueAt = afterDays(now, 1);
+    }
+    if (ability !== 'speaking' && (outcome === 'assisted' || outcome === 'revealed')) {
+      skill = { ...skill, successDays: 0, needsPractice: true, lastDifficultyDay: day, dueAt: afterDays(now, 1) };
+    }
+    knowledge[id] = { ...item, lessonIds: [...new Set([...item.lessonIds, lesson.id])], skills: { ...item.skills, [ability]: skill } };
+  }
+  return knowledge;
+}
+
 /** Record help immediately so exiting before Check does not discard a difficulty. */
 export function markDailyHelp(progress: DailyProgress, lesson: DailyLessonSpec, reveal = false, now = Date.now()): DailyProgress {
   const session = progress.session;
@@ -268,7 +414,7 @@ export function markDailyHelp(progress: DailyProgress, lesson: DailyLessonSpec, 
   const exercise = entry && findDailyExercise(lesson, entry.exerciseId);
   if (!exercise || exercise.kind === 'speak') return progress;
   const record = difficulty(getDailyLessonProgress(progress, lesson.id), exercise, reveal ? 'revealed' : 'assisted', now, entry.retryOf ?? exercise.id);
-  return { ...progress, lessons: { ...progress.lessons, [lesson.id]: record }, session: updateDailyDraft(session, { helped: true, revealed: reveal }) };
+  return { ...progress, knowledge: recordKnowledge(progress, lesson, exercise, reveal ? 'revealed' : 'assisted', now, false), lessons: { ...progress.lessons, [lesson.id]: record }, session: updateDailyDraft(session, { helped: true, revealed: reveal }) };
 }
 
 export function submitDailyAnswer(
@@ -325,14 +471,17 @@ export function submitDailyAnswer(
     record = { ...record, skills: { ...record.skills, [ability]: { ...record.skills[ability], needsPractice: true } } };
   }
   const queue = [...session.queue];
-  if ((outcome === 'assisted' || outcome === 'revealed') && !entry.retry && queue.length < MAX_QUEUE && queue.filter(item => item.retry).length < 5 && session.index < queue.length - 1) {
-    const available = lesson.rechecks.filter(candidate => !queue.some(item => item.exerciseId === candidate.id) && dailyExerciseAbility(candidate) === ability);
+  if (!session.adaptive && (outcome === 'assisted' || outcome === 'revealed') && !entry.retry && queue.length < MAX_QUEUE && queue.filter(item => item.retry).length < 5 && session.index < queue.length - 1) {
+    const available = lesson.rechecks.filter(candidate => !queue.some(item => item.exerciseId === candidate.id)
+      && (exercise.ability ? candidate.ability === exercise.ability
+        && candidate.knowledgeIds?.some(id => exercise.knowledgeIds?.includes(id)) : dailyExerciseAbility(candidate) === ability));
     const variant = available.find(candidate => candidate.kind === exercise.kind) ?? available[0];
     if (variant) queue.push({ exerciseId: variant.id, retry: true, retryOf: exercise.id });
   }
   const answer: DailyAnswer = { exerciseId: exercise.id, retry: entry.retry, ability, outcome, correct: checked.correct, at: now };
   return {
     ...progress,
+    knowledge: recordKnowledge(progress, lesson, exercise, outcome, now, true),
     lessons: { ...progress.lessons, [lesson.id]: record },
     session: { ...session, queue, answers: [...session.answers, answer], feedback: { correct: checked.correct, outcome, expected: checked.expected, explanation: exercise.kind === 'speak' && session.draft.speech?.mode === 'read' ? '识别文字已与这组参考表达对应。跟读记录不代表系统已确认发音质量或自由表达能力。' : exercise.explanation } },
   };
@@ -371,10 +520,23 @@ export function dailyUnresolvedErrors(progress: DailyProgress, lessonId: string)
   return Object.entries(getDailyLessonProgress(progress, lessonId).errors).filter(([, error]) => !error.resolvedAt).map(([id]) => id);
 }
 
-export function dueDailyLessons<T extends DailyLessonSpec>(progress: DailyProgress, lessons: T[], now = Date.now()): T[] {
+export function dailyReviewErrors(progress: DailyProgress, lesson: DailyLessonSpec, focus: DailyAbility | 'auto' = 'auto'): string[] {
+  return dailyUnresolvedErrors(progress, lesson.id).filter(id => {
+    const exercise = findDailyExercise(lesson, id);
+    return exercise && (focus === 'auto' || dailyExerciseAbility(exercise) === focus)
+      && (!progress.learning || dailyExerciseKnowledgeIds(lesson, exercise).every(id => dailyKnowledgeReviewable(progress, id)));
+  });
+}
+
+export function dueDailyLessons<T extends DailyLessonSpec>(progress: DailyProgress, lessons: T[], now = Date.now(), focus: DailyAbility | 'auto' = 'auto'): T[] {
   return lessons.filter(lesson => {
     const record = progress.lessons[lesson.id];
-    return record && abilities.some(ability => ability !== 'speaking' && record.skills[ability].attempts > 0 && record.skills[ability].dueAt <= now);
+    const targetIds = new Set([...lesson.exercises, ...(lesson.practice ?? [])].filter(exercise => exercise.kind !== 'speak' && (focus === 'auto' || dailyExerciseAbility(exercise) === focus)).flatMap(exercise => dailyExerciseKnowledgeIds(lesson, exercise)));
+    const knowledge = Object.entries(progress.knowledge ?? {}).filter(([id, item]) => targetIds.has(id) && item.lessonIds.includes(lesson.id)
+      && (!progress.learning || dailyKnowledgeReviewable(progress, id))).map(([, item]) => item);
+    if (progress.learning && !knowledge.length) return false;
+    return knowledge.length ? knowledge.some(item => knowledgeDue(item, now, focus))
+      : !!record && abilities.some(ability => ability !== 'speaking' && (focus === 'auto' || ability === focus) && record.skills[ability].attempts > 0 && record.skills[ability].dueAt <= now);
   }).sort((a, b) => {
     const left = getDailyLessonProgress(progress, a.id);
     const right = getDailyLessonProgress(progress, b.id);
@@ -412,6 +574,11 @@ function validRecord(value: unknown): value is DailyLessonProgress {
   if (abilities.some(ability => ability !== 'speaking' && (skills[ability] as DailySkillProgress).selfReports > 0)) return false;
   return Object.entries(value.errors).every(([key, error]) => id(key) && object(error) && number(error.lastAt) && day(error.lastDay) && number(error.dueAt) && number(error.resolvedAt) && ['assisted', 'revealed'].includes(String(error.outcome)));
 }
+function validKnowledge(value: unknown): value is DailyKnowledgeProgress {
+  if (!object(value) || !number(value.firstLearnedAt) || !Array.isArray(value.lessonIds) || !value.lessonIds.length
+    || value.lessonIds.length > 10000 || !value.lessonIds.every(id) || new Set(value.lessonIds).size !== value.lessonIds.length || !object(value.skills)) return false;
+  return validRecord({ completedAt: 0, lastPracticedAt: 0, skills: value.skills, errors: {} });
+}
 function validDraft(value: unknown): value is DailyDraft {
   return object(value) && (value.choice === null || text(value.choice)) && Array.isArray(value.order) && value.order.length <= 100 && value.order.every(count)
     && new Set(value.order).size === value.order.length
@@ -422,10 +589,33 @@ function validDraft(value: unknown): value is DailyDraft {
       && object(value.speech.transcripts) && Object.keys(value.speech.transcripts).length <= 100
       && Object.entries(value.speech.transcripts).every(([key, transcript]) => id(key) && text(transcript)));
 }
+function validLearning(value: unknown): boolean {
+  if (!object(value) || value.version !== 1 || !count(value.turns) || !count(value.rounds) || !object(value.targets)
+    || Object.keys(value.targets).length > 50000 || value.lastAnswer !== undefined && !text(value.lastAnswer)) return false;
+  const score = (value: unknown) => typeof value === 'number' && Number.isFinite(value) && value >= 0 && value <= 1;
+  return Object.entries(value.targets).every(([key, target]) => id(key) && object(target)
+    && number(target.introducedAt) && score(target.confidence) && object(target.abilities)
+    && Object.entries(target.abilities).every(([ability, value]) => ['meaning', 'context', 'spelling', 'listening', 'writing', 'speaking'].includes(ability) && score(value))
+    && count(target.lastSeenTurn) && count(target.lastFailureTurn) && typeof target.transfer === 'boolean'
+    && number(target.readyAt) && (target.reviewFeedbackAt === undefined || number(target.reviewFeedbackAt))
+    && Array.isArray(target.signatures) && target.signatures.length <= 10000 && target.signatures.every(id));
+}
+function validAdaptive(value: unknown): boolean {
+  if (!object(value) || !Array.isArray(value.focusIds)) return false;
+  const focusIds = value.focusIds;
+  return object(value) && value.version === 1 && count(value.round) && id(value.sourceLessonId)
+    && count(value.seed) && count(value.budget) && value.budget >= 1 && value.budget <= 20
+    && Array.isArray(value.focusIds) && value.focusIds.length > 0 && value.focusIds.length <= 20 && value.focusIds.every(id)
+    && new Set(value.focusIds).size === value.focusIds.length
+    && Array.isArray(value.newIds) && value.newIds.every(key => focusIds.includes(key))
+    && new Set(value.newIds).size === value.newIds.length;
+}
 function validSession(value: unknown, lessons?: DailyLessonSpec[]): value is DailySession {
   if (!object(value) || !id(value.id) || !id(value.lessonId) || !['lesson', 'review', 'workbook'].includes(String(value.mode))
     || !['study', 'exercise', 'summary'].includes(String(value.stage)) || !number(value.startedAt) || !count(value.index)
-    || !Array.isArray(value.queue) || value.queue.length > MAX_QUEUE || !Array.isArray(value.answers) || !validDraft(value.draft)) return false;
+    || !Array.isArray(value.queue) || value.queue.length > MAX_QUEUE || !Array.isArray(value.answers) || !validDraft(value.draft)
+    || value.focused !== undefined && (value.focused !== true || value.mode !== 'review')
+    || value.adaptive !== undefined && (!validAdaptive(value.adaptive) || value.mode !== 'lesson')) return false;
   const queue = value.queue;
   if (!queue.every(entry => object(entry) && id(entry.exerciseId) && typeof entry.retry === 'boolean' && (entry.retryOf === undefined || id(entry.retryOf)))) return false;
   if (new Set(queue.map(entry => entry.exerciseId)).size !== queue.length || queue.filter(entry => entry.retry).length > 5) return false;
@@ -439,10 +629,17 @@ function validSession(value: unknown, lessons?: DailyLessonSpec[]): value is Dai
   if (value.stage === 'exercise' && (value.index >= queue.length || value.answers.length !== value.index + (value.feedback ? 1 : 0))) return false;
   if (value.feedback && (value.answers[value.index]?.outcome !== value.feedback.outcome || value.answers[value.index]?.correct !== value.feedback.correct)) return false;
   if (lessons) {
-    const lesson = lessons.find(candidate => candidate.id === value.lessonId);
+    const source = lessons.find(candidate => candidate.id === value.lessonId);
+    const lesson = source && value.adaptive ? { ...source, exercises: lessons.flatMap(item => [...item.exercises, ...item.rechecks, ...(item.practice ?? [])]), rechecks: [] } : source;
     if (!lesson || !queue.every(entry => findDailyExercise(lesson, entry.exerciseId))) return false;
     const base = queue.filter(entry => !entry.retry);
-    if (value.mode === 'workbook') {
+    if (value.adaptive) {
+      const plan = value.adaptive as unknown as AdaptivePlan;
+      const targets = new Set(lessons.flatMap(item => item.learningTargets ?? []));
+      if (plan.sourceLessonId !== value.lessonId || !plan.focusIds.every(id => targets.has(id)) || !base.length || base.length !== queue.length) return false;
+    } else if (value.mode === 'review' && value.focused) {
+      if (!base.length || !base.every(entry => [...lesson.exercises, ...(lesson.practice ?? [])].some(exercise => exercise.id === entry.exerciseId))) return false;
+    } else if (value.mode === 'workbook') {
       // A focused workbook deliberately keeps an ordered subset of the lesson.
       const positions = base.map(entry => lesson.exercises.findIndex(exercise => exercise.id === entry.exerciseId));
       if (!positions.length || positions.some((position, index) => position < 0 || index > 0 && position <= positions[index - 1])) return false;
@@ -471,6 +668,9 @@ export function parseDailyProgress(raw: string | null, lessons?: DailyLessonSpec
     if (!object(value) || value.version !== 1) return fail('日常英语记录版本无法读取，原始记录已保留，本页暂不保存。');
     if (!count(value.revision) || !object(value.lessons) || Object.keys(value.lessons).length > 10000
       || !Object.entries(value.lessons).every(([key, record]) => id(key) && validRecord(record))
+      || value.knowledge !== undefined && (!object(value.knowledge) || Object.keys(value.knowledge).length > 50000 || !Object.entries(value.knowledge).every(([key, item]) => id(key) && validKnowledge(item)))
+      || value.favorites !== undefined && (!Array.isArray(value.favorites) || value.favorites.length > 10000 || !value.favorites.every(id) || new Set(value.favorites).size !== value.favorites.length)
+      || value.learning !== undefined && !validLearning(value.learning)
       || value.session !== null && !validSession(value.session, lessons)) return fail('日常英语记录不完整或课程已变化，原始记录已保留，本页暂不保存。');
     return { progress: value as unknown as DailyProgress, writable: true, warning: '', raw };
   } catch {
@@ -482,15 +682,15 @@ export interface DailyStorage { getItem(key: string): string | null; setItem(key
 export interface DailySaveResult { saved: boolean; raw: string | null; progress: DailyProgress; warning: string }
 
 /** Compare the exact previously read value before saving; never erase another tab's newer session. */
-export function persistDailyProgress(storage: DailyStorage, progress: DailyProgress, expectedRaw: string | null): DailySaveResult {
+export function persistDailyProgress(storage: DailyStorage, progress: DailyProgress, expectedRaw: string | null, storageKey = DAILY_KEY): DailySaveResult {
   try {
-    const current = storage.getItem(DAILY_KEY);
+    const current = storage.getItem(storageKey);
     if (current !== expectedRaw) return { saved: false, raw: current, progress, warning: '另一页面更新了日常英语记录，已暂停本页保存。请先导出本页记录，再刷新读取最新进度。' };
     if (!parseDailyProgress(current).writable) return { saved: false, raw: current, progress, warning: '已有日常英语记录无法安全读取，原始记录保留，本页暂不保存。' };
     const next = { ...progress, revision: progress.revision + 1 };
     const raw = JSON.stringify(next);
     if (!parseDailyProgress(raw).writable) return { saved: false, raw: current, progress, warning: '当前日常英语记录未通过完整性检查，已保留此前保存。' };
-    storage.setItem(DAILY_KEY, raw);
+    storage.setItem(storageKey, raw);
     return { saved: true, raw, progress: next, warning: '' };
   } catch {
     return { saved: false, raw: expectedRaw, progress, warning: '浏览器无法保存日常英语进度。本次输入保留在此页面，请先导出记录，恢复存储后再继续。' };

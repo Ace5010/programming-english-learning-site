@@ -1,0 +1,20 @@
+{
+  "results": [
+    "bundled origin connects the native adapter; only a final result is saved",
+    "native permission denial does not record a wrong answer",
+    "actual MP3 playback works from bundled paths at 1x and 0.72x",
+    "reload preserves speech draft and favorites; export forwards the exact saved record"
+  ],
+  "audio": [
+    {
+      "src": "https://appassets.androidplatform.net/assets/web/audio/daily/aria/hello.mp3?v=Hello!",
+      "rate": 1
+    },
+    {
+      "src": "https://appassets.androidplatform.net/assets/web/audio/daily/aria/hello.mp3?v=Hello!",
+      "rate": 0.72
+    }
+  ],
+  "errors": [],
+  "note": "Chrome, exact bundled web paths and CSP; simulated native speech/export, not device validation."
+}

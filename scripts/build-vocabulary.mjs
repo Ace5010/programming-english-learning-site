@@ -6,7 +6,12 @@ import { chooseExample } from './example-selection.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const toSimplified = OpenCC.Converter({ from: 'hk', to: 'cn' });
-const targetCount = 3560;
+// IDs are persisted in browser learning records. Never derive them from source order.
+const baseline = JSON.parse(fs.readFileSync(path.join(root, 'scripts/vocabulary-baseline.json'), 'utf8'));
+const expansion = JSON.parse(fs.readFileSync(path.join(root, 'scripts/vocabulary-expansion.json'), 'utf8'));
+if (baseline.length !== 3560 || baseline.some((item, index) => item.id !== index + 1)) {
+  throw new Error('The original 3,560 vocabulary identities must remain intact');
+}
 const outputFlag = process.argv.indexOf('--output');
 if (outputFlag !== -1 && !process.argv[outputFlag + 1]) throw new Error('--output needs a file path');
 const outputPath = outputFlag === -1 ? path.join(root, 'src/vocabulary.ts') : path.resolve(process.argv[outputFlag + 1]);
@@ -95,18 +100,35 @@ for (const line of beginnerPaths.flatMap((file) => fs.readFileSync(file, 'utf8')
   });
 }
 
-const seen = new Set();
-const vocabulary = [];
+const candidates = new Map();
 for (const item of [...coreRows, ...technical, ...basic]) {
   const key = item.word.toLowerCase();
-  if (seen.has(key)) continue;
-  seen.add(key);
-  vocabulary.push({ id: vocabulary.length + 1, ...item, ...simpleExamples.get(key) });
-  if (vocabulary.length === targetCount) break;
+  if (!candidates.has(key)) candidates.set(key, { ...item, ...simpleExamples.get(key) });
 }
-
-if (vocabulary.length !== targetCount) {
-  throw new Error('Expected ' + targetCount + ' terms, generated ' + vocabulary.length);
+const vocabulary = baseline.map(({ id, word }) => {
+  const item = candidates.get(word.toLowerCase());
+  if (!item || item.word !== word) throw new Error(`Missing or renamed baseline word ${id}: ${word}`);
+  return { id, ...item };
+});
+const seen = new Set(vocabulary.map((item) => item.word.toLowerCase()));
+for (const item of expansion.additions) {
+  if (item.id !== vocabulary.length + 1 || seen.has(item.word.toLowerCase())) {
+    throw new Error(`Expansion must append a unique word with a stable ID: ${item.word}`);
+  }
+  for (const field of ['word', 'meaning', 'category', 'example', 'exampleZh', 'tier']) {
+    if (typeof item[field] !== 'string' || !item[field].trim()) throw new Error(`Missing ${field}: ${item.word}`);
+  }
+  seen.add(item.word.toLowerCase());
+  vocabulary.push({ ...item });
+}
+const overridden = new Set();
+for (const override of expansion.overrides) {
+  const item = vocabulary[override.id - 1];
+  if (!item || item.word !== override.word || overridden.has(override.id)) {
+    throw new Error(`Invalid vocabulary override: ${override.id} ${override.word}`);
+  }
+  overridden.add(override.id);
+  Object.assign(item, override);
 }
 
 const output = '// @ts-nocheck -- generated vocabulary dataset\n' +

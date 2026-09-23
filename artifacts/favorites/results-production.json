@@ -1,0 +1,55 @@
+{
+  "baseURL": "http://localhost:5186/dist/",
+  "scripts": [
+    "http://localhost:5186/dist/assets/index-DLzJimQO.js"
+  ],
+  "results": [
+    "saved word favorites are visible independently of library filters",
+    "saved expression favorites preserve learning records and survive refresh",
+    "编程英语 course draft survives a visit to favorites",
+    "日常英语 course draft survives a visit to favorites",
+    "favorites pagination exposes every saved word and damaged records remain intact",
+    "favorites navigation and local controls fit all themes at 1440px",
+    "favorites navigation and local controls fit all themes at 390px",
+    "favorites navigation and local controls fit all themes at 320px"
+  ],
+  "failures": [],
+  "audioEvidence": [
+    {
+      "src": "http://localhost:5186/dist/audio/aria/word-1.mp3",
+      "rate": 1,
+      "duration": 1.992,
+      "preservesPitch": true
+    },
+    {
+      "src": "http://localhost:5186/dist/audio/aria/word-1.mp3",
+      "rate": 0.72,
+      "duration": 1.992,
+      "preservesPitch": true
+    },
+    {
+      "src": "http://localhost:5186/dist/audio/aria/example-1.mp3?v=Open%20this%20repository.",
+      "rate": 1,
+      "duration": 2.424,
+      "preservesPitch": true
+    },
+    {
+      "src": "http://localhost:5186/dist/audio/aria/example-1.mp3?v=Open%20this%20repository.",
+      "rate": 0.72,
+      "duration": 2.424,
+      "preservesPitch": true
+    },
+    {
+      "src": "http://localhost:5186/dist/audio/daily/aria/hello.mp3?v=Hello!",
+      "rate": 1,
+      "duration": 1.56,
+      "preservesPitch": true
+    },
+    {
+      "src": "http://localhost:5186/dist/audio/daily/aria/hello.mp3?v=Hello!",
+      "rate": 0.72,
+      "duration": 1.56,
+      "preservesPitch": true
+    }
+  ]
+}

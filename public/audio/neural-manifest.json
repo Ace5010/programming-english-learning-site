@@ -2551,8 +2551,9 @@
   },
   "aria/example-1384.mp3": {
     "voice": "en-US-AriaNeural",
-    "text": "The leaves on trees change colour in the autumn.",
-    "sha256": "88f06a4ad26e9117560f34ff2bdfaa838661686160ace1a50afa102324cd535a"
+    "text": "Change this code.",
+    "sha256": "bb2ff7e9a1ec6929379cadb2dfc92b67498042082a7803bd564e93844fe2104d",
+    "fileSha256": "6e3930e07940ae2711cc2030641b583bc7c839af0b6ea0233e3ec0ed07715da6"
   },
   "aria/example-1386.mp3": {
     "voice": "en-US-AriaNeural",
@@ -2586,8 +2587,9 @@
   },
   "aria/example-1413.mp3": {
     "voice": "en-US-AriaNeural",
-    "text": "We are close friends.",
-    "sha256": "a6cc4c649a35d2011b71c3dc0d7b8bbd69d7deee51f8dd440ea7a197456d3022"
+    "text": "Close this file.",
+    "sha256": "7ae10360fe38fd08ead2ad11b7b92045fec1d7b084772f3ac7c91c2c5aaeab4b",
+    "fileSha256": "c0fdc86fad55e54c287ea420d4714abb4d69b63eae3d469b311f4e9d16343cb7"
   },
   "aria/example-1414.mp3": {
     "voice": "en-US-AriaNeural",
@@ -3476,8 +3478,9 @@
   },
   "aria/example-1991.mp3": {
     "voice": "en-US-AriaNeural",
-    "text": "The door is open.",
-    "sha256": "aed62469afc6953859882be2068f5bd942a26ca30f59a60d47ef69a1e2e1d064"
+    "text": "Open this file.",
+    "sha256": "6567ce58241f5400f113997e258f97d94ec276d280ab64c1c63a25a76ea91c7e",
+    "fileSha256": "d4dc2bffc95db07d1844689b80ea69b2d31d1c72577fe7cbe252ac8aa9a89e0f"
   },
   "aria/example-1992.mp3": {
     "voice": "en-US-AriaNeural",
@@ -3546,8 +3549,9 @@
   },
   "aria/example-2019.mp3": {
     "voice": "en-US-AriaNeural",
-    "text": "The pass mark is 55%.",
-    "sha256": "a93725e2f0b445e5adddab3b54716d57d2ef300fe21c3799a7c4b54afd0c63be"
+    "text": "This test should pass.",
+    "sha256": "796591ddda3f3bf9c8790716db759dd98ed513ac36e184015d32936263727616",
+    "fileSha256": "0faa1c3cfbd0dbbe5607c9a215eaa6d0cedffb97bade1b06247dc0ac813e9f85"
   },
   "aria/example-2024.mp3": {
     "voice": "en-US-AriaNeural",
@@ -3646,8 +3650,9 @@
   },
   "aria/example-2092.mp3": {
     "voice": "en-US-AriaNeural",
-    "text": "The print is too small.",
-    "sha256": "3306ff3009ec723ffc3fcc46b4aa34c046bc759e6ade195bec21c950c5db9ba5"
+    "text": "Print the result.",
+    "sha256": "f2252fd28da74afcef2828469a5870f7ce5a0cdffcd6a38eabaf53aaf278b601",
+    "fileSha256": "33fd8ff888744bd2eaf9bbb2f243353f9688cba7535f73acd2ec6c7374deb995"
   },
   "aria/example-2095.mp3": {
     "voice": "en-US-AriaNeural",
@@ -4491,8 +4496,9 @@
   },
   "aria/example-2649.mp3": {
     "voice": "en-US-AriaNeural",
-    "text": "They want to found a new school.",
-    "sha256": "d4567d70b95252b11ea8d1a867191125bf516dc034cb6c1ed957503f4cd55b1c"
+    "text": "No file was found.",
+    "sha256": "a2f7bb7bb62b140dee0e9d2d224279c434adabd63d99b3bd20508bada9c0280b",
+    "fileSha256": "cce9fb4427372918fa78b701fa5c9e613996e03f10c53a9cb1abc4d1a6d556bb"
   },
   "aria/example-2652.mp3": {
     "voice": "en-US-AriaNeural",
@@ -4956,8 +4962,9 @@
   },
   "aria/example-2997.mp3": {
     "voice": "en-US-AriaNeural",
-    "text": "Set the cup on the table.",
-    "sha256": "888e195abf820871229d650aa0ab107575bb63dd554a88c41a5d907e440577fa"
+    "text": "Set the value to ten.",
+    "sha256": "adc5cb32841196a7161077be074ace357adee359b13c053a7d98fc58723a7a5c",
+    "fileSha256": "b5fa241581a7c81236e5732aca336208213b2ba52a583393d6d946b2b5a47cbd"
   },
   "aria/example-2998.mp3": {
     "voice": "en-US-AriaNeural",
@@ -8146,8 +8153,9 @@
   },
   "guy/example-1384.mp3": {
     "voice": "en-US-GuyNeural",
-    "text": "The leaves on trees change colour in the autumn.",
-    "sha256": "81d2e8c160013a0c586afa33392f0361711640b5207d793194c140219f0dc5a7"
+    "text": "Change this code.",
+    "sha256": "151364392bff263b5f8794b816a56e2a6bf308b88a6a69c2248b3f823b014862",
+    "fileSha256": "aa8f5f01958cfb8e1eb0c43c675623e3ade021f1636668d360be1ab6619ba9c6"
   },
   "guy/example-1386.mp3": {
     "voice": "en-US-GuyNeural",
@@ -8181,8 +8189,9 @@
   },
   "guy/example-1413.mp3": {
     "voice": "en-US-GuyNeural",
-    "text": "We are close friends.",
-    "sha256": "dd3d3704bc778d8b02933f328c47c1d74b5bdbe1490eb2c61dfba6016742edb5"
+    "text": "Close this file.",
+    "sha256": "743f93d92e3b413e5f352389f123e742f2894796cd7a9fc683f27a949253f632",
+    "fileSha256": "b2d664d0862122c6bcfcd1c577f2d8b66cae62b7d5566c58d51af4f8530bc095"
   },
   "guy/example-1414.mp3": {
     "voice": "en-US-GuyNeural",
@@ -9071,8 +9080,9 @@
   },
   "guy/example-1991.mp3": {
     "voice": "en-US-GuyNeural",
-    "text": "The door is open.",
-    "sha256": "99ddb54d9e577480a063707a26e4209e4b94071c2aebf5835e5366bed0952ee2"
+    "text": "Open this file.",
+    "sha256": "13de0fce40027a7dbbd6a4e959422de4312d22c5f5cd338cb5b48e8bf6c08b24",
+    "fileSha256": "40df3b2347f0d05804644d06d1445fa5b2414ca554076b77e48a8286a976bc84"
   },
   "guy/example-1992.mp3": {
     "voice": "en-US-GuyNeural",
@@ -9141,8 +9151,9 @@
   },
   "guy/example-2019.mp3": {
     "voice": "en-US-GuyNeural",
-    "text": "The pass mark is 55%.",
-    "sha256": "2c4f3b74c1e0b411f0ea7a40b0295a5abcd6f2a365e1c2c754e2886c03731e96"
+    "text": "This test should pass.",
+    "sha256": "c79dbf2ee4d9696376aff366954c89061eac87c6917d088febcea084e652c911",
+    "fileSha256": "ae0decd3e6ea84731a624785a294e6ae80e9d50632743a7fe0021d5a8dc52739"
   },
   "guy/example-2024.mp3": {
     "voice": "en-US-GuyNeural",
@@ -9241,8 +9252,9 @@
   },
   "guy/example-2092.mp3": {
     "voice": "en-US-GuyNeural",
-    "text": "The print is too small.",
-    "sha256": "c25b3ebc298e7a5f5bdf4832432afbe2f1ff9f8b0329918fcbef5a5edcc4da27"
+    "text": "Print the result.",
+    "sha256": "ad94b015232eb395f09d52be1cd9c9302a1257f605d3f73d45a06e1f78edab73",
+    "fileSha256": "bf3fc90d5acf77d1b82d6375cf38d301661c99b4c2227070f8bec23171fbe54a"
   },
   "guy/example-2095.mp3": {
     "voice": "en-US-GuyNeural",
@@ -10086,8 +10098,9 @@
   },
   "guy/example-2649.mp3": {
     "voice": "en-US-GuyNeural",
-    "text": "They want to found a new school.",
-    "sha256": "651de65a1eea1441006e612a614a54c186d0bf2a56ccdbe29f9d8d3e6b200365"
+    "text": "No file was found.",
+    "sha256": "eeaf1103e125180c49d0b10e42c47b730da282e1afe23701e5de74ff38a53737",
+    "fileSha256": "c5f71d44785dc6a1a6bd6df0a0ee6d94a122df667190ff17adfb58f69f8e946f"
   },
   "guy/example-2652.mp3": {
     "voice": "en-US-GuyNeural",
@@ -10551,8 +10564,9 @@
   },
   "guy/example-2997.mp3": {
     "voice": "en-US-GuyNeural",
-    "text": "Set the cup on the table.",
-    "sha256": "223e07780ec29adf0f1626467157debc16505cd79d5fe86e48ddd05f155430b3"
+    "text": "Set the value to ten.",
+    "sha256": "e3afacbcbc1d6e8c59f4fcd61e401e3419c50d0eaddc06063259a9a4f5b635cd",
+    "fileSha256": "1eae06471d46b6a4680663a2ccdfd77df9c9d713169e9e2933931340b98ac784"
   },
   "guy/example-2998.mp3": {
     "voice": "en-US-GuyNeural",
@@ -11188,5 +11202,1565 @@
     "voice": "en-US-GuyNeural",
     "text": "What can we conclude from this?",
     "sha256": "9eba4d182732d9e80753df08668456ea920eb163bf61e1dd3eb6d700df53febd"
+  },
+  "aria/example-830.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "Check the port number.",
+    "sha256": "9d7da72b442ad67aa3e7f1a88f41b98d8a766d8b997e9dca85d8a6be6f249ae8",
+    "fileSha256": "57d9a81b879af2db99c0496f63ad1fd0bd16165f11ec86b1ca8c093498736bee"
+  },
+  "aria/example-604.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "Check the input.",
+    "sha256": "24c92279388be3195c1e6ad4fd5ba0328af43323508aecb076b623d73643e1ff",
+    "fileSha256": "bad233530a72d4a31cf7d038321c684b68eb12bb6c848585f8116898445be8f5"
+  },
+  "aria/example-1594.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "This test may fail.",
+    "sha256": "467b7f83cb16966687b3f4ea00f7bcfc201a464804ee8cd5d81b81cfe7f8e5bd",
+    "fileSha256": "4039498ff8c2b0bf27a4fc1a96610b428feef2b5c14e206560ce2b0f8a6d10ae"
+  },
+  "aria/example-790.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "Read the output.",
+    "sha256": "155c47ff6c5e33946a773c8b2f03f6deadc03b39f81b88cd26969a3937280447",
+    "fileSha256": "659b77944580383dbde773b4ebabaa45411d075f145b72d445978ddc677361b1"
+  },
+  "aria/example-1609.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "Fetch the latest code.",
+    "sha256": "58288dcfeb509dd79c5b296724561b9ce9900eceeaddda3b69cd0d20313c44cd",
+    "fileSha256": "4b7c2d4a4738f5cc34cb4c1262b07f3d7a751a2e8d04610914fb7f054b8d2501"
+  },
+  "aria/example-687.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "Write a commit message.",
+    "sha256": "e01fdedf328525d483920b86b1d127f839ea09268b498d3853fbc5ad55a265ca",
+    "fileSha256": "0a488825496c7c724e29689adc691c6cde923243a492811de4b589b372d5815d"
+  },
+  "aria/example-1627.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "Fix this error.",
+    "sha256": "a6fbf50a4dcc1c4840921383537c65bc524bb3b564b1c2f56ca7c47d6c213524",
+    "fileSha256": "bdf4662802a23dec50b068c5f7a9ea906f6cc2be6bf9a11f0c6066b70f28095a"
+  },
+  "aria/example-1880.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "Switch to the main branch.",
+    "sha256": "6cca4800022ba5cbbf84caa754802e87819a9c1c8fbce64e0dafd71cce05d5f7",
+    "fileSha256": "0c26ebc665bf417358ffe4a9177e769f1b688f16e8b4b6464c0879313edfbef5"
+  },
+  "aria/example-2801.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "Open this project.",
+    "sha256": "9c2643b6e5e940636a80780ede59c71df6aeaef36cdd56cbc6a6ac18deec0093",
+    "fileSha256": "f1d0a9fe368df9539c306df11c6197c8f1d383c4eaf3f9c44fb57982ea458db3"
+  },
+  "aria/example-2862.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "Open a shell.",
+    "sha256": "a9af3c90fcc0e9805f8302fd94c7e861596d72257281f5d9f259092c136d2c61",
+    "fileSha256": "64f75f4d14758dac3aaf10153b7673cd70c16740943314ff847a4f7ef4d9e85e"
+  },
+  "aria/word-3561.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "code",
+    "sha256": "7035592e86fb881bebf1c04945922348b690140cc4fd529c165469ffa8de3de9",
+    "fileSha256": "ae5d6ec25a5edb03ca7ee5585e3b8ef5a47aeb9a683dbf44dca6c4fdffb788c4"
+  },
+  "aria/word-3562.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "log",
+    "sha256": "daa9d22bf00d8c9d17ccd2baa4a01593258b765bb46b9b1b96053ba080685f6b",
+    "fileSha256": "5faa6bd86af4c0d65a8e6f95e7181c6bf0fb9c2c54a20315f31bd0e031f358b2"
+  },
+  "aria/word-3563.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "source",
+    "sha256": "c62cb4b53a6434581b7f794dd276ab341cb4373ded1999eb1bd2c84a5dcff705",
+    "fileSha256": "94e898715fd46f7011e45c75a4b76597b4cc2705cec49899440645b2b1bd81c8"
+  },
+  "aria/example-3563.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "Check the source code.",
+    "sha256": "e9d23b1f8235b6d29859fbd9594c9d9ab1fd822d61468fa3acfd3b686a1a88b5",
+    "fileSha256": "5fb76d0e9b4b017c86562b22ff833356ab275766e1be9f699f98f9d520cf1bad"
+  },
+  "aria/example-3561.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "Read this code.",
+    "sha256": "4b11c3c6e694cbbe190a09d3c4045eddd0d675b3d8031976368d52232599be61",
+    "fileSha256": "c8b779345e5e4927ac7628ac2fd67bc3e8f97235e91309299bc4e25ff08c80a2"
+  },
+  "aria/example-3562.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "Read the log.",
+    "sha256": "9b53c684b9d8de884fa98328ed7a39caf1ba38e00497dddb5b0a8c50e8dd134d",
+    "fileSha256": "41581dcfca0945e3c575b21d9067b2f9ebce5e5caf017ff24068d495f4493347"
+  },
+  "aria/example-3564.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "Execute this command.",
+    "sha256": "8d20b7f0cb7e661cfb349cb86d5706a8f926002a63e95df0a72526b3139419cd",
+    "fileSha256": "dd216458b180dc1b55d412929ba785e4729191627923757b735a05fc4c651390"
+  },
+  "aria/word-3564.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "execute",
+    "sha256": "c4d96b13a41a06f7f6febc27ff33dd4a33915b9ea8c15332cedf9cfdba01953b",
+    "fileSha256": "39dc6a0ee3369fb4384aca3ee1b870ccfe7c69b5720af972d2066680cdb01644"
+  },
+  "aria/example-3566.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "Delete the old file.",
+    "sha256": "026f9398feba93b1fc8ff77c07d7ee332229056042b6916a3ac4899c4acf390e",
+    "fileSha256": "4bbea0deab7e7dee5e8d1b43ccfdf0e77ce31e9576609a8c7a23c35455810dde"
+  },
+  "aria/example-3565.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "Load this file.",
+    "sha256": "fb983305618472a669f725f1e3489fd9dbef4cdd07c8d70f2abf3313f40f6940",
+    "fileSha256": "65df644e38ff473710e10ef93fd2741a83d0e22b3da07a6ceaad71eca8f64c55"
+  },
+  "aria/word-3565.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "load",
+    "sha256": "38e7ec09baf8d2305da699fbadbdb593e4d73f4a4e8bb1445931a303dd88c290",
+    "fileSha256": "233a4ed875d6eaf841457a30b59199d7d6db810011d406cd1f83b824eba00e9b"
+  },
+  "aria/example-3567.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "Update this package.",
+    "sha256": "f47bcb3d859ede0844428945d62478e5970e3519d67400517c69aa72d8e6100e",
+    "fileSha256": "56db04ccf66909cec63cf80a76f22e144c4f10d70edebd3e1ef7d7dc7d2f7b6d"
+  },
+  "aria/word-3566.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "delete",
+    "sha256": "3dca9e93b82b132ec8ccd3abee2ab7233da8bb6feea74d3663e58b41b3e58152",
+    "fileSha256": "6edee0b4a056cddac281eaf486a4d833760c3a4ba16e737c0ff7648abc23d88e"
+  },
+  "aria/word-3568.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "enable",
+    "sha256": "4a4d17c85b02ec86fbe545bee2ea334729924506d0db8a9a0ab167df9a4c0e40",
+    "fileSha256": "6344cf1103cb7b4c71011f19800b0a1c15663e6830786d494adf59406b4fa2a1"
+  },
+  "aria/example-3568.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "Enable this feature.",
+    "sha256": "a5cba5dd5cc266104dfa2134f0cb6b10f75aeb29fad3d1123850f97c9d15d8c0",
+    "fileSha256": "ce652fe4d62bc0a34a14da4fd6cb7eb529c503acd9e9c97eefd3d73796642dfd"
+  },
+  "aria/word-3569.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "disable",
+    "sha256": "c4bcb2aafccb7b70a1f80302f636689dd5b459c902e436b62144babd8c2795f3",
+    "fileSha256": "eb3d0b814f76d3b69312a108e0028d8ac076a7f7f85af97bd17e62f2a7bea343"
+  },
+  "aria/word-3570.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "missing",
+    "sha256": "2af49dbd8b25cd7cd3912e613023af314703a7a19031f152c45db19cb60753e1",
+    "fileSha256": "3b8f952a1b3f159018f756cf0c41645b9b4a904c7529aa38e02e5019f29a4faa"
+  },
+  "aria/example-3569.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "Disable this feature.",
+    "sha256": "ceeaafea2f2cccc6ba36ae6ae66e353e4ac8fd87c384de119e2fd7ff5760a514",
+    "fileSha256": "cd9e2f658bd75abf5c52a4c76de6e5b63364e04eeb8521510f49d869f880662f"
+  },
+  "aria/word-3571.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "failed",
+    "sha256": "ccac451bc9dcb29d1f5bafce510e4dbb4ba878ca006b3605dbf4c83ca3aa94b0",
+    "fileSha256": "5c78d81d21aca71bad22ef1a732bd043f5cf6c752a225b0fd1516fc30a8f3a41"
+  },
+  "aria/example-3571.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "The test failed.",
+    "sha256": "2d8edbd2d020aa7da97485b128647f69d2be157538ab4477ee57cf38c9d607c9",
+    "fileSha256": "2394200236bc038fedec545ff4ba7d8fd04ae7e918321ed895c0a8307d74770f"
+  },
+  "aria/example-3570.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "This file is missing.",
+    "sha256": "cdc870a9e00a634648bb5069376461aa6103ec48e61e55a5051f5f93cd10a627",
+    "fileSha256": "0636cea57054463a6c1732e6c628e53a6d8c2c1b6581b306d3f198600fae5343"
+  },
+  "aria/example-3572.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "The value is null.",
+    "sha256": "6f1c58ab8c0769936e3688ed8b93be7f033d224119a17f8e3735913cfa32666e",
+    "fileSha256": "003ba081a2eda924bd9b097560823bfab8b95775ef229859ba78aaa0404db7bf"
+  },
+  "aria/word-3572.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "null",
+    "sha256": "5accf9704aa9762aea0eff0e7d095de88378bc539887d0437fead57cd73ecd21",
+    "fileSha256": "119a26605f0615b09cef04f6685a0e7cb7db1e77b80a3a758806794ab2f3a6d9"
+  },
+  "aria/word-3573.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "undefined",
+    "sha256": "2416cf05c7874ccfdbf6dd09b416d519d42a56949336ac043a8a0236d025857f",
+    "fileSha256": "73ebbf49f2ea663377474a1658b5f82b90aab4130f4427d6822ff1bf272ab475"
+  },
+  "aria/example-3574.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "This check returns false.",
+    "sha256": "d31d737694d71b897762118bc0631974751557176dad7d40862f95b11cbc1b60",
+    "fileSha256": "785438c9525c471ede95c8d819ef5cba577617be5b0d7088cdc8a60f9a537fb7"
+  },
+  "aria/word-3574.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "false",
+    "sha256": "0e031647ab8c1803ad7c6d6d07f03d5523c891a48df0967d2c47ffb7a73420c8",
+    "fileSha256": "572eca466cb4de768ae49b50f76d038a559caa3d72274525f7e80d76d2ee9ebd"
+  },
+  "aria/example-3573.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "This value is undefined.",
+    "sha256": "29ef062f5148870b8558ee3747449500648225d9260ac8c4107d20735f5171f9",
+    "fileSha256": "f7436f4f84128cbe463810dd0a12ce79616f34aee799cbe89407bac1e92edc2e"
+  },
+  "aria/word-3575.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "const",
+    "sha256": "717db28d5b473ceb89a0081e83e29d62fc85e6401c539941200f0dc96af9399d",
+    "fileSha256": "e118b7b7047f7161a52c41c86f58618eeb4659f168277625cef674b920fcaaee"
+  },
+  "aria/example-3575.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "Use const for this value.",
+    "sha256": "320a6908a94d1e81de5929ce6714c7b5bfdf2f082dcbc161bff0e54ad1bb34f6",
+    "fileSha256": "6b80485dc7f2f92078e8ad7c948de13b862317966ab35929f8eb82ed9aa2ec0c"
+  },
+  "aria/word-3576.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "import",
+    "sha256": "463962f6dbb3ed32cdd37f2e9b94b3873543fe51ee6fb82e0c01c60e63099af2",
+    "fileSha256": "d0d9300ea06ddd39d44d7139d72f8ea02af509ae85b0b0cc98ffefc928e1b86b"
+  },
+  "aria/example-3576.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "Import this function.",
+    "sha256": "d48d78b0aa596e48d87760731d8df8e8f801d705377e2783882fd7b97b869be1",
+    "fileSha256": "154b00ed98bd86d105600679850c4a37cab44a67bfec6f5972b6b9a3d2e18b3d"
+  },
+  "aria/word-3578.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "async",
+    "sha256": "fbb9fce2c04e554ecb86ab73dd3dbab29e87e3cc923ed9da01c33709fec3225c",
+    "fileSha256": "a02c065b242331de3fb3eae24dc8b03be18c524bc0fa4e93a8c230b83f84ea5b"
+  },
+  "aria/word-3577.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "export",
+    "sha256": "f0f1b5baadf0885b1f782af28c5edc5641c1e1e597db38edfafaeaed1f4a687f",
+    "fileSha256": "0e78ee316d95b68c84e46d603a85b1b3a4a0585815dea4197e442ea06a7d2705"
+  },
+  "aria/example-3577.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "Export this function.",
+    "sha256": "9f3cc6f302f51b07bdab5812ef6059e7fdc0dc16e2c5850ff83931033c682089",
+    "fileSha256": "b6a7d67d28fc74ff02668c57b51d5a6af2703feb933d94abd37e3d193c1f37b0"
+  },
+  "aria/example-3578.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "This is an async function.",
+    "sha256": "b9d21f7ec621efcb68cb5ed2440caf47b9d79c13517eb031b1ac4354e8bfd26c",
+    "fileSha256": "0a73c874e8b4c6805795fa996992cc84fd7ade82e17c5edf72259e1a8a378244"
+  },
+  "aria/example-3579.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "Use await to wait for the result.",
+    "sha256": "f8cfcf39a310be915ad4906e5de74e4a5e31beec68fb34af4c0094d21e0008b4",
+    "fileSha256": "f80776e6179f7fbb469f3145eb2960ea9efec2af112b75c2bb84c6007f6f620b"
+  },
+  "aria/word-3579.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "await",
+    "sha256": "1395a92e05b9140c4f54df9988e10e3c28cfc4a7e536b0599691e5068c6821e2",
+    "fileSha256": "dbf976662d832aba2ffa5d5af3ad40cfb54a13626b3347dfca49023f62af8bca"
+  },
+  "aria/word-3580.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "status",
+    "sha256": "9800548006badbbc2cc0c97f4cbd98d030b48b30453159b8642955f5576ec439",
+    "fileSha256": "a0489ef863f20896cdbd36cabc523d2be74506d11ef8b9e8c15bc74e76368ccb"
+  },
+  "aria/word-3581.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "diff",
+    "sha256": "62f58a209740c26eab6a88edc9b8b4b5ad631b9aa253714575e2d1fe0168047c",
+    "fileSha256": "f156faaf47324e3f3b844cff18867702ef440f54f5d2f52fd6866e1d93b504dc"
+  },
+  "aria/word-3582.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "remove",
+    "sha256": "97cc161fc3ae3a82b448afceca8956e9e8cc45895152ceaaa83bcfbf0789e69d",
+    "fileSha256": "fcc599ab0ddef65fbae0f585902ab6f7ea6c5ddc98efb23f9656d75e3d80dedf"
+  },
+  "aria/example-3581.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "Read the diff before you commit.",
+    "sha256": "78097b57791499662c513ad4b5d32bf49bd15ca388d062a137389240b322e6fa",
+    "fileSha256": "846f693cd96e764c8a08f06ff436261700d22f3ddd6be531444a912e95e4fcdd"
+  },
+  "aria/example-3580.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "Check the status.",
+    "sha256": "b45b97e6af8d8a5eeb3402c3f0915c280afa847f9b376f97967438d8eb75191a",
+    "fileSha256": "3bdaaf33032db27554426a1af67ba744bb1a1e3bb998a2581f68046b347343bf"
+  },
+  "aria/word-3583.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "config",
+    "sha256": "34c0c41782805c6f9c8556f1df01e7ec305e462db22a0fdb0619b6a17d093e2b",
+    "fileSha256": "e6457332a0e7205033692410874c487fca248feb6c5588f2da2f33edbab9311f"
+  },
+  "aria/example-3582.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "Remove the old file.",
+    "sha256": "b9fe599cbf312098667ecb100b4a73b454b500f2a2ca13029f9f94f20fbd38a3",
+    "fileSha256": "54b91c3ebcefe9b05f51a4266ea8091edd0a91c68976d96e94c8dc79cb359b42"
+  },
+  "aria/word-3585.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "retry",
+    "sha256": "74a963446ef62dda78d4757f7e45f24c4bb70fab7ce8012df7bd122ad3e0ba9a",
+    "fileSha256": "3c1cfdad8686087026ce258d84aa839398297e2a8105be1fac9279db766239c3"
+  },
+  "aria/example-3583.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "Open the config file.",
+    "sha256": "0a72dbadaafa7598e8663ac6cd2d78119e4b624ddb4d03bb48dcbce478e381be",
+    "fileSha256": "8e8a060f82a1ef16b30bf7e51eebd6439426f07b456194f4d13b916eea0d9cb2"
+  },
+  "aria/word-3584.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "rename",
+    "sha256": "fe5d315524efa9d5b61c7331c576b447a94361c34a07ab9e2a25f94682904818",
+    "fileSha256": "3f0097d0cb63c0425be2399b591f0a24fd3ff70ff92ffe54e567643292b1d133"
+  },
+  "aria/example-3585.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "Retry the request.",
+    "sha256": "9d69a5a0ab7bc79c82406619e9a4ca65d9a866be0622880ebbee97026cd5fb00",
+    "fileSha256": "bb4386fc0945c0dd03e4bc10e2fb1f4427b713053a95091697eba8612a862194"
+  },
+  "aria/word-3586.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "timeout",
+    "sha256": "8d65607d353596037ddbb73e28fd2de1c909fd7ecb4ca27d2b2a50d97a05d652",
+    "fileSha256": "6dba18ba23c718602816d5c57720101e7001703325653d167d86781fee3810bf"
+  },
+  "aria/example-3584.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "Rename this file.",
+    "sha256": "067545f3d140b35e81b04675477ebe9990b8f9222da46dc0040b04a3a2df1a43",
+    "fileSha256": "6cefcf1aed5c19e06c71cadde54852cf4ac8fdd38dffe4e21875d5a0c98c330a"
+  },
+  "aria/example-3586.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "A timeout means the wait was too long.",
+    "sha256": "1c03aa08bec1046f7f29e387f9819c78edea7b023474f63cc51e7458bc188e2f",
+    "fileSha256": "2ae72b18ee25b82dd5650f29a4c3d9e01183bca0650a4a3d90c6fc5a82ce9db3"
+  },
+  "aria/word-3587.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "default",
+    "sha256": "39b6cc139e0f31197aae1f7a366ec9524e6f28e0f2afe4dcfe9955114dc3842e",
+    "fileSha256": "75597a0c523cb2780cc5c12327aa11c1fd00e9f596c5831f7ee07c9cb446c9df"
+  },
+  "aria/word-3588.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "required",
+    "sha256": "f152821da01126eba370f3ece5cc6ddb47de4be8f538c9e3cc784f02b0e4eb1a",
+    "fileSha256": "1d9dc645b0855b8b5158786690b393001982f84d58c2051be8755d1e8b15fa1b"
+  },
+  "aria/example-3587.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "Use the default value.",
+    "sha256": "c26f1783e11bd4292c8a226b4fc4a979025ff833c919cddbb96cf34a24b6d4d8",
+    "fileSha256": "28fabb473fea4ddc9872bccb1fe67e0faece2fc53a408d9b47e5d74786939479"
+  },
+  "aria/word-3590.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "option",
+    "sha256": "e9ff139693779e82f8ff65731e9e7a19dace6a6bdbd7a3eac97e694a2d634059",
+    "fileSha256": "99bdd3ba948e95365901ce93fe8746118c1552d4e8d5c6f54193aff9ee4c8543"
+  },
+  "aria/example-3589.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "This field is optional.",
+    "sha256": "b97dbbe0a75fd8d4ecc9edd20ec7bc7be5185279132eab83ffc21b9b81eab145",
+    "fileSha256": "e607afd41cfd8f9b932f29f6a251e6237d49569016b8988e4cd71128516fd5c7"
+  },
+  "aria/example-3588.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "A name is required.",
+    "sha256": "65f52f1ceef4f3f2a98dc0766a7bc8a4b6db16520d6f75938fdfe41050efe373",
+    "fileSha256": "2392a9b78bac66a2d4c6db04b9c748fe651fcbb47250e9e3280f7536e731d764"
+  },
+  "aria/word-3589.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "optional",
+    "sha256": "ed21658cff09d794343e38b545bdf1e6b375b481515b1c8fcd9127da2543ae73",
+    "fileSha256": "a8fc0c66f5a81072ddf535e726ebd96ac4e8a228b613147468218de49e86cc6e"
+  },
+  "aria/example-3590.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "Choose one option.",
+    "sha256": "d837f6a80a6e4147f7b693e7c520f256a563136408fff12f6c24ea7b1d2d302c",
+    "fileSha256": "9d65e149e2401fc1d4fc89fc37070000cf77b7f6313dc52560c216a47e023348"
+  },
+  "aria/word-3591.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "item",
+    "sha256": "d60b98b1faffa3f38400f9937c10f9dbd614a0fe86481f4cc914a6d00ef7b05b",
+    "fileSha256": "634bfdcb4d1e3826a324403bd2d2ebe59c6840814ebc5161a6184918496be3e9"
+  },
+  "aria/example-3591.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "Add one item to the list.",
+    "sha256": "ed95442d6a261c1c2b0e26abdad3a4a2783929da9514a4d696288adccad78d45",
+    "fileSha256": "6c00d10f4fdcd3d216b3c3847c3f29c81d8b63f1f906b90b4c92e65ccda527f2"
+  },
+  "aria/word-3593.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "client",
+    "sha256": "75240f88ea00ac44e3fef21c8b99e9e6cd160ce4b0b72cfc4b6c2efea15237ef",
+    "fileSha256": "af0d183b20ccdc8c8b507a33bbea38bc94e4cb3908cc03e9d3cb57bbc4413140"
+  },
+  "aria/word-3592.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "length",
+    "sha256": "efd1379471556315cf7c80dfa7250c3877e08dc176b081a846a6d2a7bd710d62",
+    "fileSha256": "d2a731e543d3fdf36ffdc65b35a2a2962b6043a77567eb4a6dff8292ffcce010"
+  },
+  "aria/example-3593.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "The client sends a request.",
+    "sha256": "fcd208758120f81ee8f4fc484c51c61eb5ca7d2d2835b4ad755c2ea2dd84d178",
+    "fileSha256": "ec317dcae1caa0cd92e7d8d4a3a946253c23b40055d6ea7e260b0ca165185194"
+  },
+  "aria/example-3592.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "Check the length of the list.",
+    "sha256": "a8a21427d6d68f0d8ac85b8ed7b820edab384aff86daa50d92a9cd930e02b0d2",
+    "fileSha256": "189ff8d75bf80f2ca8f2b94cbcd7e9960d6d902113fa90ac7049978c878f2098"
+  },
+  "aria/word-3594.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "setup",
+    "sha256": "a1853359ac5807f33d77b685b0790c26d13fc05d88a575a7a65defa31452c04c",
+    "fileSha256": "c8003fbae65d213f3a37788d4eee2536c3bff3010c8588f1e94afd79dfc68452"
+  },
+  "aria/word-3567.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "update",
+    "sha256": "497b8fd81989a281d03466c515912b81484ee1be325ca15d40c7c79cb6427c9d",
+    "fileSha256": "a5438f974921bb5d952960e38990c1a4555d78c807b044e9b3c754548b15523b"
+  },
+  "aria/word-3595.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "exit",
+    "sha256": "12cd176c5b01980fbe2149b7424c72a587fb5f8524da88461723c8c47691b142",
+    "fileSha256": "170be691c9024765241d141dc0e2cfb93c81f8f3c934ef5b48cf7d9f2698dc37"
+  },
+  "aria/example-3595.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "Exit the app.",
+    "sha256": "0f4996036d2998cbe60882d0f99b858ee69a17323c22549932554ad6c5a72b8e",
+    "fileSha256": "1214deb80a8ba36b7dca3595314a572b96fdd0d3deaa0d22cc65810318ed6380"
+  },
+  "aria/example-3597.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "This value is invalid.",
+    "sha256": "6f4e7a9d1bcc67b9bbfdf8e3328de92b8fd1a225d968dd3a40c227e8287f3bf7",
+    "fileSha256": "9d6efbd047a55aa8ba72cd37ba9b534d91b03e940f617d1e172a319a1aefc510"
+  },
+  "aria/word-3596.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "valid",
+    "sha256": "b59ebdaf7157306a2ae46ab8975719d893f355110d571f06ed0722dbc9e1848f",
+    "fileSha256": "3b8126d0abcf10f62e7198fc256757f162dad109fec3485306f84e7c36477b79"
+  },
+  "aria/example-3594.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "Follow the setup steps.",
+    "sha256": "afab2f6a9dd5ea359c1a702c494fa13fcf32b302246497ca1c43e4499b265dce",
+    "fileSha256": "e54f3bb034a9fe44dbab4a899b4ac7c41aa90c8c902d6a66c66404c6b5e12d55"
+  },
+  "aria/word-3597.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "invalid",
+    "sha256": "9e846eecd2523c362de72432670774dd807b8db0772d1f204f750650bfeea310",
+    "fileSha256": "4f653566cff5d37eaecdfc4f21f1a728a9329534b2a50bff2c75040258ac4577"
+  },
+  "aria/word-3599.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "denied",
+    "sha256": "00efe08ca455201063fe560c8ccfe82b1cb224446c3e7cda9588aaa0d53c9370",
+    "fileSha256": "d28f1aec1d4b20771ac7b2248f6ae2bc4d84c50cfdf01c3a68a6ab551a48c3e9"
+  },
+  "aria/example-3596.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "This value is valid.",
+    "sha256": "206b4b35ca6bb6829a3d5e2ee9b488e2fd1118a18ac72d3d6e65b8312c3d518e",
+    "fileSha256": "43f17e28b8d95e7954f29bd228d74a3b488aff2708e24d8ce6fa6deb7640e8fe"
+  },
+  "aria/example-3598.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "The request is pending.",
+    "sha256": "f77a25cf8d1e917807177d88c6db8d57f2bb56832addb2476d8bb32e6bce8b53",
+    "fileSha256": "1887ea65d6e2a388aa62114dc2379429253ad45c02e9a607c053aa0d0b6ebe0e"
+  },
+  "aria/word-3598.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "pending",
+    "sha256": "97a4cbe338bd56aab662133280b9df533e2f5af1ca30b29667ce39f68adefb01",
+    "fileSha256": "9f3c9503c3160476b77566920d1604ec6ca472b1ffdb7fd785ac02687647d6c8"
+  },
+  "aria/example-3599.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "Access was denied.",
+    "sha256": "edb47bded0422025fe38b07f18e70f6cd3ff604b418782e089cab3ec0ec5080e",
+    "fileSha256": "0ba1c9507b46d79799c748cf2a5b05f176d056895dd857520383a80e23a9ad82"
+  },
+  "aria/word-3600.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "console",
+    "sha256": "e12ec734c2bfc82807763fd3c458ee02edb6a2a7988d1d0a4939df043ac70f29",
+    "fileSha256": "94855d3e154ad0eb6c5cd6737bc5a49029c81207ddce4d4b1e646af37b82dbd1"
+  },
+  "aria/example-3600.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "Open the console.",
+    "sha256": "9c027cf236fe639b6a90fa18c7a1b2b895ae2fc123be0fe26e26d0af8e7cc7c8",
+    "fileSha256": "2ea348a7c72a173d7b1ffa6bff4b4408b14b05b588ff65ac4afc5d74b5debb88"
+  },
+  "aria/word-3601.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "configure",
+    "sha256": "cecd079b1d429cca989673b5736e4aebf76aae9e2bb084c78e4710d949466a4d",
+    "fileSha256": "8db1b7d86cff553c305282a40edbc146eb615d5b3ee7aca0802c3fab6b6a3e04"
+  },
+  "aria/word-3603.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "upload",
+    "sha256": "3bbc8fe7e545e558856029dd5e4b5e71e4d5f5d63986889d7ee51faa219c06c0",
+    "fileSha256": "1d08a4b0aa212c5cd5a8e6c2b9616abcbed9315efc469afb38f04d6a64e6f7dc"
+  },
+  "aria/example-3602.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "Download this file.",
+    "sha256": "fcaf8800341811803e4573b964d9a1adaaaee01c0ffe88793ce2a11be75949f2",
+    "fileSha256": "7cd3f44f1545ab9d0a8a8089ddcbea85a1c26e35de7ab2d079f320488cfc9efa"
+  },
+  "aria/example-3601.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "Configure the app.",
+    "sha256": "1adcf5842a92b608a13a99f9fcaeafd49adddd6dd95343c33f637aa0119d369e",
+    "fileSha256": "f7640db8c1892a86c46085dd223ce537a9648a2025f01ba1722948aaa37dd7d0"
+  },
+  "aria/word-3602.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "download",
+    "sha256": "2dda75a94bd097d5777cebc38bd4d21712097d7a89d284a47c48d8fd884b5702",
+    "fileSha256": "53b0759173207f969932ad3c7aef76d49609220417f4fbf6f73588f767648c22"
+  },
+  "aria/word-3604.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "version",
+    "sha256": "bd0e7a031b1493cd7e12cefe51ee877ef4ea69cd15ea235ef8b988798b14833e",
+    "fileSha256": "3429227535e61aae80e1eed2a0616e18798b1dd4d4d05631888dc23409b2b6bd"
+  },
+  "aria/example-3603.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "Upload this file.",
+    "sha256": "4ce6575b80bd61c4fe296976ef2281e3dafe53821f51f2e7edd59104fdfb907d",
+    "fileSha256": "4869217955892f9815056bb006002a75b888218280010e9b7f214229429f0ea2"
+  },
+  "aria/example-3604.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "Use the latest version.",
+    "sha256": "1fe79fc07dfb51463c8911760347465770a9be8d698a1e035377a113ef1d2306",
+    "fileSha256": "0f320fa249fe67fe73437221857d526112ac1add042962daa1f6b80bfd37d697"
+  },
+  "aria/example-3605.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "Preview this page.",
+    "sha256": "b96345726a717fc0af801c189ff2b5506c8e99591876ab270873eaa6de22bd34",
+    "fileSha256": "dae1477c46dfea1172ce4d85c8ed463243dda63524fc3b2c3ad098b44dea0e78"
+  },
+  "aria/word-3606.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "link",
+    "sha256": "60bc28bcb486a02e60873ba86a9cb269022ba1ceb157c1724cc5fe19c2209ddd",
+    "fileSha256": "a5b8cdae3486f8510d73c90d9d4e29ea6d9c821dfd6862d7d36e94873a3452c0"
+  },
+  "aria/word-3607.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "description",
+    "sha256": "f4a61e7f487fd34f7054148f7cc57fa99c69491a217f45f275e83fc6d64d0cc5",
+    "fileSha256": "ca7f366d7c263879392f6d5b7b516b98f04bacb6bda12abdc4ae1373788cc68b"
+  },
+  "aria/example-3606.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "Open this link.",
+    "sha256": "87f93022cf83ac73f1bb84de007094980df8248f7aa652d8ffd153f29f2d3a28",
+    "fileSha256": "6df5e2145ea0b7d8145d66736cfea2233e830b160bad0fa2f0d9793506c4c569"
+  },
+  "aria/word-3605.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "preview",
+    "sha256": "525a97456985ef39d93c23e3b96e7303fe716c9e8a4652f995fb8a5685cf1284",
+    "fileSha256": "502fd32a9fc9d2857b840330e09f17537dd3be52f9d7b0733e038f7ef8318276"
+  },
+  "aria/example-3607.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "Read the description.",
+    "sha256": "bc9912ea83397f5ed343ca27b93d1f966bf3f5348e60c3be086668e1ddff3c81",
+    "fileSha256": "43ed55818046e0a0e0bd59ce3746edb0aed822447e0278c7a190ea059171390b"
+  },
+  "aria/word-3608.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "production",
+    "sha256": "cd3a42ae22ec54b83b9395da4a3c86c86ae69305c3322226e348019debcbffda",
+    "fileSha256": "026f9d5b6491d0d354cc6a28b8b3f3cb74badb4121bbd74b12c7c27fefd5a5d8"
+  },
+  "aria/example-3609.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "Enter your username.",
+    "sha256": "352fde3fcd592d57688193b1d70ed9a48fe23e062f18ea84f2aee810c762bbf8",
+    "fileSha256": "a38b70cbca68a707fc353a77c0742bd5a70c369c3a013322c5c4c85d30659316"
+  },
+  "aria/example-3608.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "Test the app before production.",
+    "sha256": "d8e045c60b4aaf24a1b1ca733c1ca972e78b212a3bfc8873fc2dd4965915fa33",
+    "fileSha256": "829199960d9ad91e3767c5c4abcc335e52c4cf1ad72ead743c7a8228fa76ae8c"
+  },
+  "aria/word-3609.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "username",
+    "sha256": "e6c0b4cdfb24ea6f7c2725a90ce8db369268b4b3d6d8fe1a28170e5803d92bb7",
+    "fileSha256": "ff24a0b8f78b922c7256517f3dd407f219555594e2a2b8c2763c882549794085"
+  },
+  "aria/word-3610.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "select",
+    "sha256": "2b8271051c7520d9f7258b12470c0de4c7142df3cde4a5aba8aabaaa3196ac9f",
+    "fileSha256": "909d445fb24250a20547230cd7757dcc25f21a911b5ffa0b91cd51e7b46ae7eb"
+  },
+  "aria/example-3610.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "Select this file.",
+    "sha256": "9596e39bf0ba30e8199ee461525fb0552b2331dfadcc334db6b8677765302c51",
+    "fileSha256": "3bdf1463946538ce17d08378e64a839e17eb82faca5fb1447b5e778a26143396"
+  },
+  "aria/word-3611.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "submit",
+    "sha256": "f2e9e675910a63fc4b8568e59d6e2bf316b807de06f824928046a0707bd06860",
+    "fileSha256": "bcf757e472dde6d37c8b66ac3bab8cebfb74759c312973eb18b2114c79486ad3"
+  },
+  "aria/example-3611.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "Submit the form.",
+    "sha256": "6d7f6e7b1e7f95a1f6a36825f485a065665ef0fdb2f432ff75ad16e371cc13d1",
+    "fileSha256": "dda725844cd42cfea5385ef030e25ad4a82d45d164e41d6d290e6a6da592d3e1"
+  },
+  "aria/word-3612.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "confirm",
+    "sha256": "bf85db5e255c7e2fec8b3e48fea6e333cb1f63eccb5958de661a9bce3424919f",
+    "fileSha256": "ccca7dbf691bc5694844fbb5a0549213ae021125353b5dd8fd31aea0240d2d73"
+  },
+  "aria/word-3613.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "refresh",
+    "sha256": "cc8275fdcc89ae73528a2471f84b5075ba6887a8b380799922cba02add79abd9",
+    "fileSha256": "baf759a067664d39a6e1c706f8defc0f4d65e3a11b4811da9d0de53d9a588320"
+  },
+  "aria/example-3613.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "Refresh this page.",
+    "sha256": "b9c2b764e35bb20b1eb16507d22132bbdbb49c63818ba0bf9f3c6dd9f5b72fd4",
+    "fileSha256": "e01daceacf5b0e00a80269da3dd76eaa300ae962f0d6942cfd8b671199d19ca0"
+  },
+  "aria/example-3612.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "Confirm your choice.",
+    "sha256": "df612b68391237070b3775e4073add7ea82f3047bdd92dbdc106a46695f877fb",
+    "fileSha256": "f5f058faa93774721a68dc47f7dd777367d06e7d5726fc9e581e80a582582e09"
+  },
+  "aria/word-3614.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "reload",
+    "sha256": "40a72f9790f7dd5e5f18c780d5ffc41139fb6cc8fe6db5e8012d34549c4529e0",
+    "fileSha256": "43b9f21a55d3f8de6bafa38f7c9e8c51ba6d3bf2d861f31dc98efc2031dceed0"
+  },
+  "aria/word-3615.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "format",
+    "sha256": "20ffc79150626c6b96363daa62f023060a150221982150fd17ef58780387fdfd",
+    "fileSha256": "fe2e7f54e3f6e71e4353c5aca7cbfcb052cc9a1b2e85423c5e2302ca616a96ca"
+  },
+  "aria/example-3614.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "Reload this page.",
+    "sha256": "c2e3a7b4d8aaae3c1d7c3cc820f0d759a5ea99e0e4c8c05ec86b6fa8858e01d9",
+    "fileSha256": "7eb878f1b4ce9d3316e3c0d3cfb8f2654aa5b559baff0a29783320736637a0c4"
+  },
+  "aria/example-3615.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "Check the file format.",
+    "sha256": "489e54af4f4dee4b2f06846799454792001ec3f12f510c8d58180f985c4c0a91",
+    "fileSha256": "08728c20d9190bbc3c7d1423b781741b837779e78132e3d9a17c254051353b4d"
+  },
+  "aria/word-3616.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "parse",
+    "sha256": "f0e630a6dbe4fc5cde332c7ffa6667239d27c69c3e11696e801f9df94ac2698e",
+    "fileSha256": "5aaf93b6f20e1da5e2c6f186591ae84908f5e8a3c02b555f2862814e567bec53"
+  },
+  "aria/example-3617.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "Read this document.",
+    "sha256": "bb1f348342965d1061f2a00193b596f4a12417ac44b2b1c08b0b5e68aa5323f7",
+    "fileSha256": "ee13fe345eb8e7f68939b20457eee14a4db3a7a91729876f1feb0b8ecadaa446"
+  },
+  "aria/example-3616.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "Parse the text.",
+    "sha256": "8bc1a643d640bc2873368e06266a5055e241a663876d976525f1d8f5fe3994e1",
+    "fileSha256": "787185f3149c20a37373c00be96451efce9bf94f4e846a5bc8031f3ad9b17f5c"
+  },
+  "aria/word-3617.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "document",
+    "sha256": "fe77f25fd85f961f52b562ee3331485989db570421069c9faa8ef7a4cf2f2f19",
+    "fileSha256": "468ac6a38774466ad74b90780398e7986dfdd542f669d1b4f7fd1f458729c2e8"
+  },
+  "aria/word-3618.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "setting",
+    "sha256": "9e3ae47287cb30cc78f7222766ddf797f6f941bbe4d495abfe935b7a6c572ea1",
+    "fileSha256": "0cb411f1ef1a65c9fc73d3c2d92ee4bf9430558027c4ad2fab0493b25e415c6a"
+  },
+  "aria/word-3619.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "initialize",
+    "sha256": "397a11e18b1b2cf333f35334b7e1eaa78665f53d8f14cd7a7b732e27de2d474f",
+    "fileSha256": "32c08b6d4631ac1781d394f95bac076f7c9e7e99d6df5daca10df79cf07965b3"
+  },
+  "aria/example-3618.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "Change this setting.",
+    "sha256": "fc12e3634bef03fbd606b4722556cb891711394cef64cdc74e2144cd4e2618a2",
+    "fileSha256": "222debe6fd7a5e3c254d1be692dba24ecda324daac68feeaf686ec0c82df2a52"
+  },
+  "aria/word-3620.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "render",
+    "sha256": "c27cc37ee4b2b03bb79a0738c1230c63ac31d9bde963c4320fff2dea4fd0be9d",
+    "fileSha256": "0022c0a858ec5796c298adec12c7989915a72f4c853c8c6de5c43e283cbec5c7"
+  },
+  "aria/example-3619.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "Initialize the app.",
+    "sha256": "9898cd78c3f067918b4c5bd1000f3b5e59ebfeba3e7b9495d81dd9db069eb350",
+    "fileSha256": "958c0f206a5f23966b83cc343f050f4dbd8419cc88436ce17130f42a870c0ed8"
+  },
+  "guy/example-687.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "Write a commit message.",
+    "sha256": "1b5d7a3148b040631449ad56a4a0219c7e594cfca6122aae29c57c4aa3e9ebf6",
+    "fileSha256": "4925d302d40a7191a543e7679b8a072be20a56ec500b2a22e2f21fe58f05b781"
+  },
+  "guy/example-604.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "Check the input.",
+    "sha256": "cd8878e4fa974588757a45fe0757d5297d120b3f9367e3b62b60600b7c3574d6",
+    "fileSha256": "2abde8683df6333e4c60d80a43028373be05986e32bf55ccbcb4c81b77748045"
+  },
+  "guy/example-790.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "Read the output.",
+    "sha256": "b8adad9583f53d70dde4e00703fbd6156dcf2f01a068d61ecbb98259ec745b89",
+    "fileSha256": "8220a0ea298c5926eacd109e8d82bed9b9face1fb95952d1bb50f755a8f1ba38"
+  },
+  "aria/example-3620.mp3": {
+    "voice": "en-US-AriaNeural",
+    "text": "Render this page.",
+    "sha256": "695fd7b81954fa24084e54badb146d8c11840632604dbab76fce8ad13e0a6a5b",
+    "fileSha256": "e5c5caf8d94b1d2efc097e08a175a38e2b6f7bd08c3a002abd4e16fc2465865d"
+  },
+  "guy/example-830.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "Check the port number.",
+    "sha256": "ccf91f15544da95bc85f0f765daa059b371bf78e9477a4c0be8241ae28569144",
+    "fileSha256": "9ab7f729cc85869d2461e152a25eb2ce339d9d6445fa8f1f0ec7401595ad94e8"
+  },
+  "guy/example-1594.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "This test may fail.",
+    "sha256": "83cbb984cc4547f645fcd6c537fc38af983a1523cc380a176598e4ad7ce5c270",
+    "fileSha256": "a3986fcd63bb76e0bf902dbae2d85851e1df4e3a71d8ad11f1f2ea682af45a12"
+  },
+  "guy/example-1627.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "Fix this error.",
+    "sha256": "042677070fa622a236881ec14e9ccebe80e74c5dd4cd189ae4d7f410365bc8e3",
+    "fileSha256": "8dc6bf61941a6ea9d54d5a6c21f86f25ef453145806dae689c27f0bc67632058"
+  },
+  "guy/example-1609.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "Fetch the latest code.",
+    "sha256": "16c6d7a99cb76a51e9216adb1e60db395f3784b0d950e7a09cc7b02db155832f",
+    "fileSha256": "426ed21c617fde3a6a59e36537f145cf7876c291ad00221a677cb852a633c4fe"
+  },
+  "guy/example-1880.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "Switch to the main branch.",
+    "sha256": "9489aa941bac29a4d81721899eeb766207655ebbd12a90d44f0ccb6159cb6527",
+    "fileSha256": "045ebf529168fa895d5a033186785d07e5e230e001f9f1c3ea2f6f352264f9bd"
+  },
+  "guy/example-2801.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "Open this project.",
+    "sha256": "556cc0a3bb745318e48698e5afa4486ca055c20130b3f539085b560d35e5f586",
+    "fileSha256": "3d94a86f22d3aa79043275ae4cafff57b22845988a71d4f6a0e7827c41da9b62"
+  },
+  "guy/example-2862.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "Open a shell.",
+    "sha256": "5e57e9beb9cd3dbfb147b4af2ade6bae21207c384edfbc23b9bbae385bb0ef88",
+    "fileSha256": "856cd99b09cbd72377e76bb2239c769abaa92a6d0d1ce041a66de260e0b68eab"
+  },
+  "guy/word-3562.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "log",
+    "sha256": "79c888b273201bf0015471c71310f3b896025c02e36497f05cce83b95178ee5f",
+    "fileSha256": "1cd1b29ee83c4f4933a876fe4a5f0bbc6b4bfbea4c9e37c46362aaac8c45ed1b"
+  },
+  "guy/example-3561.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "Read this code.",
+    "sha256": "d3d5560d774d0c79e94f5ec8f3937718505333e63e237f71afd609c17a254e2a",
+    "fileSha256": "6ba8632f81bedf306537c2c29649014d21fdacae47bd68d4835df3b74639e6a5"
+  },
+  "guy/word-3561.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "code",
+    "sha256": "436f10b8209df309fb214a1b1637fddf611d374373c857dcf52ca3a33e7f043a",
+    "fileSha256": "dfd1c3613e97405d6ef3d2072eec95ff4de81de582a3af1cf12bc71ee0b3ea08"
+  },
+  "guy/word-3563.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "source",
+    "sha256": "b3ac86a45890cb97224ce1b886f51402aaeba93d014c0fef8dc1236506f3f03f",
+    "fileSha256": "7eddf87a0b3f581e083f0b9fd924ba04fe65c535204b206b282b33123d2e7608"
+  },
+  "guy/example-3562.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "Read the log.",
+    "sha256": "50d61e0480970bf368733254ed5c2b43eab26c2f51e4c8f8c535d0991b53c0e3",
+    "fileSha256": "9772fedbe7e3f176a7cc6954c37aacf0d85d12d0c2a43e4114b4c012f71f43f5"
+  },
+  "guy/example-3563.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "Check the source code.",
+    "sha256": "47db0a26d5b9f83060b9047f9c4356ca32f8797f891242eab099374ccbf434e7",
+    "fileSha256": "bd00e8ffc51ead1b0915f946bf4795fc79aaa34d0b7507f59a47320bd0562377"
+  },
+  "guy/word-3564.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "execute",
+    "sha256": "580f6fd2b138ef862c1eb8cd4f2d86f46815b04aa1e933cc058a1cc4a90dcb08",
+    "fileSha256": "8ec3b48d3d3e584633a55f7b716c062a821c9f0bc43a88d90de02fef39d50239"
+  },
+  "guy/word-3565.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "load",
+    "sha256": "9486d03138b9c948b681a28090d9050e1f8fd1a7793aa3c34038bcc4946ae983",
+    "fileSha256": "4434524655c467625dfb7b4bc2a40754aec9e0c9488e19ef7447037160019262"
+  },
+  "guy/example-3564.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "Execute this command.",
+    "sha256": "42e77e12946f5cb8b41732c075192007fb0ff44300830db5cb354f2e459f3e00",
+    "fileSha256": "8becf448ec8543f1ffce67162cf879c452ec02ae2dc1e0bb63e17dd7e90a40cc"
+  },
+  "guy/example-3565.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "Load this file.",
+    "sha256": "ebf568478675c74153c35c4cdd575a5df8a8fa3fb34166b41742d87a3f1efff5",
+    "fileSha256": "8e06223aeb56c3c7f5ecd82c56be172af35b1d35f39687fcb1334d49ae24d933"
+  },
+  "guy/word-3566.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "delete",
+    "sha256": "4cb73bc26b71c7335fb226715b441052543fc26c2575e3f8839e38399c067666",
+    "fileSha256": "71c410843700ad3183d0c833982f37ca7209170944edd64fe2d8f70431eb5616"
+  },
+  "guy/example-3566.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "Delete the old file.",
+    "sha256": "4a9b7bb09357ae99e33452df9f859c9128a79047f22e43f5ca02575135a27e90",
+    "fileSha256": "0ad744c5f988c53e632136eea3fe28f5b357b97f6daa5245d2694df0caf6190a"
+  },
+  "guy/word-3568.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "enable",
+    "sha256": "e48e987409257e59cbee59df67391d090674968a3b49cf056fdc120ee4192cbc",
+    "fileSha256": "17e9166a40ae7e9f3c7d1c079612f70f0f181c99beb2cddc239a8ff187f045e1"
+  },
+  "guy/example-3567.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "Update this package.",
+    "sha256": "a1867773deb1f9e7ee96a213c4d78f4723488f71b045500c9400abcccd9a7136",
+    "fileSha256": "d7cfa557dff6142adfba84db9cc67ee2bb86d61614d401991c10a61249ed7803"
+  },
+  "guy/word-3567.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "update",
+    "sha256": "e2acd6d1fdcb5dbf2cc933a6c52f148054921820a2a7aa401e30004cb8b7acca",
+    "fileSha256": "f4dc6c78b8013109744012a7dacdcdf895b44e6905685c3e49e069301d537c67"
+  },
+  "guy/example-3568.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "Enable this feature.",
+    "sha256": "288c5c81ef31c362df3c170fe2fda73b49292e8d993ec0732280d38a89628570",
+    "fileSha256": "a71588a4049a27806bd9fdc9708487e3ed681efdfd7ef860242f5690efa9f610"
+  },
+  "guy/word-3569.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "disable",
+    "sha256": "a1d419f5612b83538ca882da62ff22b8ecb9a5e7727ac33c30465e571518fab8",
+    "fileSha256": "eb0f535483a3c13af787003c963c2c7a8f1c7baef388eda25aca93cb8d7616ca"
+  },
+  "guy/example-3570.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "This file is missing.",
+    "sha256": "467d871db2042a04741c28ad80bcae16efec4597e204de4b3d360f82bba5333a",
+    "fileSha256": "6c5936f6b6c211858a4599aa0d0a8abbf153f235dc40d41f754fd3c292b285a3"
+  },
+  "guy/word-3570.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "missing",
+    "sha256": "7cc26279c99bfb8c3dff8a844b77fe771dc91150dec330e5dd62bc918c9b6612",
+    "fileSha256": "4b123bdb4a9f634e1492d504b6e44cd3f415f07ab985ee705e8ffdc319404268"
+  },
+  "guy/example-3569.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "Disable this feature.",
+    "sha256": "5f11f9b4ea4cbb448a4c1ffcd5ca0970e06f9088ccfe19b450c95746cc6dc361",
+    "fileSha256": "772e5688d1ddcb57bf4eb5f623d8d7b898087f2c584e130f959b030e6713a74c"
+  },
+  "guy/word-3572.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "null",
+    "sha256": "44661ed6ed0e67114fad4334da60ce9baf6746df78ea8c20361ff3c35132492c",
+    "fileSha256": "b4183e49b3617a47f982575d30b89753171eead0965a2575d0bf3cd7034b9dfd"
+  },
+  "guy/example-3571.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "The test failed.",
+    "sha256": "bc1263d92a2bc90084129c2a594659c683ae4f95cc128e4e7757307fc3a9f12b",
+    "fileSha256": "b4cab382e137ee80b99e3531091bbcadd4303345e6a44f780ea0b0244d3ccd94"
+  },
+  "guy/word-3571.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "failed",
+    "sha256": "d70dbc14a90968f9f82e1a7ba70c72d4460f8080b194f6f4a9a534999c843b38",
+    "fileSha256": "979d235f24b8375961493eb0d59c388acb06ecfe03decba56b3f8eedb83ea382"
+  },
+  "guy/example-3572.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "The value is null.",
+    "sha256": "2007eb6091029d7a770a139758bca1cf84e94582f198b7fe2b13cdb4dfed2272",
+    "fileSha256": "925030ff5f03ed1f34bc955803928fb04a02585da02495a6e388b019af2408cd"
+  },
+  "guy/word-3573.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "undefined",
+    "sha256": "749e2c2c8995d0cf0155d5b7aa46ecae8571aff0344cb85c08df5f04958df50e",
+    "fileSha256": "6960442913ae66106326ed7da25d3f81ed100fe49f3e184d16b01da8f96f5e10"
+  },
+  "guy/example-3573.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "This value is undefined.",
+    "sha256": "c1a1408c3276cff4b7424ea67281cb2c099430bbcc52b5835bb92288f870997c",
+    "fileSha256": "84f6aac777544dc2311534ea85a269b1151e4c02c8100fb5cb7fd35dbea0da55"
+  },
+  "guy/word-3574.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "false",
+    "sha256": "921aca2e65a2ed4c3203dcf4f41950983759db681ed26a2b3d7b06abd2f33f0c",
+    "fileSha256": "915420fa7bb730077e788a66d4f7bf1be6f2993ba70c4c4acdf4670bf3752e2b"
+  },
+  "guy/example-3574.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "This check returns false.",
+    "sha256": "39088dfb838ad7ba7a9d2636aafb470b0a6679f9f91fdcd183a95d49779c23d9",
+    "fileSha256": "02a2a9da937dcd804dd9e34a5c2dea650fa84fcc692fa19f4a2b3a0525086b30"
+  },
+  "guy/word-3575.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "const",
+    "sha256": "bb51434487ff9e5c193efd94f1fd7dc7ab6c87dbe5ab0606d9b7e714e171c739",
+    "fileSha256": "16d5c4c4e79e3e3bd0741a717c7ff0d88ec6bae4e24411fa179c67f83896fa53"
+  },
+  "guy/example-3575.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "Use const for this value.",
+    "sha256": "06f69858adfdc899a312d045b8d601cc592fc5b4c0b73225352f2ef9c1d6e26e",
+    "fileSha256": "fef922e225686d480617bceddf09a680cde7b638e596f2feec5dfac9e68b8d80"
+  },
+  "guy/word-3576.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "import",
+    "sha256": "34e275fc3808820030087f733cef8430284a5e27f4a41add5bd7de547318d250",
+    "fileSha256": "0887845218f8aa9741d00ff114af252e1e9d316b729d39c0a2bbd8231386e2ed"
+  },
+  "guy/example-3576.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "Import this function.",
+    "sha256": "42b6451b1281832aa9e84e102e6cd1e72a7b56e79adbede284a63b2100617d16",
+    "fileSha256": "86c0fb93ccbecfb38b9cd945955dcf193e64935f2607a8e3dcbcdab24124cff6"
+  },
+  "guy/word-3577.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "export",
+    "sha256": "12634735f482c2028fa9fcbbff0de43c3bdafd87bb51470b0de8197f66c864fa",
+    "fileSha256": "961f672ca1495d19ea8560bef4e3cc991ddc779a95214d3aefc943abda468be5"
+  },
+  "guy/word-3580.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "status",
+    "sha256": "b939a440c37f9fc30aca3b83811fb75418916ac028f24a56032a2bb649a311d8",
+    "fileSha256": "9809ecec161dd71b5d8c4a11ce64afed6250b0dc83eb2375e79403f9887d592a"
+  },
+  "guy/word-3579.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "await",
+    "sha256": "37e13c75bc119cb865c987fb63a126ea0f3a36703005c2cc308f39b0df42448b",
+    "fileSha256": "8100038cca5e3b21923feea32ebad52131da77f7624e834265ce391f76cca499"
+  },
+  "guy/example-3578.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "This is an async function.",
+    "sha256": "fca00c1b3de163e9855b52be37949fc9a900f70e7b596237a3d89191f6ce0266",
+    "fileSha256": "2db22845f579325b51bd480680474682096f5f7cffffe0d54d72c2650b0b2bdb"
+  },
+  "guy/example-3579.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "Use await to wait for the result.",
+    "sha256": "d46b1bfc91319d5a3a379f33f7320de69b9ff6578d7b1abcaad2acd0ac1fcb54",
+    "fileSha256": "38bea5398cbcb2b0f7f62f7e96ad1874e87967dcd4dfe0ddffc38986c04e9dd5"
+  },
+  "guy/word-3578.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "async",
+    "sha256": "d1268e59f4c6d8259c7f25772c64e982421a02eb0af31b148b38f0f6037048be",
+    "fileSha256": "760f90c9a1d674e470d015f52e889b3b4facc407efa73ae029aba963ced3ddcf"
+  },
+  "guy/example-3577.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "Export this function.",
+    "sha256": "c7f2c1c44c0587b00bce3715437c323ad3b87f7668f512cf0a8efa90ba4e8a9b",
+    "fileSha256": "ac96d2deafbc50351a6cd4e4649caf3d0929cdd2629609a994bed92669f9222e"
+  },
+  "guy/example-3580.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "Check the status.",
+    "sha256": "1c428970e789bb8b676419db391994d7f4f58bf376f1aedc2dec94f441d38c41",
+    "fileSha256": "115896fea564338be17b851d4309db79c51f5f7f7536fe7e64e137ad9893621c"
+  },
+  "guy/example-3581.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "Read the diff before you commit.",
+    "sha256": "11da51169fa9367b7dcfa830ca6b8383a08d25af4e8f376dbbb303e01c260946",
+    "fileSha256": "5707c01a0a6c5fb0608a1f4152a3df634bc25b82d5208fa81aa6ea609898e4bd"
+  },
+  "guy/word-3583.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "config",
+    "sha256": "24c26c0ee307a64d62b0074372c77160939050713606ec7ac9e2cb2c44a50d90",
+    "fileSha256": "3e3b766736c24f11e3e893fe77bdd1d26a2e7f6d796bd2d0ca0c71b2ed7e24e9"
+  },
+  "guy/word-3581.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "diff",
+    "sha256": "b7c32b5360283c111f018a8a6f1e90d39ce683532fcc334ff8c6844630aabbf4",
+    "fileSha256": "54ab61eaae7100f91ee2cbc052ccf3996fc455854d262a9a10491f8c826da3b2"
+  },
+  "guy/word-3582.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "remove",
+    "sha256": "667693e2054b8b152dc97fac3292ba67f212aedd6a2dcad57edadc8ed5065e5f",
+    "fileSha256": "67bfff87d98da33261ab97d2b224167eaafd82cae5712ef19862cfd837679304"
+  },
+  "guy/example-3582.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "Remove the old file.",
+    "sha256": "52e1746aac215ba80f1b5699fc9923071ac070508ee8e2161c2b777c7b38a1d1",
+    "fileSha256": "57104d7a5effb6d8133f151809831d4ac89924def77c6751adfce396c32f5e0e"
+  },
+  "guy/word-3584.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "rename",
+    "sha256": "b12ed60292ebd97a697de26de21272d66589c8a5eacd53f501c5c8cac1c7b7cb",
+    "fileSha256": "805660b6ab645b2992d43f789db8da26c2f0e815b6555c21dd31ed7cee7512d4"
+  },
+  "guy/example-3583.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "Open the config file.",
+    "sha256": "89a7f6979df4e8d2f24135cdeb8b8505adfa3c7c531f7e157bad8ee7b6b45d3b",
+    "fileSha256": "8a2c0d4606f14a27002623ae75138b09a99c541e1d226e0938cbffe26321ce6e"
+  },
+  "guy/example-3584.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "Rename this file.",
+    "sha256": "2a70a746039e9d796061de2908b4d5a88cbcfeb46652ef50e0072e2eefab7061",
+    "fileSha256": "982aa28466ea460403854bdaeebfdc69145ae6996cd6b391ac34fa68744ce914"
+  },
+  "guy/word-3585.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "retry",
+    "sha256": "df50aab5d1824204841a8464cca52446d09d9c7571847b6cf464cc3e055b1070",
+    "fileSha256": "4af5bfb87c54af89e4950bd76961b7020a74dfd75d32d7513b8697375c5a340f"
+  },
+  "guy/word-3587.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "default",
+    "sha256": "937b0cbbc69b68317b6cbf74a15b163d940fd6b6e239255c403d922a20c5be6c",
+    "fileSha256": "a4ebff5938a4388ea0b65a529a5a4232fb62f27382a78185a3bcaad09ff3639c"
+  },
+  "guy/word-3586.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "timeout",
+    "sha256": "78290ec4aea3e37f31272e27279e5cbcab0dfac713dc490770c1d2f72ffdb57a",
+    "fileSha256": "f59f8d9573c1474ce71e5b19eeff7ea18a7f1ddfbfe017d791666b067f0884ab"
+  },
+  "guy/example-3585.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "Retry the request.",
+    "sha256": "67d55d3d31127308d9411a76f722cccec2b27bb82eac142d3f1f38ec99a8be55",
+    "fileSha256": "8fdec669fb3aaf6edca9e18c1bce2fe4035be46710d4c67425fd19d3427e4908"
+  },
+  "guy/example-3586.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "A timeout means the wait was too long.",
+    "sha256": "e76af0cff9a48db1e80c2ef7e6d5f8812c49b405c4302afe7026b346b0a2de69",
+    "fileSha256": "1f15ac88731c07baebaa87faa6e0c980e55876fa875ee0c54313324ee03eac3c"
+  },
+  "guy/word-3588.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "required",
+    "sha256": "f17da573e5297e6596f299bf14addc91ad47bd7ca928dcf365af21bcfb486c5a",
+    "fileSha256": "e0cbe944b025a8e1223a0ce75a79416375cc97b50b23ca99e6ddd37e08cfc898"
+  },
+  "guy/example-3587.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "Use the default value.",
+    "sha256": "a0100e7f45fb98ea8cb815ab38596b63029a05776f189d61a88c70ab1d687e8d",
+    "fileSha256": "0cbeaa0d1e54f0b1e2a53f9fb23decf0d03a9aa0a0737ae9983ed535f14de364"
+  },
+  "guy/word-3589.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "optional",
+    "sha256": "7891abf2b1ccd82bd3345a8aa050901e1bf1ba0253e2f8fa2f7f316b6e83e200",
+    "fileSha256": "e35fb5b011a11b18e682ef1ab56896cc23f14d004cbbce1a02a59d66174ee91d"
+  },
+  "guy/example-3588.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "A name is required.",
+    "sha256": "9081e953da33f8874aec3b0a9f830ec5f2eb3b74323107c92f85899cc4d9483d",
+    "fileSha256": "66f42a63ee3ef7170bafbb8a755ec86778cbc355f2bc1bc2e7bce9ada79727e8"
+  },
+  "guy/example-3591.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "Add one item to the list.",
+    "sha256": "0b74a847f675a191a9448c05671b160f8f853081cbac2ef476fe27048eacad46",
+    "fileSha256": "3e01b99aecd3f192cd9e32a9776e59fe421da8f160a191c6f75b566c9d63eb05"
+  },
+  "guy/example-3590.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "Choose one option.",
+    "sha256": "a821b0f5d11722b183bebaa85b065cb73ea7b58949577800e789d17b566b249a",
+    "fileSha256": "d9b4db6bc2f4e9a2cbd98ac7243136095733dc2ce8eff3068128d78d668f4741"
+  },
+  "guy/word-3590.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "option",
+    "sha256": "c6ddfa5b3c6663f29c1af2985d790d6ecd659c4ce55c6bfad7b35cb71e791f9f",
+    "fileSha256": "9ff1c85e7f7f9910e4006646ca0399fcb7ac2238485284835fe916b466741f91"
+  },
+  "guy/word-3591.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "item",
+    "sha256": "350617cdcedae5bf9be4a81a85e158ad400777940d475a0b82203826a0eba2d8",
+    "fileSha256": "144c67a86908fd523dd5fe8bd8d96befafcce616fa4b835b74d3de3b6259e6c8"
+  },
+  "guy/example-3589.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "This field is optional.",
+    "sha256": "37a4b631912c5357ab545be1f38610373a7d2ccf0fab7f571110f295280e01b4",
+    "fileSha256": "df79145f4fdfcec32a0f484448ace0d5d4171f9e18324bd69444b59208a1d5a8"
+  },
+  "guy/word-3592.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "length",
+    "sha256": "46b187fadd34052ea6b05e521e19c07ce1ca8379dc2de1e3cc11e13188f66c95",
+    "fileSha256": "9610a5660969edeb118b7456cafa2bb62f9e05f53b30b080752f1b7f286b2767"
+  },
+  "guy/example-3592.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "Check the length of the list.",
+    "sha256": "5ff553034100ce563cdc7651124bce7dacc4ac8279770bfd24730c527896de28",
+    "fileSha256": "740adc7b15ec9c69867c9ec41b3262098486cc63513284fce731dd3baacf0733"
+  },
+  "guy/word-3593.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "client",
+    "sha256": "a2eff81c539a3bc59a445dd37a0a06a6b7c01f09d90b06230f29ef5633f2db3d",
+    "fileSha256": "e1818834ca121cec0e871cb69086f701cb69bca654c3c5ec0d30d26c5dc1a26b"
+  },
+  "guy/example-3594.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "Follow the setup steps.",
+    "sha256": "be985dd08f4113d6420bef241429f4cfd463e3b1a9635610663f11457d7feb16",
+    "fileSha256": "f4fb328c95ff59b42c1f1891eda4ff3d7529c5eaedf2b5fd33cf21cd7829d593"
+  },
+  "guy/word-3595.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "exit",
+    "sha256": "f1c7e6a860b377ff6182e942f8151dbeec5f636329292c9a08e455bfb637c964",
+    "fileSha256": "1bc2aff6e5e397d533060d495fb1ee27da8a350abc8ef5df1bf5df9beb17844a"
+  },
+  "guy/word-3596.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "valid",
+    "sha256": "c333f5153d2a4468cfe7efaaa82fbf8f5943dd65c41bde3a6447af8122ec105f",
+    "fileSha256": "ab39ae2ff9be73790b2c8a1cd141e69200969120030470f508b2a8643fa1fcf0"
+  },
+  "guy/example-3595.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "Exit the app.",
+    "sha256": "85af52c228356193eb4d6de09e60d25c72f12b231f8f4bfa94f0f8ef4950c4ea",
+    "fileSha256": "6a8bf63a3bab147fce73f5ad67b32879887b00132559854177b11e0ecd57aa15"
+  },
+  "guy/example-3593.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "The client sends a request.",
+    "sha256": "825d9a0045a49a18c10e7d71827a7f50a39e5166a09c3953d901465c8fc1c46e",
+    "fileSha256": "10a55d51e89dd13bd07434d7c1caa333e4e3e22940e2ade385be54a682e1ca87"
+  },
+  "guy/word-3594.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "setup",
+    "sha256": "309d094155deca9db24ee63a66e86426446fca22e32423eb737f3581196f1b7e",
+    "fileSha256": "17ea8b29d1735f700817d26198cc72e896af83e3fc8539789f87b05839bfd23c"
+  },
+  "guy/example-3596.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "This value is valid.",
+    "sha256": "e14ada9f5fe5c8856c7a61252ccbd2260a3b21167f12b801277952c49544f2b9",
+    "fileSha256": "f7e6bdc601016561222495fb979a94875e6435ea9a66602a658000a0972d6c09"
+  },
+  "guy/word-3597.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "invalid",
+    "sha256": "cb62868fbadd0447d6eb3c7e9204e92335f33d2c4fcb66435e0044bd10796ea7",
+    "fileSha256": "c9fb115de75f2d0fed06fef9a33ec24b0a2b68f8310ce3d9cbd91c29761bf969"
+  },
+  "guy/word-3598.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "pending",
+    "sha256": "5531a3d6140e52bf31051bddecdc6c54b660a92b5cd7521833584691f7ae0210",
+    "fileSha256": "497d34f7eb36cb4c10488a83ca8dfa90b0cc09ed95e7df5740c632a2f6a0b762"
+  },
+  "guy/example-3597.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "This value is invalid.",
+    "sha256": "597f6fabf615d24df1347e38ea28d507c602ff75f71e3b909ea779b23b6920ed",
+    "fileSha256": "b8bee5f540a7b4591237b5082015c0c22d0857f8b3448c435b1b1523246273d9"
+  },
+  "guy/example-3598.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "The request is pending.",
+    "sha256": "039ce25af067c62ca5c27f87ec707dcffef3d945a410bf03884726ae496c9eca",
+    "fileSha256": "ce934a5b04208a5543c9508cae2d73379198e9ea2494d80a4a4e620f94219771"
+  },
+  "guy/word-3599.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "denied",
+    "sha256": "a149f3818f982286d6836ac9cfd98ba8170e993ff652d093ec5d323de2d771c3",
+    "fileSha256": "782b9605da1b1b12a5348f5b2dd2061ce80da83636b804f744600561fe89aebc"
+  },
+  "guy/example-3599.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "Access was denied.",
+    "sha256": "d8fcddd62491959378997aecb37530f1b3aa56d6654e17935f8c3ba9856565a5",
+    "fileSha256": "9168480b6ebbcb60a99c4d34fe3168a2b0786c15b080e3e1601d69e401e20742"
+  },
+  "guy/word-3600.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "console",
+    "sha256": "3b06d3a4b1d722426c274e361ec996e22db84c26fcbc8683cb3f043fe1b98e77",
+    "fileSha256": "3de890ca384a9ccc81ad6b5dd8d8bedddebdd31251ddbea7ea034c92fafd20e4"
+  },
+  "guy/word-3601.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "configure",
+    "sha256": "8d73d8a5d535ab2e3b66fa65a6ecea76f9bbd325b168022bdcba01f354361afb",
+    "fileSha256": "491a576903a208de24eefbbce79d8ef1ea135147997b93458993d28c3c07c219"
+  },
+  "guy/word-3602.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "download",
+    "sha256": "da5c5f0e5d62d669edb3918f0f0f3c5401303681fa2b0abeb941f339108d3111",
+    "fileSha256": "42bfaeb890d46b40e264fb862f2171585a62aef371cfefcb8d980d9923470ace"
+  },
+  "guy/example-3600.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "Open the console.",
+    "sha256": "7346c67e51c9058c8adb1e00c8953cd5af34421eb844c253c8077e6debba9b39",
+    "fileSha256": "a41eb0e0172c5c2a1e990ad0d07dc139f54d6f12520865c01a400815d9ed6467"
+  },
+  "guy/example-3601.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "Configure the app.",
+    "sha256": "6203880e414d60f86f626a44926ac62dcf7f816808d630bd88d6a1cc52fc0632",
+    "fileSha256": "691b73e3ca3d0a442c8bb5fdd1a63e92f206158b95fdffb109b3c1d20de554b0"
+  },
+  "guy/example-3602.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "Download this file.",
+    "sha256": "38b07adc2348275ad48ba2e69c2140fb7baba6a72ca2716e055038cacd4086ba",
+    "fileSha256": "ea1e751e8cb2d06e3376b3012585a2a5f9783114df5c6665b120f8ba0f4a78c1"
+  },
+  "guy/word-3603.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "upload",
+    "sha256": "b154e619bb341ddbb68fbca823da7a0d0176629f241e26fa278795ff5387db88",
+    "fileSha256": "a80dcbb181c52d8db4578ff75ddbc1f89359b127c95bf88ca813eedfe4d9f590"
+  },
+  "guy/word-3604.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "version",
+    "sha256": "77013e8ec4567a0c76d6ddafbfdc2ad1d57cdf2f5b55d1fd8a9b88b1db73214a",
+    "fileSha256": "ad4696f4162e60984e255807100d4597d65f6cfb2863f425c288b52446139623"
+  },
+  "guy/example-3603.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "Upload this file.",
+    "sha256": "a9c58f743abe3fd694e348fb299679c857af85a7a280a623403a65c14b40b4f2",
+    "fileSha256": "92d257aeca9ca8bb50dc52fc584696cb30349027043a898fd9a510a760fb1095"
+  },
+  "guy/example-3604.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "Use the latest version.",
+    "sha256": "9a9db458e35dd89256a6572808c53111562c74c898058d0be563c1d7f4f25588",
+    "fileSha256": "d5c6cfef54ef4f04169b9bc434006c43d7d0d46c7c369ffc5383133d67029046"
+  },
+  "guy/word-3606.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "link",
+    "sha256": "4570f26612a6676efb56cb5cbaf81e2aed726314e8f92e7f258f3958e2c4cd4e",
+    "fileSha256": "17ad4060d3a3e1ece4fc174f37447fdce6915017c4e818a064de0c4d515f4d62"
+  },
+  "guy/word-3605.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "preview",
+    "sha256": "be08ad74eb9eee36fe2fe4c3e670c81d7cb1636a501293713fd94443457d7e67",
+    "fileSha256": "740192ba14716ff26f6a66fb78e274d39014d58ede0ff36e37e6f448c57a5ab5"
+  },
+  "guy/example-3605.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "Preview this page.",
+    "sha256": "8f06b17fe5a67771c50d676db9969511fb9da18b37ecd6a530baf6adf09e2087",
+    "fileSha256": "cdf1ef907c21649cdbd67b37d72368ad4b8345c841def8e810264d5c61c92e81"
+  },
+  "guy/example-3606.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "Open this link.",
+    "sha256": "e160c18bc64292061b32bbdb1dbaa1858c3e7ca2ec0736be06a2d8faa5522806",
+    "fileSha256": "6ba6f8d0b9cc3cab71de29988d765feb876448caf73887a8795f7c09008162d5"
+  },
+  "guy/word-3607.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "description",
+    "sha256": "5361797e64a51e34490548416400d7500cb100cb95743baca8523f8a1169889e",
+    "fileSha256": "91ad5468c497cfbdf73984588bcc61c187c51ab82f1723a82a4804a424ac41dd"
+  },
+  "guy/example-3607.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "Read the description.",
+    "sha256": "ac74892a3de983cd717f5dfa7ea8e07bde4a4d164c50832d2b47f0f3edd808ec",
+    "fileSha256": "62711fa3c09f57c253d055bce87dcb96daa9e612fa20e37cca80f224d223a725"
+  },
+  "guy/word-3608.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "production",
+    "sha256": "3e7d044ac436868c22670e4aa4443d8975df2239eeb7493958d8c977066b1b0d",
+    "fileSha256": "cdb06046755a915e929a856c3d6c8f5b37323ce202f18499590a07b03b161c48"
+  },
+  "guy/example-3609.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "Enter your username.",
+    "sha256": "78b86f5d66284ba6ab7af7ae9fb6684ee7fc20e1139f691290bbdc26858fb0f9",
+    "fileSha256": "6da3db7e6e0ae63fccd0eef236b8601bbe85be93cc8fa92c7f2dcfccb9d4df3e"
+  },
+  "guy/example-3608.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "Test the app before production.",
+    "sha256": "6e0ba8fcb1f15abd28d893adef793f237d884d9a8deaa0ea098aa4866d483361",
+    "fileSha256": "8c473379f7e1ae40c6a07348ec28234d6c85d80b97004a07199fe8215a14cc40"
+  },
+  "guy/example-3610.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "Select this file.",
+    "sha256": "fa51b23bbd595b9399d378ce53cadd8df566a2976ceaaf1c04d0b7a81237be61",
+    "fileSha256": "57732383e81b8330d322c7fb08357e7d943ced11deb3b87447f6f9d7d73b5d65"
+  },
+  "guy/word-3611.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "submit",
+    "sha256": "dc32be4947f6c9487abb37acbc4cc2d45639e2d17b8887f703cd83fdf1c8a294",
+    "fileSha256": "4ee1b0709e51ccd1e25c905f7302d36f46870f07f8c3bfafd319b1ccb9a55640"
+  },
+  "guy/example-3611.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "Submit the form.",
+    "sha256": "36c75b71d391fa37dded6bb1844d40da05f36dd51827f1fb2ac940b80bd80344",
+    "fileSha256": "8ae61a58d12feb9e7c8b195fbae2237809e08e8073fb524176b686690d347256"
+  },
+  "guy/word-3610.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "select",
+    "sha256": "fc42fe4feca34dc03eaaac6578bbcc1c6edaa9cf67a0167ed3bef792146d26c1",
+    "fileSha256": "a0fe76074f8ecc5a74e3efbe6b6e2b7966bfa15869b97932a42e5f6d164b3eef"
+  },
+  "guy/word-3612.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "confirm",
+    "sha256": "b310f634225bd4217c1d885b0acb7e51116c0226d2ce3d3e944fea506726ddbb",
+    "fileSha256": "d6347abee1a99b172569f4290d3e87eca055de1cca3bfb6a0616f6c97f3ccc9d"
+  },
+  "guy/word-3609.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "username",
+    "sha256": "35ce581383bad6ab73e4080e81fc183583fb443fdd3a03df5943d068ac5bf30b",
+    "fileSha256": "9143864bef35dcf691d5341cabc5ccea40e1c3fcd703f13fae55552e10bd4f26"
+  },
+  "guy/word-3613.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "refresh",
+    "sha256": "120cca1f5d0763388c64ad67788100dd5c6215d5dfd4c21a56092441258ba993",
+    "fileSha256": "0ec752ad408e27b0d078fe95623caacd96bdad945687a975032d56239c5e48ac"
+  },
+  "guy/example-3613.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "Refresh this page.",
+    "sha256": "f30b27f32b609105da7ab9b1f2c5512bc8b438c031b15aacf6f6cdbe4861ac9d",
+    "fileSha256": "935175267d32ab4755942a98951cf0518240b68a794db85cfd866147c00ab230"
+  },
+  "guy/example-3612.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "Confirm your choice.",
+    "sha256": "29f09d9b555c96128ae8bcd374987e19a9cb3fe1611a07faf270c56697e4f293",
+    "fileSha256": "34f36501421dbb39c4ad0ba06941f3d3eb51aa3f3a2b3c2a1f26dfe2754c4f11"
+  },
+  "guy/word-3614.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "reload",
+    "sha256": "6ae15f811101b690551910e379695ae1d252f6cc4d6125872f1d5cd7ce2cf675",
+    "fileSha256": "572fb703067d8b6bfb820676f9531a3cd06d24396a7503145568acf59acc1543"
+  },
+  "guy/example-3614.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "Reload this page.",
+    "sha256": "d6a25ec2977b4b9877e00ebbe603af0cd4e581ab219ce1a0ed7424cde032fbbd",
+    "fileSha256": "b0af0a8015bde1f56177a20644914c339c48039d1ab8471a353568c878943c06"
+  },
+  "guy/example-3615.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "Check the file format.",
+    "sha256": "58756eacb525362a46870909bc4f39e6bb301192fc1047bbf838c973f2e52f66",
+    "fileSha256": "6f105ceafce430346b66c6c5aaf4fdaa20d50244ff766c6c2f3e51a35049f78c"
+  },
+  "guy/word-3615.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "format",
+    "sha256": "c2ac53f35dc4f7c0e9ef0d6e5fa3a82307bd50f336f5eee963de3c94aff73f85",
+    "fileSha256": "980c340f5c98080fdc9dea7e5662f7c1d1626a6b19ecba736930a653d5bdca12"
+  },
+  "guy/word-3616.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "parse",
+    "sha256": "efc17a33b705821f3410b7c43cf09eed9aa6956f0d7bcb94c6cfdf646ec61b51",
+    "fileSha256": "8ceb18740a5549f6d58cb4d6125eef5d823c5eeca3eb2f815fecb1fe92a93441"
+  },
+  "guy/example-3616.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "Parse the text.",
+    "sha256": "93e45c3cfc676984eeea653d7e167b2ca535aa944b30e444aac02253023d691c",
+    "fileSha256": "299dd37ee68477294193e2e49f8da000325d80016fef04db7a18e2c6307ad8eb"
+  },
+  "guy/word-3618.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "setting",
+    "sha256": "7a4b4c660b028f4cc46d7519f55c74a395707f3fd3f5b41f3181e91b98004347",
+    "fileSha256": "f5e6d26adad91049ea01787f9581cafd928c413141770e4c6c140733db469a8d"
+  },
+  "guy/word-3617.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "document",
+    "sha256": "c8fd1fb1fd42e22e8956e1dbdaa95f6162174931ee2ad5cea4098b865a45b240",
+    "fileSha256": "2e2626be6aa3f6096b7c330e15ec1ba565ca0bfa2ade1d8d30b0e190909bc89e"
+  },
+  "guy/example-3618.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "Change this setting.",
+    "sha256": "782eb62e0134eef388ef2efd12643595a0f1866d59611e764dadb34e95719fba",
+    "fileSha256": "62c6da1a3cb1bf6c00e5abb316cb63492bb56c016782f2182745e56c17d8da50"
+  },
+  "guy/example-3619.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "Initialize the app.",
+    "sha256": "dd7013dd47b513f77634fbc4aec8835bcd60c91369185f50095ac098460320ae",
+    "fileSha256": "96d5080c43ecf8c47bea216027ada251c7825b96e8d3d3909671cf3bff5d80f7"
+  },
+  "guy/example-3617.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "Read this document.",
+    "sha256": "c13e0f41a62ff80b0613e2945e0650f44bf2eefaae1172f9f0b1aae168519935",
+    "fileSha256": "c3223f6cad6c57fa86887572fdec39814c45f73bc9f7bc6c5214637a4e9078f8"
+  },
+  "guy/word-3619.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "initialize",
+    "sha256": "1c0384c911a0ddde7127d19eb27fe476865480cb4ca5950d61ca2f130fef8464",
+    "fileSha256": "d4336dc485ffeb9fdbaa691aeb73ede4821170285825caaef7a49e9007bf60b0"
+  },
+  "guy/word-3620.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "render",
+    "sha256": "5cf684fee5e2b969bf4865b7bd1f83fa25380ed3019a3b86dfd0408b07cbf95e",
+    "fileSha256": "0ae4266cd199f46d96a78232c6f5171638ebb85975e4edf79efd5e2ad47976c1"
+  },
+  "guy/example-3620.mp3": {
+    "voice": "en-US-GuyNeural",
+    "text": "Render this page.",
+    "sha256": "73c36090c36934880197065c3ca8c2ae3cfd1d50d6255f7e294e2e60d1fa8f4f",
+    "fileSha256": "12e4bb15e1f6eafecb229c71427ea82ca1c074cb79ed0122fb025ac9ea025b71"
   }
 }

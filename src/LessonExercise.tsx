@@ -2,6 +2,7 @@ import { forwardRef, useEffect, useImperativeHandle, useMemo, useRef, useState }
 import type { VocabularyItem } from './vocabulary';
 import type { LessonTask, TaskResult } from './lesson';
 import { normalizeSpelling, spellingCorrection, spellingFixedCharacterError } from './ReviewSpelling';
+import type { PlaybackSpeed } from './SpeechControls';
 
 export interface ExerciseHandle {
   check(): void;
@@ -16,6 +17,8 @@ export interface LessonExerciseProps {
   onDifficulty: (wordId: number) => void;
   playWord: (item: VocabularyItem, slow?: boolean, key?: string) => void;
   speaking?: string;
+  speed?: PlaybackSpeed;
+  onSpeedChange?: (value: PlaybackSpeed) => void;
 }
 
 export function uniqueLessonWords(items: VocabularyItem[]) {
@@ -61,7 +64,7 @@ LessonExercise.displayName = 'LessonExercise';
 export default LessonExercise;
 
 const ExerciseQuestion = forwardRef<ExerciseHandle, LessonExerciseProps>(function ExerciseQuestion(
-  { task, onReady, onResult, onDifficulty, playWord, speaking = '' }, ref,
+  { task, onReady, onResult, onDifficulty, playWord, speaking = '', speed, onSpeedChange }, ref,
 ) {
   const words = useMemo(() => uniqueLessonWords(task.words), [task.words]);
   const target = words[0];
@@ -153,7 +156,7 @@ const ExerciseQuestion = forwardRef<ExerciseHandle, LessonExerciseProps>(functio
     if (!correct) markDifficulty(target.id);
     finish([{ wordId: target.id, outcome: correct ? observed.current.has(target.id) ? 'assisted' : 'independent' : 'revealed' }],
       correct, correct ? '回答正确。' : task.kind === 'listen' ? '再听一次，记住这个词。' : task.kind === 'cloze' ? '这里使用这个词。' : '留意这个词的含义。',
-      `${target.word} — ${target.meaning}`);
+      task.kind === 'context' ? `${target.example} — ${target.exampleZh}` : `${target.word} — ${target.meaning}`);
   }
 
   function finishPair(wordId: number, outcome: TaskResult['outcome']) {
@@ -206,7 +209,7 @@ const ExerciseQuestion = forwardRef<ExerciseHandle, LessonExerciseProps>(functio
       const current = task.difficulty === 3 ? [...normalizeSpelling(inputValue.current)] : letters.map((letter, index) => hidden.includes(index) ? gapValues.current[index] ?? '' : letter);
       let position = hidden.find(index => current[index]?.toLowerCase() !== letters[index].toLowerCase() && !hintedPositions.current.includes(index));
       if (position === undefined) position = hidden.find(index => !hintedPositions.current.includes(index));
-      if (position === undefined) { setNote('提示已经给出，再听一遍试试。'); playWord(target, true, `${task.id}:hint-audio`); return; }
+      if (position === undefined) { setNote('提示已经给出，再听一遍试试。'); onSpeedChange?.('slow'); playWord(target, true, `${task.id}:hint-audio`); return; }
       hintedPositions.current = [...hintedPositions.current, position];
       setHints(hintedPositions.current);
       setNote(`第 ${position + 1} 个字母是 ${letters[position]}。`);
@@ -227,6 +230,7 @@ const ExerciseQuestion = forwardRef<ExerciseHandle, LessonExerciseProps>(functio
       setNote('已排除一个选项。');
     } else if (task.kind === 'listen') {
       setNote('慢速再听一次。');
+      onSpeedChange?.('slow');
       playWord(target, true, `${task.id}:hint-audio`);
     } else setNote(target.exampleZh || target.meaning);
   }
@@ -242,20 +246,22 @@ const ExerciseQuestion = forwardRef<ExerciseHandle, LessonExerciseProps>(functio
       return;
     }
     markDifficulty(target.id);
-    finish([{ wordId: target.id, outcome: 'revealed' }], false, '记住这个词，稍后再试。', `${target.word} — ${target.meaning}`);
+    finish([{ wordId: target.id, outcome: 'revealed' }], false, '记住这个词，稍后再试。', task.kind === 'context' ? `${target.example} — ${target.exampleZh}` : `${target.word} — ${target.meaning}`);
   }
 
   useImperativeHandle(ref, () => ({ check, hint, reveal }));
 
   if (!target) return <p className="lesson-empty">本题没有可练习的词。</p>;
-  const mainPlaying = speaking === `${task.id}:word` || speaking === `lesson-${task.id}`;
-  const slowPlaying = speaking === `${task.id}:slow` || speaking === `${task.id}:hint-audio`;
+  const wordPlaying = speaking === `${task.id}:word` || speaking === `${task.id}:slow` || speaking === `${task.id}:hint-audio` || speaking === `lesson-${task.id}`;
+  const playbackSpeed = speed ?? (speaking === `${task.id}:slow` || speaking === `${task.id}:hint-audio` ? 'slow' : 'normal');
+  const mainPlaying = wordPlaying && playbackSpeed === 'normal';
+  const slowPlaying = wordPlaying && playbackSpeed === 'slow';
   const audio = <div className="lesson-audio">
-    <button type="button" className={`lesson-audio-main${mainPlaying ? ' lesson-is-playing' : ''}`} aria-label="播放单词" onClick={() => playWord(target, false, `${task.id}:word`)}>
+    <button type="button" className={`lesson-audio-main${mainPlaying ? ' lesson-is-playing' : ''}`} aria-label="正常播放" aria-pressed={mainPlaying} onClick={() => { onSpeedChange?.('normal'); playWord(target, false, `${task.id}:word`); }}>
       <span className="lesson-audio-symbol" aria-hidden="true">{mainPlaying ? <span className="lesson-sound-bars"><i /><i /><i /><i /></span> : <svg width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M11 5 6 9H3v6h3l5 4V5Z" /><path d="M15 8a6 6 0 0 1 0 8M18 5a10 10 0 0 1 0 14" /></svg>}</span>
-      <span>{mainPlaying ? '正在播放' : '播放单词'}</span>
+      <span>正常播放</span>
     </button>
-    <button type="button" className={`lesson-audio-slow${slowPlaying ? ' lesson-is-playing' : ''}`} onClick={() => playWord(target, true, `${task.id}:slow`)}>慢速</button>
+    <button type="button" className={`lesson-audio-slow${slowPlaying ? ' lesson-is-playing' : ''}`} aria-pressed={slowPlaying} onClick={() => { onSpeedChange?.('slow'); playWord(target, true, `${task.id}:slow`); }}>慢速播放</button>
   </div>;
   let position = 0;
   return <div className={`lesson-exercise lesson-exercise-${task.kind}`} onCompositionStart={() => { composing.current = true; }}
@@ -270,11 +276,12 @@ const ExerciseQuestion = forwardRef<ExerciseHandle, LessonExerciseProps>(functio
     {(task.kind === 'listen' || task.kind === 'dictation') && audio}
     {task.kind === 'cloze' && <p className="lesson-sentence">{(task.sentence ?? '___').split(/(_{3,})/).map((part, index) => /^_{3,}$/.test(part)
       ? <span key={index} className="lesson-sentence-gap">{done ? target.word : '______'}</span> : <span key={index}>{part}</span>)}</p>}
+    {task.kind === 'context' && <p className="lesson-sentence">{target.example}</p>}
     {task.kind === 'cloze' && <p className="lesson-translation">{target.exampleZh}</p>}
-    {(task.kind === 'meaning' || task.kind === 'listen' || task.kind === 'cloze') && <div className="lesson-options" role="group" aria-label="答案选项">
+    {(task.kind === 'meaning' || task.kind === 'listen' || task.kind === 'cloze' || task.kind === 'context') && <div className="lesson-options" role="group" aria-label="答案选项">
       {options.map(option => <button key={option.id} type="button" className={`lesson-option${selected === option.id ? ' lesson-selected' : ''}${done && option.id === target.id ? ' lesson-correct' : ''}${done && selected === option.id && option.id !== target.id ? ' lesson-incorrect' : ''}${excluded.includes(option.id) ? ' lesson-excluded' : ''}`}
         aria-pressed={selected === option.id} disabled={done || excluded.includes(option.id)} onClick={() => { selectedRef.current = option.id; setSelected(option.id); }}>
-        <span className="lesson-option-indicator" aria-hidden="true">{done && option.id === target.id ? <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"><path d="m5 12 4 4L19 6" /></svg> : selected === option.id ? <i /> : null}</span><span>{task.kind === 'meaning' ? option.meaning : option.word}</span>
+        <span className="lesson-option-indicator" aria-hidden="true">{done && option.id === target.id ? <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"><path d="m5 12 4 4L19 6" /></svg> : selected === option.id ? <i /> : null}</span><span>{task.kind === 'meaning' ? option.meaning : task.kind === 'context' ? option.exampleZh : option.word}</span>
       </button>)}
     </div>}
     {task.kind === 'dictation' && <div className="lesson-dictation">

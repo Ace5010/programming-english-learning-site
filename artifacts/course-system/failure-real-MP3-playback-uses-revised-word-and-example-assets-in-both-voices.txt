@@ -1,0 +1,278 @@
+跳到学习内容
+编程英语
+日常英语
+课程
+复习
+词汇库
+界面风格
+简约高级
+手绘笔记
+彩色版画
+美式涂鸦
+编程英语词汇库
+
+查询、点读和收藏；课程学过的词会自动安排复习。
+
+语音设置
+Aria · 正常
+分类
+全部分类
+GitHub 与版本控制
+代码基础
+命令行与开发工具
+操作系统与文件
+前端开发
+后端与数据库
+网络与云服务
+测试与调试
+安全与权限
+数据、算法与 AI
+IT 通用术语
+文档基础英语
+级别
+全部
+核心
+基础
+专业
+范围
+全部词汇
+收藏
+已学
+待复习
+共 29 个词
+
+点单词听发音，点例句听整句
+
+单词 / 发音
+中文释义
+学习状态
+commit
+/kəˈmɪt/
+
+提交；提交记录
+
+GitHub 与版本控制·核心
+
+尚未学习
+Commit your code.
+提交你的代码。
+push
+/pʊʃ/
+
+推送
+
+GitHub 与版本控制·核心
+
+尚未学习
+Push your code to GitHub.
+把你的代码推送到 GitHub。
+pull
+/pʊl/
+
+拉取
+
+GitHub 与版本控制·核心
+
+尚未学习
+Pull the new code.
+拉取新代码。
+remote
+/rɪˈmoʊt/
+
+远程仓库；远程的
+
+GitHub 与版本控制·核心
+
+尚未学习
+This remote has our code.
+这个远程仓库存有我们的代码。
+origin
+/ˈɔːrɪdʒɪn/
+
+默认远程仓库名；来源
+
+GitHub 与版本控制·核心
+
+尚未学习
+Push your code to origin.
+把你的代码推送到 origin。
+syntax
+/ˈsɪntæks/
+
+语法
+
+代码基础·核心
+
+尚未学习
+Check the syntax of this code.
+检查这段代码的语法。
+compile
+/kəmˈpaɪl/
+
+编译
+
+命令行与开发工具·核心
+
+尚未学习
+Compile this code.
+编译这段代码。
+debug
+/ˌdiːˈbʌɡ/
+
+调试
+
+测试与调试·核心
+
+尚未学习
+Debug this code.
+调试这段代码。
+test
+/test/
+
+测试
+
+测试与调试·核心
+
+尚未学习
+Write a test for this code.
+为这段代码编写一个测试。
+authorisation code
+
+授权码
+
+安全与权限·专业
+
+尚未学习
+Read about authorisation code.
+了解“authorisation code”。
+bar code
+
+条码
+
+IT 通用术语·专业
+
+尚未学习
+Check the settings for bar code.
+检查“bar code”的设置。
+bar code reader
+
+条码阅读机
+
+IT 通用术语·专业
+
+尚未学习
+The team is testing bar code reader.
+团队正在测试“bar code reader”。
+code injection
+
+代码插入
+
+IT 通用术语·专业
+
+尚未学习
+Read about code injection.
+了解“code injection”。
+code list
+
+代码表
+
+IT 通用术语·专业
+
+尚未学习
+This project uses code list.
+这个项目使用了“code list”。
+code scanning
+
+编码扫描
+
+IT 通用术语·专业
+
+尚未学习
+Check the settings for code scanning.
+检查“code scanning”的设置。
+common QR code standard
+
+共同的二维码标准
+
+IT 通用术语·专业
+
+尚未学习
+Read about common QR code standard.
+了解“common QR code standard”。
+Guo Biao (GB) code
+
+国家标准码
+
+IT 通用术语·专业
+
+尚未学习
+Check the settings for Guo Biao (GB) code.
+检查“Guo Biao (GB) code”的设置。
+iAM Smart Personal Code
+
+智方便个人码
+
+IT 通用术语·专业
+
+尚未学习
+This project uses iAM Smart Personal Code.
+这个项目使用了“iAM Smart Personal Code”。
+malicious code
+
+恶意程式码
+
+IT 通用术语·专业
+
+尚未学习
+This project uses malicious code.
+这个项目使用了“malicious code”。
+quick response (QR) Code
+
+二维码
+
+IT 通用术语·专业
+
+尚未学习
+This project uses quick response (QR) Code.
+这个项目使用了“quick response (QR) Code”。
+redundant code
+
+冗余码
+
+IT 通用术语·专业
+
+尚未学习
+The team is testing redundant code.
+团队正在测试“redundant code”。
+remote code execution
+
+远端执行程式码
+
+IT 通用术语·专业
+
+尚未学习
+The team is testing remote code execution.
+团队正在测试“remote code execution”。
+sample codes
+
+原始码
+
+IT 通用术语·专业
+
+尚未学习
+This project uses sample codes.
+这个项目使用了“sample codes”。
+source code
+
+源码
+
+GitHub 与版本控制·专业
+
+尚未学习
+Read about source code.
+了解“source code”。
+再显示 24 个
+已显示 24 / 29
+导出编程英语记录
+
+学习记录保存在当前浏览器。

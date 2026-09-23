@@ -1,0 +1,675 @@
+{
+  "verifiedAt": "2026-09-22T23:47:22.4278174+08:00",
+  "reports": [
+    "browser-results.json",
+    "browser-results-spoken-expression.json",
+    "browser-results-production-production-smoke-real-Aria.json",
+    "browser-results-production-confirm-switching.json"
+  ],
+  "developmentScenarios": 18,
+  "productionScenarios": 5,
+  "objectiveAnswers": 440.0,
+  "spokenSelfChecks": 1.0,
+  "microphoneTested": false,
+  "productionBundle": "/dist/assets/index-DdbVP7DO.js",
+  "earlierProductionBundle": "/dist/assets/index-DuJKECRw.js",
+  "failures": [],
+  "browserErrors": [],
+  "scenarios": [
+    {
+      "name": "programming: strong adaptive rounds and review admission",
+      "durationMs": 12075,
+      "evidence": {
+        "rounds": 6,
+        "firstAdmissionRound": 2,
+        "objectiveAnswers": 75,
+        "readyCount": 9,
+        "plans": [
+          {
+            "new": 4,
+            "focus": [
+              "word-1",
+              "word-2801",
+              "word-3561",
+              "word-20"
+            ],
+            "answers": 12
+          },
+          {
+            "new": 1,
+            "focus": [
+              "word-20",
+              "word-3561",
+              "word-2801",
+              "word-4"
+            ],
+            "answers": 13
+          },
+          {
+            "new": 1,
+            "focus": [
+              "word-4",
+              "word-20",
+              "word-5"
+            ],
+            "answers": 11
+          },
+          {
+            "new": 3,
+            "focus": [
+              "word-5",
+              "word-2",
+              "word-11",
+              "word-1880"
+            ],
+            "answers": 12
+          },
+          {
+            "new": 1,
+            "focus": [
+              "word-2",
+              "word-1880",
+              "word-11",
+              "word-1384"
+            ],
+            "answers": 15
+          },
+          {
+            "new": 2,
+            "focus": [
+              "word-1384",
+              "word-2",
+              "word-3",
+              "word-687"
+            ],
+            "answers": 12
+          }
+        ]
+      }
+    },
+    {
+      "name": "programming: weak adaptive rounds and review admission",
+      "durationMs": 16081,
+      "evidence": {
+        "rounds": 6,
+        "firstAdmissionRound": 0,
+        "objectiveAnswers": 120,
+        "readyCount": 0,
+        "plans": [
+          {
+            "new": 4,
+            "focus": [
+              "word-1",
+              "word-2801",
+              "word-3561",
+              "word-20"
+            ],
+            "answers": 20
+          },
+          {
+            "new": 0,
+            "focus": [
+              "word-3561",
+              "word-2801",
+              "word-1",
+              "word-20"
+            ],
+            "answers": 20
+          },
+          {
+            "new": 0,
+            "focus": [
+              "word-3561",
+              "word-1",
+              "word-20",
+              "word-2801"
+            ],
+            "answers": 20
+          },
+          {
+            "new": 0,
+            "focus": [
+              "word-20",
+              "word-2801",
+              "word-3561",
+              "word-1"
+            ],
+            "answers": 20
+          },
+          {
+            "new": 0,
+            "focus": [
+              "word-1",
+              "word-2801",
+              "word-3561",
+              "word-20"
+            ],
+            "answers": 20
+          },
+          {
+            "new": 0,
+            "focus": [
+              "word-1",
+              "word-2801",
+              "word-3561",
+              "word-20"
+            ],
+            "answers": 20
+          }
+        ]
+      }
+    },
+    {
+      "name": "daily: strong adaptive rounds and review admission",
+      "durationMs": 10245,
+      "evidence": {
+        "rounds": 6,
+        "firstAdmissionRound": 2,
+        "objectiveAnswers": 77,
+        "readyCount": 9,
+        "plans": [
+          {
+            "new": 4,
+            "focus": [
+              "hello",
+              "hi",
+              "goodbye",
+              "bye"
+            ],
+            "answers": 12
+          },
+          {
+            "new": 1,
+            "focus": [
+              "hello",
+              "bye",
+              "goodbye",
+              "i-am-ben"
+            ],
+            "answers": 14
+          },
+          {
+            "new": 2,
+            "focus": [
+              "hello",
+              "bye",
+              "i-am-mia",
+              "im-ben"
+            ],
+            "answers": 12
+          },
+          {
+            "new": 1,
+            "focus": [
+              "i-am-mia",
+              "im-ben",
+              "bye",
+              "im-mia"
+            ],
+            "answers": 12
+          },
+          {
+            "new": 3,
+            "focus": [
+              "im-mia",
+              "whats-your-name",
+              "my-name-is-ben",
+              "my-name-is-mia"
+            ],
+            "answers": 12
+          },
+          {
+            "new": 1,
+            "focus": [
+              "whats-your-name",
+              "my-name-is-ben",
+              "my-name-is-mia",
+              "are-you-mia"
+            ],
+            "answers": 15
+          }
+        ]
+      }
+    },
+    {
+      "name": "daily: weak adaptive rounds and review admission",
+      "durationMs": 15278,
+      "evidence": {
+        "rounds": 6,
+        "firstAdmissionRound": 0,
+        "objectiveAnswers": 120,
+        "readyCount": 0,
+        "plans": [
+          {
+            "new": 4,
+            "focus": [
+              "hello",
+              "hi",
+              "goodbye",
+              "bye"
+            ],
+            "answers": 20
+          },
+          {
+            "new": 0,
+            "focus": [
+              "goodbye",
+              "hi",
+              "hello",
+              "bye"
+            ],
+            "answers": 20
+          },
+          {
+            "new": 0,
+            "focus": [
+              "goodbye",
+              "hi",
+              "hello",
+              "bye"
+            ],
+            "answers": 20
+          },
+          {
+            "new": 0,
+            "focus": [
+              "goodbye",
+              "hi",
+              "hello",
+              "bye"
+            ],
+            "answers": 20
+          },
+          {
+            "new": 0,
+            "focus": [
+              "goodbye",
+              "hi",
+              "hello",
+              "bye"
+            ],
+            "answers": 20
+          },
+          {
+            "new": 0,
+            "focus": [
+              "goodbye",
+              "hi",
+              "hello",
+              "bye"
+            ],
+            "answers": 20
+          }
+        ]
+      }
+    },
+    {
+      "name": "programming: stable draft, queue, option order and different random seeds",
+      "durationMs": 3803,
+      "evidence": {
+        "seedA": 3404866623,
+        "seedB": 902964619,
+        "sequenceA": [
+          "P1-01-06-p-1-word",
+          "P1-01-01-p-2801-word",
+          "P1-01-01-p-3561-listen",
+          "P1-01-06-p-20-word",
+          "P1-01-06-p-1-recall"
+        ],
+        "sequenceB": [
+          "P1-01-01-p-1-word",
+          "P1-01-01-p-3561-meaning",
+          "P1-01-01-r01",
+          "P1-01-01-p-1-listen",
+          "P1-01-01-e03"
+        ]
+      }
+    },
+    {
+      "name": "daily: stable draft, queue, option order and different random seeds",
+      "durationMs": 3374,
+      "evidence": {
+        "seedA": 3404866623,
+        "seedB": 902964619,
+        "sequenceA": [
+          "A1-01-01-p-bye-listen",
+          "A1-01-01-p-hello-listen",
+          "A1-01-01-p-hi-listen",
+          "A1-01-06-p-goodbye-listen",
+          "A1-01-06-p-goodbye-expression"
+        ],
+        "sequenceB": [
+          "A1-01-01-p-hello-listen",
+          "A1-01-01-p-goodbye-meaning",
+          "A1-01-01-p-hi-meaning",
+          "A1-01-01-e04",
+          "A1-01-01-e01"
+        ]
+      }
+    },
+    {
+      "name": "programming: historical active session and legacy favorites remain readable",
+      "durationMs": 1595
+    },
+    {
+      "name": "programming: competing page edits protect saved course and damaged records",
+      "durationMs": 2388
+    },
+    {
+      "name": "programming: earned review offers early practice and due practice",
+      "durationMs": 937,
+      "evidence": {
+        "ready": [
+          "word-1",
+          "word-2801",
+          "word-3561",
+          "word-20",
+          "word-4",
+          "word-5",
+          "word-11",
+          "word-1880",
+          "word-1384"
+        ],
+        "dueQueue": [
+          "P1-01-01-e02",
+          "P1-01-01-e04",
+          "P1-01-01-e05",
+          "P1-01-01-p-1-sentence",
+          "P1-01-01-p-1-translation"
+        ]
+      }
+    },
+    {
+      "name": "daily: historical active session and legacy favorites remain readable",
+      "durationMs": 1506
+    },
+    {
+      "name": "daily: competing page edits protect saved course and damaged records",
+      "durationMs": 2337
+    },
+    {
+      "name": "daily: earned review offers early practice and due practice",
+      "durationMs": 916,
+      "evidence": {
+        "ready": [
+          "hello",
+          "hi",
+          "goodbye",
+          "bye",
+          "i-am-ben",
+          "i-am-mia",
+          "im-ben",
+          "im-mia",
+          "my-name-is-ben"
+        ],
+        "dueQueue": [
+          "A1-01-05-e04",
+          "A1-01-05-r01",
+          "A1-01-05-r02",
+          "A1-01-05-p-i-am-ben-meaning",
+          "A1-01-05-p-i-am-ben-listen"
+        ]
+      }
+    },
+    {
+      "name": "real Aria and Guy word, example and daily phrase playback",
+      "durationMs": 1573,
+      "evidence": [
+        {
+          "type": "playing",
+          "src": "http://localhost:5186/audio/aria/word-3561.mp3",
+          "rate": 1,
+          "duration": 1.872
+        },
+        {
+          "type": "playing",
+          "src": "http://localhost:5186/audio/aria/example-3561.mp3?v=Read%20this%20code.",
+          "rate": 1,
+          "duration": 1.992
+        },
+        {
+          "type": "playing",
+          "src": "http://localhost:5186/audio/daily/aria/hello.mp3?v=Hello!",
+          "rate": 1,
+          "duration": 1.56
+        },
+        {
+          "type": "playing",
+          "src": "http://localhost:5186/audio/guy/word-3561.mp3",
+          "rate": 1,
+          "duration": 1.872
+        },
+        {
+          "type": "playing",
+          "src": "http://localhost:5186/audio/guy/example-3561.mp3?v=Read%20this%20code.",
+          "rate": 1,
+          "duration": 2.016
+        },
+        {
+          "type": "playing",
+          "src": "http://localhost:5186/audio/daily/guy/hello.mp3?v=Hello!",
+          "rate": 1,
+          "duration": 1.536
+        }
+      ]
+    },
+    {
+      "name": "programming: four themes at 1440px",
+      "durationMs": 2099
+    },
+    {
+      "name": "programming: four themes at 390px",
+      "durationMs": 1808
+    },
+    {
+      "name": "daily: four themes at 1440px",
+      "durationMs": 2116
+    },
+    {
+      "name": "daily: four themes at 390px",
+      "durationMs": 1812
+    },
+    {
+      "name": "daily: spoken expression self check cannot increase mastery",
+      "durationMs": 1499,
+      "evidence": {
+        "sourceLessonId": "A1-01-01",
+        "microphoneTested": false
+      }
+    },
+    {
+      "name": "programming: production smoke starts, saves and plans next dynamic round",
+      "durationMs": 3076,
+      "evidence": {
+        "scripts": [
+          "",
+          "http://localhost:5186/@vite/client",
+          "http://localhost:5186/dist/assets/index-DuJKECRw.js"
+        ],
+        "firstRoundAnswers": 12,
+        "firstPlan": {
+          "version": 1,
+          "round": 1,
+          "focusIds": [
+            "word-1",
+            "word-2801",
+            "word-3561",
+            "word-20"
+          ],
+          "newIds": [
+            "word-1",
+            "word-2801",
+            "word-3561",
+            "word-20"
+          ],
+          "sourceLessonId": "P1-01-01",
+          "seed": 1422306624,
+          "budget": 12
+        },
+        "nextPlan": {
+          "version": 1,
+          "round": 2,
+          "focusIds": [
+            "word-20",
+            "word-3561",
+            "word-2801",
+            "word-4"
+          ],
+          "newIds": [
+            "word-4"
+          ],
+          "sourceLessonId": "P1-01-02",
+          "seed": 1422306624,
+          "budget": 13
+        }
+      }
+    },
+    {
+      "name": "daily: production smoke starts, saves and plans next dynamic round",
+      "durationMs": 2671,
+      "evidence": {
+        "scripts": [
+          "",
+          "http://localhost:5186/@vite/client",
+          "http://localhost:5186/dist/assets/index-DuJKECRw.js"
+        ],
+        "firstRoundAnswers": 12,
+        "firstPlan": {
+          "version": 1,
+          "round": 1,
+          "focusIds": [
+            "hello",
+            "hi",
+            "goodbye",
+            "bye"
+          ],
+          "newIds": [
+            "hello",
+            "hi",
+            "goodbye",
+            "bye"
+          ],
+          "sourceLessonId": "A1-01-01",
+          "seed": 1422306624,
+          "budget": 12
+        },
+        "nextPlan": {
+          "version": 1,
+          "round": 2,
+          "focusIds": [
+            "hello",
+            "bye",
+            "goodbye",
+            "i-am-ben"
+          ],
+          "newIds": [
+            "i-am-ben"
+          ],
+          "sourceLessonId": "A1-01-02",
+          "seed": 1422306624,
+          "budget": 14
+        }
+      }
+    },
+    {
+      "name": "real Aria and Guy word, example and daily phrase playback",
+      "durationMs": 1291,
+      "evidence": [
+        {
+          "type": "playing",
+          "src": "http://localhost:5186/dist/audio/aria/word-3561.mp3",
+          "rate": 1,
+          "duration": 1.872
+        },
+        {
+          "type": "playing",
+          "src": "http://localhost:5186/dist/audio/aria/example-3561.mp3?v=Read%20this%20code.",
+          "rate": 1,
+          "duration": 1.992
+        },
+        {
+          "type": "playing",
+          "src": "http://localhost:5186/dist/audio/daily/aria/hello.mp3?v=Hello!",
+          "rate": 1,
+          "duration": 1.56
+        },
+        {
+          "type": "playing",
+          "src": "http://localhost:5186/dist/audio/guy/word-3561.mp3",
+          "rate": 1,
+          "duration": 1.872
+        },
+        {
+          "type": "playing",
+          "src": "http://localhost:5186/dist/audio/guy/example-3561.mp3?v=Read%20this%20code.",
+          "rate": 1,
+          "duration": 2.016
+        },
+        {
+          "type": "playing",
+          "src": "http://localhost:5186/dist/audio/daily/guy/hello.mp3?v=Hello!",
+          "rate": 1,
+          "duration": 1.536
+        }
+      ]
+    },
+    {
+      "name": "programming: confirm switching unfinished review to adaptive course",
+      "durationMs": 1738,
+      "evidence": {
+        "scripts": [
+          "",
+          "http://localhost:5186/@vite/client",
+          "http://localhost:5186/dist/assets/index-DdbVP7DO.js"
+        ],
+        "reviewSessionId": "1790092006025-330q7hj7",
+        "courseSessionId": "1790092006237-adaptive-1d6gdea",
+        "plan": {
+          "version": 1,
+          "round": 7,
+          "focusIds": [
+            "word-3",
+            "word-687",
+            "word-2",
+            "word-12"
+          ],
+          "newIds": [
+            "word-12"
+          ],
+          "sourceLessonId": "P1-01-05",
+          "seed": 193998416,
+          "budget": 13
+        }
+      }
+    },
+    {
+      "name": "daily: confirm switching unfinished review to adaptive course",
+      "durationMs": 1560,
+      "evidence": {
+        "scripts": [
+          "",
+          "http://localhost:5186/@vite/client",
+          "http://localhost:5186/dist/assets/index-DdbVP7DO.js"
+        ],
+        "reviewSessionId": "1790092007677-330q7hj7",
+        "courseSessionId": "1790092007783-adaptive-1d6gdea",
+        "plan": {
+          "version": 1,
+          "round": 7,
+          "focusIds": [
+            "whats-your-name",
+            "are-you-mia",
+            "my-name-is-mia",
+            "are-you-ben"
+          ],
+          "newIds": [
+            "are-you-ben"
+          ],
+          "sourceLessonId": "A1-01-04",
+          "seed": 193998416,
+          "budget": 12
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+[
+  {
+    "type": "playing",
+    "src": "http://localhost:5186/dist/audio/aria/word-3561.mp3",
+    "rate": 1,
+    "duration": 1.872
+  },
+  {
+    "type": "playing",
+    "src": "http://localhost:5186/dist/audio/aria/example-3561.mp3?v=Read%20this%20code.",
+    "rate": 1,
+    "duration": 1.992
+  },
+  {
+    "type": "playing",
+    "src": "http://localhost:5186/dist/audio/daily/aria/hello.mp3?v=Hello!",
+    "rate": 1,
+    "duration": 1.56
+  },
+  {
+    "type": "playing",
+    "src": "http://localhost:5186/dist/audio/guy/word-3561.mp3",
+    "rate": 1,
+    "duration": 1.872
+  },
+  {
+    "type": "playing",
+    "src": "http://localhost:5186/dist/audio/guy/example-3561.mp3?v=Read%20this%20code.",
+    "rate": 1,
+    "duration": 2.016
+  },
+  {
+    "type": "playing",
+    "src": "http://localhost:5186/dist/audio/daily/guy/hello.mp3?v=Hello!",
+    "rate": 1,
+    "duration": 1.536
+  }
+]

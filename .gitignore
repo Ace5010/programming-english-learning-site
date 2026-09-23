@@ -4,3 +4,12 @@ dist/
 *.log
 .DS_Store
 Thumbs.db
+.runtime/
+android/.gradle/
+android/**/build/
+android/local.properties
+android/keystore.properties
+*.keystore
+*.jks
+*.apk
+*.aab

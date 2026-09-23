@@ -1,0 +1,307 @@
+跳到学习内容
+编程英语
+日常英语
+课程
+复习
+表达库
+界面风格
+简约高级
+手绘笔记
+彩色版画
+美式涂鸦
+表达库
+
+查询表达、听发音，收藏想再看的内容。
+
+语速
+正常
+慢速
+Aria
+查找表达
+显示内容
+全部表达
+已学习
+收藏
+Hello!
+你好！
+见面时使用；开头的 h 轻轻呼气。
+未学习
+Hi!
+嗨！
+较随意的问候，与 Hello 都可用于见面。
+未学习
+Goodbye!
+再见！
+离开时使用。
+未学习
+Bye!
+再见！
+较随意的告别。
+未学习
+I am Ben.
+我叫 Ben。
+I 表示“我”，与 am 连用。Ben 是姓名。
+未学习
+I am Mia.
+我叫 Mia。
+未学习
+I'm Ben.
+我叫 Ben。
+I'm 是 I am 的缩写，意思相同。
+未学习
+I'm Mia.
+我叫 Mia。
+未学习
+What's your name?
+你叫什么名字？
+先把这句当作完整表达；What’s 是 What is。
+未学习
+My name is Ben.
+我的名字是 Ben。
+My name is ... 后接姓名。
+未学习
+My name is Mia.
+我的名字是 Mia。
+未学习
+Are you Mia?
+你是 Mia 吗？
+未学习
+Are you Ben?
+你是 Ben 吗？
+you 表示“你”；确认对方身份时，用 Are you ...?
+未学习
+Yes, I am.
+是的，我是。
+肯定简短回答保留 am，不缩成 Yes, I’m。
+未学习
+No, I'm Ben.
+不是，我是 Ben。
+未学习
+No, I'm Mia.
+不是，我是 Mia。
+未学习
+Hello! I'm Mia. What's your name?
+你好！我叫 Mia。你叫什么名字？
+未学习
+Hi! My name is Ben. Are you Mia?
+嗨！我的名字是 Ben。你是 Mia 吗？
+未学习
+I am from China.
+我来自中国。
+from 表示“来自”；China 是国家名称，首字母大写。
+未学习
+I am from Japan.
+我来自日本。
+未学习
+I am from the US.
+我来自美国。
+the US 表示美国；这里保留 the。
+未学习
+Where are you from?
+你来自哪里？
+where 询问地点；问句把 are 放在 you 前。
+未学习
+Are you from China?
+你来自中国吗？
+未学习
+Are you from Japan?
+你来自日本吗？
+未学习
+I am not from Japan.
+我不是来自日本。
+否定时，在 am 后加 not。
+未学习
+I am not from China.
+我不是来自中国。
+未学习
+No, I'm not.
+不，我不是。
+也可以说 No, I am not.。
+未学习
+I am Chinese.
+我是中国人。
+Chinese 这里表示国籍；不加 from。
+未学习
+I am Japanese.
+我是日本人。
+未学习
+I am American.
+我是美国人。
+未学习
+Are you Chinese?
+你是中国人吗？
+未学习
+Are you Japanese?
+你是日本人吗？
+未学习
+No, I'm Japanese.
+不是，我是日本人。
+未学习
+No, I'm Chinese.
+不是，我是中国人。
+未学习
+Hello! I'm Ben. I'm from China.
+你好！我叫 Ben。我来自中国。
+未学习
+Hi! My name is Mia. I'm from Japan.
+嗨！我的名字是 Mia。我来自日本。
+未学习
+He is Ben.
+他是 Ben。
+he 表示“他”，与 is 连用。不要只凭姓名判断代词。
+未学习
+She is Mia.
+她是 Mia。
+she 表示“她”，与 is 连用。
+未学习
+He is from China.
+他来自中国。
+未学习
+She is from Japan.
+她来自日本。
+未学习
+I am a student.
+我是一名学生。
+student 是学生；单数身份表达先一起学 a student。
+未学习
+I am a teacher.
+我是一名老师。
+未学习
+He is a teacher.
+他是一名老师。
+未学习
+She is a student.
+她是一名学生。
+未学习
+We are students.
+我们是学生。
+we 表示“我们”；students 表示不止一名学生，前面不加 a。
+未学习
+They are teachers.
+他们是老师。
+they 可指“他们／她们”；与 are 连用。
+未学习
+They are students.
+他们是学生。
+未学习
+We are teachers.
+我们是老师。
+未学习
+I am happy.
+我很高兴。
+happy 是描述状态的形容词，前面不加 a。
+未学习
+I am tired.
+我累了。
+tired 表示“累的”。
+未学习
+She is happy.
+她很高兴。
+未学习
+He is tired.
+他累了。
+未学习
+They are happy.
+他们很高兴。
+未学习
+Who is he?
+他是谁？
+who 询问人；不是询问地点。
+未学习
+Who is she?
+她是谁？
+未学习
+Is he a teacher?
+他是老师吗？
+未学习
+Is she a student?
+她是学生吗？
+未学习
+Yes, he is.
+是的，他是。
+未学习
+No, she isn't.
+不，她不是。
+isn't = is not。
+未学习
+He is Ben. He is from China. He is a teacher.
+他是 Ben。他来自中国。他是老师。
+未学习
+She is Mia. She is from Japan. She is a student.
+她是 Mia。她来自日本。她是学生。
+未学习
+What is it?
+它是什么？
+it 这里指一件物品。
+未学习
+It is a book.
+它是一本书。
+book 是书；It is 可以缩写为 It’s。
+未学习
+It is a pen.
+它是一支笔。
+未学习
+It is a bag.
+它是一个包。
+未学习
+It is an apple.
+它是一个苹果。
+apple 以元音音素开头，前面用 an。a / an 看发音，不只看字母。
+未学习
+It is an egg.
+它是一个鸡蛋。
+未学习
+This is a book.
+这是一本书。
+this 指近处的一件物品。
+未学习
+That is a bag.
+那是一个包。
+that 指较远处的一件物品。
+未学习
+This is a pen.
+这是一支笔。
+未学习
+That is a book.
+那是一本书。
+未学习
+They are books.
+它们是书。
+book → books；这些规则复数在词尾加 s，前面不用 a / an。
+未学习
+They are pens.
+它们是笔。
+they 也可指“它们”；单数 It is，复数 They are。
+未学习
+They are apples.
+它们是苹果。
+未学习
+These are books.
+这些是书。
+these 指近处多件物品，和 are 连用。
+未学习
+Those are pens.
+那些是笔。
+those 指较远处多件物品，和 are 连用。
+未学习
+These are apples.
+这些是苹果。
+未学习
+Those are books.
+那些是书。
+未学习
+What is this?
+这是什么？
+未学习
+Is that a bag?
+那是一个包吗？
+未学习
+Yes, it is.
+是的，它是。
+未学习
+No, it isn't.
+不，它不是。
+未学习
+This is a book. That is a bag. These are pens.
+这是一本书。那是一个包。这些是笔。
+未学习

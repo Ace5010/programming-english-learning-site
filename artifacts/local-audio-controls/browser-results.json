@@ -1,0 +1,839 @@
+{
+  "baseURL": "http://localhost:5186/",
+  "production": false,
+  "loadedApplicationScripts": [],
+  "testedAt": "2026-09-23T00:42:59.893Z",
+  "scenarios": [
+    {
+      "name": "distant library cards offer immediate local word and example playback",
+      "durationMs": 2071,
+      "evidence": {
+        "position": 31,
+        "target": 31,
+        "nextTarget": 32,
+        "scrollY": 7610
+      }
+    },
+    {
+      "name": "programming teaching has local normal and slow without changing the lesson",
+      "durationMs": 1664
+    },
+    {
+      "name": "programming listening and feedback keep both local speeds and answer draft",
+      "durationMs": 1768
+    },
+    {
+      "name": "programming scene review uses local listening buttons",
+      "durationMs": 1045
+    },
+    {
+      "name": "daily teaching has local normal and slow without changing the lesson",
+      "durationMs": 1277
+    },
+    {
+      "name": "daily listening and feedback keep both local speeds and answer draft",
+      "durationMs": 1710
+    },
+    {
+      "name": "daily scene review uses local listening buttons",
+      "durationMs": 982
+    },
+    {
+      "name": "word review rows, listening and summary offer local controls",
+      "durationMs": 1586
+    },
+    {
+      "name": "speaking demonstrations and own-expression references have both local speeds",
+      "durationMs": 1099
+    },
+    {
+      "name": "expression library local playback keeps voice selection and long sentences usable",
+      "durationMs": 1198
+    },
+    {
+      "name": "local controls fit four themes at 1440px",
+      "durationMs": 2898,
+      "evidence": [
+        {
+          "theme": "minimal",
+          "view": "词汇库",
+          "box": {
+            "x": 175.53125,
+            "y": 486.015625,
+            "width": 52,
+            "height": 36
+          }
+        },
+        {
+          "theme": "minimal",
+          "view": "复习",
+          "box": {
+            "x": 130.0625,
+            "y": 524.625,
+            "width": 52,
+            "height": 36
+          }
+        },
+        {
+          "theme": "minimal",
+          "view": "表达库",
+          "box": {
+            "x": 182.1875,
+            "y": 393.671875,
+            "width": 46,
+            "height": 36
+          }
+        },
+        {
+          "theme": "sketch",
+          "view": "词汇库",
+          "box": {
+            "x": 175.53125,
+            "y": 498.40625,
+            "width": 52,
+            "height": 36
+          }
+        },
+        {
+          "theme": "sketch",
+          "view": "复习",
+          "box": {
+            "x": 130.0625,
+            "y": 522.015625,
+            "width": 52,
+            "height": 36
+          }
+        },
+        {
+          "theme": "sketch",
+          "view": "表达库",
+          "box": {
+            "x": 165.84375,
+            "y": 398.421875,
+            "width": 46,
+            "height": 36
+          }
+        },
+        {
+          "theme": "print",
+          "view": "词汇库",
+          "box": {
+            "x": 176.53125,
+            "y": 517.515625,
+            "width": 52,
+            "height": 36
+          }
+        },
+        {
+          "theme": "print",
+          "view": "复习",
+          "box": {
+            "x": 131.0625,
+            "y": 542.125,
+            "width": 52,
+            "height": 36
+          }
+        },
+        {
+          "theme": "print",
+          "view": "表达库",
+          "box": {
+            "x": 182.1875,
+            "y": 416.671875,
+            "width": 46,
+            "height": 36
+          }
+        },
+        {
+          "theme": "graffiti",
+          "view": "词汇库",
+          "box": {
+            "x": 176.53125,
+            "y": 540.875,
+            "width": 52,
+            "height": 36
+          }
+        },
+        {
+          "theme": "graffiti",
+          "view": "复习",
+          "box": {
+            "x": 131.0625,
+            "y": 565.984375,
+            "width": 52,
+            "height": 36
+          }
+        },
+        {
+          "theme": "graffiti",
+          "view": "表达库",
+          "box": {
+            "x": 179.15625,
+            "y": 439.53125,
+            "width": 46,
+            "height": 36
+          }
+        }
+      ]
+    },
+    {
+      "name": "local controls fit four themes at 390px",
+      "durationMs": 2691,
+      "evidence": [
+        {
+          "theme": "minimal",
+          "view": "词汇库",
+          "box": {
+            "x": 125.53125,
+            "y": 615.421875,
+            "width": 52,
+            "height": 36
+          }
+        },
+        {
+          "theme": "minimal",
+          "view": "复习",
+          "box": {
+            "x": 82.0625,
+            "y": 566.625,
+            "width": 52,
+            "height": 36
+          }
+        },
+        {
+          "theme": "minimal",
+          "view": "表达库",
+          "box": {
+            "x": 126.8125,
+            "y": 476.3125,
+            "width": 46,
+            "height": 36
+          }
+        },
+        {
+          "theme": "sketch",
+          "view": "词汇库",
+          "box": {
+            "x": 125.53125,
+            "y": 631.859375,
+            "width": 52,
+            "height": 36
+          }
+        },
+        {
+          "theme": "sketch",
+          "view": "复习",
+          "box": {
+            "x": 82.0625,
+            "y": 576.0625,
+            "width": 52,
+            "height": 36
+          }
+        },
+        {
+          "theme": "sketch",
+          "view": "表达库",
+          "box": {
+            "x": 111.953125,
+            "y": 480.0625,
+            "width": 46,
+            "height": 36
+          }
+        },
+        {
+          "theme": "print",
+          "view": "词汇库",
+          "box": {
+            "x": 126.53125,
+            "y": 642.421875,
+            "width": 52,
+            "height": 36
+          }
+        },
+        {
+          "theme": "print",
+          "view": "复习",
+          "box": {
+            "x": 83.0625,
+            "y": 593.625,
+            "width": 52,
+            "height": 36
+          }
+        },
+        {
+          "theme": "print",
+          "view": "表达库",
+          "box": {
+            "x": 126.8125,
+            "y": 498.3125,
+            "width": 46,
+            "height": 36
+          }
+        },
+        {
+          "theme": "graffiti",
+          "view": "词汇库",
+          "box": {
+            "x": 126.53125,
+            "y": 647.03125,
+            "width": 52,
+            "height": 36
+          }
+        },
+        {
+          "theme": "graffiti",
+          "view": "复习",
+          "box": {
+            "x": 83.0625,
+            "y": 662.734375,
+            "width": 52,
+            "height": 36
+          }
+        },
+        {
+          "theme": "graffiti",
+          "view": "表达库",
+          "box": {
+            "x": 124.046875,
+            "y": 575.171875,
+            "width": 46,
+            "height": 36
+          }
+        }
+      ]
+    }
+  ],
+  "failures": [],
+  "browserErrors": [],
+  "playbackEvidence": [
+    {
+      "label": "distant library word normal",
+      "id": 0,
+      "type": "playing",
+      "src": "http://localhost:5186/audio/aria/word-31.mp3",
+      "rate": 1,
+      "duration": 1.656,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "distant library word slow",
+      "id": 1,
+      "type": "playing",
+      "src": "http://localhost:5186/audio/aria/word-31.mp3",
+      "rate": 0.72,
+      "duration": 1.656,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "distant library same word returns to normal",
+      "id": 2,
+      "type": "playing",
+      "src": "http://localhost:5186/audio/aria/word-31.mp3",
+      "rate": 1,
+      "duration": 1.656,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "distant example normal",
+      "id": 3,
+      "type": "playing",
+      "src": "http://localhost:5186/audio/aria/example-31.mp3?v=A%20boolean%20can%20be%20true%20or%20false.",
+      "rate": 1,
+      "duration": 2.88,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "distant example slow",
+      "id": 4,
+      "type": "playing",
+      "src": "http://localhost:5186/audio/aria/example-31.mp3?v=A%20boolean%20can%20be%20true%20or%20false.",
+      "rate": 0.72,
+      "duration": 2.88,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "other word stays normal after slow playback",
+      "id": 5,
+      "type": "playing",
+      "src": "http://localhost:5186/audio/aria/word-32.mp3",
+      "rate": 1,
+      "duration": 1.68,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "card blank area stays normal",
+      "id": 6,
+      "type": "playing",
+      "src": "http://localhost:5186/audio/aria/word-31.mp3",
+      "rate": 1,
+      "duration": 1.656,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "programming teaching normal",
+      "id": 0,
+      "type": "playing",
+      "src": "http://localhost:5186/audio/aria/word-1.mp3?v=repository",
+      "rate": 1,
+      "duration": 1.992,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "programming teaching slow",
+      "id": 1,
+      "type": "playing",
+      "src": "http://localhost:5186/audio/aria/word-1.mp3?v=repository",
+      "rate": 0.72,
+      "duration": 1.992,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "programming teaching returns to normal",
+      "id": 2,
+      "type": "playing",
+      "src": "http://localhost:5186/audio/aria/word-1.mp3?v=repository",
+      "rate": 1,
+      "duration": 1.992,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "programming listening normal",
+      "id": 0,
+      "type": "playing",
+      "src": "http://localhost:5186/audio/aria/word-3561.mp3?v=code",
+      "rate": 1,
+      "duration": 1.872,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "programming listening slow",
+      "id": 1,
+      "type": "playing",
+      "src": "http://localhost:5186/audio/aria/word-3561.mp3?v=code",
+      "rate": 0.72,
+      "duration": 1.872,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "programming feedback normal",
+      "id": 2,
+      "type": "playing",
+      "src": "http://localhost:5186/audio/aria/word-3561.mp3?v=code",
+      "rate": 1,
+      "duration": 1.872,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "programming feedback slow",
+      "id": 3,
+      "type": "playing",
+      "src": "http://localhost:5186/audio/aria/word-3561.mp3?v=code",
+      "rate": 0.72,
+      "duration": 1.872,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "programming feedback normal after refresh",
+      "id": 0,
+      "type": "playing",
+      "src": "http://localhost:5186/audio/aria/word-3561.mp3?v=code",
+      "rate": 1,
+      "duration": 1.872,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "programming scene review slow",
+      "id": 0,
+      "type": "playing",
+      "src": "http://localhost:5186/audio/aria/word-3561.mp3?v=code",
+      "rate": 0.72,
+      "duration": 1.872,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "programming scene review normal",
+      "id": 1,
+      "type": "playing",
+      "src": "http://localhost:5186/audio/aria/word-3561.mp3?v=code",
+      "rate": 1,
+      "duration": 1.872,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "daily teaching normal",
+      "id": 0,
+      "type": "playing",
+      "src": "http://localhost:5186/audio/daily/aria/hello.mp3?v=Hello!",
+      "rate": 1,
+      "duration": 1.56,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "daily teaching slow",
+      "id": 1,
+      "type": "playing",
+      "src": "http://localhost:5186/audio/daily/aria/hello.mp3?v=Hello!",
+      "rate": 0.72,
+      "duration": 1.56,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "daily teaching returns to normal",
+      "id": 2,
+      "type": "playing",
+      "src": "http://localhost:5186/audio/daily/aria/hello.mp3?v=Hello!",
+      "rate": 1,
+      "duration": 1.56,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "daily listening normal",
+      "id": 0,
+      "type": "playing",
+      "src": "http://localhost:5186/audio/daily/aria/goodbye.mp3?v=Goodbye!",
+      "rate": 1,
+      "duration": 1.608,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "daily listening slow",
+      "id": 1,
+      "type": "playing",
+      "src": "http://localhost:5186/audio/daily/aria/goodbye.mp3?v=Goodbye!",
+      "rate": 0.72,
+      "duration": 1.608,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "daily feedback normal",
+      "id": 2,
+      "type": "playing",
+      "src": "http://localhost:5186/audio/daily/aria/goodbye.mp3?v=Goodbye!",
+      "rate": 1,
+      "duration": 1.608,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "daily feedback slow",
+      "id": 3,
+      "type": "playing",
+      "src": "http://localhost:5186/audio/daily/aria/goodbye.mp3?v=Goodbye!",
+      "rate": 0.72,
+      "duration": 1.608,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "daily feedback normal after refresh",
+      "id": 0,
+      "type": "playing",
+      "src": "http://localhost:5186/audio/daily/aria/goodbye.mp3?v=Goodbye!",
+      "rate": 1,
+      "duration": 1.608,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "daily scene review slow",
+      "id": 0,
+      "type": "playing",
+      "src": "http://localhost:5186/audio/daily/aria/goodbye.mp3?v=Goodbye!",
+      "rate": 0.72,
+      "duration": 1.608,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "daily scene review normal",
+      "id": 1,
+      "type": "playing",
+      "src": "http://localhost:5186/audio/daily/aria/goodbye.mp3?v=Goodbye!",
+      "rate": 1,
+      "duration": 1.608,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "review row word normal",
+      "id": 0,
+      "type": "playing",
+      "src": "http://localhost:5186/audio/aria/word-1.mp3",
+      "rate": 1,
+      "duration": 1.992,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "review row word slow",
+      "id": 1,
+      "type": "playing",
+      "src": "http://localhost:5186/audio/aria/word-1.mp3",
+      "rate": 0.72,
+      "duration": 1.992,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "review row same word returns to normal",
+      "id": 2,
+      "type": "playing",
+      "src": "http://localhost:5186/audio/aria/word-1.mp3",
+      "rate": 1,
+      "duration": 1.992,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "review example slow",
+      "id": 3,
+      "type": "playing",
+      "src": "http://localhost:5186/audio/aria/example-1.mp3?v=Open%20this%20repository.",
+      "rate": 0.72,
+      "duration": 2.424,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "review example normal",
+      "id": 4,
+      "type": "playing",
+      "src": "http://localhost:5186/audio/aria/example-1.mp3?v=Open%20this%20repository.",
+      "rate": 1,
+      "duration": 2.424,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "word review listening slow",
+      "id": 6,
+      "type": "playing",
+      "src": "http://localhost:5186/audio/aria/word-1.mp3",
+      "rate": 0.72,
+      "duration": 1.992,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "word review listening normal",
+      "id": 7,
+      "type": "playing",
+      "src": "http://localhost:5186/audio/aria/word-1.mp3",
+      "rate": 1,
+      "duration": 1.992,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "word summary slow",
+      "id": 8,
+      "type": "playing",
+      "src": "http://localhost:5186/audio/aria/word-1.mp3",
+      "rate": 0.72,
+      "duration": 1.992,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "word summary normal",
+      "id": 9,
+      "type": "playing",
+      "src": "http://localhost:5186/audio/aria/word-1.mp3",
+      "rate": 1,
+      "duration": 1.992,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "speaking demonstration normal",
+      "id": 0,
+      "type": "playing",
+      "src": "http://localhost:5186/audio/daily/aria/hello.mp3?v=Hello!",
+      "rate": 1,
+      "duration": 1.56,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "speaking demonstration slow",
+      "id": 1,
+      "type": "playing",
+      "src": "http://localhost:5186/audio/daily/aria/hello.mp3?v=Hello!",
+      "rate": 0.72,
+      "duration": 1.56,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "own-expression reference slow",
+      "id": 2,
+      "type": "playing",
+      "src": "http://localhost:5186/audio/daily/aria/hello.mp3?v=Hello!",
+      "rate": 0.72,
+      "duration": 1.56,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "own-expression reference normal",
+      "id": 3,
+      "type": "playing",
+      "src": "http://localhost:5186/audio/daily/aria/hello.mp3?v=Hello!",
+      "rate": 1,
+      "duration": 1.56,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "expression slow",
+      "id": 0,
+      "type": "playing",
+      "src": "http://localhost:5186/audio/daily/aria/mia-introduction.mp3?v=She%20is%20Mia.%20She%20is%20from%20Japan.%20She%20is%20a%20student.",
+      "rate": 0.72,
+      "duration": 6,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "expression normal",
+      "id": 1,
+      "type": "playing",
+      "src": "http://localhost:5186/audio/daily/aria/mia-introduction.mp3?v=She%20is%20Mia.%20She%20is%20from%20Japan.%20She%20is%20a%20student.",
+      "rate": 1,
+      "duration": 6,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "Guy expression slow",
+      "id": 2,
+      "type": "playing",
+      "src": "http://localhost:5186/audio/daily/guy/mia-introduction.mp3?v=She%20is%20Mia.%20She%20is%20from%20Japan.%20She%20is%20a%20student.",
+      "rate": 0.72,
+      "duration": 5.952,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "Guy expression normal",
+      "id": 3,
+      "type": "playing",
+      "src": "http://localhost:5186/audio/daily/guy/mia-introduction.mp3?v=She%20is%20Mia.%20She%20is%20from%20Japan.%20She%20is%20a%20student.",
+      "rate": 1,
+      "duration": 5.952,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    }
+  ],
+  "microphoneTested": false
+}

@@ -1,0 +1,1865 @@
+[
+  {
+    "round": 1,
+    "plan": {
+      "version": 1,
+      "round": 1,
+      "focusIds": [
+        "hello",
+        "hi",
+        "goodbye",
+        "bye"
+      ],
+      "newIds": [
+        "hello",
+        "hi",
+        "goodbye",
+        "bye"
+      ],
+      "sourceLessonId": "A1-01-01",
+      "seed": 1422306624,
+      "budget": 12
+    },
+    "answers": 12,
+    "readyIds": [],
+    "targets": {
+      "hello": {
+        "introducedAt": 1790091705805,
+        "confidence": 0.14400000000000002,
+        "abilities": {
+          "listening": 0.048,
+          "meaning": 0.096
+        },
+        "lastSeenTurn": 12,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-daily:hello:listen-13v4njx",
+          "sig-daily:hello:meaning-1n6yth5"
+        ],
+        "transfer": false,
+        "readyAt": 0
+      },
+      "hi": {
+        "introducedAt": 1790091705805,
+        "confidence": 0.72,
+        "abilities": {
+          "meaning": 0.048,
+          "writing": 0.672
+        },
+        "lastSeenTurn": 8,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-daily:hi:meaning-txk7vi",
+          "sig-daily:original:A1-01-01-e04-1xmgdlv",
+          "sig-daily:hi:write-vanw8y"
+        ],
+        "transfer": true,
+        "readyAt": 0
+      },
+      "goodbye": {
+        "introducedAt": 1790091705805,
+        "confidence": 0.6960000000000001,
+        "abilities": {
+          "listening": 0.096,
+          "meaning": 0.264,
+          "writing": 0.336
+        },
+        "lastSeenTurn": 10,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-daily:original:A1-01-01-e02-99xsl",
+          "sig-daily:goodbye:expression-1stu4b5",
+          "sig-daily:goodbye:write-1wrameq",
+          "sig-daily:goodbye:listen-1sw0y6g"
+        ],
+        "transfer": true,
+        "readyAt": 0
+      },
+      "bye": {
+        "introducedAt": 1790091705805,
+        "confidence": 0.40800000000000003,
+        "abilities": {
+          "listening": 0.312,
+          "meaning": 0.096
+        },
+        "lastSeenTurn": 11,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-daily:bye:listen-1qbfyn9",
+          "sig-daily:original:A1-01-01-r01-14hv829",
+          "sig-daily:bye:meaning-1m86ikh"
+        ],
+        "transfer": true,
+        "readyAt": 0
+      }
+    },
+    "sequence": [
+      {
+        "id": "A1-01-01-p-hi-meaning",
+        "kind": "choice",
+        "knowledgeIds": [
+          "hi"
+        ],
+        "signature": "daily:hi:meaning",
+        "outcome": "independent",
+        "turn": 1
+      },
+      {
+        "id": "A1-01-01-p-bye-listen",
+        "kind": "listen",
+        "knowledgeIds": [
+          "bye"
+        ],
+        "signature": "daily:bye:listen",
+        "outcome": "independent",
+        "turn": 2
+      },
+      {
+        "id": "A1-01-01-e02",
+        "kind": "listen",
+        "knowledgeIds": [
+          "goodbye"
+        ],
+        "signature": "daily:original:A1-01-01-e02",
+        "outcome": "independent",
+        "turn": 3
+      },
+      {
+        "id": "A1-01-01-p-hello-listen",
+        "kind": "listen",
+        "knowledgeIds": [
+          "hello"
+        ],
+        "signature": "daily:hello:listen",
+        "outcome": "independent",
+        "turn": 4
+      },
+      {
+        "id": "A1-01-01-e04",
+        "kind": "write",
+        "knowledgeIds": [
+          "hi"
+        ],
+        "signature": "daily:original:A1-01-01-e04",
+        "outcome": "independent",
+        "turn": 5
+      },
+      {
+        "id": "A1-01-01-p-goodbye-expression",
+        "kind": "choice",
+        "knowledgeIds": [
+          "goodbye"
+        ],
+        "signature": "daily:goodbye:expression",
+        "outcome": "independent",
+        "turn": 6
+      },
+      {
+        "id": "A1-01-01-r01",
+        "kind": "listen",
+        "knowledgeIds": [
+          "bye"
+        ],
+        "signature": "daily:original:A1-01-01-r01",
+        "outcome": "independent",
+        "turn": 7
+      },
+      {
+        "id": "A1-01-01-p-hi-write",
+        "kind": "write",
+        "knowledgeIds": [
+          "hi"
+        ],
+        "signature": "daily:hi:write",
+        "outcome": "independent",
+        "turn": 8
+      },
+      {
+        "id": "A1-01-01-p-goodbye-write",
+        "kind": "write",
+        "knowledgeIds": [
+          "goodbye"
+        ],
+        "signature": "daily:goodbye:write",
+        "outcome": "independent",
+        "turn": 9
+      },
+      {
+        "id": "A1-01-01-p-goodbye-listen",
+        "kind": "listen",
+        "knowledgeIds": [
+          "goodbye"
+        ],
+        "signature": "daily:goodbye:listen",
+        "outcome": "independent",
+        "turn": 10
+      },
+      {
+        "id": "A1-01-01-p-bye-meaning",
+        "kind": "choice",
+        "knowledgeIds": [
+          "bye"
+        ],
+        "signature": "daily:bye:meaning",
+        "outcome": "independent",
+        "turn": 11
+      },
+      {
+        "id": "A1-01-01-p-hello-meaning",
+        "kind": "choice",
+        "knowledgeIds": [
+          "hello"
+        ],
+        "signature": "daily:hello:meaning",
+        "outcome": "independent",
+        "turn": 12
+      }
+    ]
+  },
+  {
+    "round": 2,
+    "plan": {
+      "version": 1,
+      "round": 2,
+      "focusIds": [
+        "hello",
+        "bye",
+        "goodbye",
+        "i-am-ben"
+      ],
+      "newIds": [
+        "i-am-ben"
+      ],
+      "sourceLessonId": "A1-01-02",
+      "seed": 1422306624,
+      "budget": 14
+    },
+    "answers": 14,
+    "readyIds": [
+      "hi",
+      "goodbye",
+      "i-am-ben"
+    ],
+    "targets": {
+      "hello": {
+        "introducedAt": 1790091705805,
+        "confidence": 0.7056,
+        "abilities": {
+          "listening": 0.048,
+          "meaning": 0.1296,
+          "writing": 0.528
+        },
+        "lastSeenTurn": 24,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-daily:hello:listen-13v4njx",
+          "sig-daily:hello:meaning-1n6yth5",
+          "sig-daily:hello:letters-i68w2f",
+          "sig-daily:original:A1-01-01-e03-1z0ee2q"
+        ],
+        "transfer": true,
+        "readyAt": 0
+      },
+      "hi": {
+        "introducedAt": 1790091705805,
+        "confidence": 0.816,
+        "abilities": {
+          "meaning": 0.048,
+          "writing": 0.672,
+          "listening": 0.096
+        },
+        "lastSeenTurn": 19,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-daily:hi:meaning-txk7vi",
+          "sig-daily:original:A1-01-01-e04-1xmgdlv",
+          "sig-daily:hi:write-vanw8y",
+          "sig-daily:hi:listen-1vux07s"
+        ],
+        "transfer": true,
+        "readyAt": 1790091707771
+      },
+      "goodbye": {
+        "introducedAt": 1790091705805,
+        "confidence": 1,
+        "abilities": {
+          "listening": 0.096,
+          "meaning": 0.3564,
+          "writing": 0.7896000000000001
+        },
+        "lastSeenTurn": 25,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-daily:original:A1-01-01-e02-99xsl",
+          "sig-daily:goodbye:listen-1sw0y6g",
+          "sig-daily:original:A1-01-06-e04-1g2n1fm",
+          "sig-daily:goodbye:write-1wrameq",
+          "sig-daily:goodbye:expression-1stu4b5"
+        ],
+        "transfer": true,
+        "readyAt": 1790091707455
+      },
+      "bye": {
+        "introducedAt": 1790091705805,
+        "confidence": 0.8364,
+        "abilities": {
+          "listening": 0.4044,
+          "meaning": 0.096,
+          "writing": 0.336
+        },
+        "lastSeenTurn": 21,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-daily:bye:listen-1qbfyn9",
+          "sig-daily:bye:meaning-1m86ikh",
+          "sig-daily:original:A1-01-01-r01-14hv829",
+          "sig-daily:bye:write-gyro3p"
+        ],
+        "transfer": true,
+        "readyAt": 0
+      },
+      "i-am-ben": {
+        "introducedAt": 1790091707367,
+        "confidence": 1,
+        "abilities": {
+          "meaning": 0.048,
+          "writing": 0.8640000000000001,
+          "listening": 0.096
+        },
+        "lastSeenTurn": 26,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-daily:i-am-ben:meaning-y3vt4d",
+          "sig-daily:original:A1-01-02-e03-ypjclr",
+          "sig-daily:i-am-ben:order-mavzem",
+          "sig-daily:i-am-ben:listen-m5cjxd",
+          "sig-daily:i-am-ben:write-403zvl"
+        ],
+        "transfer": true,
+        "readyAt": 1790091708177
+      }
+    },
+    "sequence": [
+      {
+        "id": "A1-01-02-p-i-am-ben-meaning",
+        "kind": "choice",
+        "knowledgeIds": [
+          "i-am-ben"
+        ],
+        "signature": "daily:i-am-ben:meaning",
+        "outcome": "independent",
+        "turn": 13
+      },
+      {
+        "id": "A1-01-06-e04",
+        "kind": "write",
+        "knowledgeIds": [
+          "goodbye"
+        ],
+        "signature": "daily:original:A1-01-06-e04",
+        "outcome": "independent",
+        "turn": 14
+      },
+      {
+        "id": "A1-01-01-p-hello-meaning",
+        "kind": "choice",
+        "knowledgeIds": [
+          "hello"
+        ],
+        "signature": "daily:hello:meaning",
+        "outcome": "independent",
+        "turn": 15
+      },
+      {
+        "id": "A1-01-02-e03",
+        "kind": "order",
+        "knowledgeIds": [
+          "i-am-ben"
+        ],
+        "signature": "daily:original:A1-01-02-e03",
+        "outcome": "independent",
+        "turn": 16
+      },
+      {
+        "id": "A1-01-01-r01",
+        "kind": "listen",
+        "knowledgeIds": [
+          "bye"
+        ],
+        "signature": "daily:original:A1-01-01-r01",
+        "outcome": "independent",
+        "turn": 17
+      },
+      {
+        "id": "A1-01-01-p-hello-letters",
+        "kind": "fill",
+        "knowledgeIds": [
+          "hello"
+        ],
+        "signature": "daily:hello:letters",
+        "outcome": "independent",
+        "turn": 18
+      },
+      {
+        "id": "A1-01-01-p-hi-listen",
+        "kind": "listen",
+        "knowledgeIds": [
+          "hi"
+        ],
+        "signature": "daily:hi:listen",
+        "outcome": "independent",
+        "turn": 19
+      },
+      {
+        "id": "A1-01-05-p-i-am-ben-order",
+        "kind": "order",
+        "knowledgeIds": [
+          "i-am-ben"
+        ],
+        "signature": "daily:i-am-ben:order",
+        "outcome": "independent",
+        "turn": 20
+      },
+      {
+        "id": "A1-01-01-p-bye-write",
+        "kind": "write",
+        "knowledgeIds": [
+          "bye"
+        ],
+        "signature": "daily:bye:write",
+        "outcome": "independent",
+        "turn": 21
+      },
+      {
+        "id": "A1-01-01-p-goodbye-write",
+        "kind": "write",
+        "knowledgeIds": [
+          "goodbye"
+        ],
+        "signature": "daily:goodbye:write",
+        "outcome": "independent",
+        "turn": 22
+      },
+      {
+        "id": "A1-01-02-p-i-am-ben-listen",
+        "kind": "listen",
+        "knowledgeIds": [
+          "i-am-ben"
+        ],
+        "signature": "daily:i-am-ben:listen",
+        "outcome": "independent",
+        "turn": 23
+      },
+      {
+        "id": "A1-01-01-e03",
+        "kind": "fill",
+        "knowledgeIds": [
+          "hello"
+        ],
+        "signature": "daily:original:A1-01-01-e03",
+        "outcome": "independent",
+        "turn": 24
+      },
+      {
+        "id": "A1-01-06-p-goodbye-expression",
+        "kind": "choice",
+        "knowledgeIds": [
+          "goodbye"
+        ],
+        "signature": "daily:goodbye:expression",
+        "outcome": "independent",
+        "turn": 25
+      },
+      {
+        "id": "A1-01-05-p-i-am-ben-write",
+        "kind": "write",
+        "knowledgeIds": [
+          "i-am-ben"
+        ],
+        "signature": "daily:i-am-ben:write",
+        "outcome": "independent",
+        "turn": 26
+      }
+    ]
+  },
+  {
+    "round": 3,
+    "plan": {
+      "version": 1,
+      "round": 3,
+      "focusIds": [
+        "hello",
+        "bye",
+        "i-am-mia",
+        "im-ben"
+      ],
+      "newIds": [
+        "i-am-mia",
+        "im-ben"
+      ],
+      "sourceLessonId": "A1-01-02",
+      "seed": 1422306624,
+      "budget": 12
+    },
+    "answers": 12,
+    "readyIds": [
+      "hello",
+      "hi",
+      "goodbye",
+      "i-am-ben"
+    ],
+    "targets": {
+      "hello": {
+        "introducedAt": 1790091705805,
+        "confidence": 1,
+        "abilities": {
+          "listening": 0.0816,
+          "meaning": 0.3936,
+          "writing": 0.8640000000000001
+        },
+        "lastSeenTurn": 38,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-daily:hello:meaning-1n6yth5",
+          "sig-daily:hello:letters-i68w2f",
+          "sig-daily:original:A1-01-01-e03-1z0ee2q",
+          "sig-daily:original:A1-01-01-e01-1ygf6os",
+          "sig-daily:hello:listen-13v4njx",
+          "sig-daily:hello:write-85j8t"
+        ],
+        "transfer": true,
+        "readyAt": 1790091709060
+      },
+      "hi": {
+        "introducedAt": 1790091705805,
+        "confidence": 0.816,
+        "abilities": {
+          "meaning": 0.048,
+          "writing": 0.672,
+          "listening": 0.096
+        },
+        "lastSeenTurn": 19,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-daily:hi:meaning-txk7vi",
+          "sig-daily:original:A1-01-01-e04-1xmgdlv",
+          "sig-daily:hi:write-vanw8y",
+          "sig-daily:hi:listen-1vux07s"
+        ],
+        "transfer": true,
+        "readyAt": 1790091707771
+      },
+      "goodbye": {
+        "introducedAt": 1790091705805,
+        "confidence": 1,
+        "abilities": {
+          "listening": 0.096,
+          "meaning": 0.3564,
+          "writing": 0.7896000000000001
+        },
+        "lastSeenTurn": 25,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-daily:original:A1-01-01-e02-99xsl",
+          "sig-daily:goodbye:listen-1sw0y6g",
+          "sig-daily:original:A1-01-06-e04-1g2n1fm",
+          "sig-daily:goodbye:write-1wrameq",
+          "sig-daily:goodbye:expression-1stu4b5"
+        ],
+        "transfer": true,
+        "readyAt": 1790091707455
+      },
+      "bye": {
+        "introducedAt": 1790091705805,
+        "confidence": 1,
+        "abilities": {
+          "listening": 0.49679999999999996,
+          "meaning": 0.096,
+          "writing": 0.4536
+        },
+        "lastSeenTurn": 37,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-daily:bye:listen-1qbfyn9",
+          "sig-daily:bye:meaning-1m86ikh",
+          "sig-daily:original:A1-01-01-r01-14hv829",
+          "sig-daily:bye:write-gyro3p"
+        ],
+        "transfer": true,
+        "readyAt": 0
+      },
+      "i-am-ben": {
+        "introducedAt": 1790091707367,
+        "confidence": 1,
+        "abilities": {
+          "meaning": 0.048,
+          "writing": 0.8640000000000001,
+          "listening": 0.1296
+        },
+        "lastSeenTurn": 36,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-daily:i-am-ben:meaning-y3vt4d",
+          "sig-daily:original:A1-01-02-e03-ypjclr",
+          "sig-daily:i-am-ben:order-mavzem",
+          "sig-daily:i-am-ben:write-403zvl",
+          "sig-daily:i-am-ben:listen-m5cjxd"
+        ],
+        "transfer": true,
+        "readyAt": 1790091708177
+      },
+      "i-am-mia": {
+        "introducedAt": 1790091708928,
+        "confidence": 0.648,
+        "abilities": {
+          "meaning": 0.048,
+          "writing": 0.6000000000000001
+        },
+        "lastSeenTurn": 34,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-daily:i-am-mia:meaning-osus81",
+          "sig-daily:original:A1-01-02-r01-1dddn8o",
+          "sig-daily:i-am-mia:write-1u8y55x"
+        ],
+        "transfer": true,
+        "readyAt": 0
+      },
+      "im-ben": {
+        "introducedAt": 1790091708928,
+        "confidence": 0.648,
+        "abilities": {
+          "meaning": 0.048,
+          "writing": 0.6000000000000001
+        },
+        "lastSeenTurn": 35,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-daily:im-ben:meaning-klg9sr",
+          "sig-daily:original:A1-01-02-e05-y5k57t",
+          "sig-daily:im-ben:order-1bvl4t0"
+        ],
+        "transfer": true,
+        "readyAt": 0
+      }
+    },
+    "sequence": [
+      {
+        "id": "A1-01-02-p-i-am-mia-meaning",
+        "kind": "choice",
+        "knowledgeIds": [
+          "i-am-mia"
+        ],
+        "signature": "daily:i-am-mia:meaning",
+        "outcome": "independent",
+        "turn": 27
+      },
+      {
+        "id": "A1-01-02-p-im-ben-meaning",
+        "kind": "choice",
+        "knowledgeIds": [
+          "im-ben"
+        ],
+        "signature": "daily:im-ben:meaning",
+        "outcome": "independent",
+        "turn": 28
+      },
+      {
+        "id": "A1-01-01-e01",
+        "kind": "choice",
+        "knowledgeIds": [
+          "hello"
+        ],
+        "signature": "daily:original:A1-01-01-e01",
+        "outcome": "independent",
+        "turn": 29
+      },
+      {
+        "id": "A1-01-02-r01",
+        "kind": "order",
+        "knowledgeIds": [
+          "i-am-mia"
+        ],
+        "signature": "daily:original:A1-01-02-r01",
+        "outcome": "independent",
+        "turn": 30
+      },
+      {
+        "id": "A1-01-01-r01",
+        "kind": "listen",
+        "knowledgeIds": [
+          "bye"
+        ],
+        "signature": "daily:original:A1-01-01-r01",
+        "outcome": "independent",
+        "turn": 31
+      },
+      {
+        "id": "A1-01-02-e05",
+        "kind": "write",
+        "knowledgeIds": [
+          "im-ben"
+        ],
+        "signature": "daily:original:A1-01-02-e05",
+        "outcome": "independent",
+        "turn": 32
+      },
+      {
+        "id": "A1-01-01-p-hello-listen",
+        "kind": "listen",
+        "knowledgeIds": [
+          "hello"
+        ],
+        "signature": "daily:hello:listen",
+        "outcome": "independent",
+        "turn": 33
+      },
+      {
+        "id": "A1-01-02-p-i-am-mia-write",
+        "kind": "write",
+        "knowledgeIds": [
+          "i-am-mia"
+        ],
+        "signature": "daily:i-am-mia:write",
+        "outcome": "independent",
+        "turn": 34
+      },
+      {
+        "id": "A1-01-02-p-im-ben-order",
+        "kind": "order",
+        "knowledgeIds": [
+          "im-ben"
+        ],
+        "signature": "daily:im-ben:order",
+        "outcome": "independent",
+        "turn": 35
+      },
+      {
+        "id": "A1-01-02-p-i-am-ben-listen",
+        "kind": "listen",
+        "knowledgeIds": [
+          "i-am-ben"
+        ],
+        "signature": "daily:i-am-ben:listen",
+        "outcome": "independent",
+        "turn": 36
+      },
+      {
+        "id": "A1-01-01-p-bye-write",
+        "kind": "write",
+        "knowledgeIds": [
+          "bye"
+        ],
+        "signature": "daily:bye:write",
+        "outcome": "independent",
+        "turn": 37
+      },
+      {
+        "id": "A1-01-01-p-hello-write",
+        "kind": "write",
+        "knowledgeIds": [
+          "hello"
+        ],
+        "signature": "daily:hello:write",
+        "outcome": "independent",
+        "turn": 38
+      }
+    ]
+  },
+  {
+    "round": 4,
+    "plan": {
+      "version": 1,
+      "round": 4,
+      "focusIds": [
+        "i-am-mia",
+        "im-ben",
+        "bye",
+        "im-mia"
+      ],
+      "newIds": [
+        "im-mia"
+      ],
+      "sourceLessonId": "A1-01-02",
+      "seed": 1422306624,
+      "budget": 12
+    },
+    "answers": 12,
+    "readyIds": [
+      "hello",
+      "hi",
+      "goodbye",
+      "bye",
+      "i-am-ben",
+      "i-am-mia",
+      "im-ben"
+    ],
+    "targets": {
+      "hello": {
+        "introducedAt": 1790091705805,
+        "confidence": 1,
+        "abilities": {
+          "listening": 0.0816,
+          "meaning": 0.3936,
+          "writing": 0.8640000000000001
+        },
+        "lastSeenTurn": 38,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-daily:hello:meaning-1n6yth5",
+          "sig-daily:hello:letters-i68w2f",
+          "sig-daily:original:A1-01-01-e03-1z0ee2q",
+          "sig-daily:original:A1-01-01-e01-1ygf6os",
+          "sig-daily:hello:listen-13v4njx",
+          "sig-daily:hello:write-85j8t"
+        ],
+        "transfer": true,
+        "readyAt": 1790091709060
+      },
+      "hi": {
+        "introducedAt": 1790091705805,
+        "confidence": 1,
+        "abilities": {
+          "meaning": 0.312,
+          "writing": 0.672,
+          "listening": 0.096
+        },
+        "lastSeenTurn": 43,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-daily:hi:meaning-txk7vi",
+          "sig-daily:original:A1-01-01-e04-1xmgdlv",
+          "sig-daily:hi:write-vanw8y",
+          "sig-daily:hi:listen-1vux07s",
+          "sig-daily:hi:expression-1deq5oh"
+        ],
+        "transfer": true,
+        "readyAt": 1790091707771
+      },
+      "goodbye": {
+        "introducedAt": 1790091705805,
+        "confidence": 1,
+        "abilities": {
+          "listening": 0.096,
+          "meaning": 0.3564,
+          "writing": 0.9072000000000001
+        },
+        "lastSeenTurn": 50,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-daily:original:A1-01-01-e02-99xsl",
+          "sig-daily:goodbye:listen-1sw0y6g",
+          "sig-daily:original:A1-01-06-e04-1g2n1fm",
+          "sig-daily:goodbye:expression-1stu4b5",
+          "sig-daily:goodbye:write-1wrameq"
+        ],
+        "transfer": true,
+        "readyAt": 1790091707455
+      },
+      "bye": {
+        "introducedAt": 1790091705805,
+        "confidence": 1,
+        "abilities": {
+          "listening": 0.5304,
+          "meaning": 0.36,
+          "writing": 0.4536
+        },
+        "lastSeenTurn": 45,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-daily:bye:meaning-1m86ikh",
+          "sig-daily:original:A1-01-01-r01-14hv829",
+          "sig-daily:bye:write-gyro3p",
+          "sig-daily:bye:expression-1gbc3e0",
+          "sig-daily:bye:listen-1qbfyn9"
+        ],
+        "transfer": true,
+        "readyAt": 1790091710699
+      },
+      "i-am-ben": {
+        "introducedAt": 1790091707367,
+        "confidence": 1,
+        "abilities": {
+          "meaning": 0.312,
+          "writing": 0.8640000000000001,
+          "listening": 0.1296
+        },
+        "lastSeenTurn": 40,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-daily:i-am-ben:meaning-y3vt4d",
+          "sig-daily:original:A1-01-02-e03-ypjclr",
+          "sig-daily:i-am-ben:order-mavzem",
+          "sig-daily:i-am-ben:write-403zvl",
+          "sig-daily:i-am-ben:listen-m5cjxd",
+          "sig-daily:i-am-ben:expression-op8xxg"
+        ],
+        "transfer": true,
+        "readyAt": 1790091708177
+      },
+      "i-am-mia": {
+        "introducedAt": 1790091708928,
+        "confidence": 0.9456,
+        "abilities": {
+          "meaning": 0.0816,
+          "writing": 0.8640000000000001
+        },
+        "lastSeenTurn": 48,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-daily:original:A1-01-02-r01-1dddn8o",
+          "sig-daily:i-am-mia:write-1u8y55x",
+          "sig-daily:i-am-mia:meaning-osus81",
+          "sig-daily:i-am-mia:order-1yz3376"
+        ],
+        "transfer": true,
+        "readyAt": 1790091710922
+      },
+      "im-ben": {
+        "introducedAt": 1790091708928,
+        "confidence": 1,
+        "abilities": {
+          "meaning": 0.312,
+          "writing": 0.6924000000000001
+        },
+        "lastSeenTurn": 47,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-daily:im-ben:meaning-klg9sr",
+          "sig-daily:original:A1-01-02-e05-y5k57t",
+          "sig-daily:im-ben:expression-1346ma6",
+          "sig-daily:im-ben:order-1bvl4t0"
+        ],
+        "transfer": true,
+        "readyAt": 1790091710389
+      },
+      "im-mia": {
+        "introducedAt": 1790091710345,
+        "confidence": 0.648,
+        "abilities": {
+          "listening": 0.048,
+          "meaning": 0.264,
+          "writing": 0.336
+        },
+        "lastSeenTurn": 49,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-daily:im-mia:listen-vbbcab",
+          "sig-daily:im-mia:expression-1i5bnt6",
+          "sig-daily:im-mia:write-6kiunr"
+        ],
+        "transfer": true,
+        "readyAt": 0
+      }
+    },
+    "sequence": [
+      {
+        "id": "A1-01-02-p-im-ben-expression",
+        "kind": "choice",
+        "knowledgeIds": [
+          "im-ben"
+        ],
+        "signature": "daily:im-ben:expression",
+        "outcome": "independent",
+        "turn": 39
+      },
+      {
+        "id": "A1-01-05-p-i-am-ben-expression",
+        "kind": "choice",
+        "knowledgeIds": [
+          "i-am-ben"
+        ],
+        "signature": "daily:i-am-ben:expression",
+        "outcome": "independent",
+        "turn": 40
+      },
+      {
+        "id": "A1-01-01-p-bye-expression",
+        "kind": "choice",
+        "knowledgeIds": [
+          "bye"
+        ],
+        "signature": "daily:bye:expression",
+        "outcome": "independent",
+        "turn": 41
+      },
+      {
+        "id": "A1-01-02-p-im-mia-listen",
+        "kind": "listen",
+        "knowledgeIds": [
+          "im-mia"
+        ],
+        "signature": "daily:im-mia:listen",
+        "outcome": "independent",
+        "turn": 42
+      },
+      {
+        "id": "A1-01-01-p-hi-expression",
+        "kind": "choice",
+        "knowledgeIds": [
+          "hi"
+        ],
+        "signature": "daily:hi:expression",
+        "outcome": "independent",
+        "turn": 43
+      },
+      {
+        "id": "A1-01-02-p-i-am-mia-meaning",
+        "kind": "choice",
+        "knowledgeIds": [
+          "i-am-mia"
+        ],
+        "signature": "daily:i-am-mia:meaning",
+        "outcome": "independent",
+        "turn": 44
+      },
+      {
+        "id": "A1-01-01-p-bye-listen",
+        "kind": "listen",
+        "knowledgeIds": [
+          "bye"
+        ],
+        "signature": "daily:bye:listen",
+        "outcome": "independent",
+        "turn": 45
+      },
+      {
+        "id": "A1-01-05-p-im-mia-expression",
+        "kind": "choice",
+        "knowledgeIds": [
+          "im-mia"
+        ],
+        "signature": "daily:im-mia:expression",
+        "outcome": "independent",
+        "turn": 46
+      },
+      {
+        "id": "A1-01-02-p-im-ben-order",
+        "kind": "order",
+        "knowledgeIds": [
+          "im-ben"
+        ],
+        "signature": "daily:im-ben:order",
+        "outcome": "independent",
+        "turn": 47
+      },
+      {
+        "id": "A1-01-02-p-i-am-mia-order",
+        "kind": "order",
+        "knowledgeIds": [
+          "i-am-mia"
+        ],
+        "signature": "daily:i-am-mia:order",
+        "outcome": "independent",
+        "turn": 48
+      },
+      {
+        "id": "A1-01-02-p-im-mia-write",
+        "kind": "write",
+        "knowledgeIds": [
+          "im-mia"
+        ],
+        "signature": "daily:im-mia:write",
+        "outcome": "independent",
+        "turn": 49
+      },
+      {
+        "id": "A1-01-01-p-goodbye-write",
+        "kind": "write",
+        "knowledgeIds": [
+          "goodbye"
+        ],
+        "signature": "daily:goodbye:write",
+        "outcome": "independent",
+        "turn": 50
+      }
+    ]
+  },
+  {
+    "round": 5,
+    "plan": {
+      "version": 1,
+      "round": 5,
+      "focusIds": [
+        "im-mia",
+        "whats-your-name",
+        "my-name-is-ben",
+        "my-name-is-mia"
+      ],
+      "newIds": [
+        "whats-your-name",
+        "my-name-is-ben",
+        "my-name-is-mia"
+      ],
+      "sourceLessonId": "A1-01-03",
+      "seed": 1422306624,
+      "budget": 12
+    },
+    "answers": 12,
+    "readyIds": [
+      "hello",
+      "hi",
+      "goodbye",
+      "bye",
+      "i-am-ben",
+      "i-am-mia",
+      "im-ben",
+      "im-mia"
+    ],
+    "targets": {
+      "hello": {
+        "introducedAt": 1790091705805,
+        "confidence": 1,
+        "abilities": {
+          "listening": 0.0816,
+          "meaning": 0.3936,
+          "writing": 0.8640000000000001
+        },
+        "lastSeenTurn": 38,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-daily:hello:meaning-1n6yth5",
+          "sig-daily:hello:letters-i68w2f",
+          "sig-daily:original:A1-01-01-e03-1z0ee2q",
+          "sig-daily:original:A1-01-01-e01-1ygf6os",
+          "sig-daily:hello:listen-13v4njx",
+          "sig-daily:hello:write-85j8t"
+        ],
+        "transfer": true,
+        "readyAt": 1790091709060
+      },
+      "hi": {
+        "introducedAt": 1790091705805,
+        "confidence": 1,
+        "abilities": {
+          "meaning": 0.312,
+          "writing": 0.672,
+          "listening": 0.096
+        },
+        "lastSeenTurn": 43,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-daily:hi:meaning-txk7vi",
+          "sig-daily:original:A1-01-01-e04-1xmgdlv",
+          "sig-daily:hi:write-vanw8y",
+          "sig-daily:hi:listen-1vux07s",
+          "sig-daily:hi:expression-1deq5oh"
+        ],
+        "transfer": true,
+        "readyAt": 1790091707771
+      },
+      "goodbye": {
+        "introducedAt": 1790091705805,
+        "confidence": 1,
+        "abilities": {
+          "listening": 0.096,
+          "meaning": 0.3564,
+          "writing": 0.9072000000000001
+        },
+        "lastSeenTurn": 50,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-daily:original:A1-01-01-e02-99xsl",
+          "sig-daily:goodbye:listen-1sw0y6g",
+          "sig-daily:original:A1-01-06-e04-1g2n1fm",
+          "sig-daily:goodbye:expression-1stu4b5",
+          "sig-daily:goodbye:write-1wrameq"
+        ],
+        "transfer": true,
+        "readyAt": 1790091707455
+      },
+      "bye": {
+        "introducedAt": 1790091705805,
+        "confidence": 1,
+        "abilities": {
+          "listening": 0.5304,
+          "meaning": 0.36,
+          "writing": 0.4536
+        },
+        "lastSeenTurn": 45,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-daily:bye:meaning-1m86ikh",
+          "sig-daily:original:A1-01-01-r01-14hv829",
+          "sig-daily:bye:write-gyro3p",
+          "sig-daily:bye:expression-1gbc3e0",
+          "sig-daily:bye:listen-1qbfyn9"
+        ],
+        "transfer": true,
+        "readyAt": 1790091710699
+      },
+      "i-am-ben": {
+        "introducedAt": 1790091707367,
+        "confidence": 1,
+        "abilities": {
+          "meaning": 0.312,
+          "writing": 0.8640000000000001,
+          "listening": 0.1296
+        },
+        "lastSeenTurn": 40,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-daily:i-am-ben:meaning-y3vt4d",
+          "sig-daily:original:A1-01-02-e03-ypjclr",
+          "sig-daily:i-am-ben:order-mavzem",
+          "sig-daily:i-am-ben:write-403zvl",
+          "sig-daily:i-am-ben:listen-m5cjxd",
+          "sig-daily:i-am-ben:expression-op8xxg"
+        ],
+        "transfer": true,
+        "readyAt": 1790091708177
+      },
+      "i-am-mia": {
+        "introducedAt": 1790091708928,
+        "confidence": 1,
+        "abilities": {
+          "meaning": 0.3456,
+          "writing": 0.8640000000000001
+        },
+        "lastSeenTurn": 55,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-daily:original:A1-01-02-r01-1dddn8o",
+          "sig-daily:i-am-mia:write-1u8y55x",
+          "sig-daily:i-am-mia:meaning-osus81",
+          "sig-daily:i-am-mia:order-1yz3376",
+          "sig-daily:i-am-mia:expression-3isrrc"
+        ],
+        "transfer": true,
+        "readyAt": 1790091710922
+      },
+      "im-ben": {
+        "introducedAt": 1790091708928,
+        "confidence": 1,
+        "abilities": {
+          "meaning": 0.312,
+          "writing": 0.6924000000000001
+        },
+        "lastSeenTurn": 47,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-daily:im-ben:meaning-klg9sr",
+          "sig-daily:original:A1-01-02-e05-y5k57t",
+          "sig-daily:im-ben:expression-1346ma6",
+          "sig-daily:im-ben:order-1bvl4t0"
+        ],
+        "transfer": true,
+        "readyAt": 1790091710389
+      },
+      "im-mia": {
+        "introducedAt": 1790091710345,
+        "confidence": 1,
+        "abilities": {
+          "listening": 0.048,
+          "meaning": 0.3564,
+          "writing": 0.936
+        },
+        "lastSeenTurn": 61,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-daily:im-mia:listen-vbbcab",
+          "sig-daily:im-mia:write-6kiunr",
+          "sig-daily:original:A1-01-02-r02-1e7cgbl",
+          "sig-daily:im-mia:expression-1i5bnt6",
+          "sig-daily:im-mia:order-pfwoow"
+        ],
+        "transfer": true,
+        "readyAt": 1790091711910
+      },
+      "whats-your-name": {
+        "introducedAt": 1790091711772,
+        "confidence": 0.384,
+        "abilities": {
+          "listening": 0.048,
+          "writing": 0.336
+        },
+        "lastSeenTurn": 62,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-daily:whats-your-name:listen-1yhc1zk",
+          "sig-daily:whats-your-name:write-1xkd022"
+        ],
+        "transfer": true,
+        "readyAt": 0
+      },
+      "my-name-is-ben": {
+        "introducedAt": 1790091711772,
+        "confidence": 0.40800000000000003,
+        "abilities": {
+          "meaning": 0.048,
+          "listening": 0.096,
+          "writing": 0.264
+        },
+        "lastSeenTurn": 60,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-daily:my-name-is-ben:meaning-1pq9za4",
+          "sig-daily:my-name-is-ben:listen-wqfse6",
+          "sig-daily:original:A1-01-06-e02-1eepf9s"
+        ],
+        "transfer": true,
+        "readyAt": 0
+      },
+      "my-name-is-mia": {
+        "introducedAt": 1790091711772,
+        "confidence": 0.4176,
+        "abilities": {
+          "meaning": 0.0816,
+          "writing": 0.336
+        },
+        "lastSeenTurn": 58,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-daily:my-name-is-mia:meaning-10js040",
+          "sig-daily:original:A1-01-06-r01-1qh8rck"
+        ],
+        "transfer": true,
+        "readyAt": 0
+      }
+    },
+    "sequence": [
+      {
+        "id": "A1-01-03-p-my-name-is-mia-meaning",
+        "kind": "choice",
+        "knowledgeIds": [
+          "my-name-is-mia"
+        ],
+        "signature": "daily:my-name-is-mia:meaning",
+        "outcome": "independent",
+        "turn": 51
+      },
+      {
+        "id": "A1-01-05-p-my-name-is-ben-meaning",
+        "kind": "choice",
+        "knowledgeIds": [
+          "my-name-is-ben"
+        ],
+        "signature": "daily:my-name-is-ben:meaning",
+        "outcome": "independent",
+        "turn": 52
+      },
+      {
+        "id": "A1-01-02-r02",
+        "kind": "write",
+        "knowledgeIds": [
+          "im-mia"
+        ],
+        "signature": "daily:original:A1-01-02-r02",
+        "outcome": "independent",
+        "turn": 53
+      },
+      {
+        "id": "A1-01-05-p-my-name-is-mia-meaning",
+        "kind": "choice",
+        "knowledgeIds": [
+          "my-name-is-mia"
+        ],
+        "signature": "daily:my-name-is-mia:meaning",
+        "outcome": "independent",
+        "turn": 54
+      },
+      {
+        "id": "A1-01-02-p-i-am-mia-expression",
+        "kind": "choice",
+        "knowledgeIds": [
+          "i-am-mia"
+        ],
+        "signature": "daily:i-am-mia:expression",
+        "outcome": "independent",
+        "turn": 55
+      },
+      {
+        "id": "A1-01-03-p-my-name-is-ben-listen",
+        "kind": "listen",
+        "knowledgeIds": [
+          "my-name-is-ben"
+        ],
+        "signature": "daily:my-name-is-ben:listen",
+        "outcome": "independent",
+        "turn": 56
+      },
+      {
+        "id": "A1-01-02-p-im-mia-expression",
+        "kind": "choice",
+        "knowledgeIds": [
+          "im-mia"
+        ],
+        "signature": "daily:im-mia:expression",
+        "outcome": "independent",
+        "turn": 57
+      },
+      {
+        "id": "A1-01-06-r01",
+        "kind": "write",
+        "knowledgeIds": [
+          "my-name-is-mia"
+        ],
+        "signature": "daily:original:A1-01-06-r01",
+        "outcome": "independent",
+        "turn": 58
+      },
+      {
+        "id": "A1-01-05-p-whats-your-name-listen",
+        "kind": "listen",
+        "knowledgeIds": [
+          "whats-your-name"
+        ],
+        "signature": "daily:whats-your-name:listen",
+        "outcome": "independent",
+        "turn": 59
+      },
+      {
+        "id": "A1-01-06-e02",
+        "kind": "fill",
+        "knowledgeIds": [
+          "my-name-is-ben"
+        ],
+        "signature": "daily:original:A1-01-06-e02",
+        "outcome": "independent",
+        "turn": 60
+      },
+      {
+        "id": "A1-01-05-p-im-mia-order",
+        "kind": "order",
+        "knowledgeIds": [
+          "im-mia"
+        ],
+        "signature": "daily:im-mia:order",
+        "outcome": "independent",
+        "turn": 61
+      },
+      {
+        "id": "A1-01-03-p-whats-your-name-write",
+        "kind": "write",
+        "knowledgeIds": [
+          "whats-your-name"
+        ],
+        "signature": "daily:whats-your-name:write",
+        "outcome": "independent",
+        "turn": 62
+      }
+    ]
+  },
+  {
+    "round": 6,
+    "plan": {
+      "version": 1,
+      "round": 6,
+      "focusIds": [
+        "whats-your-name",
+        "my-name-is-ben",
+        "my-name-is-mia",
+        "are-you-mia"
+      ],
+      "newIds": [
+        "are-you-mia"
+      ],
+      "sourceLessonId": "A1-01-04",
+      "seed": 1422306624,
+      "budget": 15
+    },
+    "answers": 15,
+    "readyIds": [
+      "hello",
+      "hi",
+      "goodbye",
+      "bye",
+      "i-am-ben",
+      "i-am-mia",
+      "im-ben",
+      "im-mia",
+      "my-name-is-ben"
+    ],
+    "targets": {
+      "hello": {
+        "introducedAt": 1790091705805,
+        "confidence": 1,
+        "abilities": {
+          "listening": 0.0816,
+          "meaning": 0.3936,
+          "writing": 0.8640000000000001
+        },
+        "lastSeenTurn": 38,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-daily:hello:meaning-1n6yth5",
+          "sig-daily:hello:letters-i68w2f",
+          "sig-daily:original:A1-01-01-e03-1z0ee2q",
+          "sig-daily:original:A1-01-01-e01-1ygf6os",
+          "sig-daily:hello:listen-13v4njx",
+          "sig-daily:hello:write-85j8t"
+        ],
+        "transfer": true,
+        "readyAt": 1790091709060
+      },
+      "hi": {
+        "introducedAt": 1790091705805,
+        "confidence": 1,
+        "abilities": {
+          "meaning": 0.312,
+          "writing": 0.672,
+          "listening": 0.096
+        },
+        "lastSeenTurn": 43,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-daily:hi:meaning-txk7vi",
+          "sig-daily:original:A1-01-01-e04-1xmgdlv",
+          "sig-daily:hi:write-vanw8y",
+          "sig-daily:hi:listen-1vux07s",
+          "sig-daily:hi:expression-1deq5oh"
+        ],
+        "transfer": true,
+        "readyAt": 1790091707771
+      },
+      "goodbye": {
+        "introducedAt": 1790091705805,
+        "confidence": 1,
+        "abilities": {
+          "listening": 0.096,
+          "meaning": 0.3564,
+          "writing": 0.9072000000000001
+        },
+        "lastSeenTurn": 50,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-daily:original:A1-01-01-e02-99xsl",
+          "sig-daily:goodbye:listen-1sw0y6g",
+          "sig-daily:original:A1-01-06-e04-1g2n1fm",
+          "sig-daily:goodbye:expression-1stu4b5",
+          "sig-daily:goodbye:write-1wrameq"
+        ],
+        "transfer": true,
+        "readyAt": 1790091707455
+      },
+      "bye": {
+        "introducedAt": 1790091705805,
+        "confidence": 1,
+        "abilities": {
+          "listening": 0.5304,
+          "meaning": 0.36,
+          "writing": 0.4536
+        },
+        "lastSeenTurn": 45,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-daily:bye:meaning-1m86ikh",
+          "sig-daily:original:A1-01-01-r01-14hv829",
+          "sig-daily:bye:write-gyro3p",
+          "sig-daily:bye:expression-1gbc3e0",
+          "sig-daily:bye:listen-1qbfyn9"
+        ],
+        "transfer": true,
+        "readyAt": 1790091710699
+      },
+      "i-am-ben": {
+        "introducedAt": 1790091707367,
+        "confidence": 1,
+        "abilities": {
+          "meaning": 0.312,
+          "writing": 0.8640000000000001,
+          "listening": 0.1296
+        },
+        "lastSeenTurn": 40,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-daily:i-am-ben:meaning-y3vt4d",
+          "sig-daily:original:A1-01-02-e03-ypjclr",
+          "sig-daily:i-am-ben:order-mavzem",
+          "sig-daily:i-am-ben:write-403zvl",
+          "sig-daily:i-am-ben:listen-m5cjxd",
+          "sig-daily:i-am-ben:expression-op8xxg"
+        ],
+        "transfer": true,
+        "readyAt": 1790091708177
+      },
+      "i-am-mia": {
+        "introducedAt": 1790091708928,
+        "confidence": 1,
+        "abilities": {
+          "meaning": 0.438,
+          "writing": 0.8640000000000001
+        },
+        "lastSeenTurn": 67,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-daily:original:A1-01-02-r01-1dddn8o",
+          "sig-daily:i-am-mia:write-1u8y55x",
+          "sig-daily:i-am-mia:meaning-osus81",
+          "sig-daily:i-am-mia:order-1yz3376",
+          "sig-daily:i-am-mia:expression-3isrrc"
+        ],
+        "transfer": true,
+        "readyAt": 1790091710922
+      },
+      "im-ben": {
+        "introducedAt": 1790091708928,
+        "confidence": 1,
+        "abilities": {
+          "meaning": 0.312,
+          "writing": 0.6924000000000001
+        },
+        "lastSeenTurn": 47,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-daily:im-ben:meaning-klg9sr",
+          "sig-daily:original:A1-01-02-e05-y5k57t",
+          "sig-daily:im-ben:expression-1346ma6",
+          "sig-daily:im-ben:order-1bvl4t0"
+        ],
+        "transfer": true,
+        "readyAt": 1790091710389
+      },
+      "im-mia": {
+        "introducedAt": 1790091710345,
+        "confidence": 1,
+        "abilities": {
+          "listening": 0.048,
+          "meaning": 0.3564,
+          "writing": 0.936
+        },
+        "lastSeenTurn": 61,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-daily:im-mia:listen-vbbcab",
+          "sig-daily:im-mia:write-6kiunr",
+          "sig-daily:original:A1-01-02-r02-1e7cgbl",
+          "sig-daily:im-mia:expression-1i5bnt6",
+          "sig-daily:im-mia:order-pfwoow"
+        ],
+        "transfer": true,
+        "readyAt": 1790091711910
+      },
+      "whats-your-name": {
+        "introducedAt": 1790091711772,
+        "confidence": 0.5976,
+        "abilities": {
+          "listening": 0.048,
+          "writing": 0.4536,
+          "meaning": 0.096
+        },
+        "lastSeenTurn": 71,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-daily:whats-your-name:listen-1yhc1zk",
+          "sig-daily:whats-your-name:write-1xkd022",
+          "sig-daily:whats-your-name:meaning-f0qpzq"
+        ],
+        "transfer": true,
+        "readyAt": 0
+      },
+      "my-name-is-ben": {
+        "introducedAt": 1790091711772,
+        "confidence": 1,
+        "abilities": {
+          "meaning": 0.312,
+          "listening": 0.096,
+          "writing": 1
+        },
+        "lastSeenTurn": 76,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-daily:my-name-is-ben:meaning-1pq9za4",
+          "sig-daily:my-name-is-ben:listen-wqfse6",
+          "sig-daily:original:A1-01-06-e02-1eepf9s",
+          "sig-daily:my-name-is-ben:expression-1hvvo3",
+          "sig-daily:original:A1-01-03-r02-1li7aaq",
+          "sig-daily:my-name-is-ben:order-1gqpbkv",
+          "sig-daily:my-name-is-ben:write-1tnrxgk"
+        ],
+        "transfer": true,
+        "readyAt": 1790091713762
+      },
+      "my-name-is-mia": {
+        "introducedAt": 1790091711772,
+        "confidence": 0.8952,
+        "abilities": {
+          "meaning": 0.0816,
+          "writing": 0.4536,
+          "listening": 0.36
+        },
+        "lastSeenTurn": 75,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-daily:my-name-is-mia:meaning-10js040",
+          "sig-daily:original:A1-01-03-e02-17tk3h7",
+          "sig-daily:original:A1-01-06-r01-1qh8rck",
+          "sig-daily:my-name-is-mia:listen-12sf1oy"
+        ],
+        "transfer": true,
+        "readyAt": 0
+      },
+      "are-you-mia": {
+        "introducedAt": 1790091713317,
+        "confidence": 0.7644,
+        "abilities": {
+          "meaning": 0.048,
+          "writing": 0.6204000000000001,
+          "listening": 0.096
+        },
+        "lastSeenTurn": 77,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-daily:are-you-mia:meaning-1ma881d",
+          "sig-daily:are-you-mia:order-1blb4ua",
+          "sig-daily:original:A1-01-04-e03-512h2d",
+          "sig-daily:are-you-mia:listen-1aheqd1"
+        ],
+        "transfer": true,
+        "readyAt": 0
+      }
+    },
+    "sequence": [
+      {
+        "id": "A1-01-04-p-are-you-mia-meaning",
+        "kind": "choice",
+        "knowledgeIds": [
+          "are-you-mia"
+        ],
+        "signature": "daily:are-you-mia:meaning",
+        "outcome": "independent",
+        "turn": 63
+      },
+      {
+        "id": "A1-01-05-p-my-name-is-ben-expression",
+        "kind": "choice",
+        "knowledgeIds": [
+          "my-name-is-ben"
+        ],
+        "signature": "daily:my-name-is-ben:expression",
+        "outcome": "independent",
+        "turn": 64
+      },
+      {
+        "id": "A1-01-03-e02",
+        "kind": "listen",
+        "knowledgeIds": [
+          "my-name-is-mia"
+        ],
+        "signature": "daily:original:A1-01-03-e02",
+        "outcome": "independent",
+        "turn": 65
+      },
+      {
+        "id": "A1-01-04-p-are-you-mia-order",
+        "kind": "order",
+        "knowledgeIds": [
+          "are-you-mia"
+        ],
+        "signature": "daily:are-you-mia:order",
+        "outcome": "independent",
+        "turn": 66
+      },
+      {
+        "id": "A1-01-02-p-i-am-mia-expression",
+        "kind": "choice",
+        "knowledgeIds": [
+          "i-am-mia"
+        ],
+        "signature": "daily:i-am-mia:expression",
+        "outcome": "independent",
+        "turn": 67
+      },
+      {
+        "id": "A1-01-03-p-whats-your-name-write",
+        "kind": "write",
+        "knowledgeIds": [
+          "whats-your-name"
+        ],
+        "signature": "daily:whats-your-name:write",
+        "outcome": "independent",
+        "turn": 68
+      },
+      {
+        "id": "A1-01-03-r02",
+        "kind": "fill",
+        "knowledgeIds": [
+          "my-name-is-ben"
+        ],
+        "signature": "daily:original:A1-01-03-r02",
+        "outcome": "independent",
+        "turn": 69
+      },
+      {
+        "id": "A1-01-06-p-are-you-mia-order",
+        "kind": "order",
+        "knowledgeIds": [
+          "are-you-mia"
+        ],
+        "signature": "daily:are-you-mia:order",
+        "outcome": "independent",
+        "turn": 70
+      },
+      {
+        "id": "A1-01-05-p-whats-your-name-meaning",
+        "kind": "choice",
+        "knowledgeIds": [
+          "whats-your-name"
+        ],
+        "signature": "daily:whats-your-name:meaning",
+        "outcome": "independent",
+        "turn": 71
+      },
+      {
+        "id": "A1-01-06-r01",
+        "kind": "write",
+        "knowledgeIds": [
+          "my-name-is-mia"
+        ],
+        "signature": "daily:original:A1-01-06-r01",
+        "outcome": "independent",
+        "turn": 72
+      },
+      {
+        "id": "A1-01-05-p-my-name-is-ben-order",
+        "kind": "order",
+        "knowledgeIds": [
+          "my-name-is-ben"
+        ],
+        "signature": "daily:my-name-is-ben:order",
+        "outcome": "independent",
+        "turn": 73
+      },
+      {
+        "id": "A1-01-04-e03",
+        "kind": "fill",
+        "knowledgeIds": [
+          "are-you-mia"
+        ],
+        "signature": "daily:original:A1-01-04-e03",
+        "outcome": "independent",
+        "turn": 74
+      },
+      {
+        "id": "A1-01-06-p-my-name-is-mia-listen",
+        "kind": "listen",
+        "knowledgeIds": [
+          "my-name-is-mia"
+        ],
+        "signature": "daily:my-name-is-mia:listen",
+        "outcome": "independent",
+        "turn": 75
+      },
+      {
+        "id": "A1-01-06-p-my-name-is-ben-write",
+        "kind": "write",
+        "knowledgeIds": [
+          "my-name-is-ben"
+        ],
+        "signature": "daily:my-name-is-ben:write",
+        "outcome": "independent",
+        "turn": 76
+      },
+      {
+        "id": "A1-01-06-p-are-you-mia-listen",
+        "kind": "listen",
+        "knowledgeIds": [
+          "are-you-mia"
+        ],
+        "signature": "daily:are-you-mia:listen",
+        "outcome": "independent",
+        "turn": 77
+      }
+    ]
+  }
+]

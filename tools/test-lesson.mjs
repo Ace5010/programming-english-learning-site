@@ -24,33 +24,49 @@ const make = (id, word, meaning, example = `The ${word} is here. Use ${word} aga
 const pool = [make(9001, 'apple', '苹果'), make(9002, 'book', '书本'), make(9003, 'cat', '猫咪'), make(9004, 'desk', '桌子'), make(9005, 'egg', '鸡蛋')];
 const resultsFor = (task, outcome = 'independent') => task.words.map(word => ({ wordId: word.id, outcome }));
 const answer = (lesson, outcome = 'independent') => nextLesson(answerLesson(lesson, resultsFor(lesson.tasks[lesson.index], outcome)));
+const abilities = ['meaning', 'spelling', 'listening', 'context'];
+const withWeakAbility = (words, ability) => Object.fromEntries(words.map(word => [word.id,
+  Object.fromEntries(abilities.map(candidate => [candidate, candidate === ability
+    ? { ...review.getSkill({}, word.id, candidate), needsPractice: true, dueAt: at(14), lastPracticedAt: at(13), lastFailureDay: '2026-09-13' }
+    : { ...review.getSkill({}, word.id, candidate), dueAt: at(25), lastPracticedAt: at(12), lastSuccessDay: '2026-09-12', streak: 2, intervalDays: 14 },
+  ])),
+]));
 
-test('five words produce the requested ten-task mixed lesson with real three-word pairing', () => {
+test('five words begin with reading when no ability has evidence, with bounded follow-up practice', () => {
   const lesson = createLesson(pool, {}, {}, at(14));
   assert.equal(lesson.tasks.length, 10);
-  assert.deepEqual(lesson.tasks.map(task => task.kind), ['meaning', 'meaning', 'pairs', 'listen', 'cloze', 'dictation', 'cloze', 'dictation', 'dictation', 'dictation']);
-  assert.deepEqual(lesson.tasks[2].words.map(word => word.id), [9003, 9004, 9005]);
-  assert.equal(lesson.tasks[2].options.length, 3);
+  for (const word of pool) {
+    const appearances = lesson.tasks.filter(task => task.words.some(candidate => candidate.id === word.id));
+    assert.equal(appearances.length, 2);
+    assert.equal(appearances[0].kind, 'context');
+    assert.equal(appearances[0].evidence[0].ability, 'context');
+    assert.equal(appearances[0].evidence[0].exposed, false);
+    assert.equal(appearances[1].evidence[0].exposed, true);
+  }
   assert.equal(new Set(lesson.tasks.map(task => task.id)).size, lesson.tasks.length);
   assert.deepEqual(lesson.items, pool);
 });
 
 test('each word has one unexposed first encounter and all later practice is exposed', () => {
-  const lesson = createLesson(pool, {}, {}, at(14));
-  const seen = new Set();
-  for (const task of lesson.tasks) {
-    for (const evidence of task.evidence) {
-      assert.equal(evidence.exposed, seen.has(evidence.wordId));
-      seen.add(evidence.wordId);
+  for (const progress of [{}, ...abilities.map(ability => withWeakAbility(pool, ability))]) {
+    const lesson = createLesson(pool, progress, {}, at(14));
+    const seen = new Set();
+    for (const task of lesson.tasks) {
+      for (const evidence of task.evidence) {
+        assert.equal(evidence.exposed, seen.has(evidence.wordId));
+        seen.add(evidence.wordId);
+      }
     }
-  }
-  assert.equal(seen.size, 5);
-  for (const task of lesson.tasks.filter(task => task.kind === 'listen')) {
-    assert.equal(task.evidence[0].ability, 'spelling');
-    assert.equal(task.evidence[0].exposed, true);
-  }
-  for (const task of lesson.tasks.filter(task => ['cloze', 'meaning', 'pairs'].includes(task.kind))) {
-    assert.ok(task.evidence.every(evidence => evidence.ability === 'meaning'));
+    assert.equal(seen.size, 5);
+    for (const task of lesson.tasks.filter(task => task.kind === 'listen')) {
+      assert.equal(task.evidence[0].ability, 'listening');
+    }
+    for (const task of lesson.tasks.filter(task => ['meaning', 'pairs'].includes(task.kind))) {
+      assert.ok(task.evidence.every(evidence => evidence.ability === 'meaning'));
+    }
+    for (const task of lesson.tasks.filter(task => ['cloze', 'context'].includes(task.kind))) {
+      assert.ok(task.evidence.every(evidence => evidence.ability === 'context'));
+    }
   }
 });
 
@@ -80,44 +96,77 @@ test('a weak spelling ability gets an unexposed dictation before seeing the word
   assert.equal(lesson.tasks.find(task => task.kind === 'dictation' && task.words[0].id === 9001 && task.evidence[0].exposed).difficulty, 1);
 });
 
-test('later harder dictation and listening choices do not inflate spelling progress', () => {
-  const lesson = createLesson(pool, {}, {}, at(14));
-  let progress = {};
+test('the first exercise follows each real due weakness instead of a fixed mixed-question order', () => {
+  for (const [ability, kind] of [['meaning', 'meaning'], ['spelling', 'dictation'], ['listening', 'listen'], ['context', 'context']]) {
+    const lesson = createLesson(pool, withWeakAbility(pool, ability), {}, at(14));
+    for (const word of pool) {
+      const first = lesson.tasks.find(task => task.words.some(candidate => candidate.id === word.id));
+      const evidence = first.evidence.find(candidate => candidate.wordId === word.id);
+      assert.equal(evidence.ability, ability);
+      assert.equal(evidence.exposed, false);
+      assert.ok(first.kind === kind || ability === 'meaning' && first.kind === 'pairs');
+    }
+  }
+});
+
+test('listening lessons record listening alone and context lessons record context alone', () => {
+  for (const [ability, untouched] of [['listening', 'spelling'], ['context', 'meaning']]) {
+    let progress = withWeakAbility(pool, ability);
+    const before = structuredClone(progress);
+    const lesson = createLesson(pool, progress, {}, at(14));
+    assert.ok(lesson.tasks.length > 0);
+    for (const task of lesson.tasks) {
+      assert.ok(task.evidence.every(evidence => evidence.ability === ability));
+      for (const evidence of task.evidence) progress = review.updateReviewProgress(progress, evidence, 'independent', at(14));
+    }
+    for (const word of pool) {
+      assert.equal(review.getSkill(progress, word.id, ability).streak, 1);
+      assert.equal(review.getSkill(progress, word.id, ability).attempts, 2);
+      assert.deepEqual(review.getSkill(progress, word.id, untouched), review.getSkill(before, word.id, untouched));
+      for (const sibling of abilities.filter(candidate => candidate !== ability)) {
+        assert.deepEqual(review.getSkill(progress, word.id, sibling), review.getSkill(before, word.id, sibling));
+      }
+    }
+  }
+});
+
+test('a harder follow-up dictation cannot add delayed-recall evidence beyond the first answer', () => {
+  let progress = withWeakAbility(pool, 'spelling');
+  const lesson = createLesson(pool, progress, {}, at(14));
   for (const task of lesson.tasks) {
     for (const evidence of task.evidence) progress = review.updateReviewProgress(progress, evidence, 'independent', at(14));
   }
   for (const word of pool) {
-    assert.equal(review.getSkill(progress, word.id, 'meaning').streak, 1);
-    assert.equal(review.getSkill(progress, word.id, 'spelling').streak, 0);
+    assert.equal(review.getSkill(progress, word.id, 'spelling').streak, 1);
     assert.equal(review.getSkill(progress, word.id, 'spelling').level, 0);
+    assert.equal(review.getSkill(progress, word.id, 'spelling').lastSuccessDay, '2026-09-14');
+    assert.equal(review.getSkill(progress, word.id, 'spelling').dueAt, at(15));
   }
 });
 
 test('a failed established dictation lowers its remaining practice instead of keeping a harder challenge', () => {
-  let progress = {};
-  for (const day of [10, 11, 12, 13]) {
-    progress = review.updateReviewProgress(progress, { wordId: 9001, ability: 'spelling', level: review.getSkill(progress, 9001, 'spelling').level, retry: false }, 'independent', at(day));
-  }
-  progress = review.updateReviewProgress(progress, { wordId: 9001, ability: 'meaning', level: 0, retry: false }, 'independent', at(14));
+  const progress = withWeakAbility([pool[0]], 'spelling');
+  progress[9001].spelling.level = 2;
   const lesson = createLesson([pool[0]], progress, {}, at(14));
-  assert.deepEqual(lesson.tasks.map(task => [task.kind, task.difficulty]), [['dictation', 2], ['listen', 2], ['dictation', 3]]);
+  const followUpIndex = lesson.tasks.findIndex(task => task.kind === 'dictation' && task.evidence[0].exposed);
+  assert.equal(lesson.tasks[0].kind, 'dictation');
+  assert.equal(lesson.tasks[0].difficulty, 2);
+  assert.ok(followUpIndex > 0);
+  assert.equal(lesson.tasks[followUpIndex].difficulty, 3);
   for (const outcome of ['assisted', 'revealed']) {
     const updated = answerLesson(lesson, resultsFor(lesson.tasks[0], outcome));
     assert.equal(updated.tasks[0].difficulty, 2);
     assert.equal(updated.results[0].task.difficulty, 2);
-    assert.equal(updated.tasks[2].difficulty, 1);
-    assert.equal(updated.tasks[2].evidence[0].level, 1);
-    assert.equal(lesson.tasks[2].difficulty, 3);
+    assert.equal(updated.tasks[followUpIndex].difficulty, 1);
+    assert.equal(updated.tasks[followUpIndex].evidence[0].level, 1);
+    assert.equal(lesson.tasks[followUpIndex].difficulty, 3);
   }
 });
 
 test('a failed harder challenge reduces future dictation to the established level and preserves other words', () => {
-  let progress = {};
+  const progress = withWeakAbility(pool, 'spelling');
   for (const word of pool) {
-    for (const day of [10, 11, 12, 13]) {
-      progress = review.updateReviewProgress(progress, { wordId: word.id, ability: 'spelling', level: review.getSkill(progress, word.id, 'spelling').level, retry: false }, 'independent', at(day));
-    }
-    progress = review.updateReviewProgress(progress, { wordId: word.id, ability: 'meaning', level: 0, retry: false }, 'independent', at(14));
+    progress[word.id].spelling.level = 2;
   }
   let lesson = createLesson(pool, progress, {}, at(14));
   const targetIndex = lesson.tasks.findIndex(task => task.kind === 'dictation' && task.words[0].id === 9001 && task.difficulty === 3);
@@ -137,17 +186,30 @@ test('a failed harder challenge reduces future dictation to the established leve
 });
 
 test('meaning mistakes do not reduce planned spelling difficulty', () => {
-  const lesson = createLesson(pool, {}, {}, at(14));
+  const progress = withWeakAbility(pool, 'meaning');
+  for (const word of pool) {
+    progress[word.id].meaning.needsPractice = false;
+    progress[word.id].meaning.dueAt = at(13);
+    progress[word.id].spelling.dueAt = at(14);
+    progress[word.id].spelling.level = 2;
+  }
+  const lesson = createLesson(pool, progress, {}, at(14));
   const before = lesson.tasks.filter(task => task.kind === 'dictation');
+  assert.equal(lesson.tasks[0].evidence[0].ability, 'meaning');
+  assert.equal(before.length, pool.length, 'the preservation check must exercise real pending dictations');
   const updated = answerLesson(lesson, resultsFor(lesson.tasks[0], 'revealed'));
   for (const task of before) assert.deepEqual(updated.tasks.find(candidate => candidate.id === task.id), task);
 });
 
 test('pairing records each word separately and rejects incomplete or duplicated results', () => {
-  let lesson = createLesson(pool, {}, {}, at(14));
-  lesson = answer(answer(lesson));
+  let lesson = createLesson(pool, withWeakAbility(pool, 'meaning'), {}, at(14));
+  const pairIndex = lesson.tasks.findIndex(task => task.kind === 'pairs');
+  assert.ok(pairIndex >= 0);
+  while (lesson.index < pairIndex) lesson = answer(lesson);
   const pairTask = lesson.tasks[lesson.index];
   assert.equal(pairTask.kind, 'pairs');
+  assert.deepEqual(pairTask.words.map(word => word.id), [9003, 9004, 9005]);
+  assert.equal(pairTask.options.length, 3);
   assert.throws(() => answerLesson(lesson, [{ wordId: 9003, outcome: 'independent' }]));
   assert.throws(() => answerLesson(lesson, [{ wordId: 9003, outcome: 'independent' }, { wordId: 9003, outcome: 'revealed' }, { wordId: 9005, outcome: 'assisted' }]));
   const submitted = answerLesson(lesson, [{ wordId: 9003, outcome: 'independent' }, { wordId: 9004, outcome: 'assisted' }, { wordId: 9005, outcome: 'revealed' }]);
@@ -161,20 +223,23 @@ test('pairing records each word separately and rejects incomplete or duplicated 
 
 test('single, two, three and four-word pools stay valid without self-answering one-pair tasks', () => {
   for (let size = 0; size <= 4; size++) {
-    let lesson = createLesson(pool.slice(0, size), {}, {}, at(14));
-    assert.equal(lesson.items.length, size);
-    assert.ok(lesson.tasks.length < 10);
-    assert.ok(lesson.tasks.every(task => task.kind !== 'pairs' || task.words.length >= 2));
-    assert.ok(lesson.tasks.every(task => task.kind === 'dictation' || task.options.length >= 2));
-    while (!lesson.finished) lesson = answer(lesson, 'assisted');
-    assert.ok(lesson.tasks.length <= 15);
-    if (size === 1) assert.equal(lesson.tasks.filter(task => task.retry).length, 0);
+    const words = pool.slice(0, size);
+    for (const progress of [{}, withWeakAbility(words, 'meaning')]) {
+      let lesson = createLesson(words, progress, {}, at(14));
+      assert.equal(lesson.items.length, size);
+      assert.ok(lesson.tasks.length < 10);
+      assert.ok(lesson.tasks.every(task => task.kind !== 'pairs' || task.words.length >= 2));
+      assert.ok(lesson.tasks.every(task => task.kind === 'dictation' || task.options.length >= 2));
+      while (!lesson.finished) lesson = answer(lesson, 'assisted');
+      assert.ok(lesson.tasks.length <= 15);
+      if (size === 1) assert.equal(lesson.tasks.filter(task => task.retry).length, 0);
+    }
   }
 });
 
 test('overlapping pair meanings are split into unambiguous individual tasks', () => {
   const overlapping = pool.map((word, index) => index < 2 ? word : { ...word, meaning: '代码仓库' });
-  const lesson = createLesson(overlapping, {}, {}, at(14));
+  const lesson = createLesson(overlapping, withWeakAbility(overlapping, 'meaning'), {}, at(14));
   assert.equal(lesson.tasks.length, 10);
   assert.equal(lesson.tasks.some(task => task.kind === 'pairs'), false);
   assert.equal(lesson.tasks.filter(task => task.evidence.some(evidence => !evidence.exposed)).length, 5);
@@ -199,18 +264,22 @@ test('unlimited mistakes still create no more than one spaced retry per word and
   }
 });
 
-test('meaning correction changes exercise form and dictation correction supplies an easier level', () => {
-  let lesson = createLesson(pool, {}, {}, at(14));
+test('context correction changes exercise form and dictation correction supplies an easier level', () => {
+  let lesson = createLesson(pool, withWeakAbility(pool, 'context'), {}, at(14));
   lesson = answer(lesson, 'assisted');
-  const retryMeaning = lesson.tasks.find(task => task.retry && task.words[0].id === 9001);
-  assert.equal(retryMeaning.kind, 'cloze');
-  while (lesson.index < 5) lesson = answer(lesson);
-  assert.equal(lesson.tasks[5].kind, 'dictation');
+  const retryContext = lesson.tasks.find(task => task.retry && task.words[0].id === 9001);
+  assert.equal(retryContext.kind, 'cloze');
+  assert.equal(retryContext.evidence[0].ability, 'context');
+  const progress = withWeakAbility(pool, 'spelling');
+  progress[9001].spelling.level = 1;
+  lesson = createLesson(pool, progress, {}, at(14));
+  const firstDictation = lesson.tasks[0];
+  assert.equal(firstDictation.kind, 'dictation');
   lesson = answer(lesson, 'revealed');
-  const retrySpelling = lesson.tasks.find(task => task.retry && task.words[0].id === 9003);
+  const retrySpelling = lesson.tasks.find(task => task.retry && task.words[0].id === 9001);
   assert.equal(retrySpelling.kind, 'dictation');
   assert.equal(retrySpelling.difficulty, 0);
-  assert.ok(retrySpelling.difficulty < lesson.tasks[5].difficulty);
+  assert.ok(retrySpelling.difficulty < firstDictation.difficulty);
 });
 
 test('the last word error waits for another session when no different word can intervene', () => {
@@ -259,9 +328,18 @@ test('choice options exclude overlaps, duplicates and broad multiple meanings, w
 });
 
 test('summaries do not claim independent dictation from listening recognition or exposed follow-ups', () => {
-  let lesson = createLesson(pool, {}, {}, at(14));
-  while (lesson.index < 4) lesson = answer(lesson);
+  let lesson = createLesson(pool, withWeakAbility(pool, 'listening'), {}, at(14));
+  lesson = answer(lesson);
   assert.match(summarizeLesson(lesson, 9001).spelling, /听音选出单词，完整听写留待后续练习/);
+  assert.match(summarizeLesson(lesson, 9001).listening, /本轮独立完成/);
+  assert.doesNotMatch(summarizeLesson(lesson, 9001).meaning, /独立辨认|本轮侧重拼写/);
+  const progress = withWeakAbility(pool, 'meaning');
+  for (const word of pool) {
+    progress[word.id].meaning.needsPractice = false;
+    progress[word.id].meaning.dueAt = at(13);
+    progress[word.id].spelling.dueAt = at(14);
+  }
+  lesson = createLesson(pool, progress, {}, at(14));
   while (!lesson.finished) lesson = answer(lesson);
   assert.match(summarizeLesson(lesson, 9001).meaning, /独立辨认/);
   assert.match(summarizeLesson(lesson, 9001).spelling, /本轮看过该词后/);

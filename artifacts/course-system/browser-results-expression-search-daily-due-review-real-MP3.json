@@ -1,0 +1,22 @@
+{
+  "scenarios": [
+    {
+      "name": "daily: expression search, learned filter and favorites persist independently",
+      "durationMs": 936
+    },
+    {
+      "name": "daily: due review opens real saved knowledge and records an answer",
+      "durationMs": 583
+    },
+    {
+      "name": "real MP3 playback uses revised word and example assets in both voices",
+      "durationMs": 805
+    }
+  ],
+  "failures": [],
+  "browserErrors": [],
+  "mainExercises": 0,
+  "selfChecks": 0,
+  "microphoneTested": false,
+  "testedAt": "2026-09-22T15:11:38.888Z"
+}

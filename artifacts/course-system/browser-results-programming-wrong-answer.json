@@ -1,0 +1,14 @@
+{
+  "scenarios": [
+    {
+      "name": "programming: wrong answer and help stay in their measured abilities after correction",
+      "durationMs": 1380
+    }
+  ],
+  "failures": [],
+  "browserErrors": [],
+  "mainExercises": 0,
+  "selfChecks": 0,
+  "microphoneTested": false,
+  "testedAt": "2026-09-22T15:19:39.471Z"
+}

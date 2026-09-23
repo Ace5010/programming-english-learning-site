@@ -1,0 +1,168 @@
+{
+  "sources": [
+    "browser-results.json",
+    "browser-results-expression-search-daily-due-review-real-MP3.json",
+    "browser-results-programming-review-adapter-programming-future-due-programming-due-review-program.json",
+    "browser-results-programming-wrong-answer.json"
+  ],
+  "passedScenarios": [
+    {
+      "name": "corrupt JSON preserved: codewords-daily-v1",
+      "passed": true,
+      "durationMs": 698,
+      "source": "browser-results.json"
+    },
+    {
+      "name": "corrupt JSON preserved: codewords-programming-course-v1",
+      "passed": true,
+      "durationMs": 920,
+      "source": "browser-results.json"
+    },
+    {
+      "name": "corrupt JSON preserved: codewords-review-v1",
+      "passed": true,
+      "durationMs": 724,
+      "source": "browser-results.json"
+    },
+    {
+      "name": "daily: 24 sequential lessons, 120 real UI answers and reload",
+      "passed": true,
+      "durationMs": 17109,
+      "source": "browser-results.json"
+    },
+    {
+      "name": "daily: draft, theme, section switch and refresh preserve current exercise",
+      "passed": true,
+      "durationMs": 1073,
+      "source": "browser-results.json"
+    },
+    {
+      "name": "daily: due review opens real saved knowledge and records an answer",
+      "passed": true,
+      "durationMs": 583,
+      "source": "browser-results-expression-search-daily-due-review-real-MP3.json"
+    },
+    {
+      "name": "daily: expression search, learned filter and favorites persist independently",
+      "passed": true,
+      "durationMs": 936,
+      "source": "browser-results-expression-search-daily-due-review-real-MP3.json"
+    },
+    {
+      "name": "daily: four themes at 1440px without horizontal overflow",
+      "passed": true,
+      "durationMs": 1914,
+      "source": "browser-results.json"
+    },
+    {
+      "name": "daily: four themes at 390px without horizontal overflow",
+      "passed": true,
+      "durationMs": 1466,
+      "source": "browser-results.json"
+    },
+    {
+      "name": "daily: voluntary early review uses learned material only",
+      "passed": true,
+      "durationMs": 488,
+      "source": "browser-results.json"
+    },
+    {
+      "name": "legacy enrollment preserves original keys, favorites and all 3620 library words",
+      "passed": true,
+      "durationMs": 714,
+      "source": "browser-results.json"
+    },
+    {
+      "name": "programming review adapter: context selects only its target ability",
+      "passed": true,
+      "durationMs": 1052,
+      "source": "browser-results-programming-review-adapter-programming-future-due-programming-due-review-program.json"
+    },
+    {
+      "name": "programming review adapter: listening selects only its target ability",
+      "passed": true,
+      "durationMs": 994,
+      "source": "browser-results-programming-review-adapter-programming-future-due-programming-due-review-program.json"
+    },
+    {
+      "name": "programming review adapter: meaning selects only its target ability",
+      "passed": true,
+      "durationMs": 939,
+      "source": "browser-results-programming-review-adapter-programming-future-due-programming-due-review-program.json"
+    },
+    {
+      "name": "programming review adapter: spelling selects only its target ability",
+      "passed": true,
+      "durationMs": 907,
+      "source": "browser-results-programming-review-adapter-programming-future-due-programming-due-review-program.json"
+    },
+    {
+      "name": "programming review adapter: word correction clears scene weakness and storage updates refresh it",
+      "passed": true,
+      "durationMs": 651,
+      "source": "browser-results-programming-review-adapter-programming-future-due-programming-due-review-program.json"
+    },
+    {
+      "name": "programming: 24 sequential lessons, 120 real UI answers and reload",
+      "passed": true,
+      "durationMs": 22129,
+      "source": "browser-results.json"
+    },
+    {
+      "name": "programming: draft, theme, section switch and refresh preserve current exercise",
+      "passed": true,
+      "durationMs": 1212,
+      "source": "browser-results-programming-review-adapter-programming-future-due-programming-due-review-program.json"
+    },
+    {
+      "name": "programming: due review excludes future-only vocabulary",
+      "passed": true,
+      "durationMs": 479,
+      "source": "browser-results-programming-review-adapter-programming-future-due-programming-due-review-program.json"
+    },
+    {
+      "name": "programming: four themes at 1440px without horizontal overflow",
+      "passed": true,
+      "durationMs": 1992,
+      "source": "browser-results.json"
+    },
+    {
+      "name": "programming: four themes at 390px without horizontal overflow",
+      "passed": true,
+      "durationMs": 1391,
+      "source": "browser-results.json"
+    },
+    {
+      "name": "programming: future due dates separate automatic and voluntary practice",
+      "passed": true,
+      "durationMs": 537,
+      "source": "browser-results-programming-review-adapter-programming-future-due-programming-due-review-program.json"
+    },
+    {
+      "name": "programming: wrong answer and help stay in their measured abilities after correction",
+      "passed": true,
+      "durationMs": 1380,
+      "source": "browser-results-programming-wrong-answer.json"
+    },
+    {
+      "name": "real MP3 playback uses revised word and example assets in both voices",
+      "passed": true,
+      "durationMs": 805,
+      "source": "browser-results-expression-search-daily-due-review-real-MP3.json"
+    }
+  ],
+  "remainingFailures": [],
+  "correctedTestAssumptions": [
+    "daily: expression search, learned filter and favorites persist independently",
+    "daily: due review opens real saved knowledge and records an answer",
+    "real MP3 playback uses revised word and example assets in both voices",
+    "programming: wrong answer and help stay in their measured abilities after correction"
+  ],
+  "mainExercises": 240.0,
+  "spokenExpressionSelfChecks": 12.0,
+  "microphoneTested": false,
+  "browserErrors": [
+    null
+  ],
+  "verifiedAt": "2026-09-22T15:19:39.471Z"
+}

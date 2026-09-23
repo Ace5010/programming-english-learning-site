@@ -58,7 +58,9 @@
 .daily-study-card > h2 { font-family: var(--display-font); font-size: 23px; margin: 0 0 12px; }
 .daily-study-explanation { white-space: pre-line; margin: 0 0 24px; color: var(--ink-soft); }
 .daily-phrases { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 32px; }
-.daily-phrase { display: flex; flex-direction: column; text-align: left; gap: 5px; width: 100%; padding: 20px 0; border: 0; border-top: 1px solid var(--line); background: transparent; }
+.daily-phrase { display: flex; flex-direction: column; gap: 5px; width: 100%; padding: 20px 0; border-top: 1px solid var(--line); }
+.daily-phrase-content { display: flex; flex: 0 1 auto; min-width: 0; padding: 0; border: 0; background: transparent; text-align: left; }
+.daily-inline-reading { display: flex; align-items: center; flex-wrap: wrap; gap: 4px 8px; min-width: 0; }
 .daily-phrase strong { font-family: var(--word-font); font-size: 23px; line-height: 1.45; font-weight: 500; display: flex; gap: 10px; align-items: baseline; overflow-wrap: anywhere; }
 .daily-phrase span { color: var(--muted); font-size: 16px; }
 .daily-phrase small { font: inherit; font-size: 14px; color: var(--muted); }
@@ -72,6 +74,14 @@
 .daily-audio-row { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 24px; }
 .daily-audio { display: inline-flex; align-items: center; justify-content: center; gap: 12px; border: 1px solid var(--accent-line); color: var(--accent-deep); border-radius: 12px; padding: 13px 22px; background: var(--accent-soft); min-height: 52px; }
 .daily-audio.playing { border-color: var(--accent); }
+.daily-inline-slow { display: inline-flex; flex: 0 0 auto; align-items: center; justify-content: center; min-width: 42px; min-height: 36px; padding: 5px 8px; border: 1px solid transparent; border-radius: 7px; background: transparent; color: var(--muted); font-size: 14px; line-height: 1.5; white-space: nowrap; }
+.daily-inline-slow:hover:not(:disabled), .daily-inline-slow.playing { color: var(--accent-deep); border-color: var(--accent-line); background: var(--accent-soft); }
+.daily-inline-slow:active:not(:disabled) { transform: translateY(1px); }
+.daily-inline-slow:focus-visible, .daily-phrase-content:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+.daily-inline-slow:disabled { opacity: .5; }
+.daily-feedback-audio, .daily-sample-audio { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; }
+.daily-sample-audio { margin-top: 8px; }
+.daily-sample-audio > .daily-button { min-width: 0; overflow-wrap: anywhere; text-align: left; }
 .daily-options { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
 .daily-option { padding: 16px 20px; border: 1px solid var(--frame); border-radius: 12px; background: var(--surface); text-align: left; min-height: 62px; font-size: 18px; line-height: 1.5; }
 .daily-option:hover:not(:disabled), .daily-option[aria-pressed='true'] { background: var(--accent-soft); border-color: var(--accent); }
@@ -129,6 +139,30 @@
 .daily-content textarea { font-family: var(--sans); }
 .daily-workbook-filter { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-top: 18px; }
 .daily-workbook-filter select { font: inherit; padding: 8px 12px; border: 1px solid var(--frame); color: var(--ink); border-radius: 8px; background: var(--surface); }
+.daily-early-review { border-top: 1px solid var(--line); }
+.daily-early-review > summary { padding: 22px 28px; cursor: pointer; font-size: 17px; }
+.daily-early-review > summary:hover { color: var(--accent-deep); background: var(--accent-soft); }
+.daily-library-tools { display: flex; gap: 18px; flex-wrap: wrap; padding: 24px 28px; border-bottom: 1px solid var(--line); }
+.daily-library-tools label { display: grid; gap: 8px; font-size: 16px; }
+.daily-library-tools label:first-child { flex: 1 1 260px; }
+.daily-library-tools input, .daily-library-tools select { min-height: 44px; border: 1px solid var(--frame); border-radius: 8px; background: var(--surface-2); color: var(--ink); padding: 9px 12px; font: inherit; }
+.daily-expression-list { margin: 0; padding: 0; list-style: none; }
+.daily-expression { display: flex; gap: 20px; align-items: center; padding: 22px 28px; border-bottom: 1px solid var(--line); }
+.daily-expression:last-child { border-bottom: 0; }
+.daily-expression-copy { display: flex; flex: 1; min-width: 0; flex-direction: column; gap: 6px; }
+.daily-expression-content { display: flex; flex: 1; min-width: 0; flex-direction: column; gap: 6px; padding: 0; border: 0; background: transparent; text-align: left; }
+.daily-inline-reading > .daily-expression-content { flex: 0 1 auto; max-width: 100%; }
+.daily-expression-content strong { display: flex; align-items: baseline; gap: 10px; font-size: 22px; font-family: var(--word-font); font-weight: 500; overflow-wrap: anywhere; }
+.daily-expression-content span, .daily-expression-copy > span { color: var(--muted); font-size: 16px; }
+.daily-expression-content:hover strong, .daily-expression-content.playing strong { color: var(--accent-deep); }
+.daily-expression-content.playing .icon { animation: audio-breathe .8s ease-in-out infinite alternate; }
+.daily-expression-state { display: flex; align-items: center; gap: 16px; color: var(--muted); font-size: 15px; white-space: nowrap; }
+.daily-expression-star { display: grid; place-items: center; min-width: 44px; min-height: 44px; background: transparent; color: var(--muted); border: 1px solid transparent; border-radius: 8px; }
+.daily-expression-star:hover:not(:disabled), .daily-expression-star[aria-pressed='true'] { color: var(--accent-deep); background: var(--accent-soft); border-color: var(--accent-line); }
+.daily-expression-star[aria-pressed='true'] .icon { fill: currentColor; }
+.daily-content button:active:not(:disabled) { transform: translateY(1px); }
+.daily-content button:focus-visible, .daily-content summary:focus-visible, .daily-library-tools input:focus-visible, .daily-library-tools select:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+@media (max-width: 600px) { .daily-library-tools { padding: 20px; } .daily-expression { padding: 20px; gap: 12px; align-items: flex-start; } .daily-expression-content strong { font-size: 20px; } .daily-expression-state { flex-direction: column-reverse; gap: 8px; } .daily-early-review > summary { padding: 20px; } }
 .daily-enter { animation: daily-enter .23s var(--ease) both; }
 .speech-mode { display: inline-flex; flex-wrap: wrap; gap: 4px; padding: 4px; border: 1px solid var(--frame); border-radius: 12px; background: var(--surface-2); }
 .speech-mode button { padding: 9px 17px; min-height: 42px; border: 1px solid transparent; border-radius: 9px; background: transparent; font: inherit; }

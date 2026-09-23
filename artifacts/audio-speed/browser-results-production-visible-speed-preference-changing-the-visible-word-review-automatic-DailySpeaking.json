@@ -1,0 +1,316 @@
+{
+  "baseURL": "http://localhost:5186/dist/",
+  "production": true,
+  "loadedApplicationScripts": [
+    "http://localhost:5186/dist/assets/index-i6x88asz.js"
+  ],
+  "testedAt": "2026-09-22T16:18:57.273Z",
+  "scenarios": [
+    {
+      "name": "visible speed preference follows libraries, review rows, voices and refresh",
+      "durationMs": 4921
+    },
+    {
+      "name": "changing the visible speed changes a real playing clip without stopping it",
+      "durationMs": 985,
+      "evidence": {
+        "phraseId": "mia-introduction",
+        "events": [
+          {
+            "id": 0,
+            "type": "playing",
+            "src": "http://localhost:5186/dist/audio/daily/aria/mia-introduction.mp3?v=She%20is%20Mia.%20She%20is%20from%20Japan.%20She%20is%20a%20student.",
+            "rate": 1,
+            "duration": 6,
+            "currentTime": 0,
+            "paused": false,
+            "ended": false,
+            "preservesPitch": true
+          },
+          {
+            "id": 0,
+            "type": "ratechange",
+            "src": "http://localhost:5186/dist/audio/daily/aria/mia-introduction.mp3?v=She%20is%20Mia.%20She%20is%20from%20Japan.%20She%20is%20a%20student.",
+            "rate": 0.72,
+            "duration": 6,
+            "currentTime": 0.018212,
+            "paused": false,
+            "ended": false,
+            "preservesPitch": true
+          },
+          {
+            "id": 0,
+            "type": "ratechange",
+            "src": "http://localhost:5186/dist/audio/daily/aria/mia-introduction.mp3?v=She%20is%20Mia.%20She%20is%20from%20Japan.%20She%20is%20a%20student.",
+            "rate": 1,
+            "duration": 6,
+            "currentTime": 0.018212,
+            "paused": false,
+            "ended": false,
+            "preservesPitch": true
+          },
+          {
+            "id": 0,
+            "type": "ratechange",
+            "src": "http://localhost:5186/dist/audio/daily/aria/mia-introduction.mp3?v=She%20is%20Mia.%20She%20is%20from%20Japan.%20She%20is%20a%20student.",
+            "rate": 0.72,
+            "duration": 6,
+            "currentTime": 0.023313,
+            "paused": false,
+            "ended": false,
+            "preservesPitch": true
+          },
+          {
+            "id": 0,
+            "type": "pause",
+            "src": "http://localhost:5186/dist/audio/daily/aria/mia-introduction.mp3?v=She%20is%20Mia.%20She%20is%20from%20Japan.%20She%20is%20a%20student.",
+            "rate": 0.72,
+            "duration": 6,
+            "currentTime": 0.023313,
+            "paused": true,
+            "ended": false,
+            "preservesPitch": true
+          },
+          {
+            "id": 1,
+            "type": "ratechange",
+            "src": "http://localhost:5186/dist/audio/daily/aria/mia-introduction.mp3?v=She%20is%20Mia.%20She%20is%20from%20Japan.%20She%20is%20a%20student.",
+            "rate": 0.72,
+            "duration": null,
+            "currentTime": 0,
+            "paused": false,
+            "ended": false,
+            "preservesPitch": true
+          },
+          {
+            "id": 1,
+            "type": "playing",
+            "src": "http://localhost:5186/dist/audio/daily/aria/mia-introduction.mp3?v=She%20is%20Mia.%20She%20is%20from%20Japan.%20She%20is%20a%20student.",
+            "rate": 0.72,
+            "duration": 6,
+            "currentTime": 0,
+            "paused": false,
+            "ended": false,
+            "preservesPitch": true
+          },
+          {
+            "id": 1,
+            "type": "pause",
+            "src": "http://localhost:5186/dist/audio/daily/aria/mia-introduction.mp3?v=She%20is%20Mia.%20She%20is%20from%20Japan.%20She%20is%20a%20student.",
+            "rate": 0.72,
+            "duration": 6,
+            "currentTime": 0,
+            "paused": true,
+            "ended": false,
+            "preservesPitch": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "word review automatic audio, manual replay, draft and summary follow shared speed",
+      "durationMs": 7867
+    },
+    {
+      "name": "DailySpeaking demonstration and own-expression references respect speed without microphone",
+      "durationMs": 4895
+    }
+  ],
+  "failures": [],
+  "browserErrors": [],
+  "playbackEvidence": [
+    {
+      "label": "library word slow",
+      "id": 0,
+      "type": "playing",
+      "src": "http://localhost:5186/dist/audio/aria/word-3561.mp3",
+      "rate": 0.72,
+      "duration": 1.872,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "library example slow",
+      "id": 1,
+      "type": "playing",
+      "src": "http://localhost:5186/dist/audio/aria/example-3561.mp3?v=Read%20this%20code.",
+      "rate": 0.72,
+      "duration": 1.992,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "Guy word normal",
+      "id": 2,
+      "type": "playing",
+      "src": "http://localhost:5186/dist/audio/guy/word-3561.mp3",
+      "rate": 1,
+      "duration": 1.872,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "review row example slow",
+      "id": 3,
+      "type": "playing",
+      "src": "http://localhost:5186/dist/audio/guy/example-3561.mp3?v=Read%20this%20code.",
+      "rate": 0.72,
+      "duration": 2.016,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "expression library slow",
+      "id": 4,
+      "type": "playing",
+      "src": "http://localhost:5186/dist/audio/daily/guy/hello.mp3?v=Hello!",
+      "rate": 0.72,
+      "duration": 1.536,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "live clip before speed changes",
+      "id": 0,
+      "type": "playing",
+      "src": "http://localhost:5186/dist/audio/daily/aria/mia-introduction.mp3?v=She%20is%20Mia.%20She%20is%20from%20Japan.%20She%20is%20a%20student.",
+      "rate": 1,
+      "duration": 6,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "same phrase replays at changed speed instead of stopping",
+      "id": 1,
+      "type": "playing",
+      "src": "http://localhost:5186/dist/audio/daily/aria/mia-introduction.mp3?v=She%20is%20Mia.%20She%20is%20from%20Japan.%20She%20is%20a%20student.",
+      "rate": 0.72,
+      "duration": 6,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "word review automatic listening slow",
+      "id": 0,
+      "type": "playing",
+      "src": "http://localhost:5186/dist/audio/aria/word-1.mp3",
+      "rate": 0.72,
+      "duration": 1.992,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "word review manual normal",
+      "id": 1,
+      "type": "playing",
+      "src": "http://localhost:5186/dist/audio/aria/word-1.mp3",
+      "rate": 1,
+      "duration": 1.992,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "word review direct slow button",
+      "id": 2,
+      "type": "playing",
+      "src": "http://localhost:5186/dist/audio/aria/word-1.mp3",
+      "rate": 0.72,
+      "duration": 1.992,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "word summary slow",
+      "id": 3,
+      "type": "playing",
+      "src": "http://localhost:5186/dist/audio/aria/word-1.mp3",
+      "rate": 0.72,
+      "duration": 1.992,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "word summary normal",
+      "id": 4,
+      "type": "playing",
+      "src": "http://localhost:5186/dist/audio/aria/word-1.mp3",
+      "rate": 1,
+      "duration": 1.992,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "speaking demonstration normal",
+      "id": 0,
+      "type": "playing",
+      "src": "http://localhost:5186/dist/audio/daily/aria/hello.mp3?v=Hello!",
+      "rate": 1,
+      "duration": 1.56,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "speaking demonstration slow",
+      "id": 1,
+      "type": "playing",
+      "src": "http://localhost:5186/dist/audio/daily/aria/hello.mp3?v=Hello!",
+      "rate": 0.72,
+      "duration": 1.56,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "speaking explicit slow demonstration",
+      "id": 2,
+      "type": "playing",
+      "src": "http://localhost:5186/dist/audio/daily/aria/hello.mp3?v=Hello!",
+      "rate": 0.72,
+      "duration": 1.56,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "own-expression reference normal",
+      "id": 3,
+      "type": "playing",
+      "src": "http://localhost:5186/dist/audio/daily/aria/hello.mp3?v=Hello!",
+      "rate": 1,
+      "duration": 1.56,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    }
+  ],
+  "microphoneTested": false
+}

@@ -1,0 +1,39 @@
+{
+  "baseURL": "http://localhost:5186/",
+  "production": false,
+  "testedAt": "2026-09-22T16:02:46.647Z",
+  "scenarios": [
+    {
+      "name": "shared row preserves vocabulary library count, search, favorites and actual playback",
+      "durationMs": 1778,
+      "evidence": {
+        "vocabularyCount": 3620,
+        "checkedWord": 3561
+      }
+    }
+  ],
+  "failures": [],
+  "browserErrors": [],
+  "fixture": {
+    "admitted": [
+      1,
+      4,
+      5,
+      11,
+      20,
+      1384,
+      1880,
+      2801,
+      3561
+    ],
+    "stillLearning": [
+      2,
+      3,
+      687
+    ],
+    "legacyIds": [
+      21,
+      22
+    ]
+  }
+}

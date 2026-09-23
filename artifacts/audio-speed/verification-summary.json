@@ -1,0 +1,2238 @@
+{
+  "verifiedAt": "2026-09-23T00:21:56.5446730+08:00",
+  "reports": [
+    "browser-results.json",
+    "browser-results-changing-the-visible-course-listening-DailySpeaking.json",
+    "browser-results-playback-headers-exercise-headers.json",
+    "browser-results-production-visible-speed-preference-changing-the-visible-word-review-automatic-DailySpeaking.json",
+    "browser-results-production-voice-preview-real.json"
+  ],
+  "developmentScenarios": 14,
+  "productionScenarios": 5,
+  "productionBundle": "index-BjgAExdN.js",
+  "earlierProductionBundle": "index-i6x88asz.js",
+  "productionStyles": "index-CQSESoxb.css",
+  "realPlaybackEvents": 52,
+  "microphoneTested": false,
+  "isolatedBrowserData": true,
+  "failures": [],
+  "browserErrors": [],
+  "resolvedFixtureFailures": [
+    "changing the visible speed changes a real playing clip without stopping it",
+    "programming course listening, feedback and draft preserve both speed choices",
+    "daily course listening, feedback and draft preserve both speed choices",
+    "DailySpeaking demonstration and own-expression references respect speed without microphone"
+  ],
+  "development": [
+    {
+      "name": "visible speed preference follows libraries, review rows, voices and refresh",
+      "durationMs": 5529
+    },
+    {
+      "name": "programming course teaching audio respects visible speed without changing the lesson",
+      "durationMs": 3337
+    },
+    {
+      "name": "programming scene review listening follows the visible speed",
+      "durationMs": 3686
+    },
+    {
+      "name": "daily course teaching audio respects visible speed without changing the lesson",
+      "durationMs": 2709
+    },
+    {
+      "name": "daily scene review listening follows the visible speed",
+      "durationMs": 3112
+    },
+    {
+      "name": "word review automatic audio, manual replay, draft and summary follow shared speed",
+      "durationMs": 8311
+    },
+    {
+      "name": "all playback headers show normal and slow in four themes at 1440px",
+      "durationMs": 4070,
+      "evidence": [
+        {
+          "theme": "minimal",
+          "section": "programming",
+          "view": "课程",
+          "label": "正常",
+          "box": {
+            "x": 1133,
+            "y": 153.734375,
+            "width": 52,
+            "height": 38
+          }
+        },
+        {
+          "theme": "minimal",
+          "section": "programming",
+          "view": "课程",
+          "label": "慢速",
+          "box": {
+            "x": 1188,
+            "y": 153.734375,
+            "width": 52,
+            "height": 38
+          }
+        },
+        {
+          "theme": "minimal",
+          "section": "programming",
+          "view": "复习",
+          "label": "正常",
+          "box": {
+            "x": 1133,
+            "y": 153.734375,
+            "width": 52,
+            "height": 38
+          }
+        },
+        {
+          "theme": "minimal",
+          "section": "programming",
+          "view": "复习",
+          "label": "慢速",
+          "box": {
+            "x": 1188,
+            "y": 153.734375,
+            "width": 52,
+            "height": 38
+          }
+        },
+        {
+          "theme": "minimal",
+          "section": "programming",
+          "view": "词汇库",
+          "label": "正常",
+          "box": {
+            "x": 1133,
+            "y": 153.734375,
+            "width": 52,
+            "height": 38
+          }
+        },
+        {
+          "theme": "minimal",
+          "section": "programming",
+          "view": "词汇库",
+          "label": "慢速",
+          "box": {
+            "x": 1188,
+            "y": 153.734375,
+            "width": 52,
+            "height": 38
+          }
+        },
+        {
+          "theme": "minimal",
+          "section": "daily",
+          "view": "课程",
+          "label": "正常",
+          "box": {
+            "x": 1133,
+            "y": 153.734375,
+            "width": 52,
+            "height": 38
+          }
+        },
+        {
+          "theme": "minimal",
+          "section": "daily",
+          "view": "课程",
+          "label": "慢速",
+          "box": {
+            "x": 1188,
+            "y": 153.734375,
+            "width": 52,
+            "height": 38
+          }
+        },
+        {
+          "theme": "minimal",
+          "section": "daily",
+          "view": "复习",
+          "label": "正常",
+          "box": {
+            "x": 1133,
+            "y": 153.734375,
+            "width": 52,
+            "height": 38
+          }
+        },
+        {
+          "theme": "minimal",
+          "section": "daily",
+          "view": "复习",
+          "label": "慢速",
+          "box": {
+            "x": 1188,
+            "y": 153.734375,
+            "width": 52,
+            "height": 38
+          }
+        },
+        {
+          "theme": "minimal",
+          "section": "daily",
+          "view": "表达库",
+          "label": "正常",
+          "box": {
+            "x": 1133,
+            "y": 153.734375,
+            "width": 52,
+            "height": 38
+          }
+        },
+        {
+          "theme": "minimal",
+          "section": "daily",
+          "view": "表达库",
+          "label": "慢速",
+          "box": {
+            "x": 1188,
+            "y": 153.734375,
+            "width": 52,
+            "height": 38
+          }
+        },
+        {
+          "theme": "sketch",
+          "section": "programming",
+          "view": "课程",
+          "label": "正常",
+          "box": {
+            "x": 1133,
+            "y": 155.109375,
+            "width": 52,
+            "height": 38
+          }
+        },
+        {
+          "theme": "sketch",
+          "section": "programming",
+          "view": "课程",
+          "label": "慢速",
+          "box": {
+            "x": 1188,
+            "y": 155.109375,
+            "width": 52,
+            "height": 38
+          }
+        },
+        {
+          "theme": "sketch",
+          "section": "programming",
+          "view": "复习",
+          "label": "正常",
+          "box": {
+            "x": 1133,
+            "y": 141.109375,
+            "width": 52,
+            "height": 38
+          }
+        },
+        {
+          "theme": "sketch",
+          "section": "programming",
+          "view": "复习",
+          "label": "慢速",
+          "box": {
+            "x": 1188,
+            "y": 141.109375,
+            "width": 52,
+            "height": 38
+          }
+        },
+        {
+          "theme": "sketch",
+          "section": "programming",
+          "view": "词汇库",
+          "label": "正常",
+          "box": {
+            "x": 1133,
+            "y": 155.109375,
+            "width": 52,
+            "height": 38
+          }
+        },
+        {
+          "theme": "sketch",
+          "section": "programming",
+          "view": "词汇库",
+          "label": "慢速",
+          "box": {
+            "x": 1188,
+            "y": 155.109375,
+            "width": 52,
+            "height": 38
+          }
+        },
+        {
+          "theme": "sketch",
+          "section": "daily",
+          "view": "课程",
+          "label": "正常",
+          "box": {
+            "x": 1133,
+            "y": 155.109375,
+            "width": 52,
+            "height": 38
+          }
+        },
+        {
+          "theme": "sketch",
+          "section": "daily",
+          "view": "课程",
+          "label": "慢速",
+          "box": {
+            "x": 1188,
+            "y": 155.109375,
+            "width": 52,
+            "height": 38
+          }
+        },
+        {
+          "theme": "sketch",
+          "section": "daily",
+          "view": "复习",
+          "label": "正常",
+          "box": {
+            "x": 1133,
+            "y": 155.109375,
+            "width": 52,
+            "height": 38
+          }
+        },
+        {
+          "theme": "sketch",
+          "section": "daily",
+          "view": "复习",
+          "label": "慢速",
+          "box": {
+            "x": 1188,
+            "y": 155.109375,
+            "width": 52,
+            "height": 38
+          }
+        },
+        {
+          "theme": "sketch",
+          "section": "daily",
+          "view": "表达库",
+          "label": "正常",
+          "box": {
+            "x": 1133,
+            "y": 155.109375,
+            "width": 52,
+            "height": 38
+          }
+        },
+        {
+          "theme": "sketch",
+          "section": "daily",
+          "view": "表达库",
+          "label": "慢速",
+          "box": {
+            "x": 1188,
+            "y": 155.109375,
+            "width": 52,
+            "height": 38
+          }
+        },
+        {
+          "theme": "print",
+          "section": "programming",
+          "view": "课程",
+          "label": "正常",
+          "box": {
+            "x": 1130,
+            "y": 164.734375,
+            "width": 52,
+            "height": 38
+          }
+        },
+        {
+          "theme": "print",
+          "section": "programming",
+          "view": "课程",
+          "label": "慢速",
+          "box": {
+            "x": 1185,
+            "y": 164.734375,
+            "width": 52,
+            "height": 38
+          }
+        },
+        {
+          "theme": "print",
+          "section": "programming",
+          "view": "复习",
+          "label": "正常",
+          "box": {
+            "x": 1130,
+            "y": 150.734375,
+            "width": 52,
+            "height": 38
+          }
+        },
+        {
+          "theme": "print",
+          "section": "programming",
+          "view": "复习",
+          "label": "慢速",
+          "box": {
+            "x": 1185,
+            "y": 150.734375,
+            "width": 52,
+            "height": 38
+          }
+        },
+        {
+          "theme": "print",
+          "section": "programming",
+          "view": "词汇库",
+          "label": "正常",
+          "box": {
+            "x": 1130,
+            "y": 164.734375,
+            "width": 52,
+            "height": 38
+          }
+        },
+        {
+          "theme": "print",
+          "section": "programming",
+          "view": "词汇库",
+          "label": "慢速",
+          "box": {
+            "x": 1185,
+            "y": 164.734375,
+            "width": 52,
+            "height": 38
+          }
+        },
+        {
+          "theme": "print",
+          "section": "daily",
+          "view": "课程",
+          "label": "正常",
+          "box": {
+            "x": 1130,
+            "y": 164.734375,
+            "width": 52,
+            "height": 38
+          }
+        },
+        {
+          "theme": "print",
+          "section": "daily",
+          "view": "课程",
+          "label": "慢速",
+          "box": {
+            "x": 1185,
+            "y": 164.734375,
+            "width": 52,
+            "height": 38
+          }
+        },
+        {
+          "theme": "print",
+          "section": "daily",
+          "view": "复习",
+          "label": "正常",
+          "box": {
+            "x": 1130,
+            "y": 164.734375,
+            "width": 52,
+            "height": 38
+          }
+        },
+        {
+          "theme": "print",
+          "section": "daily",
+          "view": "复习",
+          "label": "慢速",
+          "box": {
+            "x": 1185,
+            "y": 164.734375,
+            "width": 52,
+            "height": 38
+          }
+        },
+        {
+          "theme": "print",
+          "section": "daily",
+          "view": "表达库",
+          "label": "正常",
+          "box": {
+            "x": 1130,
+            "y": 164.734375,
+            "width": 52,
+            "height": 38
+          }
+        },
+        {
+          "theme": "print",
+          "section": "daily",
+          "view": "表达库",
+          "label": "慢速",
+          "box": {
+            "x": 1185,
+            "y": 164.734375,
+            "width": 52,
+            "height": 38
+          }
+        },
+        {
+          "theme": "graffiti",
+          "section": "programming",
+          "view": "课程",
+          "label": "正常",
+          "box": {
+            "x": 1130,
+            "y": 176.671875,
+            "width": 52,
+            "height": 38
+          }
+        },
+        {
+          "theme": "graffiti",
+          "section": "programming",
+          "view": "课程",
+          "label": "慢速",
+          "box": {
+            "x": 1185,
+            "y": 176.671875,
+            "width": 52,
+            "height": 38
+          }
+        },
+        {
+          "theme": "graffiti",
+          "section": "programming",
+          "view": "复习",
+          "label": "正常",
+          "box": {
+            "x": 1130,
+            "y": 162.671875,
+            "width": 52,
+            "height": 38
+          }
+        },
+        {
+          "theme": "graffiti",
+          "section": "programming",
+          "view": "复习",
+          "label": "慢速",
+          "box": {
+            "x": 1185,
+            "y": 162.671875,
+            "width": 52,
+            "height": 38
+          }
+        },
+        {
+          "theme": "graffiti",
+          "section": "programming",
+          "view": "词汇库",
+          "label": "正常",
+          "box": {
+            "x": 1130,
+            "y": 176.671875,
+            "width": 52,
+            "height": 38
+          }
+        },
+        {
+          "theme": "graffiti",
+          "section": "programming",
+          "view": "词汇库",
+          "label": "慢速",
+          "box": {
+            "x": 1185,
+            "y": 176.671875,
+            "width": 52,
+            "height": 38
+          }
+        },
+        {
+          "theme": "graffiti",
+          "section": "daily",
+          "view": "课程",
+          "label": "正常",
+          "box": {
+            "x": 1130,
+            "y": 176.671875,
+            "width": 52,
+            "height": 38
+          }
+        },
+        {
+          "theme": "graffiti",
+          "section": "daily",
+          "view": "课程",
+          "label": "慢速",
+          "box": {
+            "x": 1185,
+            "y": 176.671875,
+            "width": 52,
+            "height": 38
+          }
+        },
+        {
+          "theme": "graffiti",
+          "section": "daily",
+          "view": "复习",
+          "label": "正常",
+          "box": {
+            "x": 1130,
+            "y": 176.671875,
+            "width": 52,
+            "height": 38
+          }
+        },
+        {
+          "theme": "graffiti",
+          "section": "daily",
+          "view": "复习",
+          "label": "慢速",
+          "box": {
+            "x": 1185,
+            "y": 176.671875,
+            "width": 52,
+            "height": 38
+          }
+        },
+        {
+          "theme": "graffiti",
+          "section": "daily",
+          "view": "表达库",
+          "label": "正常",
+          "box": {
+            "x": 1130,
+            "y": 176.671875,
+            "width": 52,
+            "height": 38
+          }
+        },
+        {
+          "theme": "graffiti",
+          "section": "daily",
+          "view": "表达库",
+          "label": "慢速",
+          "box": {
+            "x": 1185,
+            "y": 176.671875,
+            "width": 52,
+            "height": 38
+          }
+        }
+      ]
+    },
+    {
+      "name": "all playback headers show normal and slow in four themes at 390px",
+      "durationMs": 3567,
+      "evidence": [
+        {
+          "theme": "minimal",
+          "section": "programming",
+          "view": "课程",
+          "label": "正常",
+          "box": {
+            "x": 61,
+            "y": 233.53125,
+            "width": 48,
+            "height": 38
+          }
+        },
+        {
+          "theme": "minimal",
+          "section": "programming",
+          "view": "课程",
+          "label": "慢速",
+          "box": {
+            "x": 112,
+            "y": 233.53125,
+            "width": 48,
+            "height": 38
+          }
+        },
+        {
+          "theme": "minimal",
+          "section": "programming",
+          "view": "复习",
+          "label": "正常",
+          "box": {
+            "x": 61,
+            "y": 233.53125,
+            "width": 48,
+            "height": 38
+          }
+        },
+        {
+          "theme": "minimal",
+          "section": "programming",
+          "view": "复习",
+          "label": "慢速",
+          "box": {
+            "x": 112,
+            "y": 233.53125,
+            "width": 48,
+            "height": 38
+          }
+        },
+        {
+          "theme": "minimal",
+          "section": "programming",
+          "view": "词汇库",
+          "label": "正常",
+          "box": {
+            "x": 61,
+            "y": 257.53125,
+            "width": 48,
+            "height": 38
+          }
+        },
+        {
+          "theme": "minimal",
+          "section": "programming",
+          "view": "词汇库",
+          "label": "慢速",
+          "box": {
+            "x": 112,
+            "y": 257.53125,
+            "width": 48,
+            "height": 38
+          }
+        },
+        {
+          "theme": "minimal",
+          "section": "daily",
+          "view": "课程",
+          "label": "正常",
+          "box": {
+            "x": 61,
+            "y": 233.53125,
+            "width": 48,
+            "height": 38
+          }
+        },
+        {
+          "theme": "minimal",
+          "section": "daily",
+          "view": "课程",
+          "label": "慢速",
+          "box": {
+            "x": 112,
+            "y": 233.53125,
+            "width": 48,
+            "height": 38
+          }
+        },
+        {
+          "theme": "minimal",
+          "section": "daily",
+          "view": "复习",
+          "label": "正常",
+          "box": {
+            "x": 61,
+            "y": 233.53125,
+            "width": 48,
+            "height": 38
+          }
+        },
+        {
+          "theme": "minimal",
+          "section": "daily",
+          "view": "复习",
+          "label": "慢速",
+          "box": {
+            "x": 112,
+            "y": 233.53125,
+            "width": 48,
+            "height": 38
+          }
+        },
+        {
+          "theme": "minimal",
+          "section": "daily",
+          "view": "表达库",
+          "label": "正常",
+          "box": {
+            "x": 61,
+            "y": 233.53125,
+            "width": 48,
+            "height": 38
+          }
+        },
+        {
+          "theme": "minimal",
+          "section": "daily",
+          "view": "表达库",
+          "label": "慢速",
+          "box": {
+            "x": 112,
+            "y": 233.53125,
+            "width": 48,
+            "height": 38
+          }
+        },
+        {
+          "theme": "sketch",
+          "section": "programming",
+          "view": "课程",
+          "label": "正常",
+          "box": {
+            "x": 61,
+            "y": 237.28125,
+            "width": 48,
+            "height": 38
+          }
+        },
+        {
+          "theme": "sketch",
+          "section": "programming",
+          "view": "课程",
+          "label": "慢速",
+          "box": {
+            "x": 112,
+            "y": 237.28125,
+            "width": 48,
+            "height": 38
+          }
+        },
+        {
+          "theme": "sketch",
+          "section": "programming",
+          "view": "复习",
+          "label": "正常",
+          "box": {
+            "x": 61,
+            "y": 237.28125,
+            "width": 48,
+            "height": 38
+          }
+        },
+        {
+          "theme": "sketch",
+          "section": "programming",
+          "view": "复习",
+          "label": "慢速",
+          "box": {
+            "x": 112,
+            "y": 237.28125,
+            "width": 48,
+            "height": 38
+          }
+        },
+        {
+          "theme": "sketch",
+          "section": "programming",
+          "view": "词汇库",
+          "label": "正常",
+          "box": {
+            "x": 61,
+            "y": 261.28125,
+            "width": 48,
+            "height": 38
+          }
+        },
+        {
+          "theme": "sketch",
+          "section": "programming",
+          "view": "词汇库",
+          "label": "慢速",
+          "box": {
+            "x": 112,
+            "y": 261.28125,
+            "width": 48,
+            "height": 38
+          }
+        },
+        {
+          "theme": "sketch",
+          "section": "daily",
+          "view": "课程",
+          "label": "正常",
+          "box": {
+            "x": 61,
+            "y": 237.28125,
+            "width": 48,
+            "height": 38
+          }
+        },
+        {
+          "theme": "sketch",
+          "section": "daily",
+          "view": "课程",
+          "label": "慢速",
+          "box": {
+            "x": 112,
+            "y": 237.28125,
+            "width": 48,
+            "height": 38
+          }
+        },
+        {
+          "theme": "sketch",
+          "section": "daily",
+          "view": "复习",
+          "label": "正常",
+          "box": {
+            "x": 61,
+            "y": 237.28125,
+            "width": 48,
+            "height": 38
+          }
+        },
+        {
+          "theme": "sketch",
+          "section": "daily",
+          "view": "复习",
+          "label": "慢速",
+          "box": {
+            "x": 112,
+            "y": 237.28125,
+            "width": 48,
+            "height": 38
+          }
+        },
+        {
+          "theme": "sketch",
+          "section": "daily",
+          "view": "表达库",
+          "label": "正常",
+          "box": {
+            "x": 61,
+            "y": 237.28125,
+            "width": 48,
+            "height": 38
+          }
+        },
+        {
+          "theme": "sketch",
+          "section": "daily",
+          "view": "表达库",
+          "label": "慢速",
+          "box": {
+            "x": 112,
+            "y": 237.28125,
+            "width": 48,
+            "height": 38
+          }
+        },
+        {
+          "theme": "print",
+          "section": "programming",
+          "view": "课程",
+          "label": "正常",
+          "box": {
+            "x": 62,
+            "y": 256.53125,
+            "width": 48,
+            "height": 38
+          }
+        },
+        {
+          "theme": "print",
+          "section": "programming",
+          "view": "课程",
+          "label": "慢速",
+          "box": {
+            "x": 113,
+            "y": 256.53125,
+            "width": 48,
+            "height": 38
+          }
+        },
+        {
+          "theme": "print",
+          "section": "programming",
+          "view": "复习",
+          "label": "正常",
+          "box": {
+            "x": 62,
+            "y": 256.53125,
+            "width": 48,
+            "height": 38
+          }
+        },
+        {
+          "theme": "print",
+          "section": "programming",
+          "view": "复习",
+          "label": "慢速",
+          "box": {
+            "x": 113,
+            "y": 256.53125,
+            "width": 48,
+            "height": 38
+          }
+        },
+        {
+          "theme": "print",
+          "section": "programming",
+          "view": "词汇库",
+          "label": "正常",
+          "box": {
+            "x": 62,
+            "y": 280.53125,
+            "width": 48,
+            "height": 38
+          }
+        },
+        {
+          "theme": "print",
+          "section": "programming",
+          "view": "词汇库",
+          "label": "慢速",
+          "box": {
+            "x": 113,
+            "y": 280.53125,
+            "width": 48,
+            "height": 38
+          }
+        },
+        {
+          "theme": "print",
+          "section": "daily",
+          "view": "课程",
+          "label": "正常",
+          "box": {
+            "x": 62,
+            "y": 256.53125,
+            "width": 48,
+            "height": 38
+          }
+        },
+        {
+          "theme": "print",
+          "section": "daily",
+          "view": "课程",
+          "label": "慢速",
+          "box": {
+            "x": 113,
+            "y": 256.53125,
+            "width": 48,
+            "height": 38
+          }
+        },
+        {
+          "theme": "print",
+          "section": "daily",
+          "view": "复习",
+          "label": "正常",
+          "box": {
+            "x": 62,
+            "y": 256.53125,
+            "width": 48,
+            "height": 38
+          }
+        },
+        {
+          "theme": "print",
+          "section": "daily",
+          "view": "复习",
+          "label": "慢速",
+          "box": {
+            "x": 113,
+            "y": 256.53125,
+            "width": 48,
+            "height": 38
+          }
+        },
+        {
+          "theme": "print",
+          "section": "daily",
+          "view": "表达库",
+          "label": "正常",
+          "box": {
+            "x": 62,
+            "y": 256.53125,
+            "width": 48,
+            "height": 38
+          }
+        },
+        {
+          "theme": "print",
+          "section": "daily",
+          "view": "表达库",
+          "label": "慢速",
+          "box": {
+            "x": 113,
+            "y": 256.53125,
+            "width": 48,
+            "height": 38
+          }
+        },
+        {
+          "theme": "graffiti",
+          "section": "programming",
+          "view": "课程",
+          "label": "正常",
+          "box": {
+            "x": 62,
+            "y": 273.390625,
+            "width": 48,
+            "height": 38
+          }
+        },
+        {
+          "theme": "graffiti",
+          "section": "programming",
+          "view": "课程",
+          "label": "慢速",
+          "box": {
+            "x": 113,
+            "y": 273.390625,
+            "width": 48,
+            "height": 38
+          }
+        },
+        {
+          "theme": "graffiti",
+          "section": "programming",
+          "view": "复习",
+          "label": "正常",
+          "box": {
+            "x": 62,
+            "y": 273.390625,
+            "width": 48,
+            "height": 38
+          }
+        },
+        {
+          "theme": "graffiti",
+          "section": "programming",
+          "view": "复习",
+          "label": "慢速",
+          "box": {
+            "x": 113,
+            "y": 273.390625,
+            "width": 48,
+            "height": 38
+          }
+        },
+        {
+          "theme": "graffiti",
+          "section": "programming",
+          "view": "词汇库",
+          "label": "正常",
+          "box": {
+            "x": 62,
+            "y": 297.390625,
+            "width": 48,
+            "height": 38
+          }
+        },
+        {
+          "theme": "graffiti",
+          "section": "programming",
+          "view": "词汇库",
+          "label": "慢速",
+          "box": {
+            "x": 113,
+            "y": 297.390625,
+            "width": 48,
+            "height": 38
+          }
+        },
+        {
+          "theme": "graffiti",
+          "section": "daily",
+          "view": "课程",
+          "label": "正常",
+          "box": {
+            "x": 62,
+            "y": 273.390625,
+            "width": 48,
+            "height": 38
+          }
+        },
+        {
+          "theme": "graffiti",
+          "section": "daily",
+          "view": "课程",
+          "label": "慢速",
+          "box": {
+            "x": 113,
+            "y": 273.390625,
+            "width": 48,
+            "height": 38
+          }
+        },
+        {
+          "theme": "graffiti",
+          "section": "daily",
+          "view": "复习",
+          "label": "正常",
+          "box": {
+            "x": 62,
+            "y": 273.390625,
+            "width": 48,
+            "height": 38
+          }
+        },
+        {
+          "theme": "graffiti",
+          "section": "daily",
+          "view": "复习",
+          "label": "慢速",
+          "box": {
+            "x": 113,
+            "y": 273.390625,
+            "width": 48,
+            "height": 38
+          }
+        },
+        {
+          "theme": "graffiti",
+          "section": "daily",
+          "view": "表达库",
+          "label": "正常",
+          "box": {
+            "x": 62,
+            "y": 273.390625,
+            "width": 48,
+            "height": 38
+          }
+        },
+        {
+          "theme": "graffiti",
+          "section": "daily",
+          "view": "表达库",
+          "label": "慢速",
+          "box": {
+            "x": 113,
+            "y": 273.390625,
+            "width": 48,
+            "height": 38
+          }
+        }
+      ]
+    },
+    {
+      "name": "changing the visible speed changes a real playing clip without stopping it",
+      "durationMs": 1629,
+      "evidence": {
+        "phraseId": "mia-introduction",
+        "events": [
+          {
+            "id": 0,
+            "type": "playing",
+            "src": "http://localhost:5186/audio/daily/aria/mia-introduction.mp3?v=She%20is%20Mia.%20She%20is%20from%20Japan.%20She%20is%20a%20student.",
+            "rate": 1,
+            "duration": 6,
+            "currentTime": 0,
+            "paused": false,
+            "ended": false,
+            "preservesPitch": true
+          },
+          {
+            "id": 0,
+            "type": "ratechange",
+            "src": "http://localhost:5186/audio/daily/aria/mia-introduction.mp3?v=She%20is%20Mia.%20She%20is%20from%20Japan.%20She%20is%20a%20student.",
+            "rate": 0.72,
+            "duration": 6,
+            "currentTime": 0,
+            "paused": false,
+            "ended": false,
+            "preservesPitch": true
+          },
+          {
+            "id": 0,
+            "type": "ratechange",
+            "src": "http://localhost:5186/audio/daily/aria/mia-introduction.mp3?v=She%20is%20Mia.%20She%20is%20from%20Japan.%20She%20is%20a%20student.",
+            "rate": 1,
+            "duration": 6,
+            "currentTime": 0,
+            "paused": false,
+            "ended": false,
+            "preservesPitch": true
+          },
+          {
+            "id": 0,
+            "type": "ratechange",
+            "src": "http://localhost:5186/audio/daily/aria/mia-introduction.mp3?v=She%20is%20Mia.%20She%20is%20from%20Japan.%20She%20is%20a%20student.",
+            "rate": 0.72,
+            "duration": 6,
+            "currentTime": 0,
+            "paused": false,
+            "ended": false,
+            "preservesPitch": true
+          },
+          {
+            "id": 0,
+            "type": "pause",
+            "src": "http://localhost:5186/audio/daily/aria/mia-introduction.mp3?v=She%20is%20Mia.%20She%20is%20from%20Japan.%20She%20is%20a%20student.",
+            "rate": 0.72,
+            "duration": 6,
+            "currentTime": 0,
+            "paused": true,
+            "ended": false,
+            "preservesPitch": true
+          },
+          {
+            "id": 1,
+            "type": "ratechange",
+            "src": "http://localhost:5186/audio/daily/aria/mia-introduction.mp3?v=She%20is%20Mia.%20She%20is%20from%20Japan.%20She%20is%20a%20student.",
+            "rate": 0.72,
+            "duration": null,
+            "currentTime": 0,
+            "paused": false,
+            "ended": false,
+            "preservesPitch": true
+          },
+          {
+            "id": 1,
+            "type": "playing",
+            "src": "http://localhost:5186/audio/daily/aria/mia-introduction.mp3?v=She%20is%20Mia.%20She%20is%20from%20Japan.%20She%20is%20a%20student.",
+            "rate": 0.72,
+            "duration": 6,
+            "currentTime": 0,
+            "paused": false,
+            "ended": false,
+            "preservesPitch": true
+          },
+          {
+            "id": 1,
+            "type": "pause",
+            "src": "http://localhost:5186/audio/daily/aria/mia-introduction.mp3?v=She%20is%20Mia.%20She%20is%20from%20Japan.%20She%20is%20a%20student.",
+            "rate": 0.72,
+            "duration": 6,
+            "currentTime": 0,
+            "paused": true,
+            "ended": false,
+            "preservesPitch": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "programming course listening, feedback and draft preserve both speed choices",
+      "durationMs": 5261
+    },
+    {
+      "name": "daily course listening, feedback and draft preserve both speed choices",
+      "durationMs": 4610
+    },
+    {
+      "name": "DailySpeaking demonstration and own-expression references respect speed without microphone",
+      "durationMs": 5183
+    },
+    {
+      "name": "exercise headers keep both speed buttons visible in four themes at 1440px",
+      "durationMs": 1183,
+      "evidence": [
+        {
+          "theme": "minimal",
+          "label": "正常",
+          "box": {
+            "x": 1019,
+            "y": 137,
+            "width": 52,
+            "height": 38
+          }
+        },
+        {
+          "theme": "minimal",
+          "label": "慢速",
+          "box": {
+            "x": 1074,
+            "y": 137,
+            "width": 52,
+            "height": 38
+          }
+        },
+        {
+          "theme": "sketch",
+          "label": "正常",
+          "box": {
+            "x": 1019,
+            "y": 135,
+            "width": 52,
+            "height": 38
+          }
+        },
+        {
+          "theme": "sketch",
+          "label": "慢速",
+          "box": {
+            "x": 1074,
+            "y": 135,
+            "width": 52,
+            "height": 38
+          }
+        },
+        {
+          "theme": "print",
+          "label": "正常",
+          "box": {
+            "x": 1016,
+            "y": 137,
+            "width": 52,
+            "height": 38
+          }
+        },
+        {
+          "theme": "print",
+          "label": "慢速",
+          "box": {
+            "x": 1071,
+            "y": 137,
+            "width": 52,
+            "height": 38
+          }
+        },
+        {
+          "theme": "graffiti",
+          "label": "正常",
+          "box": {
+            "x": 1016,
+            "y": 138,
+            "width": 52,
+            "height": 38
+          }
+        },
+        {
+          "theme": "graffiti",
+          "label": "慢速",
+          "box": {
+            "x": 1071,
+            "y": 138,
+            "width": 52,
+            "height": 38
+          }
+        }
+      ]
+    },
+    {
+      "name": "exercise headers keep both speed buttons visible in four themes at 390px",
+      "durationMs": 1053,
+      "evidence": [
+        {
+          "theme": "minimal",
+          "label": "正常",
+          "box": {
+            "x": 61,
+            "y": 202.390625,
+            "width": 48,
+            "height": 38
+          }
+        },
+        {
+          "theme": "minimal",
+          "label": "慢速",
+          "box": {
+            "x": 112,
+            "y": 202.390625,
+            "width": 48,
+            "height": 38
+          }
+        },
+        {
+          "theme": "sketch",
+          "label": "正常",
+          "box": {
+            "x": 61,
+            "y": 199.390625,
+            "width": 48,
+            "height": 38
+          }
+        },
+        {
+          "theme": "sketch",
+          "label": "慢速",
+          "box": {
+            "x": 112,
+            "y": 199.390625,
+            "width": 48,
+            "height": 38
+          }
+        },
+        {
+          "theme": "print",
+          "label": "正常",
+          "box": {
+            "x": 62,
+            "y": 201.390625,
+            "width": 48,
+            "height": 38
+          }
+        },
+        {
+          "theme": "print",
+          "label": "慢速",
+          "box": {
+            "x": 113,
+            "y": 201.390625,
+            "width": 48,
+            "height": 38
+          }
+        },
+        {
+          "theme": "graffiti",
+          "label": "正常",
+          "box": {
+            "x": 62,
+            "y": 202.890625,
+            "width": 48,
+            "height": 38
+          }
+        },
+        {
+          "theme": "graffiti",
+          "label": "慢速",
+          "box": {
+            "x": 113,
+            "y": 202.890625,
+            "width": 48,
+            "height": 38
+          }
+        }
+      ]
+    }
+  ],
+  "production": [
+    {
+      "name": "visible speed preference follows libraries, review rows, voices and refresh",
+      "durationMs": 4921
+    },
+    {
+      "name": "changing the visible speed changes a real playing clip without stopping it",
+      "durationMs": 985,
+      "evidence": {
+        "phraseId": "mia-introduction",
+        "events": [
+          {
+            "id": 0,
+            "type": "playing",
+            "src": "http://localhost:5186/dist/audio/daily/aria/mia-introduction.mp3?v=She%20is%20Mia.%20She%20is%20from%20Japan.%20She%20is%20a%20student.",
+            "rate": 1,
+            "duration": 6,
+            "currentTime": 0,
+            "paused": false,
+            "ended": false,
+            "preservesPitch": true
+          },
+          {
+            "id": 0,
+            "type": "ratechange",
+            "src": "http://localhost:5186/dist/audio/daily/aria/mia-introduction.mp3?v=She%20is%20Mia.%20She%20is%20from%20Japan.%20She%20is%20a%20student.",
+            "rate": 0.72,
+            "duration": 6,
+            "currentTime": 0.018212,
+            "paused": false,
+            "ended": false,
+            "preservesPitch": true
+          },
+          {
+            "id": 0,
+            "type": "ratechange",
+            "src": "http://localhost:5186/dist/audio/daily/aria/mia-introduction.mp3?v=She%20is%20Mia.%20She%20is%20from%20Japan.%20She%20is%20a%20student.",
+            "rate": 1,
+            "duration": 6,
+            "currentTime": 0.018212,
+            "paused": false,
+            "ended": false,
+            "preservesPitch": true
+          },
+          {
+            "id": 0,
+            "type": "ratechange",
+            "src": "http://localhost:5186/dist/audio/daily/aria/mia-introduction.mp3?v=She%20is%20Mia.%20She%20is%20from%20Japan.%20She%20is%20a%20student.",
+            "rate": 0.72,
+            "duration": 6,
+            "currentTime": 0.023313,
+            "paused": false,
+            "ended": false,
+            "preservesPitch": true
+          },
+          {
+            "id": 0,
+            "type": "pause",
+            "src": "http://localhost:5186/dist/audio/daily/aria/mia-introduction.mp3?v=She%20is%20Mia.%20She%20is%20from%20Japan.%20She%20is%20a%20student.",
+            "rate": 0.72,
+            "duration": 6,
+            "currentTime": 0.023313,
+            "paused": true,
+            "ended": false,
+            "preservesPitch": true
+          },
+          {
+            "id": 1,
+            "type": "ratechange",
+            "src": "http://localhost:5186/dist/audio/daily/aria/mia-introduction.mp3?v=She%20is%20Mia.%20She%20is%20from%20Japan.%20She%20is%20a%20student.",
+            "rate": 0.72,
+            "duration": null,
+            "currentTime": 0,
+            "paused": false,
+            "ended": false,
+            "preservesPitch": true
+          },
+          {
+            "id": 1,
+            "type": "playing",
+            "src": "http://localhost:5186/dist/audio/daily/aria/mia-introduction.mp3?v=She%20is%20Mia.%20She%20is%20from%20Japan.%20She%20is%20a%20student.",
+            "rate": 0.72,
+            "duration": 6,
+            "currentTime": 0,
+            "paused": false,
+            "ended": false,
+            "preservesPitch": true
+          },
+          {
+            "id": 1,
+            "type": "pause",
+            "src": "http://localhost:5186/dist/audio/daily/aria/mia-introduction.mp3?v=She%20is%20Mia.%20She%20is%20from%20Japan.%20She%20is%20a%20student.",
+            "rate": 0.72,
+            "duration": 6,
+            "currentTime": 0,
+            "paused": true,
+            "ended": false,
+            "preservesPitch": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "word review automatic audio, manual replay, draft and summary follow shared speed",
+      "durationMs": 7867
+    },
+    {
+      "name": "DailySpeaking demonstration and own-expression references respect speed without microphone",
+      "durationMs": 4895
+    },
+    {
+      "name": "voice preview real rates and active highlight follow dropdown speed changes",
+      "durationMs": 1089
+    }
+  ],
+  "playbackEvidence": [
+    {
+      "label": "library word slow",
+      "id": 0,
+      "type": "playing",
+      "src": "http://localhost:5186/audio/aria/word-3561.mp3",
+      "rate": 0.72,
+      "duration": 1.872,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "library example slow",
+      "id": 1,
+      "type": "playing",
+      "src": "http://localhost:5186/audio/aria/example-3561.mp3?v=Read%20this%20code.",
+      "rate": 0.72,
+      "duration": 1.992,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "Guy word normal",
+      "id": 2,
+      "type": "playing",
+      "src": "http://localhost:5186/audio/guy/word-3561.mp3",
+      "rate": 1,
+      "duration": 1.872,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "review row example slow",
+      "id": 3,
+      "type": "playing",
+      "src": "http://localhost:5186/audio/guy/example-3561.mp3?v=Read%20this%20code.",
+      "rate": 0.72,
+      "duration": 2.016,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "expression library slow",
+      "id": 4,
+      "type": "playing",
+      "src": "http://localhost:5186/audio/daily/guy/hello.mp3?v=Hello!",
+      "rate": 0.72,
+      "duration": 1.536,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "programming teaching slow",
+      "id": 0,
+      "type": "playing",
+      "src": "http://localhost:5186/audio/aria/word-1.mp3?v=repository",
+      "rate": 0.72,
+      "duration": 1.992,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "programming teaching normal",
+      "id": 1,
+      "type": "playing",
+      "src": "http://localhost:5186/audio/aria/word-1.mp3?v=repository",
+      "rate": 1,
+      "duration": 1.992,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "programming scene listening slow",
+      "id": 0,
+      "type": "playing",
+      "src": "http://localhost:5186/audio/aria/word-3561.mp3?v=code",
+      "rate": 0.72,
+      "duration": 1.872,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "programming scene listening normal",
+      "id": 1,
+      "type": "playing",
+      "src": "http://localhost:5186/audio/aria/word-3561.mp3?v=code",
+      "rate": 1,
+      "duration": 1.872,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "daily teaching slow",
+      "id": 0,
+      "type": "playing",
+      "src": "http://localhost:5186/audio/daily/aria/hello.mp3?v=Hello!",
+      "rate": 0.72,
+      "duration": 1.56,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "daily teaching normal",
+      "id": 1,
+      "type": "playing",
+      "src": "http://localhost:5186/audio/daily/aria/hello.mp3?v=Hello!",
+      "rate": 1,
+      "duration": 1.56,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "daily scene listening slow",
+      "id": 0,
+      "type": "playing",
+      "src": "http://localhost:5186/audio/daily/aria/goodbye.mp3?v=Goodbye!",
+      "rate": 0.72,
+      "duration": 1.608,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "daily scene listening normal",
+      "id": 1,
+      "type": "playing",
+      "src": "http://localhost:5186/audio/daily/aria/goodbye.mp3?v=Goodbye!",
+      "rate": 1,
+      "duration": 1.608,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "word review automatic listening slow",
+      "id": 0,
+      "type": "playing",
+      "src": "http://localhost:5186/audio/aria/word-1.mp3",
+      "rate": 0.72,
+      "duration": 1.992,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "word review manual normal",
+      "id": 1,
+      "type": "playing",
+      "src": "http://localhost:5186/audio/aria/word-1.mp3",
+      "rate": 1,
+      "duration": 1.992,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "word review direct slow button",
+      "id": 2,
+      "type": "playing",
+      "src": "http://localhost:5186/audio/aria/word-1.mp3",
+      "rate": 0.72,
+      "duration": 1.992,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "word summary slow",
+      "id": 3,
+      "type": "playing",
+      "src": "http://localhost:5186/audio/aria/word-1.mp3",
+      "rate": 0.72,
+      "duration": 1.992,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "word summary normal",
+      "id": 4,
+      "type": "playing",
+      "src": "http://localhost:5186/audio/aria/word-1.mp3",
+      "rate": 1,
+      "duration": 1.992,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "live clip before speed changes",
+      "id": 0,
+      "type": "playing",
+      "src": "http://localhost:5186/audio/daily/aria/mia-introduction.mp3?v=She%20is%20Mia.%20She%20is%20from%20Japan.%20She%20is%20a%20student.",
+      "rate": 1,
+      "duration": 6,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "same phrase replays at changed speed instead of stopping",
+      "id": 1,
+      "type": "playing",
+      "src": "http://localhost:5186/audio/daily/aria/mia-introduction.mp3?v=She%20is%20Mia.%20She%20is%20from%20Japan.%20She%20is%20a%20student.",
+      "rate": 0.72,
+      "duration": 6,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "programming listening slow",
+      "id": 0,
+      "type": "playing",
+      "src": "http://localhost:5186/audio/aria/word-3561.mp3?v=code",
+      "rate": 0.72,
+      "duration": 1.872,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "programming listening normal",
+      "id": 1,
+      "type": "playing",
+      "src": "http://localhost:5186/audio/aria/word-3561.mp3?v=code",
+      "rate": 1,
+      "duration": 1.872,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "programming feedback slow",
+      "id": 2,
+      "type": "playing",
+      "src": "http://localhost:5186/audio/aria/word-3561.mp3?v=code",
+      "rate": 0.72,
+      "duration": 1.872,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "programming feedback normal",
+      "id": 3,
+      "type": "playing",
+      "src": "http://localhost:5186/audio/aria/word-3561.mp3?v=code",
+      "rate": 1,
+      "duration": 1.872,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "daily listening slow",
+      "id": 0,
+      "type": "playing",
+      "src": "http://localhost:5186/audio/daily/aria/goodbye.mp3?v=Goodbye!",
+      "rate": 0.72,
+      "duration": 1.608,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "daily listening normal",
+      "id": 1,
+      "type": "playing",
+      "src": "http://localhost:5186/audio/daily/aria/goodbye.mp3?v=Goodbye!",
+      "rate": 1,
+      "duration": 1.608,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "daily feedback slow",
+      "id": 2,
+      "type": "playing",
+      "src": "http://localhost:5186/audio/daily/aria/goodbye.mp3?v=Goodbye!",
+      "rate": 0.72,
+      "duration": 1.608,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "daily feedback normal",
+      "id": 3,
+      "type": "playing",
+      "src": "http://localhost:5186/audio/daily/aria/goodbye.mp3?v=Goodbye!",
+      "rate": 1,
+      "duration": 1.608,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "speaking demonstration normal",
+      "id": 0,
+      "type": "playing",
+      "src": "http://localhost:5186/audio/daily/aria/hello.mp3?v=Hello!",
+      "rate": 1,
+      "duration": 1.56,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "speaking demonstration slow",
+      "id": 1,
+      "type": "playing",
+      "src": "http://localhost:5186/audio/daily/aria/hello.mp3?v=Hello!",
+      "rate": 0.72,
+      "duration": 1.56,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "speaking explicit slow demonstration",
+      "id": 2,
+      "type": "playing",
+      "src": "http://localhost:5186/audio/daily/aria/hello.mp3?v=Hello!",
+      "rate": 0.72,
+      "duration": 1.56,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "own-expression reference normal",
+      "id": 3,
+      "type": "playing",
+      "src": "http://localhost:5186/audio/daily/aria/hello.mp3?v=Hello!",
+      "rate": 1,
+      "duration": 1.56,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "library word slow",
+      "id": 0,
+      "type": "playing",
+      "src": "http://localhost:5186/dist/audio/aria/word-3561.mp3",
+      "rate": 0.72,
+      "duration": 1.872,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "library example slow",
+      "id": 1,
+      "type": "playing",
+      "src": "http://localhost:5186/dist/audio/aria/example-3561.mp3?v=Read%20this%20code.",
+      "rate": 0.72,
+      "duration": 1.992,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "Guy word normal",
+      "id": 2,
+      "type": "playing",
+      "src": "http://localhost:5186/dist/audio/guy/word-3561.mp3",
+      "rate": 1,
+      "duration": 1.872,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "review row example slow",
+      "id": 3,
+      "type": "playing",
+      "src": "http://localhost:5186/dist/audio/guy/example-3561.mp3?v=Read%20this%20code.",
+      "rate": 0.72,
+      "duration": 2.016,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "expression library slow",
+      "id": 4,
+      "type": "playing",
+      "src": "http://localhost:5186/dist/audio/daily/guy/hello.mp3?v=Hello!",
+      "rate": 0.72,
+      "duration": 1.536,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "live clip before speed changes",
+      "id": 0,
+      "type": "playing",
+      "src": "http://localhost:5186/dist/audio/daily/aria/mia-introduction.mp3?v=She%20is%20Mia.%20She%20is%20from%20Japan.%20She%20is%20a%20student.",
+      "rate": 1,
+      "duration": 6,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "same phrase replays at changed speed instead of stopping",
+      "id": 1,
+      "type": "playing",
+      "src": "http://localhost:5186/dist/audio/daily/aria/mia-introduction.mp3?v=She%20is%20Mia.%20She%20is%20from%20Japan.%20She%20is%20a%20student.",
+      "rate": 0.72,
+      "duration": 6,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "word review automatic listening slow",
+      "id": 0,
+      "type": "playing",
+      "src": "http://localhost:5186/dist/audio/aria/word-1.mp3",
+      "rate": 0.72,
+      "duration": 1.992,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "word review manual normal",
+      "id": 1,
+      "type": "playing",
+      "src": "http://localhost:5186/dist/audio/aria/word-1.mp3",
+      "rate": 1,
+      "duration": 1.992,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "word review direct slow button",
+      "id": 2,
+      "type": "playing",
+      "src": "http://localhost:5186/dist/audio/aria/word-1.mp3",
+      "rate": 0.72,
+      "duration": 1.992,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "word summary slow",
+      "id": 3,
+      "type": "playing",
+      "src": "http://localhost:5186/dist/audio/aria/word-1.mp3",
+      "rate": 0.72,
+      "duration": 1.992,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "word summary normal",
+      "id": 4,
+      "type": "playing",
+      "src": "http://localhost:5186/dist/audio/aria/word-1.mp3",
+      "rate": 1,
+      "duration": 1.992,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "speaking demonstration normal",
+      "id": 0,
+      "type": "playing",
+      "src": "http://localhost:5186/dist/audio/daily/aria/hello.mp3?v=Hello!",
+      "rate": 1,
+      "duration": 1.56,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "speaking demonstration slow",
+      "id": 1,
+      "type": "playing",
+      "src": "http://localhost:5186/dist/audio/daily/aria/hello.mp3?v=Hello!",
+      "rate": 0.72,
+      "duration": 1.56,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "speaking explicit slow demonstration",
+      "id": 2,
+      "type": "playing",
+      "src": "http://localhost:5186/dist/audio/daily/aria/hello.mp3?v=Hello!",
+      "rate": 0.72,
+      "duration": 1.56,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "own-expression reference normal",
+      "id": 3,
+      "type": "playing",
+      "src": "http://localhost:5186/dist/audio/daily/aria/hello.mp3?v=Hello!",
+      "rate": 1,
+      "duration": 1.56,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "aria voice preview slow",
+      "id": 0,
+      "type": "playing",
+      "src": "http://localhost:5186/dist/audio/aria/voice-test.mp3",
+      "rate": 0.72,
+      "duration": 6.696,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "aria voice preview normal",
+      "id": 1,
+      "type": "playing",
+      "src": "http://localhost:5186/dist/audio/aria/voice-test.mp3",
+      "rate": 1,
+      "duration": 6.696,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "guy voice preview slow",
+      "id": 2,
+      "type": "playing",
+      "src": "http://localhost:5186/dist/audio/guy/voice-test.mp3",
+      "rate": 0.72,
+      "duration": 6.84,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "guy voice preview normal",
+      "id": 3,
+      "type": "playing",
+      "src": "http://localhost:5186/dist/audio/guy/voice-test.mp3",
+      "rate": 1,
+      "duration": 6.84,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    }
+  ]
+}

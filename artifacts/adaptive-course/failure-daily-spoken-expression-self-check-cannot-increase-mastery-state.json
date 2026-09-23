@@ -1,0 +1,1322 @@
+{
+  "version": 1,
+  "revision": 275,
+  "lessons": {
+    "A1-01-01": {
+      "completedAt": 1790091706627,
+      "lastPracticedAt": 1790091805912,
+      "skills": {
+        "meaning": {
+          "attempts": 4,
+          "independentAnswers": 4,
+          "assistedAnswers": 0,
+          "revealedAnswers": 0,
+          "selfReports": 0,
+          "successDays": 0,
+          "lastPracticedAt": 1790091706599,
+          "lastSuccessDay": "",
+          "lastDifficultyDay": "",
+          "dueAt": 1790178105916,
+          "needsPractice": false
+        },
+        "listening": {
+          "attempts": 5,
+          "independentAnswers": 5,
+          "assistedAnswers": 0,
+          "revealedAnswers": 0,
+          "selfReports": 0,
+          "successDays": 0,
+          "lastPracticedAt": 1790091706454,
+          "lastSuccessDay": "",
+          "lastDifficultyDay": "",
+          "dueAt": 1790178105966,
+          "needsPractice": false
+        },
+        "writing": {
+          "attempts": 3,
+          "independentAnswers": 3,
+          "assistedAnswers": 0,
+          "revealedAnswers": 0,
+          "selfReports": 0,
+          "successDays": 0,
+          "lastPracticedAt": 1790091706405,
+          "lastSuccessDay": "",
+          "lastDifficultyDay": "",
+          "dueAt": 1790178106172,
+          "needsPractice": false
+        },
+        "speaking": {
+          "attempts": 1,
+          "independentAnswers": 0,
+          "assistedAnswers": 0,
+          "revealedAnswers": 0,
+          "selfReports": 1,
+          "successDays": 0,
+          "lastPracticedAt": 1790091805912,
+          "lastSuccessDay": "",
+          "lastDifficultyDay": "",
+          "dueAt": 0,
+          "needsPractice": false
+        }
+      },
+      "errors": {}
+    },
+    "A1-01-02": {
+      "completedAt": 1790091711049,
+      "lastPracticedAt": 1790091711022,
+      "skills": {
+        "meaning": {
+          "attempts": 12,
+          "independentAnswers": 12,
+          "assistedAnswers": 0,
+          "revealedAnswers": 0,
+          "selfReports": 0,
+          "successDays": 0,
+          "lastPracticedAt": 1790091710760,
+          "lastSuccessDay": "",
+          "lastDifficultyDay": "",
+          "dueAt": 1790178107411,
+          "needsPractice": false
+        },
+        "listening": {
+          "attempts": 8,
+          "independentAnswers": 8,
+          "assistedAnswers": 0,
+          "revealedAnswers": 0,
+          "selfReports": 0,
+          "successDays": 0,
+          "lastPracticedAt": 1790091710699,
+          "lastSuccessDay": "",
+          "lastDifficultyDay": "",
+          "dueAt": 1790178107649,
+          "needsPractice": false
+        },
+        "writing": {
+          "attempts": 18,
+          "independentAnswers": 18,
+          "assistedAnswers": 0,
+          "revealedAnswers": 0,
+          "selfReports": 0,
+          "successDays": 0,
+          "lastPracticedAt": 1790091711022,
+          "lastSuccessDay": "",
+          "lastDifficultyDay": "",
+          "dueAt": 1790178107455,
+          "needsPractice": false
+        },
+        "speaking": {
+          "attempts": 0,
+          "independentAnswers": 0,
+          "assistedAnswers": 0,
+          "revealedAnswers": 0,
+          "selfReports": 0,
+          "successDays": 0,
+          "lastPracticedAt": 0,
+          "lastSuccessDay": "",
+          "lastDifficultyDay": "",
+          "dueAt": 0,
+          "needsPractice": false
+        }
+      },
+      "errors": {}
+    },
+    "A1-01-03": {
+      "completedAt": 1790091712500,
+      "lastPracticedAt": 1790091712472,
+      "skills": {
+        "meaning": {
+          "attempts": 5,
+          "independentAnswers": 5,
+          "assistedAnswers": 0,
+          "revealedAnswers": 0,
+          "selfReports": 0,
+          "successDays": 0,
+          "lastPracticedAt": 1790091712110,
+          "lastSuccessDay": "",
+          "lastDifficultyDay": "",
+          "dueAt": 1790178111806,
+          "needsPractice": false
+        },
+        "listening": {
+          "attempts": 2,
+          "independentAnswers": 2,
+          "assistedAnswers": 0,
+          "revealedAnswers": 0,
+          "selfReports": 0,
+          "successDays": 0,
+          "lastPracticedAt": 1790091712244,
+          "lastSuccessDay": "",
+          "lastDifficultyDay": "",
+          "dueAt": 1790178112060,
+          "needsPractice": false
+        },
+        "writing": {
+          "attempts": 5,
+          "independentAnswers": 5,
+          "assistedAnswers": 0,
+          "revealedAnswers": 0,
+          "selfReports": 0,
+          "successDays": 0,
+          "lastPracticedAt": 1790091712472,
+          "lastSuccessDay": "",
+          "lastDifficultyDay": "",
+          "dueAt": 1790178111910,
+          "needsPractice": false
+        },
+        "speaking": {
+          "attempts": 0,
+          "independentAnswers": 0,
+          "assistedAnswers": 0,
+          "revealedAnswers": 0,
+          "selfReports": 0,
+          "successDays": 0,
+          "lastPracticedAt": 0,
+          "lastSuccessDay": "",
+          "lastDifficultyDay": "",
+          "dueAt": 0,
+          "needsPractice": false
+        }
+      },
+      "errors": {}
+    },
+    "A1-01-05": {
+      "completedAt": 1790091712500,
+      "lastPracticedAt": 0,
+      "skills": {
+        "meaning": {
+          "attempts": 0,
+          "independentAnswers": 0,
+          "assistedAnswers": 0,
+          "revealedAnswers": 0,
+          "selfReports": 0,
+          "successDays": 0,
+          "lastPracticedAt": 0,
+          "lastSuccessDay": "",
+          "lastDifficultyDay": "",
+          "dueAt": 0,
+          "needsPractice": false
+        },
+        "listening": {
+          "attempts": 0,
+          "independentAnswers": 0,
+          "assistedAnswers": 0,
+          "revealedAnswers": 0,
+          "selfReports": 0,
+          "successDays": 0,
+          "lastPracticedAt": 0,
+          "lastSuccessDay": "",
+          "lastDifficultyDay": "",
+          "dueAt": 0,
+          "needsPractice": false
+        },
+        "writing": {
+          "attempts": 0,
+          "independentAnswers": 0,
+          "assistedAnswers": 0,
+          "revealedAnswers": 0,
+          "selfReports": 0,
+          "successDays": 0,
+          "lastPracticedAt": 0,
+          "lastSuccessDay": "",
+          "lastDifficultyDay": "",
+          "dueAt": 0,
+          "needsPractice": false
+        },
+        "speaking": {
+          "attempts": 0,
+          "independentAnswers": 0,
+          "assistedAnswers": 0,
+          "revealedAnswers": 0,
+          "selfReports": 0,
+          "successDays": 0,
+          "lastPracticedAt": 0,
+          "lastSuccessDay": "",
+          "lastDifficultyDay": "",
+          "dueAt": 0,
+          "needsPractice": false
+        }
+      },
+      "errors": {}
+    },
+    "A1-01-04": {
+      "completedAt": 0,
+      "lastPracticedAt": 1790091714423,
+      "skills": {
+        "meaning": {
+          "attempts": 4,
+          "independentAnswers": 4,
+          "assistedAnswers": 0,
+          "revealedAnswers": 0,
+          "selfReports": 0,
+          "successDays": 0,
+          "lastPracticedAt": 1790091713968,
+          "lastSuccessDay": "",
+          "lastDifficultyDay": "",
+          "dueAt": 1790178113362,
+          "needsPractice": false
+        },
+        "listening": {
+          "attempts": 3,
+          "independentAnswers": 3,
+          "assistedAnswers": 0,
+          "revealedAnswers": 0,
+          "selfReports": 0,
+          "successDays": 0,
+          "lastPracticedAt": 1790091714423,
+          "lastSuccessDay": "",
+          "lastDifficultyDay": "",
+          "dueAt": 1790178113472,
+          "needsPractice": false
+        },
+        "writing": {
+          "attempts": 8,
+          "independentAnswers": 8,
+          "assistedAnswers": 0,
+          "revealedAnswers": 0,
+          "selfReports": 0,
+          "successDays": 0,
+          "lastPracticedAt": 1790091714372,
+          "lastSuccessDay": "",
+          "lastDifficultyDay": "",
+          "dueAt": 1790178113567,
+          "needsPractice": false
+        },
+        "speaking": {
+          "attempts": 0,
+          "independentAnswers": 0,
+          "assistedAnswers": 0,
+          "revealedAnswers": 0,
+          "selfReports": 0,
+          "successDays": 0,
+          "lastPracticedAt": 0,
+          "lastSuccessDay": "",
+          "lastDifficultyDay": "",
+          "dueAt": 0,
+          "needsPractice": false
+        }
+      },
+      "errors": {}
+    }
+  },
+  "session": {
+    "id": "1790091805741-330q7hj7",
+    "lessonId": "A1-01-01",
+    "mode": "review",
+    "stage": "summary",
+    "startedAt": 1790091805741,
+    "queue": [
+      {
+        "exerciseId": "A1-01-01-e05",
+        "retry": false
+      }
+    ],
+    "index": 1,
+    "answers": [
+      {
+        "exerciseId": "A1-01-01-e05",
+        "retry": false,
+        "ability": "speaking",
+        "outcome": "self",
+        "correct": true,
+        "at": 1790091805912
+      }
+    ],
+    "draft": {
+      "choice": null,
+      "order": [],
+      "blanks": [],
+      "text": "",
+      "checks": [],
+      "helped": false,
+      "revealed": false
+    },
+    "feedback": null,
+    "focused": true
+  },
+  "knowledge": {
+    "hello": {
+      "firstLearnedAt": 1790091705805,
+      "lessonIds": [
+        "A1-01-01",
+        "A1-01-02"
+      ],
+      "skills": {
+        "meaning": {
+          "attempts": 3,
+          "independentAnswers": 3,
+          "assistedAnswers": 0,
+          "revealedAnswers": 0,
+          "selfReports": 0,
+          "successDays": 0,
+          "lastPracticedAt": 1790091709060,
+          "lastSuccessDay": "",
+          "lastDifficultyDay": "",
+          "dueAt": 1790178109060,
+          "needsPractice": false
+        },
+        "listening": {
+          "attempts": 2,
+          "independentAnswers": 2,
+          "assistedAnswers": 0,
+          "revealedAnswers": 0,
+          "selfReports": 0,
+          "successDays": 0,
+          "lastPracticedAt": 1790091709316,
+          "lastSuccessDay": "",
+          "lastDifficultyDay": "",
+          "dueAt": 1790178109060,
+          "needsPractice": false
+        },
+        "writing": {
+          "attempts": 3,
+          "independentAnswers": 3,
+          "assistedAnswers": 0,
+          "revealedAnswers": 0,
+          "selfReports": 0,
+          "successDays": 0,
+          "lastPracticedAt": 1790091709610,
+          "lastSuccessDay": "",
+          "lastDifficultyDay": "",
+          "dueAt": 1790178109060,
+          "needsPractice": false
+        },
+        "speaking": {
+          "attempts": 1,
+          "independentAnswers": 0,
+          "assistedAnswers": 0,
+          "revealedAnswers": 0,
+          "selfReports": 1,
+          "successDays": 0,
+          "lastPracticedAt": 1790091805912,
+          "lastSuccessDay": "",
+          "lastDifficultyDay": "",
+          "dueAt": 0,
+          "needsPractice": false
+        }
+      }
+    },
+    "hi": {
+      "firstLearnedAt": 1790091705805,
+      "lessonIds": [
+        "A1-01-01",
+        "A1-01-02"
+      ],
+      "skills": {
+        "meaning": {
+          "attempts": 2,
+          "independentAnswers": 2,
+          "assistedAnswers": 0,
+          "revealedAnswers": 0,
+          "selfReports": 0,
+          "successDays": 0,
+          "lastPracticedAt": 1790091710588,
+          "lastSuccessDay": "",
+          "lastDifficultyDay": "",
+          "dueAt": 1790178107771,
+          "needsPractice": false
+        },
+        "listening": {
+          "attempts": 1,
+          "independentAnswers": 1,
+          "assistedAnswers": 0,
+          "revealedAnswers": 0,
+          "selfReports": 0,
+          "successDays": 0,
+          "lastPracticedAt": 1790091707771,
+          "lastSuccessDay": "",
+          "lastDifficultyDay": "",
+          "dueAt": 1790178107771,
+          "needsPractice": false
+        },
+        "writing": {
+          "attempts": 2,
+          "independentAnswers": 2,
+          "assistedAnswers": 0,
+          "revealedAnswers": 0,
+          "selfReports": 0,
+          "successDays": 0,
+          "lastPracticedAt": 1790091706358,
+          "lastSuccessDay": "",
+          "lastDifficultyDay": "",
+          "dueAt": 1790178107771,
+          "needsPractice": false
+        },
+        "speaking": {
+          "attempts": 0,
+          "independentAnswers": 0,
+          "assistedAnswers": 0,
+          "revealedAnswers": 0,
+          "selfReports": 0,
+          "successDays": 0,
+          "lastPracticedAt": 0,
+          "lastSuccessDay": "",
+          "lastDifficultyDay": "",
+          "dueAt": 0,
+          "needsPractice": false
+        }
+      }
+    },
+    "goodbye": {
+      "firstLearnedAt": 1790091705805,
+      "lessonIds": [
+        "A1-01-01",
+        "A1-01-06",
+        "A1-01-02"
+      ],
+      "skills": {
+        "meaning": {
+          "attempts": 2,
+          "independentAnswers": 2,
+          "assistedAnswers": 0,
+          "revealedAnswers": 0,
+          "selfReports": 0,
+          "successDays": 0,
+          "lastPracticedAt": 1790091708127,
+          "lastSuccessDay": "",
+          "lastDifficultyDay": "",
+          "dueAt": 1790178107455,
+          "needsPractice": false
+        },
+        "listening": {
+          "attempts": 2,
+          "independentAnswers": 2,
+          "assistedAnswers": 0,
+          "revealedAnswers": 0,
+          "selfReports": 0,
+          "successDays": 0,
+          "lastPracticedAt": 1790091706454,
+          "lastSuccessDay": "",
+          "lastDifficultyDay": "",
+          "dueAt": 1790178107455,
+          "needsPractice": false
+        },
+        "writing": {
+          "attempts": 4,
+          "independentAnswers": 4,
+          "assistedAnswers": 0,
+          "revealedAnswers": 0,
+          "selfReports": 0,
+          "successDays": 0,
+          "lastPracticedAt": 1790091711022,
+          "lastSuccessDay": "",
+          "lastDifficultyDay": "",
+          "dueAt": 1790178107455,
+          "needsPractice": false
+        },
+        "speaking": {
+          "attempts": 1,
+          "independentAnswers": 0,
+          "assistedAnswers": 0,
+          "revealedAnswers": 0,
+          "selfReports": 1,
+          "successDays": 0,
+          "lastPracticedAt": 1790091805912,
+          "lastSuccessDay": "",
+          "lastDifficultyDay": "",
+          "dueAt": 0,
+          "needsPractice": false
+        }
+      }
+    },
+    "bye": {
+      "firstLearnedAt": 1790091705805,
+      "lessonIds": [
+        "A1-01-01",
+        "A1-01-02"
+      ],
+      "skills": {
+        "meaning": {
+          "attempts": 2,
+          "independentAnswers": 2,
+          "assistedAnswers": 0,
+          "revealedAnswers": 0,
+          "selfReports": 0,
+          "successDays": 0,
+          "lastPracticedAt": 1790091710488,
+          "lastSuccessDay": "",
+          "lastDifficultyDay": "",
+          "dueAt": 1790178110699,
+          "needsPractice": false
+        },
+        "listening": {
+          "attempts": 5,
+          "independentAnswers": 5,
+          "assistedAnswers": 0,
+          "revealedAnswers": 0,
+          "selfReports": 0,
+          "successDays": 0,
+          "lastPracticedAt": 1790091710699,
+          "lastSuccessDay": "",
+          "lastDifficultyDay": "",
+          "dueAt": 1790178110699,
+          "needsPractice": false
+        },
+        "writing": {
+          "attempts": 2,
+          "independentAnswers": 2,
+          "assistedAnswers": 0,
+          "revealedAnswers": 0,
+          "selfReports": 0,
+          "successDays": 0,
+          "lastPracticedAt": 1790091709566,
+          "lastSuccessDay": "",
+          "lastDifficultyDay": "",
+          "dueAt": 1790178110699,
+          "needsPractice": false
+        },
+        "speaking": {
+          "attempts": 0,
+          "independentAnswers": 0,
+          "assistedAnswers": 0,
+          "revealedAnswers": 0,
+          "selfReports": 0,
+          "successDays": 0,
+          "lastPracticedAt": 0,
+          "lastSuccessDay": "",
+          "lastDifficultyDay": "",
+          "dueAt": 0,
+          "needsPractice": false
+        }
+      }
+    },
+    "i-am-ben": {
+      "firstLearnedAt": 1790091707367,
+      "lessonIds": [
+        "A1-01-02",
+        "A1-01-05"
+      ],
+      "skills": {
+        "meaning": {
+          "attempts": 2,
+          "independentAnswers": 2,
+          "assistedAnswers": 0,
+          "revealedAnswers": 0,
+          "selfReports": 0,
+          "successDays": 0,
+          "lastPracticedAt": 1790091710438,
+          "lastSuccessDay": "",
+          "lastDifficultyDay": "",
+          "dueAt": 1790178108177,
+          "needsPractice": false
+        },
+        "listening": {
+          "attempts": 2,
+          "independentAnswers": 2,
+          "assistedAnswers": 0,
+          "revealedAnswers": 0,
+          "selfReports": 0,
+          "successDays": 0,
+          "lastPracticedAt": 1790091709510,
+          "lastSuccessDay": "",
+          "lastDifficultyDay": "",
+          "dueAt": 1790178108177,
+          "needsPractice": false
+        },
+        "writing": {
+          "attempts": 3,
+          "independentAnswers": 3,
+          "assistedAnswers": 0,
+          "revealedAnswers": 0,
+          "selfReports": 0,
+          "successDays": 0,
+          "lastPracticedAt": 1790091708177,
+          "lastSuccessDay": "",
+          "lastDifficultyDay": "",
+          "dueAt": 1790178108177,
+          "needsPractice": false
+        },
+        "speaking": {
+          "attempts": 0,
+          "independentAnswers": 0,
+          "assistedAnswers": 0,
+          "revealedAnswers": 0,
+          "selfReports": 0,
+          "successDays": 0,
+          "lastPracticedAt": 0,
+          "lastSuccessDay": "",
+          "lastDifficultyDay": "",
+          "dueAt": 0,
+          "needsPractice": false
+        }
+      }
+    },
+    "i-am-mia": {
+      "firstLearnedAt": 1790091708928,
+      "lessonIds": [
+        "A1-01-02",
+        "A1-01-03",
+        "A1-01-04"
+      ],
+      "skills": {
+        "meaning": {
+          "attempts": 4,
+          "independentAnswers": 4,
+          "assistedAnswers": 0,
+          "revealedAnswers": 0,
+          "selfReports": 0,
+          "successDays": 0,
+          "lastPracticedAt": 1790091713638,
+          "lastSuccessDay": "",
+          "lastDifficultyDay": "",
+          "dueAt": 1790178110922,
+          "needsPractice": false
+        },
+        "listening": {
+          "attempts": 0,
+          "independentAnswers": 0,
+          "assistedAnswers": 0,
+          "revealedAnswers": 0,
+          "selfReports": 0,
+          "successDays": 0,
+          "lastPracticedAt": 0,
+          "lastSuccessDay": "",
+          "lastDifficultyDay": "",
+          "dueAt": 1790178110922,
+          "needsPractice": false
+        },
+        "writing": {
+          "attempts": 3,
+          "independentAnswers": 3,
+          "assistedAnswers": 0,
+          "revealedAnswers": 0,
+          "selfReports": 0,
+          "successDays": 0,
+          "lastPracticedAt": 1790091710922,
+          "lastSuccessDay": "",
+          "lastDifficultyDay": "",
+          "dueAt": 1790178110922,
+          "needsPractice": false
+        },
+        "speaking": {
+          "attempts": 0,
+          "independentAnswers": 0,
+          "assistedAnswers": 0,
+          "revealedAnswers": 0,
+          "selfReports": 0,
+          "successDays": 0,
+          "lastPracticedAt": 0,
+          "lastSuccessDay": "",
+          "lastDifficultyDay": "",
+          "dueAt": 0,
+          "needsPractice": false
+        }
+      }
+    },
+    "im-ben": {
+      "firstLearnedAt": 1790091708928,
+      "lessonIds": [
+        "A1-01-02"
+      ],
+      "skills": {
+        "meaning": {
+          "attempts": 2,
+          "independentAnswers": 2,
+          "assistedAnswers": 0,
+          "revealedAnswers": 0,
+          "selfReports": 0,
+          "successDays": 0,
+          "lastPracticedAt": 1790091710389,
+          "lastSuccessDay": "",
+          "lastDifficultyDay": "",
+          "dueAt": 1790178110389,
+          "needsPractice": false
+        },
+        "listening": {
+          "attempts": 0,
+          "independentAnswers": 0,
+          "assistedAnswers": 0,
+          "revealedAnswers": 0,
+          "selfReports": 0,
+          "successDays": 0,
+          "lastPracticedAt": 0,
+          "lastSuccessDay": "",
+          "lastDifficultyDay": "",
+          "dueAt": 1790178110389,
+          "needsPractice": false
+        },
+        "writing": {
+          "attempts": 3,
+          "independentAnswers": 3,
+          "assistedAnswers": 0,
+          "revealedAnswers": 0,
+          "selfReports": 0,
+          "successDays": 0,
+          "lastPracticedAt": 1790091710827,
+          "lastSuccessDay": "",
+          "lastDifficultyDay": "",
+          "dueAt": 1790178110389,
+          "needsPractice": false
+        },
+        "speaking": {
+          "attempts": 0,
+          "independentAnswers": 0,
+          "assistedAnswers": 0,
+          "revealedAnswers": 0,
+          "selfReports": 0,
+          "successDays": 0,
+          "lastPracticedAt": 0,
+          "lastSuccessDay": "",
+          "lastDifficultyDay": "",
+          "dueAt": 0,
+          "needsPractice": false
+        }
+      }
+    },
+    "im-mia": {
+      "firstLearnedAt": 1790091710345,
+      "lessonIds": [
+        "A1-01-02",
+        "A1-01-05",
+        "A1-01-03"
+      ],
+      "skills": {
+        "meaning": {
+          "attempts": 2,
+          "independentAnswers": 2,
+          "assistedAnswers": 0,
+          "revealedAnswers": 0,
+          "selfReports": 0,
+          "successDays": 0,
+          "lastPracticedAt": 1790091712110,
+          "lastSuccessDay": "",
+          "lastDifficultyDay": "",
+          "dueAt": 1790178111910,
+          "needsPractice": false
+        },
+        "listening": {
+          "attempts": 1,
+          "independentAnswers": 1,
+          "assistedAnswers": 0,
+          "revealedAnswers": 0,
+          "selfReports": 0,
+          "successDays": 0,
+          "lastPracticedAt": 1790091710538,
+          "lastSuccessDay": "",
+          "lastDifficultyDay": "",
+          "dueAt": 1790178111910,
+          "needsPractice": false
+        },
+        "writing": {
+          "attempts": 3,
+          "independentAnswers": 3,
+          "assistedAnswers": 0,
+          "revealedAnswers": 0,
+          "selfReports": 0,
+          "successDays": 0,
+          "lastPracticedAt": 1790091712411,
+          "lastSuccessDay": "",
+          "lastDifficultyDay": "",
+          "dueAt": 1790178111910,
+          "needsPractice": false
+        },
+        "speaking": {
+          "attempts": 0,
+          "independentAnswers": 0,
+          "assistedAnswers": 0,
+          "revealedAnswers": 0,
+          "selfReports": 0,
+          "successDays": 0,
+          "lastPracticedAt": 0,
+          "lastSuccessDay": "",
+          "lastDifficultyDay": "",
+          "dueAt": 0,
+          "needsPractice": false
+        }
+      }
+    },
+    "whats-your-name": {
+      "firstLearnedAt": 1790091711772,
+      "lessonIds": [
+        "A1-01-03",
+        "A1-01-05",
+        "A1-01-04"
+      ],
+      "skills": {
+        "meaning": {
+          "attempts": 1,
+          "independentAnswers": 1,
+          "assistedAnswers": 0,
+          "revealedAnswers": 0,
+          "selfReports": 0,
+          "successDays": 0,
+          "lastPracticedAt": 1790091713968,
+          "lastSuccessDay": "",
+          "lastDifficultyDay": "",
+          "dueAt": 1790178113968,
+          "needsPractice": false
+        },
+        "listening": {
+          "attempts": 1,
+          "independentAnswers": 1,
+          "assistedAnswers": 0,
+          "revealedAnswers": 0,
+          "selfReports": 0,
+          "successDays": 0,
+          "lastPracticedAt": 1790091712244,
+          "lastSuccessDay": "",
+          "lastDifficultyDay": "",
+          "dueAt": 1790178112244,
+          "needsPractice": false
+        },
+        "writing": {
+          "attempts": 2,
+          "independentAnswers": 2,
+          "assistedAnswers": 0,
+          "revealedAnswers": 0,
+          "selfReports": 0,
+          "successDays": 0,
+          "lastPracticedAt": 1790091713699,
+          "lastSuccessDay": "",
+          "lastDifficultyDay": "",
+          "dueAt": 1790178112472,
+          "needsPractice": false
+        },
+        "speaking": {
+          "attempts": 0,
+          "independentAnswers": 0,
+          "assistedAnswers": 0,
+          "revealedAnswers": 0,
+          "selfReports": 0,
+          "successDays": 0,
+          "lastPracticedAt": 0,
+          "lastSuccessDay": "",
+          "lastDifficultyDay": "",
+          "dueAt": 0,
+          "needsPractice": false
+        }
+      }
+    },
+    "my-name-is-ben": {
+      "firstLearnedAt": 1790091711772,
+      "lessonIds": [
+        "A1-01-03",
+        "A1-01-05",
+        "A1-01-06",
+        "A1-01-04"
+      ],
+      "skills": {
+        "meaning": {
+          "attempts": 2,
+          "independentAnswers": 2,
+          "assistedAnswers": 0,
+          "revealedAnswers": 0,
+          "selfReports": 0,
+          "successDays": 0,
+          "lastPracticedAt": 1790091713411,
+          "lastSuccessDay": "",
+          "lastDifficultyDay": "",
+          "dueAt": 1790178113762,
+          "needsPractice": false
+        },
+        "listening": {
+          "attempts": 1,
+          "independentAnswers": 1,
+          "assistedAnswers": 0,
+          "revealedAnswers": 0,
+          "selfReports": 0,
+          "successDays": 0,
+          "lastPracticedAt": 1790091712060,
+          "lastSuccessDay": "",
+          "lastDifficultyDay": "",
+          "dueAt": 1790178113762,
+          "needsPractice": false
+        },
+        "writing": {
+          "attempts": 4,
+          "independentAnswers": 4,
+          "assistedAnswers": 0,
+          "revealedAnswers": 0,
+          "selfReports": 0,
+          "successDays": 0,
+          "lastPracticedAt": 1790091714372,
+          "lastSuccessDay": "",
+          "lastDifficultyDay": "",
+          "dueAt": 1790178113762,
+          "needsPractice": false
+        },
+        "speaking": {
+          "attempts": 0,
+          "independentAnswers": 0,
+          "assistedAnswers": 0,
+          "revealedAnswers": 0,
+          "selfReports": 0,
+          "successDays": 0,
+          "lastPracticedAt": 0,
+          "lastSuccessDay": "",
+          "lastDifficultyDay": "",
+          "dueAt": 0,
+          "needsPractice": false
+        }
+      }
+    },
+    "my-name-is-mia": {
+      "firstLearnedAt": 1790091711772,
+      "lessonIds": [
+        "A1-01-03",
+        "A1-01-05",
+        "A1-01-06",
+        "A1-01-04"
+      ],
+      "skills": {
+        "meaning": {
+          "attempts": 2,
+          "independentAnswers": 2,
+          "assistedAnswers": 0,
+          "revealedAnswers": 0,
+          "selfReports": 0,
+          "successDays": 0,
+          "lastPracticedAt": 1790091711961,
+          "lastSuccessDay": "",
+          "lastDifficultyDay": "",
+          "dueAt": 1790178111806,
+          "needsPractice": false
+        },
+        "listening": {
+          "attempts": 2,
+          "independentAnswers": 2,
+          "assistedAnswers": 0,
+          "revealedAnswers": 0,
+          "selfReports": 0,
+          "successDays": 0,
+          "lastPracticedAt": 1790091714311,
+          "lastSuccessDay": "",
+          "lastDifficultyDay": "",
+          "dueAt": 1790178113472,
+          "needsPractice": false
+        },
+        "writing": {
+          "attempts": 2,
+          "independentAnswers": 2,
+          "assistedAnswers": 0,
+          "revealedAnswers": 0,
+          "selfReports": 0,
+          "successDays": 0,
+          "lastPracticedAt": 1790091714039,
+          "lastSuccessDay": "",
+          "lastDifficultyDay": "",
+          "dueAt": 1790178112172,
+          "needsPractice": false
+        },
+        "speaking": {
+          "attempts": 0,
+          "independentAnswers": 0,
+          "assistedAnswers": 0,
+          "revealedAnswers": 0,
+          "selfReports": 0,
+          "successDays": 0,
+          "lastPracticedAt": 0,
+          "lastSuccessDay": "",
+          "lastDifficultyDay": "",
+          "dueAt": 0,
+          "needsPractice": false
+        }
+      }
+    },
+    "are-you-mia": {
+      "firstLearnedAt": 1790091713317,
+      "lessonIds": [
+        "A1-01-04",
+        "A1-01-06"
+      ],
+      "skills": {
+        "meaning": {
+          "attempts": 1,
+          "independentAnswers": 1,
+          "assistedAnswers": 0,
+          "revealedAnswers": 0,
+          "selfReports": 0,
+          "successDays": 0,
+          "lastPracticedAt": 1790091713362,
+          "lastSuccessDay": "",
+          "lastDifficultyDay": "",
+          "dueAt": 1790178113362,
+          "needsPractice": false
+        },
+        "listening": {
+          "attempts": 1,
+          "independentAnswers": 1,
+          "assistedAnswers": 0,
+          "revealedAnswers": 0,
+          "selfReports": 0,
+          "successDays": 0,
+          "lastPracticedAt": 1790091714423,
+          "lastSuccessDay": "",
+          "lastDifficultyDay": "",
+          "dueAt": 1790178114423,
+          "needsPractice": false
+        },
+        "writing": {
+          "attempts": 3,
+          "independentAnswers": 3,
+          "assistedAnswers": 0,
+          "revealedAnswers": 0,
+          "selfReports": 0,
+          "successDays": 0,
+          "lastPracticedAt": 1790091714239,
+          "lastSuccessDay": "",
+          "lastDifficultyDay": "",
+          "dueAt": 1790178113567,
+          "needsPractice": false
+        },
+        "speaking": {
+          "attempts": 0,
+          "independentAnswers": 0,
+          "assistedAnswers": 0,
+          "revealedAnswers": 0,
+          "selfReports": 0,
+          "successDays": 0,
+          "lastPracticedAt": 0,
+          "lastSuccessDay": "",
+          "lastDifficultyDay": "",
+          "dueAt": 0,
+          "needsPractice": false
+        }
+      }
+    }
+  },
+  "learning": {
+    "version": 1,
+    "turns": 78,
+    "rounds": 6,
+    "targets": {
+      "hello": {
+        "introducedAt": 1790091705805,
+        "confidence": 1,
+        "abilities": {
+          "listening": 0.0816,
+          "meaning": 0.3936,
+          "writing": 0.8640000000000001
+        },
+        "lastSeenTurn": 78,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-daily:hello:meaning-1n6yth5",
+          "sig-daily:hello:letters-i68w2f",
+          "sig-daily:original:A1-01-01-e03-1z0ee2q",
+          "sig-daily:original:A1-01-01-e01-1ygf6os",
+          "sig-daily:hello:listen-13v4njx",
+          "sig-daily:hello:write-85j8t"
+        ],
+        "transfer": true,
+        "readyAt": 1790091709060
+      },
+      "hi": {
+        "introducedAt": 1790091705805,
+        "confidence": 1,
+        "abilities": {
+          "meaning": 0.312,
+          "writing": 0.672,
+          "listening": 0.096
+        },
+        "lastSeenTurn": 43,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-daily:hi:meaning-txk7vi",
+          "sig-daily:original:A1-01-01-e04-1xmgdlv",
+          "sig-daily:hi:write-vanw8y",
+          "sig-daily:hi:listen-1vux07s",
+          "sig-daily:hi:expression-1deq5oh"
+        ],
+        "transfer": true,
+        "readyAt": 1790091707771
+      },
+      "goodbye": {
+        "introducedAt": 1790091705805,
+        "confidence": 1,
+        "abilities": {
+          "listening": 0.096,
+          "meaning": 0.3564,
+          "writing": 0.9072000000000001
+        },
+        "lastSeenTurn": 78,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-daily:original:A1-01-01-e02-99xsl",
+          "sig-daily:goodbye:listen-1sw0y6g",
+          "sig-daily:original:A1-01-06-e04-1g2n1fm",
+          "sig-daily:goodbye:expression-1stu4b5",
+          "sig-daily:goodbye:write-1wrameq"
+        ],
+        "transfer": true,
+        "readyAt": 1790091707455
+      },
+      "bye": {
+        "introducedAt": 1790091705805,
+        "confidence": 1,
+        "abilities": {
+          "listening": 0.5304,
+          "meaning": 0.36,
+          "writing": 0.4536
+        },
+        "lastSeenTurn": 45,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-daily:bye:meaning-1m86ikh",
+          "sig-daily:original:A1-01-01-r01-14hv829",
+          "sig-daily:bye:write-gyro3p",
+          "sig-daily:bye:expression-1gbc3e0",
+          "sig-daily:bye:listen-1qbfyn9"
+        ],
+        "transfer": true,
+        "readyAt": 1790091710699
+      },
+      "i-am-ben": {
+        "introducedAt": 1790091707367,
+        "confidence": 1,
+        "abilities": {
+          "meaning": 0.312,
+          "writing": 0.8640000000000001,
+          "listening": 0.1296
+        },
+        "lastSeenTurn": 40,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-daily:i-am-ben:meaning-y3vt4d",
+          "sig-daily:original:A1-01-02-e03-ypjclr",
+          "sig-daily:i-am-ben:order-mavzem",
+          "sig-daily:i-am-ben:write-403zvl",
+          "sig-daily:i-am-ben:listen-m5cjxd",
+          "sig-daily:i-am-ben:expression-op8xxg"
+        ],
+        "transfer": true,
+        "readyAt": 1790091708177
+      },
+      "i-am-mia": {
+        "introducedAt": 1790091708928,
+        "confidence": 1,
+        "abilities": {
+          "meaning": 0.438,
+          "writing": 0.8640000000000001
+        },
+        "lastSeenTurn": 67,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-daily:original:A1-01-02-r01-1dddn8o",
+          "sig-daily:i-am-mia:write-1u8y55x",
+          "sig-daily:i-am-mia:meaning-osus81",
+          "sig-daily:i-am-mia:order-1yz3376",
+          "sig-daily:i-am-mia:expression-3isrrc"
+        ],
+        "transfer": true,
+        "readyAt": 1790091710922
+      },
+      "im-ben": {
+        "introducedAt": 1790091708928,
+        "confidence": 1,
+        "abilities": {
+          "meaning": 0.312,
+          "writing": 0.6924000000000001
+        },
+        "lastSeenTurn": 47,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-daily:im-ben:meaning-klg9sr",
+          "sig-daily:original:A1-01-02-e05-y5k57t",
+          "sig-daily:im-ben:expression-1346ma6",
+          "sig-daily:im-ben:order-1bvl4t0"
+        ],
+        "transfer": true,
+        "readyAt": 1790091710389
+      },
+      "im-mia": {
+        "introducedAt": 1790091710345,
+        "confidence": 1,
+        "abilities": {
+          "listening": 0.048,
+          "meaning": 0.3564,
+          "writing": 0.936
+        },
+        "lastSeenTurn": 61,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-daily:im-mia:listen-vbbcab",
+          "sig-daily:im-mia:write-6kiunr",
+          "sig-daily:original:A1-01-02-r02-1e7cgbl",
+          "sig-daily:im-mia:expression-1i5bnt6",
+          "sig-daily:im-mia:order-pfwoow"
+        ],
+        "transfer": true,
+        "readyAt": 1790091711910
+      },
+      "whats-your-name": {
+        "introducedAt": 1790091711772,
+        "confidence": 0.5976,
+        "abilities": {
+          "listening": 0.048,
+          "writing": 0.4536,
+          "meaning": 0.096
+        },
+        "lastSeenTurn": 71,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-daily:whats-your-name:listen-1yhc1zk",
+          "sig-daily:whats-your-name:write-1xkd022",
+          "sig-daily:whats-your-name:meaning-f0qpzq"
+        ],
+        "transfer": true,
+        "readyAt": 0
+      },
+      "my-name-is-ben": {
+        "introducedAt": 1790091711772,
+        "confidence": 1,
+        "abilities": {
+          "meaning": 0.312,
+          "listening": 0.096,
+          "writing": 1
+        },
+        "lastSeenTurn": 76,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-daily:my-name-is-ben:meaning-1pq9za4",
+          "sig-daily:my-name-is-ben:listen-wqfse6",
+          "sig-daily:original:A1-01-06-e02-1eepf9s",
+          "sig-daily:my-name-is-ben:expression-1hvvo3",
+          "sig-daily:original:A1-01-03-r02-1li7aaq",
+          "sig-daily:my-name-is-ben:order-1gqpbkv",
+          "sig-daily:my-name-is-ben:write-1tnrxgk"
+        ],
+        "transfer": true,
+        "readyAt": 1790091713762
+      },
+      "my-name-is-mia": {
+        "introducedAt": 1790091711772,
+        "confidence": 0.8952,
+        "abilities": {
+          "meaning": 0.0816,
+          "writing": 0.4536,
+          "listening": 0.36
+        },
+        "lastSeenTurn": 75,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-daily:my-name-is-mia:meaning-10js040",
+          "sig-daily:original:A1-01-03-e02-17tk3h7",
+          "sig-daily:original:A1-01-06-r01-1qh8rck",
+          "sig-daily:my-name-is-mia:listen-12sf1oy"
+        ],
+        "transfer": true,
+        "readyAt": 0
+      },
+      "are-you-mia": {
+        "introducedAt": 1790091713317,
+        "confidence": 0.7644,
+        "abilities": {
+          "meaning": 0.048,
+          "writing": 0.6204000000000001,
+          "listening": 0.096
+        },
+        "lastSeenTurn": 77,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-daily:are-you-mia:meaning-1ma881d",
+          "sig-daily:are-you-mia:order-1blb4ua",
+          "sig-daily:original:A1-01-04-e03-512h2d",
+          "sig-daily:are-you-mia:listen-1aheqd1"
+        ],
+        "transfer": true,
+        "readyAt": 0
+      }
+    },
+    "lastAnswer": "1790091805741-330q7hj7:0:1790091805912"
+  }
+}

@@ -12,6 +12,9 @@ import {
   serializeReviewProgress,
   spellingMode,
   summarizeAbility,
+  enrollWord,
+  preferredAbility,
+  isWordDue,
 } from '../src/review.ts';
 
 const at = (day, hour = 10) => new Date(2026, 8, day, hour).getTime();
@@ -19,15 +22,20 @@ const item = id => ({ id, word: `word${id}`, meaning: `含义${id}`, category: '
 const pool = Array.from({ length: 12 }, (_, index) => item(index + 1));
 const question = (wordId = 1, ability = 'spelling', level = 0, retry = false) => ({ wordId, ability, level, retry });
 const answer = (session, outcome) => advanceReviewSession(applyReviewAnswer(session, outcome));
+const abilities = ['meaning', 'spelling', 'listening', 'context'];
+const futureSkills = () => Object.fromEntries(abilities.map(ability => [ability, {
+  ...getSkill({}, 1, ability), dueAt: at(25), lastPracticedAt: at(12),
+  lastSuccessDay: '2026-09-12', streak: 2, intervalDays: 14,
+}]));
 
-test('default session contains five unique words and interleaves their two abilities', () => {
+test('default session contains five unique words, starts with reading and spaces its follow-up evidence', () => {
   const session = createReviewSession([...pool, pool[0]], {}, {}, at(14));
   assert.equal(session.items.length, 5);
   assert.equal(new Set(session.items.map(word => word.id)).size, 5);
   assert.equal(session.questions.length, 10);
   for (let index = 0; index < 5; index++) {
-    assert.equal(session.questions[index].ability, 'meaning');
-    assert.equal(session.questions[index + 5].ability, 'spelling');
+    assert.equal(session.questions[index].ability, 'context');
+    assert.equal(session.questions[index + 5].ability, 'meaning');
     assert.equal(session.questions[index].wordId, session.questions[index + 5].wordId);
     assert.equal(session.questions[index].exposed, false);
     assert.equal(session.questions[index + 5].exposed, true);
@@ -207,9 +215,11 @@ test('a harder in-session challenge can record trouble without lowering the esta
   assert.equal(getSkill(failedEstablishedFormat, 1, 'spelling').level, 1);
 });
 
-test('spelling gets the first question when needed and repeats when meaning is stable and not due', () => {
+test('spelling gets the first question when needed and repeats when the other abilities are stable and not due', () => {
   let progress = {};
-  for (const day of [10, 11, 14]) progress = updateReviewProgress(progress, question(1, 'meaning'), 'independent', at(day));
+  for (const ability of ['meaning', 'context', 'listening']) {
+    for (const day of [10, 11, 14]) progress = updateReviewProgress(progress, question(1, ability), 'independent', at(day));
+  }
   progress = updateReviewProgress(progress, question(), 'assisted', at(14));
   const session = createReviewSession([pool[0]], progress, {}, at(15));
   assert.deepEqual(session.questions.map(candidate => candidate.ability), ['spelling', 'spelling']);
@@ -221,8 +231,10 @@ test('spelling gets the first question when needed and repeats when meaning is s
 });
 
 test('a just-seen spelling answer creates a next-day baseline without becoming delayed recall evidence', () => {
-  const session = createReviewSession([pool[0]], {}, {}, at(14));
-  let progress = updateReviewProgress({}, session.questions[0], 'independent', at(14));
+  let progress = { 1: { ...futureSkills(), meaning: getSkill({}, 1, 'meaning'), spelling: getSkill({}, 1, 'spelling') } };
+  const session = createReviewSession([pool[0]], progress, {}, at(14));
+  assert.deepEqual(session.questions.map(candidate => candidate.ability), ['meaning', 'spelling']);
+  progress = updateReviewProgress(progress, session.questions[0], 'independent', at(14));
   progress = updateReviewProgress(progress, session.questions[1], 'independent', at(14));
   const spelling = getSkill(progress, 1, 'spelling');
   assert.equal(spelling.streak, 0);
@@ -246,18 +258,21 @@ test('exposed success cannot clear an earlier mistake, advance a level, or delay
 });
 
 test('the one retry follows the more serious failure, then the most recent failure when tied', () => {
-  for (const [firstOutcome, secondOutcome, retryAbility] of [
-    ['revealed', 'assisted', 'meaning'],
-    ['assisted', 'revealed', 'spelling'],
-    ['assisted', 'assisted', 'spelling'],
+  for (const [firstOutcome, secondOutcome, useFirstFailure] of [
+    ['revealed', 'assisted', true],
+    ['assisted', 'revealed', false],
+    ['assisted', 'assisted', false],
   ]) {
     let session = createReviewSession(pool.slice(0, 2), {}, {}, at(14));
+    const firstAbility = session.questions[0].ability;
+    const secondAbility = session.questions[2].ability;
+    assert.notEqual(firstAbility, secondAbility);
     session = answer(session, firstOutcome);
     session = answer(session, 'independent');
     session = answer(session, secondOutcome);
     const retries = session.questions.filter(candidate => candidate.retry);
     assert.equal(retries.length, 1);
-    assert.equal(retries[0].ability, retryAbility);
+    assert.equal(retries[0].ability, useFirstFailure ? firstAbility : secondAbility);
     assert.equal(retries[0].exposed, true);
   }
 });
@@ -310,6 +325,87 @@ test('valid data round-trips and absent data starts fresh without touching old k
   assert.equal(progress['1'].spelling.streak, 1);
 });
 
+test('each of the four abilities can take priority when it is the real due weakness', () => {
+  assert.equal(preferredAbility({}, 1, at(14)), 'context');
+  for (const ability of abilities) {
+    const progress = { 1: futureSkills() };
+    progress[1][ability] = { ...progress[1][ability], needsPractice: true, dueAt: at(13) };
+    assert.equal(preferredAbility(progress, 1, at(14)), ability);
+    assert.equal(createReviewSession([pool[0]], progress, {}, at(14)).questions[0].ability, ability);
+    assert.equal(isWordDue(progress, 1, at(14)), true);
+    for (const sibling of abilities.filter(candidate => candidate !== ability)) progress[1][sibling].dueAt = at(10);
+    assert.equal(preferredAbility(progress, 1, at(14)), ability, 'a due weakness takes priority even over older stable reviews');
+  }
+  const progress = { 1: futureSkills() };
+  progress[1].listening.needsPractice = true;
+  progress[1].context.dueAt = at(14);
+  assert.equal(preferredAbility(progress, 1, at(14)), 'context', 'a future weakness does not displace a due review');
+  progress[1].context.dueAt = at(25);
+  assert.equal(isWordDue(progress, 1, at(14)), false);
+});
+
+test('listening success and context success never promote their spelling or meaning siblings', () => {
+  for (const [practiced, untouched] of [['listening', 'spelling'], ['context', 'meaning']]) {
+    const progress = { 1: futureSkills() };
+    progress[1][practiced] = { ...getSkill({}, 1, practiced), needsPractice: true, dueAt: at(14) };
+    const before = structuredClone(progress);
+    const updated = updateReviewProgress(progress, question(1, practiced), 'independent', at(14));
+    assert.equal(getSkill(updated, 1, practiced).streak, 1);
+    assert.equal(getSkill(updated, 1, practiced).attempts, 1);
+    assert.equal(getSkill(updated, 1, practiced).correctAnswers, 1);
+    assert.equal(getSkill(updated, 1, practiced).needsPractice, false);
+    assert.deepEqual(getSkill(updated, 1, untouched), getSkill(before, 1, untouched));
+    for (const sibling of abilities.filter(ability => ability !== practiced)) {
+      assert.deepEqual(getSkill(updated, 1, sibling), getSkill(before, 1, sibling));
+    }
+    assert.deepEqual(progress, before);
+  }
+});
+
+test('course enrollment makes a next-day review without recording an answer or invented mastery', () => {
+  const progress = enrollWord({}, 1, 'course', at(14));
+  assert.equal(progress[1].source, 'course');
+  assert.equal(progress[1].firstLearnedAt, at(14));
+  assert.equal(progress[1].enrolledAt, at(14));
+  for (const ability of abilities) {
+    const skill = getSkill(progress, 1, ability);
+    assert.equal(skill.dueAt, at(15));
+    assert.equal(skill.level, 0);
+    assert.equal(skill.streak, 0);
+    assert.equal(skill.lastPracticedAt, 0);
+    assert.equal(skill.lastSuccessDay, '');
+    assert.equal(skill.attempts ?? 0, 0);
+    assert.equal(skill.correctAnswers ?? 0, 0);
+  }
+  assert.equal(isWordDue(progress, 1, at(14)), false);
+  assert.equal(isWordDue(progress, 1, at(15)), true);
+  assert.equal(enrollWord(progress, 1, 'course', at(16)), progress);
+});
+
+test('old two-ability records still parse and legacy enrollment preserves their real evidence', () => {
+  const oldWord = {
+    meaning: { ...getSkill({}, 1, 'meaning'), streak: 2, intervalDays: 3, dueAt: at(16), lastPracticedAt: at(13), lastSuccessDay: '2026-09-13' },
+    spelling: { ...getSkill({}, 1, 'spelling'), level: 2, needsPractice: true, dueAt: at(14), lastPracticedAt: at(13), lastFailureDay: '2026-09-13' },
+  };
+  const raw = JSON.stringify({ version: 1, words: { 1: oldWord } });
+  const parsed = parseReviewProgress(raw);
+  assert.deepEqual(parsed[1], oldWord);
+  assert.equal(parsed[1].listening, undefined);
+  assert.equal(parsed[1].context, undefined);
+  const enrolled = enrollWord(parsed, 1, 'legacy', at(14));
+  assert.deepEqual(enrolled[1].meaning, oldWord.meaning);
+  assert.deepEqual(enrolled[1].spelling, oldWord.spelling);
+  assert.equal(enrolled[1].firstLearnedAt, 0);
+  assert.equal(enrolled[1].source, 'legacy');
+  for (const ability of ['listening', 'context']) {
+    assert.equal(getSkill(enrolled, 1, ability).streak, 0);
+    assert.equal(getSkill(enrolled, 1, ability).lastPracticedAt, 0);
+  }
+  assert.equal(isWordDue(enrolled, 1, at(14)), true);
+  assert.deepEqual(parseReviewProgress(serializeReviewProgress(enrolled)), enrolled);
+  assert.equal(JSON.stringify({ version: 1, words: parsed }), raw);
+});
+
 test('corrupt, unsupported, and dangerous storage cannot silently become empty progress', () => {
   for (const raw of ['', '{', '{}', 'null', '[]', '{"version":2,"words":{}}', '{"version":1,"words":{"__proto__":{}}}']) {
     assert.throws(() => parseReviewProgress(raw));
@@ -319,6 +415,11 @@ test('corrupt, unsupported, and dangerous storage cannot silently become empty p
     const invalid = structuredClone(valid);
     invalid.words['1'].spelling[field] = value;
     assert.throws(() => parseReviewProgress(JSON.stringify(invalid)), field);
+  }
+  for (const ability of ['listening', 'context']) {
+    const invalid = structuredClone(valid);
+    invalid.words['1'][ability] = { ...getSkill({}, 1, ability), dueAt: 'tomorrow' };
+    assert.throws(() => parseReviewProgress(JSON.stringify(invalid)), `malformed ${ability} must not be dropped`);
   }
 });
 
@@ -337,7 +438,7 @@ test('result descriptions separate scaffolding, full spelling, and same-session 
   assert.match(summarizeAbility(session, 1, 'spelling'), /本轮已纠正，下次继续确认/);
   session.answers = [{ question: question(), outcome: 'assisted' }, { question: { ...question(), exposed: true }, outcome: 'independent' }];
   assert.match(summarizeAbility(session, 1, 'spelling'), /本轮已纠正，下次继续确认/);
-  assert.match(summarizeAbility(session, 1, 'meaning'), /本轮侧重拼写，词义留待后续复习/);
+  assert.match(summarizeAbility(session, 1, 'meaning'), /词义留待后续练习/);
   session.answers = [{ question: { ...question(1, 'spelling', 3), exposed: true }, outcome: 'independent' }];
   assert.match(summarizeAbility(session, 1, 'spelling'), /本轮看过该词后完成拼写，下次再确认/);
   assert.match(summarizeAbility(session, 2, 'meaning'), /尚未练习/);

@@ -2,13 +2,15 @@ import { useEffect, useRef, useState } from 'react';
 import type { VocabularyItem } from './vocabulary';
 import LessonExercise, { type ExerciseHandle } from './LessonExercise';
 import { createLesson, answerLesson, nextLesson, summarizeLesson, type LessonTask, type TaskResult } from './lesson';
-import { REVIEW_KEY, parseReviewProgress, serializeReviewProgress, updateReviewProgress, type ReviewProgress } from './review';
+import { REVIEW_KEY, parseReviewProgress, updateReviewProgress, type ReviewProgress } from './review';
+import { persistProgrammingReviewSnapshot } from './programmingProgress';
 import './lesson.css';
 import ThemePicker, { type Theme } from './ThemePicker';
+import type { PlaybackSpeed } from './SpeechControls';
 
 const legacyKey = 'codewords-quiz-last-tested';
-function readLegacyHistory(): Record<string, number> {
-  const value: unknown = JSON.parse(localStorage.getItem(legacyKey) ?? '{}');
+function readLegacyHistory(raw = localStorage.getItem(legacyKey)): Record<string, number> {
+  const value: unknown = JSON.parse(raw ?? '{}');
   if (!value || typeof value !== 'object' || Array.isArray(value)) throw new Error('Invalid history');
   return Object.fromEntries(Object.entries(value).filter(([id, time]) => /^\d+$/.test(id) && typeof time === 'number' && Number.isFinite(time) && time > 0));
 }
@@ -23,6 +25,7 @@ function loadReview() {
   return { progress, history, warning };
 }
 function taskTitle(task: LessonTask) {
+  if (task.kind === 'context') return '这句话是什么意思？';
   if (task.kind === 'pairs') return '配对单词和含义';
   if (task.kind === 'listen') return '选择你听到的单词';
   if (task.kind === 'dictation') return task.difficulty === 3 ? '写出你听到的单词' : '听音补全单词';
@@ -37,9 +40,11 @@ type Props = {
   speaking?: string;
   theme: Theme;
   onThemeChange: (value: Theme) => void;
+  speed: PlaybackSpeed;
+  onSpeedChange: (value: PlaybackSpeed) => void;
 };
 
-export default function ReviewLesson({ pool, onClose, onFinished, playWord, speaking = '', theme, onThemeChange }: Props) {
+export default function ReviewLesson({ pool, onClose, onFinished, playWord, speaking = '', theme, onThemeChange, speed, onSpeedChange }: Props) {
   const [initial] = useState(loadReview);
   const progress = useRef(initial.progress);
   const legacy = useRef(initial.history);
@@ -84,7 +89,7 @@ export default function ReviewLesson({ pool, onClose, onFinished, playWord, spea
     if (input) input.focus(); else heading.current?.focus();
     if (task && (task.kind === 'listen' || task.kind === 'dictation') && autoPlayed.current !== task.id) {
       autoPlayed.current = task.id;
-      playWord(task.words[0], false, `lesson-${task.id}`);
+      playWord(task.words[0], undefined, `lesson-${task.id}`);
     }
   }, [lesson.id, lesson.index, lesson.finished]);
   useEffect(() => { if (feedback) nextButton.current?.focus(); }, [feedback]);
@@ -93,26 +98,30 @@ export default function ReviewLesson({ pool, onClose, onFinished, playWord, spea
     if (!task || lesson.finished) return;
     const now = Date.now();
     let snapshot = progress.current;
+    let expectedRaw: string | null = null;
     if (canSave.current) {
-      try { snapshot = parseReviewProgress(localStorage.getItem(REVIEW_KEY)); }
+      try { expectedRaw = localStorage.getItem(REVIEW_KEY); snapshot = parseReviewProgress(expectedRaw); }
       catch { canSave.current = false; setWarning('暂时无法读取复习记录。原记录保留，本轮后续结果暂不保存。'); }
     }
     for (const answer of answers) {
       const evidence = task.evidence.find(question => question.wordId === answer.wordId);
       if (!evidence) continue;
-      snapshot = updateReviewProgress(snapshot, evidence, answer.outcome, now);
+      snapshot = updateReviewProgress(snapshot, evidence, answer.outcome, now, finishedAnswer);
       if (finishedAnswer) legacy.current = { ...legacy.current, [answer.wordId]: now };
     }
     progress.current = snapshot;
     if (canSave.current) {
       try {
-        const history = readLegacyHistory();
-        localStorage.setItem(REVIEW_KEY, serializeReviewProgress(snapshot));
+        let historyUpdate: { raw: string | null; history: Record<string, number> } | undefined;
         if (finishedAnswer) {
+          const raw = localStorage.getItem(legacyKey);
+          const history = readLegacyHistory(raw);
           for (const answer of answers) history[answer.wordId] = now;
-          localStorage.setItem(legacyKey, JSON.stringify(history));
+          historyUpdate = { raw, history };
         }
-      } catch { canSave.current = false; setWarning('浏览器未能完整保存结果。可以继续练习，本轮后续结果暂不保存。'); }
+        persistProgrammingReviewSnapshot(localStorage, snapshot, expectedRaw, historyUpdate);
+        if (historyUpdate) legacy.current = historyUpdate.history;
+      } catch (error) { canSave.current = false; setWarning(error instanceof Error ? error.message : '浏览器未能完整保存结果。可以继续练习，本轮后续结果暂不保存。'); }
     }
   }
   function observeDifficulty(wordId: number) {
@@ -151,16 +160,19 @@ export default function ReviewLesson({ pool, onClose, onFinished, playWord, spea
     </div></header>
     <main className="lesson-stage"><div key={done ? 'summary' : empty ? 'empty' : task?.id} className={`lesson-content${done ? ' lesson-summary' : ''}`}>
       {warning && <p className="lesson-storage-note" role="alert">{warning}</p>}
-      {empty ? <><h1 id="lesson-heading" ref={heading} tabIndex={-1}>先学习一个词</h1><p className="lesson-empty-copy">把学过的词标记为“已掌握”，就可以开始配对、听写和选词填空。</p></> : done ? <>
+      {empty ? <><h1 id="lesson-heading" ref={heading} tabIndex={-1}>先学习一个词</h1><p className="lesson-empty-copy">课程学过的词会自动安排复习，也可以在复习页提前巩固。</p></> : done ? <>
         <p className="lesson-kicker">本轮记录</p><h1 id="lesson-heading" ref={heading} tabIndex={-1}>复习了 {lesson.items.length} 个词</h1>
         <p className="lesson-summary-intro">{difficult.length ? `${difficult.length} 个词还需要再练，之后会优先复习。` : '下次继续回忆这些词，再逐渐减少提示。'}</p>
         <ul className="lesson-summary-list">{lesson.items.map(word => {
           const summary = summarizeLesson(lesson, word.id);
-          return <li key={word.id}><div className="lesson-summary-word"><strong>{word.word}</strong><span>{word.meaning}</span><button className={speaking === `lesson-summary-${word.id}` ? 'lesson-is-playing' : ''} onClick={() => playWord(word, undefined, `lesson-summary-${word.id}`)} aria-label={`听 ${word.word} 的发音`}><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4V5Z" /><path d="M15 8a6 6 0 0 1 0 8M18 5a10 10 0 0 1 0 14" /></svg></button></div><div className="lesson-summary-evidence"><p>{summary.meaning}</p><p>{summary.spelling}</p></div></li>;
+          return <li key={word.id}><div className="lesson-summary-word"><strong>{word.word}</strong><span>{word.meaning}</span><div className="lesson-summary-audio">
+            <button type="button" className={speaking === `lesson-summary-${word.id}` ? 'lesson-is-playing' : ''} onClick={() => playWord(word, false, `lesson-summary-${word.id}`)} aria-label={`正常播放 ${word.word}`} aria-pressed={speaking === `lesson-summary-${word.id}`}><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4V5Z" /><path d="M15 8a6 6 0 0 1 0 8M18 5a10 10 0 0 1 0 14" /></svg></button>
+            <button type="button" className={`lesson-summary-slow${speaking === `lesson-summary-slow-${word.id}` ? ' lesson-is-playing' : ''}`} onClick={() => playWord(word, true, `lesson-summary-slow-${word.id}`)} aria-label={`慢速播放 ${word.word}`} aria-pressed={speaking === `lesson-summary-slow-${word.id}`}>慢速</button>
+          </div></div><div className="lesson-summary-evidence"><p>{summary.context}</p><p>{summary.meaning}</p><p>{summary.spelling}</p><p>{summary.listening}</p></div></li>;
         })}</ul><p className="lesson-save-note">{canSave.current ? '记录已保存在当前浏览器。' : '本轮记录未完整保存。'}</p>
       </> : task && <>
         <div className="lesson-question-header">{task.retry && <p className="lesson-kicker">再练一次</p>}<h1 id="lesson-heading" ref={heading} tabIndex={-1}>{taskTitle(task)}</h1></div>
-        <LessonExercise key={task.id} ref={exercise} task={task} onReady={setReady} onResult={complete} onDifficulty={observeDifficulty} playWord={playWord} speaking={speaking} />
+        <LessonExercise key={task.id} ref={exercise} task={task} onReady={setReady} onResult={complete} onDifficulty={observeDifficulty} playWord={playWord} speaking={speaking} speed={speed} onSpeedChange={onSpeedChange} />
       </>}
     </div></main>
     <footer className={`lesson-footer${feedback ? feedback.correct ? ' lesson-footer-correct' : ' lesson-footer-correction' : ''}`}><div className="lesson-footer-inner">

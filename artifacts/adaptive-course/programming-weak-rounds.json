@@ -1,0 +1,1709 @@
+[
+  {
+    "round": 1,
+    "plan": {
+      "version": 1,
+      "round": 1,
+      "focusIds": [
+        "word-1",
+        "word-2801",
+        "word-3561",
+        "word-20"
+      ],
+      "newIds": [
+        "word-1",
+        "word-2801",
+        "word-3561",
+        "word-20"
+      ],
+      "sourceLessonId": "P1-01-01",
+      "seed": 1422306624,
+      "budget": 12
+    },
+    "answers": 20,
+    "readyIds": [],
+    "targets": {
+      "word-1": {
+        "introducedAt": 1790091689727,
+        "confidence": 0,
+        "abilities": {
+          "meaning": 0,
+          "context": 0,
+          "listening": 0
+        },
+        "lastSeenTurn": 19,
+        "lastFailureTurn": 19,
+        "signatures": [],
+        "transfer": false,
+        "readyAt": 0
+      },
+      "word-2801": {
+        "introducedAt": 1790091689727,
+        "confidence": 0,
+        "abilities": {
+          "meaning": 0,
+          "context": 0,
+          "listening": 0
+        },
+        "lastSeenTurn": 18,
+        "lastFailureTurn": 18,
+        "signatures": [],
+        "transfer": false,
+        "readyAt": 0
+      },
+      "word-3561": {
+        "introducedAt": 1790091689727,
+        "confidence": 0,
+        "abilities": {
+          "meaning": 0,
+          "context": 0,
+          "spelling": 0,
+          "listening": 0
+        },
+        "lastSeenTurn": 17,
+        "lastFailureTurn": 17,
+        "signatures": [],
+        "transfer": false,
+        "readyAt": 0
+      },
+      "word-20": {
+        "introducedAt": 1790091689727,
+        "confidence": 0,
+        "abilities": {
+          "meaning": 0,
+          "listening": 0,
+          "context": 0
+        },
+        "lastSeenTurn": 20,
+        "lastFailureTurn": 20,
+        "signatures": [],
+        "transfer": false,
+        "readyAt": 0
+      }
+    },
+    "sequence": [
+      {
+        "id": "P1-01-01-p-2801-meaning",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-2801"
+        ],
+        "signature": "word-2801:meaning",
+        "outcome": "assisted",
+        "turn": 1
+      },
+      {
+        "id": "P1-01-06-p-1-meaning",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-1"
+        ],
+        "signature": "word-1:meaning",
+        "outcome": "revealed",
+        "turn": 2
+      },
+      {
+        "id": "P1-01-01-r01",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-20"
+        ],
+        "signature": "authored:P1-01-01-r01",
+        "outcome": "assisted",
+        "turn": 3
+      },
+      {
+        "id": "P1-01-01-p-3561-meaning",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-3561"
+        ],
+        "signature": "word-3561:meaning",
+        "outcome": "revealed",
+        "turn": 4
+      },
+      {
+        "id": "P1-01-01-e04",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-2801",
+          "word-3561"
+        ],
+        "signature": "authored:P1-01-01-e04",
+        "outcome": "assisted",
+        "turn": 5
+      },
+      {
+        "id": "P1-01-01-p-1-translation",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-1"
+        ],
+        "signature": "word-1:translation",
+        "outcome": "revealed",
+        "turn": 6
+      },
+      {
+        "id": "P1-01-01-p-2801-translation",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-2801"
+        ],
+        "signature": "word-2801:translation",
+        "outcome": "assisted",
+        "turn": 7
+      },
+      {
+        "id": "P1-01-06-p-20-listen",
+        "kind": "listen",
+        "knowledgeIds": [
+          "word-20"
+        ],
+        "signature": "word-20:listen",
+        "outcome": "revealed",
+        "turn": 8
+      },
+      {
+        "id": "P1-01-01-p-3561-recall",
+        "kind": "fill",
+        "knowledgeIds": [
+          "word-3561"
+        ],
+        "signature": "word-3561:recall",
+        "outcome": "assisted",
+        "turn": 9
+      },
+      {
+        "id": "P1-01-06-p-1-listen",
+        "kind": "listen",
+        "knowledgeIds": [
+          "word-1"
+        ],
+        "signature": "word-1:listen",
+        "outcome": "revealed",
+        "turn": 10
+      },
+      {
+        "id": "P1-01-01-p-20-listen",
+        "kind": "listen",
+        "knowledgeIds": [
+          "word-20"
+        ],
+        "signature": "word-20:listen",
+        "outcome": "assisted",
+        "turn": 11
+      },
+      {
+        "id": "P1-01-01-p-2801-word",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-2801"
+        ],
+        "signature": "word-2801:word",
+        "outcome": "revealed",
+        "turn": 12
+      },
+      {
+        "id": "P1-01-06-p-1-cloze",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-1"
+        ],
+        "signature": "word-1:cloze",
+        "outcome": "assisted",
+        "turn": 13
+      },
+      {
+        "id": "P1-01-06-p-20-cloze",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-20"
+        ],
+        "signature": "word-20:cloze",
+        "outcome": "revealed",
+        "turn": 14
+      },
+      {
+        "id": "P1-01-01-p-20-cloze",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-20"
+        ],
+        "signature": "word-20:cloze",
+        "outcome": "assisted",
+        "turn": 15
+      },
+      {
+        "id": "P1-01-01-e03",
+        "kind": "listen",
+        "knowledgeIds": [
+          "word-3561"
+        ],
+        "signature": "authored:P1-01-01-e03",
+        "outcome": "revealed",
+        "turn": 16
+      },
+      {
+        "id": "P1-01-01-p-3561-translation",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-3561"
+        ],
+        "signature": "word-3561:translation",
+        "outcome": "assisted",
+        "turn": 17
+      },
+      {
+        "id": "P1-01-01-p-2801-listen",
+        "kind": "listen",
+        "knowledgeIds": [
+          "word-2801"
+        ],
+        "signature": "word-2801:listen",
+        "outcome": "revealed",
+        "turn": 18
+      },
+      {
+        "id": "P1-01-01-e01",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-1"
+        ],
+        "signature": "authored:P1-01-01-e01",
+        "outcome": "assisted",
+        "turn": 19
+      },
+      {
+        "id": "P1-01-01-p-20-word",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-20"
+        ],
+        "signature": "word-20:word",
+        "outcome": "revealed",
+        "turn": 20
+      }
+    ]
+  },
+  {
+    "round": 2,
+    "plan": {
+      "version": 1,
+      "round": 2,
+      "focusIds": [
+        "word-3561",
+        "word-2801",
+        "word-1",
+        "word-20"
+      ],
+      "newIds": [],
+      "sourceLessonId": "P1-01-01",
+      "seed": 1422306624,
+      "budget": 16
+    },
+    "answers": 20,
+    "readyIds": [],
+    "targets": {
+      "word-1": {
+        "introducedAt": 1790091689727,
+        "confidence": 0,
+        "abilities": {
+          "meaning": 0,
+          "context": 0,
+          "listening": 0
+        },
+        "lastSeenTurn": 37,
+        "lastFailureTurn": 37,
+        "signatures": [],
+        "transfer": false,
+        "readyAt": 0
+      },
+      "word-2801": {
+        "introducedAt": 1790091689727,
+        "confidence": 0,
+        "abilities": {
+          "meaning": 0,
+          "context": 0,
+          "listening": 0,
+          "spelling": 0
+        },
+        "lastSeenTurn": 40,
+        "lastFailureTurn": 40,
+        "signatures": [],
+        "transfer": false,
+        "readyAt": 0
+      },
+      "word-3561": {
+        "introducedAt": 1790091689727,
+        "confidence": 0,
+        "abilities": {
+          "meaning": 0,
+          "context": 0,
+          "spelling": 0,
+          "listening": 0
+        },
+        "lastSeenTurn": 36,
+        "lastFailureTurn": 36,
+        "signatures": [],
+        "transfer": false,
+        "readyAt": 0
+      },
+      "word-20": {
+        "introducedAt": 1790091689727,
+        "confidence": 0,
+        "abilities": {
+          "meaning": 0,
+          "listening": 0,
+          "context": 0
+        },
+        "lastSeenTurn": 39,
+        "lastFailureTurn": 39,
+        "signatures": [],
+        "transfer": false,
+        "readyAt": 0
+      }
+    },
+    "sequence": [
+      {
+        "id": "P1-01-01-p-2801-word",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-2801"
+        ],
+        "signature": "word-2801:word",
+        "outcome": "assisted",
+        "turn": 21
+      },
+      {
+        "id": "P1-01-01-p-3561-listen",
+        "kind": "listen",
+        "knowledgeIds": [
+          "word-3561"
+        ],
+        "signature": "word-3561:listen",
+        "outcome": "revealed",
+        "turn": 22
+      },
+      {
+        "id": "P1-01-01-r01",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-20"
+        ],
+        "signature": "authored:P1-01-01-r01",
+        "outcome": "assisted",
+        "turn": 23
+      },
+      {
+        "id": "P1-01-01-p-2801-sentence",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-2801"
+        ],
+        "signature": "word-2801:sentence",
+        "outcome": "revealed",
+        "turn": 24
+      },
+      {
+        "id": "P1-01-01-e01",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-1"
+        ],
+        "signature": "authored:P1-01-01-e01",
+        "outcome": "assisted",
+        "turn": 25
+      },
+      {
+        "id": "P1-01-01-p-3561-word",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-3561"
+        ],
+        "signature": "word-3561:word",
+        "outcome": "revealed",
+        "turn": 26
+      },
+      {
+        "id": "P1-01-01-p-2801-meaning",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-2801"
+        ],
+        "signature": "word-2801:meaning",
+        "outcome": "assisted",
+        "turn": 27
+      },
+      {
+        "id": "P1-01-06-p-20-listen",
+        "kind": "listen",
+        "knowledgeIds": [
+          "word-20"
+        ],
+        "signature": "word-20:listen",
+        "outcome": "revealed",
+        "turn": 28
+      },
+      {
+        "id": "P1-01-06-p-1-word",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-1"
+        ],
+        "signature": "word-1:word",
+        "outcome": "assisted",
+        "turn": 29
+      },
+      {
+        "id": "P1-01-01-p-3561-cloze",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-3561"
+        ],
+        "signature": "word-3561:cloze",
+        "outcome": "revealed",
+        "turn": 30
+      },
+      {
+        "id": "P1-01-01-p-20-sentence",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-20"
+        ],
+        "signature": "word-20:sentence",
+        "outcome": "assisted",
+        "turn": 31
+      },
+      {
+        "id": "P1-01-01-p-1-sentence",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-1"
+        ],
+        "signature": "word-1:sentence",
+        "outcome": "revealed",
+        "turn": 32
+      },
+      {
+        "id": "P1-01-06-p-1-sentence",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-1"
+        ],
+        "signature": "word-1:sentence",
+        "outcome": "assisted",
+        "turn": 33
+      },
+      {
+        "id": "P1-01-06-p-20-cloze",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-20"
+        ],
+        "signature": "word-20:cloze",
+        "outcome": "revealed",
+        "turn": 34
+      },
+      {
+        "id": "P1-01-01-p-20-translation",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-20"
+        ],
+        "signature": "word-20:translation",
+        "outcome": "assisted",
+        "turn": 35
+      },
+      {
+        "id": "P1-01-01-e03",
+        "kind": "listen",
+        "knowledgeIds": [
+          "word-3561"
+        ],
+        "signature": "authored:P1-01-01-e03",
+        "outcome": "revealed",
+        "turn": 36
+      },
+      {
+        "id": "P1-01-06-p-1-meaning",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-1"
+        ],
+        "signature": "word-1:meaning",
+        "outcome": "assisted",
+        "turn": 37
+      },
+      {
+        "id": "P1-01-01-p-2801-recall",
+        "kind": "fill",
+        "knowledgeIds": [
+          "word-2801"
+        ],
+        "signature": "word-2801:recall",
+        "outcome": "revealed",
+        "turn": 38
+      },
+      {
+        "id": "P1-01-01-e02",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-20"
+        ],
+        "signature": "authored:P1-01-01-e02",
+        "outcome": "assisted",
+        "turn": 39
+      },
+      {
+        "id": "P1-01-01-p-2801-translation",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-2801"
+        ],
+        "signature": "word-2801:translation",
+        "outcome": "revealed",
+        "turn": 40
+      }
+    ]
+  },
+  {
+    "round": 3,
+    "plan": {
+      "version": 1,
+      "round": 3,
+      "focusIds": [
+        "word-3561",
+        "word-1",
+        "word-20",
+        "word-2801"
+      ],
+      "newIds": [],
+      "sourceLessonId": "P1-01-01",
+      "seed": 1422306624,
+      "budget": 16
+    },
+    "answers": 20,
+    "readyIds": [],
+    "targets": {
+      "word-1": {
+        "introducedAt": 1790091689727,
+        "confidence": 0,
+        "abilities": {
+          "meaning": 0,
+          "context": 0,
+          "listening": 0,
+          "spelling": 0
+        },
+        "lastSeenTurn": 60,
+        "lastFailureTurn": 60,
+        "signatures": [],
+        "transfer": false,
+        "readyAt": 0
+      },
+      "word-2801": {
+        "introducedAt": 1790091689727,
+        "confidence": 0,
+        "abilities": {
+          "meaning": 0,
+          "context": 0,
+          "listening": 0,
+          "spelling": 0
+        },
+        "lastSeenTurn": 59,
+        "lastFailureTurn": 59,
+        "signatures": [],
+        "transfer": false,
+        "readyAt": 0
+      },
+      "word-3561": {
+        "introducedAt": 1790091689727,
+        "confidence": 0,
+        "abilities": {
+          "meaning": 0,
+          "context": 0,
+          "spelling": 0,
+          "listening": 0
+        },
+        "lastSeenTurn": 59,
+        "lastFailureTurn": 59,
+        "signatures": [],
+        "transfer": false,
+        "readyAt": 0
+      },
+      "word-20": {
+        "introducedAt": 1790091689727,
+        "confidence": 0,
+        "abilities": {
+          "meaning": 0,
+          "listening": 0,
+          "context": 0,
+          "spelling": 0
+        },
+        "lastSeenTurn": 58,
+        "lastFailureTurn": 58,
+        "signatures": [],
+        "transfer": false,
+        "readyAt": 0
+      }
+    },
+    "sequence": [
+      {
+        "id": "P1-01-01-p-1-word",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-1"
+        ],
+        "signature": "word-1:word",
+        "outcome": "assisted",
+        "turn": 41
+      },
+      {
+        "id": "P1-01-01-p-20-meaning",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-20"
+        ],
+        "signature": "word-20:meaning",
+        "outcome": "revealed",
+        "turn": 42
+      },
+      {
+        "id": "P1-01-01-e03",
+        "kind": "listen",
+        "knowledgeIds": [
+          "word-3561"
+        ],
+        "signature": "authored:P1-01-01-e03",
+        "outcome": "assisted",
+        "turn": 43
+      },
+      {
+        "id": "P1-01-01-p-2801-listen",
+        "kind": "listen",
+        "knowledgeIds": [
+          "word-2801"
+        ],
+        "signature": "word-2801:listen",
+        "outcome": "revealed",
+        "turn": 44
+      },
+      {
+        "id": "P1-01-01-e02",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-20"
+        ],
+        "signature": "authored:P1-01-01-e02",
+        "outcome": "assisted",
+        "turn": 45
+      },
+      {
+        "id": "P1-01-01-p-1-translation",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-1"
+        ],
+        "signature": "word-1:translation",
+        "outcome": "revealed",
+        "turn": 46
+      },
+      {
+        "id": "P1-01-01-p-1-meaning",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-1"
+        ],
+        "signature": "word-1:meaning",
+        "outcome": "assisted",
+        "turn": 47
+      },
+      {
+        "id": "P1-01-01-p-20-cloze",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-20"
+        ],
+        "signature": "word-20:cloze",
+        "outcome": "revealed",
+        "turn": 48
+      },
+      {
+        "id": "P1-01-01-p-3561-sentence",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-3561"
+        ],
+        "signature": "word-3561:sentence",
+        "outcome": "assisted",
+        "turn": 49
+      },
+      {
+        "id": "P1-01-06-p-1-meaning",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-1"
+        ],
+        "signature": "word-1:meaning",
+        "outcome": "revealed",
+        "turn": 50
+      },
+      {
+        "id": "P1-01-01-p-20-listen",
+        "kind": "listen",
+        "knowledgeIds": [
+          "word-20"
+        ],
+        "signature": "word-20:listen",
+        "outcome": "assisted",
+        "turn": 51
+      },
+      {
+        "id": "P1-01-01-p-2801-word",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-2801"
+        ],
+        "signature": "word-2801:word",
+        "outcome": "revealed",
+        "turn": 52
+      },
+      {
+        "id": "P1-01-06-p-1-cloze",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-1"
+        ],
+        "signature": "word-1:cloze",
+        "outcome": "assisted",
+        "turn": 53
+      },
+      {
+        "id": "P1-01-06-p-20-cloze",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-20"
+        ],
+        "signature": "word-20:cloze",
+        "outcome": "revealed",
+        "turn": 54
+      },
+      {
+        "id": "P1-01-01-p-20-recall",
+        "kind": "fill",
+        "knowledgeIds": [
+          "word-20"
+        ],
+        "signature": "word-20:recall",
+        "outcome": "assisted",
+        "turn": 55
+      },
+      {
+        "id": "P1-01-01-e04",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-2801",
+          "word-3561"
+        ],
+        "signature": "authored:P1-01-01-e04",
+        "outcome": "revealed",
+        "turn": 56
+      },
+      {
+        "id": "P1-01-06-p-1-listen",
+        "kind": "listen",
+        "knowledgeIds": [
+          "word-1"
+        ],
+        "signature": "word-1:listen",
+        "outcome": "assisted",
+        "turn": 57
+      },
+      {
+        "id": "P1-01-01-p-20-translation",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-20"
+        ],
+        "signature": "word-20:translation",
+        "outcome": "revealed",
+        "turn": 58
+      },
+      {
+        "id": "P1-01-01-r02",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-2801",
+          "word-3561"
+        ],
+        "signature": "authored:P1-01-01-r02",
+        "outcome": "assisted",
+        "turn": 59
+      },
+      {
+        "id": "P1-01-01-p-1-recall",
+        "kind": "fill",
+        "knowledgeIds": [
+          "word-1"
+        ],
+        "signature": "word-1:recall",
+        "outcome": "revealed",
+        "turn": 60
+      }
+    ]
+  },
+  {
+    "round": 4,
+    "plan": {
+      "version": 1,
+      "round": 4,
+      "focusIds": [
+        "word-20",
+        "word-2801",
+        "word-3561",
+        "word-1"
+      ],
+      "newIds": [],
+      "sourceLessonId": "P1-01-01",
+      "seed": 1422306624,
+      "budget": 16
+    },
+    "answers": 20,
+    "readyIds": [],
+    "targets": {
+      "word-1": {
+        "introducedAt": 1790091689727,
+        "confidence": 0,
+        "abilities": {
+          "meaning": 0,
+          "context": 0,
+          "listening": 0,
+          "spelling": 0
+        },
+        "lastSeenTurn": 78,
+        "lastFailureTurn": 78,
+        "signatures": [],
+        "transfer": false,
+        "readyAt": 0
+      },
+      "word-2801": {
+        "introducedAt": 1790091689727,
+        "confidence": 0,
+        "abilities": {
+          "meaning": 0,
+          "context": 0,
+          "listening": 0,
+          "spelling": 0
+        },
+        "lastSeenTurn": 79,
+        "lastFailureTurn": 79,
+        "signatures": [],
+        "transfer": false,
+        "readyAt": 0
+      },
+      "word-3561": {
+        "introducedAt": 1790091689727,
+        "confidence": 0,
+        "abilities": {
+          "meaning": 0,
+          "context": 0,
+          "spelling": 0,
+          "listening": 0
+        },
+        "lastSeenTurn": 79,
+        "lastFailureTurn": 79,
+        "signatures": [],
+        "transfer": false,
+        "readyAt": 0
+      },
+      "word-20": {
+        "introducedAt": 1790091689727,
+        "confidence": 0,
+        "abilities": {
+          "meaning": 0,
+          "listening": 0,
+          "context": 0,
+          "spelling": 0
+        },
+        "lastSeenTurn": 80,
+        "lastFailureTurn": 80,
+        "signatures": [],
+        "transfer": false,
+        "readyAt": 0
+      }
+    },
+    "sequence": [
+      {
+        "id": "P1-01-01-p-20-meaning",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-20"
+        ],
+        "signature": "word-20:meaning",
+        "outcome": "assisted",
+        "turn": 61
+      },
+      {
+        "id": "P1-01-01-p-3561-listen",
+        "kind": "listen",
+        "knowledgeIds": [
+          "word-3561"
+        ],
+        "signature": "word-3561:listen",
+        "outcome": "revealed",
+        "turn": 62
+      },
+      {
+        "id": "P1-01-01-p-1-meaning",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-1"
+        ],
+        "signature": "word-1:meaning",
+        "outcome": "assisted",
+        "turn": 63
+      },
+      {
+        "id": "P1-01-01-p-20-word",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-20"
+        ],
+        "signature": "word-20:word",
+        "outcome": "revealed",
+        "turn": 64
+      },
+      {
+        "id": "P1-01-01-e03",
+        "kind": "listen",
+        "knowledgeIds": [
+          "word-3561"
+        ],
+        "signature": "authored:P1-01-01-e03",
+        "outcome": "assisted",
+        "turn": 65
+      },
+      {
+        "id": "P1-01-01-p-2801-meaning",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-2801"
+        ],
+        "signature": "word-2801:meaning",
+        "outcome": "revealed",
+        "turn": 66
+      },
+      {
+        "id": "P1-01-01-r01",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-20"
+        ],
+        "signature": "authored:P1-01-01-r01",
+        "outcome": "assisted",
+        "turn": 67
+      },
+      {
+        "id": "P1-01-06-p-1-sentence",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-1"
+        ],
+        "signature": "word-1:sentence",
+        "outcome": "revealed",
+        "turn": 68
+      },
+      {
+        "id": "P1-01-01-p-3561-translation",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-3561"
+        ],
+        "signature": "word-3561:translation",
+        "outcome": "assisted",
+        "turn": 69
+      },
+      {
+        "id": "P1-01-06-p-1-listen",
+        "kind": "listen",
+        "knowledgeIds": [
+          "word-1"
+        ],
+        "signature": "word-1:listen",
+        "outcome": "revealed",
+        "turn": 70
+      },
+      {
+        "id": "P1-01-01-p-20-recall",
+        "kind": "fill",
+        "knowledgeIds": [
+          "word-20"
+        ],
+        "signature": "word-20:recall",
+        "outcome": "assisted",
+        "turn": 71
+      },
+      {
+        "id": "P1-01-01-p-2801-word",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-2801"
+        ],
+        "signature": "word-2801:word",
+        "outcome": "revealed",
+        "turn": 72
+      },
+      {
+        "id": "P1-01-06-p-1-cloze",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-1"
+        ],
+        "signature": "word-1:cloze",
+        "outcome": "assisted",
+        "turn": 73
+      },
+      {
+        "id": "P1-01-06-p-20-cloze",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-20"
+        ],
+        "signature": "word-20:cloze",
+        "outcome": "revealed",
+        "turn": 74
+      },
+      {
+        "id": "P1-01-06-p-1-meaning",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-1"
+        ],
+        "signature": "word-1:meaning",
+        "outcome": "assisted",
+        "turn": 75
+      },
+      {
+        "id": "P1-01-01-e04",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-2801",
+          "word-3561"
+        ],
+        "signature": "authored:P1-01-01-e04",
+        "outcome": "revealed",
+        "turn": 76
+      },
+      {
+        "id": "P1-01-06-p-20-word",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-20"
+        ],
+        "signature": "word-20:word",
+        "outcome": "assisted",
+        "turn": 77
+      },
+      {
+        "id": "P1-01-01-p-1-cloze",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-1"
+        ],
+        "signature": "word-1:cloze",
+        "outcome": "revealed",
+        "turn": 78
+      },
+      {
+        "id": "P1-01-01-r02",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-2801",
+          "word-3561"
+        ],
+        "signature": "authored:P1-01-01-r02",
+        "outcome": "assisted",
+        "turn": 79
+      },
+      {
+        "id": "P1-01-01-p-20-sentence",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-20"
+        ],
+        "signature": "word-20:sentence",
+        "outcome": "revealed",
+        "turn": 80
+      }
+    ]
+  },
+  {
+    "round": 5,
+    "plan": {
+      "version": 1,
+      "round": 5,
+      "focusIds": [
+        "word-1",
+        "word-2801",
+        "word-3561",
+        "word-20"
+      ],
+      "newIds": [],
+      "sourceLessonId": "P1-01-01",
+      "seed": 1422306624,
+      "budget": 16
+    },
+    "answers": 20,
+    "readyIds": [],
+    "targets": {
+      "word-1": {
+        "introducedAt": 1790091689727,
+        "confidence": 0,
+        "abilities": {
+          "meaning": 0,
+          "context": 0,
+          "listening": 0,
+          "spelling": 0
+        },
+        "lastSeenTurn": 98,
+        "lastFailureTurn": 98,
+        "signatures": [],
+        "transfer": false,
+        "readyAt": 0
+      },
+      "word-2801": {
+        "introducedAt": 1790091689727,
+        "confidence": 0,
+        "abilities": {
+          "meaning": 0,
+          "context": 0,
+          "listening": 0,
+          "spelling": 0
+        },
+        "lastSeenTurn": 99,
+        "lastFailureTurn": 99,
+        "signatures": [],
+        "transfer": false,
+        "readyAt": 0
+      },
+      "word-3561": {
+        "introducedAt": 1790091689727,
+        "confidence": 0,
+        "abilities": {
+          "meaning": 0,
+          "context": 0,
+          "spelling": 0,
+          "listening": 0
+        },
+        "lastSeenTurn": 99,
+        "lastFailureTurn": 99,
+        "signatures": [],
+        "transfer": false,
+        "readyAt": 0
+      },
+      "word-20": {
+        "introducedAt": 1790091689727,
+        "confidence": 0,
+        "abilities": {
+          "meaning": 0,
+          "listening": 0,
+          "context": 0,
+          "spelling": 0
+        },
+        "lastSeenTurn": 100,
+        "lastFailureTurn": 100,
+        "signatures": [],
+        "transfer": false,
+        "readyAt": 0
+      }
+    },
+    "sequence": [
+      {
+        "id": "P1-01-01-p-1-word",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-1"
+        ],
+        "signature": "word-1:word",
+        "outcome": "assisted",
+        "turn": 81
+      },
+      {
+        "id": "P1-01-01-p-3561-word",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-3561"
+        ],
+        "signature": "word-3561:word",
+        "outcome": "revealed",
+        "turn": 82
+      },
+      {
+        "id": "P1-01-01-p-1-sentence",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-1"
+        ],
+        "signature": "word-1:sentence",
+        "outcome": "assisted",
+        "turn": 83
+      },
+      {
+        "id": "P1-01-01-p-20-meaning",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-20"
+        ],
+        "signature": "word-20:meaning",
+        "outcome": "revealed",
+        "turn": 84
+      },
+      {
+        "id": "P1-01-01-e03",
+        "kind": "listen",
+        "knowledgeIds": [
+          "word-3561"
+        ],
+        "signature": "authored:P1-01-01-e03",
+        "outcome": "assisted",
+        "turn": 85
+      },
+      {
+        "id": "P1-01-01-p-2801-meaning",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-2801"
+        ],
+        "signature": "word-2801:meaning",
+        "outcome": "revealed",
+        "turn": 86
+      },
+      {
+        "id": "P1-01-01-r01",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-20"
+        ],
+        "signature": "authored:P1-01-01-r01",
+        "outcome": "assisted",
+        "turn": 87
+      },
+      {
+        "id": "P1-01-06-p-1-sentence",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-1"
+        ],
+        "signature": "word-1:sentence",
+        "outcome": "revealed",
+        "turn": 88
+      },
+      {
+        "id": "P1-01-01-p-3561-translation",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-3561"
+        ],
+        "signature": "word-3561:translation",
+        "outcome": "assisted",
+        "turn": 89
+      },
+      {
+        "id": "P1-01-06-p-1-meaning",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-1"
+        ],
+        "signature": "word-1:meaning",
+        "outcome": "revealed",
+        "turn": 90
+      },
+      {
+        "id": "P1-01-01-p-20-recall",
+        "kind": "fill",
+        "knowledgeIds": [
+          "word-20"
+        ],
+        "signature": "word-20:recall",
+        "outcome": "assisted",
+        "turn": 91
+      },
+      {
+        "id": "P1-01-01-p-2801-word",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-2801"
+        ],
+        "signature": "word-2801:word",
+        "outcome": "revealed",
+        "turn": 92
+      },
+      {
+        "id": "P1-01-06-p-1-cloze",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-1"
+        ],
+        "signature": "word-1:cloze",
+        "outcome": "assisted",
+        "turn": 93
+      },
+      {
+        "id": "P1-01-06-p-20-cloze",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-20"
+        ],
+        "signature": "word-20:cloze",
+        "outcome": "revealed",
+        "turn": 94
+      },
+      {
+        "id": "P1-01-06-p-1-word",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-1"
+        ],
+        "signature": "word-1:word",
+        "outcome": "assisted",
+        "turn": 95
+      },
+      {
+        "id": "P1-01-01-e04",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-2801",
+          "word-3561"
+        ],
+        "signature": "authored:P1-01-01-e04",
+        "outcome": "revealed",
+        "turn": 96
+      },
+      {
+        "id": "P1-01-06-p-20-word",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-20"
+        ],
+        "signature": "word-20:word",
+        "outcome": "assisted",
+        "turn": 97
+      },
+      {
+        "id": "P1-01-01-p-1-cloze",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-1"
+        ],
+        "signature": "word-1:cloze",
+        "outcome": "revealed",
+        "turn": 98
+      },
+      {
+        "id": "P1-01-01-r02",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-2801",
+          "word-3561"
+        ],
+        "signature": "authored:P1-01-01-r02",
+        "outcome": "assisted",
+        "turn": 99
+      },
+      {
+        "id": "P1-01-01-p-20-listen",
+        "kind": "listen",
+        "knowledgeIds": [
+          "word-20"
+        ],
+        "signature": "word-20:listen",
+        "outcome": "revealed",
+        "turn": 100
+      }
+    ]
+  },
+  {
+    "round": 6,
+    "plan": {
+      "version": 1,
+      "round": 6,
+      "focusIds": [
+        "word-1",
+        "word-2801",
+        "word-3561",
+        "word-20"
+      ],
+      "newIds": [],
+      "sourceLessonId": "P1-01-01",
+      "seed": 1422306624,
+      "budget": 16
+    },
+    "answers": 20,
+    "readyIds": [],
+    "targets": {
+      "word-1": {
+        "introducedAt": 1790091689727,
+        "confidence": 0,
+        "abilities": {
+          "meaning": 0,
+          "context": 0,
+          "listening": 0,
+          "spelling": 0
+        },
+        "lastSeenTurn": 118,
+        "lastFailureTurn": 118,
+        "signatures": [],
+        "transfer": false,
+        "readyAt": 0
+      },
+      "word-2801": {
+        "introducedAt": 1790091689727,
+        "confidence": 0,
+        "abilities": {
+          "meaning": 0,
+          "context": 0,
+          "listening": 0,
+          "spelling": 0
+        },
+        "lastSeenTurn": 119,
+        "lastFailureTurn": 119,
+        "signatures": [],
+        "transfer": false,
+        "readyAt": 0
+      },
+      "word-3561": {
+        "introducedAt": 1790091689727,
+        "confidence": 0,
+        "abilities": {
+          "meaning": 0,
+          "context": 0,
+          "spelling": 0,
+          "listening": 0
+        },
+        "lastSeenTurn": 119,
+        "lastFailureTurn": 119,
+        "signatures": [],
+        "transfer": false,
+        "readyAt": 0
+      },
+      "word-20": {
+        "introducedAt": 1790091689727,
+        "confidence": 0,
+        "abilities": {
+          "meaning": 0,
+          "listening": 0,
+          "context": 0,
+          "spelling": 0
+        },
+        "lastSeenTurn": 120,
+        "lastFailureTurn": 120,
+        "signatures": [],
+        "transfer": false,
+        "readyAt": 0
+      }
+    },
+    "sequence": [
+      {
+        "id": "P1-01-01-p-1-word",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-1"
+        ],
+        "signature": "word-1:word",
+        "outcome": "assisted",
+        "turn": 101
+      },
+      {
+        "id": "P1-01-01-p-3561-word",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-3561"
+        ],
+        "signature": "word-3561:word",
+        "outcome": "revealed",
+        "turn": 102
+      },
+      {
+        "id": "P1-01-01-p-1-sentence",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-1"
+        ],
+        "signature": "word-1:sentence",
+        "outcome": "assisted",
+        "turn": 103
+      },
+      {
+        "id": "P1-01-01-p-20-meaning",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-20"
+        ],
+        "signature": "word-20:meaning",
+        "outcome": "revealed",
+        "turn": 104
+      },
+      {
+        "id": "P1-01-01-e03",
+        "kind": "listen",
+        "knowledgeIds": [
+          "word-3561"
+        ],
+        "signature": "authored:P1-01-01-e03",
+        "outcome": "assisted",
+        "turn": 105
+      },
+      {
+        "id": "P1-01-01-p-2801-meaning",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-2801"
+        ],
+        "signature": "word-2801:meaning",
+        "outcome": "revealed",
+        "turn": 106
+      },
+      {
+        "id": "P1-01-01-r01",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-20"
+        ],
+        "signature": "authored:P1-01-01-r01",
+        "outcome": "assisted",
+        "turn": 107
+      },
+      {
+        "id": "P1-01-06-p-1-sentence",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-1"
+        ],
+        "signature": "word-1:sentence",
+        "outcome": "revealed",
+        "turn": 108
+      },
+      {
+        "id": "P1-01-01-p-3561-translation",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-3561"
+        ],
+        "signature": "word-3561:translation",
+        "outcome": "assisted",
+        "turn": 109
+      },
+      {
+        "id": "P1-01-06-p-1-meaning",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-1"
+        ],
+        "signature": "word-1:meaning",
+        "outcome": "revealed",
+        "turn": 110
+      },
+      {
+        "id": "P1-01-01-p-20-recall",
+        "kind": "fill",
+        "knowledgeIds": [
+          "word-20"
+        ],
+        "signature": "word-20:recall",
+        "outcome": "assisted",
+        "turn": 111
+      },
+      {
+        "id": "P1-01-01-p-2801-word",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-2801"
+        ],
+        "signature": "word-2801:word",
+        "outcome": "revealed",
+        "turn": 112
+      },
+      {
+        "id": "P1-01-06-p-1-cloze",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-1"
+        ],
+        "signature": "word-1:cloze",
+        "outcome": "assisted",
+        "turn": 113
+      },
+      {
+        "id": "P1-01-06-p-20-cloze",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-20"
+        ],
+        "signature": "word-20:cloze",
+        "outcome": "revealed",
+        "turn": 114
+      },
+      {
+        "id": "P1-01-06-p-1-word",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-1"
+        ],
+        "signature": "word-1:word",
+        "outcome": "assisted",
+        "turn": 115
+      },
+      {
+        "id": "P1-01-01-e04",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-2801",
+          "word-3561"
+        ],
+        "signature": "authored:P1-01-01-e04",
+        "outcome": "revealed",
+        "turn": 116
+      },
+      {
+        "id": "P1-01-06-p-20-word",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-20"
+        ],
+        "signature": "word-20:word",
+        "outcome": "assisted",
+        "turn": 117
+      },
+      {
+        "id": "P1-01-01-p-1-cloze",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-1"
+        ],
+        "signature": "word-1:cloze",
+        "outcome": "revealed",
+        "turn": 118
+      },
+      {
+        "id": "P1-01-01-r02",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-2801",
+          "word-3561"
+        ],
+        "signature": "authored:P1-01-01-r02",
+        "outcome": "assisted",
+        "turn": 119
+      },
+      {
+        "id": "P1-01-01-p-20-listen",
+        "kind": "listen",
+        "knowledgeIds": [
+          "word-20"
+        ],
+        "signature": "word-20:listen",
+        "outcome": "revealed",
+        "turn": 120
+      }
+    ]
+  }
+]

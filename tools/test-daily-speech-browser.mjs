@@ -3,16 +3,21 @@
 import assert from 'node:assert/strict';
 import { createRequire } from 'node:module';
 import { mkdir, writeFile } from 'node:fs/promises';
-import { dailyLessons } from '../src/dailyCourse.ts';
+import { adaptiveDailyLessons } from '../src/dailyPractice.ts';
 import { createDailyProgress, createDailySession } from '../src/dailyProgress.ts';
 const require = createRequire(import.meta.url);
 const { chromium } = require(process.env.CODEWORDS_PLAYWRIGHT || 'playwright');
 const url = process.env.CODEWORDS_TEST_URL;
 assert.ok(url, 'Set CODEWORDS_TEST_URL to the running fixed-port website.');
 const browser = await chromium.launch({ channel: 'chrome', headless: true });
-const lesson = dailyLessons[0];
+const lesson = adaptiveDailyLessons[0];
 const task = lesson.exercises.find(item => item.kind === 'speak');
-const seed = { ...createDailyProgress(), session: createDailySession({ ...lesson, exercises: [task] }, 'workbook') };
+const now = Date.now(), ids = task.knowledgeIds;
+const seed = {
+  ...createDailyProgress(),
+  learning: { version: 1, turns: 0, rounds: 0, targets: Object.fromEntries(ids.map(id => [id, { introducedAt: now, confidence: 0, abilities: {}, lastSeenTurn: 0, lastFailureTurn: 0, signatures: [], transfer: false, readyAt: 0 }])) },
+  session: { ...createDailySession({ ...lesson, exercises: [task] }, 'lesson', now), stage: 'exercise', adaptive: { version: 1, round: 1, focusIds: ids, newIds: ids, sourceLessonId: lesson.id, seed: 1, budget: 8 } },
+};
 const results = [], errors = [];
 async function open({ unsupported = false, lateLocal = false } = {}) {
   const context = await browser.newContext({ viewport: { width: 1440, height: 1050 }, reducedMotion: 'reduce' });

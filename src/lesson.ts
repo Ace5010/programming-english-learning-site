@@ -1,10 +1,10 @@
 import { vocabulary, type VocabularyItem } from './vocabulary';
 import {
-  createReviewSession, getSkill, summarizeAbility,
+  createReviewSession, getSkill, summarizeAbility, preferredAbility, reviewAbilities,
   type Outcome, type ReviewProgress, type ReviewQuestion, type ReviewSession, type SpellingLevel,
 } from './review';
 
-export type LessonKind = 'meaning' | 'listen' | 'dictation' | 'cloze' | 'pairs';
+export type LessonKind = 'meaning' | 'listen' | 'dictation' | 'cloze' | 'pairs' | 'context';
 export interface LessonTask {
   id: string;
   kind: LessonKind;
@@ -83,15 +83,15 @@ function singleTask(
   let kind = requested;
   const sentence = kind === 'cloze' ? buildCloze(item) : null;
   if (kind === 'cloze' && !sentence) kind = 'meaning';
-  let options = kind === 'dictation' ? [] : buildLessonOptions(item, candidates);
+  let options = kind === 'dictation' ? [] : buildLessonOptions(item, kind === 'context' ? candidates.filter(candidate => candidate.id === item.id || candidate.exampleZh !== item.exampleZh) : candidates);
   if (kind !== 'dictation' && options.length < 2) {
     kind = 'dictation';
     options = [];
   }
-  const spelling = kind === 'dictation' || kind === 'listen';
+  const ability = kind === 'dictation' ? 'spelling' : kind === 'listen' ? 'listening' : kind === 'cloze' || kind === 'context' ? 'context' : 'meaning';
   return {
     id, kind, words: [item], options, retry, difficulty,
-    evidence: [{ wordId: item.id, ability: spelling ? 'spelling' : 'meaning', level: difficulty, retry, exposed: exposed || kind === 'listen' }],
+    evidence: [{ wordId: item.id, ability, level: difficulty, retry, exposed, kind }],
     ...(kind === 'cloze' && sentence ? { sentence } : {}),
   };
 }
@@ -109,39 +109,33 @@ export function createLesson(
   const allOptions = [...pool, ...vocabulary];
   const append = (item: VocabularyItem | undefined, kind: LessonKind, exposed: boolean) => {
     if (!item) return;
-    const ability = kind === 'dictation' || kind === 'listen' ? 'spelling' : 'meaning';
+    const ability = kind === 'dictation' ? 'spelling' : kind === 'listen' ? 'listening' : kind === 'cloze' || kind === 'context' ? 'context' : 'meaning';
     const level = getSkill(progress, item.id, ability).level;
     const difficulty = (kind === 'dictation' && exposed ? Math.min(3, level + 1) : level) as SpellingLevel;
     const candidates = exposed ? allOptions : [...pool.filter(candidate => seen.has(candidate.id)), ...initialOptions];
     tasks.push(singleTask(`${review.id}-${tasks.length}`, item, kind, difficulty, exposed, candidates));
     seen.add(item.id);
   };
-  const first = (item: VocabularyItem) => {
-    const preferred = review.questions.find(question => question.wordId === item.id && !question.exposed);
-    append(item, preferred?.ability === 'spelling' ? 'dictation' : 'meaning', false);
-  };
-  items.slice(0, 2).forEach(first);
-  const remaining = items.slice(2);
-  const pairWords: VocabularyItem[] = [];
-  for (const item of remaining) {
-    if (pairWords.every(other => other.word.toLowerCase() !== item.word.toLowerCase() && !meaningsOverlap(other.meaning, item.meaning))) pairWords.push(item);
+  const kindFor = (ability: typeof reviewAbilities[number]): LessonKind => ability === 'spelling' ? 'dictation' : ability === 'listening' ? 'listen' : ability === 'context' ? 'context' : 'meaning';
+  const plans = items.map(item => ({ item, ability: preferredAbility(progress, item.id, now) }));
+  const pairs = plans.slice(2).filter(plan => plan.ability === 'meaning').map(plan => plan.item);
+  const safePairs = pairs.filter((item, index) => pairs.slice(0, index).every(other => !meaningsOverlap(item.meaning, other.meaning)));
+  for (const plan of plans) {
+    if (safePairs.length >= 2 && safePairs.includes(plan.item)) continue;
+    append(plan.item, kindFor(plan.ability), false);
   }
-  if (pairWords.length >= 2) {
-    tasks.push({
-      id: `${review.id}-${tasks.length}`, kind: 'pairs', words: pairWords, options: shuffled(pairWords), retry: false, difficulty: 0,
-      evidence: pairWords.map(item => ({ wordId: item.id, ability: 'meaning', level: getSkill(progress, item.id, 'meaning').level, retry: false, exposed: false })),
-    });
-    pairWords.forEach(item => seen.add(item.id));
-    remaining.filter(item => !seen.has(item.id)).forEach(first);
-  } else remaining.forEach(first);
-
-  const [a, b, c, d, e] = items;
-  const followUps: [VocabularyItem | undefined, LessonKind][] = [
-    [a, 'listen'], [b, 'cloze'], [c, 'dictation'], [d, 'cloze'], [e, 'dictation'], [a, 'dictation'], [b, 'dictation'],
-  ];
-  // Ambiguous pair meanings are split safely; trim follow-ups to keep the same
-  // bounded lesson length when the first batch then needs more tasks.
-  for (const [item, kind] of followUps) if (tasks.length < 10) append(item, kind, true);
+  if (safePairs.length >= 2) {
+    tasks.push({ id: `${review.id}-${tasks.length}`, kind: 'pairs', words: safePairs, options: shuffled(safePairs), retry: false, difficulty: 0,
+      evidence: safePairs.map(item => ({ wordId: item.id, ability: 'meaning', level: 0, retry: false, exposed: false, kind: 'pairs' })) });
+    safePairs.forEach(item => seen.add(item.id));
+  }
+  for (const { item, ability } of plans) {
+    const skill = getSkill(progress, item.id, ability);
+    // Repeat a real weak direction with spacing; otherwise cover another due ability.
+    const secondary = skill.needsPractice ? ability : reviewAbilities.filter(candidate => candidate !== ability)
+      .sort((a, b) => Number(getSkill(progress, item.id, a).dueAt > now) - Number(getSkill(progress, item.id, b).dueAt > now))[0];
+    append(item, secondary === 'context' && buildCloze(item) ? 'cloze' : kindFor(secondary), true);
+  }
   return { id: review.id, items, tasks, index: 0, results: [], finished: tasks.length === 0 };
 }
 
@@ -149,7 +143,7 @@ function retryTask(lesson: LessonState, failedTask: LessonTask, wordId: number, 
   const item = lesson.items.find(candidate => candidate.id === wordId)!;
   const evidence = failedTask.evidence.find(candidate => candidate.wordId === wordId)!;
   const spelling = evidence.ability === 'spelling';
-  const kind = spelling ? 'dictation' : failedTask.kind === 'cloze' ? 'meaning' : buildCloze(item) ? 'cloze' : 'meaning';
+  const kind = spelling ? 'dictation' : evidence.ability === 'listening' ? 'listen' : evidence.ability === 'context' ? buildCloze(item) ? 'cloze' : 'context' : buildCloze(item) ? 'cloze' : 'meaning';
   const difficulty = (spelling ? Math.max(0, failedTask.difficulty - 1) : failedTask.difficulty) as SpellingLevel;
   return singleTask(id, item, kind, difficulty, true, [...lesson.items, ...vocabulary], true);
 }
@@ -214,7 +208,7 @@ export function nextLesson(lesson: LessonState): LessonState {
   return { ...lesson, index, finished: index >= lesson.tasks.length };
 }
 
-export function summarizeLesson(lesson: LessonState, wordId: number): { meaning: string; spelling: string } {
+export function summarizeLesson(lesson: LessonState, wordId: number): Record<typeof reviewAbilities[number], string> {
   const session: ReviewSession = {
     id: lesson.id, items: lesson.items, questions: lesson.tasks.flatMap(task => task.evidence), index: lesson.index, finished: lesson.finished,
     answers: lesson.results.flatMap(result => result.answers.map(answer => ({
@@ -228,5 +222,5 @@ export function summarizeLesson(lesson: LessonState, wordId: number): { meaning:
     const latest = listens[listens.length - 1].answers.find(answer => answer.wordId === wordId)!;
     spelling = latest.outcome === 'independent' ? '能听音选出单词，完整听写留待后续练习' : '听音辨认仍需练习，完整听写留待后续练习';
   }
-  return { meaning: summarizeAbility(session, wordId, 'meaning'), spelling };
+  return { meaning: summarizeAbility(session, wordId, 'meaning'), spelling, listening: summarizeAbility(session, wordId, 'listening'), context: summarizeAbility(session, wordId, 'context') };
 }

@@ -1,0 +1,67 @@
+{
+  "baseURL": "http://localhost:5186/dist/",
+  "production": true,
+  "loadedApplicationScripts": [
+    "http://localhost:5186/dist/assets/index-BjgAExdN.js"
+  ],
+  "testedAt": "2026-09-22T16:21:09.843Z",
+  "scenarios": [
+    {
+      "name": "voice preview real rates and active highlight follow dropdown speed changes",
+      "durationMs": 1089
+    }
+  ],
+  "failures": [],
+  "browserErrors": [],
+  "playbackEvidence": [
+    {
+      "label": "aria voice preview slow",
+      "id": 0,
+      "type": "playing",
+      "src": "http://localhost:5186/dist/audio/aria/voice-test.mp3",
+      "rate": 0.72,
+      "duration": 6.696,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "aria voice preview normal",
+      "id": 1,
+      "type": "playing",
+      "src": "http://localhost:5186/dist/audio/aria/voice-test.mp3",
+      "rate": 1,
+      "duration": 6.696,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "guy voice preview slow",
+      "id": 2,
+      "type": "playing",
+      "src": "http://localhost:5186/dist/audio/guy/voice-test.mp3",
+      "rate": 0.72,
+      "duration": 6.84,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "guy voice preview normal",
+      "id": 3,
+      "type": "playing",
+      "src": "http://localhost:5186/dist/audio/guy/voice-test.mp3",
+      "rate": 1,
+      "duration": 6.84,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    }
+  ],
+  "microphoneTested": false
+}

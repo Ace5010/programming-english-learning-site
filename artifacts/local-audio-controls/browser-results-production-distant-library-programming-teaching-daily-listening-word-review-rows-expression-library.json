@@ -1,0 +1,377 @@
+{
+  "baseURL": "http://localhost:5186/dist/",
+  "production": true,
+  "loadedApplicationScripts": [
+    "http://localhost:5186/dist/assets/index-HbtdOFbf.js"
+  ],
+  "testedAt": "2026-09-23T00:44:44.399Z",
+  "scenarios": [
+    {
+      "name": "distant library cards offer immediate local word and example playback",
+      "durationMs": 1410,
+      "evidence": {
+        "position": 31,
+        "target": 31,
+        "nextTarget": 32,
+        "scrollY": 7610
+      }
+    },
+    {
+      "name": "programming teaching has local normal and slow without changing the lesson",
+      "durationMs": 1300
+    },
+    {
+      "name": "daily listening and feedback keep both local speeds and answer draft",
+      "durationMs": 1643
+    },
+    {
+      "name": "word review rows, listening and summary offer local controls",
+      "durationMs": 1349
+    },
+    {
+      "name": "expression library local playback keeps voice selection and long sentences usable",
+      "durationMs": 1088
+    }
+  ],
+  "failures": [],
+  "browserErrors": [],
+  "playbackEvidence": [
+    {
+      "label": "distant library word normal",
+      "id": 0,
+      "type": "playing",
+      "src": "http://localhost:5186/dist/audio/aria/word-31.mp3",
+      "rate": 1,
+      "duration": 1.656,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "distant library word slow",
+      "id": 1,
+      "type": "playing",
+      "src": "http://localhost:5186/dist/audio/aria/word-31.mp3",
+      "rate": 0.72,
+      "duration": 1.656,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "distant library same word returns to normal",
+      "id": 2,
+      "type": "playing",
+      "src": "http://localhost:5186/dist/audio/aria/word-31.mp3",
+      "rate": 1,
+      "duration": 1.656,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "distant example normal",
+      "id": 3,
+      "type": "playing",
+      "src": "http://localhost:5186/dist/audio/aria/example-31.mp3?v=A%20boolean%20can%20be%20true%20or%20false.",
+      "rate": 1,
+      "duration": 2.88,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "distant example slow",
+      "id": 4,
+      "type": "playing",
+      "src": "http://localhost:5186/dist/audio/aria/example-31.mp3?v=A%20boolean%20can%20be%20true%20or%20false.",
+      "rate": 0.72,
+      "duration": 2.88,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "other word stays normal after slow playback",
+      "id": 5,
+      "type": "playing",
+      "src": "http://localhost:5186/dist/audio/aria/word-32.mp3",
+      "rate": 1,
+      "duration": 1.68,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "card blank area stays normal",
+      "id": 6,
+      "type": "playing",
+      "src": "http://localhost:5186/dist/audio/aria/word-31.mp3",
+      "rate": 1,
+      "duration": 1.656,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "programming teaching normal",
+      "id": 0,
+      "type": "playing",
+      "src": "http://localhost:5186/dist/audio/aria/word-1.mp3?v=repository",
+      "rate": 1,
+      "duration": 1.992,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "programming teaching slow",
+      "id": 1,
+      "type": "playing",
+      "src": "http://localhost:5186/dist/audio/aria/word-1.mp3?v=repository",
+      "rate": 0.72,
+      "duration": 1.992,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "programming teaching returns to normal",
+      "id": 2,
+      "type": "playing",
+      "src": "http://localhost:5186/dist/audio/aria/word-1.mp3?v=repository",
+      "rate": 1,
+      "duration": 1.992,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "daily listening normal",
+      "id": 0,
+      "type": "playing",
+      "src": "http://localhost:5186/dist/audio/daily/aria/goodbye.mp3?v=Goodbye!",
+      "rate": 1,
+      "duration": 1.608,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "daily listening slow",
+      "id": 1,
+      "type": "playing",
+      "src": "http://localhost:5186/dist/audio/daily/aria/goodbye.mp3?v=Goodbye!",
+      "rate": 0.72,
+      "duration": 1.608,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "daily feedback normal",
+      "id": 2,
+      "type": "playing",
+      "src": "http://localhost:5186/dist/audio/daily/aria/goodbye.mp3?v=Goodbye!",
+      "rate": 1,
+      "duration": 1.608,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "daily feedback slow",
+      "id": 3,
+      "type": "playing",
+      "src": "http://localhost:5186/dist/audio/daily/aria/goodbye.mp3?v=Goodbye!",
+      "rate": 0.72,
+      "duration": 1.608,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "daily feedback normal after refresh",
+      "id": 0,
+      "type": "playing",
+      "src": "http://localhost:5186/dist/audio/daily/aria/goodbye.mp3?v=Goodbye!",
+      "rate": 1,
+      "duration": 1.608,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "review row word normal",
+      "id": 0,
+      "type": "playing",
+      "src": "http://localhost:5186/dist/audio/aria/word-1.mp3",
+      "rate": 1,
+      "duration": 1.992,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "review row word slow",
+      "id": 1,
+      "type": "playing",
+      "src": "http://localhost:5186/dist/audio/aria/word-1.mp3",
+      "rate": 0.72,
+      "duration": 1.992,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "review row same word returns to normal",
+      "id": 2,
+      "type": "playing",
+      "src": "http://localhost:5186/dist/audio/aria/word-1.mp3",
+      "rate": 1,
+      "duration": 1.992,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "review example slow",
+      "id": 3,
+      "type": "playing",
+      "src": "http://localhost:5186/dist/audio/aria/example-1.mp3?v=Open%20this%20repository.",
+      "rate": 0.72,
+      "duration": 2.424,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "review example normal",
+      "id": 4,
+      "type": "playing",
+      "src": "http://localhost:5186/dist/audio/aria/example-1.mp3?v=Open%20this%20repository.",
+      "rate": 1,
+      "duration": 2.424,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "word review listening slow",
+      "id": 6,
+      "type": "playing",
+      "src": "http://localhost:5186/dist/audio/aria/word-1.mp3",
+      "rate": 0.72,
+      "duration": 1.992,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "word review listening normal",
+      "id": 7,
+      "type": "playing",
+      "src": "http://localhost:5186/dist/audio/aria/word-1.mp3",
+      "rate": 1,
+      "duration": 1.992,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "word summary slow",
+      "id": 8,
+      "type": "playing",
+      "src": "http://localhost:5186/dist/audio/aria/word-1.mp3",
+      "rate": 0.72,
+      "duration": 1.992,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "word summary normal",
+      "id": 9,
+      "type": "playing",
+      "src": "http://localhost:5186/dist/audio/aria/word-1.mp3",
+      "rate": 1,
+      "duration": 1.992,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "expression slow",
+      "id": 0,
+      "type": "playing",
+      "src": "http://localhost:5186/dist/audio/daily/aria/mia-introduction.mp3?v=She%20is%20Mia.%20She%20is%20from%20Japan.%20She%20is%20a%20student.",
+      "rate": 0.72,
+      "duration": 6,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "expression normal",
+      "id": 1,
+      "type": "playing",
+      "src": "http://localhost:5186/dist/audio/daily/aria/mia-introduction.mp3?v=She%20is%20Mia.%20She%20is%20from%20Japan.%20She%20is%20a%20student.",
+      "rate": 1,
+      "duration": 6,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "Guy expression slow",
+      "id": 2,
+      "type": "playing",
+      "src": "http://localhost:5186/dist/audio/daily/guy/mia-introduction.mp3?v=She%20is%20Mia.%20She%20is%20from%20Japan.%20She%20is%20a%20student.",
+      "rate": 0.72,
+      "duration": 5.952,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "Guy expression normal",
+      "id": 3,
+      "type": "playing",
+      "src": "http://localhost:5186/dist/audio/daily/guy/mia-introduction.mp3?v=She%20is%20Mia.%20She%20is%20from%20Japan.%20She%20is%20a%20student.",
+      "rate": 1,
+      "duration": 5.952,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    }
+  ],
+  "microphoneTested": false
+}

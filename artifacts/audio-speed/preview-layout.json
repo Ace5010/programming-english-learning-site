@@ -1,0 +1,101 @@
+{
+  "results": [
+    {
+      "theme": "minimal",
+      "name": "programming-review",
+      "file": "D:\\coding项目\\交互式英语学习网站\\artifacts\\audio-speed\\preview-minimal-programming-review-390.png",
+      "bounds": {
+        "x": 14,
+        "y": 229.53125,
+        "width": 150,
+        "height": 46
+      },
+      "layout": {
+        "viewport": 390,
+        "scrollWidth": 390,
+        "bodyWidth": 390
+      }
+    },
+    {
+      "theme": "minimal",
+      "name": "review-modal",
+      "file": "D:\\coding项目\\交互式英语学习网站\\artifacts\\audio-speed\\preview-minimal-review-modal-390.png",
+      "bounds": {
+        "x": 14,
+        "y": 99.375,
+        "width": 150,
+        "height": 46
+      },
+      "layout": {
+        "viewport": 390,
+        "scrollWidth": 390,
+        "bodyWidth": 390
+      }
+    },
+    {
+      "theme": "minimal",
+      "name": "daily-study",
+      "file": "D:\\coding项目\\交互式英语学习网站\\artifacts\\audio-speed\\preview-minimal-daily-study-390.png",
+      "bounds": {
+        "x": 14,
+        "y": 198.390625,
+        "width": 150,
+        "height": 46
+      },
+      "layout": {
+        "viewport": 390,
+        "scrollWidth": 390,
+        "bodyWidth": 390
+      }
+    },
+    {
+      "theme": "graffiti",
+      "name": "programming-review",
+      "file": "D:\\coding项目\\交互式英语学习网站\\artifacts\\audio-speed\\preview-graffiti-programming-review-390.png",
+      "bounds": {
+        "x": 14,
+        "y": 268.390625,
+        "width": 152,
+        "height": 48
+      },
+      "layout": {
+        "viewport": 390,
+        "scrollWidth": 390,
+        "bodyWidth": 390
+      }
+    },
+    {
+      "theme": "graffiti",
+      "name": "review-modal",
+      "file": "D:\\coding项目\\交互式英语学习网站\\artifacts\\audio-speed\\preview-graffiti-review-modal-390.png",
+      "bounds": {
+        "x": 14,
+        "y": 99.375,
+        "width": 152,
+        "height": 48
+      },
+      "layout": {
+        "viewport": 390,
+        "scrollWidth": 390,
+        "bodyWidth": 390
+      }
+    },
+    {
+      "theme": "graffiti",
+      "name": "daily-study",
+      "file": "D:\\coding项目\\交互式英语学习网站\\artifacts\\audio-speed\\preview-graffiti-daily-study-390.png",
+      "bounds": {
+        "x": 14,
+        "y": 197.890625,
+        "width": 152,
+        "height": 48
+      },
+      "layout": {
+        "viewport": 390,
+        "scrollWidth": 390,
+        "bodyWidth": 390
+      }
+    }
+  ],
+  "errors": []
+}

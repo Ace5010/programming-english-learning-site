@@ -1,0 +1,1348 @@
+{
+  "baseURL": "http://localhost:5186/",
+  "production": false,
+  "loadedApplicationScripts": [],
+  "testedAt": "2026-09-22T16:18:28.714Z",
+  "scenarios": [
+    {
+      "name": "all playback headers show normal and slow in four themes at 1440px",
+      "durationMs": 4070,
+      "evidence": [
+        {
+          "theme": "minimal",
+          "section": "programming",
+          "view": "课程",
+          "label": "正常",
+          "box": {
+            "x": 1133,
+            "y": 153.734375,
+            "width": 52,
+            "height": 38
+          }
+        },
+        {
+          "theme": "minimal",
+          "section": "programming",
+          "view": "课程",
+          "label": "慢速",
+          "box": {
+            "x": 1188,
+            "y": 153.734375,
+            "width": 52,
+            "height": 38
+          }
+        },
+        {
+          "theme": "minimal",
+          "section": "programming",
+          "view": "复习",
+          "label": "正常",
+          "box": {
+            "x": 1133,
+            "y": 153.734375,
+            "width": 52,
+            "height": 38
+          }
+        },
+        {
+          "theme": "minimal",
+          "section": "programming",
+          "view": "复习",
+          "label": "慢速",
+          "box": {
+            "x": 1188,
+            "y": 153.734375,
+            "width": 52,
+            "height": 38
+          }
+        },
+        {
+          "theme": "minimal",
+          "section": "programming",
+          "view": "词汇库",
+          "label": "正常",
+          "box": {
+            "x": 1133,
+            "y": 153.734375,
+            "width": 52,
+            "height": 38
+          }
+        },
+        {
+          "theme": "minimal",
+          "section": "programming",
+          "view": "词汇库",
+          "label": "慢速",
+          "box": {
+            "x": 1188,
+            "y": 153.734375,
+            "width": 52,
+            "height": 38
+          }
+        },
+        {
+          "theme": "minimal",
+          "section": "daily",
+          "view": "课程",
+          "label": "正常",
+          "box": {
+            "x": 1133,
+            "y": 153.734375,
+            "width": 52,
+            "height": 38
+          }
+        },
+        {
+          "theme": "minimal",
+          "section": "daily",
+          "view": "课程",
+          "label": "慢速",
+          "box": {
+            "x": 1188,
+            "y": 153.734375,
+            "width": 52,
+            "height": 38
+          }
+        },
+        {
+          "theme": "minimal",
+          "section": "daily",
+          "view": "复习",
+          "label": "正常",
+          "box": {
+            "x": 1133,
+            "y": 153.734375,
+            "width": 52,
+            "height": 38
+          }
+        },
+        {
+          "theme": "minimal",
+          "section": "daily",
+          "view": "复习",
+          "label": "慢速",
+          "box": {
+            "x": 1188,
+            "y": 153.734375,
+            "width": 52,
+            "height": 38
+          }
+        },
+        {
+          "theme": "minimal",
+          "section": "daily",
+          "view": "表达库",
+          "label": "正常",
+          "box": {
+            "x": 1133,
+            "y": 153.734375,
+            "width": 52,
+            "height": 38
+          }
+        },
+        {
+          "theme": "minimal",
+          "section": "daily",
+          "view": "表达库",
+          "label": "慢速",
+          "box": {
+            "x": 1188,
+            "y": 153.734375,
+            "width": 52,
+            "height": 38
+          }
+        },
+        {
+          "theme": "sketch",
+          "section": "programming",
+          "view": "课程",
+          "label": "正常",
+          "box": {
+            "x": 1133,
+            "y": 155.109375,
+            "width": 52,
+            "height": 38
+          }
+        },
+        {
+          "theme": "sketch",
+          "section": "programming",
+          "view": "课程",
+          "label": "慢速",
+          "box": {
+            "x": 1188,
+            "y": 155.109375,
+            "width": 52,
+            "height": 38
+          }
+        },
+        {
+          "theme": "sketch",
+          "section": "programming",
+          "view": "复习",
+          "label": "正常",
+          "box": {
+            "x": 1133,
+            "y": 141.109375,
+            "width": 52,
+            "height": 38
+          }
+        },
+        {
+          "theme": "sketch",
+          "section": "programming",
+          "view": "复习",
+          "label": "慢速",
+          "box": {
+            "x": 1188,
+            "y": 141.109375,
+            "width": 52,
+            "height": 38
+          }
+        },
+        {
+          "theme": "sketch",
+          "section": "programming",
+          "view": "词汇库",
+          "label": "正常",
+          "box": {
+            "x": 1133,
+            "y": 155.109375,
+            "width": 52,
+            "height": 38
+          }
+        },
+        {
+          "theme": "sketch",
+          "section": "programming",
+          "view": "词汇库",
+          "label": "慢速",
+          "box": {
+            "x": 1188,
+            "y": 155.109375,
+            "width": 52,
+            "height": 38
+          }
+        },
+        {
+          "theme": "sketch",
+          "section": "daily",
+          "view": "课程",
+          "label": "正常",
+          "box": {
+            "x": 1133,
+            "y": 155.109375,
+            "width": 52,
+            "height": 38
+          }
+        },
+        {
+          "theme": "sketch",
+          "section": "daily",
+          "view": "课程",
+          "label": "慢速",
+          "box": {
+            "x": 1188,
+            "y": 155.109375,
+            "width": 52,
+            "height": 38
+          }
+        },
+        {
+          "theme": "sketch",
+          "section": "daily",
+          "view": "复习",
+          "label": "正常",
+          "box": {
+            "x": 1133,
+            "y": 155.109375,
+            "width": 52,
+            "height": 38
+          }
+        },
+        {
+          "theme": "sketch",
+          "section": "daily",
+          "view": "复习",
+          "label": "慢速",
+          "box": {
+            "x": 1188,
+            "y": 155.109375,
+            "width": 52,
+            "height": 38
+          }
+        },
+        {
+          "theme": "sketch",
+          "section": "daily",
+          "view": "表达库",
+          "label": "正常",
+          "box": {
+            "x": 1133,
+            "y": 155.109375,
+            "width": 52,
+            "height": 38
+          }
+        },
+        {
+          "theme": "sketch",
+          "section": "daily",
+          "view": "表达库",
+          "label": "慢速",
+          "box": {
+            "x": 1188,
+            "y": 155.109375,
+            "width": 52,
+            "height": 38
+          }
+        },
+        {
+          "theme": "print",
+          "section": "programming",
+          "view": "课程",
+          "label": "正常",
+          "box": {
+            "x": 1130,
+            "y": 164.734375,
+            "width": 52,
+            "height": 38
+          }
+        },
+        {
+          "theme": "print",
+          "section": "programming",
+          "view": "课程",
+          "label": "慢速",
+          "box": {
+            "x": 1185,
+            "y": 164.734375,
+            "width": 52,
+            "height": 38
+          }
+        },
+        {
+          "theme": "print",
+          "section": "programming",
+          "view": "复习",
+          "label": "正常",
+          "box": {
+            "x": 1130,
+            "y": 150.734375,
+            "width": 52,
+            "height": 38
+          }
+        },
+        {
+          "theme": "print",
+          "section": "programming",
+          "view": "复习",
+          "label": "慢速",
+          "box": {
+            "x": 1185,
+            "y": 150.734375,
+            "width": 52,
+            "height": 38
+          }
+        },
+        {
+          "theme": "print",
+          "section": "programming",
+          "view": "词汇库",
+          "label": "正常",
+          "box": {
+            "x": 1130,
+            "y": 164.734375,
+            "width": 52,
+            "height": 38
+          }
+        },
+        {
+          "theme": "print",
+          "section": "programming",
+          "view": "词汇库",
+          "label": "慢速",
+          "box": {
+            "x": 1185,
+            "y": 164.734375,
+            "width": 52,
+            "height": 38
+          }
+        },
+        {
+          "theme": "print",
+          "section": "daily",
+          "view": "课程",
+          "label": "正常",
+          "box": {
+            "x": 1130,
+            "y": 164.734375,
+            "width": 52,
+            "height": 38
+          }
+        },
+        {
+          "theme": "print",
+          "section": "daily",
+          "view": "课程",
+          "label": "慢速",
+          "box": {
+            "x": 1185,
+            "y": 164.734375,
+            "width": 52,
+            "height": 38
+          }
+        },
+        {
+          "theme": "print",
+          "section": "daily",
+          "view": "复习",
+          "label": "正常",
+          "box": {
+            "x": 1130,
+            "y": 164.734375,
+            "width": 52,
+            "height": 38
+          }
+        },
+        {
+          "theme": "print",
+          "section": "daily",
+          "view": "复习",
+          "label": "慢速",
+          "box": {
+            "x": 1185,
+            "y": 164.734375,
+            "width": 52,
+            "height": 38
+          }
+        },
+        {
+          "theme": "print",
+          "section": "daily",
+          "view": "表达库",
+          "label": "正常",
+          "box": {
+            "x": 1130,
+            "y": 164.734375,
+            "width": 52,
+            "height": 38
+          }
+        },
+        {
+          "theme": "print",
+          "section": "daily",
+          "view": "表达库",
+          "label": "慢速",
+          "box": {
+            "x": 1185,
+            "y": 164.734375,
+            "width": 52,
+            "height": 38
+          }
+        },
+        {
+          "theme": "graffiti",
+          "section": "programming",
+          "view": "课程",
+          "label": "正常",
+          "box": {
+            "x": 1130,
+            "y": 176.671875,
+            "width": 52,
+            "height": 38
+          }
+        },
+        {
+          "theme": "graffiti",
+          "section": "programming",
+          "view": "课程",
+          "label": "慢速",
+          "box": {
+            "x": 1185,
+            "y": 176.671875,
+            "width": 52,
+            "height": 38
+          }
+        },
+        {
+          "theme": "graffiti",
+          "section": "programming",
+          "view": "复习",
+          "label": "正常",
+          "box": {
+            "x": 1130,
+            "y": 162.671875,
+            "width": 52,
+            "height": 38
+          }
+        },
+        {
+          "theme": "graffiti",
+          "section": "programming",
+          "view": "复习",
+          "label": "慢速",
+          "box": {
+            "x": 1185,
+            "y": 162.671875,
+            "width": 52,
+            "height": 38
+          }
+        },
+        {
+          "theme": "graffiti",
+          "section": "programming",
+          "view": "词汇库",
+          "label": "正常",
+          "box": {
+            "x": 1130,
+            "y": 176.671875,
+            "width": 52,
+            "height": 38
+          }
+        },
+        {
+          "theme": "graffiti",
+          "section": "programming",
+          "view": "词汇库",
+          "label": "慢速",
+          "box": {
+            "x": 1185,
+            "y": 176.671875,
+            "width": 52,
+            "height": 38
+          }
+        },
+        {
+          "theme": "graffiti",
+          "section": "daily",
+          "view": "课程",
+          "label": "正常",
+          "box": {
+            "x": 1130,
+            "y": 176.671875,
+            "width": 52,
+            "height": 38
+          }
+        },
+        {
+          "theme": "graffiti",
+          "section": "daily",
+          "view": "课程",
+          "label": "慢速",
+          "box": {
+            "x": 1185,
+            "y": 176.671875,
+            "width": 52,
+            "height": 38
+          }
+        },
+        {
+          "theme": "graffiti",
+          "section": "daily",
+          "view": "复习",
+          "label": "正常",
+          "box": {
+            "x": 1130,
+            "y": 176.671875,
+            "width": 52,
+            "height": 38
+          }
+        },
+        {
+          "theme": "graffiti",
+          "section": "daily",
+          "view": "复习",
+          "label": "慢速",
+          "box": {
+            "x": 1185,
+            "y": 176.671875,
+            "width": 52,
+            "height": 38
+          }
+        },
+        {
+          "theme": "graffiti",
+          "section": "daily",
+          "view": "表达库",
+          "label": "正常",
+          "box": {
+            "x": 1130,
+            "y": 176.671875,
+            "width": 52,
+            "height": 38
+          }
+        },
+        {
+          "theme": "graffiti",
+          "section": "daily",
+          "view": "表达库",
+          "label": "慢速",
+          "box": {
+            "x": 1185,
+            "y": 176.671875,
+            "width": 52,
+            "height": 38
+          }
+        }
+      ]
+    },
+    {
+      "name": "all playback headers show normal and slow in four themes at 390px",
+      "durationMs": 3567,
+      "evidence": [
+        {
+          "theme": "minimal",
+          "section": "programming",
+          "view": "课程",
+          "label": "正常",
+          "box": {
+            "x": 61,
+            "y": 233.53125,
+            "width": 48,
+            "height": 38
+          }
+        },
+        {
+          "theme": "minimal",
+          "section": "programming",
+          "view": "课程",
+          "label": "慢速",
+          "box": {
+            "x": 112,
+            "y": 233.53125,
+            "width": 48,
+            "height": 38
+          }
+        },
+        {
+          "theme": "minimal",
+          "section": "programming",
+          "view": "复习",
+          "label": "正常",
+          "box": {
+            "x": 61,
+            "y": 233.53125,
+            "width": 48,
+            "height": 38
+          }
+        },
+        {
+          "theme": "minimal",
+          "section": "programming",
+          "view": "复习",
+          "label": "慢速",
+          "box": {
+            "x": 112,
+            "y": 233.53125,
+            "width": 48,
+            "height": 38
+          }
+        },
+        {
+          "theme": "minimal",
+          "section": "programming",
+          "view": "词汇库",
+          "label": "正常",
+          "box": {
+            "x": 61,
+            "y": 257.53125,
+            "width": 48,
+            "height": 38
+          }
+        },
+        {
+          "theme": "minimal",
+          "section": "programming",
+          "view": "词汇库",
+          "label": "慢速",
+          "box": {
+            "x": 112,
+            "y": 257.53125,
+            "width": 48,
+            "height": 38
+          }
+        },
+        {
+          "theme": "minimal",
+          "section": "daily",
+          "view": "课程",
+          "label": "正常",
+          "box": {
+            "x": 61,
+            "y": 233.53125,
+            "width": 48,
+            "height": 38
+          }
+        },
+        {
+          "theme": "minimal",
+          "section": "daily",
+          "view": "课程",
+          "label": "慢速",
+          "box": {
+            "x": 112,
+            "y": 233.53125,
+            "width": 48,
+            "height": 38
+          }
+        },
+        {
+          "theme": "minimal",
+          "section": "daily",
+          "view": "复习",
+          "label": "正常",
+          "box": {
+            "x": 61,
+            "y": 233.53125,
+            "width": 48,
+            "height": 38
+          }
+        },
+        {
+          "theme": "minimal",
+          "section": "daily",
+          "view": "复习",
+          "label": "慢速",
+          "box": {
+            "x": 112,
+            "y": 233.53125,
+            "width": 48,
+            "height": 38
+          }
+        },
+        {
+          "theme": "minimal",
+          "section": "daily",
+          "view": "表达库",
+          "label": "正常",
+          "box": {
+            "x": 61,
+            "y": 233.53125,
+            "width": 48,
+            "height": 38
+          }
+        },
+        {
+          "theme": "minimal",
+          "section": "daily",
+          "view": "表达库",
+          "label": "慢速",
+          "box": {
+            "x": 112,
+            "y": 233.53125,
+            "width": 48,
+            "height": 38
+          }
+        },
+        {
+          "theme": "sketch",
+          "section": "programming",
+          "view": "课程",
+          "label": "正常",
+          "box": {
+            "x": 61,
+            "y": 237.28125,
+            "width": 48,
+            "height": 38
+          }
+        },
+        {
+          "theme": "sketch",
+          "section": "programming",
+          "view": "课程",
+          "label": "慢速",
+          "box": {
+            "x": 112,
+            "y": 237.28125,
+            "width": 48,
+            "height": 38
+          }
+        },
+        {
+          "theme": "sketch",
+          "section": "programming",
+          "view": "复习",
+          "label": "正常",
+          "box": {
+            "x": 61,
+            "y": 237.28125,
+            "width": 48,
+            "height": 38
+          }
+        },
+        {
+          "theme": "sketch",
+          "section": "programming",
+          "view": "复习",
+          "label": "慢速",
+          "box": {
+            "x": 112,
+            "y": 237.28125,
+            "width": 48,
+            "height": 38
+          }
+        },
+        {
+          "theme": "sketch",
+          "section": "programming",
+          "view": "词汇库",
+          "label": "正常",
+          "box": {
+            "x": 61,
+            "y": 261.28125,
+            "width": 48,
+            "height": 38
+          }
+        },
+        {
+          "theme": "sketch",
+          "section": "programming",
+          "view": "词汇库",
+          "label": "慢速",
+          "box": {
+            "x": 112,
+            "y": 261.28125,
+            "width": 48,
+            "height": 38
+          }
+        },
+        {
+          "theme": "sketch",
+          "section": "daily",
+          "view": "课程",
+          "label": "正常",
+          "box": {
+            "x": 61,
+            "y": 237.28125,
+            "width": 48,
+            "height": 38
+          }
+        },
+        {
+          "theme": "sketch",
+          "section": "daily",
+          "view": "课程",
+          "label": "慢速",
+          "box": {
+            "x": 112,
+            "y": 237.28125,
+            "width": 48,
+            "height": 38
+          }
+        },
+        {
+          "theme": "sketch",
+          "section": "daily",
+          "view": "复习",
+          "label": "正常",
+          "box": {
+            "x": 61,
+            "y": 237.28125,
+            "width": 48,
+            "height": 38
+          }
+        },
+        {
+          "theme": "sketch",
+          "section": "daily",
+          "view": "复习",
+          "label": "慢速",
+          "box": {
+            "x": 112,
+            "y": 237.28125,
+            "width": 48,
+            "height": 38
+          }
+        },
+        {
+          "theme": "sketch",
+          "section": "daily",
+          "view": "表达库",
+          "label": "正常",
+          "box": {
+            "x": 61,
+            "y": 237.28125,
+            "width": 48,
+            "height": 38
+          }
+        },
+        {
+          "theme": "sketch",
+          "section": "daily",
+          "view": "表达库",
+          "label": "慢速",
+          "box": {
+            "x": 112,
+            "y": 237.28125,
+            "width": 48,
+            "height": 38
+          }
+        },
+        {
+          "theme": "print",
+          "section": "programming",
+          "view": "课程",
+          "label": "正常",
+          "box": {
+            "x": 62,
+            "y": 256.53125,
+            "width": 48,
+            "height": 38
+          }
+        },
+        {
+          "theme": "print",
+          "section": "programming",
+          "view": "课程",
+          "label": "慢速",
+          "box": {
+            "x": 113,
+            "y": 256.53125,
+            "width": 48,
+            "height": 38
+          }
+        },
+        {
+          "theme": "print",
+          "section": "programming",
+          "view": "复习",
+          "label": "正常",
+          "box": {
+            "x": 62,
+            "y": 256.53125,
+            "width": 48,
+            "height": 38
+          }
+        },
+        {
+          "theme": "print",
+          "section": "programming",
+          "view": "复习",
+          "label": "慢速",
+          "box": {
+            "x": 113,
+            "y": 256.53125,
+            "width": 48,
+            "height": 38
+          }
+        },
+        {
+          "theme": "print",
+          "section": "programming",
+          "view": "词汇库",
+          "label": "正常",
+          "box": {
+            "x": 62,
+            "y": 280.53125,
+            "width": 48,
+            "height": 38
+          }
+        },
+        {
+          "theme": "print",
+          "section": "programming",
+          "view": "词汇库",
+          "label": "慢速",
+          "box": {
+            "x": 113,
+            "y": 280.53125,
+            "width": 48,
+            "height": 38
+          }
+        },
+        {
+          "theme": "print",
+          "section": "daily",
+          "view": "课程",
+          "label": "正常",
+          "box": {
+            "x": 62,
+            "y": 256.53125,
+            "width": 48,
+            "height": 38
+          }
+        },
+        {
+          "theme": "print",
+          "section": "daily",
+          "view": "课程",
+          "label": "慢速",
+          "box": {
+            "x": 113,
+            "y": 256.53125,
+            "width": 48,
+            "height": 38
+          }
+        },
+        {
+          "theme": "print",
+          "section": "daily",
+          "view": "复习",
+          "label": "正常",
+          "box": {
+            "x": 62,
+            "y": 256.53125,
+            "width": 48,
+            "height": 38
+          }
+        },
+        {
+          "theme": "print",
+          "section": "daily",
+          "view": "复习",
+          "label": "慢速",
+          "box": {
+            "x": 113,
+            "y": 256.53125,
+            "width": 48,
+            "height": 38
+          }
+        },
+        {
+          "theme": "print",
+          "section": "daily",
+          "view": "表达库",
+          "label": "正常",
+          "box": {
+            "x": 62,
+            "y": 256.53125,
+            "width": 48,
+            "height": 38
+          }
+        },
+        {
+          "theme": "print",
+          "section": "daily",
+          "view": "表达库",
+          "label": "慢速",
+          "box": {
+            "x": 113,
+            "y": 256.53125,
+            "width": 48,
+            "height": 38
+          }
+        },
+        {
+          "theme": "graffiti",
+          "section": "programming",
+          "view": "课程",
+          "label": "正常",
+          "box": {
+            "x": 62,
+            "y": 273.390625,
+            "width": 48,
+            "height": 38
+          }
+        },
+        {
+          "theme": "graffiti",
+          "section": "programming",
+          "view": "课程",
+          "label": "慢速",
+          "box": {
+            "x": 113,
+            "y": 273.390625,
+            "width": 48,
+            "height": 38
+          }
+        },
+        {
+          "theme": "graffiti",
+          "section": "programming",
+          "view": "复习",
+          "label": "正常",
+          "box": {
+            "x": 62,
+            "y": 273.390625,
+            "width": 48,
+            "height": 38
+          }
+        },
+        {
+          "theme": "graffiti",
+          "section": "programming",
+          "view": "复习",
+          "label": "慢速",
+          "box": {
+            "x": 113,
+            "y": 273.390625,
+            "width": 48,
+            "height": 38
+          }
+        },
+        {
+          "theme": "graffiti",
+          "section": "programming",
+          "view": "词汇库",
+          "label": "正常",
+          "box": {
+            "x": 62,
+            "y": 297.390625,
+            "width": 48,
+            "height": 38
+          }
+        },
+        {
+          "theme": "graffiti",
+          "section": "programming",
+          "view": "词汇库",
+          "label": "慢速",
+          "box": {
+            "x": 113,
+            "y": 297.390625,
+            "width": 48,
+            "height": 38
+          }
+        },
+        {
+          "theme": "graffiti",
+          "section": "daily",
+          "view": "课程",
+          "label": "正常",
+          "box": {
+            "x": 62,
+            "y": 273.390625,
+            "width": 48,
+            "height": 38
+          }
+        },
+        {
+          "theme": "graffiti",
+          "section": "daily",
+          "view": "课程",
+          "label": "慢速",
+          "box": {
+            "x": 113,
+            "y": 273.390625,
+            "width": 48,
+            "height": 38
+          }
+        },
+        {
+          "theme": "graffiti",
+          "section": "daily",
+          "view": "复习",
+          "label": "正常",
+          "box": {
+            "x": 62,
+            "y": 273.390625,
+            "width": 48,
+            "height": 38
+          }
+        },
+        {
+          "theme": "graffiti",
+          "section": "daily",
+          "view": "复习",
+          "label": "慢速",
+          "box": {
+            "x": 113,
+            "y": 273.390625,
+            "width": 48,
+            "height": 38
+          }
+        },
+        {
+          "theme": "graffiti",
+          "section": "daily",
+          "view": "表达库",
+          "label": "正常",
+          "box": {
+            "x": 62,
+            "y": 273.390625,
+            "width": 48,
+            "height": 38
+          }
+        },
+        {
+          "theme": "graffiti",
+          "section": "daily",
+          "view": "表达库",
+          "label": "慢速",
+          "box": {
+            "x": 113,
+            "y": 273.390625,
+            "width": 48,
+            "height": 38
+          }
+        }
+      ]
+    },
+    {
+      "name": "exercise headers keep both speed buttons visible in four themes at 1440px",
+      "durationMs": 1183,
+      "evidence": [
+        {
+          "theme": "minimal",
+          "label": "正常",
+          "box": {
+            "x": 1019,
+            "y": 137,
+            "width": 52,
+            "height": 38
+          }
+        },
+        {
+          "theme": "minimal",
+          "label": "慢速",
+          "box": {
+            "x": 1074,
+            "y": 137,
+            "width": 52,
+            "height": 38
+          }
+        },
+        {
+          "theme": "sketch",
+          "label": "正常",
+          "box": {
+            "x": 1019,
+            "y": 135,
+            "width": 52,
+            "height": 38
+          }
+        },
+        {
+          "theme": "sketch",
+          "label": "慢速",
+          "box": {
+            "x": 1074,
+            "y": 135,
+            "width": 52,
+            "height": 38
+          }
+        },
+        {
+          "theme": "print",
+          "label": "正常",
+          "box": {
+            "x": 1016,
+            "y": 137,
+            "width": 52,
+            "height": 38
+          }
+        },
+        {
+          "theme": "print",
+          "label": "慢速",
+          "box": {
+            "x": 1071,
+            "y": 137,
+            "width": 52,
+            "height": 38
+          }
+        },
+        {
+          "theme": "graffiti",
+          "label": "正常",
+          "box": {
+            "x": 1016,
+            "y": 138,
+            "width": 52,
+            "height": 38
+          }
+        },
+        {
+          "theme": "graffiti",
+          "label": "慢速",
+          "box": {
+            "x": 1071,
+            "y": 138,
+            "width": 52,
+            "height": 38
+          }
+        }
+      ]
+    },
+    {
+      "name": "exercise headers keep both speed buttons visible in four themes at 390px",
+      "durationMs": 1053,
+      "evidence": [
+        {
+          "theme": "minimal",
+          "label": "正常",
+          "box": {
+            "x": 61,
+            "y": 202.390625,
+            "width": 48,
+            "height": 38
+          }
+        },
+        {
+          "theme": "minimal",
+          "label": "慢速",
+          "box": {
+            "x": 112,
+            "y": 202.390625,
+            "width": 48,
+            "height": 38
+          }
+        },
+        {
+          "theme": "sketch",
+          "label": "正常",
+          "box": {
+            "x": 61,
+            "y": 199.390625,
+            "width": 48,
+            "height": 38
+          }
+        },
+        {
+          "theme": "sketch",
+          "label": "慢速",
+          "box": {
+            "x": 112,
+            "y": 199.390625,
+            "width": 48,
+            "height": 38
+          }
+        },
+        {
+          "theme": "print",
+          "label": "正常",
+          "box": {
+            "x": 62,
+            "y": 201.390625,
+            "width": 48,
+            "height": 38
+          }
+        },
+        {
+          "theme": "print",
+          "label": "慢速",
+          "box": {
+            "x": 113,
+            "y": 201.390625,
+            "width": 48,
+            "height": 38
+          }
+        },
+        {
+          "theme": "graffiti",
+          "label": "正常",
+          "box": {
+            "x": 62,
+            "y": 202.890625,
+            "width": 48,
+            "height": 38
+          }
+        },
+        {
+          "theme": "graffiti",
+          "label": "慢速",
+          "box": {
+            "x": 113,
+            "y": 202.890625,
+            "width": 48,
+            "height": 38
+          }
+        }
+      ]
+    }
+  ],
+  "failures": [],
+  "browserErrors": [],
+  "playbackEvidence": [],
+  "microphoneTested": false
+}

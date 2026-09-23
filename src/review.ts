@@ -1,6 +1,6 @@
 import type { VocabularyItem } from './vocabulary';
 
-export type Ability = 'meaning' | 'spelling';
+export type Ability = 'meaning' | 'spelling' | 'listening' | 'context';
 export type SpellingLevel = 0 | 1 | 2 | 3;
 export type Outcome = 'independent' | 'assisted' | 'revealed';
 
@@ -13,15 +13,30 @@ export interface SkillProgress {
   lastSuccessDay: string;
   lastFailureDay: string;
   needsPractice: boolean;
+  attempts?: number;
+  correctAnswers?: number;
+  hintedAnswers?: number;
+  incorrectAnswers?: number;
+  formats?: Record<string, { attempts: number; correct: number; helped: number }>;
+  lastSource?: 'course' | 'review';
 }
 
 export interface WordProgress {
   meaning: SkillProgress;
   spelling: SkillProgress;
+  listening?: SkillProgress;
+  context?: SkillProgress;
+  firstLearnedAt?: number;
+  enrolledAt?: number;
+  source?: 'legacy' | 'course';
+  /** Zero means still being taught; absent preserves historical review eligibility. */
+  reviewReadyAt?: number;
+  /** Durable receipts make replaying a saved course session idempotent. */
+  courseReceipts?: string[];
 }
 
 export type ReviewProgress = Record<string, WordProgress>;
-export interface ReviewQuestion { wordId: number; ability: Ability; level: SpellingLevel; retry: boolean; exposed?: boolean }
+export interface ReviewQuestion { wordId: number; ability: Ability; level: SpellingLevel; retry: boolean; exposed?: boolean; kind?: string; source?: 'course' | 'review' }
 export interface ReviewAnswer { question: ReviewQuestion; outcome: Outcome }
 export interface ReviewSession {
   id: string;
@@ -34,10 +49,36 @@ export interface ReviewSession {
 
 export const REVIEW_KEY = 'codewords-review-v1';
 const intervals = [1, 3, 7, 14, 30];
-const abilities: Ability[] = ['meaning', 'spelling'];
+export const reviewAbilities: Ability[] = ['context', 'meaning', 'spelling', 'listening'];
+const abilities = reviewAbilities;
 
 function freshSkill(): SkillProgress {
   return { level: 0, streak: 0, intervalDays: 0, dueAt: 0, lastPracticedAt: 0, lastSuccessDay: '', lastFailureDay: '', needsPractice: false };
+}
+
+/** Old self-confirmed words retain eligibility, without inventing a learning date. */
+export function enrollWord(progress: ReviewProgress, wordId: number, source: 'legacy' | 'course', now = Date.now()): ReviewProgress {
+  const old = progress[String(wordId)];
+  if (old?.enrolledAt !== undefined) return progress;
+  const baseline = (): SkillProgress => ({ ...freshSkill(), dueAt: source === 'course' ? afterDays(now, 1) : 0, intervalDays: source === 'course' ? 1 : 0 });
+  return { ...progress, [wordId]: { ...old, meaning: old?.meaning ?? baseline(), spelling: old?.spelling ?? baseline(), listening: old?.listening ?? baseline(), context: old?.context ?? baseline(),
+    firstLearnedAt: source === 'course' ? now : 0, enrolledAt: now, source } };
+}
+
+export function isWordDue(progress: ReviewProgress, wordId: number, now = Date.now()): boolean {
+  return isReviewEligible(progress, wordId) && abilities.some(ability => getSkill(progress, wordId, ability).dueAt <= now);
+}
+
+export function isReviewEligible(progress: ReviewProgress, wordId: number): boolean {
+  return !!progress[wordId] && progress[wordId].reviewReadyAt !== 0;
+}
+
+export function preferredAbility(progress: ReviewProgress, wordId: number, now = Date.now()): Ability {
+  const rank = (ability: Ability) => {
+    const skill = getSkill(progress, wordId, ability);
+    return skill.needsPractice && skill.dueAt <= now ? 0 : skill.dueAt <= now ? 1 : skill.needsPractice ? 2 : 3;
+  };
+  return [...abilities].sort((a, b) => rank(a) - rank(b) || getSkill(progress, wordId, a).dueAt - getSkill(progress, wordId, b).dueAt)[0];
 }
 
 export function getSkill(progress: ReviewProgress, wordId: number, ability: Ability): SkillProgress {
@@ -89,8 +130,8 @@ export function createReviewSession(
       const skill = getSkill(progress, item.id, ability);
       return skill.needsPractice && skill.dueAt <= now ? 0 : skill.dueAt <= now ? 1 : skill.needsPractice ? 2 : 3;
     };
-    const first: Ability = need('spelling') < need('meaning') ? 'spelling' : 'meaning';
-    const other: Ability = first === 'meaning' ? 'spelling' : 'meaning';
+    const first: Ability = preferredAbility(progress, item.id, now);
+    const other: Ability = abilities.filter(ability => ability !== first).sort((a, b) => need(a) - need(b))[0];
     const firstSkill = getSkill(progress, item.id, first);
     const otherSkill = getSkill(progress, item.id, other);
     const second = firstSkill.needsPractice && !otherSkill.needsPractice && otherSkill.lastSuccessDay !== '' && otherSkill.dueAt > now ? first : other;
@@ -147,11 +188,21 @@ export function updateReviewProgress(
   question: ReviewQuestion,
   outcome: Outcome,
   now = Date.now(),
+  recordAttempt = true,
 ): ReviewProgress {
   const previous = getSkill(progress, question.wordId, question.ability);
   const day = localDay(now);
   const firstToday = previous.lastPracticedAt === 0 || localDay(previous.lastPracticedAt) !== day;
-  let next: SkillProgress = { ...previous, lastPracticedAt: now };
+  let next: SkillProgress = { ...previous, lastPracticedAt: now, lastSource: question.source ?? 'review' };
+  if (recordAttempt) {
+    const kind = question.kind ?? question.ability;
+    const format = previous.formats?.[kind] ?? { attempts: 0, correct: 0, helped: 0 };
+    next = { ...next, attempts: (previous.attempts ?? 0) + 1,
+      correctAnswers: (previous.correctAnswers ?? 0) + Number(outcome !== 'revealed'),
+      hintedAnswers: (previous.hintedAnswers ?? 0) + Number(outcome === 'assisted'),
+      incorrectAnswers: (previous.incorrectAnswers ?? 0) + Number(outcome === 'revealed'),
+      formats: { ...previous.formats, [kind]: { attempts: format.attempts + 1, correct: format.correct + Number(outcome !== 'revealed'), helped: format.helped + Number(outcome !== 'independent') } } };
+  }
   if (outcome !== 'independent') {
     const harderPractice = question.ability === 'spelling' && question.exposed && question.level > previous.level;
     next = {
@@ -166,7 +217,7 @@ export function updateReviewProgress(
       needsPractice: true,
     };
   } else if (!question.retry && !question.exposed && firstToday && previous.lastFailureDay !== day && previous.lastSuccessDay !== day && previous.dueAt <= now
-    && (question.ability === 'meaning' || question.level === previous.level)) {
+    && (question.ability !== 'spelling' || question.level === previous.level)) {
     const successes = previous.streak + 1;
     const promoted = question.ability === 'spelling' && previous.level < 3 && successes >= 2;
     // A new spelling format needs fresh evidence. Schedule it tomorrow instead
@@ -210,10 +261,18 @@ function parseSkill(value: unknown): SkillProgress {
     || typeof value.dueAt !== 'number' || !Number.isFinite(value.dueAt) || value.dueAt < 0 || value.dueAt > 8.64e15
     || typeof value.lastPracticedAt !== 'number' || !Number.isFinite(value.lastPracticedAt) || value.lastPracticedAt < 0 || value.lastPracticedAt > 8.64e15
     || !validDay(value.lastSuccessDay) || !validDay(value.lastFailureDay)
-    || typeof value.needsPractice !== 'boolean') {
+    || typeof value.needsPractice !== 'boolean' || value.lastSource !== undefined && !['course', 'review'].includes(String(value.lastSource))) {
     throw new Error('复习记录格式无效，原始记录已保留。');
   }
+  const optionalCounts = ['attempts', 'correctAnswers', 'hintedAnswers', 'incorrectAnswers'];
+  if (optionalCounts.some(key => value[key] !== undefined && (!Number.isSafeInteger(value[key]) || Number(value[key]) < 0))
+    || value.formats !== undefined && (!isRecord(value.formats) || Object.entries(value.formats).some(([key, entry]) => !/^[a-z-]+$/.test(key) || !isRecord(entry) || ['attempts', 'correct', 'helped'].some(field => !Number.isSafeInteger(entry[field]) || Number(entry[field]) < 0)))) {
+    throw new Error('练习表现记录格式无效，原始记录已保留。');
+  }
   return {
+    ...Object.fromEntries(optionalCounts.filter(key => value[key] !== undefined).map(key => [key, value[key]])),
+    ...(value.formats === undefined ? {} : { formats: value.formats as SkillProgress['formats'] }),
+    ...(value.lastSource === undefined ? {} : { lastSource: value.lastSource as 'course' | 'review' }),
     level: value.level as SpellingLevel,
     streak: value.streak as number,
     intervalDays: value.intervalDays as number,
@@ -237,7 +296,14 @@ export function parseReviewProgress(raw: string | null): ReviewProgress {
     if (!/^[1-9]\d*$/.test(id) || !Number.isSafeInteger(Number(id)) || !isRecord(word)) {
       throw new Error('复习记录包含无效词条，原始记录已保留。');
     }
-    result[id] = { meaning: parseSkill(word.meaning), spelling: parseSkill(word.spelling) };
+    if (['firstLearnedAt', 'enrolledAt', 'reviewReadyAt'].some(key => word[key] !== undefined && (typeof word[key] !== 'number' || !Number.isFinite(word[key]) || Number(word[key]) < 0))
+      || word.source !== undefined && !['legacy', 'course'].includes(String(word.source))
+      || word.courseReceipts !== undefined && (!Array.isArray(word.courseReceipts) || word.courseReceipts.some(receipt => typeof receipt !== 'string' || receipt.length > 300))) {
+      throw new Error('学习来源记录格式无效，原始记录已保留。');
+    }
+    result[id] = { ...word, meaning: parseSkill(word.meaning), spelling: parseSkill(word.spelling),
+      ...(word.listening === undefined ? {} : { listening: parseSkill(word.listening) }),
+      ...(word.context === undefined ? {} : { context: parseSkill(word.context) }) } as WordProgress;
   }
   return result;
 }
@@ -250,10 +316,17 @@ export function serializeReviewProgress(progress: ReviewProgress): string {
 }
 
 export function summarizeAbility(session: ReviewSession, wordId: number, ability: Ability): string {
+  if (ability === 'listening' || ability === 'context') {
+    const label = ability === 'listening' ? '听力识别' : '语境理解';
+    const relevant = session.answers.filter(answer => answer.question.wordId === wordId && answer.question.ability === ability);
+    if (!relevant.length) return `${label}留待后续练习`;
+    if (relevant.some(answer => answer.outcome !== 'independent')) return `${label}仍需巩固，后续继续检查`;
+    return `${label}${relevant.some(answer => !answer.question.exposed && !answer.question.retry) ? '本轮独立完成' : '本轮看过提示后完成'}`;
+  }
   const relevant = session.answers.filter(answer => answer.question.wordId === wordId && answer.question.ability === ability);
   if (relevant.length === 0) {
     const practicedOther = session.answers.some(answer => answer.question.wordId === wordId);
-    if (practicedOther) return ability === 'meaning' ? '本轮侧重拼写，词义留待后续复习' : '本轮侧重词义，拼写留待后续复习';
+    if (practicedOther) return ability === 'meaning' ? '词义留待后续练习' : '拼写留待后续练习';
     return ability === 'meaning' ? '词义尚未练习' : '拼写尚未练习';
   }
   const latest = relevant[relevant.length - 1];

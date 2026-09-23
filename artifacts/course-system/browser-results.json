@@ -1,0 +1,87 @@
+{
+  "scenarios": [
+    {
+      "name": "programming: 24 sequential lessons, 120 real UI answers and reload",
+      "durationMs": 22129
+    },
+    {
+      "name": "daily: 24 sequential lessons, 120 real UI answers and reload",
+      "durationMs": 17109
+    },
+    {
+      "name": "legacy enrollment preserves original keys, favorites and all 3620 library words",
+      "durationMs": 714
+    },
+    {
+      "name": "programming: draft, theme, section switch and refresh preserve current exercise",
+      "durationMs": 1132
+    },
+    {
+      "name": "daily: draft, theme, section switch and refresh preserve current exercise",
+      "durationMs": 1073
+    },
+    {
+      "name": "programming: wrong answer and help stay in their measured abilities after correction",
+      "durationMs": 1406
+    },
+    {
+      "name": "programming: future due dates separate automatic and voluntary practice",
+      "durationMs": 604
+    },
+    {
+      "name": "programming: due review excludes future-only vocabulary",
+      "durationMs": 513
+    },
+    {
+      "name": "daily: voluntary early review uses learned material only",
+      "durationMs": 488
+    },
+    {
+      "name": "corrupt JSON preserved: codewords-programming-course-v1",
+      "durationMs": 920
+    },
+    {
+      "name": "corrupt JSON preserved: codewords-review-v1",
+      "durationMs": 724
+    },
+    {
+      "name": "corrupt JSON preserved: codewords-daily-v1",
+      "durationMs": 698
+    },
+    {
+      "name": "programming: four themes at 1440px without horizontal overflow",
+      "durationMs": 1992
+    },
+    {
+      "name": "programming: four themes at 390px without horizontal overflow",
+      "durationMs": 1391
+    },
+    {
+      "name": "daily: four themes at 1440px without horizontal overflow",
+      "durationMs": 1914
+    },
+    {
+      "name": "daily: four themes at 390px without horizontal overflow",
+      "durationMs": 1466
+    }
+  ],
+  "failures": [
+    {
+      "name": "daily: expression search, learned filter and favorites persist independently",
+      "error": "locator.selectOption: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#daily-content').getByLabel('显示内容', { exact: true })\u001b[22m\n\n    at D:\\coding项目\\交互式英语学习网站\\tools\\test-course-system-browser.mjs:279:57\n    at async scenario (D:\\coding项目\\交互式英语学习网站\\tools\\test-course-system-browser.mjs:77:5)\n    at async file:///D:/coding%E9%A1%B9%E7%9B%AE/%E4%BA%A4%E4%BA%92%E5%BC%8F%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99/tools/test-course-system-browser.mjs:270:3"
+    },
+    {
+      "name": "daily: due review opens real saved knowledge and records an answer",
+      "error": "locator.click: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#daily-content').getByRole('button', { name: '开始复习', exact: true })\u001b[22m\n\n    at D:\\coding项目\\交互式英语学习网站\\tools\\test-course-system-browser.mjs:328:74\n    at async scenario (D:\\coding项目\\交互式英语学习网站\\tools\\test-course-system-browser.mjs:77:5)\n    at async file:///D:/coding%E9%A1%B9%E7%9B%AE/%E4%BA%A4%E4%BA%92%E5%BC%8F%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99/tools/test-course-system-browser.mjs:326:5"
+    },
+    {
+      "name": "real MP3 playback uses revised word and example assets in both voices",
+      "error": "locator.click: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.word-card').filter({ has: getByRole('button', { name: '朗读单词 code', exact: true }) }).getByRole('button', { name: '朗读单词 code', exact: true })\u001b[22m\n\n    at D:\\coding项目\\交互式英语学习网站\\tools\\test-course-system-browser.mjs:349:131\n    at async scenario (D:\\coding项目\\交互式英语学习网站\\tools\\test-course-system-browser.mjs:77:5)\n    at async file:///D:/coding%E9%A1%B9%E7%9B%AE/%E4%BA%A4%E4%BA%92%E5%BC%8F%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99/tools/test-course-system-browser.mjs:338:3"
+    }
+  ],
+  "browserErrors": [],
+  "mainExercises": 240,
+  "selfChecks": 12,
+  "microphoneTested": false,
+  "testedAt": "2026-09-22T15:10:42.472Z"
+}

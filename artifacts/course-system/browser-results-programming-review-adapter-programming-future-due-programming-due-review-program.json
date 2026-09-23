@@ -1,0 +1,47 @@
+{
+  "scenarios": [
+    {
+      "name": "programming: draft, theme, section switch and refresh preserve current exercise",
+      "durationMs": 1212
+    },
+    {
+      "name": "programming: future due dates separate automatic and voluntary practice",
+      "durationMs": 537
+    },
+    {
+      "name": "programming: due review excludes future-only vocabulary",
+      "durationMs": 479
+    },
+    {
+      "name": "programming review adapter: context selects only its target ability",
+      "durationMs": 1052
+    },
+    {
+      "name": "programming review adapter: meaning selects only its target ability",
+      "durationMs": 939
+    },
+    {
+      "name": "programming review adapter: spelling selects only its target ability",
+      "durationMs": 907
+    },
+    {
+      "name": "programming review adapter: listening selects only its target ability",
+      "durationMs": 994
+    },
+    {
+      "name": "programming review adapter: word correction clears scene weakness and storage updates refresh it",
+      "durationMs": 651
+    }
+  ],
+  "failures": [
+    {
+      "name": "programming: wrong answer and help stay in their measured abilities after correction",
+      "error": "AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:\n\n  assert.ok((await read(env.page, PROGRAMMING_COURSE_KEY)).session.queue.some(entry => entry.retry))\n\n    at file:///D:/coding%E9%A1%B9%E7%9B%AE/%E4%BA%A4%E4%BA%92%E5%BC%8F%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99/tools/test-course-system-browser.mjs:268:12\n    at async scenario (file:///D:/coding%E9%A1%B9%E7%9B%AE/%E4%BA%A4%E4%BA%92%E5%BC%8F%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99/tools/test-course-system-browser.mjs:78:5)\n    at async file:///D:/coding%E9%A1%B9%E7%9B%AE/%E4%BA%A4%E4%BA%92%E5%BC%8F%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99/tools/test-course-system-browser.mjs:246:3"
+    }
+  ],
+  "browserErrors": [],
+  "mainExercises": 0,
+  "selfChecks": 0,
+  "microphoneTested": false,
+  "testedAt": "2026-09-22T15:19:13.225Z"
+}

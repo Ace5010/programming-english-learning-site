@@ -1,0 +1,70 @@
+{
+  "baseURL": "http://localhost:5186/dist/index.html",
+  "production": true,
+  "scenarios": [
+    {
+      "name": "programming: confirm switching unfinished review to adaptive course",
+      "durationMs": 1738,
+      "evidence": {
+        "scripts": [
+          "",
+          "http://localhost:5186/@vite/client",
+          "http://localhost:5186/dist/assets/index-DdbVP7DO.js"
+        ],
+        "reviewSessionId": "1790092006025-330q7hj7",
+        "courseSessionId": "1790092006237-adaptive-1d6gdea",
+        "plan": {
+          "version": 1,
+          "round": 7,
+          "focusIds": [
+            "word-3",
+            "word-687",
+            "word-2",
+            "word-12"
+          ],
+          "newIds": [
+            "word-12"
+          ],
+          "sourceLessonId": "P1-01-05",
+          "seed": 193998416,
+          "budget": 13
+        }
+      }
+    },
+    {
+      "name": "daily: confirm switching unfinished review to adaptive course",
+      "durationMs": 1560,
+      "evidence": {
+        "scripts": [
+          "",
+          "http://localhost:5186/@vite/client",
+          "http://localhost:5186/dist/assets/index-DdbVP7DO.js"
+        ],
+        "reviewSessionId": "1790092007677-330q7hj7",
+        "courseSessionId": "1790092007783-adaptive-1d6gdea",
+        "plan": {
+          "version": 1,
+          "round": 7,
+          "focusIds": [
+            "whats-your-name",
+            "are-you-mia",
+            "my-name-is-mia",
+            "are-you-ben"
+          ],
+          "newIds": [
+            "are-you-ben"
+          ],
+          "sourceLessonId": "A1-01-04",
+          "seed": 193998416,
+          "budget": 12
+        }
+      }
+    }
+  ],
+  "failures": [],
+  "browserErrors": [],
+  "objectiveAnswers": 4,
+  "selfChecks": 0,
+  "microphoneTested": false,
+  "testedAt": "2026-09-22T15:46:48.433Z"
+}

@@ -1,0 +1,750 @@
+{
+  "additions": [
+    {
+      "id": 3561,
+      "word": "code",
+      "meaning": "代码",
+      "category": "代码基础",
+      "example": "Read this code.",
+      "exampleZh": "阅读这段代码。",
+      "phonetic": "koʊd",
+      "tier": "核心"
+    },
+    {
+      "id": 3562,
+      "word": "log",
+      "meaning": "日志；记录日志",
+      "category": "测试与调试",
+      "example": "Read the log.",
+      "exampleZh": "阅读日志。",
+      "phonetic": "lɔːɡ",
+      "tier": "核心"
+    },
+    {
+      "id": 3563,
+      "word": "source",
+      "meaning": "来源；源文件；源代码",
+      "category": "代码基础",
+      "example": "Check the source code.",
+      "exampleZh": "检查源代码。",
+      "phonetic": "sɔːrs",
+      "tier": "核心"
+    },
+    {
+      "id": 3564,
+      "word": "execute",
+      "meaning": "执行",
+      "category": "命令行与开发工具",
+      "example": "Execute this command.",
+      "exampleZh": "执行这条命令。",
+      "phonetic": "ˈeksɪkjuːt",
+      "tier": "核心"
+    },
+    {
+      "id": 3565,
+      "word": "load",
+      "meaning": "加载",
+      "category": "操作系统与文件",
+      "example": "Load this file.",
+      "exampleZh": "加载这个文件。",
+      "phonetic": "loʊd",
+      "tier": "核心"
+    },
+    {
+      "id": 3566,
+      "word": "delete",
+      "meaning": "删除",
+      "category": "操作系统与文件",
+      "example": "Delete the old file.",
+      "exampleZh": "删除旧文件。",
+      "phonetic": "dɪˈliːt",
+      "tier": "核心"
+    },
+    {
+      "id": 3567,
+      "word": "update",
+      "meaning": "更新",
+      "category": "命令行与开发工具",
+      "example": "Update this package.",
+      "exampleZh": "更新这个软件包。",
+      "phonetic": "ʌpˈdeɪt",
+      "tier": "核心"
+    },
+    {
+      "id": 3568,
+      "word": "enable",
+      "meaning": "启用",
+      "category": "命令行与开发工具",
+      "example": "Enable this feature.",
+      "exampleZh": "启用这个功能。",
+      "phonetic": "ɪˈneɪbl",
+      "tier": "核心"
+    },
+    {
+      "id": 3569,
+      "word": "disable",
+      "meaning": "禁用；停用",
+      "category": "命令行与开发工具",
+      "example": "Disable this feature.",
+      "exampleZh": "禁用这个功能。",
+      "phonetic": "dɪsˈeɪbl",
+      "tier": "核心"
+    },
+    {
+      "id": 3570,
+      "word": "missing",
+      "meaning": "缺少的；找不到的",
+      "category": "测试与调试",
+      "example": "This file is missing.",
+      "exampleZh": "这个文件缺失了。",
+      "phonetic": "ˈmɪsɪŋ",
+      "tier": "核心"
+    },
+    {
+      "id": 3571,
+      "word": "failed",
+      "meaning": "失败的；未成功的",
+      "category": "测试与调试",
+      "example": "The test failed.",
+      "exampleZh": "测试失败了。",
+      "phonetic": "feɪld",
+      "tier": "核心"
+    },
+    {
+      "id": 3572,
+      "word": "null",
+      "meaning": "空值；没有对象值",
+      "category": "代码基础",
+      "example": "The value is null.",
+      "exampleZh": "这个值是空值。",
+      "phonetic": "nʌl",
+      "tier": "核心"
+    },
+    {
+      "id": 3573,
+      "word": "undefined",
+      "meaning": "未定义的；尚未赋值的",
+      "category": "代码基础",
+      "example": "This value is undefined.",
+      "exampleZh": "这个值尚未定义。",
+      "phonetic": "ˌʌndɪˈfaɪnd",
+      "tier": "核心"
+    },
+    {
+      "id": 3574,
+      "word": "false",
+      "meaning": "假的；布尔值假",
+      "category": "代码基础",
+      "example": "This check returns false.",
+      "exampleZh": "这次检查返回假。",
+      "phonetic": "fɔːls",
+      "tier": "核心"
+    },
+    {
+      "id": 3575,
+      "word": "const",
+      "meaning": "声明不可重新赋值的变量的关键词",
+      "category": "代码基础",
+      "example": "Use const for this value.",
+      "exampleZh": "用 const 声明这个值。",
+      "phonetic": "",
+      "tier": "核心"
+    },
+    {
+      "id": 3576,
+      "word": "import",
+      "meaning": "导入",
+      "category": "代码基础",
+      "example": "Import this function.",
+      "exampleZh": "导入这个函数。",
+      "phonetic": "ɪmˈpɔːrt",
+      "tier": "核心"
+    },
+    {
+      "id": 3577,
+      "word": "export",
+      "meaning": "导出",
+      "category": "代码基础",
+      "example": "Export this function.",
+      "exampleZh": "导出这个函数。",
+      "phonetic": "ɪkˈspɔːrt",
+      "tier": "核心"
+    },
+    {
+      "id": 3578,
+      "word": "async",
+      "meaning": "异步的；声明异步函数的关键词",
+      "category": "代码基础",
+      "example": "This is an async function.",
+      "exampleZh": "这是一个异步函数。",
+      "phonetic": "",
+      "tier": "核心"
+    },
+    {
+      "id": 3579,
+      "word": "await",
+      "meaning": "等待；等待异步结果的关键词",
+      "category": "代码基础",
+      "example": "Use await to wait for the result.",
+      "exampleZh": "用 await 等待结果。",
+      "phonetic": "əˈweɪt",
+      "tier": "核心"
+    },
+    {
+      "id": 3580,
+      "word": "status",
+      "meaning": "状态",
+      "category": "GitHub 与版本控制",
+      "example": "Check the status.",
+      "exampleZh": "检查状态。",
+      "phonetic": "ˈsteɪtəs",
+      "tier": "核心"
+    },
+    {
+      "id": 3581,
+      "word": "diff",
+      "meaning": "差异；查看差异",
+      "category": "GitHub 与版本控制",
+      "example": "Read the diff before you commit.",
+      "exampleZh": "提交之前阅读差异。",
+      "phonetic": "dɪf",
+      "tier": "核心"
+    },
+    {
+      "id": 3582,
+      "word": "remove",
+      "meaning": "移除；删除",
+      "category": "操作系统与文件",
+      "example": "Remove the old file.",
+      "exampleZh": "移除旧文件。",
+      "phonetic": "rɪˈmuːv",
+      "tier": "核心"
+    },
+    {
+      "id": 3583,
+      "word": "config",
+      "meaning": "配置；配置文件",
+      "category": "命令行与开发工具",
+      "example": "Open the config file.",
+      "exampleZh": "打开配置文件。",
+      "phonetic": "",
+      "tier": "核心"
+    },
+    {
+      "id": 3584,
+      "word": "rename",
+      "meaning": "重命名",
+      "category": "操作系统与文件",
+      "example": "Rename this file.",
+      "exampleZh": "重命名这个文件。",
+      "phonetic": "ˌriːˈneɪm",
+      "tier": "核心"
+    },
+    {
+      "id": 3585,
+      "word": "retry",
+      "meaning": "重试",
+      "category": "测试与调试",
+      "example": "Retry the request.",
+      "exampleZh": "重试这个请求。",
+      "phonetic": "ˌriːˈtraɪ",
+      "tier": "核心"
+    },
+    {
+      "id": 3586,
+      "word": "timeout",
+      "meaning": "超时",
+      "category": "测试与调试",
+      "example": "A timeout means the wait was too long.",
+      "exampleZh": "超时表示等待时间太长。",
+      "phonetic": "ˈtaɪmaʊt",
+      "tier": "核心"
+    },
+    {
+      "id": 3587,
+      "word": "default",
+      "meaning": "默认的；默认值",
+      "category": "命令行与开发工具",
+      "example": "Use the default value.",
+      "exampleZh": "使用默认值。",
+      "phonetic": "dɪˈfɔːlt",
+      "tier": "核心"
+    },
+    {
+      "id": 3588,
+      "word": "required",
+      "meaning": "必需的；必填的",
+      "category": "文档基础英语",
+      "example": "A name is required.",
+      "exampleZh": "姓名是必填项。",
+      "phonetic": "rɪˈkwaɪərd",
+      "tier": "核心"
+    },
+    {
+      "id": 3589,
+      "word": "optional",
+      "meaning": "可选的；非必填的",
+      "category": "文档基础英语",
+      "example": "This field is optional.",
+      "exampleZh": "这个字段是可选的。",
+      "phonetic": "ˈɑːpʃənl",
+      "tier": "核心"
+    },
+    {
+      "id": 3590,
+      "word": "option",
+      "meaning": "选项",
+      "category": "命令行与开发工具",
+      "example": "Choose one option.",
+      "exampleZh": "选择一个选项。",
+      "phonetic": "ˈɑːpʃn",
+      "tier": "核心"
+    },
+    {
+      "id": 3591,
+      "word": "item",
+      "meaning": "项目；列表中的一项",
+      "category": "代码基础",
+      "example": "Add one item to the list.",
+      "exampleZh": "向列表中添加一项。",
+      "phonetic": "ˈaɪtəm",
+      "tier": "核心"
+    },
+    {
+      "id": 3592,
+      "word": "length",
+      "meaning": "长度",
+      "category": "代码基础",
+      "example": "Check the length of the list.",
+      "exampleZh": "检查列表长度。",
+      "phonetic": "leŋθ",
+      "tier": "核心"
+    },
+    {
+      "id": 3593,
+      "word": "client",
+      "meaning": "客户端",
+      "category": "网络与云服务",
+      "example": "The client sends a request.",
+      "exampleZh": "客户端发送一个请求。",
+      "phonetic": "ˈklaɪənt",
+      "tier": "核心"
+    },
+    {
+      "id": 3594,
+      "word": "setup",
+      "meaning": "安装；设置过程",
+      "category": "命令行与开发工具",
+      "example": "Follow the setup steps.",
+      "exampleZh": "按照设置步骤操作。",
+      "phonetic": "ˈsetʌp",
+      "tier": "核心"
+    },
+    {
+      "id": 3595,
+      "word": "exit",
+      "meaning": "退出",
+      "category": "命令行与开发工具",
+      "example": "Exit the app.",
+      "exampleZh": "退出这个应用。",
+      "phonetic": "ˈeksɪt",
+      "tier": "核心"
+    },
+    {
+      "id": 3596,
+      "word": "valid",
+      "meaning": "有效的；符合要求的",
+      "category": "测试与调试",
+      "example": "This value is valid.",
+      "exampleZh": "这个值有效。",
+      "phonetic": "ˈvælɪd",
+      "tier": "核心"
+    },
+    {
+      "id": 3597,
+      "word": "invalid",
+      "meaning": "无效的；不符合要求的",
+      "category": "测试与调试",
+      "example": "This value is invalid.",
+      "exampleZh": "这个值无效。",
+      "phonetic": "ɪnˈvælɪd",
+      "tier": "核心"
+    },
+    {
+      "id": 3598,
+      "word": "pending",
+      "meaning": "待处理的；尚未完成的",
+      "category": "测试与调试",
+      "example": "The request is pending.",
+      "exampleZh": "这个请求正在等待处理。",
+      "phonetic": "ˈpendɪŋ",
+      "tier": "核心"
+    },
+    {
+      "id": 3599,
+      "word": "denied",
+      "meaning": "被拒绝的；未获准的",
+      "category": "安全与权限",
+      "example": "Access was denied.",
+      "exampleZh": "访问被拒绝了。",
+      "phonetic": "dɪˈnaɪd",
+      "tier": "核心"
+    },
+    {
+      "id": 3600,
+      "word": "console",
+      "meaning": "控制台",
+      "category": "命令行与开发工具",
+      "example": "Open the console.",
+      "exampleZh": "打开控制台。",
+      "phonetic": "ˈkɑːnsoʊl",
+      "tier": "核心"
+    },
+    {
+      "id": 3601,
+      "word": "configure",
+      "meaning": "配置；设置",
+      "category": "命令行与开发工具",
+      "example": "Configure the app.",
+      "exampleZh": "配置这个应用。",
+      "phonetic": "kənˈfɪɡjər",
+      "tier": "核心"
+    },
+    {
+      "id": 3602,
+      "word": "download",
+      "meaning": "下载",
+      "category": "网络与云服务",
+      "example": "Download this file.",
+      "exampleZh": "下载这个文件。",
+      "phonetic": "ˌdaʊnˈloʊd",
+      "tier": "核心"
+    },
+    {
+      "id": 3603,
+      "word": "upload",
+      "meaning": "上传",
+      "category": "网络与云服务",
+      "example": "Upload this file.",
+      "exampleZh": "上传这个文件。",
+      "phonetic": "ˌʌpˈloʊd",
+      "tier": "核心"
+    },
+    {
+      "id": 3604,
+      "word": "version",
+      "meaning": "版本",
+      "category": "GitHub 与版本控制",
+      "example": "Use the latest version.",
+      "exampleZh": "使用最新版本。",
+      "phonetic": "ˈvɜːrʒn",
+      "tier": "核心"
+    },
+    {
+      "id": 3605,
+      "word": "preview",
+      "meaning": "预览",
+      "category": "前端开发",
+      "example": "Preview this page.",
+      "exampleZh": "预览这个页面。",
+      "phonetic": "ˈpriːvjuː",
+      "tier": "核心"
+    },
+    {
+      "id": 3606,
+      "word": "link",
+      "meaning": "链接；连接",
+      "category": "网络与云服务",
+      "example": "Open this link.",
+      "exampleZh": "打开这个链接。",
+      "phonetic": "lɪŋk",
+      "tier": "核心"
+    },
+    {
+      "id": 3607,
+      "word": "description",
+      "meaning": "描述；说明",
+      "category": "文档基础英语",
+      "example": "Read the description.",
+      "exampleZh": "阅读说明。",
+      "phonetic": "dɪˈskrɪpʃn",
+      "tier": "核心"
+    },
+    {
+      "id": 3608,
+      "word": "production",
+      "meaning": "生产环境；正式运行环境",
+      "category": "命令行与开发工具",
+      "example": "Test the app before production.",
+      "exampleZh": "在正式运行之前测试这个应用。",
+      "phonetic": "prəˈdʌkʃn",
+      "tier": "核心"
+    },
+    {
+      "id": 3609,
+      "word": "username",
+      "meaning": "用户名",
+      "category": "安全与权限",
+      "example": "Enter your username.",
+      "exampleZh": "输入你的用户名。",
+      "phonetic": "ˈjuːzərneɪm",
+      "tier": "核心"
+    },
+    {
+      "id": 3610,
+      "word": "select",
+      "meaning": "选择；选中",
+      "category": "前端开发",
+      "example": "Select this file.",
+      "exampleZh": "选中这个文件。",
+      "phonetic": "sɪˈlekt",
+      "tier": "核心"
+    },
+    {
+      "id": 3611,
+      "word": "submit",
+      "meaning": "提交；发送表单",
+      "category": "前端开发",
+      "example": "Submit the form.",
+      "exampleZh": "提交表单。",
+      "phonetic": "səbˈmɪt",
+      "tier": "核心"
+    },
+    {
+      "id": 3612,
+      "word": "confirm",
+      "meaning": "确认",
+      "category": "前端开发",
+      "example": "Confirm your choice.",
+      "exampleZh": "确认你的选择。",
+      "phonetic": "kənˈfɜːrm",
+      "tier": "核心"
+    },
+    {
+      "id": 3613,
+      "word": "refresh",
+      "meaning": "刷新",
+      "category": "前端开发",
+      "example": "Refresh this page.",
+      "exampleZh": "刷新这个页面。",
+      "phonetic": "rɪˈfreʃ",
+      "tier": "核心"
+    },
+    {
+      "id": 3614,
+      "word": "reload",
+      "meaning": "重新加载",
+      "category": "前端开发",
+      "example": "Reload this page.",
+      "exampleZh": "重新加载这个页面。",
+      "phonetic": "ˌriːˈloʊd",
+      "tier": "核心"
+    },
+    {
+      "id": 3615,
+      "word": "format",
+      "meaning": "格式；格式化",
+      "category": "操作系统与文件",
+      "example": "Check the file format.",
+      "exampleZh": "检查文件格式。",
+      "phonetic": "ˈfɔːrmæt",
+      "tier": "核心"
+    },
+    {
+      "id": 3616,
+      "word": "parse",
+      "meaning": "解析",
+      "category": "代码基础",
+      "example": "Parse the text.",
+      "exampleZh": "解析这段文本。",
+      "phonetic": "pɑːrs",
+      "tier": "核心"
+    },
+    {
+      "id": 3617,
+      "word": "document",
+      "meaning": "文档",
+      "category": "文档基础英语",
+      "example": "Read this document.",
+      "exampleZh": "阅读这份文档。",
+      "phonetic": "ˈdɑːkjumənt",
+      "tier": "核心"
+    },
+    {
+      "id": 3618,
+      "word": "setting",
+      "meaning": "设置；设置项",
+      "category": "命令行与开发工具",
+      "example": "Change this setting.",
+      "exampleZh": "更改这个设置。",
+      "phonetic": "ˈsetɪŋ",
+      "tier": "核心"
+    },
+    {
+      "id": 3619,
+      "word": "initialize",
+      "meaning": "初始化",
+      "category": "代码基础",
+      "example": "Initialize the app.",
+      "exampleZh": "初始化这个应用。",
+      "phonetic": "ɪˈnɪʃəlaɪz",
+      "tier": "核心"
+    },
+    {
+      "id": 3620,
+      "word": "render",
+      "meaning": "渲染；生成页面显示内容",
+      "category": "前端开发",
+      "example": "Render this page.",
+      "exampleZh": "渲染这个页面。",
+      "phonetic": "ˈrendər",
+      "tier": "核心"
+    }
+  ],
+  "overrides": [
+    {
+      "id": 2801,
+      "word": "project",
+      "meaning": "项目；计划；投射；放映；设计；规划",
+      "example": "Open this project.",
+      "exampleZh": "打开这个项目。"
+    },
+    {
+      "id": 1880,
+      "word": "main",
+      "meaning": "主要的；主要部分；main 主分支",
+      "example": "Switch to the main branch.",
+      "exampleZh": "切换到主分支。"
+    },
+    {
+      "id": 1594,
+      "word": "fail",
+      "meaning": "失败；未通过测试；不及格；破产；缺乏；衰退",
+      "example": "This test may fail.",
+      "exampleZh": "这个测试可能失败。"
+    },
+    {
+      "id": 2019,
+      "word": "pass",
+      "meaning": "通过；通过测试；及格；经过；传递",
+      "example": "This test should pass.",
+      "exampleZh": "这个测试应该通过。"
+    },
+    {
+      "id": 1627,
+      "word": "fix",
+      "meaning": "修复；修理；使固定；安装；准备",
+      "example": "Fix this error.",
+      "exampleZh": "修复这个错误。"
+    },
+    {
+      "id": 2092,
+      "word": "print",
+      "meaning": "打印；输出到屏幕或控制台；印刷；印记",
+      "example": "Print the result.",
+      "exampleZh": "输出结果。"
+    },
+    {
+      "id": 1991,
+      "word": "open",
+      "meaning": "打开；公开的；敞开的；营业着的",
+      "example": "Open this file.",
+      "exampleZh": "打开这个文件。"
+    },
+    {
+      "id": 1413,
+      "word": "close",
+      "meaning": "关闭；紧密的；亲近的",
+      "example": "Close this file.",
+      "exampleZh": "关闭这个文件。"
+    },
+    {
+      "id": 2649,
+      "word": "found",
+      "meaning": "找到（find 的过去式或过去分词）；创立",
+      "example": "No file was found.",
+      "exampleZh": "没有找到文件。"
+    },
+    {
+      "id": 2862,
+      "word": "shell",
+      "meaning": "命令行解释器；外壳；剥壳；炮击",
+      "example": "Open a shell.",
+      "exampleZh": "打开命令行解释器。"
+    },
+    {
+      "id": 1609,
+      "word": "fetch",
+      "meaning": "获取；取来；获取远程更新",
+      "example": "Fetch the latest code.",
+      "exampleZh": "获取最新代码。"
+    },
+    {
+      "id": 2997,
+      "word": "set",
+      "meaning": "设置；放置",
+      "example": "Set the value to ten.",
+      "exampleZh": "把值设置为十。"
+    },
+    {
+      "id": 3090,
+      "word": "type",
+      "meaning": "类型；输入；打字"
+    },
+    {
+      "id": 830,
+      "word": "port",
+      "meaning": "端口",
+      "example": "Check the port number.",
+      "exampleZh": "检查端口号。"
+    },
+    {
+      "id": 1384,
+      "word": "change",
+      "meaning": "更改；修改；改变；交换",
+      "example": "Change this code.",
+      "exampleZh": "修改这段代码。"
+    },
+    {
+      "id": 687,
+      "word": "message",
+      "meaning": "消息；信息；说明",
+      "example": "Write a commit message.",
+      "exampleZh": "写一条提交说明。"
+    },
+    {
+      "id": 2892,
+      "word": "read",
+      "meaning": "读取；阅读；朗读；读懂"
+    },
+    {
+      "id": 2557,
+      "word": "write",
+      "meaning": "写入；写；写作；写信"
+    },
+    {
+      "id": 2446,
+      "word": "true",
+      "meaning": "真的；布尔值真；真实的；正确的"
+    },
+    {
+      "id": 2637,
+      "word": "let",
+      "meaning": "允许；让；用于声明可重新赋值变量的关键词"
+    },
+    {
+      "id": 604,
+      "word": "input",
+      "meaning": "输入；输入内容",
+      "example": "Check the input.",
+      "exampleZh": "检查输入内容。"
+    },
+    {
+      "id": 790,
+      "word": "output",
+      "meaning": "输出；输出内容",
+      "example": "Read the output.",
+      "exampleZh": "阅读输出内容。"
+    }
+  ]
+}

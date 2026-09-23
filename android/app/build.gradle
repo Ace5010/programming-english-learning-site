@@ -1,0 +1,62 @@
+plugins { id 'com.android.application' }
+
+def signing = new Properties()
+def signingFile = rootProject.file('keystore.properties')
+if (signingFile.exists()) signingFile.withInputStream { signing.load(it) }
+def signedRelease = ['storeFile', 'storePassword', 'keyAlias', 'keyPassword'].every { signing.getProperty(it) }
+
+android {
+    namespace 'com.codewords.english'
+    compileSdk 35
+    defaultConfig {
+        applicationId 'com.codewords.english'
+        minSdk 26
+        targetSdk 35
+        versionCode 1
+        versionName '1.0.0'
+    }
+    buildFeatures { buildConfig true }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    signingConfigs {
+        if (signedRelease) {
+            release {
+                storeFile rootProject.file(signing.getProperty('storeFile'))
+                storePassword signing.getProperty('storePassword')
+                keyAlias signing.getProperty('keyAlias')
+                keyPassword signing.getProperty('keyPassword')
+            }
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            if (signedRelease) signingConfig signingConfigs.release
+        }
+    }
+    sourceSets.main.assets.srcDir layout.buildDirectory.dir('generated/assets')
+    androidResources { noCompress += ['mp3'] }
+}
+
+tasks.register('copyWebAssets', Sync) {
+    from rootProject.file('../dist')
+    into layout.buildDirectory.dir('generated/assets/web')
+    exclude '_headers', '_redirects', '.nojekyll'
+    doFirst {
+        if (!rootProject.file('../dist/index.html').isFile()) throw new GradleException('请先运行 npm run build。')
+    }
+}
+tasks.named('preBuild').configure { dependsOn 'copyWebAssets' }
+tasks.register('requireReleaseSigning') {
+    doLast {
+        if (!signedRelease) throw new GradleException('请先配置 android/keystore.properties；签名文件不可提交到 Git。')
+    }
+}
+tasks.matching { it.name == 'preReleaseBuild' }.configureEach { dependsOn 'requireReleaseSigning' }
+tasks.withType(JavaCompile).configureEach { options.encoding = 'UTF-8' }
+
+dependencies {
+    implementation 'androidx.webkit:webkit:1.12.1'
+}

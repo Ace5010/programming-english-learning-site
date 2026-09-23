@@ -1,0 +1,1898 @@
+[
+  {
+    "round": 1,
+    "plan": {
+      "version": 1,
+      "round": 1,
+      "focusIds": [
+        "word-1",
+        "word-2801",
+        "word-3561",
+        "word-20"
+      ],
+      "newIds": [
+        "word-1",
+        "word-2801",
+        "word-3561",
+        "word-20"
+      ],
+      "sourceLessonId": "P1-01-01",
+      "seed": 1422306624,
+      "budget": 12
+    },
+    "answers": 12,
+    "readyIds": [],
+    "targets": {
+      "word-1": {
+        "introducedAt": 1790091677716,
+        "confidence": 0.5760000000000001,
+        "abilities": {
+          "meaning": 0.048,
+          "context": 0.528
+        },
+        "lastSeenTurn": 10,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-word-1:meaning-hwuvu",
+          "sig-word-1:translation-wetd2i",
+          "sig-word-1:sentence-mxnci"
+        ],
+        "transfer": true,
+        "readyAt": 0
+      },
+      "word-2801": {
+        "introducedAt": 1790091677716,
+        "confidence": 0.54,
+        "abilities": {
+          "meaning": 0.048,
+          "context": 0.396,
+          "listening": 0.096
+        },
+        "lastSeenTurn": 12,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-word-2801:meaning-g1jcpw",
+          "sig-authored:P1-01-01-e04-1f6hi3y",
+          "sig-word-2801:cloze-1razbpa",
+          "sig-word-2801:listen-rekfeu"
+        ],
+        "transfer": true,
+        "readyAt": 0
+      },
+      "word-3561": {
+        "introducedAt": 1790091677716,
+        "confidence": 0.516,
+        "abilities": {
+          "meaning": 0.048,
+          "context": 0.132,
+          "spelling": 0.336
+        },
+        "lastSeenTurn": 9,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-word-3561:meaning-1wowcws",
+          "sig-authored:P1-01-01-e04-1f6hi3y",
+          "sig-word-3561:recall-klrewo"
+        ],
+        "transfer": true,
+        "readyAt": 0
+      },
+      "word-20": {
+        "introducedAt": 1790091677716,
+        "confidence": 0.1776,
+        "abilities": {
+          "meaning": 0.048,
+          "listening": 0.1296
+        },
+        "lastSeenTurn": 11,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-authored:P1-01-01-r01-1lg9r8g",
+          "sig-word-20:listen-1sq9sur"
+        ],
+        "transfer": false,
+        "readyAt": 0
+      }
+    },
+    "sequence": [
+      {
+        "id": "P1-01-01-p-2801-meaning",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-2801"
+        ],
+        "signature": "word-2801:meaning",
+        "outcome": "independent",
+        "turn": 1
+      },
+      {
+        "id": "P1-01-06-p-1-meaning",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-1"
+        ],
+        "signature": "word-1:meaning",
+        "outcome": "independent",
+        "turn": 2
+      },
+      {
+        "id": "P1-01-01-r01",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-20"
+        ],
+        "signature": "authored:P1-01-01-r01",
+        "outcome": "independent",
+        "turn": 3
+      },
+      {
+        "id": "P1-01-01-p-3561-meaning",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-3561"
+        ],
+        "signature": "word-3561:meaning",
+        "outcome": "independent",
+        "turn": 4
+      },
+      {
+        "id": "P1-01-01-e04",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-2801",
+          "word-3561"
+        ],
+        "signature": "authored:P1-01-01-e04",
+        "outcome": "independent",
+        "turn": 5
+      },
+      {
+        "id": "P1-01-01-p-1-translation",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-1"
+        ],
+        "signature": "word-1:translation",
+        "outcome": "independent",
+        "turn": 6
+      },
+      {
+        "id": "P1-01-01-p-2801-cloze",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-2801"
+        ],
+        "signature": "word-2801:cloze",
+        "outcome": "independent",
+        "turn": 7
+      },
+      {
+        "id": "P1-01-06-p-20-listen",
+        "kind": "listen",
+        "knowledgeIds": [
+          "word-20"
+        ],
+        "signature": "word-20:listen",
+        "outcome": "independent",
+        "turn": 8
+      },
+      {
+        "id": "P1-01-01-p-3561-recall",
+        "kind": "fill",
+        "knowledgeIds": [
+          "word-3561"
+        ],
+        "signature": "word-3561:recall",
+        "outcome": "independent",
+        "turn": 9
+      },
+      {
+        "id": "P1-01-06-p-1-sentence",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-1"
+        ],
+        "signature": "word-1:sentence",
+        "outcome": "independent",
+        "turn": 10
+      },
+      {
+        "id": "P1-01-01-p-20-listen",
+        "kind": "listen",
+        "knowledgeIds": [
+          "word-20"
+        ],
+        "signature": "word-20:listen",
+        "outcome": "independent",
+        "turn": 11
+      },
+      {
+        "id": "P1-01-01-p-2801-listen",
+        "kind": "listen",
+        "knowledgeIds": [
+          "word-2801"
+        ],
+        "signature": "word-2801:listen",
+        "outcome": "independent",
+        "turn": 12
+      }
+    ]
+  },
+  {
+    "round": 2,
+    "plan": {
+      "version": 1,
+      "round": 2,
+      "focusIds": [
+        "word-20",
+        "word-3561",
+        "word-2801",
+        "word-4"
+      ],
+      "newIds": [
+        "word-4"
+      ],
+      "sourceLessonId": "P1-01-02",
+      "seed": 1422306624,
+      "budget": 13
+    },
+    "answers": 13,
+    "readyIds": [
+      "word-1",
+      "word-2801",
+      "word-3561"
+    ],
+    "targets": {
+      "word-1": {
+        "introducedAt": 1790091677716,
+        "confidence": 1,
+        "abilities": {
+          "meaning": 0.14400000000000002,
+          "context": 0.792,
+          "listening": 0.096
+        },
+        "lastSeenTurn": 25,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-word-1:meaning-hwuvu",
+          "sig-word-1:translation-wetd2i",
+          "sig-word-1:sentence-mxnci",
+          "sig-word-1:listen-1cyhvus",
+          "sig-word-1:cloze-1ljlnxg",
+          "sig-word-1:word-1o6q0pj"
+        ],
+        "transfer": true,
+        "readyAt": 1790091680033
+      },
+      "word-2801": {
+        "introducedAt": 1790091677716,
+        "confidence": 1,
+        "abilities": {
+          "meaning": 0.048,
+          "context": 0.924,
+          "listening": 0.096
+        },
+        "lastSeenTurn": 24,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-word-2801:meaning-g1jcpw",
+          "sig-authored:P1-01-01-e04-1f6hi3y",
+          "sig-word-2801:cloze-1razbpa",
+          "sig-word-2801:listen-rekfeu",
+          "sig-authored:P1-01-01-r02-1ma8kbd",
+          "sig-word-2801:sentence-1m0ne1g"
+        ],
+        "transfer": true,
+        "readyAt": 1790091679904
+      },
+      "word-3561": {
+        "introducedAt": 1790091677716,
+        "confidence": 1,
+        "abilities": {
+          "meaning": 0.048,
+          "context": 0.792,
+          "spelling": 0.4536
+        },
+        "lastSeenTurn": 22,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-word-3561:meaning-1wowcws",
+          "sig-authored:P1-01-01-e04-1f6hi3y",
+          "sig-word-3561:translation-u0z87o",
+          "sig-word-3561:sentence-1tueajg",
+          "sig-authored:P1-01-01-r02-1ma8kbd",
+          "sig-word-3561:recall-klrewo"
+        ],
+        "transfer": true,
+        "readyAt": 1790091679738
+      },
+      "word-20": {
+        "introducedAt": 1790091677716,
+        "confidence": 0.6096,
+        "abilities": {
+          "meaning": 0.14400000000000002,
+          "listening": 0.1296,
+          "spelling": 0.336
+        },
+        "lastSeenTurn": 23,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-authored:P1-01-01-r01-1lg9r8g",
+          "sig-word-20:listen-1sq9sur",
+          "sig-word-20:meaning-sx7s2f",
+          "sig-word-20:recall-16ihpkl"
+        ],
+        "transfer": true,
+        "readyAt": 0
+      },
+      "word-4": {
+        "introducedAt": 1790091679433,
+        "confidence": 0.24000000000000002,
+        "abilities": {
+          "meaning": 0.24000000000000002
+        },
+        "lastSeenTurn": 21,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-word-4:word-1kj5o9i",
+          "sig-authored:P1-01-02-e01-ajhehg",
+          "sig-word-4:meaning-eluiwp"
+        ],
+        "transfer": false,
+        "readyAt": 0
+      }
+    },
+    "sequence": [
+      {
+        "id": "P1-01-01-p-3561-translation",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-3561"
+        ],
+        "signature": "word-3561:translation",
+        "outcome": "independent",
+        "turn": 13
+      },
+      {
+        "id": "P1-01-02-p-4-word",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-4"
+        ],
+        "signature": "word-4:word",
+        "outcome": "independent",
+        "turn": 14
+      },
+      {
+        "id": "P1-01-01-p-1-listen",
+        "kind": "listen",
+        "knowledgeIds": [
+          "word-1"
+        ],
+        "signature": "word-1:listen",
+        "outcome": "independent",
+        "turn": 15
+      },
+      {
+        "id": "P1-01-01-p-3561-sentence",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-3561"
+        ],
+        "signature": "word-3561:sentence",
+        "outcome": "independent",
+        "turn": 16
+      },
+      {
+        "id": "P1-01-01-r02",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-2801",
+          "word-3561"
+        ],
+        "signature": "authored:P1-01-01-r02",
+        "outcome": "independent",
+        "turn": 17
+      },
+      {
+        "id": "P1-01-02-e01",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-4"
+        ],
+        "signature": "authored:P1-01-02-e01",
+        "outcome": "independent",
+        "turn": 18
+      },
+      {
+        "id": "P1-01-01-p-1-cloze",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-1"
+        ],
+        "signature": "word-1:cloze",
+        "outcome": "independent",
+        "turn": 19
+      },
+      {
+        "id": "P1-01-06-p-20-meaning",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-20"
+        ],
+        "signature": "word-20:meaning",
+        "outcome": "independent",
+        "turn": 20
+      },
+      {
+        "id": "P1-01-02-p-4-meaning",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-4"
+        ],
+        "signature": "word-4:meaning",
+        "outcome": "independent",
+        "turn": 21
+      },
+      {
+        "id": "P1-01-01-p-3561-recall",
+        "kind": "fill",
+        "knowledgeIds": [
+          "word-3561"
+        ],
+        "signature": "word-3561:recall",
+        "outcome": "independent",
+        "turn": 22
+      },
+      {
+        "id": "P1-01-01-p-20-recall",
+        "kind": "fill",
+        "knowledgeIds": [
+          "word-20"
+        ],
+        "signature": "word-20:recall",
+        "outcome": "independent",
+        "turn": 23
+      },
+      {
+        "id": "P1-01-01-p-2801-sentence",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-2801"
+        ],
+        "signature": "word-2801:sentence",
+        "outcome": "independent",
+        "turn": 24
+      },
+      {
+        "id": "P1-01-06-p-1-word",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-1"
+        ],
+        "signature": "word-1:word",
+        "outcome": "independent",
+        "turn": 25
+      }
+    ]
+  },
+  {
+    "round": 3,
+    "plan": {
+      "version": 1,
+      "round": 3,
+      "focusIds": [
+        "word-4",
+        "word-20",
+        "word-5"
+      ],
+      "newIds": [
+        "word-5"
+      ],
+      "sourceLessonId": "P1-01-02",
+      "seed": 1422306624,
+      "budget": 11
+    },
+    "answers": 11,
+    "readyIds": [
+      "word-1",
+      "word-2801",
+      "word-3561",
+      "word-20",
+      "word-4"
+    ],
+    "targets": {
+      "word-1": {
+        "introducedAt": 1790091677716,
+        "confidence": 1,
+        "abilities": {
+          "meaning": 0.14400000000000002,
+          "context": 0.792,
+          "listening": 0.096,
+          "spelling": 0.336
+        },
+        "lastSeenTurn": 28,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-word-1:meaning-hwuvu",
+          "sig-word-1:translation-wetd2i",
+          "sig-word-1:sentence-mxnci",
+          "sig-word-1:listen-1cyhvus",
+          "sig-word-1:cloze-1ljlnxg",
+          "sig-word-1:word-1o6q0pj",
+          "sig-word-1:recall-5xeogu"
+        ],
+        "transfer": true,
+        "readyAt": 1790091680033
+      },
+      "word-2801": {
+        "introducedAt": 1790091677716,
+        "confidence": 1,
+        "abilities": {
+          "meaning": 0.048,
+          "context": 0.924,
+          "listening": 0.096
+        },
+        "lastSeenTurn": 24,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-word-2801:meaning-g1jcpw",
+          "sig-authored:P1-01-01-e04-1f6hi3y",
+          "sig-word-2801:cloze-1razbpa",
+          "sig-word-2801:listen-rekfeu",
+          "sig-authored:P1-01-01-r02-1ma8kbd",
+          "sig-word-2801:sentence-1m0ne1g"
+        ],
+        "transfer": true,
+        "readyAt": 1790091679904
+      },
+      "word-3561": {
+        "introducedAt": 1790091677716,
+        "confidence": 1,
+        "abilities": {
+          "meaning": 0.14400000000000002,
+          "context": 0.792,
+          "spelling": 0.4536
+        },
+        "lastSeenTurn": 32,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-word-3561:meaning-1wowcws",
+          "sig-authored:P1-01-01-e04-1f6hi3y",
+          "sig-word-3561:translation-u0z87o",
+          "sig-word-3561:sentence-1tueajg",
+          "sig-authored:P1-01-01-r02-1ma8kbd",
+          "sig-word-3561:recall-klrewo",
+          "sig-word-3561:word-1vf7yad"
+        ],
+        "transfer": true,
+        "readyAt": 1790091679738
+      },
+      "word-20": {
+        "introducedAt": 1790091677716,
+        "confidence": 1,
+        "abilities": {
+          "meaning": 0.14400000000000002,
+          "listening": 0.1296,
+          "spelling": 0.336,
+          "context": 0.528
+        },
+        "lastSeenTurn": 33,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-authored:P1-01-01-r01-1lg9r8g",
+          "sig-word-20:listen-1sq9sur",
+          "sig-word-20:meaning-sx7s2f",
+          "sig-word-20:recall-16ihpkl",
+          "sig-authored:P1-01-01-e02-1fqgphw",
+          "sig-authored:P1-01-06-e01-j2fyyw"
+        ],
+        "transfer": true,
+        "readyAt": 1790091682071
+      },
+      "word-4": {
+        "introducedAt": 1790091679433,
+        "confidence": 1,
+        "abilities": {
+          "meaning": 0.2736,
+          "context": 0.792
+        },
+        "lastSeenTurn": 36,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-word-4:word-1kj5o9i",
+          "sig-authored:P1-01-02-e01-ajhehg",
+          "sig-word-4:meaning-eluiwp",
+          "sig-word-4:sentence-9rg327",
+          "sig-authored:P1-01-06-e01-j2fyyw",
+          "sig-word-4:cloze-44vow3"
+        ],
+        "transfer": true,
+        "readyAt": 1790091682071
+      },
+      "word-5": {
+        "introducedAt": 1790091681399,
+        "confidence": 0.54,
+        "abilities": {
+          "listening": 0.048,
+          "meaning": 0.096,
+          "context": 0.396
+        },
+        "lastSeenTurn": 35,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-word-5:listen-tqyrnc",
+          "sig-authored:P1-01-02-r01-1xznd2h",
+          "sig-word-5:translation-1xffqra",
+          "sig-word-5:cloze-1n35q6w"
+        ],
+        "transfer": true,
+        "readyAt": 0
+      }
+    },
+    "sequence": [
+      {
+        "id": "P1-01-02-p-4-meaning",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-4"
+        ],
+        "signature": "word-4:meaning",
+        "outcome": "independent",
+        "turn": 26
+      },
+      {
+        "id": "P1-01-02-p-5-listen",
+        "kind": "listen",
+        "knowledgeIds": [
+          "word-5"
+        ],
+        "signature": "word-5:listen",
+        "outcome": "independent",
+        "turn": 27
+      },
+      {
+        "id": "P1-01-01-p-1-recall",
+        "kind": "fill",
+        "knowledgeIds": [
+          "word-1"
+        ],
+        "signature": "word-1:recall",
+        "outcome": "independent",
+        "turn": 28
+      },
+      {
+        "id": "P1-01-02-p-4-sentence",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-4"
+        ],
+        "signature": "word-4:sentence",
+        "outcome": "independent",
+        "turn": 29
+      },
+      {
+        "id": "P1-01-01-e02",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-20"
+        ],
+        "signature": "authored:P1-01-01-e02",
+        "outcome": "independent",
+        "turn": 30
+      },
+      {
+        "id": "P1-01-02-r01",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-5"
+        ],
+        "signature": "authored:P1-01-02-r01",
+        "outcome": "independent",
+        "turn": 31
+      },
+      {
+        "id": "P1-01-01-p-3561-word",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-3561"
+        ],
+        "signature": "word-3561:word",
+        "outcome": "independent",
+        "turn": 32
+      },
+      {
+        "id": "P1-01-06-e01",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-20",
+          "word-4"
+        ],
+        "signature": "authored:P1-01-06-e01",
+        "outcome": "independent",
+        "turn": 33
+      },
+      {
+        "id": "P1-01-02-p-5-translation",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-5"
+        ],
+        "signature": "word-5:translation",
+        "outcome": "independent",
+        "turn": 34
+      },
+      {
+        "id": "P1-01-02-p-5-cloze",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-5"
+        ],
+        "signature": "word-5:cloze",
+        "outcome": "independent",
+        "turn": 35
+      },
+      {
+        "id": "P1-01-02-p-4-cloze",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-4"
+        ],
+        "signature": "word-4:cloze",
+        "outcome": "independent",
+        "turn": 36
+      }
+    ]
+  },
+  {
+    "round": 4,
+    "plan": {
+      "version": 1,
+      "round": 4,
+      "focusIds": [
+        "word-5",
+        "word-2",
+        "word-11",
+        "word-1880"
+      ],
+      "newIds": [
+        "word-2",
+        "word-11",
+        "word-1880"
+      ],
+      "sourceLessonId": "P1-01-03",
+      "seed": 1422306624,
+      "budget": 12
+    },
+    "answers": 12,
+    "readyIds": [
+      "word-1",
+      "word-2801",
+      "word-3561",
+      "word-20",
+      "word-4",
+      "word-5"
+    ],
+    "targets": {
+      "word-1": {
+        "introducedAt": 1790091677716,
+        "confidence": 1,
+        "abilities": {
+          "meaning": 0.14400000000000002,
+          "context": 0.792,
+          "listening": 0.096,
+          "spelling": 0.336
+        },
+        "lastSeenTurn": 28,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-word-1:meaning-hwuvu",
+          "sig-word-1:translation-wetd2i",
+          "sig-word-1:sentence-mxnci",
+          "sig-word-1:listen-1cyhvus",
+          "sig-word-1:cloze-1ljlnxg",
+          "sig-word-1:word-1o6q0pj",
+          "sig-word-1:recall-5xeogu"
+        ],
+        "transfer": true,
+        "readyAt": 1790091680033
+      },
+      "word-2801": {
+        "introducedAt": 1790091677716,
+        "confidence": 1,
+        "abilities": {
+          "meaning": 0.048,
+          "context": 0.924,
+          "listening": 0.096
+        },
+        "lastSeenTurn": 24,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-word-2801:meaning-g1jcpw",
+          "sig-authored:P1-01-01-e04-1f6hi3y",
+          "sig-word-2801:cloze-1razbpa",
+          "sig-word-2801:listen-rekfeu",
+          "sig-authored:P1-01-01-r02-1ma8kbd",
+          "sig-word-2801:sentence-1m0ne1g"
+        ],
+        "transfer": true,
+        "readyAt": 1790091679904
+      },
+      "word-3561": {
+        "introducedAt": 1790091677716,
+        "confidence": 1,
+        "abilities": {
+          "meaning": 0.14400000000000002,
+          "context": 0.792,
+          "spelling": 0.4536
+        },
+        "lastSeenTurn": 32,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-word-3561:meaning-1wowcws",
+          "sig-authored:P1-01-01-e04-1f6hi3y",
+          "sig-word-3561:translation-u0z87o",
+          "sig-word-3561:sentence-1tueajg",
+          "sig-authored:P1-01-01-r02-1ma8kbd",
+          "sig-word-3561:recall-klrewo",
+          "sig-word-3561:word-1vf7yad"
+        ],
+        "transfer": true,
+        "readyAt": 1790091679738
+      },
+      "word-20": {
+        "introducedAt": 1790091677716,
+        "confidence": 1,
+        "abilities": {
+          "meaning": 0.14400000000000002,
+          "listening": 0.1296,
+          "spelling": 0.336,
+          "context": 0.528
+        },
+        "lastSeenTurn": 33,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-authored:P1-01-01-r01-1lg9r8g",
+          "sig-word-20:listen-1sq9sur",
+          "sig-word-20:meaning-sx7s2f",
+          "sig-word-20:recall-16ihpkl",
+          "sig-authored:P1-01-01-e02-1fqgphw",
+          "sig-authored:P1-01-06-e01-j2fyyw"
+        ],
+        "transfer": true,
+        "readyAt": 1790091682071
+      },
+      "word-4": {
+        "introducedAt": 1790091679433,
+        "confidence": 1,
+        "abilities": {
+          "meaning": 0.2736,
+          "context": 1,
+          "spelling": 0.168
+        },
+        "lastSeenTurn": 43,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-word-4:word-1kj5o9i",
+          "sig-authored:P1-01-02-e01-ajhehg",
+          "sig-word-4:meaning-eluiwp",
+          "sig-word-4:sentence-9rg327",
+          "sig-authored:P1-01-06-e01-j2fyyw",
+          "sig-word-4:cloze-44vow3",
+          "sig-authored:P1-01-02-e05-9fizpk",
+          "sig-authored:P1-01-02-e04-9pilej",
+          "sig-authored:P1-01-02-r02-1x5ojzk"
+        ],
+        "transfer": true,
+        "readyAt": 1790091682071
+      },
+      "word-5": {
+        "introducedAt": 1790091681399,
+        "confidence": 1,
+        "abilities": {
+          "listening": 0.048,
+          "meaning": 0.096,
+          "context": 0.924,
+          "spelling": 0.336
+        },
+        "lastSeenTurn": 48,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-word-5:listen-tqyrnc",
+          "sig-authored:P1-01-02-r01-1xznd2h",
+          "sig-word-5:translation-1xffqra",
+          "sig-word-5:cloze-1n35q6w",
+          "sig-authored:P1-01-02-e05-9fizpk",
+          "sig-authored:P1-01-02-r02-1x5ojzk",
+          "sig-word-5:recall-criska"
+        ],
+        "transfer": true,
+        "readyAt": 1790091683371
+      },
+      "word-2": {
+        "introducedAt": 1790091683151,
+        "confidence": 0.24000000000000002,
+        "abilities": {
+          "meaning": 0.14400000000000002,
+          "listening": 0.096
+        },
+        "lastSeenTurn": 46,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-word-2:word-xmnhy4",
+          "sig-word-2:meaning-djhomb",
+          "sig-word-2:listen-u78l7z"
+        ],
+        "transfer": false,
+        "readyAt": 0
+      },
+      "word-11": {
+        "introducedAt": 1790091683151,
+        "confidence": 0.444,
+        "abilities": {
+          "meaning": 0.048,
+          "context": 0.396
+        },
+        "lastSeenTurn": 47,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-word-11:meaning-1n8sp4z",
+          "sig-word-11:cloze-1g1juol",
+          "sig-word-11:translation-1rf7ovz"
+        ],
+        "transfer": true,
+        "readyAt": 0
+      },
+      "word-1880": {
+        "introducedAt": 1790091683151,
+        "confidence": 0.312,
+        "abilities": {
+          "meaning": 0.048,
+          "context": 0.264
+        },
+        "lastSeenTurn": 44,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-word-1880:meaning-1vvst1c",
+          "sig-word-1880:translation-1kvxb6o"
+        ],
+        "transfer": true,
+        "readyAt": 0
+      }
+    },
+    "sequence": [
+      {
+        "id": "P1-01-03-p-2-word",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-2"
+        ],
+        "signature": "word-2:word",
+        "outcome": "independent",
+        "turn": 37
+      },
+      {
+        "id": "P1-01-03-p-1880-meaning",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-1880"
+        ],
+        "signature": "word-1880:meaning",
+        "outcome": "independent",
+        "turn": 38
+      },
+      {
+        "id": "P1-01-02-e05",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-4",
+          "word-5"
+        ],
+        "signature": "authored:P1-01-02-e05",
+        "outcome": "independent",
+        "turn": 39
+      },
+      {
+        "id": "P1-01-03-p-11-meaning",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-11"
+        ],
+        "signature": "word-11:meaning",
+        "outcome": "independent",
+        "turn": 40
+      },
+      {
+        "id": "P1-01-02-e04",
+        "kind": "fill",
+        "knowledgeIds": [
+          "word-4"
+        ],
+        "signature": "authored:P1-01-02-e04",
+        "outcome": "independent",
+        "turn": 41
+      },
+      {
+        "id": "P1-01-03-p-2-meaning",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-2"
+        ],
+        "signature": "word-2:meaning",
+        "outcome": "independent",
+        "turn": 42
+      },
+      {
+        "id": "P1-01-02-r02",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-4",
+          "word-5"
+        ],
+        "signature": "authored:P1-01-02-r02",
+        "outcome": "independent",
+        "turn": 43
+      },
+      {
+        "id": "P1-01-03-p-1880-translation",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-1880"
+        ],
+        "signature": "word-1880:translation",
+        "outcome": "independent",
+        "turn": 44
+      },
+      {
+        "id": "P1-01-03-p-11-cloze",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-11"
+        ],
+        "signature": "word-11:cloze",
+        "outcome": "independent",
+        "turn": 45
+      },
+      {
+        "id": "P1-01-06-p-2-listen",
+        "kind": "listen",
+        "knowledgeIds": [
+          "word-2"
+        ],
+        "signature": "word-2:listen",
+        "outcome": "independent",
+        "turn": 46
+      },
+      {
+        "id": "P1-01-03-p-11-translation",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-11"
+        ],
+        "signature": "word-11:translation",
+        "outcome": "independent",
+        "turn": 47
+      },
+      {
+        "id": "P1-01-02-p-5-recall",
+        "kind": "fill",
+        "knowledgeIds": [
+          "word-5"
+        ],
+        "signature": "word-5:recall",
+        "outcome": "independent",
+        "turn": 48
+      }
+    ]
+  },
+  {
+    "round": 5,
+    "plan": {
+      "version": 1,
+      "round": 5,
+      "focusIds": [
+        "word-2",
+        "word-1880",
+        "word-11",
+        "word-1384"
+      ],
+      "newIds": [
+        "word-1384"
+      ],
+      "sourceLessonId": "P1-01-04",
+      "seed": 1422306624,
+      "budget": 15
+    },
+    "answers": 15,
+    "readyIds": [
+      "word-1",
+      "word-2801",
+      "word-3561",
+      "word-20",
+      "word-4",
+      "word-5",
+      "word-11",
+      "word-1880"
+    ],
+    "targets": {
+      "word-1": {
+        "introducedAt": 1790091677716,
+        "confidence": 1,
+        "abilities": {
+          "meaning": 0.14400000000000002,
+          "context": 0.8844000000000001,
+          "listening": 0.096,
+          "spelling": 0.336
+        },
+        "lastSeenTurn": 57,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-word-1:meaning-hwuvu",
+          "sig-word-1:sentence-mxnci",
+          "sig-word-1:listen-1cyhvus",
+          "sig-word-1:cloze-1ljlnxg",
+          "sig-word-1:word-1o6q0pj",
+          "sig-word-1:recall-5xeogu",
+          "sig-word-1:translation-wetd2i"
+        ],
+        "transfer": true,
+        "readyAt": 1790091680033
+      },
+      "word-2801": {
+        "introducedAt": 1790091677716,
+        "confidence": 1,
+        "abilities": {
+          "meaning": 0.048,
+          "context": 0.924,
+          "listening": 0.096
+        },
+        "lastSeenTurn": 24,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-word-2801:meaning-g1jcpw",
+          "sig-authored:P1-01-01-e04-1f6hi3y",
+          "sig-word-2801:cloze-1razbpa",
+          "sig-word-2801:listen-rekfeu",
+          "sig-authored:P1-01-01-r02-1ma8kbd",
+          "sig-word-2801:sentence-1m0ne1g"
+        ],
+        "transfer": true,
+        "readyAt": 1790091679904
+      },
+      "word-3561": {
+        "introducedAt": 1790091677716,
+        "confidence": 1,
+        "abilities": {
+          "meaning": 0.14400000000000002,
+          "context": 0.792,
+          "spelling": 0.5712
+        },
+        "lastSeenTurn": 53,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-word-3561:meaning-1wowcws",
+          "sig-authored:P1-01-01-e04-1f6hi3y",
+          "sig-word-3561:translation-u0z87o",
+          "sig-word-3561:sentence-1tueajg",
+          "sig-authored:P1-01-01-r02-1ma8kbd",
+          "sig-word-3561:word-1vf7yad",
+          "sig-word-3561:recall-klrewo"
+        ],
+        "transfer": true,
+        "readyAt": 1790091679738
+      },
+      "word-20": {
+        "introducedAt": 1790091677716,
+        "confidence": 1,
+        "abilities": {
+          "meaning": 0.14400000000000002,
+          "listening": 0.1296,
+          "spelling": 0.336,
+          "context": 0.792
+        },
+        "lastSeenTurn": 62,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-authored:P1-01-01-r01-1lg9r8g",
+          "sig-word-20:listen-1sq9sur",
+          "sig-word-20:meaning-sx7s2f",
+          "sig-word-20:recall-16ihpkl",
+          "sig-authored:P1-01-01-e02-1fqgphw",
+          "sig-authored:P1-01-06-e01-j2fyyw",
+          "sig-word-20:sentence-tqeexh"
+        ],
+        "transfer": true,
+        "readyAt": 1790091682071
+      },
+      "word-4": {
+        "introducedAt": 1790091679433,
+        "confidence": 1,
+        "abilities": {
+          "meaning": 0.2736,
+          "context": 1,
+          "spelling": 0.168
+        },
+        "lastSeenTurn": 43,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-word-4:word-1kj5o9i",
+          "sig-authored:P1-01-02-e01-ajhehg",
+          "sig-word-4:meaning-eluiwp",
+          "sig-word-4:sentence-9rg327",
+          "sig-authored:P1-01-06-e01-j2fyyw",
+          "sig-word-4:cloze-44vow3",
+          "sig-authored:P1-01-02-e05-9fizpk",
+          "sig-authored:P1-01-02-e04-9pilej",
+          "sig-authored:P1-01-02-r02-1x5ojzk"
+        ],
+        "transfer": true,
+        "readyAt": 1790091682071
+      },
+      "word-5": {
+        "introducedAt": 1790091681399,
+        "confidence": 1,
+        "abilities": {
+          "listening": 0.048,
+          "meaning": 0.096,
+          "context": 0.924,
+          "spelling": 0.336
+        },
+        "lastSeenTurn": 48,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-word-5:listen-tqyrnc",
+          "sig-authored:P1-01-02-r01-1xznd2h",
+          "sig-word-5:translation-1xffqra",
+          "sig-word-5:cloze-1n35q6w",
+          "sig-authored:P1-01-02-e05-9fizpk",
+          "sig-authored:P1-01-02-r02-1x5ojzk",
+          "sig-word-5:recall-criska"
+        ],
+        "transfer": true,
+        "readyAt": 1790091683371
+      },
+      "word-2": {
+        "introducedAt": 1790091683151,
+        "confidence": 0.9696,
+        "abilities": {
+          "meaning": 0.2736,
+          "listening": 0.096,
+          "spelling": 0.336,
+          "context": 0.264
+        },
+        "lastSeenTurn": 61,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-word-2:word-xmnhy4",
+          "sig-word-2:listen-u78l7z",
+          "sig-authored:P1-01-03-e01-1ad7gsz",
+          "sig-word-2:recall-mz4lx5",
+          "sig-word-2:meaning-djhomb",
+          "sig-word-2:translation-rezhi7"
+        ],
+        "transfer": true,
+        "readyAt": 0
+      },
+      "word-11": {
+        "introducedAt": 1790091683151,
+        "confidence": 1,
+        "abilities": {
+          "meaning": 0.14400000000000002,
+          "context": 0.924
+        },
+        "lastSeenTurn": 60,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-word-11:meaning-1n8sp4z",
+          "sig-word-11:cloze-1g1juol",
+          "sig-word-11:translation-1rf7ovz",
+          "sig-word-11:sentence-xpru4x",
+          "sig-authored:P1-01-03-e02-1an72hy",
+          "sig-word-11:word-145z1bw"
+        ],
+        "transfer": true,
+        "readyAt": 1790091685566
+      },
+      "word-1880": {
+        "introducedAt": 1790091683151,
+        "confidence": 0.8736,
+        "abilities": {
+          "meaning": 0.0816,
+          "context": 0.792
+        },
+        "lastSeenTurn": 59,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-word-1880:translation-1kvxb6o",
+          "sig-word-1880:meaning-1vvst1c",
+          "sig-authored:P1-01-03-e02-1an72hy",
+          "sig-word-1880:cloze-59u6ka"
+        ],
+        "transfer": true,
+        "readyAt": 1790091685860
+      },
+      "word-1384": {
+        "introducedAt": 1790091685005,
+        "confidence": 0.648,
+        "abilities": {
+          "meaning": 0.048,
+          "context": 0.264,
+          "spelling": 0.336
+        },
+        "lastSeenTurn": 63,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-word-1384:word-jk088e",
+          "sig-word-1384:cloze-m1t0sr",
+          "sig-word-1384:recall-19eqkhz"
+        ],
+        "transfer": true,
+        "readyAt": 0
+      }
+    },
+    "sequence": [
+      {
+        "id": "P1-01-03-p-1880-meaning",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-1880"
+        ],
+        "signature": "word-1880:meaning",
+        "outcome": "independent",
+        "turn": 49
+      },
+      {
+        "id": "P1-01-04-p-1384-word",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-1384"
+        ],
+        "signature": "word-1384:word",
+        "outcome": "independent",
+        "turn": 50
+      },
+      {
+        "id": "P1-01-03-e01",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-2"
+        ],
+        "signature": "authored:P1-01-03-e01",
+        "outcome": "independent",
+        "turn": 51
+      },
+      {
+        "id": "P1-01-03-p-11-sentence",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-11"
+        ],
+        "signature": "word-11:sentence",
+        "outcome": "independent",
+        "turn": 52
+      },
+      {
+        "id": "P1-01-01-p-3561-recall",
+        "kind": "fill",
+        "knowledgeIds": [
+          "word-3561"
+        ],
+        "signature": "word-3561:recall",
+        "outcome": "independent",
+        "turn": 53
+      },
+      {
+        "id": "P1-01-03-p-2-recall",
+        "kind": "fill",
+        "knowledgeIds": [
+          "word-2"
+        ],
+        "signature": "word-2:recall",
+        "outcome": "independent",
+        "turn": 54
+      },
+      {
+        "id": "P1-01-03-e02",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-11",
+          "word-1880"
+        ],
+        "signature": "authored:P1-01-03-e02",
+        "outcome": "independent",
+        "turn": 55
+      },
+      {
+        "id": "P1-01-04-p-1384-cloze",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-1384"
+        ],
+        "signature": "word-1384:cloze",
+        "outcome": "independent",
+        "turn": 56
+      },
+      {
+        "id": "P1-01-06-p-1-translation",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-1"
+        ],
+        "signature": "word-1:translation",
+        "outcome": "independent",
+        "turn": 57
+      },
+      {
+        "id": "P1-01-06-p-2-meaning",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-2"
+        ],
+        "signature": "word-2:meaning",
+        "outcome": "independent",
+        "turn": 58
+      },
+      {
+        "id": "P1-01-03-p-1880-cloze",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-1880"
+        ],
+        "signature": "word-1880:cloze",
+        "outcome": "independent",
+        "turn": 59
+      },
+      {
+        "id": "P1-01-03-p-11-word",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-11"
+        ],
+        "signature": "word-11:word",
+        "outcome": "independent",
+        "turn": 60
+      },
+      {
+        "id": "P1-01-06-p-2-translation",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-2"
+        ],
+        "signature": "word-2:translation",
+        "outcome": "independent",
+        "turn": 61
+      },
+      {
+        "id": "P1-01-06-p-20-sentence",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-20"
+        ],
+        "signature": "word-20:sentence",
+        "outcome": "independent",
+        "turn": 62
+      },
+      {
+        "id": "P1-01-04-p-1384-recall",
+        "kind": "fill",
+        "knowledgeIds": [
+          "word-1384"
+        ],
+        "signature": "word-1384:recall",
+        "outcome": "independent",
+        "turn": 63
+      }
+    ]
+  },
+  {
+    "round": 6,
+    "plan": {
+      "version": 1,
+      "round": 6,
+      "focusIds": [
+        "word-1384",
+        "word-2",
+        "word-3",
+        "word-687"
+      ],
+      "newIds": [
+        "word-3",
+        "word-687"
+      ],
+      "sourceLessonId": "P1-01-04",
+      "seed": 1422306624,
+      "budget": 12
+    },
+    "answers": 12,
+    "readyIds": [
+      "word-1",
+      "word-2801",
+      "word-3561",
+      "word-20",
+      "word-4",
+      "word-5",
+      "word-11",
+      "word-1880",
+      "word-1384"
+    ],
+    "targets": {
+      "word-1": {
+        "introducedAt": 1790091677716,
+        "confidence": 1,
+        "abilities": {
+          "meaning": 0.14400000000000002,
+          "context": 0.8844000000000001,
+          "listening": 0.096,
+          "spelling": 0.336
+        },
+        "lastSeenTurn": 57,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-word-1:meaning-hwuvu",
+          "sig-word-1:sentence-mxnci",
+          "sig-word-1:listen-1cyhvus",
+          "sig-word-1:cloze-1ljlnxg",
+          "sig-word-1:word-1o6q0pj",
+          "sig-word-1:recall-5xeogu",
+          "sig-word-1:translation-wetd2i"
+        ],
+        "transfer": true,
+        "readyAt": 1790091680033
+      },
+      "word-2801": {
+        "introducedAt": 1790091677716,
+        "confidence": 1,
+        "abilities": {
+          "meaning": 0.048,
+          "context": 0.924,
+          "listening": 0.096
+        },
+        "lastSeenTurn": 24,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-word-2801:meaning-g1jcpw",
+          "sig-authored:P1-01-01-e04-1f6hi3y",
+          "sig-word-2801:cloze-1razbpa",
+          "sig-word-2801:listen-rekfeu",
+          "sig-authored:P1-01-01-r02-1ma8kbd",
+          "sig-word-2801:sentence-1m0ne1g"
+        ],
+        "transfer": true,
+        "readyAt": 1790091679904
+      },
+      "word-3561": {
+        "introducedAt": 1790091677716,
+        "confidence": 1,
+        "abilities": {
+          "meaning": 0.14400000000000002,
+          "context": 0.792,
+          "spelling": 0.5712
+        },
+        "lastSeenTurn": 53,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-word-3561:meaning-1wowcws",
+          "sig-authored:P1-01-01-e04-1f6hi3y",
+          "sig-word-3561:translation-u0z87o",
+          "sig-word-3561:sentence-1tueajg",
+          "sig-authored:P1-01-01-r02-1ma8kbd",
+          "sig-word-3561:word-1vf7yad",
+          "sig-word-3561:recall-klrewo"
+        ],
+        "transfer": true,
+        "readyAt": 1790091679738
+      },
+      "word-20": {
+        "introducedAt": 1790091677716,
+        "confidence": 1,
+        "abilities": {
+          "meaning": 0.14400000000000002,
+          "listening": 0.1296,
+          "spelling": 0.336,
+          "context": 0.792
+        },
+        "lastSeenTurn": 62,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-authored:P1-01-01-r01-1lg9r8g",
+          "sig-word-20:listen-1sq9sur",
+          "sig-word-20:meaning-sx7s2f",
+          "sig-word-20:recall-16ihpkl",
+          "sig-authored:P1-01-01-e02-1fqgphw",
+          "sig-authored:P1-01-06-e01-j2fyyw",
+          "sig-word-20:sentence-tqeexh"
+        ],
+        "transfer": true,
+        "readyAt": 1790091682071
+      },
+      "word-4": {
+        "introducedAt": 1790091679433,
+        "confidence": 1,
+        "abilities": {
+          "meaning": 0.2736,
+          "context": 1,
+          "spelling": 0.168
+        },
+        "lastSeenTurn": 43,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-word-4:word-1kj5o9i",
+          "sig-authored:P1-01-02-e01-ajhehg",
+          "sig-word-4:meaning-eluiwp",
+          "sig-word-4:sentence-9rg327",
+          "sig-authored:P1-01-06-e01-j2fyyw",
+          "sig-word-4:cloze-44vow3",
+          "sig-authored:P1-01-02-e05-9fizpk",
+          "sig-authored:P1-01-02-e04-9pilej",
+          "sig-authored:P1-01-02-r02-1x5ojzk"
+        ],
+        "transfer": true,
+        "readyAt": 1790091682071
+      },
+      "word-5": {
+        "introducedAt": 1790091681399,
+        "confidence": 1,
+        "abilities": {
+          "listening": 0.0816,
+          "meaning": 0.192,
+          "context": 0.924,
+          "spelling": 0.336
+        },
+        "lastSeenTurn": 70,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-authored:P1-01-02-r01-1xznd2h",
+          "sig-word-5:translation-1xffqra",
+          "sig-word-5:cloze-1n35q6w",
+          "sig-authored:P1-01-02-e05-9fizpk",
+          "sig-authored:P1-01-02-r02-1x5ojzk",
+          "sig-word-5:recall-criska",
+          "sig-word-5:meaning-br6xry",
+          "sig-word-5:listen-tqyrnc"
+        ],
+        "transfer": true,
+        "readyAt": 1790091683371
+      },
+      "word-2": {
+        "introducedAt": 1790091683151,
+        "confidence": 1,
+        "abilities": {
+          "meaning": 0.2736,
+          "listening": 0.192,
+          "spelling": 0.336,
+          "context": 0.3564
+        },
+        "lastSeenTurn": 75,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-word-2:word-xmnhy4",
+          "sig-word-2:listen-u78l7z",
+          "sig-authored:P1-01-03-e01-1ad7gsz",
+          "sig-word-2:recall-mz4lx5",
+          "sig-word-2:meaning-djhomb",
+          "sig-authored:P1-01-03-e03-1ax6o6x",
+          "sig-word-2:translation-rezhi7"
+        ],
+        "transfer": true,
+        "readyAt": 0
+      },
+      "word-11": {
+        "introducedAt": 1790091683151,
+        "confidence": 1,
+        "abilities": {
+          "meaning": 0.14400000000000002,
+          "context": 0.924
+        },
+        "lastSeenTurn": 60,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-word-11:meaning-1n8sp4z",
+          "sig-word-11:cloze-1g1juol",
+          "sig-word-11:translation-1rf7ovz",
+          "sig-word-11:sentence-xpru4x",
+          "sig-authored:P1-01-03-e02-1an72hy",
+          "sig-word-11:word-145z1bw"
+        ],
+        "transfer": true,
+        "readyAt": 1790091685566
+      },
+      "word-1880": {
+        "introducedAt": 1790091683151,
+        "confidence": 0.8736,
+        "abilities": {
+          "meaning": 0.0816,
+          "context": 0.792
+        },
+        "lastSeenTurn": 59,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-word-1880:translation-1kvxb6o",
+          "sig-word-1880:meaning-1vvst1c",
+          "sig-authored:P1-01-03-e02-1an72hy",
+          "sig-word-1880:cloze-59u6ka"
+        ],
+        "transfer": true,
+        "readyAt": 1790091685860
+      },
+      "word-1384": {
+        "introducedAt": 1790091685005,
+        "confidence": 1,
+        "abilities": {
+          "meaning": 0.048,
+          "context": 0.792,
+          "spelling": 0.336
+        },
+        "lastSeenTurn": 74,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-word-1384:word-jk088e",
+          "sig-word-1384:cloze-m1t0sr",
+          "sig-word-1384:recall-19eqkhz",
+          "sig-word-1384:sentence-30wsrr",
+          "sig-word-1384:translation-1xzktit"
+        ],
+        "transfer": true,
+        "readyAt": 1790091687405
+      },
+      "word-3": {
+        "introducedAt": 1790091686933,
+        "confidence": 0.40800000000000003,
+        "abilities": {
+          "meaning": 0.14400000000000002,
+          "context": 0.264
+        },
+        "lastSeenTurn": 72,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-word-3:meaning-1q6us14",
+          "sig-word-3:word-18eg6sp",
+          "sig-authored:P1-01-06-e04-kgdzfr"
+        ],
+        "transfer": true,
+        "readyAt": 0
+      },
+      "word-687": {
+        "introducedAt": 1790091686933,
+        "confidence": 0.612,
+        "abilities": {
+          "meaning": 0.048,
+          "context": 0.396,
+          "spelling": 0.168
+        },
+        "lastSeenTurn": 73,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-word-687:word-mjdalb",
+          "sig-word-687:cloze-y9zk1o",
+          "sig-authored:P1-01-06-e04-kgdzfr",
+          "sig-word-687:recall-12nk3qu"
+        ],
+        "transfer": true,
+        "readyAt": 0
+      }
+    },
+    "sequence": [
+      {
+        "id": "P1-01-04-p-3-meaning",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-3"
+        ],
+        "signature": "word-3:meaning",
+        "outcome": "independent",
+        "turn": 64
+      },
+      {
+        "id": "P1-01-04-p-687-word",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-687"
+        ],
+        "signature": "word-687:word",
+        "outcome": "independent",
+        "turn": 65
+      },
+      {
+        "id": "P1-01-02-p-5-meaning",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-5"
+        ],
+        "signature": "word-5:meaning",
+        "outcome": "independent",
+        "turn": 66
+      },
+      {
+        "id": "P1-01-04-p-1384-sentence",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-1384"
+        ],
+        "signature": "word-1384:sentence",
+        "outcome": "independent",
+        "turn": 67
+      },
+      {
+        "id": "P1-01-03-e03",
+        "kind": "listen",
+        "knowledgeIds": [
+          "word-2"
+        ],
+        "signature": "authored:P1-01-03-e03",
+        "outcome": "independent",
+        "turn": 68
+      },
+      {
+        "id": "P1-01-04-p-3-word",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-3"
+        ],
+        "signature": "word-3:word",
+        "outcome": "independent",
+        "turn": 69
+      },
+      {
+        "id": "P1-01-02-p-5-listen",
+        "kind": "listen",
+        "knowledgeIds": [
+          "word-5"
+        ],
+        "signature": "word-5:listen",
+        "outcome": "independent",
+        "turn": 70
+      },
+      {
+        "id": "P1-01-04-p-687-cloze",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-687"
+        ],
+        "signature": "word-687:cloze",
+        "outcome": "independent",
+        "turn": 71
+      },
+      {
+        "id": "P1-01-06-e04",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-3",
+          "word-687"
+        ],
+        "signature": "authored:P1-01-06-e04",
+        "outcome": "independent",
+        "turn": 72
+      },
+      {
+        "id": "P1-01-04-p-687-recall",
+        "kind": "fill",
+        "knowledgeIds": [
+          "word-687"
+        ],
+        "signature": "word-687:recall",
+        "outcome": "independent",
+        "turn": 73
+      },
+      {
+        "id": "P1-01-04-p-1384-translation",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-1384"
+        ],
+        "signature": "word-1384:translation",
+        "outcome": "independent",
+        "turn": 74
+      },
+      {
+        "id": "P1-01-03-p-2-translation",
+        "kind": "choice",
+        "knowledgeIds": [
+          "word-2"
+        ],
+        "signature": "word-2:translation",
+        "outcome": "independent",
+        "turn": 75
+      }
+    ]
+  }
+]

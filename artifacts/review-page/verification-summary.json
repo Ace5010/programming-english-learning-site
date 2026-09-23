@@ -1,0 +1,373 @@
+{
+  "verifiedAt": "2026-09-23T00:04:23.8619137+08:00",
+  "reports": [
+    "browser-results.json",
+    "browser-results-shared-row.json",
+    "browser-results-production-admitted-English-single-word-last-weak-shared-row-scene-practice.json"
+  ],
+  "developmentScenarios": 15,
+  "productionScenarios": 6,
+  "productionBundle": "index-5A1VgT6D.js",
+  "productionStyles": "index-Bvvebz40.css",
+  "widths": [
+    1440,
+    900,
+    768,
+    390
+  ],
+  "themes": [
+    "minimal",
+    "sketch",
+    "print",
+    "graffiti"
+  ],
+  "isolatedBrowserData": true,
+  "failures": [],
+  "browserErrors": [],
+  "scenarios": [
+    {
+      "name": "admitted and historical mastered words are immediately visible; unready words excluded",
+      "durationMs": 1014,
+      "evidence": {
+        "listedIds": [
+          4,
+          21,
+          22,
+          1,
+          5,
+          11,
+          20,
+          1384,
+          1880,
+          2801,
+          3561
+        ],
+        "excludedIds": [
+          2,
+          3,
+          687
+        ]
+      }
+    },
+    {
+      "name": "English, Chinese and example search combine with all four status filters",
+      "durationMs": 1020,
+      "evidence": {
+        "all": [
+          1,
+          4,
+          5,
+          11,
+          20,
+          1384,
+          1880,
+          2801,
+          3561,
+          21,
+          22
+        ],
+        "due": [
+          1,
+          4,
+          21,
+          22
+        ],
+        "weak": [
+          4
+        ],
+        "scheduled": [
+          5,
+          11,
+          20,
+          1384,
+          1880,
+          2801,
+          3561
+        ]
+      }
+    },
+    {
+      "name": "single word practice preserves selected answer across themes and changes only that word",
+      "durationMs": 1397,
+      "evidence": {
+        "wordId": 1,
+        "answers": 2
+      }
+    },
+    {
+      "name": "filtered practice uses only matching words; batch practice remains capped at five",
+      "durationMs": 1356
+    },
+    {
+      "name": "click rechecks current storage and will not open a stale unready target",
+      "durationMs": 985
+    },
+    {
+      "name": "favorites persist and word and example buttons play actual MP3 audio",
+      "durationMs": 1619,
+      "evidence": [
+        {
+          "type": "playing",
+          "src": "http://localhost:5186/audio/aria/word-1.mp3",
+          "duration": 1.992
+        },
+        {
+          "type": "playing",
+          "src": "http://localhost:5186/audio/aria/example-1.mp3?v=Open%20this%20repository.",
+          "duration": 2.424
+        }
+      ]
+    },
+    {
+      "name": "scene practice opens and its draft survives the word list, overlay, themes and sections",
+      "durationMs": 2054,
+      "evidence": {
+        "taskId": "P1-01-01-e01",
+        "sourceLessonId": "P1-01-01"
+      }
+    },
+    {
+      "name": "empty admission pool has a usable course entry without fake mastered words",
+      "durationMs": 908
+    },
+    {
+      "name": "last weak word leaves the filtered list and closing practice focuses the search box",
+      "durationMs": 1116,
+      "evidence": {
+        "wordId": 4,
+        "answered": 2,
+        "focusedLabel": "搜索已学词汇"
+      }
+    },
+    {
+      "name": "long lists load in pages and remain reachable by scrolling",
+      "durationMs": 1031,
+      "evidence": {
+        "pages": 3,
+        "loadedWords": 64
+      }
+    },
+    {
+      "name": "four styles at 1440px show words in the first viewport with no horizontal overflow",
+      "durationMs": 1613,
+      "evidence": [
+        {
+          "theme": "minimal",
+          "firstWordTop": 483.875,
+          "firstWordBottom": 545.625,
+          "viewportHeight": 1000
+        },
+        {
+          "theme": "sketch",
+          "firstWordTop": 474.625,
+          "firstWordBottom": 543.015625,
+          "viewportHeight": 1000
+        },
+        {
+          "theme": "print",
+          "firstWordTop": 498.875,
+          "firstWordBottom": 563.125,
+          "viewportHeight": 1000
+        },
+        {
+          "theme": "graffiti",
+          "firstWordTop": 518.234375,
+          "firstWordBottom": 586.984375,
+          "viewportHeight": 1000
+        }
+      ]
+    },
+    {
+      "name": "four styles at 390px show words in the first viewport with no horizontal overflow",
+      "durationMs": 1400,
+      "evidence": [
+        {
+          "theme": "minimal",
+          "firstWordTop": 527.125,
+          "firstWordBottom": 587.625,
+          "viewportHeight": 844
+        },
+        {
+          "theme": "sketch",
+          "firstWordTop": 530.875,
+          "firstWordBottom": 597.0625,
+          "viewportHeight": 844
+        },
+        {
+          "theme": "print",
+          "firstWordTop": 554.125,
+          "firstWordBottom": 614.625,
+          "viewportHeight": 844
+        },
+        {
+          "theme": "graffiti",
+          "firstWordTop": 623.484375,
+          "firstWordBottom": 689.734375,
+          "viewportHeight": 844
+        }
+      ]
+    },
+    {
+      "name": "four styles at 768px show words in the first viewport with no horizontal overflow",
+      "durationMs": 1491,
+      "evidence": [
+        {
+          "theme": "minimal",
+          "firstWordTop": 544.078125,
+          "firstWordBottom": 604.578125,
+          "viewportHeight": 1000
+        },
+        {
+          "theme": "sketch",
+          "firstWordTop": 523.828125,
+          "firstWordBottom": 590.015625,
+          "viewportHeight": 1000
+        },
+        {
+          "theme": "print",
+          "firstWordTop": 549.078125,
+          "firstWordBottom": 609.578125,
+          "viewportHeight": 1000
+        },
+        {
+          "theme": "graffiti",
+          "firstWordTop": 568.4375,
+          "firstWordBottom": 634.6875,
+          "viewportHeight": 1000
+        }
+      ]
+    },
+    {
+      "name": "four styles at 900px show words in the first viewport with no horizontal overflow",
+      "durationMs": 1484,
+      "evidence": [
+        {
+          "theme": "minimal",
+          "firstWordTop": 544.078125,
+          "firstWordBottom": 604.578125,
+          "viewportHeight": 1000
+        },
+        {
+          "theme": "sketch",
+          "firstWordTop": 523.828125,
+          "firstWordBottom": 590.015625,
+          "viewportHeight": 1000
+        },
+        {
+          "theme": "print",
+          "firstWordTop": 549.078125,
+          "firstWordBottom": 609.578125,
+          "viewportHeight": 1000
+        },
+        {
+          "theme": "graffiti",
+          "firstWordTop": 568.4375,
+          "firstWordBottom": 634.6875,
+          "viewportHeight": 1000
+        }
+      ]
+    },
+    {
+      "name": "shared row preserves vocabulary library count, search, favorites and actual playback",
+      "durationMs": 1778,
+      "evidence": {
+        "vocabularyCount": 3620,
+        "checkedWord": 3561
+      }
+    },
+    {
+      "name": "admitted and historical mastered words are immediately visible; unready words excluded",
+      "durationMs": 944,
+      "evidence": {
+        "listedIds": [
+          4,
+          21,
+          22,
+          1,
+          5,
+          11,
+          20,
+          1384,
+          1880,
+          2801,
+          3561
+        ],
+        "excludedIds": [
+          2,
+          3,
+          687
+        ]
+      }
+    },
+    {
+      "name": "English, Chinese and example search combine with all four status filters",
+      "durationMs": 941,
+      "evidence": {
+        "all": [
+          1,
+          4,
+          5,
+          11,
+          20,
+          1384,
+          1880,
+          2801,
+          3561,
+          21,
+          22
+        ],
+        "due": [
+          1,
+          4,
+          21,
+          22
+        ],
+        "weak": [
+          4
+        ],
+        "scheduled": [
+          5,
+          11,
+          20,
+          1384,
+          1880,
+          2801,
+          3561
+        ]
+      }
+    },
+    {
+      "name": "single word practice preserves selected answer across themes and changes only that word",
+      "durationMs": 1196,
+      "evidence": {
+        "wordId": 1,
+        "answers": 2
+      }
+    },
+    {
+      "name": "scene practice opens and its draft survives the word list, overlay, themes and sections",
+      "durationMs": 1613,
+      "evidence": {
+        "taskId": "P1-01-01-e01",
+        "sourceLessonId": "P1-01-01"
+      }
+    },
+    {
+      "name": "last weak word leaves the filtered list and closing practice focuses the search box",
+      "durationMs": 967,
+      "evidence": {
+        "wordId": 4,
+        "answered": 2,
+        "focusedLabel": "搜索已学词汇"
+      }
+    },
+    {
+      "name": "shared row preserves vocabulary library count, search, favorites and actual playback",
+      "durationMs": 980,
+      "evidence": {
+        "vocabularyCount": 3620,
+        "checkedWord": 3561
+      }
+    }
+  ]
+}

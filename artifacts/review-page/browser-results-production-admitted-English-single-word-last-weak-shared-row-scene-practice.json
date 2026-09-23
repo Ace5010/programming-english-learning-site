@@ -1,0 +1,128 @@
+{
+  "baseURL": "http://localhost:5186/dist/",
+  "production": true,
+  "loadedApplicationScripts": [
+    "http://localhost:5186/dist/assets/index-5A1VgT6D.js"
+  ],
+  "testedAt": "2026-09-22T16:03:25.311Z",
+  "scenarios": [
+    {
+      "name": "admitted and historical mastered words are immediately visible; unready words excluded",
+      "durationMs": 944,
+      "evidence": {
+        "listedIds": [
+          4,
+          21,
+          22,
+          1,
+          5,
+          11,
+          20,
+          1384,
+          1880,
+          2801,
+          3561
+        ],
+        "excludedIds": [
+          2,
+          3,
+          687
+        ]
+      }
+    },
+    {
+      "name": "English, Chinese and example search combine with all four status filters",
+      "durationMs": 941,
+      "evidence": {
+        "all": [
+          1,
+          4,
+          5,
+          11,
+          20,
+          1384,
+          1880,
+          2801,
+          3561,
+          21,
+          22
+        ],
+        "due": [
+          1,
+          4,
+          21,
+          22
+        ],
+        "weak": [
+          4
+        ],
+        "scheduled": [
+          5,
+          11,
+          20,
+          1384,
+          1880,
+          2801,
+          3561
+        ]
+      }
+    },
+    {
+      "name": "single word practice preserves selected answer across themes and changes only that word",
+      "durationMs": 1196,
+      "evidence": {
+        "wordId": 1,
+        "answers": 2
+      }
+    },
+    {
+      "name": "scene practice opens and its draft survives the word list, overlay, themes and sections",
+      "durationMs": 1613,
+      "evidence": {
+        "taskId": "P1-01-01-e01",
+        "sourceLessonId": "P1-01-01"
+      }
+    },
+    {
+      "name": "last weak word leaves the filtered list and closing practice focuses the search box",
+      "durationMs": 967,
+      "evidence": {
+        "wordId": 4,
+        "answered": 2,
+        "focusedLabel": "搜索已学词汇"
+      }
+    },
+    {
+      "name": "shared row preserves vocabulary library count, search, favorites and actual playback",
+      "durationMs": 980,
+      "evidence": {
+        "vocabularyCount": 3620,
+        "checkedWord": 3561
+      }
+    }
+  ],
+  "failures": [],
+  "browserErrors": [],
+  "fixture": {
+    "admitted": [
+      1,
+      4,
+      5,
+      11,
+      20,
+      1384,
+      1880,
+      2801,
+      3561
+    ],
+    "stillLearning": [
+      2,
+      3,
+      687
+    ],
+    "legacyIds": [
+      21,
+      22
+    ]
+  }
+}
