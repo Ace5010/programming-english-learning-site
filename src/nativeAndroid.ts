@@ -1,3 +1,5 @@
+import type { NativeAudioStart } from './audioPlayback.ts';
+
 /** Narrow native bridge, injected only into the APK's bundled HTTPS origin. */
 type NativeMessage = { id: string; event: string; text?: string; code?: string };
 type Bridge = { postMessage: (message: string) => void; onmessage: ((event: { data: string }) => void) | null };
@@ -22,6 +24,38 @@ function bridge(): Bridge | undefined {
 }
 
 export const isAndroidApp = () => !!bridge();
+
+let audioBridge: Bridge | undefined;
+const audioListeners = new Map<string, (message: NativeMessage) => void>();
+export const hasNativeAudio = () => typeof window !== 'undefined'
+  && window.location.origin === 'https://appassets.androidplatform.net'
+  && typeof (window as unknown as { CodeWordsAudio?: Bridge }).CodeWordsAudio?.postMessage === 'function';
+
+export const startNativeAudio: NativeAudioStart = (url, rate, notify) => {
+  if (!hasNativeAudio()) return;
+  const parsed = new URL(url);
+  const path = parsed.pathname.replace(/^\/assets\/web\//, '');
+  if (parsed.origin !== window.location.origin || !/^audio\/(?:daily\/)?(?:aria|guy)\/[a-z0-9-]+\.mp3$/.test(path)) return;
+  const native = (window as unknown as { CodeWordsAudio: Bridge }).CodeWordsAudio;
+  if (native !== audioBridge) {
+    audioBridge = native;
+    native.onmessage = event => {
+      try { const message: NativeMessage = JSON.parse(event.data); audioListeners.get(message.id)?.(message); } catch { /* Ignore malformed replies. */ }
+    };
+  }
+  const id = `audio-${++sequence}`;
+  const send = (action: string, values = {}) => native.postMessage(JSON.stringify({ action, id, ...values }));
+  audioListeners.set(id, message => {
+    if (!['playing', 'ended', 'stopped', 'error'].includes(message.event)) return;
+    if (message.event !== 'playing') audioListeners.delete(id);
+    notify(message.event as 'playing' | 'ended' | 'stopped' | 'error', message.code);
+  });
+  send('play', { path, rate });
+  return {
+    stop: () => { audioListeners.delete(id); send('stop'); },
+    setRate: next => send('rate', { rate: next }),
+  };
+};
 
 export function downloadRecord(filename: string, content: string) {
   const native = bridge();

@@ -1,0 +1,73 @@
+--------- beginning of main
+09-23 13:05:48.201  6627  6627 I CodeWordsAudio: play audio-1 audio/aria/word-1.mp3 rate=1.0
+09-23 13:05:48.211  6627  6627 I CodeWordsAudio: playing audio-1 elapsed_ms=11 position_ms=0 rate=1.0
+09-23 13:05:50.392  6627  6627 I CodeWordsAudio: ended audio-1 elapsed_ms=2191 position_ms=2014 rate=1.0
+09-23 13:06:26.075  6627  6627 I CodeWordsAudio: play audio-2 audio/aria/word-3561.mp3 rate=1.0
+09-23 13:06:26.080  6627  6627 I CodeWordsAudio: playing audio-2 elapsed_ms=5 position_ms=0 rate=1.0
+09-23 13:06:28.294  6627  6627 I CodeWordsAudio: ended audio-2 elapsed_ms=2219 position_ms=1894 rate=1.0
+09-23 13:06:48.169  6627  6627 I CodeWordsAudio: play audio-3 audio/aria/word-3561.mp3 rate=0.72
+09-23 13:06:48.175  6627  6627 I CodeWordsAudio: playing audio-3 elapsed_ms=6 position_ms=0 rate=0.72
+09-23 13:06:50.779  6627  6627 I CodeWordsAudio: ended audio-3 elapsed_ms=2610 position_ms=1768 rate=0.72
+09-23 13:06:59.692  6627  6627 I CodeWordsAudio: play audio-4 audio/aria/word-20.mp3 rate=1.0
+09-23 13:06:59.697  6627  6627 I CodeWordsAudio: playing audio-4 elapsed_ms=5 position_ms=0 rate=1.0
+09-23 13:07:01.500  6627  6627 I CodeWordsAudio: ended audio-4 elapsed_ms=1808 position_ms=1630 rate=1.0
+09-23 13:07:10.200  6627  6627 I CodeWordsAudio: play audio-5 audio/aria/word-20.mp3 rate=0.72
+09-23 13:07:10.206  6627  6627 I CodeWordsAudio: playing audio-5 elapsed_ms=6 position_ms=0 rate=0.72
+09-23 13:07:12.426  6627  6627 I CodeWordsAudio: ended audio-5 elapsed_ms=2226 position_ms=1512 rate=0.72
+09-23 13:07:30.049  6627  6627 I CodeWordsAudio: play audio-6 audio/aria/example-20.mp3 rate=1.0
+09-23 13:07:30.056  6627  6627 I CodeWordsAudio: playing audio-6 elapsed_ms=7 position_ms=0 rate=1.0
+09-23 13:07:32.780  6627  6627 I CodeWordsAudio: ended audio-6 elapsed_ms=2731 position_ms=2398 rate=1.0
+09-23 13:07:44.509  6627  6627 I CodeWordsAudio: play audio-7 audio/aria/example-20.mp3 rate=0.72
+09-23 13:07:44.514  6627  6627 I CodeWordsAudio: playing audio-7 elapsed_ms=5 position_ms=0 rate=0.72
+09-23 13:07:48.039  6627  6627 I CodeWordsAudio: ended audio-7 elapsed_ms=3529 position_ms=2308 rate=0.72
+09-23 13:08:52.094  6627  6627 I CodeWordsAudio: play audio-8 audio/aria/word-1.mp3 rate=0.72
+09-23 13:08:52.099  6627  6627 I CodeWordsAudio: playing audio-8 elapsed_ms=5 position_ms=0 rate=0.72
+09-23 13:08:54.986  6627  6627 I CodeWordsAudio: ended audio-8 elapsed_ms=2892 position_ms=1909 rate=0.72
+09-23 13:09:04.466  6627  6627 I CodeWordsAudio: play audio-9 audio/aria/word-2801.mp3 rate=1.0
+09-23 13:09:04.472  6627  6627 I CodeWordsAudio: playing audio-9 elapsed_ms=6 position_ms=0 rate=1.0
+09-23 13:09:06.593  6627  6627 I CodeWordsAudio: ended audio-9 elapsed_ms=2127 position_ms=1702 rate=1.0
+09-23 13:09:15.106  6627  6627 I CodeWordsAudio: play audio-10 audio/aria/word-2801.mp3 rate=0.72
+09-23 13:09:15.111  6627  6627 I CodeWordsAudio: playing audio-10 elapsed_ms=5 position_ms=0 rate=0.72
+09-23 13:09:17.304  6627  6627 I CodeWordsAudio: ended audio-10 elapsed_ms=2198 position_ms=1590 rate=0.72
+09-23 13:10:44.317  6627  6627 I CodeWordsAudio: play audio-11 audio/guy/word-1.mp3 rate=1.0
+09-23 13:10:44.324  6627  6627 I CodeWordsAudio: playing audio-11 elapsed_ms=7 position_ms=0 rate=1.0
+09-23 13:10:46.949  6627  6627 I CodeWordsAudio: ended audio-11 elapsed_ms=2632 position_ms=2062 rate=1.0
+09-23 13:11:06.090  6627  6627 I CodeWordsAudio: play audio-12 audio/guy/word-1.mp3 rate=0.72
+09-23 13:11:06.095  6627  6627 I CodeWordsAudio: playing audio-12 elapsed_ms=5 position_ms=0 rate=0.72
+09-23 13:11:09.024  6627  6627 I CodeWordsAudio: ended audio-12 elapsed_ms=2934 position_ms=1946 rate=0.72
+09-23 13:11:20.479  6627  6627 I CodeWordsAudio: play audio-13 audio/guy/word-2801.mp3 rate=1.0
+09-23 13:11:20.484  6627  6627 I CodeWordsAudio: playing audio-13 elapsed_ms=5 position_ms=0 rate=1.0
+09-23 13:11:22.598  6627  6627 I CodeWordsAudio: ended audio-13 elapsed_ms=2119 position_ms=1702 rate=1.0
+09-23 13:11:35.653  6627  6627 I CodeWordsAudio: play audio-14 audio/guy/word-2801.mp3 rate=0.72
+09-23 13:11:35.657  6627  6627 I CodeWordsAudio: playing audio-14 elapsed_ms=4 position_ms=0 rate=0.72
+09-23 13:11:38.531  6627  6627 I CodeWordsAudio: ended audio-14 elapsed_ms=2878 position_ms=1600 rate=0.72
+09-23 13:11:59.775  6627  6627 I CodeWordsAudio: play audio-15 audio/guy/word-3561.mp3 rate=1.0
+09-23 13:11:59.780  6627  6627 I CodeWordsAudio: playing audio-15 elapsed_ms=5 position_ms=0 rate=1.0
+09-23 13:12:02.263  6627  6627 I CodeWordsAudio: ended audio-15 elapsed_ms=2488 position_ms=1894 rate=1.0
+09-23 13:12:09.359  6627  6627 I CodeWordsAudio: play audio-16 audio/guy/word-3561.mp3 rate=0.72
+09-23 13:12:09.364  6627  6627 I CodeWordsAudio: playing audio-16 elapsed_ms=5 position_ms=0 rate=0.72
+09-23 13:12:11.838  6627  6627 I CodeWordsAudio: ended audio-16 elapsed_ms=2479 position_ms=1805 rate=0.72
+09-23 13:12:22.474  6627  6627 I CodeWordsAudio: play audio-17 audio/guy/word-20.mp3 rate=1.0
+09-23 13:12:22.478  6627  6627 I CodeWordsAudio: playing audio-17 elapsed_ms=4 position_ms=0 rate=1.0
+09-23 13:12:24.538  6627  6627 I CodeWordsAudio: ended audio-17 elapsed_ms=2064 position_ms=1654 rate=1.0
+09-23 13:12:36.919  6627  6627 I CodeWordsAudio: play audio-18 audio/guy/word-20.mp3 rate=0.72
+09-23 13:12:36.924  6627  6627 I CodeWordsAudio: playing audio-18 elapsed_ms=5 position_ms=0 rate=0.72
+09-23 13:12:39.493  6627  6627 I CodeWordsAudio: ended audio-18 elapsed_ms=2574 position_ms=1537 rate=0.72
+09-23 13:13:02.790  6627  6627 I CodeWordsAudio: play audio-19 audio/guy/example-20.mp3 rate=1.0
+09-23 13:13:02.796  6627  6627 I CodeWordsAudio: playing audio-19 elapsed_ms=6 position_ms=0 rate=1.0
+09-23 13:13:05.814  6627  6627 I CodeWordsAudio: ended audio-19 elapsed_ms=3024 position_ms=2446 rate=1.0
+09-23 13:13:56.309  6627  6627 I CodeWordsAudio: play audio-20 audio/guy/example-20.mp3 rate=0.72
+09-23 13:13:56.315  6627  6627 I CodeWordsAudio: playing audio-20 elapsed_ms=6 position_ms=0 rate=0.72
+09-23 13:14:00.037  6627  6627 I CodeWordsAudio: ended audio-20 elapsed_ms=3728 position_ms=2316 rate=0.72
+09-23 13:14:20.703  6627  6627 I CodeWordsAudio: play audio-21 audio/guy/example-4.mp3 rate=0.72
+09-23 13:14:20.708  6627  6627 I CodeWordsAudio: playing audio-21 elapsed_ms=5 position_ms=0 rate=0.72
+09-23 13:14:23.635  6627  6627 I CodeWordsAudio: ended audio-21 elapsed_ms=2932 position_ms=2019 rate=0.72
+09-23 13:15:36.185  6627  6627 I CodeWordsAudio: play audio-22 audio/guy/voice-test.mp3 rate=0.72
+09-23 13:15:36.190  6627  6627 I CodeWordsAudio: playing audio-22 elapsed_ms=4 position_ms=0 rate=0.72
+09-23 13:15:45.646  6627  6627 I CodeWordsAudio: ended audio-22 elapsed_ms=9461 position_ms=6720 rate=0.72
+09-23 13:17:25.678  6627  6627 I CodeWordsAudio: play audio-23 audio/daily/guy/hello.mp3 rate=1.0
+09-23 13:17:25.684  6627  6627 I CodeWordsAudio: playing audio-23 elapsed_ms=6 position_ms=0 rate=1.0
+09-23 13:17:27.431  6627  6627 I CodeWordsAudio: ended audio-23 elapsed_ms=1753 position_ms=1558 rate=1.0
+09-23 13:17:39.503  6627  6627 I CodeWordsAudio: play audio-24 audio/daily/guy/hello.mp3 rate=0.72
+09-23 13:17:39.507  6627  6627 I CodeWordsAudio: playing audio-24 elapsed_ms=4 position_ms=0 rate=0.72
+09-23 13:17:41.787  6627  6627 I CodeWordsAudio: ended audio-24 elapsed_ms=2284 position_ms=1423 rate=0.72

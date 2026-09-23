@@ -32,13 +32,14 @@ import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Collections;
 
-/** Offline web app with two scoped native capabilities: speech and record export. */
+/** Offline web app with scoped native audio, speech, and record export. */
 public final class MainActivity extends Activity {
     private static final String ORIGIN = "https://appassets.androidplatform.net";
     private static final String START = ORIGIN + "/assets/web/index.html";
     private static final int MICROPHONE = 10, EXPORT = 11;
     private static final int MAX_EXPORT_LENGTH = 16 * 1024 * 1024;
     private WebView web;
+    private LocalAudio audio;
     private SpeechRecognizer recognizer;
     private String speechId;
     private JavaScriptReplyProxy speechReply;
@@ -50,6 +51,7 @@ public final class MainActivity extends Activity {
         FrameLayout root = new FrameLayout(this);
         root.setBackgroundColor(Color.rgb(250, 250, 247));
         web = new WebView(this);
+        audio = new LocalAudio(this);
         root.addView(web, new FrameLayout.LayoutParams(-1, -1));
         setContentView(root);
         if (Build.VERSION.SDK_INT >= 30) {
@@ -105,6 +107,13 @@ public final class MainActivity extends Activity {
             }
         });
         if (WebViewFeature.isFeatureSupported(WebViewFeature.WEB_MESSAGE_LISTENER)) {
+            WebViewCompat.addWebMessageListener(web, "CodeWordsAudio", Collections.singleton(ORIGIN), (view, message, origin, mainFrame, reply) -> {
+                if (!mainFrame || !ORIGIN.equals(origin.toString())) return;
+                String data = message.getData();
+                if (data == null || data.length() > 512) return;
+                try { audio.message(new JSONObject(data), reply); }
+                catch (Exception ignored) { /* Invalid audio messages cannot access other assets. */ }
+            });
             WebViewCompat.addWebMessageListener(web, "CodeWordsNative", Collections.singleton(ORIGIN), (view, message, origin, mainFrame, reply) -> {
                 if (!mainFrame || !ORIGIN.equals(origin.toString())) return;
                 String data = message.getData();
@@ -246,8 +255,8 @@ public final class MainActivity extends Activity {
                 .setMessage("本机学习记录会保留。")
                 .setNegativeButton("继续学习", null).setPositiveButton("退出", (dialog, which) -> finish()).show();
     }
-    @Override protected void onResume() { super.onResume(); if (web != null) web.onResume(); }
-    @Override protected void onPause() { if (web != null && !waitingForPermission) web.onPause(); super.onPause(); }
+    @Override protected void onResume() { super.onResume(); if (audio != null) audio.foreground(true); if (web != null) web.onResume(); }
+    @Override protected void onPause() { if (audio != null) audio.foreground(false); if (web != null && !waitingForPermission) web.onPause(); super.onPause(); }
     @Override protected void onStop() { cancelSpeech(); super.onStop(); }
-    @Override protected void onDestroy() { cancelSpeech(); if (web != null) { web.destroy(); web = null; } super.onDestroy(); }
+    @Override protected void onDestroy() { cancelSpeech(); if (audio != null) audio.close(); if (web != null) { web.destroy(); web = null; } super.onDestroy(); }
 }

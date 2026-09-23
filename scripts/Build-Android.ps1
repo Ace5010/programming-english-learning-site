@@ -58,7 +58,7 @@ try {
     if (-not (Test-Path -LiteralPath $taskApk)) { throw '未生成已签名 APK，请检查签名配置。' }
     $taskOutput = Join-Path $taskRoot 'artifacts\android'
     New-Item -ItemType Directory -Path $taskOutput -Force | Out-Null
-    $taskPublished = Join-Path $taskOutput "codewords-1.1.0-$taskVariantName.apk"
+    $taskPublished = Join-Path $taskOutput "codewords-1.1.1-$taskVariantName.apk"
     Copy-Item -LiteralPath $taskApk -Destination $taskPublished -Force
     $taskHash = Get-FileHash -LiteralPath $taskPublished -Algorithm SHA256
     [System.IO.File]::WriteAllText(($taskPublished + '.sha256'), ($taskHash.Hash.ToLowerInvariant() + '  ' + [System.IO.Path]::GetFileName($taskPublished) + "`n"))

@@ -3,6 +3,7 @@
     "bundled origin connects the native adapter; only a final result is saved",
     "native permission denial does not record a wrong answer",
     "actual MP3 playback works from bundled paths at 1x and 0.72x",
+    "dedicated native audio takes priority, and a simulated decoder error falls back to the bundled MP3",
     "reload preserves speech draft and favorites; export forwards the exact saved record"
   ],
   "audio": [

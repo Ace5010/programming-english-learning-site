@@ -1,0 +1,336 @@
+{
+  "version": "1.1.1",
+  "versionCode": 3,
+  "emulator": "BlueStacks 5 Pie64 / Android 9 / WebView 129.0.6668.70",
+  "package": "com.codewords.english",
+  "upgradeFrom": "1.1.0",
+  "originalInstallRetained": true,
+  "courseSessionRestored": true,
+  "completedClips": 24,
+  "firstLessonWordMatrix": 16,
+  "playbackErrors": 0,
+  "nativeStartMs": {
+    "min": 4,
+    "max": 11
+  },
+  "clips": [
+    {
+      "id": "audio-1",
+      "path": "audio/aria/word-1.mp3",
+      "rate": 1.0,
+      "playing": {
+        "elapsedMs": 11,
+        "positionMs": 0
+      },
+      "ended": {
+        "elapsedMs": 2191,
+        "positionMs": 2014
+      }
+    },
+    {
+      "id": "audio-2",
+      "path": "audio/aria/word-3561.mp3",
+      "rate": 1.0,
+      "playing": {
+        "elapsedMs": 5,
+        "positionMs": 0
+      },
+      "ended": {
+        "elapsedMs": 2219,
+        "positionMs": 1894
+      }
+    },
+    {
+      "id": "audio-3",
+      "path": "audio/aria/word-3561.mp3",
+      "rate": 0.72,
+      "playing": {
+        "elapsedMs": 6,
+        "positionMs": 0
+      },
+      "ended": {
+        "elapsedMs": 2610,
+        "positionMs": 1768
+      }
+    },
+    {
+      "id": "audio-4",
+      "path": "audio/aria/word-20.mp3",
+      "rate": 1.0,
+      "playing": {
+        "elapsedMs": 5,
+        "positionMs": 0
+      },
+      "ended": {
+        "elapsedMs": 1808,
+        "positionMs": 1630
+      }
+    },
+    {
+      "id": "audio-5",
+      "path": "audio/aria/word-20.mp3",
+      "rate": 0.72,
+      "playing": {
+        "elapsedMs": 6,
+        "positionMs": 0
+      },
+      "ended": {
+        "elapsedMs": 2226,
+        "positionMs": 1512
+      }
+    },
+    {
+      "id": "audio-6",
+      "path": "audio/aria/example-20.mp3",
+      "rate": 1.0,
+      "playing": {
+        "elapsedMs": 7,
+        "positionMs": 0
+      },
+      "ended": {
+        "elapsedMs": 2731,
+        "positionMs": 2398
+      }
+    },
+    {
+      "id": "audio-7",
+      "path": "audio/aria/example-20.mp3",
+      "rate": 0.72,
+      "playing": {
+        "elapsedMs": 5,
+        "positionMs": 0
+      },
+      "ended": {
+        "elapsedMs": 3529,
+        "positionMs": 2308
+      }
+    },
+    {
+      "id": "audio-8",
+      "path": "audio/aria/word-1.mp3",
+      "rate": 0.72,
+      "playing": {
+        "elapsedMs": 5,
+        "positionMs": 0
+      },
+      "ended": {
+        "elapsedMs": 2892,
+        "positionMs": 1909
+      }
+    },
+    {
+      "id": "audio-9",
+      "path": "audio/aria/word-2801.mp3",
+      "rate": 1.0,
+      "playing": {
+        "elapsedMs": 6,
+        "positionMs": 0
+      },
+      "ended": {
+        "elapsedMs": 2127,
+        "positionMs": 1702
+      }
+    },
+    {
+      "id": "audio-10",
+      "path": "audio/aria/word-2801.mp3",
+      "rate": 0.72,
+      "playing": {
+        "elapsedMs": 5,
+        "positionMs": 0
+      },
+      "ended": {
+        "elapsedMs": 2198,
+        "positionMs": 1590
+      }
+    },
+    {
+      "id": "audio-11",
+      "path": "audio/guy/word-1.mp3",
+      "rate": 1.0,
+      "playing": {
+        "elapsedMs": 7,
+        "positionMs": 0
+      },
+      "ended": {
+        "elapsedMs": 2632,
+        "positionMs": 2062
+      }
+    },
+    {
+      "id": "audio-12",
+      "path": "audio/guy/word-1.mp3",
+      "rate": 0.72,
+      "playing": {
+        "elapsedMs": 5,
+        "positionMs": 0
+      },
+      "ended": {
+        "elapsedMs": 2934,
+        "positionMs": 1946
+      }
+    },
+    {
+      "id": "audio-13",
+      "path": "audio/guy/word-2801.mp3",
+      "rate": 1.0,
+      "playing": {
+        "elapsedMs": 5,
+        "positionMs": 0
+      },
+      "ended": {
+        "elapsedMs": 2119,
+        "positionMs": 1702
+      }
+    },
+    {
+      "id": "audio-14",
+      "path": "audio/guy/word-2801.mp3",
+      "rate": 0.72,
+      "playing": {
+        "elapsedMs": 4,
+        "positionMs": 0
+      },
+      "ended": {
+        "elapsedMs": 2878,
+        "positionMs": 1600
+      }
+    },
+    {
+      "id": "audio-15",
+      "path": "audio/guy/word-3561.mp3",
+      "rate": 1.0,
+      "playing": {
+        "elapsedMs": 5,
+        "positionMs": 0
+      },
+      "ended": {
+        "elapsedMs": 2488,
+        "positionMs": 1894
+      }
+    },
+    {
+      "id": "audio-16",
+      "path": "audio/guy/word-3561.mp3",
+      "rate": 0.72,
+      "playing": {
+        "elapsedMs": 5,
+        "positionMs": 0
+      },
+      "ended": {
+        "elapsedMs": 2479,
+        "positionMs": 1805
+      }
+    },
+    {
+      "id": "audio-17",
+      "path": "audio/guy/word-20.mp3",
+      "rate": 1.0,
+      "playing": {
+        "elapsedMs": 4,
+        "positionMs": 0
+      },
+      "ended": {
+        "elapsedMs": 2064,
+        "positionMs": 1654
+      }
+    },
+    {
+      "id": "audio-18",
+      "path": "audio/guy/word-20.mp3",
+      "rate": 0.72,
+      "playing": {
+        "elapsedMs": 5,
+        "positionMs": 0
+      },
+      "ended": {
+        "elapsedMs": 2574,
+        "positionMs": 1537
+      }
+    },
+    {
+      "id": "audio-19",
+      "path": "audio/guy/example-20.mp3",
+      "rate": 1.0,
+      "playing": {
+        "elapsedMs": 6,
+        "positionMs": 0
+      },
+      "ended": {
+        "elapsedMs": 3024,
+        "positionMs": 2446
+      }
+    },
+    {
+      "id": "audio-20",
+      "path": "audio/guy/example-20.mp3",
+      "rate": 0.72,
+      "playing": {
+        "elapsedMs": 6,
+        "positionMs": 0
+      },
+      "ended": {
+        "elapsedMs": 3728,
+        "positionMs": 2316
+      }
+    },
+    {
+      "id": "audio-21",
+      "path": "audio/guy/example-4.mp3",
+      "rate": 0.72,
+      "playing": {
+        "elapsedMs": 5,
+        "positionMs": 0
+      },
+      "ended": {
+        "elapsedMs": 2932,
+        "positionMs": 2019
+      }
+    },
+    {
+      "id": "audio-22",
+      "path": "audio/guy/voice-test.mp3",
+      "rate": 0.72,
+      "playing": {
+        "elapsedMs": 4,
+        "positionMs": 0
+      },
+      "ended": {
+        "elapsedMs": 9461,
+        "positionMs": 6720
+      }
+    },
+    {
+      "id": "audio-23",
+      "path": "audio/daily/guy/hello.mp3",
+      "rate": 1.0,
+      "playing": {
+        "elapsedMs": 6,
+        "positionMs": 0
+      },
+      "ended": {
+        "elapsedMs": 1753,
+        "positionMs": 1558
+      }
+    },
+    {
+      "id": "audio-24",
+      "path": "audio/daily/guy/hello.mp3",
+      "rate": 0.72,
+      "playing": {
+        "elapsedMs": 4,
+        "positionMs": 0
+      },
+      "ended": {
+        "elapsedMs": 2284,
+        "positionMs": 1423
+      }
+    }
+  ],
+  "boundaries": [
+    "Actual signed APK installed through BlueStacks built-in installer; actual app buttons clicked, no audio callbacks simulated.",
+    "Observed MediaPlayer start, advancing position and completion. No microphone/loopback recording of speaker output.",
+    "Both attempted interruption actions happened after short clips had ended; background return and later playback passed, but interruption during active native playback was not established.",
+    "Physical handset persistent silence was not reproduced on this emulator; handset confirmation remains necessary."
+  ]
+}

@@ -1,6 +1,6 @@
-# 安卓测试版 1.1.0
+# 安卓测试版 1.1.1
 
-2026-09-23。包名 `com.codewords.english`，版本号 2，最低 Android 8.0（API 26），目标 Android 15（API 35）。使用较新的 Android System WebView。APK 位于 `artifacts/android/codewords-1.1.0-release.apk`，约 203.4 MiB，包含所有课程、3,620 个词及双声线点读录音。
+2026-09-23。包名 `com.codewords.english`，版本号 3，最低 Android 8.0（API 26），目标 Android 15（API 35）。使用较新的 Android System WebView。APK 位于 `artifacts/android/codewords-1.1.1-release.apk`，约 203.4 MiB，包含所有课程、3,620 个词及双声线点读录音。
 
 ## 使用及记录
 
@@ -16,34 +16,35 @@
 - 课程、词级复习、词库、表达库、收藏和口语参考仍保留每条正常／慢速按钮，速度为 1 和 0.72，切换不丢练习。
 - 安卓内的导出走系统文件保存界面；跟读桥接安卓系统识别，不依赖 WebView 是否实现网页 SpeechRecognition。
 
-## 实际检查
+## 1.1.1 点读修复与回归
 
-本次重新执行同步、进度与判题回归、手机布局、打包地址和 APK 检查；收藏、局部语速及模拟识别专项保留上一轮已通过的报告。真实系统语音识别集成脚本是单独的按需检查，不属于 Node 单元测试批次，不能把未启动的识别脚本算成通过。
+已复现旧播放器在录音尚未起播时第二次点击会暂停、清空当前请求，造成无声；网络延迟会扩大这个时间窗口。原 APK 的录音齐全，首课文件可以完整解码，不能将问题笼统归因于网络或缺录音。用户手机上“无论点多少次都无声”的完整现象仍未在本机模拟器重现。
 
-| 检查 | 结果与边界 |
+- 同一按钮加载中或播放中重复点击继续当前播放；换单词、换正常／慢速按钮从头播放。旧请求的失败、结束回调不能清掉新请求。
+- 网页预加载当前课程的少量录音，复用最多 32 个播放器；不一次下载完整词库。缓冲超时和播放失败释放请求，允许下一次重试。
+- 安卓使用系统 MediaPlayer 直接读取 APK 内未压缩 MP3，绕开 WebView 的常规音频播放路径。只允许固定录音目录及 1／0.72 两种速度，音高保持 1；不新增权限或依赖。原生解码失败才回退包内 HTML 音频；音频焦点被拒绝不会绕过系统焦点。
+- 按原生与浏览器实际播放事件显示状态；页面离开和应用后台释放播放。两区学习状态、同步协议和存储格式保持兼容。
+
+| 本次实际检查 | 结果与边界 |
 | --- | --- |
-| TypeScript、网页生产构建、项目词汇／音频完整性 | 通过 |
-| 学习、旧记录兼容、判题、自适应、长期复习、安卓桥接及同步 Node 回归 | 206 项通过，其中同步协议／实际 SQL 20 项 |
-| 安卓桥接生命周期、错误、晚到消息、导出与来源隔离 Node 测试 | 6 项通过，原生回调模拟 |
-| 双端同步浏览器检查 | 8 组隔离 SQLite 场景、7 组真实 D1 双端场景通过；结果见 `artifacts/sync-audit/live-results.json` |
-| Chrome 手机布局 | 13 组通过；320/360/412 窄屏、844 横屏、四种风格、两区全部入口、长词、题型与词级复习；键盘用缩短视口模拟 |
-| 收藏流程 | 8 组通过，含刷新、取消、分页、旧记录和小屏 |
-| 局部正常／慢速播放 | 12 组通过，44 次真实 MP3 playing 事件；不代表听到了手机扬声器 |
-| 语音界面错误与生命周期 | 9 组通过，模拟识别事件；未调用真实语音服务 |
-| 安卓打包地址与 CSP 下的网页 | 4 组通过，2 次真实 MP3 playing；Chrome 加载与包内一致的网页，安卓系统回调模拟 |
-| Release/Debug 编译、Android Lint | 通过；Lint 无问题 |
-| APK 签名 | apksigner 验证通过，正式测试签名，Release 未开启 WebView 调试 |
-| APK 内容 | 14,665 个网页文件与当前 dist 逐文件哈希一致，14,648 个 MP3，无签名文件混入；见 `artifacts/android/apk-validation.json` |
-| npm audit | 0 个已知依赖漏洞，仅指 npm 依赖审计，不能据此声称整个应用没有漏洞 |
-| 安卓设备安装与系统能力 | **未完成**：当前电脑缺少模拟器硬件加速，隔离 AVD 的软件模式未能启动；没有连接安卓真机。不能将上面的 Chrome 检查算为原生实测 |
+| TypeScript、生产构建、项目音频完整性 | 通过；3,620 词、双声线各 7,241、日常 166 个 MP3 |
+| 播放器、原生桥接、两区课程与进度单元测试 | 72 项通过；桥接回调在 Node 中模拟 |
+| Chrome 局部语速、学习草稿与四种风格回归 | 12 组、44 次实际 MP3 playing 事件，见 `artifacts/local-audio-controls/browser-results.json` |
+| Chrome 生产包首课音频 | 4 单词 + 4 例句 × 两声线 × 两语速，32 项全部播放至结束；另有 1.2 秒延迟下连点、离开课程返回两项，见 `artifacts/audio-reliability/browser-results.json` |
+| 打包 HTTPS 地址与 CSP、原生优先和降级 | 5 组通过；Chrome 中模拟原生回调，包含真实 MP3 降级播放 |
+| Release / Debug、Android Lint | 通过；Lint 无问题 |
+| 签名与内容 | v2 签名有效，与 1.1.0 的证书一致；14,665 个网页文件逐字节匹配 dist，14,648 个 MP3。见 `artifacts/android/apk-validation-1.1.1.json` |
+| 实际安卓模拟器 | 蓝叠 5、Android 9、WebView 129；1.1.0 覆盖升级 1.1.1，包名和首次安装时间保留，课程继续原会话 |
+| APK 原生点读 | 24 次开始及完成记录，包括首课四词 × 两声线 × 两速度 16 项、例句、试听及日常 Hello；0 播放错误，原生接收请求至启动 4–11 ms。见 `artifacts/audio-reliability/android-1.1.1-results.json` |
+| 后台和页面切换 | 返回后继续课程、切换声线及日常点读通过；尝试在播放中切走时录音已结束，因此未据此宣称验证了原生播放中断 |
 
-真机仍需验证安装与首屏、横竖屏及系统键盘、两种语速、杀进程后恢复收藏和课程草稿、麦克风授权／拒绝及英语识别、系统文件保存和导出内容。当前 APK 用于这些测试，尚未完成真机验收。
+日志证明播放器开始、时间推进及完成，不代表录下并听辨了扬声器输出。真机仍需用户确认第一课是否恢复、实际出声延迟和音色；麦克风系统识别、文件选择器及真机键盘不属于此次音频回归。前版同步、布局与收藏报告保留于 `artifacts/`，本次未重跑真实 D1 同步。
 
 ## 实现与权限边界
 
-原前端、词库、学习算法及 `localStorage` 格式复用。AndroidX WebKit 是安卓壳唯一直接运行依赖，用于安全加载本地资源及消息桥；没有增加 npm 依赖。APK 大小主要来自现有双声线录音。
+原前端、词库、学习算法及 `localStorage` 格式复用。AndroidX WebKit 是安卓壳唯一直接运行依赖，用于安全加载本地资源及消息桥；没有增加 npm 依赖。APK 大小主要来自现有双声线录音。原生点读使用 [MediaPlayer](https://developer.android.com/reference/android/media/MediaPlayer) 及 [音频焦点](https://developer.android.com/media/optimize/audio-focus)，资源只从包内读取。
 
-使用 [WebViewAssetLoader](https://developer.android.com/develop/ui/views/layout/webapps/load-local-content) 的 `https://appassets.androidplatform.net/assets/web/index.html` 加载包内页面。文件／content URL 访问关闭，混合内容关闭，未命中的资源直接拒绝。消息桥只允许该固定 origin 的主框架，限定语音操作及 JSON 导出；没有任意文件路径、命令执行或通用 JS 接口。实现参考 [Android 消息桥说明](https://developer.android.com/develop/ui/views/layout/webapps/native-api-access-jsbridge) 和 [系统语音识别接口](https://developer.android.com/reference/android/speech/SpeechRecognizer)。
+使用 [WebViewAssetLoader](https://developer.android.com/develop/ui/views/layout/webapps/load-local-content) 的 `https://appassets.androidplatform.net/assets/web/index.html` 加载包内页面。文件／content URL 访问关闭，混合内容关闭，未命中的资源直接拒绝。消息桥只允许该固定 origin 的主框架，限定系统识别、包内录音点读及 JSON 导出；没有任意文件路径、命令执行或通用 JS 接口。实现参考 [Android 消息桥说明](https://developer.android.com/develop/ui/views/layout/webapps/native-api-access-jsbridge) 和 [系统语音识别接口](https://developer.android.com/reference/android/speech/SpeechRecognizer)。
 
 Manifest 申请 `RECORD_AUDIO` 和同步所需的 `INTERNET`，不申请存储、联系人或定位权限。WebView 请求和 CSP 仅放行打包资源及指定 Cloudflare `/api/sync`，不开放任意站点。系统识别服务独立处理声音，应用只保存识别文本；不保存录音。外部页面不能在这个 WebView 中打开。导出通过系统选择器返回的 URI 写文件，网页不能指定设备路径。Release 关闭 WebView 调试和系统自动备份。
 
@@ -53,9 +54,9 @@ Manifest 申请 `RECORD_AUDIO` 和同步所需的 `INTERNET`，不申请存储�
 
 ```powershell
 npx tsc --noEmit
-node --test tools/test-native-android.mjs
+node --test tools/test-audio-playback.mjs tools/test-native-android.mjs
 ./scripts/Build-Android.ps1 -SdkPath '<SDK 路径>' -JavaPath '<JDK 路径>' -GradlePath '<gradle.bat 路径>' -InitializeSigning -Validate
-python tools/verify_android.py artifacts/android/codewords-1.1.0-release.apk --output artifacts/android/apk-validation.json
+python tools/verify_android.py artifacts/android/codewords-1.1.1-release.apk --output artifacts/android/apk-validation-1.1.1.json
 # 使用 SDK 的 build-tools/35.0.0/apksigner.bat verify --verbose <apk> 验证签名。
 ```
 

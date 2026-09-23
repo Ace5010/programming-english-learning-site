@@ -45,6 +45,7 @@ interface Props {
   onSpeedChange: (speed: PlaybackSpeed) => void;
   speaking: string;
   play: (phrase: DailyPhrase, slow?: boolean) => void;
+  preload: (files: string[]) => void;
   stopAudio: () => void;
   openVoice: () => void;
   openLibrary: () => void;
@@ -60,7 +61,7 @@ function loadProgress(key: string, lessons: DailyLesson[]) {
   catch { return { progress: createDailyProgress(), writable: false, warning: '浏览器暂时无法读取课程记录。请恢复存储权限后重新加载。', raw: null }; }
 }
 
-export default function DailyEnglish({ active, view, navigation, voice, speed, onSpeedChange, speaking, play, stopAudio, openVoice, openLibrary, contentRef, headingRef, curriculum, renderReview, reviewDescription }: Props) {
+export default function DailyEnglish({ active, view, navigation, voice, speed, onSpeedChange, speaking, play, preload, stopAudio, openVoice, openLibrary, contentRef, headingRef, curriculum, renderReview, reviewDescription }: Props) {
   const storageKey = curriculum?.key ?? DAILY_KEY;
   const label = curriculum?.label ?? '日常英语';
   const dailyUnits = curriculum?.units ?? defaultUnits;
@@ -254,6 +255,9 @@ export default function DailyEnglish({ active, view, navigation, voice, speed, o
   const favoriteCount = dailyPhrases.filter(item => progress.favorites?.includes(item.id)).length;
   const libraryPhrases = dailyPhrases.filter(item => (showingFavorites ? progress.favorites?.includes(item.id) : libraryFilter === 'all' || libraryFilter === 'learned' && phraseLearned(item.id) || libraryFilter === 'favorites' && progress.favorites?.includes(item.id))
     && `${item.en} ${item.zh}`.toLocaleLowerCase().includes(listQuery.trim().toLocaleLowerCase()));
+  const warmupFiles = JSON.stringify((!active ? [] : showSession ? [...(phrase ? [phrase] : []), ...(lesson?.phrases ?? [])] : view === 'library' || view === 'favorites' ? libraryPhrases.slice(0, 8) : [])
+    .map(item => `${item.id}.mp3?v=${encodeURIComponent(item.en)}`));
+  useEffect(() => { preload(JSON.parse(warmupFiles) as string[]); }, [warmupFiles, preload]);
   const customReview = view === 'review' && !!renderReview;
   const scenarios = <>
     <div className="daily-panel-heading">{!customReview && <h2>现在可以复习</h2>}<label className="daily-workbook-filter">练习内容<select aria-label="复习内容" value={reviewFocus} onChange={event => setReviewFocus(event.target.value as typeof reviewFocus)}><option value="auto">系统安排</option>{reviewOptions.map(option => <option key={option.value} value={option.value}>{option.label}</option>)}</select></label></div>

@@ -78,6 +78,24 @@ try {
   audio.push(...await page.evaluate(() => window.__playing));
   assert.ok(audio.every(event => event.src.startsWith(`${origin}/assets/web/audio/`)));
   results.push('actual MP3 playback works from bundled paths at 1x and 0.72x');
+  await page.evaluate(() => {
+    window.__audioNative = [];
+    window.CodeWordsAudio = { onmessage: null, postMessage: text => window.__audioNative.push(JSON.parse(text)) };
+  });
+  const htmlEvents = await page.evaluate(() => window.__playing.length);
+  await target.getByRole('button', { name: /^听示范 / }).click();
+  const nativePlay = await page.evaluate(() => window.__audioNative.at(-1));
+  assert.equal(nativePlay.action, 'play'); assert.equal(nativePlay.path, 'audio/daily/aria/hello.mp3');
+  await page.evaluate(id => window.CodeWordsAudio.onmessage({ data: JSON.stringify({ id, event: 'playing' }) }), nativePlay.id);
+  assert.equal(await target.getByRole('button', { name: /^听示范 / }).getAttribute('aria-pressed'), 'true');
+  assert.equal(await page.evaluate(() => window.__playing.length), htmlEvents);
+  await target.getByRole('button', { name: /^慢速朗读 / }).click();
+  await page.evaluate(() => {
+    const request = window.__audioNative.at(-1);
+    window.CodeWordsAudio.onmessage({ data: JSON.stringify({ id: request.id, event: 'error', code: 'decoder' }) });
+  });
+  await page.waitForFunction(start => window.__playing.slice(start).some(event => event.rate === .72), htmlEvents);
+  results.push('dedicated native audio takes priority, and a simulated decoder error falls back to the bundled MP3');
   for (const theme of ['minimal', 'sketch', 'print', 'graffiti']) {
     await page.getByLabel('界面风格', { exact: true }).selectOption(theme);
     assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth));

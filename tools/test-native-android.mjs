@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import { test } from 'node:test';
-import { androidRecognitionConstructor, downloadRecord, isAndroidApp } from '../src/nativeAndroid.ts';
+import { androidRecognitionConstructor, downloadRecord, isAndroidApp, hasNativeAudio, startNativeAudio } from '../src/nativeAndroid.ts';
 
 function environment(origin = 'https://appassets.androidplatform.net') {
   const sent = [], alerts = [];
@@ -67,4 +67,26 @@ test('an old WebView missing the native bridge reports export failure instead of
   const env = environment(); delete window.CodeWordsNative;
   downloadRecord('record.json', '{}');
   assert.equal(env.alerts.length, 1); assert.match(env.alerts[0], /尚未导出/); assert.deepEqual(env.sent, []);
+});
+
+test('audio bridge only accepts bundled recordings and leaves old APKs on HTML audio', () => {
+  const env = environment();
+  assert.equal(hasNativeAudio(), false);
+  assert.equal(startNativeAudio('https://appassets.androidplatform.net/assets/web/audio/guy/word-1.mp3', 1, () => {}), undefined);
+  window.CodeWordsAudio = env.native;
+  for (const url of ['https://example.org/audio/guy/word-1.mp3', 'https://appassets.androidplatform.net/assets/web/index.html', 'https://appassets.androidplatform.net/assets/web/audio/guy/%2e%2e/index.html']) {
+    assert.equal(startNativeAudio(url, 1, () => {}), undefined);
+  }
+  assert.deepEqual(env.sent, []);
+});
+test('native audio normal/slow, interruption and late replies keep request boundaries', () => {
+  const env = environment(); window.CodeWordsAudio = env.native; const events = [];
+  const audio = startNativeAudio('https://appassets.androidplatform.net/assets/web/audio/guy/word-1.mp3?v=repository', 1, event => events.push(event));
+  const id = env.sent[0].id;
+  assert.equal(env.sent[0].path, 'audio/guy/word-1.mp3');
+  env.emit(id, 'playing'); audio.setRate(.72); audio.stop(); env.emit(id, 'ended');
+  assert.deepEqual(events, ['playing']); assert.deepEqual(env.sent.map(message => message.action), ['play', 'rate', 'stop']);
+  const next = startNativeAudio('https://appassets.androidplatform.net/assets/web/audio/daily/aria/hello.mp3', .72, event => events.push(event));
+  env.emit(env.sent.at(-1).id, 'error', { code: 'decoder' }); env.emit(id, 'playing'); next.stop();
+  assert.deepEqual(events, ['playing', 'error']);
 });

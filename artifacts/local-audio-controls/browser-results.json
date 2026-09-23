@@ -1,58 +1,58 @@
 {
-  "baseURL": "http://localhost:5186/",
+  "baseURL": "http://127.0.0.1:5186",
   "production": false,
   "loadedApplicationScripts": [],
-  "testedAt": "2026-09-23T00:42:59.893Z",
+  "testedAt": "2026-09-23T05:02:41.239Z",
   "scenarios": [
     {
       "name": "distant library cards offer immediate local word and example playback",
-      "durationMs": 2071,
+      "durationMs": 2830,
       "evidence": {
         "position": 31,
         "target": 31,
         "nextTarget": 32,
-        "scrollY": 7610
+        "scrollY": 7668
       }
     },
     {
       "name": "programming teaching has local normal and slow without changing the lesson",
-      "durationMs": 1664
+      "durationMs": 1979
     },
     {
       "name": "programming listening and feedback keep both local speeds and answer draft",
-      "durationMs": 1768
+      "durationMs": 2418
     },
     {
       "name": "programming scene review uses local listening buttons",
-      "durationMs": 1045
+      "durationMs": 1589
     },
     {
       "name": "daily teaching has local normal and slow without changing the lesson",
-      "durationMs": 1277
+      "durationMs": 1791
     },
     {
       "name": "daily listening and feedback keep both local speeds and answer draft",
-      "durationMs": 1710
+      "durationMs": 2241
     },
     {
       "name": "daily scene review uses local listening buttons",
-      "durationMs": 982
+      "durationMs": 1295
     },
     {
       "name": "word review rows, listening and summary offer local controls",
-      "durationMs": 1586
+      "durationMs": 1988
     },
     {
       "name": "speaking demonstrations and own-expression references have both local speeds",
-      "durationMs": 1099
+      "durationMs": 1529
     },
     {
       "name": "expression library local playback keeps voice selection and long sentences usable",
-      "durationMs": 1198
+      "durationMs": 1421
     },
     {
       "name": "local controls fit four themes at 1440px",
-      "durationMs": 2898,
+      "durationMs": 3904,
       "evidence": [
         {
           "theme": "minimal",
@@ -178,14 +178,14 @@
     },
     {
       "name": "local controls fit four themes at 390px",
-      "durationMs": 2691,
+      "durationMs": 3522,
       "evidence": [
         {
           "theme": "minimal",
           "view": "词汇库",
           "box": {
             "x": 125.53125,
-            "y": 615.421875,
+            "y": 549.03125,
             "width": 52,
             "height": 36
           }
@@ -195,7 +195,7 @@
           "view": "复习",
           "box": {
             "x": 82.0625,
-            "y": 566.625,
+            "y": 555.234375,
             "width": 52,
             "height": 36
           }
@@ -205,9 +205,9 @@
           "view": "表达库",
           "box": {
             "x": 126.8125,
-            "y": 476.3125,
-            "width": 46,
-            "height": 36
+            "y": 479.921875,
+            "width": 48,
+            "height": 44
           }
         },
         {
@@ -215,7 +215,7 @@
           "view": "词汇库",
           "box": {
             "x": 125.53125,
-            "y": 631.859375,
+            "y": 538.46875,
             "width": 52,
             "height": 36
           }
@@ -225,7 +225,7 @@
           "view": "复习",
           "box": {
             "x": 82.0625,
-            "y": 576.0625,
+            "y": 552.671875,
             "width": 52,
             "height": 36
           }
@@ -235,9 +235,9 @@
           "view": "表达库",
           "box": {
             "x": 111.953125,
-            "y": 480.0625,
-            "width": 46,
-            "height": 36
+            "y": 483.671875,
+            "width": 48,
+            "height": 44
           }
         },
         {
@@ -245,7 +245,7 @@
           "view": "词汇库",
           "box": {
             "x": 126.53125,
-            "y": 642.421875,
+            "y": 547.03125,
             "width": 52,
             "height": 36
           }
@@ -255,7 +255,7 @@
           "view": "复习",
           "box": {
             "x": 83.0625,
-            "y": 593.625,
+            "y": 553.234375,
             "width": 52,
             "height": 36
           }
@@ -265,9 +265,9 @@
           "view": "表达库",
           "box": {
             "x": 126.8125,
-            "y": 498.3125,
-            "width": 46,
-            "height": 36
+            "y": 501.921875,
+            "width": 48,
+            "height": 44
           }
         },
         {
@@ -275,7 +275,7 @@
           "view": "词汇库",
           "box": {
             "x": 126.53125,
-            "y": 647.03125,
+            "y": 536.640625,
             "width": 52,
             "height": 36
           }
@@ -285,7 +285,7 @@
           "view": "复习",
           "box": {
             "x": 83.0625,
-            "y": 662.734375,
+            "y": 552.34375,
             "width": 52,
             "height": 36
           }
@@ -295,9 +295,9 @@
           "view": "表达库",
           "box": {
             "x": 124.046875,
-            "y": 575.171875,
-            "width": 46,
-            "height": 36
+            "y": 578.78125,
+            "width": 48,
+            "height": 44
           }
         }
       ]
@@ -308,9 +308,9 @@
   "playbackEvidence": [
     {
       "label": "distant library word normal",
-      "id": 0,
+      "id": 12,
       "type": "playing",
-      "src": "http://localhost:5186/audio/aria/word-31.mp3",
+      "src": "http://127.0.0.1:5186/audio/aria/word-31.mp3",
       "rate": 1,
       "duration": 1.656,
       "currentTime": 0,
@@ -320,9 +320,9 @@
     },
     {
       "label": "distant library word slow",
-      "id": 1,
+      "id": 12,
       "type": "playing",
-      "src": "http://localhost:5186/audio/aria/word-31.mp3",
+      "src": "http://127.0.0.1:5186/audio/aria/word-31.mp3",
       "rate": 0.72,
       "duration": 1.656,
       "currentTime": 0,
@@ -332,9 +332,9 @@
     },
     {
       "label": "distant library same word returns to normal",
-      "id": 2,
+      "id": 12,
       "type": "playing",
-      "src": "http://localhost:5186/audio/aria/word-31.mp3",
+      "src": "http://127.0.0.1:5186/audio/aria/word-31.mp3",
       "rate": 1,
       "duration": 1.656,
       "currentTime": 0,
@@ -344,9 +344,9 @@
     },
     {
       "label": "distant example normal",
-      "id": 3,
+      "id": 13,
       "type": "playing",
-      "src": "http://localhost:5186/audio/aria/example-31.mp3?v=A%20boolean%20can%20be%20true%20or%20false.",
+      "src": "http://127.0.0.1:5186/audio/aria/example-31.mp3?v=A%20boolean%20can%20be%20true%20or%20false.",
       "rate": 1,
       "duration": 2.88,
       "currentTime": 0,
@@ -356,9 +356,9 @@
     },
     {
       "label": "distant example slow",
-      "id": 4,
+      "id": 13,
       "type": "playing",
-      "src": "http://localhost:5186/audio/aria/example-31.mp3?v=A%20boolean%20can%20be%20true%20or%20false.",
+      "src": "http://127.0.0.1:5186/audio/aria/example-31.mp3?v=A%20boolean%20can%20be%20true%20or%20false.",
       "rate": 0.72,
       "duration": 2.88,
       "currentTime": 0,
@@ -368,9 +368,9 @@
     },
     {
       "label": "other word stays normal after slow playback",
-      "id": 5,
+      "id": 14,
       "type": "playing",
-      "src": "http://localhost:5186/audio/aria/word-32.mp3",
+      "src": "http://127.0.0.1:5186/audio/aria/word-32.mp3",
       "rate": 1,
       "duration": 1.68,
       "currentTime": 0,
@@ -380,21 +380,21 @@
     },
     {
       "label": "card blank area stays normal",
-      "id": 6,
+      "id": 12,
       "type": "playing",
-      "src": "http://localhost:5186/audio/aria/word-31.mp3",
+      "src": "http://127.0.0.1:5186/audio/aria/word-31.mp3",
       "rate": 1,
       "duration": 1.656,
-      "currentTime": 0,
+      "currentTime": 0.000391,
       "paused": false,
       "ended": false,
       "preservesPitch": true
     },
     {
       "label": "programming teaching normal",
-      "id": 0,
+      "id": 1,
       "type": "playing",
-      "src": "http://localhost:5186/audio/aria/word-1.mp3?v=repository",
+      "src": "http://127.0.0.1:5186/audio/aria/word-1.mp3?v=repository",
       "rate": 1,
       "duration": 1.992,
       "currentTime": 0,
@@ -406,7 +406,7 @@
       "label": "programming teaching slow",
       "id": 1,
       "type": "playing",
-      "src": "http://localhost:5186/audio/aria/word-1.mp3?v=repository",
+      "src": "http://127.0.0.1:5186/audio/aria/word-1.mp3?v=repository",
       "rate": 0.72,
       "duration": 1.992,
       "currentTime": 0,
@@ -416,21 +416,21 @@
     },
     {
       "label": "programming teaching returns to normal",
-      "id": 2,
+      "id": 1,
       "type": "playing",
-      "src": "http://localhost:5186/audio/aria/word-1.mp3?v=repository",
+      "src": "http://127.0.0.1:5186/audio/aria/word-1.mp3?v=repository",
       "rate": 1,
       "duration": 1.992,
-      "currentTime": 0,
+      "currentTime": 0.007816,
       "paused": false,
       "ended": false,
       "preservesPitch": true
     },
     {
       "label": "programming listening normal",
-      "id": 0,
+      "id": 2,
       "type": "playing",
-      "src": "http://localhost:5186/audio/aria/word-3561.mp3?v=code",
+      "src": "http://127.0.0.1:5186/audio/aria/word-3561.mp3?v=code",
       "rate": 1,
       "duration": 1.872,
       "currentTime": 0,
@@ -440,9 +440,9 @@
     },
     {
       "label": "programming listening slow",
-      "id": 1,
+      "id": 2,
       "type": "playing",
-      "src": "http://localhost:5186/audio/aria/word-3561.mp3?v=code",
+      "src": "http://127.0.0.1:5186/audio/aria/word-3561.mp3?v=code",
       "rate": 0.72,
       "duration": 1.872,
       "currentTime": 0,
@@ -454,7 +454,7 @@
       "label": "programming feedback normal",
       "id": 2,
       "type": "playing",
-      "src": "http://localhost:5186/audio/aria/word-3561.mp3?v=code",
+      "src": "http://127.0.0.1:5186/audio/aria/word-3561.mp3?v=code",
       "rate": 1,
       "duration": 1.872,
       "currentTime": 0,
@@ -464,9 +464,9 @@
     },
     {
       "label": "programming feedback slow",
-      "id": 3,
+      "id": 2,
       "type": "playing",
-      "src": "http://localhost:5186/audio/aria/word-3561.mp3?v=code",
+      "src": "http://127.0.0.1:5186/audio/aria/word-3561.mp3?v=code",
       "rate": 0.72,
       "duration": 1.872,
       "currentTime": 0,
@@ -476,21 +476,21 @@
     },
     {
       "label": "programming feedback normal after refresh",
-      "id": 0,
+      "id": 2,
       "type": "playing",
-      "src": "http://localhost:5186/audio/aria/word-3561.mp3?v=code",
+      "src": "http://127.0.0.1:5186/audio/aria/word-3561.mp3?v=code",
       "rate": 1,
       "duration": 1.872,
-      "currentTime": 0,
+      "currentTime": 0.009085,
       "paused": false,
       "ended": false,
       "preservesPitch": true
     },
     {
       "label": "programming scene review slow",
-      "id": 0,
+      "id": 12,
       "type": "playing",
-      "src": "http://localhost:5186/audio/aria/word-3561.mp3?v=code",
+      "src": "http://127.0.0.1:5186/audio/aria/word-3561.mp3?v=code",
       "rate": 0.72,
       "duration": 1.872,
       "currentTime": 0,
@@ -500,12 +500,12 @@
     },
     {
       "label": "programming scene review normal",
-      "id": 1,
+      "id": 12,
       "type": "playing",
-      "src": "http://localhost:5186/audio/aria/word-3561.mp3?v=code",
+      "src": "http://127.0.0.1:5186/audio/aria/word-3561.mp3?v=code",
       "rate": 1,
       "duration": 1.872,
-      "currentTime": 0,
+      "currentTime": 0.003442,
       "paused": false,
       "ended": false,
       "preservesPitch": true
@@ -514,7 +514,7 @@
       "label": "daily teaching normal",
       "id": 0,
       "type": "playing",
-      "src": "http://localhost:5186/audio/daily/aria/hello.mp3?v=Hello!",
+      "src": "http://127.0.0.1:5186/audio/daily/aria/hello.mp3?v=Hello!",
       "rate": 1,
       "duration": 1.56,
       "currentTime": 0,
@@ -524,9 +524,9 @@
     },
     {
       "label": "daily teaching slow",
-      "id": 1,
+      "id": 0,
       "type": "playing",
-      "src": "http://localhost:5186/audio/daily/aria/hello.mp3?v=Hello!",
+      "src": "http://127.0.0.1:5186/audio/daily/aria/hello.mp3?v=Hello!",
       "rate": 0.72,
       "duration": 1.56,
       "currentTime": 0,
@@ -536,9 +536,9 @@
     },
     {
       "label": "daily teaching returns to normal",
-      "id": 2,
+      "id": 0,
       "type": "playing",
-      "src": "http://localhost:5186/audio/daily/aria/hello.mp3?v=Hello!",
+      "src": "http://127.0.0.1:5186/audio/daily/aria/hello.mp3?v=Hello!",
       "rate": 1,
       "duration": 1.56,
       "currentTime": 0,
@@ -548,9 +548,9 @@
     },
     {
       "label": "daily listening normal",
-      "id": 0,
+      "id": 1,
       "type": "playing",
-      "src": "http://localhost:5186/audio/daily/aria/goodbye.mp3?v=Goodbye!",
+      "src": "http://127.0.0.1:5186/audio/daily/aria/goodbye.mp3?v=Goodbye!",
       "rate": 1,
       "duration": 1.608,
       "currentTime": 0,
@@ -562,31 +562,31 @@
       "label": "daily listening slow",
       "id": 1,
       "type": "playing",
-      "src": "http://localhost:5186/audio/daily/aria/goodbye.mp3?v=Goodbye!",
+      "src": "http://127.0.0.1:5186/audio/daily/aria/goodbye.mp3?v=Goodbye!",
       "rate": 0.72,
       "duration": 1.608,
-      "currentTime": 0,
+      "currentTime": 0.011042,
       "paused": false,
       "ended": false,
       "preservesPitch": true
     },
     {
       "label": "daily feedback normal",
-      "id": 2,
+      "id": 1,
       "type": "playing",
-      "src": "http://localhost:5186/audio/daily/aria/goodbye.mp3?v=Goodbye!",
+      "src": "http://127.0.0.1:5186/audio/daily/aria/goodbye.mp3?v=Goodbye!",
       "rate": 1,
       "duration": 1.608,
-      "currentTime": 0,
+      "currentTime": 0.005347,
       "paused": false,
       "ended": false,
       "preservesPitch": true
     },
     {
       "label": "daily feedback slow",
-      "id": 3,
+      "id": 1,
       "type": "playing",
-      "src": "http://localhost:5186/audio/daily/aria/goodbye.mp3?v=Goodbye!",
+      "src": "http://127.0.0.1:5186/audio/daily/aria/goodbye.mp3?v=Goodbye!",
       "rate": 0.72,
       "duration": 1.608,
       "currentTime": 0,
@@ -596,9 +596,9 @@
     },
     {
       "label": "daily feedback normal after refresh",
-      "id": 0,
+      "id": 1,
       "type": "playing",
-      "src": "http://localhost:5186/audio/daily/aria/goodbye.mp3?v=Goodbye!",
+      "src": "http://127.0.0.1:5186/audio/daily/aria/goodbye.mp3?v=Goodbye!",
       "rate": 1,
       "duration": 1.608,
       "currentTime": 0,
@@ -610,7 +610,7 @@
       "label": "daily scene review slow",
       "id": 0,
       "type": "playing",
-      "src": "http://localhost:5186/audio/daily/aria/goodbye.mp3?v=Goodbye!",
+      "src": "http://127.0.0.1:5186/audio/daily/aria/goodbye.mp3?v=Goodbye!",
       "rate": 0.72,
       "duration": 1.608,
       "currentTime": 0,
@@ -620,12 +620,12 @@
     },
     {
       "label": "daily scene review normal",
-      "id": 1,
+      "id": 0,
       "type": "playing",
-      "src": "http://localhost:5186/audio/daily/aria/goodbye.mp3?v=Goodbye!",
+      "src": "http://127.0.0.1:5186/audio/daily/aria/goodbye.mp3?v=Goodbye!",
       "rate": 1,
       "duration": 1.608,
-      "currentTime": 0,
+      "currentTime": 0.008931,
       "paused": false,
       "ended": false,
       "preservesPitch": true
@@ -634,19 +634,19 @@
       "label": "review row word normal",
       "id": 0,
       "type": "playing",
-      "src": "http://localhost:5186/audio/aria/word-1.mp3",
+      "src": "http://127.0.0.1:5186/audio/aria/word-1.mp3",
       "rate": 1,
       "duration": 1.992,
-      "currentTime": 0,
+      "currentTime": 0.007183,
       "paused": false,
       "ended": false,
       "preservesPitch": true
     },
     {
       "label": "review row word slow",
-      "id": 1,
+      "id": 0,
       "type": "playing",
-      "src": "http://localhost:5186/audio/aria/word-1.mp3",
+      "src": "http://127.0.0.1:5186/audio/aria/word-1.mp3",
       "rate": 0.72,
       "duration": 1.992,
       "currentTime": 0,
@@ -656,9 +656,9 @@
     },
     {
       "label": "review row same word returns to normal",
-      "id": 2,
+      "id": 0,
       "type": "playing",
-      "src": "http://localhost:5186/audio/aria/word-1.mp3",
+      "src": "http://127.0.0.1:5186/audio/aria/word-1.mp3",
       "rate": 1,
       "duration": 1.992,
       "currentTime": 0,
@@ -668,9 +668,9 @@
     },
     {
       "label": "review example slow",
-      "id": 3,
+      "id": 1,
       "type": "playing",
-      "src": "http://localhost:5186/audio/aria/example-1.mp3?v=Open%20this%20repository.",
+      "src": "http://127.0.0.1:5186/audio/aria/example-1.mp3?v=Open%20this%20repository.",
       "rate": 0.72,
       "duration": 2.424,
       "currentTime": 0,
@@ -680,9 +680,9 @@
     },
     {
       "label": "review example normal",
-      "id": 4,
+      "id": 1,
       "type": "playing",
-      "src": "http://localhost:5186/audio/aria/example-1.mp3?v=Open%20this%20repository.",
+      "src": "http://127.0.0.1:5186/audio/aria/example-1.mp3?v=Open%20this%20repository.",
       "rate": 1,
       "duration": 2.424,
       "currentTime": 0,
@@ -692,9 +692,9 @@
     },
     {
       "label": "word review listening slow",
-      "id": 6,
+      "id": 0,
       "type": "playing",
-      "src": "http://localhost:5186/audio/aria/word-1.mp3",
+      "src": "http://127.0.0.1:5186/audio/aria/word-1.mp3",
       "rate": 0.72,
       "duration": 1.992,
       "currentTime": 0,
@@ -704,9 +704,9 @@
     },
     {
       "label": "word review listening normal",
-      "id": 7,
+      "id": 0,
       "type": "playing",
-      "src": "http://localhost:5186/audio/aria/word-1.mp3",
+      "src": "http://127.0.0.1:5186/audio/aria/word-1.mp3",
       "rate": 1,
       "duration": 1.992,
       "currentTime": 0,
@@ -716,9 +716,9 @@
     },
     {
       "label": "word summary slow",
-      "id": 8,
+      "id": 0,
       "type": "playing",
-      "src": "http://localhost:5186/audio/aria/word-1.mp3",
+      "src": "http://127.0.0.1:5186/audio/aria/word-1.mp3",
       "rate": 0.72,
       "duration": 1.992,
       "currentTime": 0,
@@ -728,21 +728,21 @@
     },
     {
       "label": "word summary normal",
-      "id": 9,
+      "id": 0,
       "type": "playing",
-      "src": "http://localhost:5186/audio/aria/word-1.mp3",
+      "src": "http://127.0.0.1:5186/audio/aria/word-1.mp3",
       "rate": 1,
       "duration": 1.992,
-      "currentTime": 0,
+      "currentTime": 0.003071,
       "paused": false,
       "ended": false,
       "preservesPitch": true
     },
     {
       "label": "speaking demonstration normal",
-      "id": 0,
+      "id": 2,
       "type": "playing",
-      "src": "http://localhost:5186/audio/daily/aria/hello.mp3?v=Hello!",
+      "src": "http://127.0.0.1:5186/audio/daily/aria/hello.mp3?v=Hello!",
       "rate": 1,
       "duration": 1.56,
       "currentTime": 0,
@@ -752,12 +752,12 @@
     },
     {
       "label": "speaking demonstration slow",
-      "id": 1,
+      "id": 2,
       "type": "playing",
-      "src": "http://localhost:5186/audio/daily/aria/hello.mp3?v=Hello!",
+      "src": "http://127.0.0.1:5186/audio/daily/aria/hello.mp3?v=Hello!",
       "rate": 0.72,
       "duration": 1.56,
-      "currentTime": 0,
+      "currentTime": 0.00728,
       "paused": false,
       "ended": false,
       "preservesPitch": true
@@ -766,7 +766,7 @@
       "label": "own-expression reference slow",
       "id": 2,
       "type": "playing",
-      "src": "http://localhost:5186/audio/daily/aria/hello.mp3?v=Hello!",
+      "src": "http://127.0.0.1:5186/audio/daily/aria/hello.mp3?v=Hello!",
       "rate": 0.72,
       "duration": 1.56,
       "currentTime": 0,
@@ -776,9 +776,9 @@
     },
     {
       "label": "own-expression reference normal",
-      "id": 3,
+      "id": 2,
       "type": "playing",
-      "src": "http://localhost:5186/audio/daily/aria/hello.mp3?v=Hello!",
+      "src": "http://127.0.0.1:5186/audio/daily/aria/hello.mp3?v=Hello!",
       "rate": 1,
       "duration": 1.56,
       "currentTime": 0,
@@ -788,9 +788,9 @@
     },
     {
       "label": "expression slow",
-      "id": 0,
+      "id": 8,
       "type": "playing",
-      "src": "http://localhost:5186/audio/daily/aria/mia-introduction.mp3?v=She%20is%20Mia.%20She%20is%20from%20Japan.%20She%20is%20a%20student.",
+      "src": "http://127.0.0.1:5186/audio/daily/aria/mia-introduction.mp3?v=She%20is%20Mia.%20She%20is%20from%20Japan.%20She%20is%20a%20student.",
       "rate": 0.72,
       "duration": 6,
       "currentTime": 0,
@@ -800,9 +800,9 @@
     },
     {
       "label": "expression normal",
-      "id": 1,
+      "id": 8,
       "type": "playing",
-      "src": "http://localhost:5186/audio/daily/aria/mia-introduction.mp3?v=She%20is%20Mia.%20She%20is%20from%20Japan.%20She%20is%20a%20student.",
+      "src": "http://127.0.0.1:5186/audio/daily/aria/mia-introduction.mp3?v=She%20is%20Mia.%20She%20is%20from%20Japan.%20She%20is%20a%20student.",
       "rate": 1,
       "duration": 6,
       "currentTime": 0,
@@ -812,9 +812,9 @@
     },
     {
       "label": "Guy expression slow",
-      "id": 2,
+      "id": 9,
       "type": "playing",
-      "src": "http://localhost:5186/audio/daily/guy/mia-introduction.mp3?v=She%20is%20Mia.%20She%20is%20from%20Japan.%20She%20is%20a%20student.",
+      "src": "http://127.0.0.1:5186/audio/daily/guy/mia-introduction.mp3?v=She%20is%20Mia.%20She%20is%20from%20Japan.%20She%20is%20a%20student.",
       "rate": 0.72,
       "duration": 5.952,
       "currentTime": 0,
@@ -824,9 +824,9 @@
     },
     {
       "label": "Guy expression normal",
-      "id": 3,
+      "id": 9,
       "type": "playing",
-      "src": "http://localhost:5186/audio/daily/guy/mia-introduction.mp3?v=She%20is%20Mia.%20She%20is%20from%20Japan.%20She%20is%20a%20student.",
+      "src": "http://127.0.0.1:5186/audio/daily/guy/mia-introduction.mp3?v=She%20is%20Mia.%20She%20is%20from%20Japan.%20She%20is%20a%20student.",
       "rate": 1,
       "duration": 5.952,
       "currentTime": 0,
