@@ -1,0 +1,15 @@
+{
+  "live": false,
+  "at": "2026-09-23T02:13:13.354Z",
+  "results": [
+    "sync dialog fits 320/360/412/844px and all four themes",
+    "web progress pairs into the APK origin, including historical mastery and both saved curricula",
+    "real favorite control changes sync from web to phone",
+    "two web tabs do not trigger a repeating sync loop",
+    "phone offline changes remain local and upload after reconnection",
+    "pairing and synced progress survive a full reload",
+    "conflicting progress is visibly held until a choice, then both copies are backed up",
+    "disconnect preserves local learning data"
+  ],
+  "pageErrors": []
+}

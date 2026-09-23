@@ -4,9 +4,9 @@
 
 目前已实现 3,620 条词汇（原 3,560 条及 ID 保留，追加 60 条）、分类检索、点读、慢速、收藏，以及动态课程、渐进练习与长期复习。两区课程与练习册合并，只展示当前动态编排的一节；下一节根据实际表现补弱、减少或增加新内容，不预先固定实际课数。首次教学仅标记正在学习，达到信心与间隔迁移条件后才准入长期复习；复习出现的新困难可回流后续课程补学。不再提供手动掌握。网站点读使用本地 Aria / Guy 双声线 MP3，每套 7,241 个；旧 Piper Lessac 的 7,122 个 MP3 保留供回溯。项目包含可部署的 `dist` 成品，以及词汇、语音再生成工具。
 
-项目当前是纯静态前端，没有后台服务。学习状态只保存在浏览器 `localStorage`。
+学习状态优先保存在原有 `localStorage`。按用户 2026-09-23 的跨端同步要求，增加 Cloudflare Pages Function + D1 的可选私人同步码服务，见 `docs/SYNC.md`。没有注册账户系统；未配对设备继续只在本机保存。
 
-另有 `android/` 原生 WebView 测试壳，打包同一个 `dist`（完整双声线音频），通过受限本地 HTTPS origin 加载，继续使用 WebView 本机 `localStorage`，与浏览器记录互不自动同步。仅增加系统语音识别和系统文件选择器导出，见 `docs/ANDROID_TESTING.md`。保持包名 `com.codewords.english` 及本机签名以支持覆盖升级；不得提交 `.runtime/`、签名密钥、`android/keystore.properties` 或 APK。当前真机安装、系统识别与系统文件保存尚待验收，不能把 Chrome 仿真或编译成功称为真机验证。
+另有 `android/` 原生 WebView 测试壳，打包同一个 `dist`（完整双声线音频），通过受限本地 HTTPS origin 加载，继续使用 WebView 本机 `localStorage`，与浏览器使用同一私人同步码后共享学习记录。另有系统语音识别和系统文件选择器导出，见 `docs/ANDROID_TESTING.md`。保持包名 `com.codewords.english` 及本机签名以支持覆盖升级；不得提交 `.runtime/`、签名密钥、`android/keystore.properties` 或 APK。当前真机安装、系统识别与系统文件保存尚待验收，不能把 Chrome 仿真或编译成功称为真机验证。
 
 另有独立日常英语分区，首批材料为 A1-01—A1-04 四个单元、24 个教学范围，见 `docs/DAILY_ENGLISH.md`。材料在 `src/dailyCourse.ts`，候选题在 `src/dailyPractice.ts`，页面在 `src/DailyEnglish.tsx`，进度在 `src/dailyProgress.ts`；使用独立 `codewords-daily-v1`，不得映射或覆盖编程英语的词汇 ID 与记录。日常音频单独放在 `public/audio/daily/`，不计入编程各声线的 7,241 个录音。编程材料在 `src/programmingCourse.ts`、候选题在 `src/programmingPractice.ts`，同为 4 单元、24 个教学范围；两区共用 `src/adaptiveLearning.ts` 和页面交互。材料范围不代表用户实际只学 24 节。编程课程独立键为 `codewords-programming-course-v1`。
 
@@ -31,8 +31,8 @@
 
 # 3. 不可破坏的规则
 
-- 项目当前不需要 API Key、Cookie 或 Token。不得把敏感信息写入源码、前端环境变量、日志或提交记录；Vite 前端环境变量会暴露给浏览器，不能用于保存秘密。
-- 项目没有数据库。不得擅自引入数据库或远程账户系统；修改 `localStorage` 键名或数据格式时必须兼容已有学习记录，或提供迁移方案。
+- 本地学习不需要 API Key、Cookie 或 Token；同步码是设备间共享的私人凭证，仅由用户设备生成和保存，云端仅保存其哈希。不得把真实同步码写入源码、日志、截图、文档或构建产物。不得把敏感信息写入源码、前端环境变量、日志或提交记录；Vite 前端环境变量会暴露给浏览器，不能用于保存秘密。
+- D1 仅用于用户已授权的进度同步。不得擅自扩展为远程账户系统或用于其他数据；修改 `localStorage` 键名或数据格式时必须兼容已有学习记录，或提供迁移方案。
 - 不随意固定或修改开发端口、预览端口和 `vite.config.ts` 中的部署基础路径；确需修改时同步检查运行命令、相对资源路径和部署说明。
 - 不直接编辑 `node_modules/`、`.git/` 或 `dist/` 中生成的网页代码。更新 `dist/` 时应修改源码后重新构建。
 - 不无故删除、覆盖或批量重新生成 `public/audio/piper-lessac/`、`sources/`、`tools/models/` 和 `src/vocabulary.ts`。

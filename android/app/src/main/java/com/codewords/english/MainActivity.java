@@ -88,13 +88,16 @@ public final class MainActivity extends Activity {
             }
             @Override public WebResourceResponse shouldInterceptRequest(WebView view, WebResourceRequest request) {
                 Uri uri = request.getUrl();
+                if ("https".equals(uri.getScheme()) && "programming-english-learning-site.pages.dev".equals(uri.getHost())
+                        && uri.getPort() == -1 && uri.getUserInfo() == null && "/api/sync".equals(uri.getPath())
+                        && uri.getQuery() == null && !request.isForMainFrame()) return null;
                 if ("https".equals(uri.getScheme()) && "appassets.androidplatform.net".equals(uri.getHost())
                         && uri.getPort() == -1 && uri.getUserInfo() == null && uri.getPath() != null
                         && uri.getPath().startsWith("/assets/web/")) {
                     WebResourceResponse response = loader.shouldInterceptRequest(uri);
                     if (response != null) {
                         if ("text/html".equals(response.getMimeType())) response.setResponseHeaders(Collections.singletonMap(
-                                "Content-Security-Policy", "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; media-src 'self'; connect-src 'none'; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'"));
+                                "Content-Security-Policy", "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; media-src 'self'; connect-src https://programming-english-learning-site.pages.dev/api/sync; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'"));
                         return response;
                     }
                 }

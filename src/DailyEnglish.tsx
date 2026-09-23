@@ -1,5 +1,6 @@
 import { Fragment, useEffect, useMemo, useRef, useState, type ReactNode, type RefObject } from 'react';
 import Icon from './Icon';
+import { progressStorage, blockSyncApply } from './progressStorage';
 import { downloadRecord } from './nativeAndroid';
 import SpeechControls, { type PlaybackSpeed } from './SpeechControls';
 import DailySpeaking, { dailySpeakingMode } from './DailySpeaking';
@@ -106,6 +107,10 @@ export default function DailyEnglish({ active, view, navigation, voice, speed, o
     : view === 'review' && dailyLessonReviewable(progress, lesson));
   const showSession = active && sessionOpen && sessionVisible;
   const feedback = session?.feedback;
+  useEffect(() => {
+    blockSyncApply(storageKey, !writable || speechBusy);
+    return () => blockSyncApply(storageKey, false);
+  }, [storageKey, writable, speechBusy]);
   const compactFeedback = feedback && feedback.correct && feedback.outcome !== 'revealed';
   const feedbackTitle = feedback?.outcome === 'self' ? session?.draft.speech?.mode === 'read' ? '这组表达已完成跟读' : '已记录你的自查' : feedback?.outcome === 'revealed' ? '看看这句怎么表达' : feedback?.correct ? session?.draft.helped ? '借助提示完成了' : '回答正确' : '再看一下这里';
 
@@ -120,7 +125,7 @@ export default function DailyEnglish({ active, view, navigation, voice, speed, o
   function commit(next: DailyProgress) {
     if (!writable) return;
     let result;
-    try { result = persistDailyProgress(localStorage, next, storedRaw.current, storageKey); }
+    try { result = persistDailyProgress(progressStorage, next, storedRaw.current, storageKey); }
     catch {
       current.current = next; setProgress(next);
       setWarning('浏览器无法访问存储。本页输入仍在，请导出记录，恢复存储权限后再继续。');
@@ -325,7 +330,7 @@ export default function DailyEnglish({ active, view, navigation, voice, speed, o
         })}</ul> : <div className="daily-empty">{showingFavorites ? <><h2>{favoriteCount ? '没有找到相符的表达' : '还没有收藏表达'}</h2><p>{favoriteCount ? '试试其他关键词。' : '在表达旁点亮星标，就能在这里找到。'}</p><button className="daily-button" onClick={() => favoriteCount ? setFavoritesQuery('') : openLibrary()}>{favoriteCount ? '查看全部收藏' : '去表达库收藏'}</button></> : <p>{query.trim() ? '没有找到相符的表达。' : libraryFilter === 'favorites' ? '还没有收藏表达。' : '完成教学后，学过的表达会显示在这里。'}</p>}</div>}
       </section> : customReview && renderReview ? renderReview(scenarios) : <div className="daily-layout"><section className="daily-panel daily-enter" aria-label={view === 'course' ? '当前课程' : '复习安排'}>
         {view === 'course' ? nextLesson && unit ? <><div className="daily-panel-heading"><h2>继续学习</h2><p>根据之前的表现，安排新内容和需要巩固的内容。</p></div><ol className="daily-lessons"><li className="daily-lesson-row"><span className="daily-lesson-state" aria-label="当前课程"><Icon name="book" /></span><div className="daily-lesson-copy"><h3>{session?.mode === 'lesson' && session.stage !== 'summary' ? '接着这一节学习' : `第 ${completed + 1} 节`}</h3><p>先学习讲解，再通过不同题目逐步巩固。</p></div><div className="daily-lesson-actions"><button className="daily-button primary" disabled={!writable} onClick={() => start(nextLesson, 'lesson')}>{session?.mode === 'lesson' && session.stage !== 'summary' ? '继续学习' : '开始学习'}<Icon name="arrow" /></button></div></li></ol></> : <div className="daily-empty"><h2>当前课程已全部完成</h2><p>到“复习”继续巩固学过的内容。后续课程会逐步增加。</p></div> : scenarios}
-      </section><aside className="daily-rail" aria-label={`${label}课程进度`}><section className="daily-note"><h2>课程进度</h2><p className="daily-total">已完成 <strong>{completed}</strong> 节</p><p>{view === 'course' && nextLesson ? '下一节根据学习表现生成；正在学习的内容会继续巩固，表现稳定后进入复习。' : '学习记录保存在当前浏览器。'}</p><button className="daily-button text" onClick={exportRecord}>导出学习记录</button></section></aside></div>}
+      </section><aside className="daily-rail" aria-label={`${label}课程进度`}><section className="daily-note"><h2>课程进度</h2><p className="daily-total">已完成 <strong>{completed}</strong> 节</p><p>{view === 'course' && nextLesson ? '下一节根据学习表现生成；正在学习的内容会继续巩固，表现稳定后进入复习。' : '学习记录先保存在本机。'}</p><button className="daily-button text" onClick={exportRecord}>导出学习记录</button></section></aside></div>}
     </>}
   </main>;
 }

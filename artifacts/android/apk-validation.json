@@ -1,7 +1,7 @@
 {
-  "apk": "codewords-1.0.0-release.apk",
-  "bytes": 213310200,
-  "sha256": "54d76ecb749811bea3901898eb34a2488800a5b103195a3c3f0eae48e19028c3",
+  "apk": "codewords-1.1.0-release.apk",
+  "bytes": 213315304,
+  "sha256": "b777465f80a63f00770eab4e7fa5147f96f7c687ca4df7f6fc1cddbd4535d2b6",
   "matchedWebFiles": 14665,
   "mp3Files": 14648,
   "payloadMatchesDist": true,

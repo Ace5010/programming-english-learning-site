@@ -11,7 +11,7 @@ parser.add_argument('--output', type=Path)
 args = parser.parse_args()
 root = Path(__file__).resolve().parent.parent
 dist = root / 'dist'
-excluded = {'_headers', '_redirects', '.nojekyll'}
+excluded = {'_headers', '_redirects', '_routes.json', '.nojekyll'}
 expected = {f'assets/web/{file.relative_to(dist).as_posix()}': file for file in dist.rglob('*') if file.is_file() and file.name not in excluded}
 assert 'assets/web/index.html' in expected, 'Build dist before verifying the APK'
 with zipfile.ZipFile(args.apk) as apk:

@@ -5,6 +5,8 @@ import Icon from './Icon';
 import ThemePicker, { readTheme, THEME_KEY, type Theme } from './ThemePicker';
 import { useThemeMotion } from './useThemeMotion';
 import { useMobileViewport } from './useMobileViewport';
+import SyncPanel from './SyncPanel';
+import { progressStorage, REMOTE_APPLIED } from './progressStorage';
 import { downloadRecord } from './nativeAndroid';
 import DailyEnglish from './DailyEnglish';
 import ReviewVocabulary from './ReviewVocabulary';
@@ -33,6 +35,7 @@ export default function Home() {
   const [dailyView, setDailyView] = useState<View>('course');
   const [programmingView, setProgrammingView] = useState<View>('course');
   const [navigation, setNavigation] = useState(0);
+  const [syncRevision, setSyncRevision] = useState(0);
   const [dailyVisited, setDailyVisited] = useState(section === 'daily');
   const [programmingVisited, setProgrammingVisited] = useState(section === 'programming');
   const [theme, setTheme] = useState<Theme>(readTheme);
@@ -82,7 +85,7 @@ export default function Home() {
     catch { window.alert('语速已切换，但浏览器未能保存偏好。'); }
   }, []);
   const refreshReview = useCallback(() => {
-    try { setReviewProgress(initializeProgrammingReview(localStorage)); setReviewWarning(''); }
+    try { setReviewProgress(initializeProgrammingReview(progressStorage)); setReviewWarning(''); }
     catch (error) { setReviewWarning(error instanceof Error ? error.message : '复习记录无法保存，原记录已保留。'); }
   }, []);
   useEffect(() => {
@@ -94,9 +97,14 @@ export default function Home() {
     window.addEventListener('storage', update);
     return () => { window.removeEventListener('storage', update); activeAudio.current?.pause(); };
   }, [refreshReview]);
+  useEffect(() => {
+    const apply = () => { stopAudio(); refreshReview(); setFavoriteState(readFavorites()); setQuizSessions(Number(localStorage.getItem('codewords-quiz-sessions') ?? 0)); setSyncRevision(value => value + 1); };
+    window.addEventListener(REMOTE_APPLIED, apply);
+    return () => window.removeEventListener(REMOTE_APPLIED, apply);
+  }, [refreshReview, stopAudio]);
   const syncProgramming = useCallback((progress: DailyProgress) => {
     try {
-      const result = persistProgrammingCourseEvidence(localStorage, progress, programmingLessons);
+      const result = persistProgrammingCourseEvidence(progressStorage, progress, programmingLessons);
       setReviewProgress(result); setReviewWarning('');
     } catch (error) {
       const message = error instanceof Error ? error.message : '词汇复习记录未能同步。课程已保存，请刷新重试。';
@@ -139,7 +147,7 @@ export default function Home() {
     const latest = readFavorites();
     if (latest.warning) { setFavoriteState(latest); return; }
     const ids = new Set(latest.ids); if (ids.has(id)) ids.delete(id); else ids.add(id);
-    try { localStorage.setItem('codewords-favorites', JSON.stringify([...ids])); setFavoriteState({ ids, warning: '' }); }
+    try { progressStorage.setItem('codewords-favorites', JSON.stringify([...ids])); setFavoriteState({ ids, warning: '' }); }
     catch { setFavoriteState({ ids: latest.ids, warning: '收藏暂时无法保存，请检查浏览器存储。' }); }
   }
   function startQuiz(early = false, wordIds?: number[]) {
@@ -155,7 +163,7 @@ export default function Home() {
       setShowQuiz(true);
     } catch { setReviewWarning('复习记录无法读取，原记录已保留，请先导出记录。'); }
   }
-  const finishReview = () => { const count = quizSessions + 1; setQuizSessions(count); try { localStorage.setItem('codewords-quiz-sessions', String(count)); } catch { setReviewWarning('本轮练习次数未能保存。'); } refreshReview(); };
+  const finishReview = () => { const count = quizSessions + 1; setQuizSessions(count); try { progressStorage.setItem('codewords-quiz-sessions', String(count)); } catch { setReviewWarning('本轮练习次数未能保存。'); } refreshReview(); };
   const closeReview = () => { stopAudio(); setShowQuiz(false); refreshReview(); requestAnimationFrame(() => {
     const trigger = quizTrigger.current;
     if (trigger?.isConnected && !trigger.matches(':disabled')) trigger.focus();
@@ -232,10 +240,10 @@ export default function Home() {
     <header className="site-header"><div className="header-inner">
       <div className="section-switch" role="group" aria-label="学习分区"><button aria-pressed={section === 'programming'} onClick={() => changeSection('programming')}><Icon name="book" />编程英语</button><button aria-pressed={section === 'daily'} onClick={() => changeSection('daily')}>日常英语</button></div>
       <nav ref={navRef} className="main-nav" aria-label="学习导航">{(['course', 'review', 'library', 'favorites'] as const).map((value, index) => <button key={value} className={`nav-item${view === value ? ' active' : ''}`} aria-current={view === value ? 'page' : undefined} onClick={() => changeView(value)}><Icon name={(['book', 'review', 'library', 'star'] as const)[index]} /><span>{value === 'course' ? '课程' : value === 'review' ? '复习' : value === 'favorites' ? '收藏' : section === 'daily' ? '表达库' : '词汇库'}</span></button>)}<span className="nav-marker" aria-hidden="true"><span className="nav-marker-ink" /><span className="nav-marker-spray" /></span></nav>
-      <ThemePicker value={theme} onChange={changeTheme} />
+      <div className="header-tools"><SyncPanel /><ThemePicker value={theme} onChange={changeTheme} /></div>
     </div></header>
     {section === 'programming' && reviewWarning && <div className="content"><div className="daily-notice" role="alert"><p>{reviewWarning}</p><button className="daily-button" onClick={exportProgramming}>导出原始记录</button><button className="daily-button" onClick={refreshReview}>重新读取</button></div></div>}
-    {programmingVisited && <DailyEnglish active={section === 'programming' && !libraryActive} curriculum={curriculum} view={programmingView === 'library' || programmingView === 'favorites' ? 'course' : programmingView} navigation={navigation} voice={voice} speed={playbackSpeed} onSpeedChange={changeSpeed} speaking={speaking} play={playProgramming} stopAudio={stopAudio} openVoice={() => setShowVoice(true)} openLibrary={() => changeView('library')} contentRef={section === 'programming' && !libraryActive ? contentRef : undefined} headingRef={section === 'programming' && !libraryActive ? headingRef : undefined}
+    {programmingVisited && <DailyEnglish key={`programming-${syncRevision}`} active={section === 'programming' && !libraryActive} curriculum={curriculum} view={programmingView === 'library' || programmingView === 'favorites' ? 'course' : programmingView} navigation={navigation} voice={voice} speed={playbackSpeed} onSpeedChange={changeSpeed} speaking={speaking} play={playProgramming} stopAudio={stopAudio} openVoice={() => setShowVoice(true)} openLibrary={() => changeView('library')} contentRef={section === 'programming' && !libraryActive ? contentRef : undefined} headingRef={section === 'programming' && !libraryActive ? headingRef : undefined}
       reviewDescription={`已学 ${reviewPool.length} 个词，${duePool.length} 个待复习。`}
       renderReview={scenarios => <ReviewVocabulary words={reviewPool} progress={reviewProgress} favorites={favorites} favoriteWarning={favoriteState.warning} disabled={!!reviewWarning} speaking={speaking} speed={playbackSpeed} reviewButtonRef={reviewButton} scenarios={scenarios} startDue={() => startQuiz()} startWords={ids => startQuiz(true, ids)} toggleFavorite={toggleFavorite} playWord={playWord} playExample={playExample} openCourse={() => changeView('course')} exportRecord={exportProgramming} />} />}
     <main ref={libraryActive ? contentRef : undefined} className="content" id="vocabulary-content" hidden={!libraryActive}>
@@ -252,9 +260,9 @@ export default function Home() {
           const nextDue = learned ? Math.min(...reviewAbilities.map(ability => getSkill(reviewProgress, item.id, ability).dueAt)) : 0;
           return <VocabularyRow key={item.id} item={item} favorite={favorites.has(item.id)} favoriteDisabled={!!favoriteState.warning} speaking={speaking} speed={playbackSpeed} toggleFavorite={toggleFavorite} playWord={playWord} playExample={playExample} status={!learned ? '尚未学习' : reviewProgress[item.id].reviewReadyAt === 0 ? '正在学习' : nextDue <= Date.now() ? '待复习' : `下次复习 ${new Date(nextDue).toLocaleDateString('zh-CN', { month: 'numeric', day: 'numeric' })}`} />;
         })}</section>{listVisibleCount < filtered.length && <div className="load-more-area"><button className="load-more" onClick={() => showingFavorites ? setFavoritesVisibleCount(count => count + 24) : setVisibleCount(count => count + 24)}>再显示 24 个<Icon name="chevron" /></button><span>已显示 {Math.min(listVisibleCount, filtered.length)} / {filtered.length.toLocaleString()}</span></div>}</> : <section className="empty-state"><Icon name={showingFavorites && !favoriteCount ? 'star' : 'search'} /><h2>{showingFavorites && !favoriteCount ? '还没有收藏单词' : '没有匹配的词汇'}</h2><p>{showingFavorites && !favoriteCount ? '在词条旁点亮星标，就能在这里找到。' : showingFavorites ? '试试其他关键词。' : '试试其他关键词，或调整筛选范围。'}</p><button onClick={() => showingFavorites && !favoriteCount ? changeView('library') : resetListFilters()}>{showingFavorites ? favoriteCount ? '查看全部收藏' : '去词汇库收藏' : '查看全部词汇'}</button></section>}
-      </section><footer className="site-footer"><button className="daily-button text" onClick={exportProgramming}>导出编程英语记录</button><p>学习记录保存在当前浏览器。</p></footer>
+      </section><footer className="site-footer"><button className="daily-button text" onClick={exportProgramming}>导出编程英语记录</button><p>学习记录先保存在本机。</p></footer>
     </main>
-    {dailyVisited && <DailyEnglish active={section === 'daily'} view={dailyView} navigation={navigation} voice={voice} speed={playbackSpeed} onSpeedChange={changeSpeed} speaking={speaking} play={playDaily} stopAudio={stopAudio} openVoice={() => setShowVoice(true)} openLibrary={() => changeView('library')} contentRef={section === 'daily' ? contentRef : undefined} headingRef={section === 'daily' ? headingRef : undefined} />}
+    {dailyVisited && <DailyEnglish key={`daily-${syncRevision}`} active={section === 'daily'} view={dailyView} navigation={navigation} voice={voice} speed={playbackSpeed} onSpeedChange={changeSpeed} speaking={speaking} play={playDaily} stopAudio={stopAudio} openVoice={() => setShowVoice(true)} openLibrary={() => changeView('library')} contentRef={section === 'daily' ? contentRef : undefined} headingRef={section === 'daily' ? headingRef : undefined} />}
       {showVoice && <div className="modal-layer" role="dialog" aria-modal="true" aria-labelledby="voice-heading">
         <button className="backdrop" onClick={() => setShowVoice(false)} aria-label="关闭" tabIndex={-1} />
         <section ref={voiceDialog} className="modal voice-modal">

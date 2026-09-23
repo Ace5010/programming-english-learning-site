@@ -29,7 +29,7 @@ await context.route(`${origin}/**`, async route => {
   assert.ok(file.startsWith(dist + path.sep));
   const mime = { '.html': 'text/html', '.css': 'text/css', '.js': 'application/javascript', '.json': 'application/json', '.mp3': 'audio/mpeg', '.woff2': 'font/woff2', '.svg': 'image/svg+xml', '.png': 'image/png' };
   const headers = { 'content-type': mime[path.extname(file)] || 'application/octet-stream' };
-  if (relative === 'index.html') headers['content-security-policy'] = "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; media-src 'self'; connect-src 'none'; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'";
+  if (relative === 'index.html') headers['content-security-policy'] = "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; media-src 'self'; connect-src https://programming-english-learning-site.pages.dev/api/sync; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'";
   await route.fulfill({ status: 200, body: await readFile(file), headers });
 });
 await page.addInitScript(progress => {

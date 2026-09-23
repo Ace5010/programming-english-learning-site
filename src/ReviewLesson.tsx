@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import { progressStorage, blockSyncApply } from './progressStorage';
 import type { VocabularyItem } from './vocabulary';
 import LessonExercise, { type ExerciseHandle } from './LessonExercise';
 import { createLesson, answerLesson, nextLesson, summarizeLesson, type LessonTask, type TaskResult } from './lesson';
@@ -45,6 +46,7 @@ type Props = {
 };
 
 export default function ReviewLesson({ pool, onClose, onFinished, playWord, speaking = '', theme, onThemeChange, speed, onSpeedChange }: Props) {
+  useEffect(() => { blockSyncApply('review-quiz', true); return () => blockSyncApply('review-quiz', false); }, []);
   const [initial] = useState(loadReview);
   const progress = useRef(initial.progress);
   const legacy = useRef(initial.history);
@@ -119,7 +121,7 @@ export default function ReviewLesson({ pool, onClose, onFinished, playWord, spea
           for (const answer of answers) history[answer.wordId] = now;
           historyUpdate = { raw, history };
         }
-        persistProgrammingReviewSnapshot(localStorage, snapshot, expectedRaw, historyUpdate);
+        persistProgrammingReviewSnapshot(progressStorage, snapshot, expectedRaw, historyUpdate);
         if (historyUpdate) legacy.current = historyUpdate.history;
       } catch (error) { canSave.current = false; setWarning(error instanceof Error ? error.message : '浏览器未能完整保存结果。可以继续练习，本轮后续结果暂不保存。'); }
     }

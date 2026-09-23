@@ -1,5 +1,5 @@
 {
-  "baseURL": "http://localhost:5186/dist/",
+  "baseURL": "http://localhost:5186/",
   "results": [
     "phone pages, long words and settings in all themes",
     "word review dictation stays reachable above the mobile keyboard",

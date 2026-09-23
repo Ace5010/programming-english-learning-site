@@ -1,0 +1,11 @@
+{
+  "name": "programming-english-learning-site",
+  "pages_build_output_dir": "./dist",
+  "compatibility_date": "2026-09-01",
+  "d1_databases": [{
+    "binding": "CODEWORDS_SYNC_DB",
+    "database_name": "codewords-progress-sync",
+    "database_id": "c106ed58-fbdf-4981-a767-cfe107b3f9bf"
+  }],
+  "env": { "preview": { "d1_databases": [] } }
+}
