@@ -1,0 +1,169 @@
+跳到学习内容
+编程英语
+日常英语
+英语基础
+课程
+复习
+词汇库
+收藏
+同步
+配色
+蓝绿
+黑白
+冰蓝
+薄荷绿
+复习
+语音设置
+已学词汇
+开始到期复习
+练习已学词
+显示
+全部已学 · 11
+待复习 · 4
+需要巩固 · 1
+未到期 · 7
+11 个词
+
+克隆；复制仓库
+
+clone
+/kloʊn/
+慢速
+待复习
+需巩固：拼写
+练习
+Clone this project.
+克隆这个项目。
+慢速
+
+函数
+
+function
+/ˈfʌŋkʃən/
+慢速
+待复习
+练习
+This function adds two numbers.
+这个函数把两个数相加。
+慢速
+
+变量
+
+variable
+/ˈveriəbəl/
+慢速
+待复习
+练习
+Put your name in this variable.
+把你的名字存入这个变量。
+慢速
+
+代码仓库
+
+repository
+/rɪˈpɑːzətɔːri/
+慢速
+待复习
+练习
+Open this repository.
+打开这个代码仓库。
+慢速
+
+复刻；派生仓库
+
+fork
+/fɔːrk/
+慢速
+下次复习 9/30
+练习
+Fork this project on GitHub.
+在 GitHub 上复刻这个项目。
+慢速
+
+切换分支或版本
+
+checkout
+慢速
+下次复习 9/30
+练习
+Use checkout to change branches.
+用 checkout 命令切换分支。
+慢速
+
+项目说明文件
+
+readme
+慢速
+下次复习 9/30
+练习
+Read the README for help.
+阅读 README 获取帮助。
+慢速
+
+更改；修改；改变；交换
+
+change
+/tʃendʒ/
+慢速
+下次复习 9/30
+练习
+Change this code.
+修改这段代码。
+慢速
+
+主要的；主要部分；main 主分支
+
+main
+慢速
+下次复习 9/30
+练习
+Switch to the main branch.
+切换到主分支。
+慢速
+
+项目；计划；投射；放映；设计；规划
+
+project
+/prəˈdʒɛkt; prɑdʒɛkt/
+慢速
+下次复习 9/30
+练习
+Open this project.
+打开这个项目。
+慢速
+
+代码
+
+code
+/koʊd/
+慢速
+下次复习 9/30
+练习
+Read this code.
+阅读这段代码。
+慢速
+本次复习
+
+待复习 4 个词
+
+场景复习
+导出学习记录
+返回学习
+词汇复习
+本轮 1 个词
+2 / 2
+配色
+蓝绿
+黑白
+冰蓝
+薄荷绿
+选择正确的含义
+fork
+正常播放
+慢速播放
+提交；提交记录
+分支
+复刻；派生仓库
+提示
+暂时不会
+检查

@@ -1,0 +1,129 @@
+{
+  "cloudCalls": 0,
+  "containsUserRecording": false,
+  "unauthorizedRequestsBlocked": 3,
+  "cases": [
+    {
+      "id": "aria-goodbye",
+      "result": {
+        "reference": "Goodbye.",
+        "status": "supported",
+        "transcript": "Goodbye.",
+        "feedback": [],
+        "audioSaved": false,
+        "cloudCalls": 0,
+        "experimental": true,
+        "reason": "words-and-acoustics-supported",
+        "elapsedMs": 6344,
+        "recognizedWordsMatch": true,
+        "greedyPhonemesMatch": false
+      },
+      "expected": "supported"
+    },
+    {
+      "id": "guy-goodbye",
+      "result": {
+        "reference": "Goodbye.",
+        "status": "supported",
+        "transcript": "Goodbye.",
+        "feedback": [],
+        "audioSaved": false,
+        "cloudCalls": 0,
+        "experimental": true,
+        "reason": "words-and-acoustics-supported",
+        "elapsedMs": 6250,
+        "recognizedWordsMatch": true,
+        "greedyPhonemesMatch": false
+      },
+      "expected": "supported"
+    },
+    {
+      "id": "guy-hello",
+      "result": {
+        "reference": "Hello.",
+        "status": "supported",
+        "transcript": "Hello?",
+        "feedback": [],
+        "audioSaved": false,
+        "cloudCalls": 0,
+        "experimental": true,
+        "reason": "words-and-acoustics-supported",
+        "elapsedMs": 6281,
+        "recognizedWordsMatch": true,
+        "greedyPhonemesMatch": true
+      },
+      "expected": "supported"
+    },
+    {
+      "id": "sink-for-think",
+      "result": {
+        "reference": "Think.",
+        "status": "practice",
+        "transcript": "Sink",
+        "feedback": [
+          {
+            "index": 0,
+            "expected": "θ",
+            "heard": "s"
+          }
+        ],
+        "audioSaved": false,
+        "cloudCalls": 0,
+        "experimental": true,
+        "reason": "agreed-phoneme-substitution",
+        "elapsedMs": 6296,
+        "recognizedWordsMatch": false,
+        "greedyPhonemesMatch": false
+      },
+      "expected": "practice"
+    },
+    {
+      "id": "sheep-for-ship",
+      "result": {
+        "reference": "Ship.",
+        "status": "practice",
+        "transcript": "sheep",
+        "feedback": [
+          {
+            "index": 1,
+            "expected": "ɪ",
+            "heard": "i"
+          }
+        ],
+        "audioSaved": false,
+        "cloudCalls": 0,
+        "experimental": true,
+        "reason": "agreed-phoneme-substitution",
+        "elapsedMs": 6266,
+        "recognizedWordsMatch": false,
+        "greedyPhonemesMatch": false
+      },
+      "expected": "practice"
+    },
+    {
+      "id": "free-for-three",
+      "result": {
+        "reference": "Three.",
+        "status": "practice",
+        "transcript": "Free.",
+        "feedback": [
+          {
+            "index": 0,
+            "expected": "θ",
+            "heard": "f"
+          }
+        ],
+        "audioSaved": false,
+        "cloudCalls": 0,
+        "experimental": true,
+        "reason": "agreed-phoneme-substitution",
+        "elapsedMs": 6219,
+        "recognizedWordsMatch": false,
+        "greedyPhonemesMatch": false
+      },
+      "expected": "practice"
+    }
+  ],
+  "silenceRejectedWithoutModelCall": true,
+  "status": "six-public-cases-and-silence-passed-human-validation-pending"
+}

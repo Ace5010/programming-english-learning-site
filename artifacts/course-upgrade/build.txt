@@ -1,0 +1,17 @@
+
+> programming-english-learning-site@1.0.0 build
+> vite build && node scripts/prepare-deploy.mjs
+
+vite v8.2.2 building client environment for production...
+transforming...
+✓ 76 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                     0.75 kB │ gzip:   0.51 kB
+dist/assets/index-XN73Y5ha.css    117.77 kB │ gzip:  20.82 kB
+dist/assets/index-nqdQT5j7.js   1,303.58 kB │ gzip: 387.51 kB
+
+✓ built in 7.42s
+Daily English verified: 24 lessons, 166 audio files.
+Course reading and feedback verified: { texts: 288, recordings: 576, feedbackSounds: 3 }
+Deployment verified: 15248 files, two complete voices.

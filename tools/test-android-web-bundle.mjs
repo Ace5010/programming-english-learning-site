@@ -9,6 +9,7 @@ import { createDailyProgress, createDailySession } from '../src/dailyProgress.ts
 const require = createRequire(import.meta.url);
 const { chromium } = require(process.env.CODEWORDS_PLAYWRIGHT || 'C:/Users/shenwuqiang/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
 const dist = path.resolve('dist');
+const output = path.resolve(process.env.CODEWORDS_ARTIFACT_DIR || 'artifacts/android');
 const origin = 'https://appassets.androidplatform.net';
 const lesson = adaptiveDailyLessons[0], task = lesson.exercises.find(task => task.kind === 'speak');
 const ids = task.knowledgeIds, now = Date.now();
@@ -127,9 +128,9 @@ try {
   assert.equal(exported.filename, 'programming-english-record.json');
   assert.equal(JSON.parse(exported.content)['codewords-favorites'], '[1]');
   results.push('reload preserves speech draft and favorites; export forwards the exact saved record');
-  await mkdir('artifacts/android', { recursive: true });
-  await page.screenshot({ path: 'artifacts/android/bundled-mobile-favorites.png', fullPage: true });
+  await mkdir(output, { recursive: true });
+  await page.screenshot({ path: path.join(output, 'bundled-mobile-favorites.png'), fullPage: true });
   assert.deepEqual(errors, []);
-  await writeFile('artifacts/android/web-bundle-results.json', JSON.stringify({ results, audio, errors, note: 'Chrome, exact bundled web paths and CSP; simulated native speech/export, not device validation.' }, null, 2));
+  await writeFile(path.join(output, 'web-bundle-results.json'), JSON.stringify({ results, audio, errors, note: 'Chrome, exact bundled web paths and CSP; simulated native speech/export, not device validation.' }, null, 2));
   console.log(`PASS ${results.length} Android web-bundle scenarios, ${audio.length} actual playing events.`);
 } finally { await browser.close(); }

@@ -62,6 +62,9 @@ function readWords(text: string): Word[] {
 function expand(words: Word[]): Part[] {
   return words.flatMap((word, wordIndex) => {
     let values = Object.prototype.hasOwnProperty.call(contractions, word.normalized) ? contractions[word.normalized] : undefined
+    // Recognizers also write the farewell as "good bye" or "good-bye".
+    // Keep this explicit: arbitrary joined words and homophones remain different.
+    if (word.normalized === 'goodbye') values = ['good', 'bye']
     // This A1 introduction is an is-contraction; other possessives remain intact.
     // Ambiguous 'd and general noun's contractions are deliberately not guessed.
     if (word.normalized === "name's" && /^(my|your|his|her|our|their)$/.test(words[wordIndex - 1]?.normalized ?? '')) {

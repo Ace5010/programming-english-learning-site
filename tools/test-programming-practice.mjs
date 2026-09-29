@@ -1,3 +1,4 @@
+import { correctDraft } from './helpers/course-answer.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { statSync } from 'node:fs';
@@ -17,7 +18,7 @@ test('adaptive candidates preserve existing teaching and stable historical exerc
     const original = programmingLessons[index];
     assert.equal(lesson.id, original.id);
     for (const key of ['exercises', 'rechecks']) {
-      assert.deepEqual(lesson[key].map(({ learningDifficulty, learningSignature, ...task }) => task), original[key]);
+      assert.deepEqual(lesson[key].map(({ learningDifficulty, learningSignature, learningContext, ...task }) => task), original[key]);
       for (const task of lesson[key]) {
         assert.ok(['recognition', 'context', 'recall'].includes(task.learningDifficulty));
         assert.equal(task.learningSignature, `authored:${task.id}`);
@@ -30,11 +31,11 @@ test('adaptive candidates preserve existing teaching and stable historical exerc
     for (const task of lesson.practice) {
       assert.ok(!allIds.has(task.id), task.id); allIds.add(task.id);
       assert.ok(task.id.startsWith(`${lesson.id}-p-`));
-      assert.equal(task.wordIds.length, 1);
+      assert.equal(task.wordIds.length, task.kind === 'match' ? task.pairs.length : 1);
       assert.ok(lesson.wordIds.includes(task.wordIds[0]), task.id);
-      assert.deepEqual(task.knowledgeIds, [`word-${task.wordIds[0]}`]);
+      assert.deepEqual(task.knowledgeIds, task.wordIds.map(id => `word-${id}`));
       assert.ok(['recognition', 'context', 'recall'].includes(task.learningDifficulty));
-      assert.ok(task.learningSignature.startsWith(`word-${task.wordIds[0]}:`));
+      assert.ok(task.learningSignature.startsWith(task.kind === 'match' ? `pairs:${task.pairMode}:` : `word-${task.wordIds[0]}:`));
     }
   }
 });
@@ -56,14 +57,14 @@ test('every target offers distinct recognition, context, listening and recall ca
 test('every generated answer works with shared matching and every distractor is rejected', () => {
   const positions = [0, 0, 0];
   for (const task of practice) {
-    const answer = createDailyDraft(task);
-    assert.equal(checkDailyAnswer(task, answer).correct, false, `${task.id}: empty`);
+    const answer = correctDraft(task);
+    assert.equal(checkDailyAnswer(task, createDailyDraft(task)).correct, false, `${task.id}: empty`);
     if (task.kind === 'fill') {
       answer.blanks = task.blanks.map(choices => choices[0]);
       assert.equal(task.parts.length, task.blanks.length + 1);
       const wrong = createDailyDraft(task); wrong.blanks = ['zzzzz'];
       assert.equal(checkDailyAnswer(task, wrong).correct, false, task.id);
-    } else {
+    } else if (task.kind === 'choice' || task.kind === 'listen') {
       assert.equal(task.options.length, 3, task.id);
       assert.equal(new Set(task.options.map(normalizeDailyAnswer)).size, 3, task.id);
       answer.choice = task.answers[0];
@@ -102,12 +103,13 @@ test('all English sentences and recordings reuse the actual vocabulary with no i
     if (task.kind === 'fill') {
       const full = task.parts.map((part, index) => part + (task.blanks[index]?.[0] ?? '')).join('');
       assert.equal(full, word.example, task.id);
-      assert.equal(task.audioId, undefined);
+      assert.equal(task.audioId, task.audioPrompt ? `example-${word.id}` : undefined);
+      if (task.audioPrompt) assert.equal(normalizeDailyAnswer(task.blanks[0][0]), normalizeDailyAnswer(word.word), `${task.id}: listening evidence must test its mapped word`);
     }
     if (task.audioId) {
-      assert.equal(task.kind, 'listen');
-      assert.equal(task.audioId, `word-${word.id}`);
-      assert.ok(lesson.phrases.some(phrase => phrase.id === task.audioId && phrase.en === word.word));
+      assert.equal(task.kind, task.audioPrompt ? 'fill' : 'listen');
+      assert.equal(task.audioId, `${task.audioPrompt ? 'example' : 'word'}-${word.id}`);
+      assert.ok(lesson.phrases.some(phrase => phrase.id === task.audioId && phrase.en === (task.audioPrompt ? word.example : word.word)));
       for (const voice of ['aria', 'guy']) assert.ok(statSync(new URL(`../public/audio/${voice}/${task.audioId}.mp3`, import.meta.url)).size > 0);
     }
   }

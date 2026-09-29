@@ -4,6 +4,10 @@ import { createHash } from 'node:crypto';
 import { resolve, relative, isAbsolute } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { verifyDailyAssets } from './verify-daily-assets.mjs';
+import { verifyReadingAssets } from './verify-reading-assets.mjs';
+import { verifyFoundationAssets } from './verify-foundation-assets.mjs';
+import { verifyPhonemicAssets } from './verify-phonemic-assets.mjs';
+import { verifySlowAssets } from './verify-slow-assets.mjs';
 const root = fileURLToPath(new URL('../', import.meta.url));
 const dist = resolve(root, 'dist');
 const readJSON = (path) => JSON.parse(readFileSync(resolve(root, path), 'utf8'));
@@ -22,6 +26,10 @@ const requiredManifest = new Set([
 const sha256 = (value) => createHash('sha256').update(value).digest('hex');
 const daily = verifyDailyAssets(resolve(dist, 'audio/daily'));
 console.log(`Daily English verified: ${daily.lessons} lessons, ${daily.audioFiles} audio files.`);
+console.log('Course reading and feedback verified:', verifyReadingAssets(resolve(dist, 'audio')));
+console.log('Foundation English verified:', verifyFoundationAssets(resolve(dist, 'audio/foundation')));
+console.log('Phonemic audio verified:', verifyPhonemicAssets(resolve(dist, 'audio/phonemes')));
+console.log('Word-by-word slow audio verified:', verifySlowAssets(resolve(dist, 'audio')));
 for (const [voice, voiceName] of [['aria', 'en-US-AriaNeural'], ['guy', 'en-US-GuyNeural']]) {
   const folder = resolve(dist, 'audio', voice);
   const expected = ['voice-test.mp3', ...vocabulary.flatMap(({ id }) => [`word-${id}.mp3`, `example-${id}.mp3`])];

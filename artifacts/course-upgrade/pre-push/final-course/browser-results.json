@@ -1,0 +1,418 @@
+{
+  "baseURL": "http://localhost:5186/",
+  "results": [
+    {
+      "name": "daily-order-correction-reload-theme",
+      "passed": true
+    },
+    {
+      "name": "daily-listening-gap-second-error",
+      "passed": true
+    },
+    {
+      "name": "daily-text-pairs",
+      "passed": true
+    },
+    {
+      "name": "daily-audio-pairs",
+      "passed": true
+    },
+    {
+      "name": "programming-order-correction-reload-theme",
+      "passed": true
+    },
+    {
+      "name": "programming-listening-gap-second-error",
+      "passed": true
+    },
+    {
+      "name": "programming-text-pairs",
+      "passed": true
+    },
+    {
+      "name": "programming-audio-pairs",
+      "passed": true
+    },
+    {
+      "name": "daily-writing-ime-and-one-retry",
+      "passed": true
+    },
+    {
+      "name": "speech-partial",
+      "passed": true
+    },
+    {
+      "name": "speech-hidden",
+      "passed": true
+    },
+    {
+      "name": "legacy-review-correction-refresh",
+      "passed": true
+    },
+    {
+      "name": "daily-real-adaptive-round",
+      "passed": true
+    },
+    {
+      "name": "programming-real-adaptive-round",
+      "passed": true
+    }
+  ],
+  "failures": [],
+  "audioEvents": [
+    {
+      "type": "playing",
+      "src": "http://localhost:5186/audio/aria/word-1932.mp3",
+      "rate": 1,
+      "duration": 1.608,
+      "pitch": true,
+      "active": 1
+    },
+    {
+      "type": "playing",
+      "src": "http://localhost:5186/audio/aria/word-1934.mp3",
+      "rate": 1,
+      "duration": 1.584,
+      "pitch": true,
+      "active": 1
+    },
+    {
+      "type": "playing",
+      "src": "http://localhost:5186/audio/aria/word-3018.mp3",
+      "rate": 1,
+      "duration": 1.608,
+      "pitch": true,
+      "active": 1
+    },
+    {
+      "type": "playing",
+      "src": "http://localhost:5186/audio/reading/aria/read-6700869c8ff7480e.mp3?v=Ben",
+      "rate": 1,
+      "duration": 1.872,
+      "pitch": true,
+      "active": 1
+    },
+    {
+      "type": "playing",
+      "src": "http://localhost:5186/audio/feedback/pair.mp3",
+      "rate": 1,
+      "duration": 0.18,
+      "pitch": true,
+      "active": 1
+    },
+    {
+      "type": "playing",
+      "src": "http://localhost:5186/audio/daily/aria/i-am-mia.mp3?v=I%20am%20Mia.",
+      "rate": 1,
+      "duration": 1.848,
+      "pitch": true,
+      "active": 1
+    },
+    {
+      "type": "playing",
+      "src": "http://localhost:5186/audio/daily/aria/bye.mp3?v=Bye!",
+      "rate": 1,
+      "duration": 1.488,
+      "pitch": true,
+      "active": 1
+    },
+    {
+      "type": "playing",
+      "src": "http://localhost:5186/audio/daily/aria/bye.mp3?v=Bye!",
+      "rate": 0.72,
+      "duration": 1.488,
+      "pitch": true,
+      "active": 1
+    },
+    {
+      "type": "playing",
+      "src": "http://localhost:5186/audio/feedback/pair.mp3",
+      "rate": 1,
+      "duration": 0.18,
+      "pitch": true,
+      "active": 1
+    },
+    {
+      "type": "playing",
+      "src": "http://localhost:5186/audio/daily/aria/i-am-mia.mp3?v=I%20am%20Mia.",
+      "rate": 1,
+      "duration": 1.848,
+      "pitch": true,
+      "active": 1
+    },
+    {
+      "type": "playing",
+      "src": "http://localhost:5186/audio/daily/aria/bye.mp3?v=Bye!",
+      "rate": 1,
+      "duration": 1.488,
+      "pitch": true,
+      "active": 1
+    },
+    {
+      "type": "playing",
+      "src": "http://localhost:5186/audio/daily/aria/bye.mp3?v=Bye!",
+      "rate": 0.72,
+      "duration": 1.488,
+      "pitch": true,
+      "active": 1
+    },
+    {
+      "type": "playing",
+      "src": "http://localhost:5186/audio/aria/word-2580.mp3",
+      "rate": 1,
+      "duration": 1.416,
+      "pitch": true,
+      "active": 1
+    },
+    {
+      "type": "playing",
+      "src": "http://localhost:5186/audio/aria/word-2775.mp3",
+      "rate": 1,
+      "duration": 1.536,
+      "pitch": true,
+      "active": 1
+    },
+    {
+      "type": "playing",
+      "src": "http://localhost:5186/audio/aria/word-2580.mp3",
+      "rate": 1,
+      "duration": 1.416,
+      "pitch": true,
+      "active": 1
+    },
+    {
+      "type": "playing",
+      "src": "http://localhost:5186/audio/aria/word-1946.mp3",
+      "rate": 1,
+      "duration": 1.536,
+      "pitch": true,
+      "active": 1
+    },
+    {
+      "type": "playing",
+      "src": "http://localhost:5186/audio/aria/word-2.mp3",
+      "rate": 1,
+      "duration": 1.608,
+      "pitch": true,
+      "active": 1
+    },
+    {
+      "type": "playing",
+      "src": "http://localhost:5186/audio/feedback/pair.mp3",
+      "rate": 1,
+      "duration": 0.18,
+      "pitch": true,
+      "active": 1
+    },
+    {
+      "type": "playing",
+      "src": "http://localhost:5186/audio/aria/word-3561.mp3?v=code",
+      "rate": 1,
+      "duration": 1.872,
+      "pitch": true,
+      "active": 1
+    },
+    {
+      "type": "playing",
+      "src": "http://localhost:5186/audio/aria/word-1.mp3?v=repository",
+      "rate": 0.72,
+      "duration": 1.992,
+      "pitch": true,
+      "active": 1
+    },
+    {
+      "type": "playing",
+      "src": "http://localhost:5186/audio/feedback/pair.mp3",
+      "rate": 1,
+      "duration": 0.18,
+      "pitch": true,
+      "active": 1
+    },
+    {
+      "type": "playing",
+      "src": "http://localhost:5186/audio/aria/word-3561.mp3?v=code",
+      "rate": 1,
+      "duration": 1.872,
+      "pitch": true,
+      "active": 1
+    },
+    {
+      "type": "playing",
+      "src": "http://localhost:5186/audio/aria/word-1.mp3?v=repository",
+      "rate": 0.72,
+      "duration": 1.992,
+      "pitch": true,
+      "active": 1
+    },
+    {
+      "type": "playing",
+      "src": "http://localhost:5186/audio/feedback/correct.mp3",
+      "rate": 1,
+      "duration": 0.36,
+      "pitch": true,
+      "active": 1
+    },
+    {
+      "type": "playing",
+      "src": "http://localhost:5186/audio/feedback/correct.mp3",
+      "rate": 1,
+      "duration": 0.36,
+      "pitch": true,
+      "active": 1
+    },
+    {
+      "type": "playing",
+      "src": "http://localhost:5186/audio/feedback/correct.mp3",
+      "rate": 1,
+      "duration": 0.36,
+      "pitch": true,
+      "active": 1
+    },
+    {
+      "type": "playing",
+      "src": "http://localhost:5186/audio/feedback/correct.mp3",
+      "rate": 1,
+      "duration": 0.36,
+      "pitch": true,
+      "active": 1
+    },
+    {
+      "type": "playing",
+      "src": "http://localhost:5186/audio/daily/aria/hi.mp3?v=Hi!",
+      "rate": 1,
+      "duration": 1.536,
+      "pitch": true,
+      "active": 1
+    },
+    {
+      "type": "playing",
+      "src": "http://localhost:5186/audio/feedback/correct.mp3",
+      "rate": 1,
+      "duration": 0.36,
+      "pitch": true,
+      "active": 1
+    },
+    {
+      "type": "playing",
+      "src": "http://localhost:5186/audio/feedback/correct.mp3",
+      "rate": 1,
+      "duration": 0.36,
+      "pitch": true,
+      "active": 1
+    },
+    {
+      "type": "playing",
+      "src": "http://localhost:5186/audio/feedback/correct.mp3",
+      "rate": 1,
+      "duration": 0.36,
+      "pitch": true,
+      "active": 1
+    },
+    {
+      "type": "playing",
+      "src": "http://localhost:5186/audio/feedback/correct.mp3",
+      "rate": 1,
+      "duration": 0.36,
+      "pitch": true,
+      "active": 1
+    },
+    {
+      "type": "playing",
+      "src": "http://localhost:5186/audio/feedback/complete.mp3",
+      "rate": 1,
+      "duration": 1.1,
+      "pitch": true,
+      "active": 1
+    },
+    {
+      "type": "playing",
+      "src": "http://localhost:5186/audio/aria/word-2801.mp3?v=project",
+      "rate": 1,
+      "duration": 1.68,
+      "pitch": true,
+      "active": 1
+    },
+    {
+      "type": "playing",
+      "src": "http://localhost:5186/audio/aria/word-3561.mp3?v=code",
+      "rate": 1,
+      "duration": 1.872,
+      "pitch": true,
+      "active": 1
+    },
+    {
+      "type": "playing",
+      "src": "http://localhost:5186/audio/feedback/correct.mp3",
+      "rate": 1,
+      "duration": 0.36,
+      "pitch": true,
+      "active": 1
+    },
+    {
+      "type": "playing",
+      "src": "http://localhost:5186/audio/feedback/correct.mp3",
+      "rate": 1,
+      "duration": 0.36,
+      "pitch": true,
+      "active": 1
+    },
+    {
+      "type": "playing",
+      "src": "http://localhost:5186/audio/aria/word-2801.mp3",
+      "rate": 1,
+      "duration": 1.68,
+      "pitch": true,
+      "active": 1
+    },
+    {
+      "type": "playing",
+      "src": "http://localhost:5186/audio/feedback/correct.mp3",
+      "rate": 1,
+      "duration": 0.36,
+      "pitch": true,
+      "active": 1
+    },
+    {
+      "type": "playing",
+      "src": "http://localhost:5186/audio/feedback/correct.mp3",
+      "rate": 1,
+      "duration": 0.36,
+      "pitch": true,
+      "active": 1
+    },
+    {
+      "type": "playing",
+      "src": "http://localhost:5186/audio/feedback/correct.mp3",
+      "rate": 1,
+      "duration": 0.36,
+      "pitch": true,
+      "active": 1
+    },
+    {
+      "type": "playing",
+      "src": "http://localhost:5186/audio/aria/word-2801.mp3",
+      "rate": 1,
+      "duration": 1.68,
+      "pitch": true,
+      "active": 1
+    },
+    {
+      "type": "playing",
+      "src": "http://localhost:5186/audio/feedback/correct.mp3",
+      "rate": 1,
+      "duration": 0.36,
+      "pitch": true,
+      "active": 1
+    },
+    {
+      "type": "playing",
+      "src": "http://localhost:5186/audio/feedback/complete.mp3",
+      "rate": 1,
+      "duration": 1.1,
+      "pitch": true,
+      "active": 1
+    }
+  ],
+  "physicalDeviceTested": false,
+  "microphoneTested": false
+}

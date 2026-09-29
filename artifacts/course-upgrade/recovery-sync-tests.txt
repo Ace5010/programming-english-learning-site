@@ -1,0 +1,214 @@
+TAP version 13
+# Subtest: correction survives two-client synchronization before and after submission
+ok 1 - correction survives two-client synchronization before and after submission
+  ---
+  duration_ms: 46.8227
+  type: 'test'
+  ...
+# Subtest: pairs survives two-client synchronization before and after submission
+ok 2 - pairs survives two-client synchronization before and after submission
+  ---
+  duration_ms: 8.9729
+  type: 'test'
+  ...
+# Subtest: local correction marks swapped words, insertions and spelling without exposing expected text
+ok 3 - local correction marks swapped words, insertions and spelling without exposing expected text
+  ---
+  duration_ms: 2.9118
+  type: 'test'
+  ...
+# Subtest: first error is durable, unchanged/empty clicks consume nothing, one edited retry is assisted
+ok 4 - first error is durable, unchanged/empty clicks consume nothing, one edited retry is assisted
+  ---
+  duration_ms: 3.2266
+  type: 'test'
+  ...
+# Subtest: second error ends the retry and choices do not invite elimination guessing
+ok 5 - second error ends the retry and choices do not invite elimination guessing
+  ---
+  duration_ms: 1.8185
+  type: 'test'
+  ...
+# Subtest: local fill and fixed writing can retry; revealed answers cannot regain a retry
+ok 6 - local fill and fixed writing can retry; revealed answers cannot regain a retry
+  ---
+  duration_ms: 7.0376
+  type: 'test'
+  ...
+# Subtest: adaptive correction lowers confidence only at the first error, including refresh and next-day completion
+ok 7 - adaptive correction lowers confidence only at the first error, including refresh and next-day completion
+  ---
+  duration_ms: 2.446
+  type: 'test'
+  ...
+# Subtest: pair mistakes affect only that target, duplicate clicks are inert, forced last pair is unmeasured
+ok 8 - pair mistakes affect only that target, duplicate clicks are inert, forced last pair is unmeasured
+  ---
+  duration_ms: 0.4939
+  type: 'test'
+  ...
+# Subtest: pair course progress preserves mixed per-target evidence and last-pair non-evidence on reload
+ok 9 - pair course progress preserves mixed per-target evidence and last-pair non-evidence on reload
+  ---
+  duration_ms: 0.868
+  type: 'test'
+  ...
+# Subtest: new variations stay bounded, reference existing targets, and only count the tested ability
+ok 10 - new variations stay bounded, reference existing targets, and only count the tested ability
+  ---
+  duration_ms: 3.0088
+  type: 'test'
+  ...
+# Subtest: showing masked speech text and self checks never add mastery evidence
+ok 11 - showing masked speech text and self checks never add mastery evidence
+  ---
+  duration_ms: 0.3502
+  type: 'test'
+  ...
+# Subtest: an already recorded review difficulty is not demoted again after a next-day correction
+ok 12 - an already recorded review difficulty is not demoted again after a next-day correction
+  ---
+  duration_ms: 0.4372
+  type: 'test'
+  ...
+# Subtest: review draft restores a correction and rejects malformed state without touching long-term keys
+ok 13 - review draft restores a correction and rejects malformed state without touching long-term keys
+  ---
+  duration_ms: 1.2953
+  type: 'test'
+  ...
+# Subtest: feedback waits for speech, replaces a pending cue, and navigation or mute cancels it
+ok 14 - feedback waits for speech, replaces a pending cue, and navigation or mute cancels it
+  ---
+  duration_ms: 221.908
+  type: 'test'
+  ...
+# Subtest: existing mastered words, favorites and independent course keys survive first phone pairing
+ok 15 - existing mastered words, favorites and independent course keys survive first phone pairing
+  ---
+  duration_ms: 39.3225
+  type: 'test'
+  ...
+# Subtest: offline changes reconnect and another device receives them
+ok 16 - offline changes reconnect and another device receives them
+  ---
+  duration_ms: 4.5224
+  type: 'test'
+  ...
+# Subtest: concurrent favorite additions and removals merge from shared base
+ok 17 - concurrent favorite additions and removals merge from shared base
+  ---
+  duration_ms: 5.0866
+  type: 'test'
+  ...
+# Subtest: independent daily and programming changes combine without mixing their IDs
+ok 18 - independent daily and programming changes combine without mixing their IDs
+  ---
+  duration_ms: 3.0987
+  type: 'test'
+  ...
+# Subtest: linked evidence conflicts never silently overwrite either device; explicit choice is backed up
+ok 19 - linked evidence conflicts never silently overwrite either device; explicit choice is backed up
+  ---
+  duration_ms: 2.6075
+  type: 'test'
+  ...
+# Subtest: conflict choice expires if another device changed since the conflict was displayed
+ok 20 - conflict choice expires if another device changed since the conflict was displayed
+  ---
+  duration_ms: 3.1272
+  type: 'test'
+  ...
+# Subtest: local edits made while uploading remain pending and are sent on the next sync
+ok 21 - local edits made while uploading remain pending and are sent on the next sync
+  ---
+  duration_ms: 2.8114
+  type: 'test'
+  ...
+# Subtest: lost upload acknowledgement is recovered without duplication or reset
+ok 22 - lost upload acknowledgement is recovered without duplication or reset
+  ---
+  duration_ms: 3.3884
+  type: 'test'
+  ...
+# Subtest: busy inputs and review quizzes defer incoming application even when sync is manually requested
+ok 23 - busy inputs and review quizzes defer incoming application even when sync is manually requested
+  ---
+  duration_ms: 2.4588
+  type: 'test'
+  ...
+# Subtest: quota failure rolls back every key and metadata to their prior values
+ok 24 - quota failure rolls back every key and metadata to their prior values
+  ---
+  duration_ms: 3.0255
+  type: 'test'
+  ...
+# Subtest: interrupted local transaction is recoverable after reload
+ok 25 - interrupted local transaction is recoverable after reload
+  ---
+  duration_ms: 0.1221
+  type: 'test'
+  ...
+# Subtest: unknown or corrupt local records are retained and never uploaded
+ok 26 - unknown or corrupt local records are retained and never uploaded
+  ---
+  duration_ms: 1.0451
+  type: 'test'
+  ...
+# Subtest: joining a mistyped but well-formed code cannot create a new cloud record
+ok 27 - joining a mistyped but well-formed code cannot create a new cloud record
+  ---
+  duration_ms: 0.9571
+  type: 'test'
+  ...
+# Subtest: newer cloud schemas cannot replace compatible local records
+ok 28 - newer cloud schemas cannot replace compatible local records
+  ---
+  duration_ms: 1.9887
+  type: 'test'
+  ...
+# Subtest: oversized requests are rejected before database writes
+ok 29 - oversized requests are rejected before database writes
+  ---
+  duration_ms: 8.0652
+  type: 'test'
+  ...
+# Subtest: disconnect cancels an in-flight pull without removing local progress
+ok 30 - disconnect cancels an in-flight pull without removing local progress
+  ---
+  duration_ms: 2.6787
+  type: 'test'
+  ...
+# Subtest: API rejects missing credentials, wrong origins, methods, content types and extra keys
+ok 31 - API rejects missing credentials, wrong origins, methods, content types and extra keys
+  ---
+  duration_ms: 1.1564
+  type: 'test'
+  ...
+# Subtest: SQL compare-and-swap prevents stale overwrites and isolates pairing codes
+ok 32 - SQL compare-and-swap prevents stale overwrites and isolates pairing codes
+  ---
+  duration_ms: 1.6112
+  type: 'test'
+  ...
+# Subtest: large Unicode snapshots round-trip across database chunks and retain one preceding version
+ok 33 - large Unicode snapshots round-trip across database chunks and retain one preceding version
+  ---
+  duration_ms: 78.6706
+  type: 'test'
+  ...
+# Subtest: anonymous creation is bounded per source and cannot prevent existing records from updating
+ok 34 - anonymous creation is bounded per source and cannot prevent existing records from updating
+  ---
+  duration_ms: 3.7933
+  type: 'test'
+  ...
+1..34
+# tests 34
+# suites 0
+# pass 34
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1312.0671

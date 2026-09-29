@@ -45,7 +45,7 @@ const lessonPool = (lesson: DailyLesson) => [...new Map([...lesson.exercises, ..
 export function programmingReview(progress: ReviewProgress, now = Date.now()): NonNullable<DailyCurriculum['review']> {
   const skills = (exercise: DailyExerciseSpec) => {
     const item = target(exercise);
-    return item.wordIds.every(id => isReviewEligible(progress, id)) ? item.wordIds.map(id => getSkill(progress, id, item.ability)) : [];
+    return item.wordIds.every(id => isReviewEligible(progress, id)) && (exercise.prerequisiteIds ?? []).every(id => !!progress[Number(id.replace('word-', ''))]) ? item.wordIds.map(id => getSkill(progress, id, item.ability)) : [];
   };
   const rank = (exercise: DailyExerciseSpec) => {
     const observed = skills(exercise);

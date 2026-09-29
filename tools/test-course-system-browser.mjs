@@ -177,7 +177,7 @@ async function currentOnly(env, index) {
 try {
   assert.equal(vocabulary.length, 3620);
   for (const section of ['programming', 'daily']) await scenario(`${section}: 24 sequential lessons, 120 real UI answers and reload`, { section }, async env => {
-    assert.deepEqual(await env.page.locator('.main-nav .nav-item').allTextContents(), ['课程', '复习', section === 'daily' ? '表达库' : '词汇库']);
+    assert.deepEqual(await env.page.locator('.main-nav .nav-item').allTextContents(), ['课程', '复习', section === 'daily' ? '词汇库' : '词汇库']);
     for (const [index, lesson] of env.config.lessons.entries()) {
       await currentOnly(env, index);
       await beginFirst(env);
@@ -283,14 +283,14 @@ try {
   });
 
   await scenario('daily: expression search, learned filter and favorites persist independently', { section: 'daily', seed: earned.dailyFirst ? { [DAILY_KEY]: earned.dailyFirst.course } : {} }, async env => {
-    await navigate(env.page, '表达库');
+    await navigate(env.page, '词汇库');
     await root(env).getByLabel('查找表达', { exact: true }).fill('Hello');
     const phrase = dailyPhrases.find(item => item.id === 'hello');
     assert.ok(phrase);
     const card = root(env).locator('.daily-expression').filter({ has: env.page.getByRole('button', { name: `朗读 ${phrase.en}`, exact: true }) });
     await card.getByRole('button', { name: `收藏 ${phrase.en}`, exact: true }).click();
     assert.ok((await read(env.page, DAILY_KEY)).favorites.includes(phrase.id));
-    await env.page.reload(); await navigate(env.page, '表达库');
+    await env.page.reload(); await navigate(env.page, '词汇库');
     await root(env).getByLabel(/显示内容/).selectOption('favorites');
     assert.equal(await root(env).locator('.daily-expression').count(), 1);
     if (earned.dailyFirst) {
@@ -457,7 +457,7 @@ try {
   for (const section of ['programming', 'daily']) for (const width of [1440, 390]) await scenario(`${section}: four themes at ${width}px without horizontal overflow`, { section, width }, async env => {
     for (const theme of themes) {
       await env.page.getByLabel('界面风格', { exact: true }).selectOption(theme);
-      for (const view of ['课程', '复习', section === 'programming' ? '词汇库' : '表达库']) {
+      for (const view of ['课程', '复习', section === 'programming' ? '词汇库' : '词汇库']) {
         await navigate(env.page, view); await noOverflow(env.page);
         await env.page.screenshot({ path: path.join(output, `${section}-${view}-${theme}-${width}.png`) });
       }

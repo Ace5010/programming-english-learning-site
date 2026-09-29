@@ -1,0 +1,39 @@
+{
+  "checkedAt": "2026-09-24T06:17:01.462824+00:00",
+  "method": "Winsock IP_UNICAST_IF plus physical Ethernet source binding; no global network changes",
+  "limitations": [
+    "System DNS resolution retained",
+    "No authenticated speech assessment yet",
+    "This verifies this PC connection, not every mobile network"
+  ],
+  "results": [
+    {
+      "host": "www.xfyun.cn",
+      "path": "/services/ise",
+      "interface": "Ethernet",
+      "interfaceIndex": 9,
+      "proxyUsed": false,
+      "audioUploaded": false,
+      "credentialsSent": false,
+      "selectedInterfaceIndex": 9,
+      "tlsVerified": true,
+      "response": "HTTP/1.1 200 OK",
+      "reachable": true,
+      "elapsedMs": 406
+    },
+    {
+      "host": "ise-api.xfyun.cn",
+      "path": "/v2/open-ise",
+      "interface": "Ethernet",
+      "interfaceIndex": 9,
+      "proxyUsed": false,
+      "audioUploaded": false,
+      "credentialsSent": false,
+      "selectedInterfaceIndex": 9,
+      "tlsVerified": true,
+      "response": "HTTP/1.1 401 Unauthorized",
+      "reachable": true,
+      "elapsedMs": 1141
+    }
+  ]
+}

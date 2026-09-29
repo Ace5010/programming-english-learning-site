@@ -1,0 +1,583 @@
+{
+  "status": "fixed-before-inference",
+  "containsUserRecording": false,
+  "cases": [
+    {
+      "id": "aria-cap-as-cap",
+      "file": "public/audio/aria/word-1362.mp3",
+      "sha256": "1e551d5bb35f48552f30d0fe9de8ad40ad1f0ba92392c5f7e31e403e02ac2d86",
+      "reference": "cap",
+      "spokenFixture": "cap",
+      "expectedCorrect": true
+    },
+    {
+      "id": "aria-cap-as-cab",
+      "file": "public/audio/aria/word-1362.mp3",
+      "sha256": "1e551d5bb35f48552f30d0fe9de8ad40ad1f0ba92392c5f7e31e403e02ac2d86",
+      "reference": "cab",
+      "spokenFixture": "cap",
+      "expectedCorrect": false
+    },
+    {
+      "id": "aria-cab-as-cab",
+      "file": "public/audio/aria/word-3441.mp3",
+      "sha256": "f9d777a0a84c75a5e9f337c7d63706bc8004c21ee6a33d298aa0dd6eec1fe129",
+      "reference": "cab",
+      "spokenFixture": "cab",
+      "expectedCorrect": true
+    },
+    {
+      "id": "aria-cab-as-cap",
+      "file": "public/audio/aria/word-3441.mp3",
+      "sha256": "f9d777a0a84c75a5e9f337c7d63706bc8004c21ee6a33d298aa0dd6eec1fe129",
+      "reference": "cap",
+      "spokenFixture": "cab",
+      "expectedCorrect": false
+    },
+    {
+      "id": "aria-coat-as-coat",
+      "file": "public/audio/aria/word-1421.mp3",
+      "sha256": "a995ff5a9f8301b6ca7fa5036c5ebb222d3f7b65788c943737ea271a122b6d9a",
+      "reference": "coat",
+      "spokenFixture": "coat",
+      "expectedCorrect": true
+    },
+    {
+      "id": "aria-coat-as-goat",
+      "file": "public/audio/aria/word-1421.mp3",
+      "sha256": "a995ff5a9f8301b6ca7fa5036c5ebb222d3f7b65788c943737ea271a122b6d9a",
+      "reference": "goat",
+      "spokenFixture": "coat",
+      "expectedCorrect": false
+    },
+    {
+      "id": "aria-goat-as-goat",
+      "file": "public/audio/aria/word-1675.mp3",
+      "sha256": "f3b12bb152c370ec33a5d4e6ffa38fd8ddfdd5b811f1d24a74b1944f09bbe91a",
+      "reference": "goat",
+      "spokenFixture": "goat",
+      "expectedCorrect": true
+    },
+    {
+      "id": "aria-goat-as-coat",
+      "file": "public/audio/aria/word-1675.mp3",
+      "sha256": "f3b12bb152c370ec33a5d4e6ffa38fd8ddfdd5b811f1d24a74b1944f09bbe91a",
+      "reference": "coat",
+      "spokenFixture": "goat",
+      "expectedCorrect": false
+    },
+    {
+      "id": "aria-full-as-full",
+      "file": "public/audio/aria/word-1659.mp3",
+      "sha256": "fdff918781b1befd9fba1b789a76dd2d929a8ecaa2a01f6782603836a5f7ccb1",
+      "reference": "full",
+      "spokenFixture": "full",
+      "expectedCorrect": true
+    },
+    {
+      "id": "aria-full-as-fool",
+      "file": "public/audio/aria/word-1659.mp3",
+      "sha256": "fdff918781b1befd9fba1b789a76dd2d929a8ecaa2a01f6782603836a5f7ccb1",
+      "reference": "fool",
+      "spokenFixture": "full",
+      "expectedCorrect": false
+    },
+    {
+      "id": "aria-fool-as-fool",
+      "file": "public/audio/aria/word-2993.mp3",
+      "sha256": "47301ecf220604e93e852c5e706c6f99f5a932e57268255bdd6868c607c8a72a",
+      "reference": "fool",
+      "spokenFixture": "fool",
+      "expectedCorrect": true
+    },
+    {
+      "id": "aria-fool-as-full",
+      "file": "public/audio/aria/word-2993.mp3",
+      "sha256": "47301ecf220604e93e852c5e706c6f99f5a932e57268255bdd6868c607c8a72a",
+      "reference": "full",
+      "spokenFixture": "fool",
+      "expectedCorrect": false
+    },
+    {
+      "id": "aria-cheap-as-cheap",
+      "file": "public/audio/aria/word-1386.mp3",
+      "sha256": "87af34f5f53e457caa375560097a263bacc84fd37595db1aa777fd0158f4eb39",
+      "reference": "cheap",
+      "spokenFixture": "cheap",
+      "expectedCorrect": true
+    },
+    {
+      "id": "aria-cheap-as-chip",
+      "file": "public/audio/aria/word-1386.mp3",
+      "sha256": "87af34f5f53e457caa375560097a263bacc84fd37595db1aa777fd0158f4eb39",
+      "reference": "chip",
+      "spokenFixture": "cheap",
+      "expectedCorrect": false
+    },
+    {
+      "id": "aria-chip-as-chip",
+      "file": "public/audio/aria/word-215.mp3",
+      "sha256": "59512e09c8faeeb599e44178638a468f040246cb99e4a4ee0ed50c20a40f06a6",
+      "reference": "chip",
+      "spokenFixture": "chip",
+      "expectedCorrect": true
+    },
+    {
+      "id": "aria-chip-as-cheap",
+      "file": "public/audio/aria/word-215.mp3",
+      "sha256": "59512e09c8faeeb599e44178638a468f040246cb99e4a4ee0ed50c20a40f06a6",
+      "reference": "cheap",
+      "spokenFixture": "chip",
+      "expectedCorrect": false
+    },
+    {
+      "id": "aria-back-as-back",
+      "file": "public/audio/aria/word-1275.mp3",
+      "sha256": "a81a4a5221e81884a72d496ac9145bc9e811b4bb2014551c81d1e7452d15250f",
+      "reference": "back",
+      "spokenFixture": "back",
+      "expectedCorrect": true
+    },
+    {
+      "id": "aria-back-as-bag",
+      "file": "public/audio/aria/word-1275.mp3",
+      "sha256": "a81a4a5221e81884a72d496ac9145bc9e811b4bb2014551c81d1e7452d15250f",
+      "reference": "bag",
+      "spokenFixture": "back",
+      "expectedCorrect": false
+    },
+    {
+      "id": "aria-bag-as-bag",
+      "file": "public/audio/aria/word-1276.mp3",
+      "sha256": "7b0a6090beebd8352d2223426437c9ffb2d224b5ea0c00c6bb91d83451c3d16f",
+      "reference": "bag",
+      "spokenFixture": "bag",
+      "expectedCorrect": true
+    },
+    {
+      "id": "aria-bag-as-back",
+      "file": "public/audio/aria/word-1276.mp3",
+      "sha256": "7b0a6090beebd8352d2223426437c9ffb2d224b5ea0c00c6bb91d83451c3d16f",
+      "reference": "back",
+      "spokenFixture": "bag",
+      "expectedCorrect": false
+    },
+    {
+      "id": "aria-leave-as-leave",
+      "file": "public/audio/aria/word-2859.mp3",
+      "sha256": "c322c9dcbae31d9ab38f973601d4b8fc662ae19ed53f8f2ae0ed411dabdd7e55",
+      "reference": "leave",
+      "spokenFixture": "leave",
+      "expectedCorrect": true
+    },
+    {
+      "id": "aria-leave-as-live",
+      "file": "public/audio/aria/word-2859.mp3",
+      "sha256": "c322c9dcbae31d9ab38f973601d4b8fc662ae19ed53f8f2ae0ed411dabdd7e55",
+      "reference": "live",
+      "spokenFixture": "leave",
+      "expectedCorrect": false
+    },
+    {
+      "id": "aria-live-as-live",
+      "file": "public/audio/aria/word-1859.mp3",
+      "sha256": "6a7d6d060893473b1f03d9068cdcc97f26c5c33622c5280788a1482898658aea",
+      "reference": "live",
+      "spokenFixture": "live",
+      "expectedCorrect": true
+    },
+    {
+      "id": "aria-live-as-leave",
+      "file": "public/audio/aria/word-1859.mp3",
+      "sha256": "6a7d6d060893473b1f03d9068cdcc97f26c5c33622c5280788a1482898658aea",
+      "reference": "leave",
+      "spokenFixture": "live",
+      "expectedCorrect": false
+    },
+    {
+      "id": "guy-cap-as-cap",
+      "file": "public/audio/guy/word-1362.mp3",
+      "sha256": "c3626e35ddbca0cef27d095705b291497364ef10b8d5bb9099cb6ced0ca84248",
+      "reference": "cap",
+      "spokenFixture": "cap",
+      "expectedCorrect": true
+    },
+    {
+      "id": "guy-cap-as-cab",
+      "file": "public/audio/guy/word-1362.mp3",
+      "sha256": "c3626e35ddbca0cef27d095705b291497364ef10b8d5bb9099cb6ced0ca84248",
+      "reference": "cab",
+      "spokenFixture": "cap",
+      "expectedCorrect": false
+    },
+    {
+      "id": "guy-cab-as-cab",
+      "file": "public/audio/guy/word-3441.mp3",
+      "sha256": "acd9e925462a81b497a6d315432428501f7586a17bd444dc169c86b99b31a4b5",
+      "reference": "cab",
+      "spokenFixture": "cab",
+      "expectedCorrect": true
+    },
+    {
+      "id": "guy-cab-as-cap",
+      "file": "public/audio/guy/word-3441.mp3",
+      "sha256": "acd9e925462a81b497a6d315432428501f7586a17bd444dc169c86b99b31a4b5",
+      "reference": "cap",
+      "spokenFixture": "cab",
+      "expectedCorrect": false
+    },
+    {
+      "id": "guy-coat-as-coat",
+      "file": "public/audio/guy/word-1421.mp3",
+      "sha256": "d5f9f7135d4ec1260890cb04ba494424153d26c8951939f906410819ab1d3115",
+      "reference": "coat",
+      "spokenFixture": "coat",
+      "expectedCorrect": true
+    },
+    {
+      "id": "guy-coat-as-goat",
+      "file": "public/audio/guy/word-1421.mp3",
+      "sha256": "d5f9f7135d4ec1260890cb04ba494424153d26c8951939f906410819ab1d3115",
+      "reference": "goat",
+      "spokenFixture": "coat",
+      "expectedCorrect": false
+    },
+    {
+      "id": "guy-goat-as-goat",
+      "file": "public/audio/guy/word-1675.mp3",
+      "sha256": "cefdb82454dab9eb82da73fe06be1c53efc7c459f3bc9a3598d612e931fedf5f",
+      "reference": "goat",
+      "spokenFixture": "goat",
+      "expectedCorrect": true
+    },
+    {
+      "id": "guy-goat-as-coat",
+      "file": "public/audio/guy/word-1675.mp3",
+      "sha256": "cefdb82454dab9eb82da73fe06be1c53efc7c459f3bc9a3598d612e931fedf5f",
+      "reference": "coat",
+      "spokenFixture": "goat",
+      "expectedCorrect": false
+    },
+    {
+      "id": "guy-full-as-full",
+      "file": "public/audio/guy/word-1659.mp3",
+      "sha256": "8045c6d817f3aee8f4a51d0d716648b1e9fe9d7834b275a01e0af3a4551f5662",
+      "reference": "full",
+      "spokenFixture": "full",
+      "expectedCorrect": true
+    },
+    {
+      "id": "guy-full-as-fool",
+      "file": "public/audio/guy/word-1659.mp3",
+      "sha256": "8045c6d817f3aee8f4a51d0d716648b1e9fe9d7834b275a01e0af3a4551f5662",
+      "reference": "fool",
+      "spokenFixture": "full",
+      "expectedCorrect": false
+    },
+    {
+      "id": "guy-fool-as-fool",
+      "file": "public/audio/guy/word-2993.mp3",
+      "sha256": "771eadadea69538e2ec7432a9e268043941dbe72be3d926427d741d12592805c",
+      "reference": "fool",
+      "spokenFixture": "fool",
+      "expectedCorrect": true
+    },
+    {
+      "id": "guy-fool-as-full",
+      "file": "public/audio/guy/word-2993.mp3",
+      "sha256": "771eadadea69538e2ec7432a9e268043941dbe72be3d926427d741d12592805c",
+      "reference": "full",
+      "spokenFixture": "fool",
+      "expectedCorrect": false
+    },
+    {
+      "id": "guy-cheap-as-cheap",
+      "file": "public/audio/guy/word-1386.mp3",
+      "sha256": "e68e776e35def5e6364744c0c1b4ca3635061a585d126f584e3ef035115e6c74",
+      "reference": "cheap",
+      "spokenFixture": "cheap",
+      "expectedCorrect": true
+    },
+    {
+      "id": "guy-cheap-as-chip",
+      "file": "public/audio/guy/word-1386.mp3",
+      "sha256": "e68e776e35def5e6364744c0c1b4ca3635061a585d126f584e3ef035115e6c74",
+      "reference": "chip",
+      "spokenFixture": "cheap",
+      "expectedCorrect": false
+    },
+    {
+      "id": "guy-chip-as-chip",
+      "file": "public/audio/guy/word-215.mp3",
+      "sha256": "bca9e92bbf5281ca34ea9d51a7ce66db5eefb4131ec25421056cfd10ce781456",
+      "reference": "chip",
+      "spokenFixture": "chip",
+      "expectedCorrect": true
+    },
+    {
+      "id": "guy-chip-as-cheap",
+      "file": "public/audio/guy/word-215.mp3",
+      "sha256": "bca9e92bbf5281ca34ea9d51a7ce66db5eefb4131ec25421056cfd10ce781456",
+      "reference": "cheap",
+      "spokenFixture": "chip",
+      "expectedCorrect": false
+    },
+    {
+      "id": "guy-back-as-back",
+      "file": "public/audio/guy/word-1275.mp3",
+      "sha256": "e77dc9464cb6004bb7967bc265c5f05851c70a3e88205df969849836d408d166",
+      "reference": "back",
+      "spokenFixture": "back",
+      "expectedCorrect": true
+    },
+    {
+      "id": "guy-back-as-bag",
+      "file": "public/audio/guy/word-1275.mp3",
+      "sha256": "e77dc9464cb6004bb7967bc265c5f05851c70a3e88205df969849836d408d166",
+      "reference": "bag",
+      "spokenFixture": "back",
+      "expectedCorrect": false
+    },
+    {
+      "id": "guy-bag-as-bag",
+      "file": "public/audio/guy/word-1276.mp3",
+      "sha256": "2288e187cd70c41c093748c3d52ab8b90f6a1e02eb60da646a76b073f285a5ec",
+      "reference": "bag",
+      "spokenFixture": "bag",
+      "expectedCorrect": true
+    },
+    {
+      "id": "guy-bag-as-back",
+      "file": "public/audio/guy/word-1276.mp3",
+      "sha256": "2288e187cd70c41c093748c3d52ab8b90f6a1e02eb60da646a76b073f285a5ec",
+      "reference": "back",
+      "spokenFixture": "bag",
+      "expectedCorrect": false
+    },
+    {
+      "id": "guy-leave-as-leave",
+      "file": "public/audio/guy/word-2859.mp3",
+      "sha256": "3717e3a6d1cd341fadede14d0ae5ff39d24b712d42691f0248a8c22c97d4e304",
+      "reference": "leave",
+      "spokenFixture": "leave",
+      "expectedCorrect": true
+    },
+    {
+      "id": "guy-leave-as-live",
+      "file": "public/audio/guy/word-2859.mp3",
+      "sha256": "3717e3a6d1cd341fadede14d0ae5ff39d24b712d42691f0248a8c22c97d4e304",
+      "reference": "live",
+      "spokenFixture": "leave",
+      "expectedCorrect": false
+    },
+    {
+      "id": "guy-live-as-live",
+      "file": "public/audio/guy/word-1859.mp3",
+      "sha256": "4046e090d214f8c06a9212b7fb9c563c748b6ecfa83ec7aeb342c5e05092f9a9",
+      "reference": "live",
+      "spokenFixture": "live",
+      "expectedCorrect": true
+    },
+    {
+      "id": "guy-live-as-leave",
+      "file": "public/audio/guy/word-1859.mp3",
+      "sha256": "4046e090d214f8c06a9212b7fb9c563c748b6ecfa83ec7aeb342c5e05092f9a9",
+      "reference": "leave",
+      "spokenFixture": "live",
+      "expectedCorrect": false
+    },
+    {
+      "id": "piper-lessac-cap-as-cap",
+      "file": "public/audio/piper-lessac/word-1362.mp3",
+      "sha256": "2b720ca64bf9a4a753dae55fdcf32c5bb21610f79652c42c080ccff0d118c572",
+      "reference": "cap",
+      "spokenFixture": "cap",
+      "expectedCorrect": true
+    },
+    {
+      "id": "piper-lessac-cap-as-cab",
+      "file": "public/audio/piper-lessac/word-1362.mp3",
+      "sha256": "2b720ca64bf9a4a753dae55fdcf32c5bb21610f79652c42c080ccff0d118c572",
+      "reference": "cab",
+      "spokenFixture": "cap",
+      "expectedCorrect": false
+    },
+    {
+      "id": "piper-lessac-cab-as-cab",
+      "file": "public/audio/piper-lessac/word-3441.mp3",
+      "sha256": "c8e9b418673be23f7042e394054e124302b8af74990c135c2bd95d48ff550545",
+      "reference": "cab",
+      "spokenFixture": "cab",
+      "expectedCorrect": true
+    },
+    {
+      "id": "piper-lessac-cab-as-cap",
+      "file": "public/audio/piper-lessac/word-3441.mp3",
+      "sha256": "c8e9b418673be23f7042e394054e124302b8af74990c135c2bd95d48ff550545",
+      "reference": "cap",
+      "spokenFixture": "cab",
+      "expectedCorrect": false
+    },
+    {
+      "id": "piper-lessac-coat-as-coat",
+      "file": "public/audio/piper-lessac/word-1421.mp3",
+      "sha256": "7207ee3b5bb03b26957279997ce8d85d113ab3ba416bf5e3f3089771248e7b55",
+      "reference": "coat",
+      "spokenFixture": "coat",
+      "expectedCorrect": true
+    },
+    {
+      "id": "piper-lessac-coat-as-goat",
+      "file": "public/audio/piper-lessac/word-1421.mp3",
+      "sha256": "7207ee3b5bb03b26957279997ce8d85d113ab3ba416bf5e3f3089771248e7b55",
+      "reference": "goat",
+      "spokenFixture": "coat",
+      "expectedCorrect": false
+    },
+    {
+      "id": "piper-lessac-goat-as-goat",
+      "file": "public/audio/piper-lessac/word-1675.mp3",
+      "sha256": "ec4282a4dd667409ee01330594324f9c635de25070cbe155a7b46f1b7da2c232",
+      "reference": "goat",
+      "spokenFixture": "goat",
+      "expectedCorrect": true
+    },
+    {
+      "id": "piper-lessac-goat-as-coat",
+      "file": "public/audio/piper-lessac/word-1675.mp3",
+      "sha256": "ec4282a4dd667409ee01330594324f9c635de25070cbe155a7b46f1b7da2c232",
+      "reference": "coat",
+      "spokenFixture": "goat",
+      "expectedCorrect": false
+    },
+    {
+      "id": "piper-lessac-full-as-full",
+      "file": "public/audio/piper-lessac/word-1659.mp3",
+      "sha256": "d6c9103a4c12b6d4d306379bd7b7dc12bd76243c07a6799a720231ec625f324c",
+      "reference": "full",
+      "spokenFixture": "full",
+      "expectedCorrect": true
+    },
+    {
+      "id": "piper-lessac-full-as-fool",
+      "file": "public/audio/piper-lessac/word-1659.mp3",
+      "sha256": "d6c9103a4c12b6d4d306379bd7b7dc12bd76243c07a6799a720231ec625f324c",
+      "reference": "fool",
+      "spokenFixture": "full",
+      "expectedCorrect": false
+    },
+    {
+      "id": "piper-lessac-fool-as-fool",
+      "file": "public/audio/piper-lessac/word-2993.mp3",
+      "sha256": "4f692dba74c4af5274c0a427043f01d6524e573d1eded3954162ba9fb074c199",
+      "reference": "fool",
+      "spokenFixture": "fool",
+      "expectedCorrect": true
+    },
+    {
+      "id": "piper-lessac-fool-as-full",
+      "file": "public/audio/piper-lessac/word-2993.mp3",
+      "sha256": "4f692dba74c4af5274c0a427043f01d6524e573d1eded3954162ba9fb074c199",
+      "reference": "full",
+      "spokenFixture": "fool",
+      "expectedCorrect": false
+    },
+    {
+      "id": "piper-lessac-cheap-as-cheap",
+      "file": "public/audio/piper-lessac/word-1386.mp3",
+      "sha256": "d4140f4c2a16781e51ba055841bdd6d130eea63d5ba7f8dce386318efeb185bf",
+      "reference": "cheap",
+      "spokenFixture": "cheap",
+      "expectedCorrect": true
+    },
+    {
+      "id": "piper-lessac-cheap-as-chip",
+      "file": "public/audio/piper-lessac/word-1386.mp3",
+      "sha256": "d4140f4c2a16781e51ba055841bdd6d130eea63d5ba7f8dce386318efeb185bf",
+      "reference": "chip",
+      "spokenFixture": "cheap",
+      "expectedCorrect": false
+    },
+    {
+      "id": "piper-lessac-chip-as-chip",
+      "file": "public/audio/piper-lessac/word-215.mp3",
+      "sha256": "f863173066c6127570c6ac473db0af33b45c25243c5ad9b91feb4864cbeccaa8",
+      "reference": "chip",
+      "spokenFixture": "chip",
+      "expectedCorrect": true
+    },
+    {
+      "id": "piper-lessac-chip-as-cheap",
+      "file": "public/audio/piper-lessac/word-215.mp3",
+      "sha256": "f863173066c6127570c6ac473db0af33b45c25243c5ad9b91feb4864cbeccaa8",
+      "reference": "cheap",
+      "spokenFixture": "chip",
+      "expectedCorrect": false
+    },
+    {
+      "id": "piper-lessac-back-as-back",
+      "file": "public/audio/piper-lessac/word-1275.mp3",
+      "sha256": "4a190dcda3c5f59eb2955cb748599565180aa34ba3513f5226a3a21105db0a72",
+      "reference": "back",
+      "spokenFixture": "back",
+      "expectedCorrect": true
+    },
+    {
+      "id": "piper-lessac-back-as-bag",
+      "file": "public/audio/piper-lessac/word-1275.mp3",
+      "sha256": "4a190dcda3c5f59eb2955cb748599565180aa34ba3513f5226a3a21105db0a72",
+      "reference": "bag",
+      "spokenFixture": "back",
+      "expectedCorrect": false
+    },
+    {
+      "id": "piper-lessac-bag-as-bag",
+      "file": "public/audio/piper-lessac/word-1276.mp3",
+      "sha256": "a70c2748fb2372148a228dc04646c6adf45c8f71c90df6bb8f495a122039f13f",
+      "reference": "bag",
+      "spokenFixture": "bag",
+      "expectedCorrect": true
+    },
+    {
+      "id": "piper-lessac-bag-as-back",
+      "file": "public/audio/piper-lessac/word-1276.mp3",
+      "sha256": "a70c2748fb2372148a228dc04646c6adf45c8f71c90df6bb8f495a122039f13f",
+      "reference": "back",
+      "spokenFixture": "bag",
+      "expectedCorrect": false
+    },
+    {
+      "id": "piper-lessac-leave-as-leave",
+      "file": "public/audio/piper-lessac/word-2859.mp3",
+      "sha256": "48e772b15610f0c60c31ca7572c6721de465ad64dbe781da41535a0b98e882b4",
+      "reference": "leave",
+      "spokenFixture": "leave",
+      "expectedCorrect": true
+    },
+    {
+      "id": "piper-lessac-leave-as-live",
+      "file": "public/audio/piper-lessac/word-2859.mp3",
+      "sha256": "48e772b15610f0c60c31ca7572c6721de465ad64dbe781da41535a0b98e882b4",
+      "reference": "live",
+      "spokenFixture": "leave",
+      "expectedCorrect": false
+    },
+    {
+      "id": "piper-lessac-live-as-live",
+      "file": "public/audio/piper-lessac/word-1859.mp3",
+      "sha256": "72b495c5c5ccec10f52cbd08b7c90657679ed84efb19d2dcca7502aa07df44a7",
+      "reference": "live",
+      "spokenFixture": "live",
+      "expectedCorrect": true
+    },
+    {
+      "id": "piper-lessac-live-as-leave",
+      "file": "public/audio/piper-lessac/word-1859.mp3",
+      "sha256": "72b495c5c5ccec10f52cbd08b7c90657679ed84efb19d2dcca7502aa07df44a7",
+      "reference": "leave",
+      "spokenFixture": "live",
+      "expectedCorrect": false
+    }
+  ],
+  "limitation": "Held-out words and an additional synthetic voice, not human accent validation."
+}

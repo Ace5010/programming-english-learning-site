@@ -15,7 +15,7 @@ export interface LessonTask {
   retry: boolean;
   difficulty: SpellingLevel;
 }
-export interface TaskResult { wordId: number; outcome: Outcome }
+export interface TaskResult { wordId: number; outcome: Outcome; unmeasured?: boolean }
 export interface LessonState {
   id: string;
   items: VocabularyItem[];
@@ -164,7 +164,7 @@ export function answerLesson(lesson: LessonState, answers: TaskResult[]): Lesson
   const dictationLimits = new Map<number, SpellingLevel>();
   for (const result of results) {
     for (const answer of result.answers) {
-      if (answer.outcome === 'independent') continue;
+      if (answer.unmeasured || answer.outcome === 'independent') continue;
       const evidence = result.task.evidence.find(question => question.wordId === answer.wordId);
       if (evidence?.ability === 'spelling') {
         const easier = Math.max(0, result.task.difficulty - 1) as SpellingLevel;
@@ -211,7 +211,7 @@ export function nextLesson(lesson: LessonState): LessonState {
 export function summarizeLesson(lesson: LessonState, wordId: number): Record<typeof reviewAbilities[number], string> {
   const session: ReviewSession = {
     id: lesson.id, items: lesson.items, questions: lesson.tasks.flatMap(task => task.evidence), index: lesson.index, finished: lesson.finished,
-    answers: lesson.results.flatMap(result => result.answers.map(answer => ({
+    answers: lesson.results.flatMap(result => result.answers.filter(answer => !answer.unmeasured).map(answer => ({
       question: result.task.evidence.find(question => question.wordId === answer.wordId)!, outcome: answer.outcome,
     }))),
   };

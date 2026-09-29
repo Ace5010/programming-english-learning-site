@@ -1,0 +1,17 @@
+Verifies
+Verified using v1 scheme (JAR signing): false
+Verified using v2 scheme (APK Signature Scheme v2): true
+Verified using v3 scheme (APK Signature Scheme v3): false
+Verified using v3.1 scheme (APK Signature Scheme v3.1): false
+Verified using v4 scheme (APK Signature Scheme v4): false
+Verified for SourceStamp: false
+Number of signers: 1
+Signer #1 certificate DN: CN=CodeWords Local Release
+Signer #1 certificate SHA-256 digest: bba8708611837c411a5500ecfac014161714e7f121931d38889446eca009d5ee
+Signer #1 certificate SHA-1 digest: 0deaaf906f44d5c7d02a4f515d56bb4b4da12f94
+Signer #1 certificate MD5 digest: da2a052a54ca74aa8e0fa0caf2272e7a
+Signer #1 key algorithm: RSA
+Signer #1 key size (bits): 3072
+Signer #1 public key SHA-256 digest: 43c3c81860e88ad5694ae3086090cb438fa062f22bd0fdd918a333028466b577
+Signer #1 public key SHA-1 digest: 84bf8a6327e6f8284e0def2e3138f4e85a8b39c0
+Signer #1 public key MD5 digest: fc9f36d94e5ed86ee84dcee8d26a82c9

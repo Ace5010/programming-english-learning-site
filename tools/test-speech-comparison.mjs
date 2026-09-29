@@ -22,6 +22,22 @@ test('returns original target tokens and offsets for punctuation-preserving high
   assert.deepEqual(result.targetWords[1].heard, ['i', 'am']);
 });
 
+test('accepts goodbye speech spelling variants without accepting misheard or incomplete farewells', () => {
+  for (const heard of ['goodbye', 'good bye', 'good-bye', 'Good Bye!']) {
+    const result = compareSpeech('Goodbye!', heard);
+    assert.equal(result.allMatched, true, heard);
+    assert.equal(result.totalCount, 1);
+    assert.deepEqual(result.targetWords.map(word => [word.text, word.start, word.end, word.status]), [['Goodbye', 0, 7, 'matched']]);
+    assert.deepEqual(result.extras, []);
+    assert.equal(compareSpeech(heard, 'Goodbye!').allMatched, true);
+  }
+  assert.equal(compareSpeech('Hello, Goodbye!', 'hello good bye').allMatched, true);
+  for (const heard of ['good', 'bye', 'with by', 'good by', 'good boy', 'good good bye']) {
+    assert.equal(compareSpeech('Goodbye!', heard).allMatched, false, heard);
+  }
+  assert.deepEqual(compareSpeech('Goodbye!', 'bye').targetWords[0].missingParts, ['good']);
+});
+
 test('a missing word does not make following words incorrect', () => {
   const result = compareSpeech('I am from China.', 'I from China');
   assert.deepEqual(statuses(result), ['matched', 'missing', 'matched', 'matched']);

@@ -1,0 +1,14 @@
+
+> programming-english-learning-site@1.0.0 verify
+> python tools/verify_project.py
+
+{"lessons":24,"phrases":83,"audioFiles":166,"revision":"1a2f77fe596011b7"}
+{"texts":288,"recordings":576,"feedbackSounds":3}
+aria: 7241 MP3
+guy: 7241 MP3
+��Ŀ�����Ӣ��ѧϰ��վ
+�ʻ㣺3620
+������7122
+ȱ����Ŀ�ļ���0
+ȱ�ٻ���������0
+���ͨ����������Ŀ�ѻ��ܡ�

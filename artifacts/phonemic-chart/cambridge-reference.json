@@ -1,0 +1,516 @@
+{
+  "source": "https://dictionary.cambridge.org/help/phonetics.html",
+  "checkedAt": "2026-09-27T04:24:45.2082193Z",
+  "rows": [
+    {
+      "ipa": "iː",
+      "urls": [
+        "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_sound_sheep_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/us_phonetic/us_phonetics_sound_sheep_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_word_sheep_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/us_phonetic/us_phonetics_word_sheep_2023feb.mp3"
+      ]
+    },
+    {
+      "ipa": "ɪ",
+      "urls": [
+        "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_sound_ship_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/us_phonetic/us_phonetics_sound_ship_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_word_ship_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/us_phonetic/us_phonetics_word_ship_2023feb.mp3"
+      ]
+    },
+    {
+      "ipa": "ɑː",
+      "urls": [
+        "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_sound_father_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/us_phonetic/us_phonetics_sound_father_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_word_father_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/us_phonetic/us_phonetics_word_father_2023feb.mp3"
+      ]
+    },
+    {
+      "ipa": "æ",
+      "urls": [
+        "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_sound_hat_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/us_phonetic/us_phonetics_sound_hat_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_word_hat_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/us_phonetic/us_phonetics_word_hat_2023feb.mp3"
+      ]
+    },
+    {
+      "ipa": "ʌ",
+      "urls": [
+        "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_sound_cup_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/us_phonetic/us_phonetics_sound_cup_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_word_cup_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/us_phonetic/us_phonetics_word_cup_2023feb.mp3"
+      ]
+    },
+    {
+      "ipa": "ɔː",
+      "urls": [
+        "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_sound_horse_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/us_phonetic/us_phonetics_sound_horse_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_word_horse_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/us_phonetic/us_phonetics_word_horse_2023feb.mp3"
+      ]
+    },
+    {
+      "ipa": "ɒ",
+      "urls": [
+        "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_sound_sock_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_word_sock_2023feb.mp3"
+      ]
+    },
+    {
+      "ipa": "uː",
+      "urls": [
+        "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_sound_blue_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/us_phonetic/us_phonetics_sound_blue_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_word_blue_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/us_phonetic/us_phonetics_word_blue_2023feb.mp3"
+      ]
+    },
+    {
+      "ipa": "ʊ",
+      "urls": [
+        "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_sound_foot_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/us_phonetic/us_phonetics_sound_foot_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_word_foot_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/us_phonetic/us_phonetics_word_foot_2023feb.mp3"
+      ]
+    },
+    {
+      "ipa": "e",
+      "urls": [
+        "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_sound_head_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/us_phonetic/us_phonetics_sound_head_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_word_head_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/us_phonetic/us_phonetics_word_head_2023feb.mp3"
+      ]
+    },
+    {
+      "ipa": "ɜː",
+      "urls": [
+        "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_sound_bird_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_word_bird_2023feb.mp3"
+      ]
+    },
+    {
+      "ipa": "ɝː",
+      "urls": [
+        "https://dictionary.cambridge.org/media/english/us_phonetic/us_phonetics_sound_bird_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/us_phonetic/us_phonetics_word_bird_2023feb.mp3"
+      ]
+    },
+    {
+      "ipa": "ə",
+      "urls": [
+        "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_sound_above_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/us_phonetic/us_phonetics_sound_above_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_word_above_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/us_phonetic/us_phonetics_word_above_2023feb.mp3"
+      ]
+    },
+    {
+      "ipa": "ɚ",
+      "urls": [
+        "https://dictionary.cambridge.org/media/english/us_phonetic/us_phonetics_sound_mother_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/us_phonetic/us_phonetics_word_mother_2023feb.mp3"
+      ]
+    },
+    {
+      "ipa": "eɪ",
+      "urls": [
+        "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_sound_day_2023feb_002.mp3",
+        "https://dictionary.cambridge.org/media/english/us_phonetic/us_phonetics_sound_day_2023feb_002.mp3",
+        "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_word_day_2023feb_002.mp3",
+        "https://dictionary.cambridge.org/media/english/us_phonetic/us_phonetics_word_day_2023feb_002.mp3"
+      ]
+    },
+    {
+      "ipa": "aɪ",
+      "urls": [
+        "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_sound_eye_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/us_phonetic/us_phonetics_sound_eye_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_word_eye_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/us_phonetic/us_phonetics_word_eye_2023feb.mp3"
+      ]
+    },
+    {
+      "ipa": "ɔɪ",
+      "urls": [
+        "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_sound_boy_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/us_phonetic/us_phonetics_sound_boy_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_word_boy_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/us_phonetic/us_phonetics_word_boy_2023feb.mp3"
+      ]
+    },
+    {
+      "ipa": "əʊ",
+      "urls": [
+        "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_sound_nose_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_word_nose_2023feb.mp3"
+      ]
+    },
+    {
+      "ipa": "oʊ",
+      "urls": [
+        "https://dictionary.cambridge.org/media/english/us_phonetic/us_phonetics_sound_nose_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/us_phonetic/us_phonetics_word_nose_2023feb.mp3"
+      ]
+    },
+    {
+      "ipa": "aʊ",
+      "urls": [
+        "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_sound_mouth_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/us_phonetic/us_phonetics_sound_mouth_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_word_mouth_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/us_phonetic/us_phonetics_word_mouth_2023feb.mp3"
+      ]
+    },
+    {
+      "ipa": "ɪə",
+      "urls": [
+        "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_sound_ear_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_word_ear_2023feb.mp3"
+      ]
+    },
+    {
+      "ipa": "eə",
+      "urls": [
+        "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_sound_hair_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_word_hair_2023feb.mp3"
+      ]
+    },
+    {
+      "ipa": "ʊə",
+      "urls": [
+        "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_sound_pure_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_word_pure_2023feb.mp3"
+      ]
+    },
+    {
+      "ipa": "aɪə",
+      "urls": [
+        "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_sound_fire_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_word_fire_2023feb.mp3"
+      ]
+    },
+    {
+      "ipa": "aʊə",
+      "urls": [
+        "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_sound_hour_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_word_hour_2023feb.mp3"
+      ]
+    },
+    {
+      "ipa": "p",
+      "urls": [
+        "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_sound_pen_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/us_phonetic/us_phonetics_sound_pen_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_word_pen_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/us_phonetic/us_phonetics_word_pen_2023feb.mp3"
+      ]
+    },
+    {
+      "ipa": "b",
+      "urls": [
+        "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_sound_book_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/us_phonetic/us_phonetics_sound_book_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_word_book_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/us_phonetic/us_phonetics_word_book_2023feb.mp3"
+      ]
+    },
+    {
+      "ipa": "t",
+      "urls": [
+        "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_sound_town_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/us_phonetic/us_phonetics_sound_town_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_word_town_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/us_phonetic/us_phonetics_word_town_2023feb.mp3"
+      ]
+    },
+    {
+      "ipa": "t̬",
+      "urls": [
+        "https://dictionary.cambridge.org/media/english/us_phonetic/us_phonetics_sound_cutting_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/us_phonetic/us_phonetics_word_cutting_2023feb.mp3"
+      ]
+    },
+    {
+      "ipa": "d",
+      "urls": [
+        "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_sound_day_2023feb_001.mp3",
+        "https://dictionary.cambridge.org/media/english/us_phonetic/us_phonetics_sound_day_2023feb_001.mp3",
+        "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_word_day_2023feb_001.mp3",
+        "https://dictionary.cambridge.org/media/english/us_phonetic/us_phonetics_word_day_2023feb_001.mp3"
+      ]
+    },
+    {
+      "ipa": "k",
+      "urls": [
+        "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_sound_cat_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/us_phonetic/us_phonetics_sound_cat_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_word_cat_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/us_phonetic/us_phonetics_word_cat_2023feb.mp3"
+      ]
+    },
+    {
+      "ipa": "g",
+      "urls": [
+        "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_sound_give_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/us_phonetic/us_phonetics_sound_give_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_word_give_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/us_phonetic/us_phonetics_word_give_2023feb.mp3"
+      ]
+    },
+    {
+      "ipa": "f",
+      "urls": [
+        "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_sound_fish_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/us_phonetic/us_phonetics_sound_fish_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_word_fish_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/us_phonetic/us_phonetics_word_fish_2023feb.mp3"
+      ]
+    },
+    {
+      "ipa": "v",
+      "urls": [
+        "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_sound_very_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/us_phonetic/us_phonetics_sound_very_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_word_very_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/us_phonetic/us_phonetics_word_very_2023feb.mp3"
+      ]
+    },
+    {
+      "ipa": "θ",
+      "urls": [
+        "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_sound_think_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/us_phonetic/us_phonetics_sound_think_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_word_think_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/us_phonetic/us_phonetics_word_think_2023feb.mp3"
+      ]
+    },
+    {
+      "ipa": "ð",
+      "urls": [
+        "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_sound_this_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/us_phonetic/us_phonetics_sound_this_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_word_this_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/us_phonetic/us_phonetics_word_this_2023feb.mp3"
+      ]
+    },
+    {
+      "ipa": "s",
+      "urls": [
+        "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_sound_say_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/us_phonetic/us_phonetics_sound_say_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_word_say_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/us_phonetic/us_phonetics_word_say_2023feb.mp3"
+      ]
+    },
+    {
+      "ipa": "z",
+      "urls": [
+        "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_sound_zoo_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/us_phonetic/us_phonetics_sound_zoo_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_word_zoo_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/us_phonetic/us_phonetics_word_zoo_2023feb.mp3"
+      ]
+    },
+    {
+      "ipa": "ʃ",
+      "urls": [
+        "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_sound_she_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/us_phonetic/us_phonetics_sound_she_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_word_she_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/us_phonetic/us_phonetics_word_she_2023feb.mp3"
+      ]
+    },
+    {
+      "ipa": "ʒ",
+      "urls": [
+        "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_sound_vision_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/us_phonetic/us_phonetics_sound_vision_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_word_vision_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/us_phonetic/us_phonetics_word_vision_2023feb.mp3"
+      ]
+    },
+    {
+      "ipa": "tʃ",
+      "urls": [
+        "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_sound_cheese_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/us_phonetic/us_phonetics_sound_cheese_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_word_cheese_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/us_phonetic/us_phonetics_word_cheese_2023feb.mp3"
+      ]
+    },
+    {
+      "ipa": "dʒ",
+      "urls": [
+        "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_sound_jump_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/us_phonetic/us_phonetics_sound_jump_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_word_jump_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/us_phonetic/us_phonetics_word_jump_2023feb.mp3"
+      ]
+    },
+    {
+      "ipa": "m",
+      "urls": [
+        "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_sound_moon_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/us_phonetic/us_phonetics_sound_moon_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_word_moon_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/us_phonetic/us_phonetics_word_moon_2023feb.mp3"
+      ]
+    },
+    {
+      "ipa": "n",
+      "urls": [
+        "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_sound_name_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/us_phonetic/us_phonetics_sound_name_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_word_name_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/us_phonetic/us_phonetics_word_name_2023feb.mp3"
+      ]
+    },
+    {
+      "ipa": "ŋ",
+      "urls": [
+        "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_sound_sing_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/us_phonetic/us_phonetics_sound_sing_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_word_sing_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/us_phonetic/us_phonetics_word_sing_2023feb.mp3"
+      ]
+    },
+    {
+      "ipa": "l",
+      "urls": [
+        "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_sound_look_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/us_phonetic/us_phonetics_sound_look_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_word_look_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/us_phonetic/us_phonetics_word_look_2023feb.mp3"
+      ]
+    },
+    {
+      "ipa": "r",
+      "urls": [
+        "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_sound_run_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/us_phonetic/us_phonetics_sound_run_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_word_run_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/us_phonetic/us_phonetics_word_run_2023feb.mp3"
+      ]
+    },
+    {
+      "ipa": "w",
+      "urls": [
+        "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_sound_we_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/us_phonetic/us_phonetics_sound_we_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_word_we_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/us_phonetic/us_phonetics_word_we_2023feb.mp3"
+      ]
+    },
+    {
+      "ipa": "j",
+      "urls": [
+        "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_sound_yes_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/us_phonetic/us_phonetics_sound_yes_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_word_yes_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/us_phonetic/us_phonetics_word_yes_2023feb.mp3"
+      ]
+    },
+    {
+      "ipa": "h",
+      "urls": [
+        "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_sound_hand_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/us_phonetic/us_phonetics_sound_hand_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_word_hand_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/us_phonetic/us_phonetics_word_hand_2023feb.mp3"
+      ]
+    },
+    {
+      "ipa": "i",
+      "urls": [
+        "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_sound_happy_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/us_phonetic/us_phonetics_sound_happy_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_word_happy_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/us_phonetic/us_phonetics_word_happy_2023feb.mp3"
+      ]
+    },
+    {
+      "ipa": "u",
+      "urls": [
+        "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_sound_situation_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/us_phonetic/us_phonetics_sound_situation_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_word_situation_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/us_phonetic/us_phonetics_word_situation_2023feb.mp3"
+      ]
+    },
+    {
+      "ipa": "ɒ̃",
+      "urls": [
+        "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_sound_croissant_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/us_phonetic/us_phonetics_sound_croissant_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_word_croissant_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/us_phonetic/us_phonetics_word_croissant_2023feb.mp3"
+      ]
+    },
+    {
+      "ipa": "x",
+      "urls": [
+        "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_sound_loch_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/us_phonetic/us_phonetics_sound_loch_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_word_loch_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/us_phonetic/us_phonetics_word_loch_2023feb.mp3"
+      ]
+    },
+    {
+      "ipa": "əl",
+      "urls": [
+        "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_sound_label_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/us_phonetic/us_phonetics_sound_label_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_word_label_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/us_phonetic/us_phonetics_word_label_2023feb.mp3"
+      ]
+    },
+    {
+      "ipa": "əm",
+      "urls": [
+        "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_sound_criticism_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/us_phonetic/us_phonetics_sound_criticism_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_word_criticism_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/us_phonetic/us_phonetics_word_criticism_2023feb.mp3"
+      ]
+    },
+    {
+      "ipa": "ən",
+      "urls": [
+        "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_sound_sudden_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/us_phonetic/us_phonetics_sound_sudden_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_word_sudden_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/us_phonetic/us_phonetics_word_sudden_2023feb.mp3"
+      ]
+    },
+    {
+      "ipa": "ər",
+      "urls": [
+        "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_sound_dictionary_2023jun.mp3",
+        "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_word_dictionary_2023jun.mp3"
+      ]
+    },
+    {
+      "ipa": "ˈ",
+      "urls": [
+        "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_word_surprise_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/us_phonetic/us_phonetics_word_surprise_2023feb.mp3"
+      ]
+    },
+    {
+      "ipa": "ˌ",
+      "urls": [
+        "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_word_retell_2023feb.mp3",
+        "https://dictionary.cambridge.org/media/english/us_phonetic/us_phonetics_word_retell_2023feb.mp3"
+      ]
+    }
+  ]
+}

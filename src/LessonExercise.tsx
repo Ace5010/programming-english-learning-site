@@ -3,6 +3,11 @@ import type { VocabularyItem } from './vocabulary';
 import type { LessonTask, TaskResult } from './lesson';
 import { normalizeSpelling, spellingCorrection, spellingFixedCharacterError } from './ReviewSpelling';
 import type { PlaybackSpeed } from './SpeechControls';
+import ReadAloudText, { ReadingControls, useReading, clickedReadingText } from './ReadAloud';
+import CorrectionNotice from './CorrectionNotice';
+import { localAnswerCorrection } from './answerCorrection';
+import type { ReviewExerciseDraft } from './reviewSession';
+import './coursePractice.css';
 
 export interface ExerciseHandle {
   check(): void;
@@ -19,6 +24,9 @@ export interface LessonExerciseProps {
   speaking?: string;
   speed?: PlaybackSpeed;
   onSpeedChange?: (value: PlaybackSpeed) => void;
+  savedDraft?: ReviewExerciseDraft;
+  onSnapshot?: (draft: ReviewExerciseDraft) => void;
+  onPairCorrect?: (wordId: number) => void;
 }
 
 export function uniqueLessonWords(items: VocabularyItem[]) {
@@ -64,8 +72,9 @@ LessonExercise.displayName = 'LessonExercise';
 export default LessonExercise;
 
 const ExerciseQuestion = forwardRef<ExerciseHandle, LessonExerciseProps>(function ExerciseQuestion(
-  { task, onReady, onResult, onDifficulty, playWord, speaking = '', speed, onSpeedChange }, ref,
+  { task, onReady, onResult, onDifficulty, playWord, speaking = '', speed, onSpeedChange, savedDraft, onSnapshot, onPairCorrect }, ref,
 ) {
+  const reading = useReading();
   const words = useMemo(() => uniqueLessonWords(task.words), [task.words]);
   const target = words[0];
   const options = useMemo(() => lessonShuffle(task.options, `${task.id}:options`), [task.options, task.id]);
@@ -77,34 +86,40 @@ const ExerciseQuestion = forwardRef<ExerciseHandle, LessonExerciseProps>(functio
   }, [words, task.id, leftWords]);
   const letters = useMemo(() => [...(target?.word ?? '')].filter(character => /^[a-z]$/i.test(character)), [target?.word]);
   const hidden = useMemo(() => dictationHiddenPositions(target?.word ?? '', task.difficulty), [target?.word, task.difficulty]);
-  const [selected, setSelected] = useState<number | null>(null);
-  const [input, setInput] = useState('');
-  const [gapAnswers, setGapAnswers] = useState<Record<number, string>>({});
+  const initial = savedDraft?.taskId === task.id ? savedDraft : undefined;
+  const [selected, setSelected] = useState<number | null>(initial?.selected ?? null);
+  const [input, setInput] = useState(initial?.input ?? '');
+  const [gapAnswers, setGapAnswers] = useState<Record<number, string>>(initial?.gaps ?? {});
   const [gapComposition, setGapComposition] = useState<{ position: number; text: string } | null>(null);
-  const [hints, setHints] = useState<number[]>([]);
-  const [excluded, setExcluded] = useState<number[]>([]);
-  const [pairResults, setPairResults] = useState<TaskResult[]>([]);
-  const [pairLeft, setPairLeft] = useState<number | null>(null);
-  const [note, setNote] = useState('');
-  const [done, setDone] = useState(false);
-  const finished = useRef(false);
+  const [hints, setHints] = useState<number[]>(initial?.hints ?? []);
+  const [excluded, setExcluded] = useState<number[]>(initial?.excluded ?? []);
+  const [pairResults, setPairResults] = useState<TaskResult[]>(initial?.pairResults ?? []);
+  const [pairLeft, setPairLeft] = useState<number | null>(initial?.pairLeft ?? null);
+  const [note, setNote] = useState(initial?.note ?? '');
+  const [done, setDone] = useState(initial?.done ?? false);
+  const [retryCorrection, setRetryCorrection] = useState(initial?.correction);
+  const correctionRef = useRef(initial?.correction);
+  const finished = useRef(initial?.done ?? false);
   const composing = useRef(false);
-  const observed = useRef(new Set<number>());
-  const pairMistakes = useRef<Record<number, number>>({});
-  const pairResultsRef = useRef<TaskResult[]>([]);
-  const pairLeftRef = useRef<number | null>(null);
+  const observed = useRef(new Set<number>(initial?.observed));
+  const pairMistakes = useRef<Record<number, number>>(initial?.pairMistakes ?? {});
+  const pairWrong = useRef(initial?.pairWrong);
+  const pairResultsRef = useRef<TaskResult[]>(initial?.pairResults ?? []);
+  const pairLeftRef = useRef<number | null>(initial?.pairLeft ?? null);
   const gapRefs = useRef<Record<number, HTMLInputElement | null>>({});
   const inputRef = useRef<HTMLInputElement | null>(null);
-  const selectedRef = useRef<number | null>(null);
-  const inputValue = useRef('');
-  const gapValues = useRef<Record<number, string>>({});
-  const hintedPositions = useRef<number[]>([]);
-  const excludedOptions = useRef<number[]>([]);
+  const selectedRef = useRef<number | null>(initial?.selected ?? null);
+  const inputValue = useRef(initial?.input ?? '');
+  const gapValues = useRef<Record<number, string>>(initial?.gaps ?? {});
+  const hintedPositions = useRef<number[]>(initial?.hints ?? []);
+  const excludedOptions = useRef<number[]>(initial?.excluded ?? []);
+  const actualAnswer = task.difficulty === 3 ? input : letters.map((character, index) => hidden.includes(index) ? gapAnswers[index] ?? '' : character).join('');
+  useEffect(() => { onSnapshot?.({ taskId: task.id, selected, input, gaps: gapAnswers, hints, excluded, pairResults, pairLeft, note, done, observed: [...observed.current], pairMistakes: { ...pairMistakes.current }, correction: retryCorrection, pairWrong: pairWrong.current }); }, [task.id, selected, input, gapAnswers, hints, excluded, pairResults, pairLeft, note, done, retryCorrection, onSnapshot]);
 
   const dictationReady = task.difficulty === 3
     ? normalizeSpelling(input).length > 0
     : hidden.length > 0 && hidden.every(position => Boolean(gapAnswers[position]));
-  const ready = !done && Boolean(target) && (task.kind === 'pairs' ? false : task.kind === 'dictation' ? dictationReady : selected !== null);
+  const ready = !done && Boolean(target) && (task.kind === 'pairs' ? false : task.kind === 'dictation' ? dictationReady && (!retryCorrection || actualAnswer.toLowerCase() !== retryCorrection.original.toLowerCase()) : selected !== null);
   useEffect(() => { onReady(ready); }, [onReady, ready]);
 
   function focusGap(position: number | undefined) {
@@ -143,12 +158,17 @@ const ExerciseQuestion = forwardRef<ExerciseHandle, LessonExerciseProps>(functio
     if (task.kind === 'dictation') {
       const actual = task.difficulty === 3 ? inputValue.current : letters.map((character, index) => hidden.includes(index) ? gapValues.current[index] ?? '' : character).join('');
       if (task.difficulty === 3 ? !normalizeSpelling(actual) : hidden.some(position => !gapValues.current[position])) return;
+      if (correctionRef.current && actual.toLowerCase() === correctionRef.current.original.toLowerCase()) return;
       const correction = task.difficulty === 3
         ? briefDictationCorrection(target.word, actual)
         : briefDictationCorrection(letters.join(''), actual);
       if (correction) markDifficulty(target.id);
+      if (correction && !correctionRef.current) {
+        const local = localAnswerCorrection(actual, [task.difficulty === 3 ? target.word : letters.join('')]);
+        if (local) { correctionRef.current = local; setRetryCorrection(local); return; }
+      }
       const outcome: TaskResult['outcome'] = correction ? 'revealed' : observed.current.has(target.id) ? 'assisted' : 'independent';
-      finish([{ wordId: target.id, outcome }], !correction, correction ?? '拼写正确。', target.word);
+      finish([{ wordId: target.id, outcome }], !correction, correction ?? (correctionRef.current ? '修改正确' : '拼写正确。'), target.word);
       return;
     }
     if (selectedRef.current === null) return;
@@ -161,12 +181,15 @@ const ExerciseQuestion = forwardRef<ExerciseHandle, LessonExerciseProps>(functio
 
   function finishPair(wordId: number, outcome: TaskResult['outcome']) {
     if (finished.current || pairResultsRef.current.some(result => result.wordId === wordId)) return;
-    const next = [...pairResultsRef.current, { wordId, outcome }];
+    const next: TaskResult[] = [...pairResultsRef.current, { wordId, outcome }];
+    const remaining = words.filter(word => !next.some(result => result.wordId === word.id));
+    if (remaining.length === 1) next.push({ wordId: remaining[0].id, outcome: 'assisted', unmeasured: true });
     pairResultsRef.current = next;
     setPairResults(next);
     pairLeftRef.current = null;
     setPairLeft(null);
-    if (next.length === words.length) finish(next, next.every(result => result.outcome === 'independent'),
+    if (outcome !== 'revealed') onPairCorrect?.(wordId);
+    if (next.length === words.length) finish(next, next.every(result => result.outcome !== 'revealed'),
       '配对完成。', words.map(word => `${word.word} — ${word.meaning}`).join('；'));
   }
 
@@ -176,19 +199,21 @@ const ExerciseQuestion = forwardRef<ExerciseHandle, LessonExerciseProps>(functio
     if (englishId === null) { setNote('先选择左侧的单词。'); return; }
     const english = words.find(word => word.id === englishId);
     if (!english) return;
+    if (pairWrong.current?.left === englishId && pairWrong.current.right === wordId) return;
     if (englishId === wordId) {
       setNote(`${english.word} — ${english.meaning}`);
       finishPair(englishId, observed.current.has(englishId) ? 'assisted' : 'independent');
       return;
     }
     markDifficulty(englishId);
+    pairWrong.current = { left: englishId, right: wordId };
     const mistakes = (pairMistakes.current[englishId] ?? 0) + 1;
     pairMistakes.current[englishId] = mistakes;
-    if (mistakes >= 2) {
+    if (mistakes >= 2 || words.length - pairResultsRef.current.length <= 2) {
       setNote(`${english.word} — ${english.meaning}，已配好。`);
       finishPair(englishId, 'revealed');
     } else {
-      setNote(`${english.word} 的意思是“${english.meaning}”，再选一次。`);
+      setNote('这两个选项不对应，再选择一次。');
     }
   }
 
@@ -199,9 +224,8 @@ const ExerciseQuestion = forwardRef<ExerciseHandle, LessonExerciseProps>(functio
         ?? words.find(candidate => !pairResultsRef.current.some(result => result.wordId === candidate.id));
       if (!word) return;
       markDifficulty(word.id);
-      pairLeftRef.current = word.id;
-      setPairLeft(word.id);
       setNote(`${word.word} — ${word.meaning}`);
+      finishPair(word.id, 'revealed');
       return;
     }
     markDifficulty(target.id);
@@ -272,17 +296,23 @@ const ExerciseQuestion = forwardRef<ExerciseHandle, LessonExerciseProps>(functio
         event.stopPropagation();
       }
     }}>
-    {task.kind === 'meaning' && <div className="lesson-target"><strong>{target.word}</strong>{audio}</div>}
+    {task.kind === 'meaning' && <div className="lesson-target"><strong><ReadAloudText text={target.word} /></strong>{audio}</div>}
     {(task.kind === 'listen' || task.kind === 'dictation') && audio}
     {task.kind === 'cloze' && <p className="lesson-sentence">{(task.sentence ?? '___').split(/(_{3,})/).map((part, index) => /^_{3,}$/.test(part)
-      ? <span key={index} className="lesson-sentence-gap">{done ? target.word : '______'}</span> : <span key={index}>{part}</span>)}</p>}
-    {task.kind === 'context' && <p className="lesson-sentence">{target.example}</p>}
+      ? <span key={index} className="lesson-sentence-gap">{done ? <ReadAloudText text={target.word} /> : '______'}</span> : <span key={index}><ReadAloudText text={part} /></span>)}</p>}
+    {task.kind === 'context' && <p className="lesson-sentence"><ReadAloudText text={target.example} /><ReadingControls text={target.example} /></p>}
     {task.kind === 'cloze' && <p className="lesson-translation">{target.exampleZh}</p>}
     {(task.kind === 'meaning' || task.kind === 'listen' || task.kind === 'cloze' || task.kind === 'context') && <div className="lesson-options" role="group" aria-label="答案选项">
-      {options.map(option => <button key={option.id} type="button" className={`lesson-option${selected === option.id ? ' lesson-selected' : ''}${done && option.id === target.id ? ' lesson-correct' : ''}${done && selected === option.id && option.id !== target.id ? ' lesson-incorrect' : ''}${excluded.includes(option.id) ? ' lesson-excluded' : ''}`}
-        aria-pressed={selected === option.id} disabled={done || excluded.includes(option.id)} onClick={() => { selectedRef.current = option.id; setSelected(option.id); }}>
-        <span className="lesson-option-indicator" aria-hidden="true">{done && option.id === target.id ? <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"><path d="m5 12 4 4L19 6" /></svg> : selected === option.id ? <i /> : null}</span><span>{task.kind === 'meaning' ? option.meaning : task.kind === 'context' ? option.exampleZh : option.word}</span>
-      </button>)}
+      {options.map(option => {
+        const text = task.kind === 'meaning' ? option.meaning : task.kind === 'context' ? option.exampleZh : option.word;
+        const beforeRead = () => { if (task.kind === 'listen') markDifficulty(target.id); };
+        return <div className="reading-option" key={option.id}><button type="button" className={`lesson-option${selected === option.id ? ' lesson-selected' : ''}${done && option.id === target.id ? ' lesson-correct' : ''}${done && selected === option.id && option.id !== target.id ? ' lesson-incorrect' : ''}${excluded.includes(option.id) ? ' lesson-excluded' : ''}`}
+          aria-pressed={selected === option.id} onClick={event => {
+            const alreadySelected = selectedRef.current !== null;
+            if (!done && !excluded.includes(option.id)) { selectedRef.current = option.id; setSelected(option.id); }
+            reading.play(clickedReadingText(event.target, text), false, alreadySelected ? beforeRead : undefined);
+          }}><span className="lesson-option-indicator" aria-hidden="true">{done && option.id === target.id ? <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"><path d="m5 12 4 4L19 6" /></svg> : selected === option.id ? <i /> : null}</span><ReadAloudText text={text} inButton /></button><ReadingControls text={text} beforeRead={beforeRead} /></div>;
+      })}
     </div>}
     {task.kind === 'dictation' && <div className="lesson-dictation">
       <div className="lesson-letter-slots" aria-label="拼写提示，数字和标点已给出">
@@ -343,14 +373,15 @@ const ExerciseQuestion = forwardRef<ExerciseHandle, LessonExerciseProps>(functio
     {task.kind === 'pairs' && <div className="lesson-pairs">
       <div className="lesson-pair-column" role="group" aria-label="英文单词">{leftWords.map(word => {
         const matched = pairResults.some(result => result.wordId === word.id);
-        return <button type="button" key={word.id} disabled={done || matched} className={`lesson-pair-card${pairLeft === word.id ? ' lesson-selected' : ''}${matched ? ' lesson-matched' : ''}`}
-          aria-pressed={pairLeft === word.id} onClick={() => { pairLeftRef.current = word.id; setPairLeft(word.id); setNote(''); }}>{word.word}{matched && <span className="lesson-pair-marker">已配对</span>}</button>;
+        return <div className="reading-option" key={word.id}><button type="button" className={`lesson-pair-card${pairLeft === word.id ? ' lesson-selected' : ''}${matched ? ' lesson-matched' : ''}`}
+          aria-pressed={pairLeft === word.id} onClick={() => { if (!done && !matched) { pairLeftRef.current = word.id; setPairLeft(word.id); setNote(''); } playWord(word, false); }}>{word.word}{matched && <span className="lesson-pair-marker">已配对</span>}</button><ReadingControls text={word.word} /></div>;
       })}</div>
       <div className="lesson-pair-column" role="group" aria-label="中文含义">{rightWords.map(word => {
         const matched = pairResults.some(result => result.wordId === word.id);
         return <button type="button" key={word.id} disabled={done || matched} className={`lesson-pair-card${matched ? ' lesson-matched' : ''}`} onClick={() => chooseMeaning(word.id)}>{word.meaning}{matched && <span className="lesson-pair-marker">已配对</span>}</button>;
       })}</div>
     </div>}
-    {!done && note && <p className="lesson-note" role="status">{note}</p>}
+    {!done && retryCorrection && <CorrectionNotice correction={retryCorrection} />}
+    {!done && note && <p className="lesson-note" role="status"><ReadAloudText text={note} /></p>}
   </div>;
 });

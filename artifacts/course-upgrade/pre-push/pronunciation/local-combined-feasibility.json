@@ -1,0 +1,3015 @@
+{
+  "date": "2026-09-24",
+  "status": "experimental-not-production",
+  "cloudCalls": 0,
+  "containsUserRecording": false,
+  "uniqueAudioFiles": 28,
+  "comparisons": 44,
+  "correctPassed": 25,
+  "correctUncertain": 3,
+  "negativePassed": 0,
+  "negativePractice": 15,
+  "negativeUncertain": 1,
+  "falseLocalizationObserved": [
+    "guy-bed-as-bad: consonant b marked instead of the actual vowel contrast"
+  ],
+  "limitations": [
+    "Forced alignment cannot itself establish correctness.",
+    "ASR digit 3 must follow the existing frontend number normalization.",
+    "Independent recognizers disagree on correct Guy bed and then.",
+    "Show phoneme correction only when independent acoustic evidence and recognized-word pronunciation agree; retain uncertainty otherwise.",
+    "Synthetic samples only; human pronunciation and mobile integration pending."
+  ],
+  "cases": [
+    {
+      "id": "aria-hello-as-hello",
+      "source": "public\\audio\\daily\\aria\\hello.mp3",
+      "sha256": "d647bdc233e2be048fef5c9c34d03d6ed22e66cb4031f23d9703eef01495bf5b",
+      "spokenFixture": "hello",
+      "target": "hello",
+      "expectedCorrect": true,
+      "transcript": "Hello",
+      "greedyPhones": [
+        "h",
+        "ə",
+        "l",
+        "oʊ"
+      ],
+      "selectedVariant": [
+        "h",
+        "ə",
+        "l",
+        "oʊ"
+      ],
+      "alignment": [
+        {
+          "target": "h",
+          "frames": [
+            11
+          ],
+          "posteriorPeak": 0.99367,
+          "bestPhoneIgnoringBlank": [
+            "h"
+          ],
+          "marginAgainstOtherPhones": 8.01
+        },
+        {
+          "target": "ə",
+          "frames": [
+            15
+          ],
+          "posteriorPeak": 0.48712,
+          "bestPhoneIgnoringBlank": [
+            "ə"
+          ],
+          "marginAgainstOtherPhones": 0.117
+        },
+        {
+          "target": "l",
+          "frames": [
+            18
+          ],
+          "posteriorPeak": 0.99773,
+          "bestPhoneIgnoringBlank": [
+            "l"
+          ],
+          "marginAgainstOtherPhones": 9.156
+        },
+        {
+          "target": "oʊ",
+          "frames": [
+            24
+          ],
+          "posteriorPeak": 0.97058,
+          "bestPhoneIgnoringBlank": [
+            "oʊ"
+          ],
+          "marginAgainstOtherPhones": 4.895
+        }
+      ],
+      "textMatch": true,
+      "homophone": true,
+      "greedyPhonemesMatch": true,
+      "allAlignedTargetsBest": true,
+      "conflicts": [],
+      "candidateDecision": "candidate-pass",
+      "elapsedMs": 6312
+    },
+    {
+      "id": "aria-goodbye-as-goodbye",
+      "source": "public\\audio\\daily\\aria\\goodbye.mp3",
+      "sha256": "39f9feb199cf056ed30b73321bc005e4265f2454e31332afd4dc66d032069639",
+      "spokenFixture": "goodbye",
+      "target": "goodbye",
+      "expectedCorrect": true,
+      "transcript": "Goodbye.",
+      "greedyPhones": [
+        "g",
+        "ʊ",
+        "b",
+        "aɪ"
+      ],
+      "selectedVariant": [
+        "g",
+        "ʊ",
+        "d",
+        "b",
+        "aɪ"
+      ],
+      "alignment": [
+        {
+          "target": "g",
+          "frames": [
+            9
+          ],
+          "posteriorPeak": 0.99359,
+          "bestPhoneIgnoringBlank": [
+            "g"
+          ],
+          "marginAgainstOtherPhones": 6.874
+        },
+        {
+          "target": "ʊ",
+          "frames": [
+            13
+          ],
+          "posteriorPeak": 0.94894,
+          "bestPhoneIgnoringBlank": [
+            "ʊ"
+          ],
+          "marginAgainstOtherPhones": 4.707
+        },
+        {
+          "target": "d",
+          "frames": [
+            16
+          ],
+          "posteriorPeak": 0.00112,
+          "bestPhoneIgnoringBlank": [
+            "d"
+          ],
+          "marginAgainstOtherPhones": 2.201
+        },
+        {
+          "target": "b",
+          "frames": [
+            18,
+            19
+          ],
+          "posteriorPeak": 0.99237,
+          "bestPhoneIgnoringBlank": [
+            "b",
+            "b"
+          ],
+          "marginAgainstOtherPhones": 5.518
+        },
+        {
+          "target": "aɪ",
+          "frames": [
+            27
+          ],
+          "posteriorPeak": 0.99093,
+          "bestPhoneIgnoringBlank": [
+            "aɪ"
+          ],
+          "marginAgainstOtherPhones": 5.948
+        }
+      ],
+      "textMatch": true,
+      "homophone": true,
+      "greedyPhonemesMatch": false,
+      "allAlignedTargetsBest": true,
+      "conflicts": [],
+      "candidateDecision": "candidate-pass",
+      "elapsedMs": 6344
+    },
+    {
+      "id": "aria-think-as-think",
+      "source": "public\\audio\\aria\\word-2652.mp3",
+      "sha256": "56d9cca2c2277ddc788953d76f26920ef025162bb072ddf76489d80924dd85ee",
+      "spokenFixture": "think",
+      "target": "think",
+      "expectedCorrect": true,
+      "transcript": "Think.",
+      "greedyPhones": [
+        "θ",
+        "ɪ",
+        "ŋ",
+        "k"
+      ],
+      "selectedVariant": [
+        "θ",
+        "ɪ",
+        "ŋ",
+        "k"
+      ],
+      "alignment": [
+        {
+          "target": "θ",
+          "frames": [
+            10
+          ],
+          "posteriorPeak": 0.97862,
+          "bestPhoneIgnoringBlank": [
+            "θ"
+          ],
+          "marginAgainstOtherPhones": 5.086
+        },
+        {
+          "target": "ɪ",
+          "frames": [
+            17
+          ],
+          "posteriorPeak": 0.48546,
+          "bestPhoneIgnoringBlank": [
+            "ɪ"
+          ],
+          "marginAgainstOtherPhones": 0.089
+        },
+        {
+          "target": "ŋ",
+          "frames": [
+            20
+          ],
+          "posteriorPeak": 0.97822,
+          "bestPhoneIgnoringBlank": [
+            "ŋ"
+          ],
+          "marginAgainstOtherPhones": 4.279
+        },
+        {
+          "target": "k",
+          "frames": [
+            26
+          ],
+          "posteriorPeak": 0.99645,
+          "bestPhoneIgnoringBlank": [
+            "k"
+          ],
+          "marginAgainstOtherPhones": 7.763
+        }
+      ],
+      "textMatch": true,
+      "homophone": true,
+      "greedyPhonemesMatch": true,
+      "allAlignedTargetsBest": true,
+      "conflicts": [],
+      "candidateDecision": "candidate-pass",
+      "elapsedMs": 6266
+    },
+    {
+      "id": "aria-sink-as-sink",
+      "source": "public\\audio\\aria\\word-959.mp3",
+      "sha256": "6e91c5e4a7ea69fc6243dbdf3eed48bba5106c2030d11f4c90937d8a9e9edaa7",
+      "spokenFixture": "sink",
+      "target": "sink",
+      "expectedCorrect": true,
+      "transcript": "Sink",
+      "greedyPhones": [
+        "s",
+        "ɪ",
+        "ŋ",
+        "k"
+      ],
+      "selectedVariant": [
+        "s",
+        "ɪ",
+        "ŋ",
+        "k"
+      ],
+      "alignment": [
+        {
+          "target": "s",
+          "frames": [
+            15
+          ],
+          "posteriorPeak": 0.99423,
+          "bestPhoneIgnoringBlank": [
+            "s"
+          ],
+          "marginAgainstOtherPhones": 6.464
+        },
+        {
+          "target": "ɪ",
+          "frames": [
+            23
+          ],
+          "posteriorPeak": 0.62249,
+          "bestPhoneIgnoringBlank": [
+            "ɪ"
+          ],
+          "marginAgainstOtherPhones": 0.559
+        },
+        {
+          "target": "ŋ",
+          "frames": [
+            26
+          ],
+          "posteriorPeak": 0.98132,
+          "bestPhoneIgnoringBlank": [
+            "ŋ"
+          ],
+          "marginAgainstOtherPhones": 4.512
+        },
+        {
+          "target": "k",
+          "frames": [
+            32
+          ],
+          "posteriorPeak": 0.99558,
+          "bestPhoneIgnoringBlank": [
+            "k"
+          ],
+          "marginAgainstOtherPhones": 7.298
+        }
+      ],
+      "textMatch": true,
+      "homophone": true,
+      "greedyPhonemesMatch": true,
+      "allAlignedTargetsBest": true,
+      "conflicts": [],
+      "candidateDecision": "candidate-pass",
+      "elapsedMs": 6359
+    },
+    {
+      "id": "aria-sink-as-think",
+      "source": "public\\audio\\aria\\word-959.mp3",
+      "sha256": "6e91c5e4a7ea69fc6243dbdf3eed48bba5106c2030d11f4c90937d8a9e9edaa7",
+      "spokenFixture": "sink",
+      "target": "think",
+      "expectedCorrect": false,
+      "transcript": "Sink",
+      "greedyPhones": [
+        "s",
+        "ɪ",
+        "ŋ",
+        "k"
+      ],
+      "selectedVariant": [
+        "θ",
+        "ɪ",
+        "ŋ",
+        "k"
+      ],
+      "alignment": [
+        {
+          "target": "θ",
+          "frames": [
+            15
+          ],
+          "posteriorPeak": 0.00152,
+          "bestPhoneIgnoringBlank": [
+            "s"
+          ],
+          "marginAgainstOtherPhones": -6.481
+        },
+        {
+          "target": "ɪ",
+          "frames": [
+            23
+          ],
+          "posteriorPeak": 0.62249,
+          "bestPhoneIgnoringBlank": [
+            "ɪ"
+          ],
+          "marginAgainstOtherPhones": 0.559
+        },
+        {
+          "target": "ŋ",
+          "frames": [
+            26
+          ],
+          "posteriorPeak": 0.98132,
+          "bestPhoneIgnoringBlank": [
+            "ŋ"
+          ],
+          "marginAgainstOtherPhones": 4.512
+        },
+        {
+          "target": "k",
+          "frames": [
+            32
+          ],
+          "posteriorPeak": 0.99558,
+          "bestPhoneIgnoringBlank": [
+            "k"
+          ],
+          "marginAgainstOtherPhones": 7.298
+        }
+      ],
+      "textMatch": false,
+      "homophone": false,
+      "greedyPhonemesMatch": false,
+      "allAlignedTargetsBest": false,
+      "conflicts": [
+        {
+          "expected": "θ",
+          "alternative": "s",
+          "margin": -6.481
+        }
+      ],
+      "candidateDecision": "candidate-practice",
+      "elapsedMs": 6359
+    },
+    {
+      "id": "aria-ship-as-ship",
+      "source": "public\\audio\\aria\\word-2224.mp3",
+      "sha256": "93e91a16f6060328871735321fa37898b44145ccc7db88a660ef7c06c0402ef4",
+      "spokenFixture": "ship",
+      "target": "ship",
+      "expectedCorrect": true,
+      "transcript": "Ship",
+      "greedyPhones": [
+        "ʃ",
+        "ɪ",
+        "p"
+      ],
+      "selectedVariant": [
+        "ʃ",
+        "ɪ",
+        "p"
+      ],
+      "alignment": [
+        {
+          "target": "ʃ",
+          "frames": [
+            15
+          ],
+          "posteriorPeak": 0.99404,
+          "bestPhoneIgnoringBlank": [
+            "ʃ"
+          ],
+          "marginAgainstOtherPhones": 6.324
+        },
+        {
+          "target": "ɪ",
+          "frames": [
+            24
+          ],
+          "posteriorPeak": 0.90459,
+          "bestPhoneIgnoringBlank": [
+            "ɪ"
+          ],
+          "marginAgainstOtherPhones": 2.476
+        },
+        {
+          "target": "p",
+          "frames": [
+            32,
+            33
+          ],
+          "posteriorPeak": 0.97037,
+          "bestPhoneIgnoringBlank": [
+            "p",
+            "p"
+          ],
+          "marginAgainstOtherPhones": 5.837
+        }
+      ],
+      "textMatch": true,
+      "homophone": true,
+      "greedyPhonemesMatch": true,
+      "allAlignedTargetsBest": true,
+      "conflicts": [],
+      "candidateDecision": "candidate-pass",
+      "elapsedMs": 6219
+    },
+    {
+      "id": "aria-sheep-as-sheep",
+      "source": "public\\audio\\aria\\word-2968.mp3",
+      "sha256": "d78bba621523dcd4fb8efdca6df67c3fc7a32644bc342b5f3f74378b36b259ae",
+      "spokenFixture": "sheep",
+      "target": "sheep",
+      "expectedCorrect": true,
+      "transcript": "sheep",
+      "greedyPhones": [
+        "ʃ",
+        "i",
+        "p"
+      ],
+      "selectedVariant": [
+        "ʃ",
+        "i",
+        "p"
+      ],
+      "alignment": [
+        {
+          "target": "ʃ",
+          "frames": [
+            14
+          ],
+          "posteriorPeak": 0.97993,
+          "bestPhoneIgnoringBlank": [
+            "ʃ"
+          ],
+          "marginAgainstOtherPhones": 4.332
+        },
+        {
+          "target": "i",
+          "frames": [
+            24
+          ],
+          "posteriorPeak": 0.98405,
+          "bestPhoneIgnoringBlank": [
+            "i"
+          ],
+          "marginAgainstOtherPhones": 5.075
+        },
+        {
+          "target": "p",
+          "frames": [
+            33
+          ],
+          "posteriorPeak": 0.99026,
+          "bestPhoneIgnoringBlank": [
+            "p"
+          ],
+          "marginAgainstOtherPhones": 6.559
+        }
+      ],
+      "textMatch": true,
+      "homophone": true,
+      "greedyPhonemesMatch": true,
+      "allAlignedTargetsBest": true,
+      "conflicts": [],
+      "candidateDecision": "candidate-pass",
+      "elapsedMs": 6297
+    },
+    {
+      "id": "aria-sheep-as-ship",
+      "source": "public\\audio\\aria\\word-2968.mp3",
+      "sha256": "d78bba621523dcd4fb8efdca6df67c3fc7a32644bc342b5f3f74378b36b259ae",
+      "spokenFixture": "sheep",
+      "target": "ship",
+      "expectedCorrect": false,
+      "transcript": "sheep",
+      "greedyPhones": [
+        "ʃ",
+        "i",
+        "p"
+      ],
+      "selectedVariant": [
+        "ʃ",
+        "ɪ",
+        "p"
+      ],
+      "alignment": [
+        {
+          "target": "ʃ",
+          "frames": [
+            14
+          ],
+          "posteriorPeak": 0.97993,
+          "bestPhoneIgnoringBlank": [
+            "ʃ"
+          ],
+          "marginAgainstOtherPhones": 4.332
+        },
+        {
+          "target": "ɪ",
+          "frames": [
+            24
+          ],
+          "posteriorPeak": 0.00203,
+          "bestPhoneIgnoringBlank": [
+            "i"
+          ],
+          "marginAgainstOtherPhones": -6.183
+        },
+        {
+          "target": "p",
+          "frames": [
+            33
+          ],
+          "posteriorPeak": 0.99026,
+          "bestPhoneIgnoringBlank": [
+            "p"
+          ],
+          "marginAgainstOtherPhones": 6.559
+        }
+      ],
+      "textMatch": false,
+      "homophone": false,
+      "greedyPhonemesMatch": false,
+      "allAlignedTargetsBest": false,
+      "conflicts": [
+        {
+          "expected": "ɪ",
+          "alternative": "i",
+          "margin": -6.183
+        }
+      ],
+      "candidateDecision": "candidate-practice",
+      "elapsedMs": 6297
+    },
+    {
+      "id": "aria-three-as-three",
+      "source": "public\\audio\\aria\\word-2400.mp3",
+      "sha256": "dbd32db6d89af3f6ba5865985d6aea396c11469027890c3ff47f2df3858372f5",
+      "spokenFixture": "three",
+      "target": "three",
+      "expectedCorrect": true,
+      "transcript": "Three.",
+      "greedyPhones": [
+        "θ",
+        "ɹ",
+        "i"
+      ],
+      "selectedVariant": [
+        "θ",
+        "ɹ",
+        "i"
+      ],
+      "alignment": [
+        {
+          "target": "θ",
+          "frames": [
+            11
+          ],
+          "posteriorPeak": 0.97465,
+          "bestPhoneIgnoringBlank": [
+            "θ"
+          ],
+          "marginAgainstOtherPhones": 4.908
+        },
+        {
+          "target": "ɹ",
+          "frames": [
+            14
+          ],
+          "posteriorPeak": 0.99593,
+          "bestPhoneIgnoringBlank": [
+            "ɹ"
+          ],
+          "marginAgainstOtherPhones": 6.883
+        },
+        {
+          "target": "i",
+          "frames": [
+            20
+          ],
+          "posteriorPeak": 0.99128,
+          "bestPhoneIgnoringBlank": [
+            "i"
+          ],
+          "marginAgainstOtherPhones": 5.346
+        }
+      ],
+      "textMatch": true,
+      "homophone": true,
+      "greedyPhonemesMatch": true,
+      "allAlignedTargetsBest": true,
+      "conflicts": [],
+      "candidateDecision": "candidate-pass",
+      "elapsedMs": 6281
+    },
+    {
+      "id": "aria-free-as-free",
+      "source": "public\\audio\\aria\\word-1649.mp3",
+      "sha256": "ffe976c2022e78e153ed1d4a79e8af3182ef98c58bd42522f04e1376578d0acb",
+      "spokenFixture": "free",
+      "target": "free",
+      "expectedCorrect": true,
+      "transcript": "Free.",
+      "greedyPhones": [
+        "f",
+        "ɹ",
+        "i"
+      ],
+      "selectedVariant": [
+        "f",
+        "ɹ",
+        "i"
+      ],
+      "alignment": [
+        {
+          "target": "f",
+          "frames": [
+            13
+          ],
+          "posteriorPeak": 0.99232,
+          "bestPhoneIgnoringBlank": [
+            "f"
+          ],
+          "marginAgainstOtherPhones": 6.957
+        },
+        {
+          "target": "ɹ",
+          "frames": [
+            17,
+            18
+          ],
+          "posteriorPeak": 0.99495,
+          "bestPhoneIgnoringBlank": [
+            "ɹ",
+            "ɹ"
+          ],
+          "marginAgainstOtherPhones": 7.052
+        },
+        {
+          "target": "i",
+          "frames": [
+            23
+          ],
+          "posteriorPeak": 0.99088,
+          "bestPhoneIgnoringBlank": [
+            "i"
+          ],
+          "marginAgainstOtherPhones": 5.738
+        }
+      ],
+      "textMatch": true,
+      "homophone": true,
+      "greedyPhonemesMatch": true,
+      "allAlignedTargetsBest": true,
+      "conflicts": [],
+      "candidateDecision": "candidate-pass",
+      "elapsedMs": 6266
+    },
+    {
+      "id": "aria-free-as-three",
+      "source": "public\\audio\\aria\\word-1649.mp3",
+      "sha256": "ffe976c2022e78e153ed1d4a79e8af3182ef98c58bd42522f04e1376578d0acb",
+      "spokenFixture": "free",
+      "target": "three",
+      "expectedCorrect": false,
+      "transcript": "Free.",
+      "greedyPhones": [
+        "f",
+        "ɹ",
+        "i"
+      ],
+      "selectedVariant": [
+        "θ",
+        "ɹ",
+        "i"
+      ],
+      "alignment": [
+        {
+          "target": "θ",
+          "frames": [
+            13
+          ],
+          "posteriorPeak": 0.00094,
+          "bestPhoneIgnoringBlank": [
+            "f"
+          ],
+          "marginAgainstOtherPhones": -6.957
+        },
+        {
+          "target": "ɹ",
+          "frames": [
+            17,
+            18
+          ],
+          "posteriorPeak": 0.99495,
+          "bestPhoneIgnoringBlank": [
+            "ɹ",
+            "ɹ"
+          ],
+          "marginAgainstOtherPhones": 7.052
+        },
+        {
+          "target": "i",
+          "frames": [
+            23
+          ],
+          "posteriorPeak": 0.99088,
+          "bestPhoneIgnoringBlank": [
+            "i"
+          ],
+          "marginAgainstOtherPhones": 5.738
+        }
+      ],
+      "textMatch": false,
+      "homophone": false,
+      "greedyPhonemesMatch": false,
+      "allAlignedTargetsBest": false,
+      "conflicts": [
+        {
+          "expected": "θ",
+          "alternative": "f",
+          "margin": -6.957
+        }
+      ],
+      "candidateDecision": "candidate-practice",
+      "elapsedMs": 6266
+    },
+    {
+      "id": "aria-bad-as-bad",
+      "source": "public\\audio\\aria\\word-2978.mp3",
+      "sha256": "77e448d4d24a5eb7bce40296318a11d4582a63b0ad88ae2b826b9f74353f92af",
+      "spokenFixture": "bad",
+      "target": "bad",
+      "expectedCorrect": true,
+      "transcript": "Bad.",
+      "greedyPhones": [
+        "b",
+        "æ",
+        "d"
+      ],
+      "selectedVariant": [
+        "b",
+        "æ",
+        "d"
+      ],
+      "alignment": [
+        {
+          "target": "b",
+          "frames": [
+            9
+          ],
+          "posteriorPeak": 0.98914,
+          "bestPhoneIgnoringBlank": [
+            "b"
+          ],
+          "marginAgainstOtherPhones": 5.886
+        },
+        {
+          "target": "æ",
+          "frames": [
+            16,
+            17
+          ],
+          "posteriorPeak": 0.98869,
+          "bestPhoneIgnoringBlank": [
+            "æ",
+            "æ"
+          ],
+          "marginAgainstOtherPhones": 6.445
+        },
+        {
+          "target": "d",
+          "frames": [
+            28
+          ],
+          "posteriorPeak": 0.99033,
+          "bestPhoneIgnoringBlank": [
+            "d"
+          ],
+          "marginAgainstOtherPhones": 5.555
+        }
+      ],
+      "textMatch": true,
+      "homophone": true,
+      "greedyPhonemesMatch": true,
+      "allAlignedTargetsBest": true,
+      "conflicts": [],
+      "candidateDecision": "candidate-pass",
+      "elapsedMs": 6266
+    },
+    {
+      "id": "aria-bad-as-bed",
+      "source": "public\\audio\\aria\\word-2978.mp3",
+      "sha256": "77e448d4d24a5eb7bce40296318a11d4582a63b0ad88ae2b826b9f74353f92af",
+      "spokenFixture": "bad",
+      "target": "bed",
+      "expectedCorrect": false,
+      "transcript": "Bad.",
+      "greedyPhones": [
+        "b",
+        "æ",
+        "d"
+      ],
+      "selectedVariant": [
+        "b",
+        "ɛ",
+        "d"
+      ],
+      "alignment": [
+        {
+          "target": "b",
+          "frames": [
+            9
+          ],
+          "posteriorPeak": 0.98914,
+          "bestPhoneIgnoringBlank": [
+            "b"
+          ],
+          "marginAgainstOtherPhones": 5.886
+        },
+        {
+          "target": "ɛ",
+          "frames": [
+            16
+          ],
+          "posteriorPeak": 0.00115,
+          "bestPhoneIgnoringBlank": [
+            "æ"
+          ],
+          "marginAgainstOtherPhones": -6.755
+        },
+        {
+          "target": "d",
+          "frames": [
+            28
+          ],
+          "posteriorPeak": 0.99033,
+          "bestPhoneIgnoringBlank": [
+            "d"
+          ],
+          "marginAgainstOtherPhones": 5.555
+        }
+      ],
+      "textMatch": false,
+      "homophone": false,
+      "greedyPhonemesMatch": false,
+      "allAlignedTargetsBest": false,
+      "conflicts": [
+        {
+          "expected": "ɛ",
+          "alternative": "æ",
+          "margin": -6.755
+        }
+      ],
+      "candidateDecision": "candidate-practice",
+      "elapsedMs": 6266
+    },
+    {
+      "id": "aria-bed-as-bed",
+      "source": "public\\audio\\aria\\word-1291.mp3",
+      "sha256": "5e76c091ea05c53403fa281115e8a5bfe08a42b621f6a2893c88beb6b9f133cd",
+      "spokenFixture": "bed",
+      "target": "bed",
+      "expectedCorrect": true,
+      "transcript": "Bed",
+      "greedyPhones": [
+        "b",
+        "ɛ",
+        "d"
+      ],
+      "selectedVariant": [
+        "b",
+        "ɛ",
+        "d"
+      ],
+      "alignment": [
+        {
+          "target": "b",
+          "frames": [
+            9
+          ],
+          "posteriorPeak": 0.49343,
+          "bestPhoneIgnoringBlank": [
+            "b"
+          ],
+          "marginAgainstOtherPhones": 0.6
+        },
+        {
+          "target": "ɛ",
+          "frames": [
+            16
+          ],
+          "posteriorPeak": 0.84769,
+          "bestPhoneIgnoringBlank": [
+            "ɛ"
+          ],
+          "marginAgainstOtherPhones": 1.837
+        },
+        {
+          "target": "d",
+          "frames": [
+            25
+          ],
+          "posteriorPeak": 0.98958,
+          "bestPhoneIgnoringBlank": [
+            "d"
+          ],
+          "marginAgainstOtherPhones": 5.986
+        }
+      ],
+      "textMatch": true,
+      "homophone": true,
+      "greedyPhonemesMatch": true,
+      "allAlignedTargetsBest": true,
+      "conflicts": [],
+      "candidateDecision": "candidate-pass",
+      "elapsedMs": 6328
+    },
+    {
+      "id": "aria-bed-as-bad",
+      "source": "public\\audio\\aria\\word-1291.mp3",
+      "sha256": "5e76c091ea05c53403fa281115e8a5bfe08a42b621f6a2893c88beb6b9f133cd",
+      "spokenFixture": "bed",
+      "target": "bad",
+      "expectedCorrect": false,
+      "transcript": "Bed",
+      "greedyPhones": [
+        "b",
+        "ɛ",
+        "d"
+      ],
+      "selectedVariant": [
+        "b",
+        "æ",
+        "d"
+      ],
+      "alignment": [
+        {
+          "target": "b",
+          "frames": [
+            9
+          ],
+          "posteriorPeak": 0.49343,
+          "bestPhoneIgnoringBlank": [
+            "b"
+          ],
+          "marginAgainstOtherPhones": 0.6
+        },
+        {
+          "target": "æ",
+          "frames": [
+            16
+          ],
+          "posteriorPeak": 0.13508,
+          "bestPhoneIgnoringBlank": [
+            "ɛ"
+          ],
+          "marginAgainstOtherPhones": -1.837
+        },
+        {
+          "target": "d",
+          "frames": [
+            25
+          ],
+          "posteriorPeak": 0.98958,
+          "bestPhoneIgnoringBlank": [
+            "d"
+          ],
+          "marginAgainstOtherPhones": 5.986
+        }
+      ],
+      "textMatch": false,
+      "homophone": false,
+      "greedyPhonemesMatch": false,
+      "allAlignedTargetsBest": false,
+      "conflicts": [],
+      "candidateDecision": "uncertain",
+      "elapsedMs": 6328
+    },
+    {
+      "id": "aria-light-as-light",
+      "source": "public\\audio\\aria\\word-1852.mp3",
+      "sha256": "f718748a255457e8fb6b28bfd3d111c36716a447c69187d5644ac1ecf7edd337",
+      "spokenFixture": "light",
+      "target": "light",
+      "expectedCorrect": true,
+      "transcript": "Light",
+      "greedyPhones": [
+        "l",
+        "aɪ",
+        "t"
+      ],
+      "selectedVariant": [
+        "l",
+        "aɪ",
+        "t"
+      ],
+      "alignment": [
+        {
+          "target": "l",
+          "frames": [
+            13,
+            14
+          ],
+          "posteriorPeak": 0.99574,
+          "bestPhoneIgnoringBlank": [
+            "l",
+            "l"
+          ],
+          "marginAgainstOtherPhones": 8.91
+        },
+        {
+          "target": "aɪ",
+          "frames": [
+            21
+          ],
+          "posteriorPeak": 0.99006,
+          "bestPhoneIgnoringBlank": [
+            "aɪ"
+          ],
+          "marginAgainstOtherPhones": 6.143
+        },
+        {
+          "target": "t",
+          "frames": [
+            30
+          ],
+          "posteriorPeak": 0.99277,
+          "bestPhoneIgnoringBlank": [
+            "t"
+          ],
+          "marginAgainstOtherPhones": 6.138
+        }
+      ],
+      "textMatch": true,
+      "homophone": true,
+      "greedyPhonemesMatch": true,
+      "allAlignedTargetsBest": true,
+      "conflicts": [],
+      "candidateDecision": "candidate-pass",
+      "elapsedMs": 6187
+    },
+    {
+      "id": "aria-light-as-right",
+      "source": "public\\audio\\aria\\word-1852.mp3",
+      "sha256": "f718748a255457e8fb6b28bfd3d111c36716a447c69187d5644ac1ecf7edd337",
+      "spokenFixture": "light",
+      "target": "right",
+      "expectedCorrect": false,
+      "transcript": "Light",
+      "greedyPhones": [
+        "l",
+        "aɪ",
+        "t"
+      ],
+      "selectedVariant": [
+        "ɹ",
+        "aɪ",
+        "t"
+      ],
+      "alignment": [
+        {
+          "target": "ɹ",
+          "frames": [
+            13
+          ],
+          "posteriorPeak": 0.00017,
+          "bestPhoneIgnoringBlank": [
+            "l"
+          ],
+          "marginAgainstOtherPhones": -8.677
+        },
+        {
+          "target": "aɪ",
+          "frames": [
+            21
+          ],
+          "posteriorPeak": 0.99006,
+          "bestPhoneIgnoringBlank": [
+            "aɪ"
+          ],
+          "marginAgainstOtherPhones": 6.143
+        },
+        {
+          "target": "t",
+          "frames": [
+            30
+          ],
+          "posteriorPeak": 0.99277,
+          "bestPhoneIgnoringBlank": [
+            "t"
+          ],
+          "marginAgainstOtherPhones": 6.138
+        }
+      ],
+      "textMatch": false,
+      "homophone": false,
+      "greedyPhonemesMatch": false,
+      "allAlignedTargetsBest": false,
+      "conflicts": [
+        {
+          "expected": "ɹ",
+          "alternative": "l",
+          "margin": -8.677
+        }
+      ],
+      "candidateDecision": "candidate-practice",
+      "elapsedMs": 6187
+    },
+    {
+      "id": "aria-right-as-right",
+      "source": "public\\audio\\aria\\word-2160.mp3",
+      "sha256": "c4f8341a47942b096bcec86eacade529bb700fd8f725bfff388081846fb358df",
+      "spokenFixture": "right",
+      "target": "right",
+      "expectedCorrect": true,
+      "transcript": "Right.",
+      "greedyPhones": [
+        "ɹ",
+        "aɪ",
+        "t"
+      ],
+      "selectedVariant": [
+        "ɹ",
+        "aɪ",
+        "t"
+      ],
+      "alignment": [
+        {
+          "target": "ɹ",
+          "frames": [
+            12,
+            13
+          ],
+          "posteriorPeak": 0.99632,
+          "bestPhoneIgnoringBlank": [
+            "ɹ",
+            "ɹ"
+          ],
+          "marginAgainstOtherPhones": 8.211
+        },
+        {
+          "target": "aɪ",
+          "frames": [
+            20
+          ],
+          "posteriorPeak": 0.99088,
+          "bestPhoneIgnoringBlank": [
+            "aɪ"
+          ],
+          "marginAgainstOtherPhones": 6.198
+        },
+        {
+          "target": "t",
+          "frames": [
+            29
+          ],
+          "posteriorPeak": 0.99413,
+          "bestPhoneIgnoringBlank": [
+            "t"
+          ],
+          "marginAgainstOtherPhones": 6.871
+        }
+      ],
+      "textMatch": true,
+      "homophone": true,
+      "greedyPhonemesMatch": true,
+      "allAlignedTargetsBest": true,
+      "conflicts": [],
+      "candidateDecision": "candidate-pass",
+      "elapsedMs": 6516
+    },
+    {
+      "id": "aria-right-as-light",
+      "source": "public\\audio\\aria\\word-2160.mp3",
+      "sha256": "c4f8341a47942b096bcec86eacade529bb700fd8f725bfff388081846fb358df",
+      "spokenFixture": "right",
+      "target": "light",
+      "expectedCorrect": false,
+      "transcript": "Right.",
+      "greedyPhones": [
+        "ɹ",
+        "aɪ",
+        "t"
+      ],
+      "selectedVariant": [
+        "l",
+        "aɪ",
+        "t"
+      ],
+      "alignment": [
+        {
+          "target": "l",
+          "frames": [
+            12
+          ],
+          "posteriorPeak": 9e-05,
+          "bestPhoneIgnoringBlank": [
+            "ɹ"
+          ],
+          "marginAgainstOtherPhones": -9.364
+        },
+        {
+          "target": "aɪ",
+          "frames": [
+            20
+          ],
+          "posteriorPeak": 0.99088,
+          "bestPhoneIgnoringBlank": [
+            "aɪ"
+          ],
+          "marginAgainstOtherPhones": 6.198
+        },
+        {
+          "target": "t",
+          "frames": [
+            29
+          ],
+          "posteriorPeak": 0.99413,
+          "bestPhoneIgnoringBlank": [
+            "t"
+          ],
+          "marginAgainstOtherPhones": 6.871
+        }
+      ],
+      "textMatch": false,
+      "homophone": false,
+      "greedyPhonemesMatch": false,
+      "allAlignedTargetsBest": false,
+      "conflicts": [
+        {
+          "expected": "l",
+          "alternative": "ɹ",
+          "margin": -9.364
+        }
+      ],
+      "candidateDecision": "candidate-practice",
+      "elapsedMs": 6516
+    },
+    {
+      "id": "aria-thin-as-thin",
+      "source": "public\\audio\\aria\\word-2388.mp3",
+      "sha256": "316efaeb84b4f3b59f973082e4ea09e317fe69f4ba9bb36c28247c048f77c154",
+      "spokenFixture": "thin",
+      "target": "thin",
+      "expectedCorrect": true,
+      "transcript": "Thin.",
+      "greedyPhones": [
+        "θ",
+        "ɪ",
+        "n"
+      ],
+      "selectedVariant": [
+        "θ",
+        "ɪ",
+        "n"
+      ],
+      "alignment": [
+        {
+          "target": "θ",
+          "frames": [
+            10
+          ],
+          "posteriorPeak": 0.97508,
+          "bestPhoneIgnoringBlank": [
+            "θ"
+          ],
+          "marginAgainstOtherPhones": 5.23
+        },
+        {
+          "target": "ɪ",
+          "frames": [
+            18
+          ],
+          "posteriorPeak": 0.9672,
+          "bestPhoneIgnoringBlank": [
+            "ɪ"
+          ],
+          "marginAgainstOtherPhones": 4.068
+        },
+        {
+          "target": "n",
+          "frames": [
+            24
+          ],
+          "posteriorPeak": 0.99542,
+          "bestPhoneIgnoringBlank": [
+            "n"
+          ],
+          "marginAgainstOtherPhones": 6.26
+        }
+      ],
+      "textMatch": true,
+      "homophone": true,
+      "greedyPhonemesMatch": true,
+      "allAlignedTargetsBest": true,
+      "conflicts": [],
+      "candidateDecision": "candidate-pass",
+      "elapsedMs": 6469
+    },
+    {
+      "id": "aria-thin-as-think",
+      "source": "public\\audio\\aria\\word-2388.mp3",
+      "sha256": "316efaeb84b4f3b59f973082e4ea09e317fe69f4ba9bb36c28247c048f77c154",
+      "spokenFixture": "thin",
+      "target": "think",
+      "expectedCorrect": false,
+      "transcript": "Thin.",
+      "greedyPhones": [
+        "θ",
+        "ɪ",
+        "n"
+      ],
+      "selectedVariant": [
+        "θ",
+        "ɪ",
+        "ŋ",
+        "k"
+      ],
+      "alignment": [
+        {
+          "target": "θ",
+          "frames": [
+            10
+          ],
+          "posteriorPeak": 0.97508,
+          "bestPhoneIgnoringBlank": [
+            "θ"
+          ],
+          "marginAgainstOtherPhones": 5.23
+        },
+        {
+          "target": "ɪ",
+          "frames": [
+            18
+          ],
+          "posteriorPeak": 0.9672,
+          "bestPhoneIgnoringBlank": [
+            "ɪ"
+          ],
+          "marginAgainstOtherPhones": 4.068
+        },
+        {
+          "target": "ŋ",
+          "frames": [
+            24
+          ],
+          "posteriorPeak": 0.0019,
+          "bestPhoneIgnoringBlank": [
+            "n"
+          ],
+          "marginAgainstOtherPhones": -6.26
+        },
+        {
+          "target": "k",
+          "frames": [
+            73
+          ],
+          "posteriorPeak": 9e-05,
+          "bestPhoneIgnoringBlank": [
+            "k"
+          ],
+          "marginAgainstOtherPhones": 0.438
+        }
+      ],
+      "textMatch": false,
+      "homophone": false,
+      "greedyPhonemesMatch": false,
+      "allAlignedTargetsBest": false,
+      "conflicts": [
+        {
+          "expected": "ŋ",
+          "alternative": "n",
+          "margin": -6.26
+        }
+      ],
+      "candidateDecision": "candidate-practice",
+      "elapsedMs": 6469
+    },
+    {
+      "id": "aria-then-as-then",
+      "source": "public\\audio\\aria\\word-2383.mp3",
+      "sha256": "8295d847e9ae7d59ba055e6a5b2aabbd2af7566ce83bfb0a3a2d350367885187",
+      "spokenFixture": "then",
+      "target": "then",
+      "expectedCorrect": true,
+      "transcript": "Then.",
+      "greedyPhones": [
+        "ð",
+        "ɛ",
+        "n"
+      ],
+      "selectedVariant": [
+        "ð",
+        "ɛ",
+        "n"
+      ],
+      "alignment": [
+        {
+          "target": "ð",
+          "frames": [
+            12
+          ],
+          "posteriorPeak": 0.98242,
+          "bestPhoneIgnoringBlank": [
+            "ð"
+          ],
+          "marginAgainstOtherPhones": 5.268
+        },
+        {
+          "target": "ɛ",
+          "frames": [
+            19
+          ],
+          "posteriorPeak": 0.98763,
+          "bestPhoneIgnoringBlank": [
+            "ɛ"
+          ],
+          "marginAgainstOtherPhones": 5.32
+        },
+        {
+          "target": "n",
+          "frames": [
+            24,
+            25
+          ],
+          "posteriorPeak": 0.99675,
+          "bestPhoneIgnoringBlank": [
+            "n",
+            "n"
+          ],
+          "marginAgainstOtherPhones": 7.881
+        }
+      ],
+      "textMatch": true,
+      "homophone": true,
+      "greedyPhonemesMatch": true,
+      "allAlignedTargetsBest": true,
+      "conflicts": [],
+      "candidateDecision": "candidate-pass",
+      "elapsedMs": 6344
+    },
+    {
+      "id": "guy-hello-as-hello",
+      "source": "public\\audio\\daily\\guy\\hello.mp3",
+      "sha256": "75995d47e90e5015f57dd51844e4e12ede0b163c6fc06b9d829f7edf1d9fa386",
+      "spokenFixture": "hello",
+      "target": "hello",
+      "expectedCorrect": true,
+      "transcript": "Hello?",
+      "greedyPhones": [
+        "h",
+        "ɛ",
+        "l",
+        "oʊ"
+      ],
+      "selectedVariant": [
+        "h",
+        "ɛ",
+        "l",
+        "oʊ"
+      ],
+      "alignment": [
+        {
+          "target": "h",
+          "frames": [
+            10
+          ],
+          "posteriorPeak": 0.99097,
+          "bestPhoneIgnoringBlank": [
+            "h"
+          ],
+          "marginAgainstOtherPhones": 7.601
+        },
+        {
+          "target": "ɛ",
+          "frames": [
+            13
+          ],
+          "posteriorPeak": 0.60116,
+          "bestPhoneIgnoringBlank": [
+            "ɛ"
+          ],
+          "marginAgainstOtherPhones": 1.33
+        },
+        {
+          "target": "l",
+          "frames": [
+            16,
+            17
+          ],
+          "posteriorPeak": 0.99724,
+          "bestPhoneIgnoringBlank": [
+            "l",
+            "l"
+          ],
+          "marginAgainstOtherPhones": 8.878
+        },
+        {
+          "target": "oʊ",
+          "frames": [
+            22
+          ],
+          "posteriorPeak": 0.97676,
+          "bestPhoneIgnoringBlank": [
+            "oʊ"
+          ],
+          "marginAgainstOtherPhones": 5.376
+        }
+      ],
+      "textMatch": true,
+      "homophone": true,
+      "greedyPhonemesMatch": true,
+      "allAlignedTargetsBest": true,
+      "conflicts": [],
+      "candidateDecision": "candidate-pass",
+      "elapsedMs": 6343
+    },
+    {
+      "id": "guy-goodbye-as-goodbye",
+      "source": "public\\audio\\daily\\guy\\goodbye.mp3",
+      "sha256": "351fcb29dfd2a4825344b9a6b85ee4df13ea1738faed04d97b8ef54fb33b4ba6",
+      "spokenFixture": "goodbye",
+      "target": "goodbye",
+      "expectedCorrect": true,
+      "transcript": "Goodbye.",
+      "greedyPhones": [
+        "g",
+        "ʊ",
+        "b",
+        "aɪ"
+      ],
+      "selectedVariant": [
+        "g",
+        "ʊ",
+        "d",
+        "b",
+        "aɪ"
+      ],
+      "alignment": [
+        {
+          "target": "g",
+          "frames": [
+            10
+          ],
+          "posteriorPeak": 0.99393,
+          "bestPhoneIgnoringBlank": [
+            "g"
+          ],
+          "marginAgainstOtherPhones": 7.161
+        },
+        {
+          "target": "ʊ",
+          "frames": [
+            13
+          ],
+          "posteriorPeak": 0.96088,
+          "bestPhoneIgnoringBlank": [
+            "ʊ"
+          ],
+          "marginAgainstOtherPhones": 5.425
+        },
+        {
+          "target": "d",
+          "frames": [
+            16
+          ],
+          "posteriorPeak": 0.00502,
+          "bestPhoneIgnoringBlank": [
+            "d"
+          ],
+          "marginAgainstOtherPhones": 1.884
+        },
+        {
+          "target": "b",
+          "frames": [
+            19,
+            20
+          ],
+          "posteriorPeak": 0.9912,
+          "bestPhoneIgnoringBlank": [
+            "b",
+            "b"
+          ],
+          "marginAgainstOtherPhones": 5.779
+        },
+        {
+          "target": "aɪ",
+          "frames": [
+            27
+          ],
+          "posteriorPeak": 0.99019,
+          "bestPhoneIgnoringBlank": [
+            "aɪ"
+          ],
+          "marginAgainstOtherPhones": 5.725
+        }
+      ],
+      "textMatch": true,
+      "homophone": true,
+      "greedyPhonemesMatch": false,
+      "allAlignedTargetsBest": true,
+      "conflicts": [],
+      "candidateDecision": "candidate-pass",
+      "elapsedMs": 6328
+    },
+    {
+      "id": "guy-think-as-think",
+      "source": "public\\audio\\guy\\word-2652.mp3",
+      "sha256": "9c53003ff5ca866c3041b440c3075da2da94d8b761c1f267080c2d44b0334daf",
+      "spokenFixture": "think",
+      "target": "think",
+      "expectedCorrect": true,
+      "transcript": "Think!",
+      "greedyPhones": [
+        "θ",
+        "ɪ",
+        "ŋ",
+        "k"
+      ],
+      "selectedVariant": [
+        "θ",
+        "ɪ",
+        "ŋ",
+        "k"
+      ],
+      "alignment": [
+        {
+          "target": "θ",
+          "frames": [
+            15
+          ],
+          "posteriorPeak": 0.97682,
+          "bestPhoneIgnoringBlank": [
+            "θ"
+          ],
+          "marginAgainstOtherPhones": 5.355
+        },
+        {
+          "target": "ɪ",
+          "frames": [
+            23
+          ],
+          "posteriorPeak": 0.87303,
+          "bestPhoneIgnoringBlank": [
+            "ɪ"
+          ],
+          "marginAgainstOtherPhones": 2.331
+        },
+        {
+          "target": "ŋ",
+          "frames": [
+            26
+          ],
+          "posteriorPeak": 0.97654,
+          "bestPhoneIgnoringBlank": [
+            "ŋ"
+          ],
+          "marginAgainstOtherPhones": 4.154
+        },
+        {
+          "target": "k",
+          "frames": [
+            31
+          ],
+          "posteriorPeak": 0.99671,
+          "bestPhoneIgnoringBlank": [
+            "k"
+          ],
+          "marginAgainstOtherPhones": 7.462
+        }
+      ],
+      "textMatch": true,
+      "homophone": true,
+      "greedyPhonemesMatch": true,
+      "allAlignedTargetsBest": true,
+      "conflicts": [],
+      "candidateDecision": "candidate-pass",
+      "elapsedMs": 6219
+    },
+    {
+      "id": "guy-sink-as-sink",
+      "source": "public\\audio\\guy\\word-959.mp3",
+      "sha256": "2a1d15a183d4fe0d4b32443959c39b1854c2107f82f8ba797de5ab88fab4ec94",
+      "spokenFixture": "sink",
+      "target": "sink",
+      "expectedCorrect": true,
+      "transcript": "Sync",
+      "greedyPhones": [
+        "s",
+        "ɪ",
+        "ŋ",
+        "k"
+      ],
+      "selectedVariant": [
+        "s",
+        "ɪ",
+        "ŋ",
+        "k"
+      ],
+      "alignment": [
+        {
+          "target": "s",
+          "frames": [
+            16
+          ],
+          "posteriorPeak": 0.99589,
+          "bestPhoneIgnoringBlank": [
+            "s"
+          ],
+          "marginAgainstOtherPhones": 6.398
+        },
+        {
+          "target": "ɪ",
+          "frames": [
+            24
+          ],
+          "posteriorPeak": 0.85439,
+          "bestPhoneIgnoringBlank": [
+            "ɪ"
+          ],
+          "marginAgainstOtherPhones": 1.856
+        },
+        {
+          "target": "ŋ",
+          "frames": [
+            28
+          ],
+          "posteriorPeak": 0.97335,
+          "bestPhoneIgnoringBlank": [
+            "ŋ"
+          ],
+          "marginAgainstOtherPhones": 4.018
+        },
+        {
+          "target": "k",
+          "frames": [
+            32,
+            33
+          ],
+          "posteriorPeak": 0.99542,
+          "bestPhoneIgnoringBlank": [
+            "k",
+            "k"
+          ],
+          "marginAgainstOtherPhones": 6.983
+        }
+      ],
+      "textMatch": false,
+      "homophone": true,
+      "greedyPhonemesMatch": true,
+      "allAlignedTargetsBest": true,
+      "conflicts": [],
+      "candidateDecision": "candidate-pass",
+      "elapsedMs": 6313
+    },
+    {
+      "id": "guy-sink-as-think",
+      "source": "public\\audio\\guy\\word-959.mp3",
+      "sha256": "2a1d15a183d4fe0d4b32443959c39b1854c2107f82f8ba797de5ab88fab4ec94",
+      "spokenFixture": "sink",
+      "target": "think",
+      "expectedCorrect": false,
+      "transcript": "Sync",
+      "greedyPhones": [
+        "s",
+        "ɪ",
+        "ŋ",
+        "k"
+      ],
+      "selectedVariant": [
+        "θ",
+        "ɪ",
+        "ŋ",
+        "k"
+      ],
+      "alignment": [
+        {
+          "target": "θ",
+          "frames": [
+            16
+          ],
+          "posteriorPeak": 0.00045,
+          "bestPhoneIgnoringBlank": [
+            "s"
+          ],
+          "marginAgainstOtherPhones": -7.708
+        },
+        {
+          "target": "ɪ",
+          "frames": [
+            24
+          ],
+          "posteriorPeak": 0.85439,
+          "bestPhoneIgnoringBlank": [
+            "ɪ"
+          ],
+          "marginAgainstOtherPhones": 1.856
+        },
+        {
+          "target": "ŋ",
+          "frames": [
+            28
+          ],
+          "posteriorPeak": 0.97335,
+          "bestPhoneIgnoringBlank": [
+            "ŋ"
+          ],
+          "marginAgainstOtherPhones": 4.018
+        },
+        {
+          "target": "k",
+          "frames": [
+            32,
+            33
+          ],
+          "posteriorPeak": 0.99542,
+          "bestPhoneIgnoringBlank": [
+            "k",
+            "k"
+          ],
+          "marginAgainstOtherPhones": 6.983
+        }
+      ],
+      "textMatch": false,
+      "homophone": false,
+      "greedyPhonemesMatch": false,
+      "allAlignedTargetsBest": false,
+      "conflicts": [
+        {
+          "expected": "θ",
+          "alternative": "s",
+          "margin": -7.708
+        }
+      ],
+      "candidateDecision": "candidate-practice",
+      "elapsedMs": 6313
+    },
+    {
+      "id": "guy-ship-as-ship",
+      "source": "public\\audio\\guy\\word-2224.mp3",
+      "sha256": "3b2f0c745aefc588efad9acea1adb6332eceb4d80dc638578fddda9e808242d5",
+      "spokenFixture": "ship",
+      "target": "ship",
+      "expectedCorrect": true,
+      "transcript": "Ship",
+      "greedyPhones": [
+        "ʃ",
+        "ɪ",
+        "p"
+      ],
+      "selectedVariant": [
+        "ʃ",
+        "ɪ",
+        "p"
+      ],
+      "alignment": [
+        {
+          "target": "ʃ",
+          "frames": [
+            14
+          ],
+          "posteriorPeak": 0.9952,
+          "bestPhoneIgnoringBlank": [
+            "ʃ"
+          ],
+          "marginAgainstOtherPhones": 7.096
+        },
+        {
+          "target": "ɪ",
+          "frames": [
+            22
+          ],
+          "posteriorPeak": 0.94605,
+          "bestPhoneIgnoringBlank": [
+            "ɪ"
+          ],
+          "marginAgainstOtherPhones": 3.272
+        },
+        {
+          "target": "p",
+          "frames": [
+            28
+          ],
+          "posteriorPeak": 0.99011,
+          "bestPhoneIgnoringBlank": [
+            "p"
+          ],
+          "marginAgainstOtherPhones": 6.781
+        }
+      ],
+      "textMatch": true,
+      "homophone": true,
+      "greedyPhonemesMatch": true,
+      "allAlignedTargetsBest": true,
+      "conflicts": [],
+      "candidateDecision": "candidate-pass",
+      "elapsedMs": 6250
+    },
+    {
+      "id": "guy-sheep-as-sheep",
+      "source": "public\\audio\\guy\\word-2968.mp3",
+      "sha256": "7e6f1a2b72c797d1c095bda747d05fd45f61a62cd85eb1790663f51b2c07f212",
+      "spokenFixture": "sheep",
+      "target": "sheep",
+      "expectedCorrect": true,
+      "transcript": "Sheep",
+      "greedyPhones": [
+        "ʃ",
+        "i",
+        "p"
+      ],
+      "selectedVariant": [
+        "ʃ",
+        "i",
+        "p"
+      ],
+      "alignment": [
+        {
+          "target": "ʃ",
+          "frames": [
+            14
+          ],
+          "posteriorPeak": 0.5022,
+          "bestPhoneIgnoringBlank": [
+            "ʃ"
+          ],
+          "marginAgainstOtherPhones": 0.067
+        },
+        {
+          "target": "i",
+          "frames": [
+            21
+          ],
+          "posteriorPeak": 0.9863,
+          "bestPhoneIgnoringBlank": [
+            "i"
+          ],
+          "marginAgainstOtherPhones": 5.211
+        },
+        {
+          "target": "p",
+          "frames": [
+            30
+          ],
+          "posteriorPeak": 0.99186,
+          "bestPhoneIgnoringBlank": [
+            "p"
+          ],
+          "marginAgainstOtherPhones": 6.825
+        }
+      ],
+      "textMatch": true,
+      "homophone": true,
+      "greedyPhonemesMatch": true,
+      "allAlignedTargetsBest": true,
+      "conflicts": [],
+      "candidateDecision": "candidate-pass",
+      "elapsedMs": 6328
+    },
+    {
+      "id": "guy-sheep-as-ship",
+      "source": "public\\audio\\guy\\word-2968.mp3",
+      "sha256": "7e6f1a2b72c797d1c095bda747d05fd45f61a62cd85eb1790663f51b2c07f212",
+      "spokenFixture": "sheep",
+      "target": "ship",
+      "expectedCorrect": false,
+      "transcript": "Sheep",
+      "greedyPhones": [
+        "ʃ",
+        "i",
+        "p"
+      ],
+      "selectedVariant": [
+        "ʃ",
+        "ɪ",
+        "p"
+      ],
+      "alignment": [
+        {
+          "target": "ʃ",
+          "frames": [
+            14
+          ],
+          "posteriorPeak": 0.5022,
+          "bestPhoneIgnoringBlank": [
+            "ʃ"
+          ],
+          "marginAgainstOtherPhones": 0.067
+        },
+        {
+          "target": "ɪ",
+          "frames": [
+            21
+          ],
+          "posteriorPeak": 0.00255,
+          "bestPhoneIgnoringBlank": [
+            "i"
+          ],
+          "marginAgainstOtherPhones": -5.959
+        },
+        {
+          "target": "p",
+          "frames": [
+            30
+          ],
+          "posteriorPeak": 0.99186,
+          "bestPhoneIgnoringBlank": [
+            "p"
+          ],
+          "marginAgainstOtherPhones": 6.825
+        }
+      ],
+      "textMatch": false,
+      "homophone": false,
+      "greedyPhonemesMatch": false,
+      "allAlignedTargetsBest": false,
+      "conflicts": [
+        {
+          "expected": "ɪ",
+          "alternative": "i",
+          "margin": -5.959
+        }
+      ],
+      "candidateDecision": "candidate-practice",
+      "elapsedMs": 6328
+    },
+    {
+      "id": "guy-three-as-three",
+      "source": "public\\audio\\guy\\word-2400.mp3",
+      "sha256": "94ceb6bcde145714f09292b63ae0d6624a89be5cb173720ac695119dafe3a0c2",
+      "spokenFixture": "three",
+      "target": "three",
+      "expectedCorrect": true,
+      "transcript": "3",
+      "greedyPhones": [
+        "θ",
+        "ɹ",
+        "i"
+      ],
+      "selectedVariant": [
+        "θ",
+        "ɹ",
+        "i"
+      ],
+      "alignment": [
+        {
+          "target": "θ",
+          "frames": [
+            14
+          ],
+          "posteriorPeak": 0.97885,
+          "bestPhoneIgnoringBlank": [
+            "θ"
+          ],
+          "marginAgainstOtherPhones": 5.496
+        },
+        {
+          "target": "ɹ",
+          "frames": [
+            19,
+            20
+          ],
+          "posteriorPeak": 0.9933,
+          "bestPhoneIgnoringBlank": [
+            "ɹ",
+            "ɹ"
+          ],
+          "marginAgainstOtherPhones": 5.388
+        },
+        {
+          "target": "i",
+          "frames": [
+            26
+          ],
+          "posteriorPeak": 0.98527,
+          "bestPhoneIgnoringBlank": [
+            "i"
+          ],
+          "marginAgainstOtherPhones": 4.847
+        }
+      ],
+      "textMatch": false,
+      "homophone": false,
+      "greedyPhonemesMatch": true,
+      "allAlignedTargetsBest": true,
+      "conflicts": [],
+      "candidateDecision": "uncertain",
+      "elapsedMs": 6250
+    },
+    {
+      "id": "guy-free-as-free",
+      "source": "public\\audio\\guy\\word-1649.mp3",
+      "sha256": "b64d197492c3ab8a73bcb5eb526e016455a9f5793081c3f58d95e56470fa5991",
+      "spokenFixture": "free",
+      "target": "free",
+      "expectedCorrect": true,
+      "transcript": "Free.",
+      "greedyPhones": [
+        "f",
+        "ɹ",
+        "i"
+      ],
+      "selectedVariant": [
+        "f",
+        "ɹ",
+        "i"
+      ],
+      "alignment": [
+        {
+          "target": "f",
+          "frames": [
+            14
+          ],
+          "posteriorPeak": 0.99196,
+          "bestPhoneIgnoringBlank": [
+            "f"
+          ],
+          "marginAgainstOtherPhones": 6.782
+        },
+        {
+          "target": "ɹ",
+          "frames": [
+            19,
+            20
+          ],
+          "posteriorPeak": 0.99595,
+          "bestPhoneIgnoringBlank": [
+            "ɹ",
+            "ɹ"
+          ],
+          "marginAgainstOtherPhones": 6.542
+        },
+        {
+          "target": "i",
+          "frames": [
+            26
+          ],
+          "posteriorPeak": 0.99016,
+          "bestPhoneIgnoringBlank": [
+            "i"
+          ],
+          "marginAgainstOtherPhones": 5.218
+        }
+      ],
+      "textMatch": true,
+      "homophone": true,
+      "greedyPhonemesMatch": true,
+      "allAlignedTargetsBest": true,
+      "conflicts": [],
+      "candidateDecision": "candidate-pass",
+      "elapsedMs": 6266
+    },
+    {
+      "id": "guy-free-as-three",
+      "source": "public\\audio\\guy\\word-1649.mp3",
+      "sha256": "b64d197492c3ab8a73bcb5eb526e016455a9f5793081c3f58d95e56470fa5991",
+      "spokenFixture": "free",
+      "target": "three",
+      "expectedCorrect": false,
+      "transcript": "Free.",
+      "greedyPhones": [
+        "f",
+        "ɹ",
+        "i"
+      ],
+      "selectedVariant": [
+        "θ",
+        "ɹ",
+        "i"
+      ],
+      "alignment": [
+        {
+          "target": "θ",
+          "frames": [
+            14
+          ],
+          "posteriorPeak": 0.00113,
+          "bestPhoneIgnoringBlank": [
+            "f"
+          ],
+          "marginAgainstOtherPhones": -6.782
+        },
+        {
+          "target": "ɹ",
+          "frames": [
+            19,
+            20
+          ],
+          "posteriorPeak": 0.99595,
+          "bestPhoneIgnoringBlank": [
+            "ɹ",
+            "ɹ"
+          ],
+          "marginAgainstOtherPhones": 6.542
+        },
+        {
+          "target": "i",
+          "frames": [
+            26
+          ],
+          "posteriorPeak": 0.99016,
+          "bestPhoneIgnoringBlank": [
+            "i"
+          ],
+          "marginAgainstOtherPhones": 5.218
+        }
+      ],
+      "textMatch": false,
+      "homophone": false,
+      "greedyPhonemesMatch": false,
+      "allAlignedTargetsBest": false,
+      "conflicts": [
+        {
+          "expected": "θ",
+          "alternative": "f",
+          "margin": -6.782
+        }
+      ],
+      "candidateDecision": "candidate-practice",
+      "elapsedMs": 6266
+    },
+    {
+      "id": "guy-bad-as-bad",
+      "source": "public\\audio\\guy\\word-2978.mp3",
+      "sha256": "07160402b698581188f51423fc62d77102d77c247bbea7481bf140293e5dbcde",
+      "spokenFixture": "bad",
+      "target": "bad",
+      "expectedCorrect": true,
+      "transcript": "Bad.",
+      "greedyPhones": [
+        "b",
+        "æ",
+        "d"
+      ],
+      "selectedVariant": [
+        "b",
+        "æ",
+        "d"
+      ],
+      "alignment": [
+        {
+          "target": "b",
+          "frames": [
+            11
+          ],
+          "posteriorPeak": 0.98927,
+          "bestPhoneIgnoringBlank": [
+            "b"
+          ],
+          "marginAgainstOtherPhones": 5.959
+        },
+        {
+          "target": "æ",
+          "frames": [
+            19
+          ],
+          "posteriorPeak": 0.99444,
+          "bestPhoneIgnoringBlank": [
+            "æ"
+          ],
+          "marginAgainstOtherPhones": 6.99
+        },
+        {
+          "target": "d",
+          "frames": [
+            29
+          ],
+          "posteriorPeak": 0.97772,
+          "bestPhoneIgnoringBlank": [
+            "d"
+          ],
+          "marginAgainstOtherPhones": 6.887
+        }
+      ],
+      "textMatch": true,
+      "homophone": true,
+      "greedyPhonemesMatch": true,
+      "allAlignedTargetsBest": true,
+      "conflicts": [],
+      "candidateDecision": "candidate-pass",
+      "elapsedMs": 6265
+    },
+    {
+      "id": "guy-bad-as-bed",
+      "source": "public\\audio\\guy\\word-2978.mp3",
+      "sha256": "07160402b698581188f51423fc62d77102d77c247bbea7481bf140293e5dbcde",
+      "spokenFixture": "bad",
+      "target": "bed",
+      "expectedCorrect": false,
+      "transcript": "Bad.",
+      "greedyPhones": [
+        "b",
+        "æ",
+        "d"
+      ],
+      "selectedVariant": [
+        "b",
+        "ɛ",
+        "d"
+      ],
+      "alignment": [
+        {
+          "target": "b",
+          "frames": [
+            11
+          ],
+          "posteriorPeak": 0.98927,
+          "bestPhoneIgnoringBlank": [
+            "b"
+          ],
+          "marginAgainstOtherPhones": 5.959
+        },
+        {
+          "target": "ɛ",
+          "frames": [
+            19
+          ],
+          "posteriorPeak": 0.00092,
+          "bestPhoneIgnoringBlank": [
+            "æ"
+          ],
+          "marginAgainstOtherPhones": -6.99
+        },
+        {
+          "target": "d",
+          "frames": [
+            29
+          ],
+          "posteriorPeak": 0.97772,
+          "bestPhoneIgnoringBlank": [
+            "d"
+          ],
+          "marginAgainstOtherPhones": 6.887
+        }
+      ],
+      "textMatch": false,
+      "homophone": false,
+      "greedyPhonemesMatch": false,
+      "allAlignedTargetsBest": false,
+      "conflicts": [
+        {
+          "expected": "ɛ",
+          "alternative": "æ",
+          "margin": -6.99
+        }
+      ],
+      "candidateDecision": "candidate-practice",
+      "elapsedMs": 6265
+    },
+    {
+      "id": "guy-bed-as-bed",
+      "source": "public\\audio\\guy\\word-1291.mp3",
+      "sha256": "120e4f3456bb54835747cdae05588a31d61f32201d79d49be4e01c1f653ec7ce",
+      "spokenFixture": "bed",
+      "target": "bed",
+      "expectedCorrect": true,
+      "transcript": "Bed",
+      "greedyPhones": [
+        "ð",
+        "ɛ",
+        "d"
+      ],
+      "selectedVariant": [
+        "b",
+        "ɛ",
+        "d"
+      ],
+      "alignment": [
+        {
+          "target": "b",
+          "frames": [
+            12
+          ],
+          "posteriorPeak": 0.01278,
+          "bestPhoneIgnoringBlank": [
+            "ð"
+          ],
+          "marginAgainstOtherPhones": -4.289
+        },
+        {
+          "target": "ɛ",
+          "frames": [
+            18
+          ],
+          "posteriorPeak": 0.53766,
+          "bestPhoneIgnoringBlank": [
+            "ɛ"
+          ],
+          "marginAgainstOtherPhones": 0.254
+        },
+        {
+          "target": "d",
+          "frames": [
+            26
+          ],
+          "posteriorPeak": 0.96967,
+          "bestPhoneIgnoringBlank": [
+            "d"
+          ],
+          "marginAgainstOtherPhones": 5.559
+        }
+      ],
+      "textMatch": true,
+      "homophone": true,
+      "greedyPhonemesMatch": false,
+      "allAlignedTargetsBest": false,
+      "conflicts": [
+        {
+          "expected": "b",
+          "alternative": "ð",
+          "margin": -4.289
+        }
+      ],
+      "candidateDecision": "uncertain",
+      "elapsedMs": 6219
+    },
+    {
+      "id": "guy-bed-as-bad",
+      "source": "public\\audio\\guy\\word-1291.mp3",
+      "sha256": "120e4f3456bb54835747cdae05588a31d61f32201d79d49be4e01c1f653ec7ce",
+      "spokenFixture": "bed",
+      "target": "bad",
+      "expectedCorrect": false,
+      "transcript": "Bed",
+      "greedyPhones": [
+        "ð",
+        "ɛ",
+        "d"
+      ],
+      "selectedVariant": [
+        "b",
+        "æ",
+        "d"
+      ],
+      "alignment": [
+        {
+          "target": "b",
+          "frames": [
+            12
+          ],
+          "posteriorPeak": 0.01278,
+          "bestPhoneIgnoringBlank": [
+            "ð"
+          ],
+          "marginAgainstOtherPhones": -4.289
+        },
+        {
+          "target": "æ",
+          "frames": [
+            18
+          ],
+          "posteriorPeak": 0.4169,
+          "bestPhoneIgnoringBlank": [
+            "ɛ"
+          ],
+          "marginAgainstOtherPhones": -0.254
+        },
+        {
+          "target": "d",
+          "frames": [
+            26
+          ],
+          "posteriorPeak": 0.96967,
+          "bestPhoneIgnoringBlank": [
+            "d"
+          ],
+          "marginAgainstOtherPhones": 5.559
+        }
+      ],
+      "textMatch": false,
+      "homophone": false,
+      "greedyPhonemesMatch": false,
+      "allAlignedTargetsBest": false,
+      "conflicts": [
+        {
+          "expected": "b",
+          "alternative": "ð",
+          "margin": -4.289
+        }
+      ],
+      "candidateDecision": "candidate-practice",
+      "elapsedMs": 6219
+    },
+    {
+      "id": "guy-light-as-light",
+      "source": "public\\audio\\guy\\word-1852.mp3",
+      "sha256": "eee7516495f22dfc96baa88bfea2fb22b32b6896f0e8941846320b451f4f6d57",
+      "spokenFixture": "light",
+      "target": "light",
+      "expectedCorrect": true,
+      "transcript": "Light",
+      "greedyPhones": [
+        "l",
+        "aɪ",
+        "t"
+      ],
+      "selectedVariant": [
+        "l",
+        "aɪ",
+        "t"
+      ],
+      "alignment": [
+        {
+          "target": "l",
+          "frames": [
+            12,
+            13
+          ],
+          "posteriorPeak": 0.99652,
+          "bestPhoneIgnoringBlank": [
+            "l",
+            "l"
+          ],
+          "marginAgainstOtherPhones": 8.431
+        },
+        {
+          "target": "aɪ",
+          "frames": [
+            20
+          ],
+          "posteriorPeak": 0.99284,
+          "bestPhoneIgnoringBlank": [
+            "aɪ"
+          ],
+          "marginAgainstOtherPhones": 6.606
+        },
+        {
+          "target": "t",
+          "frames": [
+            29
+          ],
+          "posteriorPeak": 0.98661,
+          "bestPhoneIgnoringBlank": [
+            "t"
+          ],
+          "marginAgainstOtherPhones": 5.709
+        }
+      ],
+      "textMatch": true,
+      "homophone": true,
+      "greedyPhonemesMatch": true,
+      "allAlignedTargetsBest": true,
+      "conflicts": [],
+      "candidateDecision": "candidate-pass",
+      "elapsedMs": 6281
+    },
+    {
+      "id": "guy-light-as-right",
+      "source": "public\\audio\\guy\\word-1852.mp3",
+      "sha256": "eee7516495f22dfc96baa88bfea2fb22b32b6896f0e8941846320b451f4f6d57",
+      "spokenFixture": "light",
+      "target": "right",
+      "expectedCorrect": false,
+      "transcript": "Light",
+      "greedyPhones": [
+        "l",
+        "aɪ",
+        "t"
+      ],
+      "selectedVariant": [
+        "ɹ",
+        "aɪ",
+        "t"
+      ],
+      "alignment": [
+        {
+          "target": "ɹ",
+          "frames": [
+            12
+          ],
+          "posteriorPeak": 0.00014,
+          "bestPhoneIgnoringBlank": [
+            "l"
+          ],
+          "marginAgainstOtherPhones": -8.854
+        },
+        {
+          "target": "aɪ",
+          "frames": [
+            20
+          ],
+          "posteriorPeak": 0.99284,
+          "bestPhoneIgnoringBlank": [
+            "aɪ"
+          ],
+          "marginAgainstOtherPhones": 6.606
+        },
+        {
+          "target": "t",
+          "frames": [
+            29
+          ],
+          "posteriorPeak": 0.98661,
+          "bestPhoneIgnoringBlank": [
+            "t"
+          ],
+          "marginAgainstOtherPhones": 5.709
+        }
+      ],
+      "textMatch": false,
+      "homophone": false,
+      "greedyPhonemesMatch": false,
+      "allAlignedTargetsBest": false,
+      "conflicts": [
+        {
+          "expected": "ɹ",
+          "alternative": "l",
+          "margin": -8.854
+        }
+      ],
+      "candidateDecision": "candidate-practice",
+      "elapsedMs": 6281
+    },
+    {
+      "id": "guy-right-as-right",
+      "source": "public\\audio\\guy\\word-2160.mp3",
+      "sha256": "d80d39b42a0d25f74b7b139ea295162b0436f554e01b7d8b5290e11e93556d0b",
+      "spokenFixture": "right",
+      "target": "right",
+      "expectedCorrect": true,
+      "transcript": "Right.",
+      "greedyPhones": [
+        "ɹ",
+        "aɪ",
+        "t"
+      ],
+      "selectedVariant": [
+        "ɹ",
+        "aɪ",
+        "t"
+      ],
+      "alignment": [
+        {
+          "target": "ɹ",
+          "frames": [
+            12
+          ],
+          "posteriorPeak": 0.9968,
+          "bestPhoneIgnoringBlank": [
+            "ɹ"
+          ],
+          "marginAgainstOtherPhones": 7.382
+        },
+        {
+          "target": "aɪ",
+          "frames": [
+            19
+          ],
+          "posteriorPeak": 0.98982,
+          "bestPhoneIgnoringBlank": [
+            "aɪ"
+          ],
+          "marginAgainstOtherPhones": 6.483
+        },
+        {
+          "target": "t",
+          "frames": [
+            28
+          ],
+          "posteriorPeak": 0.99378,
+          "bestPhoneIgnoringBlank": [
+            "t"
+          ],
+          "marginAgainstOtherPhones": 6.312
+        }
+      ],
+      "textMatch": true,
+      "homophone": true,
+      "greedyPhonemesMatch": true,
+      "allAlignedTargetsBest": true,
+      "conflicts": [],
+      "candidateDecision": "candidate-pass",
+      "elapsedMs": 6219
+    },
+    {
+      "id": "guy-right-as-light",
+      "source": "public\\audio\\guy\\word-2160.mp3",
+      "sha256": "d80d39b42a0d25f74b7b139ea295162b0436f554e01b7d8b5290e11e93556d0b",
+      "spokenFixture": "right",
+      "target": "light",
+      "expectedCorrect": false,
+      "transcript": "Right.",
+      "greedyPhones": [
+        "ɹ",
+        "aɪ",
+        "t"
+      ],
+      "selectedVariant": [
+        "l",
+        "aɪ",
+        "t"
+      ],
+      "alignment": [
+        {
+          "target": "l",
+          "frames": [
+            12
+          ],
+          "posteriorPeak": 0.00013,
+          "bestPhoneIgnoringBlank": [
+            "ɹ"
+          ],
+          "marginAgainstOtherPhones": -8.979
+        },
+        {
+          "target": "aɪ",
+          "frames": [
+            19
+          ],
+          "posteriorPeak": 0.98982,
+          "bestPhoneIgnoringBlank": [
+            "aɪ"
+          ],
+          "marginAgainstOtherPhones": 6.483
+        },
+        {
+          "target": "t",
+          "frames": [
+            28
+          ],
+          "posteriorPeak": 0.99378,
+          "bestPhoneIgnoringBlank": [
+            "t"
+          ],
+          "marginAgainstOtherPhones": 6.312
+        }
+      ],
+      "textMatch": false,
+      "homophone": false,
+      "greedyPhonemesMatch": false,
+      "allAlignedTargetsBest": false,
+      "conflicts": [
+        {
+          "expected": "l",
+          "alternative": "ɹ",
+          "margin": -8.979
+        }
+      ],
+      "candidateDecision": "candidate-practice",
+      "elapsedMs": 6219
+    },
+    {
+      "id": "guy-thin-as-thin",
+      "source": "public\\audio\\guy\\word-2388.mp3",
+      "sha256": "472c6d3edc5a8f7e96d8f3f5e57112c78e8998d9f2e08ec98486f70c2ee1be65",
+      "spokenFixture": "thin",
+      "target": "thin",
+      "expectedCorrect": true,
+      "transcript": "Thin.",
+      "greedyPhones": [
+        "θ",
+        "ɪ",
+        "n"
+      ],
+      "selectedVariant": [
+        "θ",
+        "ɪ",
+        "n"
+      ],
+      "alignment": [
+        {
+          "target": "θ",
+          "frames": [
+            15
+          ],
+          "posteriorPeak": 0.97886,
+          "bestPhoneIgnoringBlank": [
+            "θ"
+          ],
+          "marginAgainstOtherPhones": 5.396
+        },
+        {
+          "target": "ɪ",
+          "frames": [
+            21
+          ],
+          "posteriorPeak": 0.97574,
+          "bestPhoneIgnoringBlank": [
+            "ɪ"
+          ],
+          "marginAgainstOtherPhones": 4.366
+        },
+        {
+          "target": "n",
+          "frames": [
+            29
+          ],
+          "posteriorPeak": 0.99669,
+          "bestPhoneIgnoringBlank": [
+            "n"
+          ],
+          "marginAgainstOtherPhones": 7.233
+        }
+      ],
+      "textMatch": true,
+      "homophone": true,
+      "greedyPhonemesMatch": true,
+      "allAlignedTargetsBest": true,
+      "conflicts": [],
+      "candidateDecision": "candidate-pass",
+      "elapsedMs": 6250
+    },
+    {
+      "id": "guy-thin-as-think",
+      "source": "public\\audio\\guy\\word-2388.mp3",
+      "sha256": "472c6d3edc5a8f7e96d8f3f5e57112c78e8998d9f2e08ec98486f70c2ee1be65",
+      "spokenFixture": "thin",
+      "target": "think",
+      "expectedCorrect": false,
+      "transcript": "Thin.",
+      "greedyPhones": [
+        "θ",
+        "ɪ",
+        "n"
+      ],
+      "selectedVariant": [
+        "θ",
+        "ɪ",
+        "ŋ",
+        "k"
+      ],
+      "alignment": [
+        {
+          "target": "θ",
+          "frames": [
+            15
+          ],
+          "posteriorPeak": 0.97886,
+          "bestPhoneIgnoringBlank": [
+            "θ"
+          ],
+          "marginAgainstOtherPhones": 5.396
+        },
+        {
+          "target": "ɪ",
+          "frames": [
+            21
+          ],
+          "posteriorPeak": 0.97574,
+          "bestPhoneIgnoringBlank": [
+            "ɪ"
+          ],
+          "marginAgainstOtherPhones": 4.366
+        },
+        {
+          "target": "ŋ",
+          "frames": [
+            29
+          ],
+          "posteriorPeak": 0.00072,
+          "bestPhoneIgnoringBlank": [
+            "n"
+          ],
+          "marginAgainstOtherPhones": -7.233
+        },
+        {
+          "target": "k",
+          "frames": [
+            75
+          ],
+          "posteriorPeak": 8e-05,
+          "bestPhoneIgnoringBlank": [
+            "k"
+          ],
+          "marginAgainstOtherPhones": 0.381
+        }
+      ],
+      "textMatch": false,
+      "homophone": false,
+      "greedyPhonemesMatch": false,
+      "allAlignedTargetsBest": false,
+      "conflicts": [
+        {
+          "expected": "ŋ",
+          "alternative": "n",
+          "margin": -7.233
+        }
+      ],
+      "candidateDecision": "candidate-practice",
+      "elapsedMs": 6250
+    },
+    {
+      "id": "guy-then-as-then",
+      "source": "public\\audio\\guy\\word-2383.mp3",
+      "sha256": "f913bdfc51bbbbffacbb5f965a6f5aa3cc61df98b5c4d47f2ea4562e866a36c1",
+      "spokenFixture": "then",
+      "target": "then",
+      "expectedCorrect": true,
+      "transcript": "Then.",
+      "greedyPhones": [
+        "v",
+        "ɛ",
+        "n"
+      ],
+      "selectedVariant": [
+        "ð",
+        "ɛ",
+        "n"
+      ],
+      "alignment": [
+        {
+          "target": "ð",
+          "frames": [
+            13
+          ],
+          "posteriorPeak": 0.10501,
+          "bestPhoneIgnoringBlank": [
+            "v"
+          ],
+          "marginAgainstOtherPhones": -2.082
+        },
+        {
+          "target": "ɛ",
+          "frames": [
+            21
+          ],
+          "posteriorPeak": 0.98412,
+          "bestPhoneIgnoringBlank": [
+            "ɛ"
+          ],
+          "marginAgainstOtherPhones": 5.328
+        },
+        {
+          "target": "n",
+          "frames": [
+            28
+          ],
+          "posteriorPeak": 0.99699,
+          "bestPhoneIgnoringBlank": [
+            "n"
+          ],
+          "marginAgainstOtherPhones": 7.453
+        }
+      ],
+      "textMatch": true,
+      "homophone": true,
+      "greedyPhonemesMatch": false,
+      "allAlignedTargetsBest": false,
+      "conflicts": [],
+      "candidateDecision": "uncertain",
+      "elapsedMs": 6141
+    }
+  ]
+}

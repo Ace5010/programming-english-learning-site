@@ -6,21 +6,26 @@
 import { readFileSync, readdirSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { createRequire } from 'node:module';
-import { resolve } from 'node:path';
+import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import ts from 'typescript';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
 
 function loadDailyCourse() {
-  const require = createRequire(import.meta.url);
-  const source = readFileSync(new URL('../src/dailyCourse.ts', import.meta.url), 'utf8');
-  const compiled = ts.transpileModule(source, {
-    compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2020 },
-  }).outputText;
-  const loaded = { exports: {} };
-  new Function('require', 'exports', 'module', compiled)(require, loaded.exports, loaded);
-  return loaded.exports;
+  const cache = new Map();
+  const load = file => {
+    if (cache.has(file)) return cache.get(file).exports;
+    const loaded = { exports: {} }; cache.set(file, loaded);
+    const compiled = ts.transpileModule(readFileSync(file, 'utf8'), {
+      compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2020 },
+    }).outputText;
+    const require = name => name.startsWith('.') && name.endsWith('.ts')
+      ? load(resolve(dirname(file), name)) : createRequire(file)(name);
+    new Function('require', 'exports', 'module', compiled)(require, loaded.exports, loaded);
+    return loaded.exports;
+  };
+  return load(resolve(root, 'src/dailyCourse.ts'));
 }
 
 const { dailyPhrases, dailyLessons } = loadDailyCourse();

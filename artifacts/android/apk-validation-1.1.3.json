@@ -1,0 +1,10 @@
+{
+  "apk": "codewords-1.1.3-release.apk",
+  "bytes": 220505747,
+  "sha256": "baab5cb47495b2d14e028b3d020536003bc8c5e968be7057655dce433ca10c33",
+  "matchedWebFiles": 15246,
+  "mp3Files": 15227,
+  "payloadMatchesDist": true,
+  "noSigningFilesBundled": true,
+  "note": "Archive/payload verification only; installation and native device behavior are separate checks."
+}

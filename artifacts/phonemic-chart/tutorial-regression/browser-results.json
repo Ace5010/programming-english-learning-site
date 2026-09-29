@@ -1,0 +1,146 @@
+{
+  "results": [
+    "independent tutorials, optional interaction, every visible topic reachable and records untouched",
+    "sound sample actions, normal and slow real audio in both voices, no phoneme masquerading as TTS",
+    "new noun role examples play in both voices and sample identity differs from word order",
+    "embedded player is opt-in and removed when leaving pronunciation or reading a word",
+    "original course can open foundation explanation then return to unchanged draft",
+    "minimal 1440px: both samples, readable meanings, reachable controls",
+    "minimal 390px: both samples, readable meanings, reachable controls",
+    "minimal 320px: both samples, readable meanings, reachable controls",
+    "sketch 1440px: both samples, readable meanings, reachable controls",
+    "sketch 390px: both samples, readable meanings, reachable controls",
+    "sketch 320px: both samples, readable meanings, reachable controls",
+    "print 1440px: both samples, readable meanings, reachable controls",
+    "print 390px: both samples, readable meanings, reachable controls",
+    "print 320px: both samples, readable meanings, reachable controls",
+    "graffiti 1440px: both samples, readable meanings, reachable controls",
+    "graffiti 390px: both samples, readable meanings, reachable controls",
+    "graffiti 320px: both samples, readable meanings, reachable controls",
+    "corrupt historical data does not block tutorial and remains byte-for-byte unchanged"
+  ],
+  "failures": [],
+  "errors": [],
+  "audioEvents": [
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/foundation/aria/f-e29a7f31cac05abc.mp3?v=fan",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "src": "http://localhost:5186/audio/foundation/aria/f-e29a7f31cac05abc.mp3?v=fan",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/foundation/aria/f-e29a7f31cac05abc.mp3?v=fan",
+      "rate": 0.72
+    },
+    {
+      "event": "ended",
+      "src": "http://localhost:5186/audio/foundation/aria/f-e29a7f31cac05abc.mp3?v=fan",
+      "rate": 0.72
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/foundation/guy/f-e29a7f31cac05abc.mp3?v=fan",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "src": "http://localhost:5186/audio/foundation/guy/f-e29a7f31cac05abc.mp3?v=fan",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/foundation/guy/f-e29a7f31cac05abc.mp3?v=fan",
+      "rate": 0.72
+    },
+    {
+      "event": "ended",
+      "src": "http://localhost:5186/audio/foundation/guy/f-e29a7f31cac05abc.mp3?v=fan",
+      "rate": 0.72
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/foundation/aria/f-2d635bb7f5467a38.mp3?v=The%20dog%20sees%20me.",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "src": "http://localhost:5186/audio/foundation/aria/f-2d635bb7f5467a38.mp3?v=The%20dog%20sees%20me.",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/foundation/aria/f-2d635bb7f5467a38.mp3?v=The%20dog%20sees%20me.",
+      "rate": 0.72
+    },
+    {
+      "event": "ended",
+      "src": "http://localhost:5186/audio/foundation/aria/f-2d635bb7f5467a38.mp3?v=The%20dog%20sees%20me.",
+      "rate": 0.72
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/foundation/aria/f-6ffd3988739814fb.mp3?v=I%20see%20the%20dog.",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "src": "http://localhost:5186/audio/foundation/aria/f-6ffd3988739814fb.mp3?v=I%20see%20the%20dog.",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/foundation/aria/f-6ffd3988739814fb.mp3?v=I%20see%20the%20dog.",
+      "rate": 0.72
+    },
+    {
+      "event": "ended",
+      "src": "http://localhost:5186/audio/foundation/aria/f-6ffd3988739814fb.mp3?v=I%20see%20the%20dog.",
+      "rate": 0.72
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/foundation/guy/f-2d635bb7f5467a38.mp3?v=The%20dog%20sees%20me.",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "src": "http://localhost:5186/audio/foundation/guy/f-2d635bb7f5467a38.mp3?v=The%20dog%20sees%20me.",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/foundation/guy/f-2d635bb7f5467a38.mp3?v=The%20dog%20sees%20me.",
+      "rate": 0.72
+    },
+    {
+      "event": "ended",
+      "src": "http://localhost:5186/audio/foundation/guy/f-2d635bb7f5467a38.mp3?v=The%20dog%20sees%20me.",
+      "rate": 0.72
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/foundation/guy/f-6ffd3988739814fb.mp3?v=I%20see%20the%20dog.",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "src": "http://localhost:5186/audio/foundation/guy/f-6ffd3988739814fb.mp3?v=I%20see%20the%20dog.",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/foundation/guy/f-6ffd3988739814fb.mp3?v=I%20see%20the%20dog.",
+      "rate": 0.72
+    },
+    {
+      "event": "ended",
+      "src": "http://localhost:5186/audio/foundation/guy/f-6ffd3988739814fb.mp3?v=I%20see%20the%20dog.",
+      "rate": 0.72
+    }
+  ]
+}

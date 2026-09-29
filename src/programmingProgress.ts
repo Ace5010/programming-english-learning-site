@@ -65,6 +65,8 @@ export function mergeProgrammingCourse(progress: ReviewProgress, course: DailyPr
     if (!exercise || answer.outcome === 'self') continue;
     const receipt = `${session.id}:${answer.exerciseId}:${answer.at}`;
     for (const wordId of exercise.wordIds) {
+      const outcome = answer.targets ? answer.targets[`word-${wordId}`] : answer.outcome;
+      if (!outcome || outcome === 'unmeasured') continue;
       if (!validIds.has(wordId)) throw new Error('课程练习的词汇引用无效。');
       register(wordId, session.startedAt);
       if (next[wordId].courseReceipts?.includes(receipt)) continue;
@@ -73,7 +75,8 @@ export function mergeProgrammingCourse(progress: ReviewProgress, course: DailyPr
         return item?.wordIds.includes(wordId);
       });
       next = updateReviewProgress(next, { wordId, ability: exercise.ability, level: getSkill(next, wordId, exercise.ability).level,
-        retry: answer.retry, exposed, kind: exercise.kind, source: session.mode === 'lesson' ? 'course' : 'review' }, answer.outcome, answer.at);
+        retry: answer.retry, exposed, kind: exercise.kind, source: session.mode === 'lesson' ? 'course' : 'review' }, outcome, answer.at, true,
+        !!next[wordId].courseReceipts?.includes(`${session.id}:${exercise.id}:hint`));
       next = { ...next, [wordId]: { ...next[wordId], courseReceipts: [...(next[wordId].courseReceipts ?? []), receipt] } };
     }
   }
@@ -85,10 +88,11 @@ export function mergeProgrammingCourse(progress: ReviewProgress, course: DailyPr
     // making a failed synchronization look like a new difficulty today.
     const hintAt = entry && course.lessons[lesson.id]?.errors[entry.retryOf ?? entry.exerciseId]?.lastAt;
     if (exercise) for (const wordId of exercise.wordIds) {
+      if (session.draft.pairs && !session.draft.pairs.mistakes[`word-${wordId}`]) continue;
       const receipt = `${session.id}:${exercise.id}:hint`;
       if (next[wordId]?.courseReceipts?.includes(receipt)) continue;
       next = updateReviewProgress(next, { wordId, ability: exercise.ability, level: getSkill(next, wordId, exercise.ability).level,
-        retry: false, exposed: true, kind: exercise.kind, source: session.mode === 'lesson' ? 'course' : 'review' }, 'assisted', hintAt ?? now, false);
+        retry: false, exposed: true, kind: exercise.kind, source: session.mode === 'lesson' ? 'course' : 'review' }, 'assisted', session.draft.pairs?.observedAt[`word-${wordId}`] ?? hintAt ?? now, false);
       next = { ...next, [wordId]: { ...next[wordId], courseReceipts: [...(next[wordId].courseReceipts ?? []), receipt] } };
     }
   }

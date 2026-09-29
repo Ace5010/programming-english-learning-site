@@ -1,0 +1,106 @@
+{
+  "baseURL": "http://localhost:5187/",
+  "results": [
+    {
+      "name": "daily-order-correction-reload-theme",
+      "passed": true
+    },
+    {
+      "name": "programming-order-correction-reload-theme",
+      "passed": true
+    }
+  ],
+  "failures": [],
+  "audioEvents": [
+    {
+      "type": "playing",
+      "src": "http://localhost:5187/audio/aria/word-1934.mp3",
+      "rate": 1,
+      "duration": 1.584,
+      "pitch": true,
+      "active": 1
+    },
+    {
+      "type": "playing",
+      "src": "http://localhost:5187/audio/reading/aria/read-6700869c8ff7480e.mp3",
+      "rate": 1,
+      "duration": 1.872,
+      "pitch": true,
+      "active": 1
+    },
+    {
+      "type": "playing",
+      "src": "http://localhost:5187/audio/aria/word-1932.mp3",
+      "rate": 1,
+      "duration": 1.608,
+      "pitch": true,
+      "active": 1
+    },
+    {
+      "type": "playing",
+      "src": "http://localhost:5187/audio/aria/word-1934.mp3",
+      "rate": 1,
+      "duration": 1.584,
+      "pitch": true,
+      "active": 1
+    },
+    {
+      "type": "playing",
+      "src": "http://localhost:5187/audio/aria/word-3018.mp3",
+      "rate": 1,
+      "duration": 1.608,
+      "pitch": true,
+      "active": 1
+    },
+    {
+      "type": "playing",
+      "src": "http://localhost:5187/audio/reading/aria/read-6700869c8ff7480e.mp3",
+      "rate": 1,
+      "duration": 1.872,
+      "pitch": true,
+      "active": 1
+    },
+    {
+      "type": "playing",
+      "src": "http://localhost:5187/audio/aria/word-2.mp3",
+      "rate": 1,
+      "duration": 1.608,
+      "pitch": true,
+      "active": 1
+    },
+    {
+      "type": "playing",
+      "src": "http://localhost:5187/audio/aria/word-2775.mp3",
+      "rate": 1,
+      "duration": 1.536,
+      "pitch": true,
+      "active": 1
+    },
+    {
+      "type": "playing",
+      "src": "http://localhost:5187/audio/aria/word-2580.mp3",
+      "rate": 1,
+      "duration": 1.416,
+      "pitch": true,
+      "active": 1
+    },
+    {
+      "type": "playing",
+      "src": "http://localhost:5187/audio/aria/word-1946.mp3",
+      "rate": 1,
+      "duration": 1.536,
+      "pitch": true,
+      "active": 1
+    },
+    {
+      "type": "playing",
+      "src": "http://localhost:5187/audio/aria/word-2.mp3",
+      "rate": 1,
+      "duration": 1.608,
+      "pitch": true,
+      "active": 1
+    }
+  ],
+  "physicalDeviceTested": false,
+  "microphoneTested": false
+}

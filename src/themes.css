@@ -70,7 +70,7 @@
 :root[data-theme] .word-card { padding-top: 25px; padding-bottom: 23px; }
 :root[data-theme] .word-card:hover { background: color-mix(in srgb, var(--accent-soft) 36%, var(--surface)); }
 :root[data-theme] .word-card.word-playing, :root[data-theme] .word-card.example-playing { background: var(--accent-soft); }
-:root[data-theme] .word-title strong { font-family: var(--word-font); font-size: 27px; }
+:root[data-theme] .word-title strong { font-family: var(--word-font); font-size: 24px; }
 :root[data-theme] .word-title .icon, :root[data-theme] .example > button > .icon { color: var(--muted); }
 :root[data-theme] .phonetic { font-family: Arial, var(--sans); font-size: 15px; }
 :root[data-theme] .word-meta > span { color: var(--muted); opacity: .65; }
@@ -144,7 +144,7 @@
 :root[data-theme='sketch'] .category-select { border-color: #aaa193; border-radius: 6px 11px 8px 4px; }
 :root[data-theme='sketch'] .list-columns { background: #f4efdf; border-top-style: dashed; }
 :root[data-theme='sketch'] .word-card { border-bottom-style: dashed; row-gap: 16px; }
-:root[data-theme='sketch'] .word-title strong { position: relative; isolation: isolate; color: #244e77; font-size: 34px; line-height: 1.1; font-weight: 400; letter-spacing: .15px; padding-bottom: 3px; }
+:root[data-theme='sketch'] .word-title strong { position: relative; isolation: isolate; color: #244e77; font-size: 27px; line-height: 1.3; font-weight: 400; letter-spacing: .15px; padding-bottom: 3px; }
 :root[data-theme='sketch'] .word-title strong::after { content: ''; position: absolute; z-index: -1; inset: auto 0 1px; height: 7px; background: #f5c93f80; transform: rotate(-1deg); clip-path: polygon(0 20%, 99% 0, 97% 95%, 2% 85%); }
 :root[data-theme='sketch'] .word-button.playing strong { color: var(--accent-deep); }
 :root[data-theme='sketch'] .favorite > .icon { transform: rotate(-8deg); stroke-width: 1.7; }
@@ -179,7 +179,7 @@
 :root[data-theme='print'] .category-select { border-color: #756887; }
 :root[data-theme='print'] .list-guide { padding-top: 4px; background: #e7eafc; }
 :root[data-theme='print'] .list-columns { background: #f2edf8; border-top: 2px solid var(--frame); }
-:root[data-theme='print'] .word-title strong { color: #342b9e; font-size: 29px; font-weight: 800; }
+:root[data-theme='print'] .word-title strong { color: #342b9e; font-size: 24px; font-weight: 700; }
 :root[data-theme='print'] .word-card:hover { background: #fff0c1; }
 :root[data-theme='print'] .known { border: 1.5px solid var(--frame); background: #ffd8db; border-radius: 7px; box-shadow: 2px 2px 0 #baa3b2; }
 :root[data-theme='print'] .known:hover, :root[data-theme='print'] .known.active { background: #e4defa; color: #342b9e; border-color: var(--frame); }
@@ -214,7 +214,7 @@
 :root[data-theme='graffiti'] .list-columns { border-top: 2px solid var(--frame); background: #f0eee7; }
 :root[data-theme='graffiti'] .word-card { row-gap: 17px; }
 :root[data-theme='graffiti'] .word-card:hover { background: #fff7c1; }
-:root[data-theme='graffiti'] .word-title strong { color: #17171b; font-size: 31px; line-height: 1.25; font-weight: 400; letter-spacing: .3px; text-shadow: 1.5px 1.5px 0 #60d6e8; padding-bottom: 2px; }
+:root[data-theme='graffiti'] .word-title strong { color: #17171b; font-size: 25px; line-height: 1.4; font-weight: 400; letter-spacing: .3px; text-shadow: 1.5px 1.5px 0 #60d6e8; padding-bottom: 2px; }
 :root[data-theme='graffiti'] .word-button.playing strong { text-shadow: 2px 2px 0 #f4498b; }
 :root[data-theme='graffiti'] .favorite { color: #17171b; }
 :root[data-theme='graffiti'] .favorite > .icon { transform: rotate(-9deg); stroke-width: 2.1; }
@@ -251,9 +251,9 @@
   :root[data-theme] .nav-item { padding-inline: 9px; gap: 6px; }
   :root[data-theme='minimal'] .nav-item { padding-inline: 11px; }
   :root[data-theme] .theme-picker > span { display: none; }
-  :root[data-theme] .word-title strong { font-size: 26px; }
-  :root[data-theme='sketch'] .word-title strong { font-size: 32px; }
-  :root[data-theme='graffiti'] .word-title strong { font-size: 29px; }
+  :root[data-theme] .word-title strong { font-size: 24px; }
+  :root[data-theme='sketch'] .word-title strong { font-size: 27px; }
+  :root[data-theme='graffiti'] .word-title strong { font-size: 25px; }
 }
 @media (max-width: 1050px) {
   :root[data-theme] .header-inner { gap: 14px; }

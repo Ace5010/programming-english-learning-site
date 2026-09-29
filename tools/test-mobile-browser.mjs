@@ -12,7 +12,7 @@ const require = createRequire(import.meta.url);
 const { chromium } = require(process.env.CODEWORDS_PLAYWRIGHT || 'C:/Users/shenwuqiang/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
 const baseURL = process.env.CODEWORDS_TEST_URL || 'http://localhost:5186/';
 assert.match(baseURL, /^https?:\/\/(localhost|127\.0\.0\.1)(:|\/)/);
-const output = path.resolve('artifacts/mobile-audit');
+const output = path.resolve(process.env.CODEWORDS_ARTIFACT_DIR || 'artifacts/mobile-audit');
 await mkdir(output, { recursive: true });
 const earned = JSON.parse(await readFile('artifacts/adaptive-course/earned-fixtures.json', 'utf8'));
 const seed = { [DAILY_KEY]: earned.daily.course, [PROGRAMMING_COURSE_KEY]: earned.programming.course, [REVIEW_KEY]: earned.programming.review, 'codewords-favorites': '[1,2,3561]' };
@@ -65,9 +65,9 @@ try {
     try {
       for (const size of [{ width: 320, height: 640 }, { width: 360, height: 780 }, { width: 412, height: 915 }, { width: 844, height: 390 }]) {
         await page.setViewportSize(size);
-        for (const theme of ['minimal', 'sketch', 'print', 'graffiti']) {
-          await page.getByLabel('界面风格', { exact: true }).selectOption(theme);
-          for (const [section, library] of [['编程英语', '词汇库'], ['日常英语', '表达库']]) {
+        for (const theme of ['lagoon', 'pearl', 'sky', 'mint']) {
+          await page.getByLabel('界面配色', { exact: true }).selectOption(theme);
+          for (const [section, library] of [['编程英语', '词汇库'], ['日常英语', '词汇库']]) {
             await page.getByRole('button', { name: section, exact: true }).click();
             for (const view of ['课程', '复习', library, '收藏']) {
               await go(page, view); await check(page, `${size.width}/${theme}/${section}/${view}`);
@@ -96,8 +96,8 @@ try {
         await go(page, '复习');
         await page.getByRole('button', { name: '开始到期复习', exact: true }).click();
         const exercise = page.locator('.lesson-exercise-dictation'); await exercise.waitFor();
-        for (const theme of ['minimal', 'sketch', 'print', 'graffiti']) {
-          await page.locator('.lesson-overlay').getByLabel('界面风格', { exact: true }).selectOption(theme);
+        for (const theme of ['lagoon', 'pearl', 'sky', 'mint']) {
+          await page.locator('.lesson-overlay').getByLabel('界面配色', { exact: true }).selectOption(theme);
           await check(page, `review/${word.id}/${theme}`);
         }
         const input = exercise.locator('input').first(); await input.fill('test');
@@ -118,8 +118,8 @@ try {
       try {
         const root = page.locator(`#${section}-content`), question = root.locator('.daily-question');
         await question.waitFor();
-        for (const theme of ['minimal', 'sketch', 'print', 'graffiti']) {
-          await page.getByLabel('界面风格', { exact: true }).selectOption(theme);
+        for (const theme of ['lagoon', 'pearl', 'sky', 'mint']) {
+          await page.getByLabel('界面配色', { exact: true }).selectOption(theme);
           await check(page, `${section}/${kind}/${theme}`);
         }
         if (kind === 'speak') await root.getByRole('button', { name: '自己表达', exact: true }).click();

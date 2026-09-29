@@ -110,6 +110,10 @@ def main() -> None:
         raise SystemExit(1)
 
     subprocess.run(['node', str(ROOT / 'scripts/verify-daily-assets.mjs')], cwd=ROOT, check=True)
+    subprocess.run(['node', str(ROOT / 'scripts/verify-reading-assets.mjs')], cwd=ROOT, check=True)
+    subprocess.run(['node', str(ROOT / 'scripts/verify-foundation-assets.mjs')], cwd=ROOT, check=True)
+    subprocess.run(['node', str(ROOT / 'scripts/verify-phonemic-assets.mjs')], cwd=ROOT, check=True)
+    subprocess.run(['node', str(ROOT / 'scripts/verify-slow-assets.mjs')], cwd=ROOT, check=True)
     print("检查通过：完整项目已汇总。")
 
 

@@ -1,3 +1,4 @@
+import { correctDraft } from './helpers/course-answer.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { adaptiveProgrammingLessons as catalog } from '../src/programmingPractice.ts';
@@ -16,28 +17,7 @@ const storage = (seed = {}) => {
   return { getItem: key => data.get(key) ?? null, setItem: (key, value) => data.set(key, value) };
 };
 
-function correctDraft(task) {
-  const draft = createDailyDraft(task);
-  if (task.kind === 'choice' || task.kind === 'listen') draft.choice = task.answers[0];
-  else if (task.kind === 'fill') draft.blanks = task.blanks.map(values => values[0]);
-  else if (task.kind === 'write') draft.text = task.answers[0];
-  else if (task.kind === 'order') {
-    const solve = (selected, available) => {
-      const text = selected.map(index => task.options[index]).join(' ');
-      if (task.answers.includes(text)) return selected;
-      if (!task.answers.some(answer => answer.startsWith(text))) return null;
-      for (const index of available) {
-        const solution = solve([...selected, index], available.filter(value => value !== index));
-        if (solution) return solution;
-      }
-      return null;
-    };
-    draft.order = solve([], task.options.map((_, index) => index));
-    assert.ok(draft.order, `unsatisfiable order task: ${task.id}`);
-  } else assert.fail(`Unexpected programming task kind: ${task.kind}`);
-  assert.deepEqual(checkDailyAnswer(task, draft).correct, true, task.id);
-  return draft;
-}
+
 
 let completedRun;
 function completeActualCourse() {

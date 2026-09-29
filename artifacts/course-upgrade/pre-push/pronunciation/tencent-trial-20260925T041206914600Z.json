@@ -1,0 +1,91 @@
+{
+  "status": "completed-public-fixtures-only-not-human-acceptance",
+  "provider": "tencent-soe-new",
+  "evalMode": 4,
+  "scoreCoeff": 1.5,
+  "interfaceIndex": 9,
+  "containsUserRecording": false,
+  "autoRetry": false,
+  "maximumAttempts": 1,
+  "cases": [
+    {
+      "id": "aria-hello-as-hello",
+      "expectedCorrect": true,
+      "status": "received",
+      "result": {
+        "results": [
+          {
+            "SuggestedScore": 0.8424562215805054,
+            "PronAccuracy": 0.8424562215805054,
+            "PronFluency": 0.9284452795982361,
+            "PronCompletion": 1,
+            "Words": [
+              {
+                "MemBeginTime": 300,
+                "MemEndTime": 940,
+                "PronAccuracy": 84.24562072753906,
+                "PronFluency": 0.9284452795982361,
+                "ReferenceWord": "",
+                "Word": "hello",
+                "MatchTag": 0,
+                "PhoneInfos": [
+                  {
+                    "MemBeginTime": 300,
+                    "MemEndTime": 420,
+                    "PronAccuracy": 0.8938997387886047,
+                    "DetectedStress": false,
+                    "Phone": "hh",
+                    "ReferencePhone": "hh",
+                    "ReferenceLetter": "",
+                    "Stress": false,
+                    "MatchTag": 0
+                  },
+                  {
+                    "MemBeginTime": 420,
+                    "MemEndTime": 460,
+                    "PronAccuracy": 0.5576924681663513,
+                    "DetectedStress": false,
+                    "Phone": "ah",
+                    "ReferencePhone": "ah",
+                    "ReferenceLetter": "",
+                    "Stress": false,
+                    "MatchTag": 0
+                  },
+                  {
+                    "MemBeginTime": 460,
+                    "MemEndTime": 540,
+                    "PronAccuracy": 0.9237855076789856,
+                    "DetectedStress": false,
+                    "Phone": "l",
+                    "ReferencePhone": "l",
+                    "ReferenceLetter": "",
+                    "Stress": true,
+                    "MatchTag": 0
+                  },
+                  {
+                    "MemBeginTime": 540,
+                    "MemEndTime": 940,
+                    "PronAccuracy": 0.9944472312927246,
+                    "DetectedStress": false,
+                    "Phone": "ow",
+                    "ReferencePhone": "ow",
+                    "ReferenceLetter": "",
+                    "Stress": false,
+                    "MatchTag": 0
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "automaticPassDecision": null,
+        "timing": {
+          "audioMs": 1560,
+          "connectionSetupMs": 1844,
+          "afterRecordingMs": 596,
+          "totalMs": 4000
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "date": "2026-09-24",
+  "status": "historical-first-stage",
+  "supersededBy": "pre-push/verification.md",
+  "unitTestsUnique": 234,
+  "browser": {
+    "development": {
+      "passed": 14,
+      "failures": 0
+    },
+    "mobile": {
+      "passed": 13,
+      "failures": 0
+    },
+    "reading": {
+      "passed": 14,
+      "failures": 0
+    },
+    "focus": {
+      "passed": 2,
+      "failures": 0
+    },
+    "production": {
+      "passed": 14,
+      "failures": 0
+    },
+    "productionReading": {
+      "passed": 14,
+      "failures": 0,
+      "bundles": [
+        "http://localhost:5186/assets/index-nqdQT5j7.js"
+      ]
+    }
+  },
+  "audio": {
+    "dailyDecoded": 166,
+    "readingAndFeedbackDecoded": 579,
+    "activeVoiceMp3Each": 7241,
+    "legacyPiperMp3": 7122
+  },
+  "vocabulary": 3620,
+  "bundle": "index-nqdQT5j7.js",
+  "buildFileCount": 15248,
+  "physicalDeviceVerified": false,
+  "realMicrophoneVerified": false,
+  "liveCloudSyncVerified": false
+}

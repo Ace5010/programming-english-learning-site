@@ -22,8 +22,8 @@ function createMotionController(
 ): MotionController | null {
   const marker = nav.querySelector<HTMLElement>('.nav-marker');
   if (!marker) return null;
-  const ink = marker.querySelector<HTMLElement>('.nav-marker-ink');
-  const spray = marker.querySelector<HTMLElement>('.nav-marker-spray');
+
+
   const preference = window.matchMedia('(prefers-reduced-motion: reduce)');
   const navAnimations = new Set<Animation>();
   const contentAnimations = new Set<Animation>();
@@ -102,111 +102,35 @@ function createMotionController(
     });
   }
 
-  function animateNavigation(button: HTMLElement, direction: number) {
+  function animateNavigation(button: HTMLElement, _direction: number) {
     const previousRect = targetBox ? marker!.getBoundingClientRect() : null;
     const navRect = nav.getBoundingClientRect();
     cancel(navAnimations);
     const next = place(button);
-    if (preference.matches) return;
-
     if (previousRect && next.width > 0 && next.height > 0) {
       const dx = previousRect.left - navRect.left - nav.clientLeft + nav.scrollLeft - next.x;
       const dy = previousRect.top - navRect.top - nav.clientTop + nav.scrollTop - next.y;
-      animate(marker, [
-        { transform: `translate(${dx}px,${dy}px) scale(${previousRect.width / next.width},${previousRect.height / next.height})` },
-        { transform: 'none' },
-      ], navAnimations, { duration: theme === 'graffiti' ? 220 : 280 });
-    }
-
-    if (theme === 'sketch') {
-      if (ink) ink.style.transformOrigin = direction > 0 ? 'left center' : 'right center';
-      animate(ink, [
-        { transform: 'rotate(-2deg) scaleX(.25)', opacity: .45 },
-        { transform: 'rotate(-3deg) scaleX(1.04)', opacity: 1, offset: .76 },
-        { transform: 'rotate(-2deg) scaleX(1)', opacity: 1 },
-      ], navAnimations, { duration: 310 });
-      animate(spray, [
-        { opacity: 0, transform: 'rotate(-2deg) scaleX(.05)' },
-        { opacity: .85, transform: 'rotate(-2deg) scaleX(1)', offset: .65 },
-        { opacity: 0, transform: 'rotate(-2deg) scaleX(1)' },
-      ], navAnimations, { duration: 340 });
-      animate(button, [
-        { transform: 'translateY(-2px) rotate(-1deg)' },
-        { transform: 'translateY(1px) rotate(.3deg)', offset: .65 },
-        { transform: 'none' },
-      ], navAnimations);
-    } else if (theme === 'print') {
-      animate(ink, [
-        { transform: 'translate(-2px,-4px) scale(1.06)', boxShadow: '5px 6px 0 #302338' },
-        { transform: 'translate(2px,2px) scale(.97)', boxShadow: '0 0 0 #302338', offset: .5 },
-        { transform: 'translate(-.5px,-1px) scale(1.02)', boxShadow: '4px 4px 0 #302338', offset: .78 },
-        { transform: 'none', boxShadow: '3px 3px 0 #302338' },
-      ], navAnimations, { duration: 300 });
-      animate(button, [
-        { transform: 'translateY(-2px)' },
-        { transform: 'translateY(2px)', offset: .5 },
-        { transform: 'none' },
-      ], navAnimations, { duration: 300 });
-    } else if (theme === 'graffiti') {
-      if (ink) ink.style.transformOrigin = direction > 0 ? 'left center' : 'right center';
-      animate(ink, [
-        { transform: 'rotate(-7deg) scaleX(.1) scaleY(.65)', opacity: .65 },
-        { transform: 'rotate(-3deg) scaleX(1.08) scaleY(1.08)', opacity: 1, offset: .67 },
-        { transform: 'rotate(-3deg) scale(1)', opacity: 1 },
-      ], navAnimations, { duration: 260 });
-      animate(spray, [
-        { opacity: 0, transform: 'scale(.65)' },
-        { opacity: 1, transform: 'scale(1)', offset: .28 },
-        { opacity: 0, transform: 'scale(1.18)' },
-      ], navAnimations, { duration: 340 });
-      animate(button, [
-        { transform: `translateX(${direction * 3}px) rotate(-1deg)` },
-        { transform: 'rotate(.4deg)', offset: .65 },
-        { transform: 'none' },
-      ], navAnimations, { duration: 270 });
-    } else {
-      animate(ink, [
-        { transform: 'scale(.96)', opacity: .7 },
-        { transform: 'scale(1)', opacity: 1 },
-      ], navAnimations, { duration: 260, easing: 'cubic-bezier(.22,1,.36,1)' });
-      animate(button, [{ opacity: .65 }, { opacity: 1 }], navAnimations, { duration: 200 });
+      animate(marker, [{ transform: `translate(${dx}px,${dy}px) scaleX(${previousRect.width / next.width})` }, { transform: 'none' }], navAnimations,
+        { duration: 420, easing: 'cubic-bezier(.18,.86,.3,1.08)' });
     }
   }
 
-  function animateContent(direction: number) {
-    const panel = contentRef.current?.querySelector<HTMLElement>('.vocabulary-panel, .daily-panel') ?? null;
-    const heading = headingRef.current;
-    const sideways = (distance: number) => direction * Math.min(distance, window.innerWidth <= 640 ? 8 : distance);
-    const cards = panel?.querySelectorAll<HTMLElement>('.word-card, .daily-lesson-row');
-    const rows: HTMLElement[] = [];
-    // The number of animated elements stays bounded even after "load more".
-    for (let index = 0; cards && index < Math.min(cards.length, 6); index++) {
-      const card = cards.item(index);
-      if (card instanceof HTMLElement) rows.push(card);
-    }
-    if (!rows.length) {
-      const empty = panel?.querySelector<HTMLElement>('.empty-state');
-      if (empty) rows.push(empty);
-    }
-    if (theme === 'sketch') {
-      animate(heading, [{ opacity: .55, transform: `translateX(${sideways(10)}px)` }, { opacity: 1, transform: 'none' }], contentAnimations);
-      animate(panel, [{ opacity: .65, transform: `translateX(${sideways(14)}px)` }, { opacity: 1, transform: 'none' }], contentAnimations, { duration: 320 });
-      rows.forEach((row, index) => animate(row, [{ opacity: .4, transform: `translateX(${direction * 10}px)` }, { opacity: 1, transform: 'none' }], contentAnimations, { duration: 210, delay: index * 22, fill: 'backwards' }));
-    } else if (theme === 'print') {
-      animate(heading, [{ opacity: .65, transform: 'translateY(-6px)' }, { opacity: 1, transform: 'translateY(1px)', offset: .8 }, { opacity: 1, transform: 'none' }], contentAnimations);
-      animate(panel, [{ opacity: .7, transform: 'translateY(12px) scale(.995)' }, { opacity: 1, transform: 'translateY(-2px) scale(1)', offset: .8 }, { opacity: 1, transform: 'none' }], contentAnimations, { duration: 300 });
-      rows.forEach((row, index) => animate(row, [{ opacity: .5, transform: 'translateY(10px)' }, { opacity: 1, transform: 'none' }], contentAnimations, { duration: 210, delay: index * 20, fill: 'backwards' }));
-    } else if (theme === 'graffiti') {
-      animate(heading, [{ opacity: .6, transform: `translateX(${sideways(14)}px)` }, { opacity: 1, transform: 'none' }], contentAnimations, { duration: 240 });
-      animate(panel, [{ opacity: .7, transform: `translateX(${sideways(18)}px) translateY(3px)` }, { opacity: 1, transform: 'none' }], contentAnimations);
-      rows.forEach((row, index) => animate(row, [{ opacity: .4, transform: `translateX(${direction * 16}px)` }, { opacity: 1, transform: 'none' }], contentAnimations, { duration: 210, delay: index * 20, fill: 'backwards' }));
-    } else {
-      animate(heading, [{ opacity: .6, transform: 'translateY(5px)' }, { opacity: 1, transform: 'none' }], contentAnimations, { duration: 240 });
-      animate(panel, [{ opacity: .65, transform: 'translateY(8px)' }, { opacity: 1, transform: 'none' }], contentAnimations, { easing: 'cubic-bezier(.22,1,.36,1)' });
-      rows.forEach((row, index) => animate(row, [{ opacity: .5, transform: 'translateY(6px)' }, { opacity: 1, transform: 'none' }], contentAnimations, { duration: 210, delay: index * 18, fill: 'backwards' }));
-    }
+  function animateContent(direction: number, sectionChanged: boolean) {
+    const content = contentRef.current;
+    if (!content) return;
+    const distance = window.innerWidth <= 640 ? 18 : 48;
+    animate(headingRef.current, [{ opacity: .3, transform: `translateX(${direction * 18}px)` }, { opacity: 1, transform: 'none' }], contentAnimations, { duration: 350 });
+    const panels = [...content.querySelectorAll<HTMLElement>('.course-current,.course-details,.daily-rail,.vocabulary-panel,.review-sidebar,.expression-review,.phonemic-groups,.phonemic-detail,.tutorial-directory,.tutorial-reading,.daily-study-card,.daily-exercise')]
+      .filter(node => node.getClientRects().length && !node.closest('[hidden]')).slice(0, 6);
+    if (!panels.length) panels.push(content);
+    panels.forEach((panel, index) => animate(panel, [
+      { opacity: .2, transform: sectionChanged ? `perspective(1000px) translateX(${direction * distance}px) rotateY(${direction * -3}deg) scale(.98)` : 'translateY(18px) scale(.99)' },
+      { opacity: 1, transform: 'none' },
+    ], contentAnimations, { duration: sectionChanged ? 560 : 360, delay: index * 35, fill: 'backwards', easing: 'cubic-bezier(.18,.86,.3,1.08)' }));
+    const rows = [...content.querySelectorAll<HTMLElement>('.word-card,.daily-expression')].slice(0, 5);
+    rows.forEach((row, index) => animate(row, [{ opacity: .2, transform: `translateX(${direction * 16}px)` }, { opacity: 1, transform: 'none' }], contentAnimations,
+      { duration: 330, delay: index * 30, fill: 'backwards' }));
   }
-
   function onPreferenceChange() {
     cancel(contentAnimations);
     settle(true);
@@ -227,7 +151,11 @@ function createMotionController(
       const themeChanged = theme !== nextTheme;
       const button = activeButton();
       const nextIndex = button ? buttons().indexOf(button) : -1;
-      const direction = Math.sign(nextIndex - lastIndex) || 1;
+      const order = ['programming', 'daily', 'foundation'];
+      const oldSection = lastSelection?.split('-')[0];
+      const newSection = selection.split('-')[0];
+      const sectionChanged = !!oldSection && oldSection !== newSection;
+      const direction = (sectionChanged ? Math.sign(order.indexOf(newSection) - order.indexOf(oldSection!)) : Math.sign(nextIndex - lastIndex)) || 1;
       theme = nextTheme;
       lastSelection = selection;
       lastIndex = nextIndex;
@@ -236,7 +164,8 @@ function createMotionController(
       cancel(contentAnimations);
       if (button) animateNavigation(button, direction);
       else settle(true);
-      if (changed) animateContent(direction);
+      if (changed) animateContent(direction, sectionChanged);
+      else if (themeChanged) animate(contentRef.current, [{ opacity: .45, transform: 'scale(.99)' }, { opacity: 1, transform: 'none' }], contentAnimations, { duration: 320 });
     },
     replay() {
       const button = activeButton();

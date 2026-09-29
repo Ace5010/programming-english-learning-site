@@ -1,0 +1,3169 @@
+{
+  "candidate": "open-phones",
+  "device": "CPU Ryzen 5 7500F, 6 torch threads",
+  "torch": "2.14.0+cpu",
+  "offline": true,
+  "audioPcm": "16kHz mono int16 -> float32",
+  "modelLoadMs": 3271.432699984871,
+  "firstEvaluationMs": 408.41590001946315,
+  "repeats": 2,
+  "timing": "Full available waveform/chunks processed unpaced, including native prosody if present; excludes audio decoding and recording.",
+  "cases": [
+    {
+      "id": "aria-hello-as-hello",
+      "file": "public/audio/daily/aria/hello.mp3",
+      "sha256": "d647bdc233e2be048fef5c9c34d03d6ed22e66cb4031f23d9703eef01495bf5b",
+      "reference": "hello",
+      "spokenFixture": "hello",
+      "expectedCorrect": true,
+      "repeat": 0,
+      "computeMs": 233.08,
+      "result": {
+        "expected_phones": [
+          [
+            "h",
+            "ə",
+            "l",
+            "oʊ"
+          ]
+        ],
+        "heard_phones": [
+          "h",
+          "ɛ",
+          "l",
+          "oʊ"
+        ],
+        "heard_phones_confidence": [
+          0.96,
+          0.761,
+          0.986,
+          0.376
+        ],
+        "phone_error_rate": 0.25,
+        "errors": [],
+        "words_with_errors": [],
+        "wordReports": [
+          {
+            "position": 0,
+            "word": "hello",
+            "expected": [
+              "h",
+              "ə",
+              "l",
+              "oʊ"
+            ],
+            "actual": [
+              "h",
+              "ɛ",
+              "l",
+              "oʊ"
+            ],
+            "distance": 1,
+            "phones": [
+              {
+                "expected": "h",
+                "heard": "h",
+                "confidence": 0.0
+              },
+              {
+                "expected": "ə",
+                "heard": "ɛ",
+                "confidence": 0.6234381943941116
+              },
+              {
+                "expected": "l",
+                "heard": "l",
+                "confidence": 0.0
+              },
+              {
+                "expected": "oʊ",
+                "heard": "oʊ",
+                "confidence": 0.0
+              }
+            ],
+            "weighted_edits": 0.6234381943941116
+          }
+        ],
+        "flagged": false
+      }
+    },
+    {
+      "id": "guy-hello-as-hello",
+      "file": "public/audio/daily/guy/hello.mp3",
+      "sha256": "75995d47e90e5015f57dd51844e4e12ede0b163c6fc06b9d829f7edf1d9fa386",
+      "reference": "hello",
+      "spokenFixture": "hello",
+      "expectedCorrect": true,
+      "repeat": 0,
+      "computeMs": 228.2,
+      "result": {
+        "expected_phones": [
+          [
+            "h",
+            "ə",
+            "l",
+            "oʊ"
+          ]
+        ],
+        "heard_phones": [
+          "h",
+          "ɛ",
+          "l",
+          "oʊ"
+        ],
+        "heard_phones_confidence": [
+          0.979,
+          0.537,
+          0.983,
+          0.602
+        ],
+        "phone_error_rate": 0.25,
+        "errors": [],
+        "words_with_errors": [],
+        "wordReports": [
+          {
+            "position": 0,
+            "word": "hello",
+            "expected": [
+              "h",
+              "ə",
+              "l",
+              "oʊ"
+            ],
+            "actual": [
+              "h",
+              "ɛ",
+              "l",
+              "oʊ"
+            ],
+            "distance": 1,
+            "phones": [
+              {
+                "expected": "h",
+                "heard": "h",
+                "confidence": 0.0
+              },
+              {
+                "expected": "ə",
+                "heard": "ɛ",
+                "confidence": 0.0
+              },
+              {
+                "expected": "l",
+                "heard": "l",
+                "confidence": 0.0
+              },
+              {
+                "expected": "oʊ",
+                "heard": "oʊ",
+                "confidence": 0.0
+              }
+            ],
+            "weighted_edits": 0.0
+          }
+        ],
+        "flagged": false
+      }
+    },
+    {
+      "id": "aria-goodbye-as-goodbye",
+      "file": "public/audio/daily/aria/goodbye.mp3",
+      "sha256": "39f9feb199cf056ed30b73321bc005e4265f2454e31332afd4dc66d032069639",
+      "reference": "goodbye",
+      "spokenFixture": "goodbye",
+      "expectedCorrect": true,
+      "repeat": 0,
+      "computeMs": 248.92,
+      "result": {
+        "expected_phones": [
+          [
+            "ɡ",
+            "ʊ",
+            "d",
+            "b",
+            "aɪ"
+          ]
+        ],
+        "heard_phones": [
+          "ɡ",
+          "ə",
+          "d",
+          "b",
+          "aɪ"
+        ],
+        "heard_phones_confidence": [
+          0.851,
+          0.288,
+          0.983,
+          0.977,
+          0.631
+        ],
+        "phone_error_rate": 0.2,
+        "errors": [],
+        "words_with_errors": [],
+        "wordReports": [
+          {
+            "position": 0,
+            "word": "goodbye",
+            "expected": [
+              "ɡ",
+              "ʊ",
+              "d",
+              "b",
+              "aɪ"
+            ],
+            "actual": [
+              "ɡ",
+              "ə",
+              "d",
+              "b",
+              "aɪ"
+            ],
+            "distance": 1,
+            "phones": [
+              {
+                "expected": "ɡ",
+                "heard": "ɡ",
+                "confidence": 0.0
+              },
+              {
+                "expected": "ʊ",
+                "heard": "ə",
+                "confidence": 0.0
+              },
+              {
+                "expected": "d",
+                "heard": "d",
+                "confidence": 0.0
+              },
+              {
+                "expected": "b",
+                "heard": "b",
+                "confidence": 0.0
+              },
+              {
+                "expected": "aɪ",
+                "heard": "aɪ",
+                "confidence": 0.0
+              }
+            ],
+            "weighted_edits": 0.0
+          }
+        ],
+        "flagged": false
+      }
+    },
+    {
+      "id": "guy-goodbye-as-goodbye",
+      "file": "public/audio/daily/guy/goodbye.mp3",
+      "sha256": "351fcb29dfd2a4825344b9a6b85ee4df13ea1738faed04d97b8ef54fb33b4ba6",
+      "reference": "goodbye",
+      "spokenFixture": "goodbye",
+      "expectedCorrect": true,
+      "repeat": 0,
+      "computeMs": 244.12,
+      "result": {
+        "expected_phones": [
+          [
+            "ɡ",
+            "ʊ",
+            "d",
+            "b",
+            "aɪ"
+          ]
+        ],
+        "heard_phones": [
+          "ɡ",
+          "ʊ",
+          "d",
+          "b",
+          "aɪ"
+        ],
+        "heard_phones_confidence": [
+          0.86,
+          0.429,
+          0.985,
+          0.971,
+          0.721
+        ],
+        "phone_error_rate": 0.0,
+        "errors": [],
+        "words_with_errors": [],
+        "wordReports": [
+          {
+            "position": 0,
+            "word": "goodbye",
+            "expected": [
+              "ɡ",
+              "ʊ",
+              "d",
+              "b",
+              "aɪ"
+            ],
+            "actual": [
+              "ɡ",
+              "ʊ",
+              "d",
+              "b",
+              "aɪ"
+            ],
+            "distance": 0,
+            "phones": [],
+            "weighted_edits": 0
+          }
+        ],
+        "flagged": false
+      }
+    },
+    {
+      "id": "aria-think-as-think",
+      "file": "public/audio/aria/word-2652.mp3",
+      "sha256": "56d9cca2c2277ddc788953d76f26920ef025162bb072ddf76489d80924dd85ee",
+      "reference": "think",
+      "spokenFixture": "think",
+      "expectedCorrect": true,
+      "repeat": 0,
+      "computeMs": 231.47,
+      "result": {
+        "expected_phones": [
+          [
+            "θ",
+            "ɪ",
+            "ŋ",
+            "k"
+          ]
+        ],
+        "heard_phones": [
+          "θ",
+          "ɪ",
+          "ŋ",
+          "k"
+        ],
+        "heard_phones_confidence": [
+          0.839,
+          0.706,
+          0.77,
+          0.954
+        ],
+        "phone_error_rate": 0.0,
+        "errors": [],
+        "words_with_errors": [],
+        "wordReports": [
+          {
+            "position": 0,
+            "word": "think",
+            "expected": [
+              "θ",
+              "ɪ",
+              "ŋ",
+              "k"
+            ],
+            "actual": [
+              "θ",
+              "ɪ",
+              "ŋ",
+              "k"
+            ],
+            "distance": 0,
+            "phones": [],
+            "weighted_edits": 0
+          }
+        ],
+        "flagged": false
+      }
+    },
+    {
+      "id": "guy-think-as-think",
+      "file": "public/audio/guy/word-2652.mp3",
+      "sha256": "9c53003ff5ca866c3041b440c3075da2da94d8b761c1f267080c2d44b0334daf",
+      "reference": "think",
+      "spokenFixture": "think",
+      "expectedCorrect": true,
+      "repeat": 0,
+      "computeMs": 229.17,
+      "result": {
+        "expected_phones": [
+          [
+            "θ",
+            "ɪ",
+            "ŋ",
+            "k"
+          ]
+        ],
+        "heard_phones": [
+          "θ",
+          "ɪ",
+          "ŋ",
+          "k"
+        ],
+        "heard_phones_confidence": [
+          0.567,
+          0.346,
+          0.532,
+          0.985
+        ],
+        "phone_error_rate": 0.0,
+        "errors": [],
+        "words_with_errors": [],
+        "wordReports": [
+          {
+            "position": 0,
+            "word": "think",
+            "expected": [
+              "θ",
+              "ɪ",
+              "ŋ",
+              "k"
+            ],
+            "actual": [
+              "θ",
+              "ɪ",
+              "ŋ",
+              "k"
+            ],
+            "distance": 0,
+            "phones": [],
+            "weighted_edits": 0
+          }
+        ],
+        "flagged": false
+      }
+    },
+    {
+      "id": "aria-ship-as-ship",
+      "file": "public/audio/aria/word-2224.mp3",
+      "sha256": "93e91a16f6060328871735321fa37898b44145ccc7db88a660ef7c06c0402ef4",
+      "reference": "ship",
+      "spokenFixture": "ship",
+      "expectedCorrect": true,
+      "repeat": 0,
+      "computeMs": 238.94,
+      "result": {
+        "expected_phones": [
+          [
+            "ʃ",
+            "ɪ",
+            "p"
+          ]
+        ],
+        "heard_phones": [
+          "ʃ",
+          "ɪ",
+          "p"
+        ],
+        "heard_phones_confidence": [
+          0.943,
+          0.783,
+          0.943
+        ],
+        "phone_error_rate": 0.0,
+        "errors": [],
+        "words_with_errors": [],
+        "wordReports": [
+          {
+            "position": 0,
+            "word": "ship",
+            "expected": [
+              "ʃ",
+              "ɪ",
+              "p"
+            ],
+            "actual": [
+              "ʃ",
+              "ɪ",
+              "p"
+            ],
+            "distance": 0,
+            "phones": [],
+            "weighted_edits": 0
+          }
+        ],
+        "flagged": false
+      }
+    },
+    {
+      "id": "guy-ship-as-ship",
+      "file": "public/audio/guy/word-2224.mp3",
+      "sha256": "3b2f0c745aefc588efad9acea1adb6332eceb4d80dc638578fddda9e808242d5",
+      "reference": "ship",
+      "spokenFixture": "ship",
+      "expectedCorrect": true,
+      "repeat": 0,
+      "computeMs": 219.28,
+      "result": {
+        "expected_phones": [
+          [
+            "ʃ",
+            "ɪ",
+            "p"
+          ]
+        ],
+        "heard_phones": [
+          "ʃ",
+          "ɪ",
+          "p"
+        ],
+        "heard_phones_confidence": [
+          0.863,
+          0.494,
+          0.865
+        ],
+        "phone_error_rate": 0.0,
+        "errors": [],
+        "words_with_errors": [],
+        "wordReports": [
+          {
+            "position": 0,
+            "word": "ship",
+            "expected": [
+              "ʃ",
+              "ɪ",
+              "p"
+            ],
+            "actual": [
+              "ʃ",
+              "ɪ",
+              "p"
+            ],
+            "distance": 0,
+            "phones": [],
+            "weighted_edits": 0
+          }
+        ],
+        "flagged": false
+      }
+    },
+    {
+      "id": "aria-three-as-three",
+      "file": "public/audio/aria/word-2400.mp3",
+      "sha256": "dbd32db6d89af3f6ba5865985d6aea396c11469027890c3ff47f2df3858372f5",
+      "reference": "three",
+      "spokenFixture": "three",
+      "expectedCorrect": true,
+      "repeat": 0,
+      "computeMs": 228.35,
+      "result": {
+        "expected_phones": [
+          [
+            "θ",
+            "ɹ",
+            "i"
+          ]
+        ],
+        "heard_phones": [
+          "θ",
+          "ɹ",
+          "i"
+        ],
+        "heard_phones_confidence": [
+          0.866,
+          0.926,
+          0.633
+        ],
+        "phone_error_rate": 0.0,
+        "errors": [],
+        "words_with_errors": [],
+        "wordReports": [
+          {
+            "position": 0,
+            "word": "three",
+            "expected": [
+              "θ",
+              "ɹ",
+              "i"
+            ],
+            "actual": [
+              "θ",
+              "ɹ",
+              "i"
+            ],
+            "distance": 0,
+            "phones": [],
+            "weighted_edits": 0
+          }
+        ],
+        "flagged": false
+      }
+    },
+    {
+      "id": "guy-three-as-three",
+      "file": "public/audio/guy/word-2400.mp3",
+      "sha256": "94ceb6bcde145714f09292b63ae0d6624a89be5cb173720ac695119dafe3a0c2",
+      "reference": "three",
+      "spokenFixture": "three",
+      "expectedCorrect": true,
+      "repeat": 0,
+      "computeMs": 243.24,
+      "result": {
+        "expected_phones": [
+          [
+            "θ",
+            "ɹ",
+            "i"
+          ]
+        ],
+        "heard_phones": [
+          "θ",
+          "ɹ",
+          "i"
+        ],
+        "heard_phones_confidence": [
+          0.912,
+          0.959,
+          0.702
+        ],
+        "phone_error_rate": 0.0,
+        "errors": [],
+        "words_with_errors": [],
+        "wordReports": [
+          {
+            "position": 0,
+            "word": "three",
+            "expected": [
+              "θ",
+              "ɹ",
+              "i"
+            ],
+            "actual": [
+              "θ",
+              "ɹ",
+              "i"
+            ],
+            "distance": 0,
+            "phones": [],
+            "weighted_edits": 0
+          }
+        ],
+        "flagged": false
+      }
+    },
+    {
+      "id": "aria-bad-as-bad",
+      "file": "public/audio/aria/word-2978.mp3",
+      "sha256": "77e448d4d24a5eb7bce40296318a11d4582a63b0ad88ae2b826b9f74353f92af",
+      "reference": "bad",
+      "spokenFixture": "bad",
+      "expectedCorrect": true,
+      "repeat": 0,
+      "computeMs": 222.78,
+      "result": {
+        "expected_phones": [
+          [
+            "b",
+            "æ",
+            "d"
+          ]
+        ],
+        "heard_phones": [
+          "b",
+          "æ",
+          "d"
+        ],
+        "heard_phones_confidence": [
+          0.966,
+          0.378,
+          0.984
+        ],
+        "phone_error_rate": 0.0,
+        "errors": [],
+        "words_with_errors": [],
+        "wordReports": [
+          {
+            "position": 0,
+            "word": "bad",
+            "expected": [
+              "b",
+              "æ",
+              "d"
+            ],
+            "actual": [
+              "b",
+              "æ",
+              "d"
+            ],
+            "distance": 0,
+            "phones": [],
+            "weighted_edits": 0
+          }
+        ],
+        "flagged": false
+      }
+    },
+    {
+      "id": "guy-bad-as-bad",
+      "file": "public/audio/guy/word-2978.mp3",
+      "sha256": "07160402b698581188f51423fc62d77102d77c247bbea7481bf140293e5dbcde",
+      "reference": "bad",
+      "spokenFixture": "bad",
+      "expectedCorrect": true,
+      "repeat": 0,
+      "computeMs": 220.64,
+      "result": {
+        "expected_phones": [
+          [
+            "b",
+            "æ",
+            "d"
+          ]
+        ],
+        "heard_phones": [
+          "b",
+          "ɛ",
+          "d"
+        ],
+        "heard_phones_confidence": [
+          0.958,
+          0.473,
+          0.984
+        ],
+        "phone_error_rate": 0.3333,
+        "errors": [],
+        "words_with_errors": [],
+        "wordReports": [
+          {
+            "position": 0,
+            "word": "bad",
+            "expected": [
+              "b",
+              "æ",
+              "d"
+            ],
+            "actual": [
+              "b",
+              "ɛ",
+              "d"
+            ],
+            "distance": 1,
+            "phones": [
+              {
+                "expected": "b",
+                "heard": "b",
+                "confidence": 0.0
+              },
+              {
+                "expected": "æ",
+                "heard": "ɛ",
+                "confidence": 0.0
+              },
+              {
+                "expected": "d",
+                "heard": "d",
+                "confidence": 0.0
+              }
+            ],
+            "weighted_edits": 0.0
+          }
+        ],
+        "flagged": false
+      }
+    },
+    {
+      "id": "aria-right-as-right",
+      "file": "public/audio/aria/word-2160.mp3",
+      "sha256": "c4f8341a47942b096bcec86eacade529bb700fd8f725bfff388081846fb358df",
+      "reference": "right",
+      "spokenFixture": "right",
+      "expectedCorrect": true,
+      "repeat": 0,
+      "computeMs": 224.91,
+      "result": {
+        "expected_phones": [
+          [
+            "ɹ",
+            "aɪ",
+            "t"
+          ]
+        ],
+        "heard_phones": [
+          "ɹ",
+          "aɪ",
+          "t"
+        ],
+        "heard_phones_confidence": [
+          0.915,
+          0.838,
+          0.971
+        ],
+        "phone_error_rate": 0.0,
+        "errors": [],
+        "words_with_errors": [],
+        "wordReports": [
+          {
+            "position": 0,
+            "word": "right",
+            "expected": [
+              "ɹ",
+              "aɪ",
+              "t"
+            ],
+            "actual": [
+              "ɹ",
+              "aɪ",
+              "t"
+            ],
+            "distance": 0,
+            "phones": [],
+            "weighted_edits": 0
+          }
+        ],
+        "flagged": false
+      }
+    },
+    {
+      "id": "guy-right-as-right",
+      "file": "public/audio/guy/word-2160.mp3",
+      "sha256": "d80d39b42a0d25f74b7b139ea295162b0436f554e01b7d8b5290e11e93556d0b",
+      "reference": "right",
+      "spokenFixture": "right",
+      "expectedCorrect": true,
+      "repeat": 0,
+      "computeMs": 229.16,
+      "result": {
+        "expected_phones": [
+          [
+            "ɹ",
+            "aɪ",
+            "t"
+          ]
+        ],
+        "heard_phones": [
+          "ɹ",
+          "aɪ",
+          "t"
+        ],
+        "heard_phones_confidence": [
+          0.811,
+          0.825,
+          0.935
+        ],
+        "phone_error_rate": 0.0,
+        "errors": [],
+        "words_with_errors": [],
+        "wordReports": [
+          {
+            "position": 0,
+            "word": "right",
+            "expected": [
+              "ɹ",
+              "aɪ",
+              "t"
+            ],
+            "actual": [
+              "ɹ",
+              "aɪ",
+              "t"
+            ],
+            "distance": 0,
+            "phones": [],
+            "weighted_edits": 0
+          }
+        ],
+        "flagged": false
+      }
+    },
+    {
+      "id": "aria-sink-as-think",
+      "file": "public/audio/aria/word-959.mp3",
+      "sha256": "6e91c5e4a7ea69fc6243dbdf3eed48bba5106c2030d11f4c90937d8a9e9edaa7",
+      "reference": "think",
+      "spokenFixture": "sink",
+      "expectedCorrect": false,
+      "repeat": 0,
+      "computeMs": 234.3,
+      "result": {
+        "expected_phones": [
+          [
+            "θ",
+            "ɪ",
+            "ŋ",
+            "k"
+          ]
+        ],
+        "heard_phones": [
+          "s",
+          "ɪ",
+          "ŋ",
+          "k"
+        ],
+        "heard_phones_confidence": [
+          0.989,
+          0.906,
+          0.845,
+          0.982
+        ],
+        "phone_error_rate": 0.25,
+        "errors": [],
+        "words_with_errors": [],
+        "wordReports": [
+          {
+            "position": 0,
+            "word": "think",
+            "expected": [
+              "θ",
+              "ɪ",
+              "ŋ",
+              "k"
+            ],
+            "actual": [
+              "s",
+              "ɪ",
+              "ŋ",
+              "k"
+            ],
+            "distance": 1,
+            "phones": [
+              {
+                "expected": "θ",
+                "heard": "s",
+                "confidence": 0.49125669652130455
+              },
+              {
+                "expected": "ɪ",
+                "heard": "ɪ",
+                "confidence": 0.0
+              },
+              {
+                "expected": "ŋ",
+                "heard": "ŋ",
+                "confidence": 0.0
+              },
+              {
+                "expected": "k",
+                "heard": "k",
+                "confidence": 0.0
+              }
+            ],
+            "weighted_edits": 0.49125669652130455
+          }
+        ],
+        "flagged": false
+      }
+    },
+    {
+      "id": "guy-sink-as-think",
+      "file": "public/audio/guy/word-959.mp3",
+      "sha256": "2a1d15a183d4fe0d4b32443959c39b1854c2107f82f8ba797de5ab88fab4ec94",
+      "reference": "think",
+      "spokenFixture": "sink",
+      "expectedCorrect": false,
+      "repeat": 0,
+      "computeMs": 239.95,
+      "result": {
+        "expected_phones": [
+          [
+            "θ",
+            "ɪ",
+            "ŋ",
+            "k"
+          ]
+        ],
+        "heard_phones": [
+          "s",
+          "ɪ",
+          "ŋ",
+          "k"
+        ],
+        "heard_phones_confidence": [
+          0.973,
+          0.447,
+          0.491,
+          0.987
+        ],
+        "phone_error_rate": 0.25,
+        "errors": [],
+        "words_with_errors": [],
+        "wordReports": [
+          {
+            "position": 0,
+            "word": "think",
+            "expected": [
+              "θ",
+              "ɪ",
+              "ŋ",
+              "k"
+            ],
+            "actual": [
+              "s",
+              "ɪ",
+              "ŋ",
+              "k"
+            ],
+            "distance": 1,
+            "phones": [
+              {
+                "expected": "θ",
+                "heard": "s",
+                "confidence": 0.4941873288480565
+              },
+              {
+                "expected": "ɪ",
+                "heard": "ɪ",
+                "confidence": 0.0
+              },
+              {
+                "expected": "ŋ",
+                "heard": "ŋ",
+                "confidence": 0.0
+              },
+              {
+                "expected": "k",
+                "heard": "k",
+                "confidence": 0.0
+              }
+            ],
+            "weighted_edits": 0.4941873288480565
+          }
+        ],
+        "flagged": false
+      }
+    },
+    {
+      "id": "aria-sheep-as-ship",
+      "file": "public/audio/aria/word-2968.mp3",
+      "sha256": "d78bba621523dcd4fb8efdca6df67c3fc7a32644bc342b5f3f74378b36b259ae",
+      "reference": "ship",
+      "spokenFixture": "sheep",
+      "expectedCorrect": false,
+      "repeat": 0,
+      "computeMs": 238.16,
+      "result": {
+        "expected_phones": [
+          [
+            "ʃ",
+            "ɪ",
+            "p"
+          ]
+        ],
+        "heard_phones": [
+          "ʃ",
+          "i",
+          "p"
+        ],
+        "heard_phones_confidence": [
+          0.961,
+          0.857,
+          0.904
+        ],
+        "phone_error_rate": 0.3333,
+        "errors": [],
+        "words_with_errors": [],
+        "wordReports": [
+          {
+            "position": 0,
+            "word": "ship",
+            "expected": [
+              "ʃ",
+              "ɪ",
+              "p"
+            ],
+            "actual": [
+              "ʃ",
+              "i",
+              "p"
+            ],
+            "distance": 1,
+            "phones": [
+              {
+                "expected": "ʃ",
+                "heard": "ʃ",
+                "confidence": 0.0
+              },
+              {
+                "expected": "ɪ",
+                "heard": "i",
+                "confidence": 0.3242907226085663
+              },
+              {
+                "expected": "p",
+                "heard": "p",
+                "confidence": 0.0
+              }
+            ],
+            "weighted_edits": 0.3242907226085663
+          }
+        ],
+        "flagged": false
+      }
+    },
+    {
+      "id": "guy-sheep-as-ship",
+      "file": "public/audio/guy/word-2968.mp3",
+      "sha256": "7e6f1a2b72c797d1c095bda747d05fd45f61a62cd85eb1790663f51b2c07f212",
+      "reference": "ship",
+      "spokenFixture": "sheep",
+      "expectedCorrect": false,
+      "repeat": 0,
+      "computeMs": 228.57,
+      "result": {
+        "expected_phones": [
+          [
+            "ʃ",
+            "ɪ",
+            "p"
+          ]
+        ],
+        "heard_phones": [
+          "ʃ",
+          "i",
+          "p"
+        ],
+        "heard_phones_confidence": [
+          0.952,
+          0.909,
+          0.918
+        ],
+        "phone_error_rate": 0.3333,
+        "errors": [],
+        "words_with_errors": [],
+        "wordReports": [
+          {
+            "position": 0,
+            "word": "ship",
+            "expected": [
+              "ʃ",
+              "ɪ",
+              "p"
+            ],
+            "actual": [
+              "ʃ",
+              "i",
+              "p"
+            ],
+            "distance": 1,
+            "phones": [
+              {
+                "expected": "ʃ",
+                "heard": "ʃ",
+                "confidence": 0.0
+              },
+              {
+                "expected": "ɪ",
+                "heard": "i",
+                "confidence": 0.38930951803922653
+              },
+              {
+                "expected": "p",
+                "heard": "p",
+                "confidence": 0.0
+              }
+            ],
+            "weighted_edits": 0.38930951803922653
+          }
+        ],
+        "flagged": false
+      }
+    },
+    {
+      "id": "aria-free-as-three",
+      "file": "public/audio/aria/word-1649.mp3",
+      "sha256": "ffe976c2022e78e153ed1d4a79e8af3182ef98c58bd42522f04e1376578d0acb",
+      "reference": "three",
+      "spokenFixture": "free",
+      "expectedCorrect": false,
+      "repeat": 0,
+      "computeMs": 221.61,
+      "result": {
+        "expected_phones": [
+          [
+            "θ",
+            "ɹ",
+            "i"
+          ]
+        ],
+        "heard_phones": [
+          "f",
+          "ɹ"
+        ],
+        "heard_phones_confidence": [
+          0.971,
+          0.956
+        ],
+        "phone_error_rate": 0.6667,
+        "errors": [
+          {
+            "position": 0,
+            "word": "three",
+            "expected": "θɹi",
+            "actual": "fɹ",
+            "actual_word": "",
+            "phone_distance": 2,
+            "confidence": 0.71,
+            "phones": [
+              {
+                "expected": "θ",
+                "heard": "f",
+                "confidence": 0.922
+              },
+              {
+                "expected": "ɹ",
+                "heard": "ɹ",
+                "confidence": 0.0
+              },
+              {
+                "expected": "i",
+                "heard": "",
+                "confidence": 0.499
+              }
+            ]
+          }
+        ],
+        "words_with_errors": [
+          "three"
+        ],
+        "wordReports": [
+          {
+            "position": 0,
+            "word": "three",
+            "expected": [
+              "θ",
+              "ɹ",
+              "i"
+            ],
+            "actual": [
+              "f",
+              "ɹ"
+            ],
+            "distance": 2,
+            "phones": [
+              {
+                "expected": "θ",
+                "heard": "f",
+                "confidence": 0.9217060953378677
+              },
+              {
+                "expected": "ɹ",
+                "heard": "ɹ",
+                "confidence": 0.0
+              },
+              {
+                "expected": "i",
+                "heard": "",
+                "confidence": 0.4987683369545266
+              }
+            ],
+            "weighted_edits": 1.4204744322923943
+          }
+        ],
+        "flagged": true
+      }
+    },
+    {
+      "id": "guy-free-as-three",
+      "file": "public/audio/guy/word-1649.mp3",
+      "sha256": "b64d197492c3ab8a73bcb5eb526e016455a9f5793081c3f58d95e56470fa5991",
+      "reference": "three",
+      "spokenFixture": "free",
+      "expectedCorrect": false,
+      "repeat": 0,
+      "computeMs": 229.08,
+      "result": {
+        "expected_phones": [
+          [
+            "θ",
+            "ɹ",
+            "i"
+          ]
+        ],
+        "heard_phones": [
+          "f",
+          "ɹ",
+          "i"
+        ],
+        "heard_phones_confidence": [
+          0.987,
+          0.969,
+          0.501
+        ],
+        "phone_error_rate": 0.3333,
+        "errors": [],
+        "words_with_errors": [],
+        "wordReports": [
+          {
+            "position": 0,
+            "word": "three",
+            "expected": [
+              "θ",
+              "ɹ",
+              "i"
+            ],
+            "actual": [
+              "f",
+              "ɹ",
+              "i"
+            ],
+            "distance": 1,
+            "phones": [
+              {
+                "expected": "θ",
+                "heard": "f",
+                "confidence": 0.9713412160053849
+              },
+              {
+                "expected": "ɹ",
+                "heard": "ɹ",
+                "confidence": 0.0
+              },
+              {
+                "expected": "i",
+                "heard": "i",
+                "confidence": 0.0
+              }
+            ],
+            "weighted_edits": 0.9713412160053849
+          }
+        ],
+        "flagged": false
+      }
+    },
+    {
+      "id": "aria-bed-as-bad",
+      "file": "public/audio/aria/word-1291.mp3",
+      "sha256": "5e76c091ea05c53403fa281115e8a5bfe08a42b621f6a2893c88beb6b9f133cd",
+      "reference": "bad",
+      "spokenFixture": "bed",
+      "expectedCorrect": false,
+      "repeat": 0,
+      "computeMs": 221.92,
+      "result": {
+        "expected_phones": [
+          [
+            "b",
+            "æ",
+            "d"
+          ]
+        ],
+        "heard_phones": [
+          "b",
+          "ɛ",
+          "d"
+        ],
+        "heard_phones_confidence": [
+          0.759,
+          0.886,
+          0.986
+        ],
+        "phone_error_rate": 0.3333,
+        "errors": [],
+        "words_with_errors": [],
+        "wordReports": [
+          {
+            "position": 0,
+            "word": "bad",
+            "expected": [
+              "b",
+              "æ",
+              "d"
+            ],
+            "actual": [
+              "b",
+              "ɛ",
+              "d"
+            ],
+            "distance": 1,
+            "phones": [
+              {
+                "expected": "b",
+                "heard": "b",
+                "confidence": 0.0
+              },
+              {
+                "expected": "æ",
+                "heard": "ɛ",
+                "confidence": 0.45876746252179146
+              },
+              {
+                "expected": "d",
+                "heard": "d",
+                "confidence": 0.0
+              }
+            ],
+            "weighted_edits": 0.45876746252179146
+          }
+        ],
+        "flagged": false
+      }
+    },
+    {
+      "id": "guy-bed-as-bad",
+      "file": "public/audio/guy/word-1291.mp3",
+      "sha256": "120e4f3456bb54835747cdae05588a31d61f32201d79d49be4e01c1f653ec7ce",
+      "reference": "bad",
+      "spokenFixture": "bed",
+      "expectedCorrect": false,
+      "repeat": 0,
+      "computeMs": 221.4,
+      "result": {
+        "expected_phones": [
+          [
+            "b",
+            "æ",
+            "d"
+          ]
+        ],
+        "heard_phones": [
+          "b",
+          "ɛ",
+          "d"
+        ],
+        "heard_phones_confidence": [
+          0.835,
+          0.671,
+          0.975
+        ],
+        "phone_error_rate": 0.3333,
+        "errors": [],
+        "words_with_errors": [],
+        "wordReports": [
+          {
+            "position": 0,
+            "word": "bad",
+            "expected": [
+              "b",
+              "æ",
+              "d"
+            ],
+            "actual": [
+              "b",
+              "ɛ",
+              "d"
+            ],
+            "distance": 1,
+            "phones": [
+              {
+                "expected": "b",
+                "heard": "b",
+                "confidence": 0.0
+              },
+              {
+                "expected": "æ",
+                "heard": "ɛ",
+                "confidence": 0.35782837495207787
+              },
+              {
+                "expected": "d",
+                "heard": "d",
+                "confidence": 0.0
+              }
+            ],
+            "weighted_edits": 0.35782837495207787
+          }
+        ],
+        "flagged": false
+      }
+    },
+    {
+      "id": "aria-light-as-right",
+      "file": "public/audio/aria/word-1852.mp3",
+      "sha256": "f718748a255457e8fb6b28bfd3d111c36716a447c69187d5644ac1ecf7edd337",
+      "reference": "right",
+      "spokenFixture": "light",
+      "expectedCorrect": false,
+      "repeat": 0,
+      "computeMs": 230.19,
+      "result": {
+        "expected_phones": [
+          [
+            "ɹ",
+            "aɪ",
+            "t"
+          ]
+        ],
+        "heard_phones": [
+          "l",
+          "aɪ",
+          "t"
+        ],
+        "heard_phones_confidence": [
+          0.99,
+          0.884,
+          0.97
+        ],
+        "phone_error_rate": 0.3333,
+        "errors": [],
+        "words_with_errors": [],
+        "wordReports": [
+          {
+            "position": 0,
+            "word": "right",
+            "expected": [
+              "ɹ",
+              "aɪ",
+              "t"
+            ],
+            "actual": [
+              "l",
+              "aɪ",
+              "t"
+            ],
+            "distance": 1,
+            "phones": [
+              {
+                "expected": "ɹ",
+                "heard": "l",
+                "confidence": 0.9979005732166115
+              },
+              {
+                "expected": "aɪ",
+                "heard": "aɪ",
+                "confidence": 0.0
+              },
+              {
+                "expected": "t",
+                "heard": "t",
+                "confidence": 0.0
+              }
+            ],
+            "weighted_edits": 0.9979005732166115
+          }
+        ],
+        "flagged": false
+      }
+    },
+    {
+      "id": "guy-light-as-right",
+      "file": "public/audio/guy/word-1852.mp3",
+      "sha256": "eee7516495f22dfc96baa88bfea2fb22b32b6896f0e8941846320b451f4f6d57",
+      "reference": "right",
+      "spokenFixture": "light",
+      "expectedCorrect": false,
+      "repeat": 0,
+      "computeMs": 229.1,
+      "result": {
+        "expected_phones": [
+          [
+            "ɹ",
+            "aɪ",
+            "t"
+          ]
+        ],
+        "heard_phones": [
+          "l",
+          "aɪ",
+          "t"
+        ],
+        "heard_phones_confidence": [
+          0.983,
+          0.881,
+          0.904
+        ],
+        "phone_error_rate": 0.3333,
+        "errors": [],
+        "words_with_errors": [],
+        "wordReports": [
+          {
+            "position": 0,
+            "word": "right",
+            "expected": [
+              "ɹ",
+              "aɪ",
+              "t"
+            ],
+            "actual": [
+              "l",
+              "aɪ",
+              "t"
+            ],
+            "distance": 1,
+            "phones": [
+              {
+                "expected": "ɹ",
+                "heard": "l",
+                "confidence": 0.995365219656378
+              },
+              {
+                "expected": "aɪ",
+                "heard": "aɪ",
+                "confidence": 0.0
+              },
+              {
+                "expected": "t",
+                "heard": "t",
+                "confidence": 0.0
+              }
+            ],
+            "weighted_edits": 0.995365219656378
+          }
+        ],
+        "flagged": false
+      }
+    },
+    {
+      "id": "aria-hello-as-hello",
+      "file": "public/audio/daily/aria/hello.mp3",
+      "sha256": "d647bdc233e2be048fef5c9c34d03d6ed22e66cb4031f23d9703eef01495bf5b",
+      "reference": "hello",
+      "spokenFixture": "hello",
+      "expectedCorrect": true,
+      "repeat": 1,
+      "computeMs": 222.29,
+      "result": {
+        "expected_phones": [
+          [
+            "h",
+            "ə",
+            "l",
+            "oʊ"
+          ]
+        ],
+        "heard_phones": [
+          "h",
+          "ɛ",
+          "l",
+          "oʊ"
+        ],
+        "heard_phones_confidence": [
+          0.96,
+          0.761,
+          0.986,
+          0.376
+        ],
+        "phone_error_rate": 0.25,
+        "errors": [],
+        "words_with_errors": [],
+        "wordReports": [
+          {
+            "position": 0,
+            "word": "hello",
+            "expected": [
+              "h",
+              "ə",
+              "l",
+              "oʊ"
+            ],
+            "actual": [
+              "h",
+              "ɛ",
+              "l",
+              "oʊ"
+            ],
+            "distance": 1,
+            "phones": [
+              {
+                "expected": "h",
+                "heard": "h",
+                "confidence": 0.0
+              },
+              {
+                "expected": "ə",
+                "heard": "ɛ",
+                "confidence": 0.6234381943941116
+              },
+              {
+                "expected": "l",
+                "heard": "l",
+                "confidence": 0.0
+              },
+              {
+                "expected": "oʊ",
+                "heard": "oʊ",
+                "confidence": 0.0
+              }
+            ],
+            "weighted_edits": 0.6234381943941116
+          }
+        ],
+        "flagged": false
+      }
+    },
+    {
+      "id": "guy-hello-as-hello",
+      "file": "public/audio/daily/guy/hello.mp3",
+      "sha256": "75995d47e90e5015f57dd51844e4e12ede0b163c6fc06b9d829f7edf1d9fa386",
+      "reference": "hello",
+      "spokenFixture": "hello",
+      "expectedCorrect": true,
+      "repeat": 1,
+      "computeMs": 229.75,
+      "result": {
+        "expected_phones": [
+          [
+            "h",
+            "ə",
+            "l",
+            "oʊ"
+          ]
+        ],
+        "heard_phones": [
+          "h",
+          "ɛ",
+          "l",
+          "oʊ"
+        ],
+        "heard_phones_confidence": [
+          0.979,
+          0.537,
+          0.983,
+          0.602
+        ],
+        "phone_error_rate": 0.25,
+        "errors": [],
+        "words_with_errors": [],
+        "wordReports": [
+          {
+            "position": 0,
+            "word": "hello",
+            "expected": [
+              "h",
+              "ə",
+              "l",
+              "oʊ"
+            ],
+            "actual": [
+              "h",
+              "ɛ",
+              "l",
+              "oʊ"
+            ],
+            "distance": 1,
+            "phones": [
+              {
+                "expected": "h",
+                "heard": "h",
+                "confidence": 0.0
+              },
+              {
+                "expected": "ə",
+                "heard": "ɛ",
+                "confidence": 0.0
+              },
+              {
+                "expected": "l",
+                "heard": "l",
+                "confidence": 0.0
+              },
+              {
+                "expected": "oʊ",
+                "heard": "oʊ",
+                "confidence": 0.0
+              }
+            ],
+            "weighted_edits": 0.0
+          }
+        ],
+        "flagged": false
+      }
+    },
+    {
+      "id": "aria-goodbye-as-goodbye",
+      "file": "public/audio/daily/aria/goodbye.mp3",
+      "sha256": "39f9feb199cf056ed30b73321bc005e4265f2454e31332afd4dc66d032069639",
+      "reference": "goodbye",
+      "spokenFixture": "goodbye",
+      "expectedCorrect": true,
+      "repeat": 1,
+      "computeMs": 236.55,
+      "result": {
+        "expected_phones": [
+          [
+            "ɡ",
+            "ʊ",
+            "d",
+            "b",
+            "aɪ"
+          ]
+        ],
+        "heard_phones": [
+          "ɡ",
+          "ə",
+          "d",
+          "b",
+          "aɪ"
+        ],
+        "heard_phones_confidence": [
+          0.851,
+          0.288,
+          0.983,
+          0.977,
+          0.631
+        ],
+        "phone_error_rate": 0.2,
+        "errors": [],
+        "words_with_errors": [],
+        "wordReports": [
+          {
+            "position": 0,
+            "word": "goodbye",
+            "expected": [
+              "ɡ",
+              "ʊ",
+              "d",
+              "b",
+              "aɪ"
+            ],
+            "actual": [
+              "ɡ",
+              "ə",
+              "d",
+              "b",
+              "aɪ"
+            ],
+            "distance": 1,
+            "phones": [
+              {
+                "expected": "ɡ",
+                "heard": "ɡ",
+                "confidence": 0.0
+              },
+              {
+                "expected": "ʊ",
+                "heard": "ə",
+                "confidence": 0.0
+              },
+              {
+                "expected": "d",
+                "heard": "d",
+                "confidence": 0.0
+              },
+              {
+                "expected": "b",
+                "heard": "b",
+                "confidence": 0.0
+              },
+              {
+                "expected": "aɪ",
+                "heard": "aɪ",
+                "confidence": 0.0
+              }
+            ],
+            "weighted_edits": 0.0
+          }
+        ],
+        "flagged": false
+      }
+    },
+    {
+      "id": "guy-goodbye-as-goodbye",
+      "file": "public/audio/daily/guy/goodbye.mp3",
+      "sha256": "351fcb29dfd2a4825344b9a6b85ee4df13ea1738faed04d97b8ef54fb33b4ba6",
+      "reference": "goodbye",
+      "spokenFixture": "goodbye",
+      "expectedCorrect": true,
+      "repeat": 1,
+      "computeMs": 231.95,
+      "result": {
+        "expected_phones": [
+          [
+            "ɡ",
+            "ʊ",
+            "d",
+            "b",
+            "aɪ"
+          ]
+        ],
+        "heard_phones": [
+          "ɡ",
+          "ʊ",
+          "d",
+          "b",
+          "aɪ"
+        ],
+        "heard_phones_confidence": [
+          0.86,
+          0.429,
+          0.985,
+          0.971,
+          0.721
+        ],
+        "phone_error_rate": 0.0,
+        "errors": [],
+        "words_with_errors": [],
+        "wordReports": [
+          {
+            "position": 0,
+            "word": "goodbye",
+            "expected": [
+              "ɡ",
+              "ʊ",
+              "d",
+              "b",
+              "aɪ"
+            ],
+            "actual": [
+              "ɡ",
+              "ʊ",
+              "d",
+              "b",
+              "aɪ"
+            ],
+            "distance": 0,
+            "phones": [],
+            "weighted_edits": 0
+          }
+        ],
+        "flagged": false
+      }
+    },
+    {
+      "id": "aria-think-as-think",
+      "file": "public/audio/aria/word-2652.mp3",
+      "sha256": "56d9cca2c2277ddc788953d76f26920ef025162bb072ddf76489d80924dd85ee",
+      "reference": "think",
+      "spokenFixture": "think",
+      "expectedCorrect": true,
+      "repeat": 1,
+      "computeMs": 216.54,
+      "result": {
+        "expected_phones": [
+          [
+            "θ",
+            "ɪ",
+            "ŋ",
+            "k"
+          ]
+        ],
+        "heard_phones": [
+          "θ",
+          "ɪ",
+          "ŋ",
+          "k"
+        ],
+        "heard_phones_confidence": [
+          0.839,
+          0.706,
+          0.77,
+          0.954
+        ],
+        "phone_error_rate": 0.0,
+        "errors": [],
+        "words_with_errors": [],
+        "wordReports": [
+          {
+            "position": 0,
+            "word": "think",
+            "expected": [
+              "θ",
+              "ɪ",
+              "ŋ",
+              "k"
+            ],
+            "actual": [
+              "θ",
+              "ɪ",
+              "ŋ",
+              "k"
+            ],
+            "distance": 0,
+            "phones": [],
+            "weighted_edits": 0
+          }
+        ],
+        "flagged": false
+      }
+    },
+    {
+      "id": "guy-think-as-think",
+      "file": "public/audio/guy/word-2652.mp3",
+      "sha256": "9c53003ff5ca866c3041b440c3075da2da94d8b761c1f267080c2d44b0334daf",
+      "reference": "think",
+      "spokenFixture": "think",
+      "expectedCorrect": true,
+      "repeat": 1,
+      "computeMs": 225.1,
+      "result": {
+        "expected_phones": [
+          [
+            "θ",
+            "ɪ",
+            "ŋ",
+            "k"
+          ]
+        ],
+        "heard_phones": [
+          "θ",
+          "ɪ",
+          "ŋ",
+          "k"
+        ],
+        "heard_phones_confidence": [
+          0.567,
+          0.346,
+          0.532,
+          0.985
+        ],
+        "phone_error_rate": 0.0,
+        "errors": [],
+        "words_with_errors": [],
+        "wordReports": [
+          {
+            "position": 0,
+            "word": "think",
+            "expected": [
+              "θ",
+              "ɪ",
+              "ŋ",
+              "k"
+            ],
+            "actual": [
+              "θ",
+              "ɪ",
+              "ŋ",
+              "k"
+            ],
+            "distance": 0,
+            "phones": [],
+            "weighted_edits": 0
+          }
+        ],
+        "flagged": false
+      }
+    },
+    {
+      "id": "aria-ship-as-ship",
+      "file": "public/audio/aria/word-2224.mp3",
+      "sha256": "93e91a16f6060328871735321fa37898b44145ccc7db88a660ef7c06c0402ef4",
+      "reference": "ship",
+      "spokenFixture": "ship",
+      "expectedCorrect": true,
+      "repeat": 1,
+      "computeMs": 231.84,
+      "result": {
+        "expected_phones": [
+          [
+            "ʃ",
+            "ɪ",
+            "p"
+          ]
+        ],
+        "heard_phones": [
+          "ʃ",
+          "ɪ",
+          "p"
+        ],
+        "heard_phones_confidence": [
+          0.943,
+          0.783,
+          0.943
+        ],
+        "phone_error_rate": 0.0,
+        "errors": [],
+        "words_with_errors": [],
+        "wordReports": [
+          {
+            "position": 0,
+            "word": "ship",
+            "expected": [
+              "ʃ",
+              "ɪ",
+              "p"
+            ],
+            "actual": [
+              "ʃ",
+              "ɪ",
+              "p"
+            ],
+            "distance": 0,
+            "phones": [],
+            "weighted_edits": 0
+          }
+        ],
+        "flagged": false
+      }
+    },
+    {
+      "id": "guy-ship-as-ship",
+      "file": "public/audio/guy/word-2224.mp3",
+      "sha256": "3b2f0c745aefc588efad9acea1adb6332eceb4d80dc638578fddda9e808242d5",
+      "reference": "ship",
+      "spokenFixture": "ship",
+      "expectedCorrect": true,
+      "repeat": 1,
+      "computeMs": 215.16,
+      "result": {
+        "expected_phones": [
+          [
+            "ʃ",
+            "ɪ",
+            "p"
+          ]
+        ],
+        "heard_phones": [
+          "ʃ",
+          "ɪ",
+          "p"
+        ],
+        "heard_phones_confidence": [
+          0.863,
+          0.494,
+          0.865
+        ],
+        "phone_error_rate": 0.0,
+        "errors": [],
+        "words_with_errors": [],
+        "wordReports": [
+          {
+            "position": 0,
+            "word": "ship",
+            "expected": [
+              "ʃ",
+              "ɪ",
+              "p"
+            ],
+            "actual": [
+              "ʃ",
+              "ɪ",
+              "p"
+            ],
+            "distance": 0,
+            "phones": [],
+            "weighted_edits": 0
+          }
+        ],
+        "flagged": false
+      }
+    },
+    {
+      "id": "aria-three-as-three",
+      "file": "public/audio/aria/word-2400.mp3",
+      "sha256": "dbd32db6d89af3f6ba5865985d6aea396c11469027890c3ff47f2df3858372f5",
+      "reference": "three",
+      "spokenFixture": "three",
+      "expectedCorrect": true,
+      "repeat": 1,
+      "computeMs": 217.44,
+      "result": {
+        "expected_phones": [
+          [
+            "θ",
+            "ɹ",
+            "i"
+          ]
+        ],
+        "heard_phones": [
+          "θ",
+          "ɹ",
+          "i"
+        ],
+        "heard_phones_confidence": [
+          0.866,
+          0.926,
+          0.633
+        ],
+        "phone_error_rate": 0.0,
+        "errors": [],
+        "words_with_errors": [],
+        "wordReports": [
+          {
+            "position": 0,
+            "word": "three",
+            "expected": [
+              "θ",
+              "ɹ",
+              "i"
+            ],
+            "actual": [
+              "θ",
+              "ɹ",
+              "i"
+            ],
+            "distance": 0,
+            "phones": [],
+            "weighted_edits": 0
+          }
+        ],
+        "flagged": false
+      }
+    },
+    {
+      "id": "guy-three-as-three",
+      "file": "public/audio/guy/word-2400.mp3",
+      "sha256": "94ceb6bcde145714f09292b63ae0d6624a89be5cb173720ac695119dafe3a0c2",
+      "reference": "three",
+      "spokenFixture": "three",
+      "expectedCorrect": true,
+      "repeat": 1,
+      "computeMs": 234.18,
+      "result": {
+        "expected_phones": [
+          [
+            "θ",
+            "ɹ",
+            "i"
+          ]
+        ],
+        "heard_phones": [
+          "θ",
+          "ɹ",
+          "i"
+        ],
+        "heard_phones_confidence": [
+          0.912,
+          0.959,
+          0.702
+        ],
+        "phone_error_rate": 0.0,
+        "errors": [],
+        "words_with_errors": [],
+        "wordReports": [
+          {
+            "position": 0,
+            "word": "three",
+            "expected": [
+              "θ",
+              "ɹ",
+              "i"
+            ],
+            "actual": [
+              "θ",
+              "ɹ",
+              "i"
+            ],
+            "distance": 0,
+            "phones": [],
+            "weighted_edits": 0
+          }
+        ],
+        "flagged": false
+      }
+    },
+    {
+      "id": "aria-bad-as-bad",
+      "file": "public/audio/aria/word-2978.mp3",
+      "sha256": "77e448d4d24a5eb7bce40296318a11d4582a63b0ad88ae2b826b9f74353f92af",
+      "reference": "bad",
+      "spokenFixture": "bad",
+      "expectedCorrect": true,
+      "repeat": 1,
+      "computeMs": 220.03,
+      "result": {
+        "expected_phones": [
+          [
+            "b",
+            "æ",
+            "d"
+          ]
+        ],
+        "heard_phones": [
+          "b",
+          "æ",
+          "d"
+        ],
+        "heard_phones_confidence": [
+          0.966,
+          0.378,
+          0.984
+        ],
+        "phone_error_rate": 0.0,
+        "errors": [],
+        "words_with_errors": [],
+        "wordReports": [
+          {
+            "position": 0,
+            "word": "bad",
+            "expected": [
+              "b",
+              "æ",
+              "d"
+            ],
+            "actual": [
+              "b",
+              "æ",
+              "d"
+            ],
+            "distance": 0,
+            "phones": [],
+            "weighted_edits": 0
+          }
+        ],
+        "flagged": false
+      }
+    },
+    {
+      "id": "guy-bad-as-bad",
+      "file": "public/audio/guy/word-2978.mp3",
+      "sha256": "07160402b698581188f51423fc62d77102d77c247bbea7481bf140293e5dbcde",
+      "reference": "bad",
+      "spokenFixture": "bad",
+      "expectedCorrect": true,
+      "repeat": 1,
+      "computeMs": 233.78,
+      "result": {
+        "expected_phones": [
+          [
+            "b",
+            "æ",
+            "d"
+          ]
+        ],
+        "heard_phones": [
+          "b",
+          "ɛ",
+          "d"
+        ],
+        "heard_phones_confidence": [
+          0.958,
+          0.473,
+          0.984
+        ],
+        "phone_error_rate": 0.3333,
+        "errors": [],
+        "words_with_errors": [],
+        "wordReports": [
+          {
+            "position": 0,
+            "word": "bad",
+            "expected": [
+              "b",
+              "æ",
+              "d"
+            ],
+            "actual": [
+              "b",
+              "ɛ",
+              "d"
+            ],
+            "distance": 1,
+            "phones": [
+              {
+                "expected": "b",
+                "heard": "b",
+                "confidence": 0.0
+              },
+              {
+                "expected": "æ",
+                "heard": "ɛ",
+                "confidence": 0.0
+              },
+              {
+                "expected": "d",
+                "heard": "d",
+                "confidence": 0.0
+              }
+            ],
+            "weighted_edits": 0.0
+          }
+        ],
+        "flagged": false
+      }
+    },
+    {
+      "id": "aria-right-as-right",
+      "file": "public/audio/aria/word-2160.mp3",
+      "sha256": "c4f8341a47942b096bcec86eacade529bb700fd8f725bfff388081846fb358df",
+      "reference": "right",
+      "spokenFixture": "right",
+      "expectedCorrect": true,
+      "repeat": 1,
+      "computeMs": 246.39,
+      "result": {
+        "expected_phones": [
+          [
+            "ɹ",
+            "aɪ",
+            "t"
+          ]
+        ],
+        "heard_phones": [
+          "ɹ",
+          "aɪ",
+          "t"
+        ],
+        "heard_phones_confidence": [
+          0.915,
+          0.838,
+          0.971
+        ],
+        "phone_error_rate": 0.0,
+        "errors": [],
+        "words_with_errors": [],
+        "wordReports": [
+          {
+            "position": 0,
+            "word": "right",
+            "expected": [
+              "ɹ",
+              "aɪ",
+              "t"
+            ],
+            "actual": [
+              "ɹ",
+              "aɪ",
+              "t"
+            ],
+            "distance": 0,
+            "phones": [],
+            "weighted_edits": 0
+          }
+        ],
+        "flagged": false
+      }
+    },
+    {
+      "id": "guy-right-as-right",
+      "file": "public/audio/guy/word-2160.mp3",
+      "sha256": "d80d39b42a0d25f74b7b139ea295162b0436f554e01b7d8b5290e11e93556d0b",
+      "reference": "right",
+      "spokenFixture": "right",
+      "expectedCorrect": true,
+      "repeat": 1,
+      "computeMs": 223.31,
+      "result": {
+        "expected_phones": [
+          [
+            "ɹ",
+            "aɪ",
+            "t"
+          ]
+        ],
+        "heard_phones": [
+          "ɹ",
+          "aɪ",
+          "t"
+        ],
+        "heard_phones_confidence": [
+          0.811,
+          0.825,
+          0.935
+        ],
+        "phone_error_rate": 0.0,
+        "errors": [],
+        "words_with_errors": [],
+        "wordReports": [
+          {
+            "position": 0,
+            "word": "right",
+            "expected": [
+              "ɹ",
+              "aɪ",
+              "t"
+            ],
+            "actual": [
+              "ɹ",
+              "aɪ",
+              "t"
+            ],
+            "distance": 0,
+            "phones": [],
+            "weighted_edits": 0
+          }
+        ],
+        "flagged": false
+      }
+    },
+    {
+      "id": "aria-sink-as-think",
+      "file": "public/audio/aria/word-959.mp3",
+      "sha256": "6e91c5e4a7ea69fc6243dbdf3eed48bba5106c2030d11f4c90937d8a9e9edaa7",
+      "reference": "think",
+      "spokenFixture": "sink",
+      "expectedCorrect": false,
+      "repeat": 1,
+      "computeMs": 238.84,
+      "result": {
+        "expected_phones": [
+          [
+            "θ",
+            "ɪ",
+            "ŋ",
+            "k"
+          ]
+        ],
+        "heard_phones": [
+          "s",
+          "ɪ",
+          "ŋ",
+          "k"
+        ],
+        "heard_phones_confidence": [
+          0.989,
+          0.906,
+          0.845,
+          0.982
+        ],
+        "phone_error_rate": 0.25,
+        "errors": [],
+        "words_with_errors": [],
+        "wordReports": [
+          {
+            "position": 0,
+            "word": "think",
+            "expected": [
+              "θ",
+              "ɪ",
+              "ŋ",
+              "k"
+            ],
+            "actual": [
+              "s",
+              "ɪ",
+              "ŋ",
+              "k"
+            ],
+            "distance": 1,
+            "phones": [
+              {
+                "expected": "θ",
+                "heard": "s",
+                "confidence": 0.49125669652130455
+              },
+              {
+                "expected": "ɪ",
+                "heard": "ɪ",
+                "confidence": 0.0
+              },
+              {
+                "expected": "ŋ",
+                "heard": "ŋ",
+                "confidence": 0.0
+              },
+              {
+                "expected": "k",
+                "heard": "k",
+                "confidence": 0.0
+              }
+            ],
+            "weighted_edits": 0.49125669652130455
+          }
+        ],
+        "flagged": false
+      }
+    },
+    {
+      "id": "guy-sink-as-think",
+      "file": "public/audio/guy/word-959.mp3",
+      "sha256": "2a1d15a183d4fe0d4b32443959c39b1854c2107f82f8ba797de5ab88fab4ec94",
+      "reference": "think",
+      "spokenFixture": "sink",
+      "expectedCorrect": false,
+      "repeat": 1,
+      "computeMs": 233.28,
+      "result": {
+        "expected_phones": [
+          [
+            "θ",
+            "ɪ",
+            "ŋ",
+            "k"
+          ]
+        ],
+        "heard_phones": [
+          "s",
+          "ɪ",
+          "ŋ",
+          "k"
+        ],
+        "heard_phones_confidence": [
+          0.973,
+          0.447,
+          0.491,
+          0.987
+        ],
+        "phone_error_rate": 0.25,
+        "errors": [],
+        "words_with_errors": [],
+        "wordReports": [
+          {
+            "position": 0,
+            "word": "think",
+            "expected": [
+              "θ",
+              "ɪ",
+              "ŋ",
+              "k"
+            ],
+            "actual": [
+              "s",
+              "ɪ",
+              "ŋ",
+              "k"
+            ],
+            "distance": 1,
+            "phones": [
+              {
+                "expected": "θ",
+                "heard": "s",
+                "confidence": 0.4941873288480565
+              },
+              {
+                "expected": "ɪ",
+                "heard": "ɪ",
+                "confidence": 0.0
+              },
+              {
+                "expected": "ŋ",
+                "heard": "ŋ",
+                "confidence": 0.0
+              },
+              {
+                "expected": "k",
+                "heard": "k",
+                "confidence": 0.0
+              }
+            ],
+            "weighted_edits": 0.4941873288480565
+          }
+        ],
+        "flagged": false
+      }
+    },
+    {
+      "id": "aria-sheep-as-ship",
+      "file": "public/audio/aria/word-2968.mp3",
+      "sha256": "d78bba621523dcd4fb8efdca6df67c3fc7a32644bc342b5f3f74378b36b259ae",
+      "reference": "ship",
+      "spokenFixture": "sheep",
+      "expectedCorrect": false,
+      "repeat": 1,
+      "computeMs": 236.79,
+      "result": {
+        "expected_phones": [
+          [
+            "ʃ",
+            "ɪ",
+            "p"
+          ]
+        ],
+        "heard_phones": [
+          "ʃ",
+          "i",
+          "p"
+        ],
+        "heard_phones_confidence": [
+          0.961,
+          0.857,
+          0.904
+        ],
+        "phone_error_rate": 0.3333,
+        "errors": [],
+        "words_with_errors": [],
+        "wordReports": [
+          {
+            "position": 0,
+            "word": "ship",
+            "expected": [
+              "ʃ",
+              "ɪ",
+              "p"
+            ],
+            "actual": [
+              "ʃ",
+              "i",
+              "p"
+            ],
+            "distance": 1,
+            "phones": [
+              {
+                "expected": "ʃ",
+                "heard": "ʃ",
+                "confidence": 0.0
+              },
+              {
+                "expected": "ɪ",
+                "heard": "i",
+                "confidence": 0.3242907226085663
+              },
+              {
+                "expected": "p",
+                "heard": "p",
+                "confidence": 0.0
+              }
+            ],
+            "weighted_edits": 0.3242907226085663
+          }
+        ],
+        "flagged": false
+      }
+    },
+    {
+      "id": "guy-sheep-as-ship",
+      "file": "public/audio/guy/word-2968.mp3",
+      "sha256": "7e6f1a2b72c797d1c095bda747d05fd45f61a62cd85eb1790663f51b2c07f212",
+      "reference": "ship",
+      "spokenFixture": "sheep",
+      "expectedCorrect": false,
+      "repeat": 1,
+      "computeMs": 217.51,
+      "result": {
+        "expected_phones": [
+          [
+            "ʃ",
+            "ɪ",
+            "p"
+          ]
+        ],
+        "heard_phones": [
+          "ʃ",
+          "i",
+          "p"
+        ],
+        "heard_phones_confidence": [
+          0.952,
+          0.909,
+          0.918
+        ],
+        "phone_error_rate": 0.3333,
+        "errors": [],
+        "words_with_errors": [],
+        "wordReports": [
+          {
+            "position": 0,
+            "word": "ship",
+            "expected": [
+              "ʃ",
+              "ɪ",
+              "p"
+            ],
+            "actual": [
+              "ʃ",
+              "i",
+              "p"
+            ],
+            "distance": 1,
+            "phones": [
+              {
+                "expected": "ʃ",
+                "heard": "ʃ",
+                "confidence": 0.0
+              },
+              {
+                "expected": "ɪ",
+                "heard": "i",
+                "confidence": 0.38930951803922653
+              },
+              {
+                "expected": "p",
+                "heard": "p",
+                "confidence": 0.0
+              }
+            ],
+            "weighted_edits": 0.38930951803922653
+          }
+        ],
+        "flagged": false
+      }
+    },
+    {
+      "id": "aria-free-as-three",
+      "file": "public/audio/aria/word-1649.mp3",
+      "sha256": "ffe976c2022e78e153ed1d4a79e8af3182ef98c58bd42522f04e1376578d0acb",
+      "reference": "three",
+      "spokenFixture": "free",
+      "expectedCorrect": false,
+      "repeat": 1,
+      "computeMs": 219.65,
+      "result": {
+        "expected_phones": [
+          [
+            "θ",
+            "ɹ",
+            "i"
+          ]
+        ],
+        "heard_phones": [
+          "f",
+          "ɹ"
+        ],
+        "heard_phones_confidence": [
+          0.971,
+          0.956
+        ],
+        "phone_error_rate": 0.6667,
+        "errors": [
+          {
+            "position": 0,
+            "word": "three",
+            "expected": "θɹi",
+            "actual": "fɹ",
+            "actual_word": "",
+            "phone_distance": 2,
+            "confidence": 0.71,
+            "phones": [
+              {
+                "expected": "θ",
+                "heard": "f",
+                "confidence": 0.922
+              },
+              {
+                "expected": "ɹ",
+                "heard": "ɹ",
+                "confidence": 0.0
+              },
+              {
+                "expected": "i",
+                "heard": "",
+                "confidence": 0.499
+              }
+            ]
+          }
+        ],
+        "words_with_errors": [
+          "three"
+        ],
+        "wordReports": [
+          {
+            "position": 0,
+            "word": "three",
+            "expected": [
+              "θ",
+              "ɹ",
+              "i"
+            ],
+            "actual": [
+              "f",
+              "ɹ"
+            ],
+            "distance": 2,
+            "phones": [
+              {
+                "expected": "θ",
+                "heard": "f",
+                "confidence": 0.9217060953378677
+              },
+              {
+                "expected": "ɹ",
+                "heard": "ɹ",
+                "confidence": 0.0
+              },
+              {
+                "expected": "i",
+                "heard": "",
+                "confidence": 0.4987683369545266
+              }
+            ],
+            "weighted_edits": 1.4204744322923943
+          }
+        ],
+        "flagged": true
+      }
+    },
+    {
+      "id": "guy-free-as-three",
+      "file": "public/audio/guy/word-1649.mp3",
+      "sha256": "b64d197492c3ab8a73bcb5eb526e016455a9f5793081c3f58d95e56470fa5991",
+      "reference": "three",
+      "spokenFixture": "free",
+      "expectedCorrect": false,
+      "repeat": 1,
+      "computeMs": 224.75,
+      "result": {
+        "expected_phones": [
+          [
+            "θ",
+            "ɹ",
+            "i"
+          ]
+        ],
+        "heard_phones": [
+          "f",
+          "ɹ",
+          "i"
+        ],
+        "heard_phones_confidence": [
+          0.987,
+          0.969,
+          0.501
+        ],
+        "phone_error_rate": 0.3333,
+        "errors": [],
+        "words_with_errors": [],
+        "wordReports": [
+          {
+            "position": 0,
+            "word": "three",
+            "expected": [
+              "θ",
+              "ɹ",
+              "i"
+            ],
+            "actual": [
+              "f",
+              "ɹ",
+              "i"
+            ],
+            "distance": 1,
+            "phones": [
+              {
+                "expected": "θ",
+                "heard": "f",
+                "confidence": 0.9713412160053849
+              },
+              {
+                "expected": "ɹ",
+                "heard": "ɹ",
+                "confidence": 0.0
+              },
+              {
+                "expected": "i",
+                "heard": "i",
+                "confidence": 0.0
+              }
+            ],
+            "weighted_edits": 0.9713412160053849
+          }
+        ],
+        "flagged": false
+      }
+    },
+    {
+      "id": "aria-bed-as-bad",
+      "file": "public/audio/aria/word-1291.mp3",
+      "sha256": "5e76c091ea05c53403fa281115e8a5bfe08a42b621f6a2893c88beb6b9f133cd",
+      "reference": "bad",
+      "spokenFixture": "bed",
+      "expectedCorrect": false,
+      "repeat": 1,
+      "computeMs": 215.69,
+      "result": {
+        "expected_phones": [
+          [
+            "b",
+            "æ",
+            "d"
+          ]
+        ],
+        "heard_phones": [
+          "b",
+          "ɛ",
+          "d"
+        ],
+        "heard_phones_confidence": [
+          0.759,
+          0.886,
+          0.986
+        ],
+        "phone_error_rate": 0.3333,
+        "errors": [],
+        "words_with_errors": [],
+        "wordReports": [
+          {
+            "position": 0,
+            "word": "bad",
+            "expected": [
+              "b",
+              "æ",
+              "d"
+            ],
+            "actual": [
+              "b",
+              "ɛ",
+              "d"
+            ],
+            "distance": 1,
+            "phones": [
+              {
+                "expected": "b",
+                "heard": "b",
+                "confidence": 0.0
+              },
+              {
+                "expected": "æ",
+                "heard": "ɛ",
+                "confidence": 0.45876746252179146
+              },
+              {
+                "expected": "d",
+                "heard": "d",
+                "confidence": 0.0
+              }
+            ],
+            "weighted_edits": 0.45876746252179146
+          }
+        ],
+        "flagged": false
+      }
+    },
+    {
+      "id": "guy-bed-as-bad",
+      "file": "public/audio/guy/word-1291.mp3",
+      "sha256": "120e4f3456bb54835747cdae05588a31d61f32201d79d49be4e01c1f653ec7ce",
+      "reference": "bad",
+      "spokenFixture": "bed",
+      "expectedCorrect": false,
+      "repeat": 1,
+      "computeMs": 222.71,
+      "result": {
+        "expected_phones": [
+          [
+            "b",
+            "æ",
+            "d"
+          ]
+        ],
+        "heard_phones": [
+          "b",
+          "ɛ",
+          "d"
+        ],
+        "heard_phones_confidence": [
+          0.835,
+          0.671,
+          0.975
+        ],
+        "phone_error_rate": 0.3333,
+        "errors": [],
+        "words_with_errors": [],
+        "wordReports": [
+          {
+            "position": 0,
+            "word": "bad",
+            "expected": [
+              "b",
+              "æ",
+              "d"
+            ],
+            "actual": [
+              "b",
+              "ɛ",
+              "d"
+            ],
+            "distance": 1,
+            "phones": [
+              {
+                "expected": "b",
+                "heard": "b",
+                "confidence": 0.0
+              },
+              {
+                "expected": "æ",
+                "heard": "ɛ",
+                "confidence": 0.35782837495207787
+              },
+              {
+                "expected": "d",
+                "heard": "d",
+                "confidence": 0.0
+              }
+            ],
+            "weighted_edits": 0.35782837495207787
+          }
+        ],
+        "flagged": false
+      }
+    },
+    {
+      "id": "aria-light-as-right",
+      "file": "public/audio/aria/word-1852.mp3",
+      "sha256": "f718748a255457e8fb6b28bfd3d111c36716a447c69187d5644ac1ecf7edd337",
+      "reference": "right",
+      "spokenFixture": "light",
+      "expectedCorrect": false,
+      "repeat": 1,
+      "computeMs": 231.3,
+      "result": {
+        "expected_phones": [
+          [
+            "ɹ",
+            "aɪ",
+            "t"
+          ]
+        ],
+        "heard_phones": [
+          "l",
+          "aɪ",
+          "t"
+        ],
+        "heard_phones_confidence": [
+          0.99,
+          0.884,
+          0.97
+        ],
+        "phone_error_rate": 0.3333,
+        "errors": [],
+        "words_with_errors": [],
+        "wordReports": [
+          {
+            "position": 0,
+            "word": "right",
+            "expected": [
+              "ɹ",
+              "aɪ",
+              "t"
+            ],
+            "actual": [
+              "l",
+              "aɪ",
+              "t"
+            ],
+            "distance": 1,
+            "phones": [
+              {
+                "expected": "ɹ",
+                "heard": "l",
+                "confidence": 0.9979005732166115
+              },
+              {
+                "expected": "aɪ",
+                "heard": "aɪ",
+                "confidence": 0.0
+              },
+              {
+                "expected": "t",
+                "heard": "t",
+                "confidence": 0.0
+              }
+            ],
+            "weighted_edits": 0.9979005732166115
+          }
+        ],
+        "flagged": false
+      }
+    },
+    {
+      "id": "guy-light-as-right",
+      "file": "public/audio/guy/word-1852.mp3",
+      "sha256": "eee7516495f22dfc96baa88bfea2fb22b32b6896f0e8941846320b451f4f6d57",
+      "reference": "right",
+      "spokenFixture": "light",
+      "expectedCorrect": false,
+      "repeat": 1,
+      "computeMs": 220.06,
+      "result": {
+        "expected_phones": [
+          [
+            "ɹ",
+            "aɪ",
+            "t"
+          ]
+        ],
+        "heard_phones": [
+          "l",
+          "aɪ",
+          "t"
+        ],
+        "heard_phones_confidence": [
+          0.983,
+          0.881,
+          0.904
+        ],
+        "phone_error_rate": 0.3333,
+        "errors": [],
+        "words_with_errors": [],
+        "wordReports": [
+          {
+            "position": 0,
+            "word": "right",
+            "expected": [
+              "ɹ",
+              "aɪ",
+              "t"
+            ],
+            "actual": [
+              "l",
+              "aɪ",
+              "t"
+            ],
+            "distance": 1,
+            "phones": [
+              {
+                "expected": "ɹ",
+                "heard": "l",
+                "confidence": 0.995365219656378
+              },
+              {
+                "expected": "aɪ",
+                "heard": "aɪ",
+                "confidence": 0.0
+              },
+              {
+                "expected": "t",
+                "heard": "t",
+                "confidence": 0.0
+              }
+            ],
+            "weighted_edits": 0.995365219656378
+          }
+        ],
+        "flagged": false
+      }
+    }
+  ]
+}

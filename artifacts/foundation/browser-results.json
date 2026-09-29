@@ -1,0 +1,98 @@
+{
+  "results": [
+    "three sections, real adaptive lesson, refresh, mistake, section switches and preserved old records",
+    "knowledge search, favorites link to unstarred prerequisites and browsing gives no learning evidence",
+    "removed alphabet and handwriting are absent from lessons, search and favorites; old drafts stay archived",
+    "foundation grammar tile order and partial fill correction survive theme change and reload",
+    "aria: real normal / slow / normal audio ends at correct rates",
+    "guy: real normal / slow / normal audio ends at correct rates",
+    "linked explanation returns to the original daily lesson with its exact session",
+    "minimal at 1440px: readable Chinese, reachable navigation and no horizontal overflow",
+    "minimal at 390px: readable Chinese, reachable navigation and no horizontal overflow",
+    "minimal at 320px: readable Chinese, reachable navigation and no horizontal overflow",
+    "sketch at 1440px: readable Chinese, reachable navigation and no horizontal overflow",
+    "sketch at 390px: readable Chinese, reachable navigation and no horizontal overflow",
+    "sketch at 320px: readable Chinese, reachable navigation and no horizontal overflow",
+    "print at 1440px: readable Chinese, reachable navigation and no horizontal overflow",
+    "print at 390px: readable Chinese, reachable navigation and no horizontal overflow",
+    "print at 320px: readable Chinese, reachable navigation and no horizontal overflow",
+    "graffiti at 1440px: readable Chinese, reachable navigation and no horizontal overflow",
+    "graffiti at 390px: readable Chinese, reachable navigation and no horizontal overflow",
+    "graffiti at 320px: readable Chinese, reachable navigation and no horizontal overflow",
+    "corrupt records remain untouched and favorites stay disabled"
+  ],
+  "failures": [],
+  "errors": [],
+  "audioEvents": [
+    {
+      "voice": "aria",
+      "events": [
+        {
+          "event": "play",
+          "src": "http://localhost:5186/audio/foundation/aria/f-1a0dc227b5aa78f8.mp3?v=thin",
+          "rate": 1
+        },
+        {
+          "event": "ended",
+          "src": "http://localhost:5186/audio/foundation/aria/f-1a0dc227b5aa78f8.mp3?v=thin",
+          "rate": 1
+        },
+        {
+          "event": "play",
+          "src": "http://localhost:5186/audio/foundation/aria/f-1a0dc227b5aa78f8.mp3?v=thin",
+          "rate": 0.72
+        },
+        {
+          "event": "ended",
+          "src": "http://localhost:5186/audio/foundation/aria/f-1a0dc227b5aa78f8.mp3?v=thin",
+          "rate": 0.72
+        },
+        {
+          "event": "play",
+          "src": "http://localhost:5186/audio/foundation/aria/f-1a0dc227b5aa78f8.mp3?v=thin",
+          "rate": 1
+        },
+        {
+          "event": "ended",
+          "src": "http://localhost:5186/audio/foundation/aria/f-1a0dc227b5aa78f8.mp3?v=thin",
+          "rate": 1
+        }
+      ]
+    },
+    {
+      "voice": "guy",
+      "events": [
+        {
+          "event": "play",
+          "src": "http://localhost:5186/audio/foundation/guy/f-1a0dc227b5aa78f8.mp3?v=thin",
+          "rate": 1
+        },
+        {
+          "event": "ended",
+          "src": "http://localhost:5186/audio/foundation/guy/f-1a0dc227b5aa78f8.mp3?v=thin",
+          "rate": 1
+        },
+        {
+          "event": "play",
+          "src": "http://localhost:5186/audio/foundation/guy/f-1a0dc227b5aa78f8.mp3?v=thin",
+          "rate": 0.72
+        },
+        {
+          "event": "ended",
+          "src": "http://localhost:5186/audio/foundation/guy/f-1a0dc227b5aa78f8.mp3?v=thin",
+          "rate": 0.72
+        },
+        {
+          "event": "play",
+          "src": "http://localhost:5186/audio/foundation/guy/f-1a0dc227b5aa78f8.mp3?v=thin",
+          "rate": 1
+        },
+        {
+          "event": "ended",
+          "src": "http://localhost:5186/audio/foundation/guy/f-1a0dc227b5aa78f8.mp3?v=thin",
+          "rate": 1
+        }
+      ]
+    }
+  ]
+}

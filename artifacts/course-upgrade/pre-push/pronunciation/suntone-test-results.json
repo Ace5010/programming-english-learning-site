@@ -1,0 +1,697 @@
+{
+  "provider": "xfyun-suntone",
+  "date": "2026-09-24",
+  "status": "rejected-for-automatic-phoneme-grading",
+  "authenticationCompletedByUser": true,
+  "freePackage": {
+    "calls": 1000,
+    "validDays": 30,
+    "paidAmountCNY": 0,
+    "quotaBefore": 1000
+  },
+  "paidPackageObserved": {
+    "priceCNY": 50,
+    "calls": 10000,
+    "validYears": 1,
+    "purchased": false
+  },
+  "attemptedCalls": 10,
+  "sourceAudioSeconds": 15.96,
+  "containsUserRecording": false,
+  "productionIntegrated": false,
+  "network": {
+    "proxyUsed": false,
+    "physicalInterfaceIndex": 9,
+    "vpnInterfaceUsed": false,
+    "tlsCertificateValidation": true,
+    "dns": "system resolver"
+  },
+  "requestSettings": {
+    "lang": "en",
+    "core": "word",
+    "dictType": "CMU",
+    "dictDialect": "omitted",
+    "phonemeOutput": 1,
+    "slack": 0,
+    "scale": 100,
+    "precision": 0.1,
+    "audioEncoding": "MP3 16 kHz mono 32 kbit/s"
+  },
+  "findings": [
+    "Both correct Goodbye samples score D=100 without restricting British or American dialect.",
+    "Hello variants EH and AX are both selected by the engine with high scores.",
+    "Sink evaluated as Think receives TH=94.7 and word=99.1; corresponding correct Think TH=97.3. This false acceptance prevents automatic grading.",
+    "Sheep evaluated as Ship yields IH=78.9, lower than correct Ship IH=99.3; no calibrated threshold or learner validation exists.",
+    "Free evaluated as Three yields TH=2, but adjacent R also falls to 66.3; do not label every low phoneme as wrong.",
+    "Correct Hello HH=87.8 is lower than wrong Sink-as-Think TH=94.7; a single higher phoneme cutoff would reject some correct speech.",
+    "Correct Ship has readType=2 despite high phoneme scores. Do not infer readType meaning without English-specific validation.",
+    "Scores describe aligned target phonemes, not independently recognized replacement phonemes.",
+    "No human-accent, smartphone-network, or production-course acceptance has been performed."
+  ],
+  "cases": [
+    {
+      "id": "aria-goodbye",
+      "file": "public/audio/daily/aria/goodbye.mp3",
+      "sha256": "39f9feb199cf056ed30b73321bc005e4265f2454e31332afd4dc66d032069639",
+      "reference": "Goodbye.",
+      "status": "completed",
+      "durationSeconds": 1.608,
+      "uploadSha256": "15638c28504f2712dfc38e17a8d051fdf49e7918d91b92894f2b5879bba9ddba",
+      "uploadBytes": 6768,
+      "result": {
+        "provider": "xfyun-suntone",
+        "phonemeCount": 5,
+        "words": [
+          {
+            "word": "Goodbye",
+            "readType": 0,
+            "scores": {
+              "pronunciation": 96.7,
+              "overall": 96.7
+            },
+            "phonemes": [
+              {
+                "expectedPhoneme": "G",
+                "pronunciation": 100,
+                "span": {
+                  "end": 30,
+                  "start": 24
+                }
+              },
+              {
+                "expectedPhoneme": "UH",
+                "pronunciation": 100,
+                "span": {
+                  "end": 36,
+                  "start": 30
+                }
+              },
+              {
+                "expectedPhoneme": "D",
+                "pronunciation": 100,
+                "span": {
+                  "end": 40,
+                  "start": 36
+                }
+              },
+              {
+                "expectedPhoneme": "B",
+                "pronunciation": 100,
+                "span": {
+                  "end": 48,
+                  "start": 40
+                }
+              },
+              {
+                "expectedPhoneme": "AY",
+                "pronunciation": 98.8,
+                "span": {
+                  "end": 87,
+                  "start": 48
+                }
+              }
+            ]
+          }
+        ],
+        "scores": {
+          "pronunciation": 96.7,
+          "overall": 96.7
+        },
+        "warningCodes": [],
+        "pronunciationAccepted": false,
+        "note": "Expected phoneme scores only; no inferred heard phones or automatic pass threshold"
+      },
+      "elapsedMs": 3781
+    },
+    {
+      "id": "guy-goodbye",
+      "file": "public/audio/daily/guy/goodbye.mp3",
+      "sha256": "351fcb29dfd2a4825344b9a6b85ee4df13ea1738faed04d97b8ef54fb33b4ba6",
+      "reference": "Goodbye.",
+      "status": "completed",
+      "durationSeconds": 1.656,
+      "uploadSha256": "5903ba457728a2be94e9693d3b3a27eca7adcec8f3f3937372441df64ff25abf",
+      "uploadBytes": 6912,
+      "result": {
+        "provider": "xfyun-suntone",
+        "phonemeCount": 5,
+        "words": [
+          {
+            "word": "Goodbye",
+            "readType": 0,
+            "scores": {
+              "overall": 96.7,
+              "pronunciation": 96.7
+            },
+            "phonemes": [
+              {
+                "expectedPhoneme": "G",
+                "pronunciation": 100,
+                "span": {
+                  "start": 23,
+                  "end": 31
+                }
+              },
+              {
+                "expectedPhoneme": "UH",
+                "pronunciation": 100,
+                "span": {
+                  "start": 31,
+                  "end": 36
+                }
+              },
+              {
+                "expectedPhoneme": "D",
+                "pronunciation": 100,
+                "span": {
+                  "start": 36,
+                  "end": 41
+                }
+              },
+              {
+                "expectedPhoneme": "B",
+                "pronunciation": 100,
+                "span": {
+                  "start": 41,
+                  "end": 50
+                }
+              },
+              {
+                "expectedPhoneme": "AY",
+                "pronunciation": 98.7,
+                "span": {
+                  "start": 50,
+                  "end": 89
+                }
+              }
+            ]
+          }
+        ],
+        "scores": {
+          "pronunciation": 96.7,
+          "overall": 96.7
+        },
+        "warningCodes": [],
+        "pronunciationAccepted": false,
+        "note": "Expected phoneme scores only; no inferred heard phones or automatic pass threshold"
+      },
+      "elapsedMs": 3063
+    },
+    {
+      "id": "aria-hello",
+      "file": "public/audio/daily/aria/hello.mp3",
+      "sha256": "d647bdc233e2be048fef5c9c34d03d6ed22e66cb4031f23d9703eef01495bf5b",
+      "reference": "Hello.",
+      "status": "completed",
+      "durationSeconds": 1.56,
+      "uploadSha256": "64e380230e73682fe29271718b54d1f04ccb807d72aa1c323ba35009180a0b13",
+      "uploadBytes": 6624,
+      "result": {
+        "provider": "xfyun-suntone",
+        "phonemeCount": 4,
+        "words": [
+          {
+            "word": "Hello",
+            "readType": 0,
+            "scores": {
+              "overall": 95,
+              "pronunciation": 95
+            },
+            "phonemes": [
+              {
+                "expectedPhoneme": "HH",
+                "pronunciation": 90.1,
+                "span": {
+                  "end": 33,
+                  "start": 0
+                }
+              },
+              {
+                "expectedPhoneme": "EH",
+                "pronunciation": 100,
+                "span": {
+                  "end": 38,
+                  "start": 33
+                }
+              },
+              {
+                "expectedPhoneme": "L",
+                "pronunciation": 100,
+                "span": {
+                  "end": 48,
+                  "start": 38
+                }
+              },
+              {
+                "expectedPhoneme": "OW",
+                "pronunciation": 99.4,
+                "span": {
+                  "end": 79,
+                  "start": 48
+                }
+              }
+            ]
+          }
+        ],
+        "scores": {
+          "overall": 95,
+          "pronunciation": 95
+        },
+        "warningCodes": [],
+        "pronunciationAccepted": false,
+        "note": "Expected phoneme scores only; no inferred heard phones or automatic pass threshold"
+      },
+      "elapsedMs": 2906
+    },
+    {
+      "id": "guy-hello",
+      "file": "public/audio/daily/guy/hello.mp3",
+      "sha256": "75995d47e90e5015f57dd51844e4e12ede0b163c6fc06b9d829f7edf1d9fa386",
+      "reference": "Hello.",
+      "status": "completed",
+      "durationSeconds": 1.536,
+      "uploadSha256": "02235928981b9a9314b696870ad8aadce8b5adf88b4a23e5dd07aabab77684ae",
+      "uploadBytes": 6480,
+      "result": {
+        "provider": "xfyun-suntone",
+        "phonemeCount": 4,
+        "words": [
+          {
+            "word": "Hello",
+            "readType": 0,
+            "scores": {
+              "overall": 97.4,
+              "pronunciation": 97.4
+            },
+            "phonemes": [
+              {
+                "expectedPhoneme": "HH",
+                "pronunciation": 87.8,
+                "span": {
+                  "end": 31,
+                  "start": 0
+                }
+              },
+              {
+                "expectedPhoneme": "AX",
+                "pronunciation": 100,
+                "span": {
+                  "end": 35,
+                  "start": 31
+                }
+              },
+              {
+                "expectedPhoneme": "L",
+                "pronunciation": 100,
+                "span": {
+                  "end": 45,
+                  "start": 35
+                }
+              },
+              {
+                "expectedPhoneme": "OW",
+                "pronunciation": 99.1,
+                "span": {
+                  "end": 80,
+                  "start": 45
+                }
+              }
+            ]
+          }
+        ],
+        "scores": {
+          "pronunciation": 97.4,
+          "overall": 97.4
+        },
+        "warningCodes": [],
+        "pronunciationAccepted": false,
+        "note": "Expected phoneme scores only; no inferred heard phones or automatic pass threshold"
+      },
+      "elapsedMs": 2844
+    },
+    {
+      "id": "think-correct",
+      "file": "public/audio/aria/word-2652.mp3",
+      "sha256": "56d9cca2c2277ddc788953d76f26920ef025162bb072ddf76489d80924dd85ee",
+      "reference": "Think.",
+      "status": "completed",
+      "durationSeconds": 1.488,
+      "uploadSha256": "884f649ba15d3c20d27a52578996b6f2025b58d5b8c933cbc768dfb6134ddcac",
+      "uploadBytes": 6336,
+      "result": {
+        "provider": "xfyun-suntone",
+        "phonemeCount": 4,
+        "words": [
+          {
+            "word": "Think",
+            "readType": 0,
+            "scores": {
+              "pronunciation": 99.6,
+              "overall": 99.6
+            },
+            "phonemes": [
+              {
+                "expectedPhoneme": "TH",
+                "pronunciation": 97.3,
+                "span": {
+                  "start": 24,
+                  "end": 32
+                }
+              },
+              {
+                "expectedPhoneme": "IH",
+                "pronunciation": 100,
+                "span": {
+                  "start": 32,
+                  "end": 45
+                }
+              },
+              {
+                "expectedPhoneme": "NG",
+                "pronunciation": 100,
+                "span": {
+                  "start": 45,
+                  "end": 54
+                }
+              },
+              {
+                "expectedPhoneme": "K",
+                "pronunciation": 99.8,
+                "span": {
+                  "start": 54,
+                  "end": 76
+                }
+              }
+            ]
+          }
+        ],
+        "scores": {
+          "pronunciation": 99.6,
+          "overall": 99.6
+        },
+        "warningCodes": [],
+        "pronunciationAccepted": false,
+        "note": "Expected phoneme scores only; no inferred heard phones or automatic pass threshold"
+      },
+      "elapsedMs": 2828
+    },
+    {
+      "id": "sink-for-think",
+      "file": "public/audio/aria/word-959.mp3",
+      "sha256": "6e91c5e4a7ea69fc6243dbdf3eed48bba5106c2030d11f4c90937d8a9e9edaa7",
+      "reference": "Think.",
+      "status": "completed",
+      "durationSeconds": 1.608,
+      "uploadSha256": "6097b5f21fb532f69984cfac8e7398730149c86902e83dbf00a818df58affac3",
+      "uploadBytes": 6768,
+      "result": {
+        "provider": "xfyun-suntone",
+        "phonemeCount": 4,
+        "words": [
+          {
+            "word": "Think",
+            "readType": 0,
+            "scores": {
+              "pronunciation": 99.1,
+              "overall": 99.1
+            },
+            "phonemes": [
+              {
+                "expectedPhoneme": "TH",
+                "pronunciation": 94.7,
+                "span": {
+                  "end": 44,
+                  "start": 25
+                }
+              },
+              {
+                "expectedPhoneme": "IH",
+                "pronunciation": 100,
+                "span": {
+                  "end": 58,
+                  "start": 44
+                }
+              },
+              {
+                "expectedPhoneme": "NG",
+                "pronunciation": 100,
+                "span": {
+                  "end": 66,
+                  "start": 58
+                }
+              },
+              {
+                "expectedPhoneme": "K",
+                "pronunciation": 99.9,
+                "span": {
+                  "end": 88,
+                  "start": 66
+                }
+              }
+            ]
+          }
+        ],
+        "scores": {
+          "pronunciation": 99.1,
+          "overall": 99.1
+        },
+        "warningCodes": [],
+        "pronunciationAccepted": false,
+        "note": "Expected phoneme scores only; no inferred heard phones or automatic pass threshold"
+      },
+      "elapsedMs": 2953
+    },
+    {
+      "id": "ship-correct",
+      "file": "public/audio/aria/word-2224.mp3",
+      "sha256": "93e91a16f6060328871735321fa37898b44145ccc7db88a660ef7c06c0402ef4",
+      "reference": "Ship.",
+      "status": "completed",
+      "durationSeconds": 1.608,
+      "uploadSha256": "229815c6557f3e74542dafaa8e072b85f37689ce6569196726090cacabfdd985",
+      "uploadBytes": 6768,
+      "result": {
+        "provider": "xfyun-suntone",
+        "phonemeCount": 3,
+        "words": [
+          {
+            "word": "Ship",
+            "readType": 2,
+            "scores": {
+              "pronunciation": 97.2,
+              "overall": 97.2
+            },
+            "phonemes": [
+              {
+                "expectedPhoneme": "SH",
+                "pronunciation": 94.4,
+                "span": {
+                  "start": 22,
+                  "end": 45
+                }
+              },
+              {
+                "expectedPhoneme": "IH",
+                "pronunciation": 99.3,
+                "span": {
+                  "start": 45,
+                  "end": 64
+                }
+              },
+              {
+                "expectedPhoneme": "P",
+                "pronunciation": 97.1,
+                "span": {
+                  "start": 64,
+                  "end": 88
+                }
+              }
+            ]
+          }
+        ],
+        "scores": {
+          "pronunciation": 97.2,
+          "overall": 97.2
+        },
+        "warningCodes": [],
+        "pronunciationAccepted": false,
+        "note": "Expected phoneme scores only; no inferred heard phones or automatic pass threshold"
+      },
+      "elapsedMs": 3813
+    },
+    {
+      "id": "sheep-for-ship",
+      "file": "public/audio/aria/word-2968.mp3",
+      "sha256": "d78bba621523dcd4fb8efdca6df67c3fc7a32644bc342b5f3f74378b36b259ae",
+      "reference": "Ship.",
+      "status": "completed",
+      "durationSeconds": 1.632,
+      "uploadSha256": "c9c707909afb5e5106e2062c936de69400ff11846d95f79a394b52e5382d58a8",
+      "uploadBytes": 6912,
+      "result": {
+        "provider": "xfyun-suntone",
+        "phonemeCount": 3,
+        "words": [
+          {
+            "word": "Ship",
+            "readType": 2,
+            "scores": {
+              "overall": 94.7,
+              "pronunciation": 94.7
+            },
+            "phonemes": [
+              {
+                "expectedPhoneme": "SH",
+                "pronunciation": 97.3,
+                "span": {
+                  "start": 23,
+                  "end": 45
+                }
+              },
+              {
+                "expectedPhoneme": "IH",
+                "pronunciation": 78.9,
+                "span": {
+                  "start": 45,
+                  "end": 65
+                }
+              },
+              {
+                "expectedPhoneme": "P",
+                "pronunciation": 100,
+                "span": {
+                  "start": 65,
+                  "end": 89
+                }
+              }
+            ]
+          }
+        ],
+        "scores": {
+          "overall": 94.7,
+          "pronunciation": 94.7
+        },
+        "warningCodes": [],
+        "pronunciationAccepted": false,
+        "note": "Expected phoneme scores only; no inferred heard phones or automatic pass threshold"
+      },
+      "elapsedMs": 3000
+    },
+    {
+      "id": "three-correct",
+      "file": "public/audio/guy/word-2400.mp3",
+      "sha256": "94ceb6bcde145714f09292b63ae0d6624a89be5cb173720ac695119dafe3a0c2",
+      "reference": "Three.",
+      "status": "completed",
+      "durationSeconds": 1.656,
+      "uploadSha256": "2ea917c5d2ded9b3e91b3ab265c7f49b4439acd8f465ae58d1b8c752bcd0233e",
+      "uploadBytes": 6912,
+      "result": {
+        "provider": "xfyun-suntone",
+        "phonemeCount": 3,
+        "words": [
+          {
+            "word": "Three",
+            "readType": 0,
+            "scores": {
+              "pronunciation": 99.9,
+              "overall": 99.9
+            },
+            "phonemes": [
+              {
+                "expectedPhoneme": "TH",
+                "pronunciation": 100,
+                "span": {
+                  "end": 42,
+                  "start": 25
+                }
+              },
+              {
+                "expectedPhoneme": "R",
+                "pronunciation": 100,
+                "span": {
+                  "end": 56,
+                  "start": 42
+                }
+              },
+              {
+                "expectedPhoneme": "IY",
+                "pronunciation": 99.6,
+                "span": {
+                  "end": 91,
+                  "start": 56
+                }
+              }
+            ]
+          }
+        ],
+        "scores": {
+          "pronunciation": 99.9,
+          "overall": 99.9
+        },
+        "warningCodes": [],
+        "pronunciationAccepted": false,
+        "note": "Expected phoneme scores only; no inferred heard phones or automatic pass threshold"
+      },
+      "elapsedMs": 2969
+    },
+    {
+      "id": "free-for-three",
+      "file": "public/audio/guy/word-1649.mp3",
+      "sha256": "b64d197492c3ab8a73bcb5eb526e016455a9f5793081c3f58d95e56470fa5991",
+      "reference": "Three.",
+      "status": "completed",
+      "durationSeconds": 1.608,
+      "uploadSha256": "730515c0bd9947c9732b265b0a6ad3eea90f96ef55132ef84d079382e60f7ccc",
+      "uploadBytes": 6768,
+      "result": {
+        "provider": "xfyun-suntone",
+        "phonemeCount": 3,
+        "words": [
+          {
+            "word": "Three",
+            "readType": 0,
+            "scores": {
+              "overall": 67.2,
+              "pronunciation": 67.2
+            },
+            "phonemes": [
+              {
+                "expectedPhoneme": "TH",
+                "pronunciation": 2,
+                "span": {
+                  "end": 43,
+                  "start": 27
+                }
+              },
+              {
+                "expectedPhoneme": "R",
+                "pronunciation": 66.3,
+                "span": {
+                  "end": 55,
+                  "start": 43
+                }
+              },
+              {
+                "expectedPhoneme": "IY",
+                "pronunciation": 99.9,
+                "span": {
+                  "end": 87,
+                  "start": 55
+                }
+              }
+            ]
+          }
+        ],
+        "scores": {
+          "overall": 67.2,
+          "pronunciation": 67.2
+        },
+        "warningCodes": [],
+        "pronunciationAccepted": false,
+        "note": "Expected phoneme scores only; no inferred heard phones or automatic pass threshold"
+      },
+      "elapsedMs": 2938
+    }
+  ]
+}

@@ -1,0 +1,150 @@
+/* One layout, four palettes. Colors reuse the shipped scheduler and source-analysis UI. */
+:root[data-theme] {
+  color-scheme: light;
+  --ink:#242a2e; --ink-soft:#505b62; --muted:#667179;
+  --paper:#fff; --surface:#fff; --surface-2:#f5f6f7; --line:#e3e7e9;
+  --display-font:var(--sans); --word-font:var(--sans); --frame:var(--line);
+  --radius:18px; --shadow:0 6px 24px #253b4807;
+  --accent:#365f64; --accent-deep:#254c55; --accent-soft:#e5f3ef; --accent-line:#baddd6;
+  --action-ink:#314b51; --secondary:var(--accent-soft);
+  --palette-action:linear-gradient(110deg,#b8e3ff,#cbf5d7);
+  --palette-card:linear-gradient(155deg,#e5f3fd,#ebf8f3 43%,#ddf5e6);
+  --palette-selected:linear-gradient(110deg,#d5edfd,#dff7e7);
+  --palette-art:linear-gradient(122deg,#8ceac7,#7ee2df 48%,#5abbe9);
+  --spring:cubic-bezier(.18,.86,.3,1.08);
+  --success:#286848; --success-soft:#eef7f0; --error:#a93830; --error-soft:#fff0ef;
+}
+:root[data-theme=pearl] {
+  --palette-action:linear-gradient(118deg,#c2cbd7,#f6f7fa 57%,#d9dfe7);
+  --palette-card:linear-gradient(118deg,#eef0f3,#fcfcfd 57%,#e4e7ec);
+  --palette-selected:linear-gradient(110deg,#e4e7ec,#f6f7fa);
+  --palette-art:var(--palette-action); --accent:#465563; --accent-deep:#344250;
+  --accent-line:#cbd2db; --accent-soft:#eef0f3; --action-ink:#252e3b;
+}
+:root[data-theme=sky] {
+  --palette-action:linear-gradient(122deg,#c6e9ff,#83c8fb 53%,#4b9bec);
+  --palette-card:linear-gradient(122deg,#eef6fe,#e5f3ff 53%,#d7e9fc);
+  --palette-selected:linear-gradient(110deg,#d7e9fc,#eef6fe);
+  --palette-art:var(--palette-action); --accent:#285b7c; --accent-deep:#17435f;
+  --accent-line:#afcbe4; --accent-soft:#eef6fe; --action-ink:#102d44;
+}
+:root[data-theme=mint] {
+  --palette-action:linear-gradient(122deg,#ddfff3,#8ee6ca 50%,#44cfaa);
+  --palette-card:linear-gradient(122deg,#eefbf6,#e4f9ef 50%,#d2eee2);
+  --palette-selected:linear-gradient(110deg,#d2eee2,#eefbf6);
+  --palette-art:var(--palette-action); --accent:#396556; --accent-deep:#235240;
+  --accent-line:#a2cfbd; --accent-soft:#eefbf6; --action-ink:#123d34;
+}
+:root[data-theme] .site-header { background:var(--surface); border-bottom:1px solid var(--line); box-shadow:none; }
+:root[data-theme] .header-inner { display:grid; grid-template-columns:minmax(0,1fr) auto; gap:18px; padding-block:20px 0; }
+:root[data-theme] .section-switch { background:none; border:0; padding:0; gap:6px; }
+:root[data-theme] .section-switch button { border:1px solid transparent; border-radius:12px; min-height:44px; padding:9px 14px; background:transparent; }
+:root[data-theme] .section-switch button[aria-pressed=true] { background:var(--palette-action); border-color:var(--accent-line); color:var(--action-ink); box-shadow:0 3px 9px #c9e3de35; }
+:root[data-theme] .header-tools { grid-column:2; grid-row:1; }
+:root[data-theme] .main-nav { grid-column:1/-1; grid-row:2; margin:0; justify-self:start; gap:20px; }
+:root[data-theme] .main-nav .nav-item { padding:9px 6px 14px; }
+:root[data-theme] .nav-marker-ink { background:var(--accent); border:0; height:3px; top:auto; bottom:0; border-radius:2px; box-shadow:none; }
+:root[data-theme] .nav-marker-spray { display:none; }
+:root[data-theme] .content { padding-top:28px; }
+:root[data-theme] .page-heading { margin-bottom:24px; }
+:root[data-theme] .page-heading h1 { font-size:32px; letter-spacing:-.6px; }
+:root[data-theme] :is(.daily-panel,.vocabulary-panel,.daily-note,.tutorial-reading,.phonemic-detail) { border:1px solid var(--line); border-radius:var(--radius); box-shadow:var(--shadow); }
+:root[data-theme] :is(button,summary,select) { transition:translate 240ms var(--spring),scale 180ms,background-color 220ms,box-shadow 220ms,border-color 220ms; }
+@media (hover:hover) {
+  :root[data-theme] button:hover:not(:disabled):not(.backdrop) { translate:0 -2px; }
+  :root[data-theme] :is(.daily-button,.voice-button,.lesson-primary):hover:not(:disabled) { box-shadow:0 6px 16px #253b4812; }
+}
+:root[data-theme] button:active:not(:disabled):not(.backdrop) { scale:.97; }
+:root[data-theme] :is(.daily-button.primary,.lesson-primary,.course-start .daily-button.primary),
+:root[data-theme] :is(.daily-button.primary,.lesson-primary,.course-start .daily-button.primary):hover:not(:disabled) {
+  background:var(--palette-action); border:1px solid var(--accent-line); color:var(--action-ink); border-radius:12px; box-shadow:0 3px 9px #c9e3de35;
+}
+:root[data-theme] button:disabled { opacity:.55; }
+.course-reading .course-current-body { display:block; }
+.course-current { background:var(--palette-card); border-color:var(--accent-line)!important; }
+.course-reading-preview { display:grid; gap:18px; padding:22px; background:#ffffffdc; border-radius:12px; margin:12px 0 4px; }
+.course-reading-preview .course-example-meaning { display:block; font-size:18px; font-weight:650; }
+.course-reading-preview .daily-phrase-content { font-family:var(--mono); font-size:18px; }
+.course-current-copy h3 { margin-bottom:16px; }
+.course-illustration { background:var(--palette-art); color:var(--action-ink); min-height:240px; }
+.course-facts { margin:20px 0; }
+.course-facts>div { background:#ffffffb8; padding:10px 14px; }
+.course-start { display:flex; justify-content:flex-end; }
+.course-details .course-examples { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:24px; }
+.course-examples>div { min-width:0; }
+.course-home .daily-total strong,.daily-total strong { color:var(--accent); }
+.course-home .daily-note>.daily-button { background:var(--surface); }
+:root[data-theme] .review-list-heading { background:var(--palette-card); border-radius:var(--radius) var(--radius) 0 0; padding:22px; margin-bottom:18px; }
+.expression-review { overflow:hidden; }
+.expression-review .daily-panel-heading { padding-top:0; }
+.expression-review .daily-expression-copy p { margin:8px 0 0; color:var(--ink-soft); }
+.expression-review .daily-expression { padding:24px; }
+.review-sidebar .daily-note { padding:22px; }
+.review-sidebar .daily-total strong { font-size:36px; }
+:root[data-theme] .library-tools { padding:22px; background:var(--surface); border-radius:var(--radius) var(--radius) 0 0; }
+:root[data-theme] .search { background:var(--surface-2); border:1px solid var(--line); border-radius:10px; }
+:root[data-theme] .category-select { border-color:var(--line); border-radius:10px; }
+:root[data-theme] .word-card { grid-template-columns:minmax(150px,.8fr) minmax(0,1.1fr) auto; align-items:center; gap:20px; padding:22px; }
+:root[data-theme] .word-card .word-copy { grid-column:1; grid-row:1; min-width:0; }
+:root[data-theme] .word-card .example { grid-column:2; grid-row:1; min-width:0; margin:0; padding:12px 16px; border:0; border-radius:10px; background:var(--surface-2); }
+:root[data-theme] .word-card .card-actions { grid-column:3; grid-row:1; max-width:150px; }
+:root[data-theme] .word-title strong { font-size:20px; font-family:var(--mono); }
+:root[data-theme] .word-card .meaning { font-size:21px; font-weight:650; }
+:root[data-theme] .word-meta { font-size:14px; }
+:root[data-theme] .inline-example>button:first-child { display:flex; flex-direction:column; align-items:flex-start; }
+:root[data-theme] .example-zh { order:-1; font-size:16px; color:var(--ink); }
+:root[data-theme] .example-en { font-size:16px; }
+:root[data-theme] .word-card:hover { background:#fafcfc; }
+:root[data-theme] :is(.favorite.active,.daily-expression-star[aria-pressed=true]) { color:var(--accent); }
+:root[data-theme] :is(.favorite.active,.daily-expression-star[aria-pressed=true]) .icon { fill:var(--accent); animation:palette-star 380ms var(--spring); }
+:root[data-theme] .daily-expression { padding-block:24px; }
+:root[data-theme] .daily-expression-content { font-size:20px; }
+:root[data-theme] .daily-meaning { font-size:21px; font-weight:650; }
+:root[data-theme] :is(.daily-study-card,.daily-exercise,.daily-summary,.lesson-content) { border:1px solid var(--line); border-radius:20px; background:var(--surface); box-shadow:var(--shadow); }
+:root[data-theme] .daily-study-card { background:var(--palette-card); }
+:root[data-theme] .daily-phrase { background:#ffffffdc; }
+:root[data-theme] :is(.lesson-target,.lesson-sentence,.lesson-note,.daily-feedback,.daily-correction,.tutorial-feedback) { background:var(--palette-card); }
+:root[data-theme] :is(.daily-option[aria-pressed=true],.lesson-option.lesson-selected,.lesson-pair-card.lesson-selected,.tutorial-options [aria-pressed=true],.phonemic-cell.selected) { background:var(--palette-selected); color:var(--ink); border-color:var(--accent-line); }
+:root[data-theme] :is(.lesson-progress>span,.daily-session-progress>span) { background:var(--palette-action); }
+:root[data-theme] .lesson-overlay { --lesson-primary-ink:var(--action-ink); --lesson-listen-fill:var(--palette-selected); }
+:root[data-theme] :is(.modal,.sync-dialog) { border:1px solid var(--line); border-radius:24px; box-shadow:0 26px 80px #253b4825; animation:palette-dialog 480ms var(--spring); }
+:root[data-theme] .backdrop { backdrop-filter:blur(5px); }
+:root[data-theme] :is(.voice-select select,.sync-dialog input,.sync-dialog textarea) { border-color:var(--line); background:var(--surface-2); border-radius:10px; }
+:root[data-theme] .voice-feedback-setting { background:var(--palette-selected); padding:14px; border-radius:12px; }
+:root[data-theme] :is(.phonemic-detail,.tutorial-directory button[aria-current],.tutorial-directory button[aria-pressed=true],.tutorial-action) { background:var(--palette-card); }
+:root[data-theme] .phonemic-cell { border-radius:12px; }
+:root[data-theme] .phonemic-cell.selected { animation:palette-pop 380ms var(--spring); }
+:root[data-theme] :is(.daily-enter,.lesson-content,.tutorial-article) { animation:palette-content 420ms var(--spring); }
+:root[data-theme] :is(.daily-feedback,.lesson-feedback,.tutorial-feedback) { animation:palette-content 340ms var(--spring); }
+:root[data-theme] :is(.daily-answer-tokens .reading-token,.lesson-selected,.course-pair.matched) { animation:palette-pop 320ms var(--spring); }
+:root[data-theme] details[open]>:not(summary) { animation:palette-content 300ms var(--spring); }
+@keyframes palette-dialog { from { opacity:0; transform:translateY(45px) scale(.9); } 76% { opacity:1; transform:translateY(-4px) scale(1.01); } to { transform:none; } }
+@keyframes palette-content { from { opacity:.25; transform:translateY(20px) scale(.985); } to { opacity:1; transform:none; } }
+@keyframes palette-pop { from { transform:scale(.94); } 65% { transform:scale(1.025); } to { transform:none; } }
+@keyframes palette-star { 50% { transform:scale(1.22) rotate(12deg); } }
+@media(max-width:1100px) {
+  :root[data-theme] .word-card { grid-template-columns:minmax(0,1fr) auto; }
+  :root[data-theme] .word-card .card-actions { grid-column:2; }
+  :root[data-theme] .word-card .example { grid-column:1/-1; grid-row:2; }
+}
+@media(max-width:680px) {
+  :root[data-theme] .header-inner { grid-template-columns:minmax(0,1fr); gap:12px; padding-top:14px; }
+  :root[data-theme] .header-tools { grid-row:2; grid-column:1; justify-self:end; }
+  :root[data-theme] .main-nav { grid-row:3; gap:4px; width:100%; justify-content:space-between; }
+  :root[data-theme] .section-switch { width:100%; justify-content:space-between; }
+  :root[data-theme] .section-switch button { padding:8px; min-width:0; }
+  :root[data-theme] .header-tools .theme-picker { width:auto; }
+  :root[data-theme] .page-heading h1 { font-size:26px; }
+  :root[data-theme] .content { padding-top:24px; }
+  .course-details .course-examples { grid-template-columns:minmax(0,1fr); }
+  .course-reading-preview { padding:16px; }
+  :root[data-theme] .review-list-heading { padding:18px; }
+  :root[data-theme] .word-card { padding:18px 16px; gap:12px; }
+  :root[data-theme] .word-card .card-actions { max-width:110px; }
+  :root[data-theme] .word-card .meaning,.daily-meaning { font-size:19px; }
+  :root[data-theme] .course-start .daily-button { width:100%; }
+}
+@media(prefers-reduced-motion:reduce) {
+  :root[data-theme] *, :root[data-theme] *::before, :root[data-theme] *::after { animation:none!important; transition:none!important; scroll-behavior:auto!important; }
+  :root[data-theme] button:hover { translate:none!important; }
+}

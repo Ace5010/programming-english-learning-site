@@ -1,6 +1,7 @@
 import { programmingUnits, type ProgrammingAbility, type ProgrammingExercise, type ProgrammingLesson, type ProgrammingUnit } from './programmingCourse.ts'
 import { vocabulary, type VocabularyItem } from './vocabulary.ts'
 import type { LearningExercise, LearningLesson } from './learningTypes.ts'
+import { sentenceVariants } from './courseVariants.ts'
 
 export type ProgrammingLearningDifficulty = 'recognition' | 'context' | 'recall'
 export type AdaptiveProgrammingExercise = ProgrammingExercise & LearningExercise & {
@@ -74,6 +75,9 @@ function candidate(
     ...draft, id, wordIds: [item.id], knowledgeIds: [`word-${item.id}`], ability, learningDifficulty,
     // The same task in a later integrated lesson is still the same exposure.
     learningSignature: `word-${item.id}:${variant}`,
+    learningContext: ['sentence', 'translation', 'cloze', 'recall', 'listen-gap', 'order-blocks', 'order-words', 'free-gap'].includes(variant)
+      ? `sentence:${item.example.toLowerCase()}` : `word:${item.id}`,
+    ...(variant === 'recall' ? { recallSupport: true } : {}),
     ...(draft.options ? { options: arranged(draft.options, id) } : {}),
   }
 }
@@ -98,6 +102,10 @@ function practiceForWord(lessonId: string, item: VocabularyItem, taught: Vocabul
   const sentenceExplanation = `${item.example} 表示“${item.exampleZh}”；${item.word} 在这里表示“${ownMeaning}”。`
 
   return [
+    candidate(lessonId, item, 'free-gap', 'context', 'recall', {
+      kind: 'fill', prompt: `根据中文补上重点词：\n${item.exampleZh}`,
+      parts: [before, after], blanks: [[missingWord]], explanation: sentenceExplanation,
+    }),
     candidate(lessonId, item, 'meaning', 'meaning', 'recognition', {
       kind: 'choice', prompt: `在${context}语境中，${item.word} 表示什么？`,
       options: [ownMeaning, ...meaningDistractors.map(meaning)], answers: [ownMeaning],
@@ -133,14 +141,40 @@ function practiceForWord(lessonId: string, item: VocabularyItem, taught: Vocabul
       parts: [`${before}${missingWord[0]}`, after], blanks: [[missingWord.slice(1)]],
       explanation: sentenceExplanation,
     }),
+    ...sentenceVariants(item.example, item.exampleZh, `example-${item.id}`, taught.map(word => word.word)).map(({ variant, distractor, ...draft }) => ({
+      ...candidate(lessonId, item, variant, draft.audioPrompt ? 'listening' : 'context', variant === 'order-blocks' ? 'recognition' : 'context', draft),
+      ...draft,
+      // This course records word-level listening: the blank must test that word,
+      // rather than whichever surrounding word happens to be longest.
+      ...(draft.audioPrompt ? { parts: [before, after], blanks: [[missingWord]] } : {}),
+      ...(distractor ? { prerequisiteIds: [`word-${taught.find(word => word.word === distractor)!.id}`] } : {}),
+    })),
+    ...(['text', 'audio'] as const).map(pairMode => {
+      const group = [item, ...meaningDistractors];
+      return { id: `${lessonId}-p-${item.id}-match-${pairMode}`, kind: 'match' as const, pairMode,
+        prompt: pairMode === 'audio' ? '听声音，选择对应的中文。' : '配对英文和中文。', explanation: '配对后读一遍，记住声音、英文和含义。',
+        pairs: group.map(word => ({ id: `word-${word.id}`, en: word.word, zh: meaning(word), audioId: `word-${word.id}` })),
+        wordIds: group.map(word => word.id), knowledgeIds: group.map(word => `word-${word.id}`), ability: pairMode === 'audio' ? 'listening' as const : 'meaning' as const,
+        learningDifficulty: 'recognition' as const, learningSignature: `pairs:${pairMode}:${group.map(word => word.id).sort((a, b) => a - b).join(',')}` };
+    }),
   ]
 }
 
 const taughtIds = new Set<number>()
+// Code/command contexts have no sentence-final punctuation; keep their authored identity explicit.
+const codeContexts: Record<string, string> = {
+  'P1-01-03-e02': 'git checkout main',
+  'P1-02-02-e02': 'function greet(name) { return name; }',
+  'P1-02-02-e03': 'greet("Ben")',
+  'P1-02-02-r02': 'function add(a, b); add(2, 3)',
+  'P1-02-06-e02': 'function greet(name); greet("Kai")',
+}
 function authoredMetadata(exercise: ProgrammingExercise): AdaptiveProgrammingExercise {
+  const sentence = codeContexts[exercise.id] ?? exercise.prompt.match(/[A-Za-z][A-Za-z0-9 ,'-]*[.!?]/)?.[0];
   return { ...exercise,
     learningDifficulty: exercise.ability === 'context' ? 'context' : exercise.ability === 'spelling' ? 'recall' : 'recognition',
     learningSignature: `authored:${exercise.id}`,
+    learningContext: sentence ? `sentence:${sentence.toLowerCase()}` : `phrase:${exercise.knowledgeIds.join(',')}`,
   }
 }
 

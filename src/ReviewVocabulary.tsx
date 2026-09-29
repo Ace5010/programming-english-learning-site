@@ -53,16 +53,16 @@ export default function ReviewVocabulary({ words, progress, favorites, favoriteW
         <div className="review-list-tools"><label className="search"><Icon name="search" /><input aria-label="搜索已学词汇" value={query} onChange={event => { setQuery(event.target.value); setVisibleCount(24); }} placeholder="搜索单词、中文或例句" />{query && <button aria-label="清除已学词搜索" onClick={() => { setQuery(''); setVisibleCount(24); }}><Icon name="close" /></button>}</label>
           <label className="category-select"><span>显示</span><select aria-label="复习词汇范围" value={filter} onChange={event => { setFilter(event.target.value as Filter); setVisibleCount(24); }}><option value="all">全部已学 · {counts.all}</option><option value="due">待复习 · {counts.due}</option><option value="weak">需要巩固 · {counts.weak}</option><option value="scheduled">未到期 · {counts.scheduled}</option></select></label>
         </div>
-        <div className="list-guide"><span role="status">{filtered.length} 个词</span><p><Icon name="sound" />点单词或例句听发音</p></div>
+        <div className="list-guide"><span role="status">{filtered.length} 个词</span></div>
         {filtered.length ? <>
-          <div className="list-columns" aria-hidden="true"><span>单词 / 发音</span><span>中文释义</span><span>复习状态</span></div>
+
           <div className="word-grid">{filtered.slice(0, visibleCount).map(({ item, weak, due, nextDue }) => <VocabularyRow key={item.id} item={item} favorite={favorites.has(item.id)} favoriteDisabled={!!favoriteWarning} speaking={speaking} speed={speed} toggleFavorite={toggleFavorite} playWord={playWord} playExample={playExample}
             status={<><span className={due ? 'review-due' : ''}>{due ? '待复习' : `下次复习 ${new Date(nextDue).toLocaleDateString('zh-CN', { month: 'numeric', day: 'numeric' })}`}</span>{weak.length > 0 && <span className="review-weak">需巩固：{weak.map(ability => abilityLabels[ability]).join('、')}</span>}</>}
             action={<button className="daily-button review-word-action" disabled={disabled} onClick={() => startWords([item.id])} aria-label={`练习 ${item.word}`}>练习</button>} />)}</div>
           {visibleCount < filtered.length && <div className="load-more-area"><button className="load-more" onClick={() => setVisibleCount(count => count + 24)}>再显示 24 个<Icon name="chevron" /></button><span>已显示 {Math.min(visibleCount, filtered.length)} / {filtered.length}</span></div>}
         </> : <div className="review-list-empty"><p>{search ? '没有找到相符的已学词汇。' : filter === 'due' ? '暂时没有到期的词，可以提前练习已学词。' : filter === 'weak' ? '目前没有需要额外巩固的词。' : '目前的已学词都已到复习时间。'}</p><button className="daily-button" onClick={resetFilters}>查看全部已学词</button></div>}
-      </> : <div className="review-list-empty"><p>已确认掌握的词和课程中巩固好的词会显示在这里，可以查看释义、听发音或直接练习。</p><button className="daily-button" onClick={openCourse}>去学习当前课程<Icon name="arrow" /></button></div>}
+      </> : <div className="review-list-empty"><p>暂无可复习的词语。</p><button className="daily-button" onClick={openCourse}>去学习当前课程<Icon name="arrow" /></button></div>}
     </section>
-    <aside className="review-sidebar" aria-label="其他复习方式"><details className="review-scenarios"><summary><span>场景复习</span><Icon name="chevron" /></summary><div className="review-scenario-content">{scenarios}</div></details><button className="daily-button text" onClick={exportRecord}>导出学习记录</button></aside>
+    <aside className="review-sidebar" aria-label="复习安排"><section className="daily-note"><h2>本次复习</h2><p className="daily-total">待复习 <strong>{counts.due}</strong> 个词</p></section><details className="review-scenarios"><summary><span>场景复习</span><Icon name="chevron" /></summary><div className="review-scenario-content">{scenarios}</div></details><button className="daily-button text" onClick={exportRecord}>导出学习记录</button></aside>
   </div>;
 }

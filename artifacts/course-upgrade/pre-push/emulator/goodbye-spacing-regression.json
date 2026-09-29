@@ -1,0 +1,8 @@
+{
+  "method": "Replay of the previously captured real native transcript in the isolated QA app; this is not a new microphone recognition test",
+  "script": [
+    "https://appassets.androidplatform.net/assets/web/assets/index-DmuWKR-G.js"
+  ],
+  "text": "再见！\n\nGoodbye!\n听示范\n慢速\n再读一次\n\n这句已识别完整。\n\n识别到：good bye",
+  "matched": true
+}

@@ -1,0 +1,2056 @@
+{
+  "version": "crottc-whisper-word-v2",
+  "cloudCalls": 0,
+  "networkDisabled": true,
+  "cases": [
+    {
+      "id": "aria-hello-as-hello",
+      "file": "public/audio/daily/aria/hello.mp3",
+      "sha256": "d647bdc233e2be048fef5c9c34d03d6ed22e66cb4031f23d9703eef01495bf5b",
+      "reference": "hello",
+      "spokenFixture": "hello",
+      "expectedCorrect": true,
+      "result": {
+        "version": "crottc-whisper-word-v2",
+        "experimental": true,
+        "reference": "hello",
+        "status": "supported",
+        "reason": "phonetic-evidence-agrees",
+        "feedback": [],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "hello",
+            "expected": "h",
+            "heard": "h",
+            "expectedPosterior": 0.99637,
+            "heardPosterior": 0.99637,
+            "state": "supported"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "hello",
+            "expected": "ɛ",
+            "heard": "ɛ",
+            "expectedPosterior": 0.6615,
+            "heardPosterior": 0.6615,
+            "state": "supported"
+          },
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "hello",
+            "expected": "l",
+            "heard": "l",
+            "expectedPosterior": 0.99962,
+            "heardPosterior": 0.99962,
+            "state": "supported"
+          },
+          {
+            "index": 3,
+            "wordIndex": 0,
+            "word": "hello",
+            "expected": "oʊ",
+            "heard": "oʊ",
+            "expectedPosterior": 0.97561,
+            "heardPosterior": 0.97561,
+            "state": "supported"
+          }
+        ],
+        "transcript": "Hello",
+        "recognizedWordsMatch": true,
+        "diagnostics": {
+          "unconfirmedPhones": []
+        },
+        "heardPhones": [
+          "h",
+          "ɛ",
+          "l",
+          "oʊ"
+        ],
+        "referencePhones": [
+          "h",
+          "ɛ",
+          "l",
+          "oʊ"
+        ],
+        "computeMs": 1518.66,
+        "wordEvidence": [
+          {
+            "noSpeechProbability": 0.0419,
+            "averageLogProbability": -0.6276
+          }
+        ],
+        "rawTranscript": "Hello",
+        "whisperRevision": "536b0662742c02347bc0e980a01041f333bce120",
+        "elapsedMs": 1575
+      }
+    },
+    {
+      "id": "guy-hello-as-hello",
+      "file": "public/audio/daily/guy/hello.mp3",
+      "sha256": "75995d47e90e5015f57dd51844e4e12ede0b163c6fc06b9d829f7edf1d9fa386",
+      "reference": "hello",
+      "spokenFixture": "hello",
+      "expectedCorrect": true,
+      "result": {
+        "version": "crottc-whisper-word-v2",
+        "experimental": true,
+        "reference": "hello",
+        "status": "supported",
+        "reason": "phonetic-evidence-agrees",
+        "feedback": [],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "hello",
+            "expected": "h",
+            "heard": "h",
+            "expectedPosterior": 0.99293,
+            "heardPosterior": 0.99293,
+            "state": "supported"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "hello",
+            "expected": "ə",
+            "heard": "ə",
+            "expectedPosterior": 0.54859,
+            "heardPosterior": 0.54859,
+            "state": "supported"
+          },
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "hello",
+            "expected": "l",
+            "heard": "l",
+            "expectedPosterior": 0.99983,
+            "heardPosterior": 0.99983,
+            "state": "supported"
+          },
+          {
+            "index": 3,
+            "wordIndex": 0,
+            "word": "hello",
+            "expected": "oʊ",
+            "heard": "oʊ",
+            "expectedPosterior": 0.97475,
+            "heardPosterior": 0.97475,
+            "state": "supported"
+          }
+        ],
+        "transcript": "Hello?",
+        "recognizedWordsMatch": true,
+        "diagnostics": {
+          "unconfirmedPhones": []
+        },
+        "heardPhones": [
+          "h",
+          "ə",
+          "l",
+          "oʊ"
+        ],
+        "referencePhones": [
+          "h",
+          "ə",
+          "l",
+          "oʊ"
+        ],
+        "computeMs": 1527.7,
+        "wordEvidence": [
+          {
+            "noSpeechProbability": 0.018,
+            "averageLogProbability": -0.73
+          }
+        ],
+        "rawTranscript": "Hello?",
+        "whisperRevision": "536b0662742c02347bc0e980a01041f333bce120",
+        "elapsedMs": 1580
+      }
+    },
+    {
+      "id": "aria-goodbye-as-goodbye",
+      "file": "public/audio/daily/aria/goodbye.mp3",
+      "sha256": "39f9feb199cf056ed30b73321bc005e4265f2454e31332afd4dc66d032069639",
+      "reference": "goodbye",
+      "spokenFixture": "goodbye",
+      "expectedCorrect": true,
+      "result": {
+        "version": "crottc-whisper-word-v2",
+        "experimental": true,
+        "reference": "goodbye",
+        "status": "supported",
+        "reason": "phonetic-evidence-agrees",
+        "feedback": [],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "goodbye",
+            "expected": "ɡ",
+            "heard": "ɡ",
+            "expectedPosterior": 0.99703,
+            "heardPosterior": 0.99703,
+            "state": "supported"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "goodbye",
+            "expected": "ʊ",
+            "heard": "ʊ",
+            "expectedPosterior": 0.91849,
+            "heardPosterior": 0.91849,
+            "state": "supported"
+          },
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "goodbye",
+            "expected": "d",
+            "heard": "d",
+            "expectedPosterior": 0.98673,
+            "heardPosterior": 0.98673,
+            "state": "supported"
+          },
+          {
+            "index": 3,
+            "wordIndex": 0,
+            "word": "goodbye",
+            "expected": "b",
+            "heard": "b",
+            "expectedPosterior": 0.99418,
+            "heardPosterior": 0.99418,
+            "state": "supported"
+          },
+          {
+            "index": 4,
+            "wordIndex": 0,
+            "word": "goodbye",
+            "expected": "aɪ",
+            "heard": "aɪ",
+            "expectedPosterior": 0.99867,
+            "heardPosterior": 0.99867,
+            "state": "supported"
+          }
+        ],
+        "transcript": "Goodbye.",
+        "recognizedWordsMatch": true,
+        "diagnostics": {
+          "unconfirmedPhones": []
+        },
+        "heardPhones": [
+          "ɡ",
+          "ʊ",
+          "d",
+          "b",
+          "aɪ"
+        ],
+        "referencePhones": [
+          "ɡ",
+          "ʊ",
+          "d",
+          "b",
+          "aɪ"
+        ],
+        "computeMs": 1547.53,
+        "wordEvidence": [
+          {
+            "noSpeechProbability": 0.0065,
+            "averageLogProbability": -0.7486
+          }
+        ],
+        "rawTranscript": "Goodbye.",
+        "whisperRevision": "536b0662742c02347bc0e980a01041f333bce120",
+        "elapsedMs": 1607
+      }
+    },
+    {
+      "id": "guy-goodbye-as-goodbye",
+      "file": "public/audio/daily/guy/goodbye.mp3",
+      "sha256": "351fcb29dfd2a4825344b9a6b85ee4df13ea1738faed04d97b8ef54fb33b4ba6",
+      "reference": "goodbye",
+      "spokenFixture": "goodbye",
+      "expectedCorrect": true,
+      "result": {
+        "version": "crottc-whisper-word-v2",
+        "experimental": true,
+        "reference": "goodbye",
+        "status": "supported",
+        "reason": "phonetic-evidence-agrees",
+        "feedback": [],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "goodbye",
+            "expected": "ɡ",
+            "heard": "ɡ",
+            "expectedPosterior": 0.99776,
+            "heardPosterior": 0.99776,
+            "state": "supported"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "goodbye",
+            "expected": "ʊ",
+            "heard": "ʊ",
+            "expectedPosterior": 0.95071,
+            "heardPosterior": 0.95071,
+            "state": "supported"
+          },
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "goodbye",
+            "expected": "d",
+            "heard": "d",
+            "expectedPosterior": 0.99251,
+            "heardPosterior": 0.99251,
+            "state": "supported"
+          },
+          {
+            "index": 3,
+            "wordIndex": 0,
+            "word": "goodbye",
+            "expected": "b",
+            "heard": "b",
+            "expectedPosterior": 0.99374,
+            "heardPosterior": 0.99374,
+            "state": "supported"
+          },
+          {
+            "index": 4,
+            "wordIndex": 0,
+            "word": "goodbye",
+            "expected": "aɪ",
+            "heard": "aɪ",
+            "expectedPosterior": 0.99822,
+            "heardPosterior": 0.99822,
+            "state": "supported"
+          }
+        ],
+        "transcript": "Goodbye",
+        "recognizedWordsMatch": true,
+        "diagnostics": {
+          "unconfirmedPhones": []
+        },
+        "heardPhones": [
+          "ɡ",
+          "ʊ",
+          "d",
+          "b",
+          "aɪ"
+        ],
+        "referencePhones": [
+          "ɡ",
+          "ʊ",
+          "d",
+          "b",
+          "aɪ"
+        ],
+        "computeMs": 1562.25,
+        "wordEvidence": [
+          {
+            "noSpeechProbability": 0.0297,
+            "averageLogProbability": -0.4036
+          }
+        ],
+        "rawTranscript": "Goodbye",
+        "whisperRevision": "536b0662742c02347bc0e980a01041f333bce120",
+        "elapsedMs": 1621
+      }
+    },
+    {
+      "id": "aria-think-as-think",
+      "file": "public/audio/aria/word-2652.mp3",
+      "sha256": "56d9cca2c2277ddc788953d76f26920ef025162bb072ddf76489d80924dd85ee",
+      "reference": "think",
+      "spokenFixture": "think",
+      "expectedCorrect": true,
+      "result": {
+        "version": "crottc-whisper-word-v2",
+        "experimental": true,
+        "reference": "think",
+        "status": "supported",
+        "reason": "phonetic-evidence-agrees",
+        "feedback": [],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "think",
+            "expected": "θ",
+            "heard": "θ",
+            "expectedPosterior": 0.98984,
+            "heardPosterior": 0.98984,
+            "state": "supported"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "think",
+            "expected": "ɪ",
+            "heard": "ɪ",
+            "expectedPosterior": 0.9045,
+            "heardPosterior": 0.9045,
+            "state": "supported"
+          },
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "think",
+            "expected": "ŋ",
+            "heard": "ŋ",
+            "expectedPosterior": 0.99235,
+            "heardPosterior": 0.99235,
+            "state": "supported"
+          },
+          {
+            "index": 3,
+            "wordIndex": 0,
+            "word": "think",
+            "expected": "k",
+            "heard": "k",
+            "expectedPosterior": 0.9892,
+            "heardPosterior": 0.9892,
+            "state": "supported"
+          }
+        ],
+        "transcript": "Think.",
+        "recognizedWordsMatch": true,
+        "diagnostics": {
+          "unconfirmedPhones": []
+        },
+        "heardPhones": [
+          "θ",
+          "ɪ",
+          "ŋ",
+          "k"
+        ],
+        "referencePhones": [
+          "θ",
+          "ɪ",
+          "ŋ",
+          "k"
+        ],
+        "computeMs": 1555.29,
+        "wordEvidence": [
+          {
+            "noSpeechProbability": 0.0561,
+            "averageLogProbability": -0.691
+          }
+        ],
+        "rawTranscript": "Think.",
+        "whisperRevision": "536b0662742c02347bc0e980a01041f333bce120",
+        "elapsedMs": 1609
+      }
+    },
+    {
+      "id": "guy-think-as-think",
+      "file": "public/audio/guy/word-2652.mp3",
+      "sha256": "9c53003ff5ca866c3041b440c3075da2da94d8b761c1f267080c2d44b0334daf",
+      "reference": "think",
+      "spokenFixture": "think",
+      "expectedCorrect": true,
+      "result": {
+        "version": "crottc-whisper-word-v2",
+        "experimental": true,
+        "reference": "think",
+        "status": "supported",
+        "reason": "phonetic-evidence-agrees",
+        "feedback": [],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "think",
+            "expected": "θ",
+            "heard": "θ",
+            "expectedPosterior": 0.96435,
+            "heardPosterior": 0.96435,
+            "state": "supported"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "think",
+            "expected": "ɪ",
+            "heard": "ɪ",
+            "expectedPosterior": 0.90767,
+            "heardPosterior": 0.90767,
+            "state": "supported"
+          },
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "think",
+            "expected": "ŋ",
+            "heard": "ŋ",
+            "expectedPosterior": 0.99106,
+            "heardPosterior": 0.99106,
+            "state": "supported"
+          },
+          {
+            "index": 3,
+            "wordIndex": 0,
+            "word": "think",
+            "expected": "k",
+            "heard": "k",
+            "expectedPosterior": 0.99563,
+            "heardPosterior": 0.99563,
+            "state": "supported"
+          }
+        ],
+        "transcript": "Think",
+        "recognizedWordsMatch": true,
+        "diagnostics": {
+          "unconfirmedPhones": []
+        },
+        "heardPhones": [
+          "θ",
+          "ɪ",
+          "ŋ",
+          "k"
+        ],
+        "referencePhones": [
+          "θ",
+          "ɪ",
+          "ŋ",
+          "k"
+        ],
+        "computeMs": 1529.34,
+        "wordEvidence": [
+          {
+            "noSpeechProbability": 0.119,
+            "averageLogProbability": -0.499
+          }
+        ],
+        "rawTranscript": "Think",
+        "whisperRevision": "536b0662742c02347bc0e980a01041f333bce120",
+        "elapsedMs": 1582
+      }
+    },
+    {
+      "id": "aria-ship-as-ship",
+      "file": "public/audio/aria/word-2224.mp3",
+      "sha256": "93e91a16f6060328871735321fa37898b44145ccc7db88a660ef7c06c0402ef4",
+      "reference": "ship",
+      "spokenFixture": "ship",
+      "expectedCorrect": true,
+      "result": {
+        "version": "crottc-whisper-word-v2",
+        "experimental": true,
+        "reference": "ship",
+        "status": "uncertain",
+        "reason": "phoneme-evidence-conflict",
+        "feedback": [],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "ship",
+            "expected": "ʃ",
+            "heard": "ʃ",
+            "expectedPosterior": 0.99838,
+            "heardPosterior": 0.99838,
+            "state": "supported"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "ship",
+            "expected": "ɪ",
+            "heard": "ɪ",
+            "expectedPosterior": 0.80592,
+            "heardPosterior": 0.80592,
+            "state": "supported"
+          },
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "ship",
+            "expected": "p",
+            "heard": "p",
+            "expectedPosterior": 0.99467,
+            "heardPosterior": 0.99467,
+            "state": "supported"
+          }
+        ],
+        "transcript": "ship",
+        "recognizedWordsMatch": true,
+        "diagnostics": {
+          "unconfirmedPhones": []
+        },
+        "heardPhones": [
+          "ʃ",
+          "ɪ",
+          "ɛ",
+          "p"
+        ],
+        "referencePhones": [
+          "ʃ",
+          "ɪ",
+          "p"
+        ],
+        "computeMs": 1544.37,
+        "wordEvidence": [
+          {
+            "noSpeechProbability": 0.0662,
+            "averageLogProbability": -0.6556
+          }
+        ],
+        "rawTranscript": "ship",
+        "whisperRevision": "536b0662742c02347bc0e980a01041f333bce120",
+        "elapsedMs": 1596
+      }
+    },
+    {
+      "id": "guy-ship-as-ship",
+      "file": "public/audio/guy/word-2224.mp3",
+      "sha256": "3b2f0c745aefc588efad9acea1adb6332eceb4d80dc638578fddda9e808242d5",
+      "reference": "ship",
+      "spokenFixture": "ship",
+      "expectedCorrect": true,
+      "result": {
+        "version": "crottc-whisper-word-v2",
+        "experimental": true,
+        "reference": "ship",
+        "status": "uncertain",
+        "reason": "phoneme-evidence-conflict",
+        "feedback": [],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "ship",
+            "expected": "ʃ",
+            "heard": "ʃ",
+            "expectedPosterior": 0.99811,
+            "heardPosterior": 0.99811,
+            "state": "supported"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "ship",
+            "expected": "ɪ",
+            "heard": "ɪ",
+            "expectedPosterior": 0.95034,
+            "heardPosterior": 0.95034,
+            "state": "supported"
+          },
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "ship",
+            "expected": "p",
+            "heard": "p",
+            "expectedPosterior": 0.99189,
+            "heardPosterior": 0.99189,
+            "state": "supported"
+          }
+        ],
+        "transcript": "Ship",
+        "recognizedWordsMatch": true,
+        "diagnostics": {
+          "unconfirmedPhones": []
+        },
+        "heardPhones": [
+          "ʃ",
+          "ɪ",
+          "ɛ",
+          "p"
+        ],
+        "referencePhones": [
+          "ʃ",
+          "ɪ",
+          "p"
+        ],
+        "computeMs": 1541.84,
+        "wordEvidence": [
+          {
+            "noSpeechProbability": 0.0669,
+            "averageLogProbability": -0.3544
+          }
+        ],
+        "rawTranscript": "Ship",
+        "whisperRevision": "536b0662742c02347bc0e980a01041f333bce120",
+        "elapsedMs": 1598
+      }
+    },
+    {
+      "id": "aria-three-as-three",
+      "file": "public/audio/aria/word-2400.mp3",
+      "sha256": "dbd32db6d89af3f6ba5865985d6aea396c11469027890c3ff47f2df3858372f5",
+      "reference": "three",
+      "spokenFixture": "three",
+      "expectedCorrect": true,
+      "result": {
+        "version": "crottc-whisper-word-v2",
+        "experimental": true,
+        "reference": "three",
+        "status": "uncertain",
+        "reason": "phoneme-evidence-conflict",
+        "feedback": [],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "three",
+            "expected": "θ",
+            "heard": "θ",
+            "expectedPosterior": 0.71868,
+            "heardPosterior": 0.71868,
+            "state": "supported"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "three",
+            "expected": "ɹ",
+            "heard": "ɹ",
+            "expectedPosterior": 0.9923,
+            "heardPosterior": 0.9923,
+            "state": "supported"
+          },
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "three",
+            "expected": "i",
+            "heard": "i",
+            "expectedPosterior": 0.99862,
+            "heardPosterior": 0.99862,
+            "state": "supported"
+          }
+        ],
+        "transcript": "three",
+        "recognizedWordsMatch": true,
+        "diagnostics": {
+          "unconfirmedPhones": []
+        },
+        "heardPhones": [
+          "θ",
+          "f",
+          "ɹ",
+          "i"
+        ],
+        "referencePhones": [
+          "θ",
+          "ɹ",
+          "i"
+        ],
+        "computeMs": 1534.62,
+        "wordEvidence": [
+          {
+            "noSpeechProbability": 0.1155,
+            "averageLogProbability": -0.5595
+          }
+        ],
+        "rawTranscript": "3.",
+        "whisperRevision": "536b0662742c02347bc0e980a01041f333bce120",
+        "elapsedMs": 1590
+      }
+    },
+    {
+      "id": "guy-three-as-three",
+      "file": "public/audio/guy/word-2400.mp3",
+      "sha256": "94ceb6bcde145714f09292b63ae0d6624a89be5cb173720ac695119dafe3a0c2",
+      "reference": "three",
+      "spokenFixture": "three",
+      "expectedCorrect": true,
+      "result": {
+        "version": "crottc-whisper-word-v2",
+        "experimental": true,
+        "reference": "three",
+        "status": "supported",
+        "reason": "phonetic-evidence-agrees",
+        "feedback": [],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "three",
+            "expected": "θ",
+            "heard": "θ",
+            "expectedPosterior": 0.96795,
+            "heardPosterior": 0.96795,
+            "state": "supported"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "three",
+            "expected": "ɹ",
+            "heard": "ɹ",
+            "expectedPosterior": 0.99832,
+            "heardPosterior": 0.99832,
+            "state": "supported"
+          },
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "three",
+            "expected": "i",
+            "heard": "i",
+            "expectedPosterior": 0.99839,
+            "heardPosterior": 0.99839,
+            "state": "supported"
+          }
+        ],
+        "transcript": "three",
+        "recognizedWordsMatch": true,
+        "diagnostics": {
+          "unconfirmedPhones": []
+        },
+        "heardPhones": [
+          "θ",
+          "ɹ",
+          "i"
+        ],
+        "referencePhones": [
+          "θ",
+          "ɹ",
+          "i"
+        ],
+        "computeMs": 1574.65,
+        "wordEvidence": [
+          {
+            "noSpeechProbability": 0.0814,
+            "averageLogProbability": -0.5807
+          }
+        ],
+        "rawTranscript": "3",
+        "whisperRevision": "536b0662742c02347bc0e980a01041f333bce120",
+        "elapsedMs": 1629
+      }
+    },
+    {
+      "id": "aria-bad-as-bad",
+      "file": "public/audio/aria/word-2978.mp3",
+      "sha256": "77e448d4d24a5eb7bce40296318a11d4582a63b0ad88ae2b826b9f74353f92af",
+      "reference": "bad",
+      "spokenFixture": "bad",
+      "expectedCorrect": true,
+      "result": {
+        "version": "crottc-whisper-word-v2",
+        "experimental": true,
+        "reference": "bad",
+        "status": "supported",
+        "reason": "phonetic-evidence-agrees",
+        "feedback": [],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "bad",
+            "expected": "b",
+            "heard": "b",
+            "expectedPosterior": 0.99407,
+            "heardPosterior": 0.99407,
+            "state": "supported"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "bad",
+            "expected": "æ",
+            "heard": "æ",
+            "expectedPosterior": 0.99379,
+            "heardPosterior": 0.99379,
+            "state": "supported"
+          },
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "bad",
+            "expected": "d",
+            "heard": "d",
+            "expectedPosterior": 0.98421,
+            "heardPosterior": 0.98421,
+            "state": "supported"
+          }
+        ],
+        "transcript": "Bad",
+        "recognizedWordsMatch": true,
+        "diagnostics": {
+          "unconfirmedPhones": []
+        },
+        "heardPhones": [
+          "b",
+          "æ",
+          "d"
+        ],
+        "referencePhones": [
+          "b",
+          "æ",
+          "d"
+        ],
+        "computeMs": 1521.19,
+        "wordEvidence": [
+          {
+            "noSpeechProbability": 0.0188,
+            "averageLogProbability": -0.6944
+          }
+        ],
+        "rawTranscript": "Bad",
+        "whisperRevision": "536b0662742c02347bc0e980a01041f333bce120",
+        "elapsedMs": 1581
+      }
+    },
+    {
+      "id": "guy-bad-as-bad",
+      "file": "public/audio/guy/word-2978.mp3",
+      "sha256": "07160402b698581188f51423fc62d77102d77c247bbea7481bf140293e5dbcde",
+      "reference": "bad",
+      "spokenFixture": "bad",
+      "expectedCorrect": true,
+      "result": {
+        "version": "crottc-whisper-word-v2",
+        "experimental": true,
+        "reference": "bad",
+        "status": "supported",
+        "reason": "phonetic-evidence-agrees",
+        "feedback": [],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "bad",
+            "expected": "b",
+            "heard": "b",
+            "expectedPosterior": 0.99434,
+            "heardPosterior": 0.99434,
+            "state": "supported"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "bad",
+            "expected": "æ",
+            "heard": "æ",
+            "expectedPosterior": 0.99364,
+            "heardPosterior": 0.99364,
+            "state": "supported"
+          },
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "bad",
+            "expected": "d",
+            "heard": "d",
+            "expectedPosterior": 0.99372,
+            "heardPosterior": 0.99372,
+            "state": "supported"
+          }
+        ],
+        "transcript": "BAD",
+        "recognizedWordsMatch": true,
+        "diagnostics": {
+          "unconfirmedPhones": []
+        },
+        "heardPhones": [
+          "b",
+          "æ",
+          "d"
+        ],
+        "referencePhones": [
+          "b",
+          "æ",
+          "d"
+        ],
+        "computeMs": 1531.86,
+        "wordEvidence": [
+          {
+            "noSpeechProbability": 0.0403,
+            "averageLogProbability": -0.7105
+          }
+        ],
+        "rawTranscript": "BAD",
+        "whisperRevision": "536b0662742c02347bc0e980a01041f333bce120",
+        "elapsedMs": 1585
+      }
+    },
+    {
+      "id": "aria-right-as-right",
+      "file": "public/audio/aria/word-2160.mp3",
+      "sha256": "c4f8341a47942b096bcec86eacade529bb700fd8f725bfff388081846fb358df",
+      "reference": "right",
+      "spokenFixture": "right",
+      "expectedCorrect": true,
+      "result": {
+        "version": "crottc-whisper-word-v2",
+        "experimental": true,
+        "reference": "right",
+        "status": "supported",
+        "reason": "phonetic-evidence-agrees",
+        "feedback": [],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "right",
+            "expected": "ɹ",
+            "heard": "ɹ",
+            "expectedPosterior": 0.99915,
+            "heardPosterior": 0.99915,
+            "state": "supported"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "right",
+            "expected": "aɪ",
+            "heard": "aɪ",
+            "expectedPosterior": 0.99875,
+            "heardPosterior": 0.99875,
+            "state": "supported"
+          },
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "right",
+            "expected": "t",
+            "heard": "t",
+            "expectedPosterior": 0.99418,
+            "heardPosterior": 0.99418,
+            "state": "supported"
+          }
+        ],
+        "transcript": "Right!",
+        "recognizedWordsMatch": true,
+        "diagnostics": {
+          "unconfirmedPhones": []
+        },
+        "heardPhones": [
+          "ɹ",
+          "aɪ",
+          "t"
+        ],
+        "referencePhones": [
+          "ɹ",
+          "aɪ",
+          "t"
+        ],
+        "computeMs": 1520.8,
+        "wordEvidence": [
+          {
+            "noSpeechProbability": 0.0193,
+            "averageLogProbability": -0.7262
+          }
+        ],
+        "rawTranscript": "Right!",
+        "whisperRevision": "536b0662742c02347bc0e980a01041f333bce120",
+        "elapsedMs": 1578
+      }
+    },
+    {
+      "id": "guy-right-as-right",
+      "file": "public/audio/guy/word-2160.mp3",
+      "sha256": "d80d39b42a0d25f74b7b139ea295162b0436f554e01b7d8b5290e11e93556d0b",
+      "reference": "right",
+      "spokenFixture": "right",
+      "expectedCorrect": true,
+      "result": {
+        "version": "crottc-whisper-word-v2",
+        "experimental": true,
+        "reference": "right",
+        "status": "supported",
+        "reason": "phonetic-evidence-agrees",
+        "feedback": [],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "right",
+            "expected": "ɹ",
+            "heard": "ɹ",
+            "expectedPosterior": 0.99891,
+            "heardPosterior": 0.99891,
+            "state": "supported"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "right",
+            "expected": "aɪ",
+            "heard": "aɪ",
+            "expectedPosterior": 0.99898,
+            "heardPosterior": 0.99898,
+            "state": "supported"
+          },
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "right",
+            "expected": "t",
+            "heard": "t",
+            "expectedPosterior": 0.99871,
+            "heardPosterior": 0.99871,
+            "state": "supported"
+          }
+        ],
+        "transcript": "Right.",
+        "recognizedWordsMatch": true,
+        "diagnostics": {
+          "unconfirmedPhones": []
+        },
+        "heardPhones": [
+          "ɹ",
+          "aɪ",
+          "t"
+        ],
+        "referencePhones": [
+          "ɹ",
+          "aɪ",
+          "t"
+        ],
+        "computeMs": 1521.96,
+        "wordEvidence": [
+          {
+            "noSpeechProbability": 0.0233,
+            "averageLogProbability": -0.7023
+          }
+        ],
+        "rawTranscript": "Right.",
+        "whisperRevision": "536b0662742c02347bc0e980a01041f333bce120",
+        "elapsedMs": 1575
+      }
+    },
+    {
+      "id": "aria-sink-as-think",
+      "file": "public/audio/aria/word-959.mp3",
+      "sha256": "6e91c5e4a7ea69fc6243dbdf3eed48bba5106c2030d11f4c90937d8a9e9edaa7",
+      "reference": "think",
+      "spokenFixture": "sink",
+      "expectedCorrect": false,
+      "result": {
+        "version": "crottc-whisper-word-v2",
+        "experimental": true,
+        "reference": "think",
+        "status": "practice",
+        "reason": "phoneme-substitution",
+        "feedback": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "think",
+            "expected": "θ",
+            "heard": "s",
+            "expectedPosterior": 2e-05,
+            "heardPosterior": 0.9991,
+            "state": "practice"
+          }
+        ],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "think",
+            "expected": "θ",
+            "heard": "s",
+            "expectedPosterior": 2e-05,
+            "heardPosterior": 0.9991,
+            "state": "practice"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "think",
+            "expected": "ɪ",
+            "heard": "ɪ",
+            "expectedPosterior": 0.97047,
+            "heardPosterior": 0.97047,
+            "state": "supported"
+          },
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "think",
+            "expected": "ŋ",
+            "heard": "ŋ",
+            "expectedPosterior": 0.98795,
+            "heardPosterior": 0.98795,
+            "state": "supported"
+          },
+          {
+            "index": 3,
+            "wordIndex": 0,
+            "word": "think",
+            "expected": "k",
+            "heard": "k",
+            "expectedPosterior": 0.9902,
+            "heardPosterior": 0.9902,
+            "state": "supported"
+          }
+        ],
+        "transcript": "Sink",
+        "recognizedWordsMatch": false,
+        "diagnostics": {
+          "unconfirmedPhones": []
+        },
+        "heardPhones": [
+          "s",
+          "ɪ",
+          "ŋ",
+          "k"
+        ],
+        "referencePhones": [
+          "θ",
+          "ɪ",
+          "ŋ",
+          "k"
+        ],
+        "computeMs": 1535.91,
+        "wordEvidence": [
+          {
+            "noSpeechProbability": 0.2253,
+            "averageLogProbability": -0.6064
+          }
+        ],
+        "rawTranscript": "Sink",
+        "whisperRevision": "536b0662742c02347bc0e980a01041f333bce120",
+        "elapsedMs": 1591
+      }
+    },
+    {
+      "id": "guy-sink-as-think",
+      "file": "public/audio/guy/word-959.mp3",
+      "sha256": "2a1d15a183d4fe0d4b32443959c39b1854c2107f82f8ba797de5ab88fab4ec94",
+      "reference": "think",
+      "spokenFixture": "sink",
+      "expectedCorrect": false,
+      "result": {
+        "version": "crottc-whisper-word-v2",
+        "experimental": true,
+        "reference": "think",
+        "status": "practice",
+        "reason": "phoneme-substitution",
+        "feedback": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "think",
+            "expected": "θ",
+            "heard": "s",
+            "expectedPosterior": 1e-05,
+            "heardPosterior": 0.99932,
+            "state": "practice"
+          }
+        ],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "think",
+            "expected": "θ",
+            "heard": "s",
+            "expectedPosterior": 1e-05,
+            "heardPosterior": 0.99932,
+            "state": "practice"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "think",
+            "expected": "ɪ",
+            "heard": "ɪ",
+            "expectedPosterior": 0.94191,
+            "heardPosterior": 0.94191,
+            "state": "supported"
+          },
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "think",
+            "expected": "ŋ",
+            "heard": "ŋ",
+            "expectedPosterior": 0.99122,
+            "heardPosterior": 0.99122,
+            "state": "supported"
+          },
+          {
+            "index": 3,
+            "wordIndex": 0,
+            "word": "think",
+            "expected": "k",
+            "heard": "k",
+            "expectedPosterior": 0.99373,
+            "heardPosterior": 0.99373,
+            "state": "supported"
+          }
+        ],
+        "transcript": "Sink",
+        "recognizedWordsMatch": false,
+        "diagnostics": {
+          "unconfirmedPhones": []
+        },
+        "heardPhones": [
+          "s",
+          "ɪ",
+          "ŋ",
+          "k"
+        ],
+        "referencePhones": [
+          "θ",
+          "ɪ",
+          "ŋ",
+          "k"
+        ],
+        "computeMs": 1555.01,
+        "wordEvidence": [
+          {
+            "noSpeechProbability": 0.1273,
+            "averageLogProbability": -0.5293
+          }
+        ],
+        "rawTranscript": "Sink",
+        "whisperRevision": "536b0662742c02347bc0e980a01041f333bce120",
+        "elapsedMs": 1608
+      }
+    },
+    {
+      "id": "aria-sheep-as-ship",
+      "file": "public/audio/aria/word-2968.mp3",
+      "sha256": "d78bba621523dcd4fb8efdca6df67c3fc7a32644bc342b5f3f74378b36b259ae",
+      "reference": "ship",
+      "spokenFixture": "sheep",
+      "expectedCorrect": false,
+      "result": {
+        "version": "crottc-whisper-word-v2",
+        "experimental": true,
+        "reference": "ship",
+        "status": "practice",
+        "reason": "phoneme-substitution",
+        "feedback": [
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "ship",
+            "expected": "ɪ",
+            "heard": "i",
+            "expectedPosterior": 0.00019,
+            "heardPosterior": 0.9989,
+            "state": "practice"
+          }
+        ],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "ship",
+            "expected": "ʃ",
+            "heard": "ʃ",
+            "expectedPosterior": 0.99707,
+            "heardPosterior": 0.99707,
+            "state": "supported"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "ship",
+            "expected": "ɪ",
+            "heard": "i",
+            "expectedPosterior": 0.00019,
+            "heardPosterior": 0.9989,
+            "state": "practice"
+          },
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "ship",
+            "expected": "p",
+            "heard": "p",
+            "expectedPosterior": 0.99582,
+            "heardPosterior": 0.99582,
+            "state": "supported"
+          }
+        ],
+        "transcript": "sheep",
+        "recognizedWordsMatch": false,
+        "diagnostics": {
+          "unconfirmedPhones": []
+        },
+        "heardPhones": [
+          "ʃ",
+          "i",
+          "p"
+        ],
+        "referencePhones": [
+          "ʃ",
+          "ɪ",
+          "p"
+        ],
+        "computeMs": 1542.47,
+        "wordEvidence": [
+          {
+            "noSpeechProbability": 0.0305,
+            "averageLogProbability": -0.5355
+          }
+        ],
+        "rawTranscript": "sheep",
+        "whisperRevision": "536b0662742c02347bc0e980a01041f333bce120",
+        "elapsedMs": 1594
+      }
+    },
+    {
+      "id": "guy-sheep-as-ship",
+      "file": "public/audio/guy/word-2968.mp3",
+      "sha256": "7e6f1a2b72c797d1c095bda747d05fd45f61a62cd85eb1790663f51b2c07f212",
+      "reference": "ship",
+      "spokenFixture": "sheep",
+      "expectedCorrect": false,
+      "result": {
+        "version": "crottc-whisper-word-v2",
+        "experimental": true,
+        "reference": "ship",
+        "status": "practice",
+        "reason": "phoneme-substitution",
+        "feedback": [
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "ship",
+            "expected": "ɪ",
+            "heard": "i",
+            "expectedPosterior": 0.00018,
+            "heardPosterior": 0.99838,
+            "state": "practice"
+          }
+        ],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "ship",
+            "expected": "ʃ",
+            "heard": "ʃ",
+            "expectedPosterior": 0.99639,
+            "heardPosterior": 0.99639,
+            "state": "supported"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "ship",
+            "expected": "ɪ",
+            "heard": "i",
+            "expectedPosterior": 0.00018,
+            "heardPosterior": 0.99838,
+            "state": "practice"
+          },
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "ship",
+            "expected": "p",
+            "heard": "p",
+            "expectedPosterior": 0.98853,
+            "heardPosterior": 0.98853,
+            "state": "supported"
+          }
+        ],
+        "transcript": "Sheep",
+        "recognizedWordsMatch": false,
+        "diagnostics": {
+          "unconfirmedPhones": []
+        },
+        "heardPhones": [
+          "ʃ",
+          "i",
+          "p"
+        ],
+        "referencePhones": [
+          "ʃ",
+          "ɪ",
+          "p"
+        ],
+        "computeMs": 1542.9,
+        "wordEvidence": [
+          {
+            "noSpeechProbability": 0.0311,
+            "averageLogProbability": -0.3884
+          }
+        ],
+        "rawTranscript": "Sheep",
+        "whisperRevision": "536b0662742c02347bc0e980a01041f333bce120",
+        "elapsedMs": 1602
+      }
+    },
+    {
+      "id": "aria-free-as-three",
+      "file": "public/audio/aria/word-1649.mp3",
+      "sha256": "ffe976c2022e78e153ed1d4a79e8af3182ef98c58bd42522f04e1376578d0acb",
+      "reference": "three",
+      "spokenFixture": "free",
+      "expectedCorrect": false,
+      "result": {
+        "version": "crottc-whisper-word-v2",
+        "experimental": true,
+        "reference": "three",
+        "status": "practice",
+        "reason": "phoneme-substitution",
+        "feedback": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "three",
+            "expected": "θ",
+            "heard": "f",
+            "expectedPosterior": 0.00027,
+            "heardPosterior": 0.99646,
+            "state": "practice"
+          }
+        ],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "three",
+            "expected": "θ",
+            "heard": "f",
+            "expectedPosterior": 0.00027,
+            "heardPosterior": 0.99646,
+            "state": "practice"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "three",
+            "expected": "ɹ",
+            "heard": "ɹ",
+            "expectedPosterior": 0.99666,
+            "heardPosterior": 0.99666,
+            "state": "supported"
+          },
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "three",
+            "expected": "i",
+            "heard": "i",
+            "expectedPosterior": 0.99867,
+            "heardPosterior": 0.99867,
+            "state": "supported"
+          }
+        ],
+        "transcript": "Free",
+        "recognizedWordsMatch": false,
+        "diagnostics": {
+          "unconfirmedPhones": []
+        },
+        "heardPhones": [
+          "f",
+          "ɹ",
+          "i"
+        ],
+        "referencePhones": [
+          "θ",
+          "ɹ",
+          "i"
+        ],
+        "computeMs": 1531.97,
+        "wordEvidence": [
+          {
+            "noSpeechProbability": 0.0695,
+            "averageLogProbability": -0.6253
+          }
+        ],
+        "rawTranscript": "Free",
+        "whisperRevision": "536b0662742c02347bc0e980a01041f333bce120",
+        "elapsedMs": 1587
+      }
+    },
+    {
+      "id": "guy-free-as-three",
+      "file": "public/audio/guy/word-1649.mp3",
+      "sha256": "b64d197492c3ab8a73bcb5eb526e016455a9f5793081c3f58d95e56470fa5991",
+      "reference": "three",
+      "spokenFixture": "free",
+      "expectedCorrect": false,
+      "result": {
+        "version": "crottc-whisper-word-v2",
+        "experimental": true,
+        "reference": "three",
+        "status": "practice",
+        "reason": "phoneme-substitution",
+        "feedback": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "three",
+            "expected": "θ",
+            "heard": "f",
+            "expectedPosterior": 0.00011,
+            "heardPosterior": 0.99862,
+            "state": "practice"
+          }
+        ],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "three",
+            "expected": "θ",
+            "heard": "f",
+            "expectedPosterior": 0.00011,
+            "heardPosterior": 0.99862,
+            "state": "practice"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "three",
+            "expected": "ɹ",
+            "heard": "ɹ",
+            "expectedPosterior": 0.99762,
+            "heardPosterior": 0.99762,
+            "state": "supported"
+          },
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "three",
+            "expected": "i",
+            "heard": "i",
+            "expectedPosterior": 0.9972,
+            "heardPosterior": 0.9972,
+            "state": "supported"
+          }
+        ],
+        "transcript": "Free.",
+        "recognizedWordsMatch": false,
+        "diagnostics": {
+          "unconfirmedPhones": []
+        },
+        "heardPhones": [
+          "f",
+          "ɹ",
+          "i"
+        ],
+        "referencePhones": [
+          "θ",
+          "ɹ",
+          "i"
+        ],
+        "computeMs": 1549.55,
+        "wordEvidence": [
+          {
+            "noSpeechProbability": 0.0269,
+            "averageLogProbability": -0.7479
+          }
+        ],
+        "rawTranscript": "Free.",
+        "whisperRevision": "536b0662742c02347bc0e980a01041f333bce120",
+        "elapsedMs": 1601
+      }
+    },
+    {
+      "id": "aria-bed-as-bad",
+      "file": "public/audio/aria/word-1291.mp3",
+      "sha256": "5e76c091ea05c53403fa281115e8a5bfe08a42b621f6a2893c88beb6b9f133cd",
+      "reference": "bad",
+      "spokenFixture": "bed",
+      "expectedCorrect": false,
+      "result": {
+        "version": "crottc-whisper-word-v2",
+        "experimental": true,
+        "reference": "bad",
+        "status": "uncertain",
+        "reason": "words-differ-phoneme-uncertain",
+        "feedback": [],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "bad",
+            "expected": "b",
+            "heard": "b",
+            "expectedPosterior": 0.97698,
+            "heardPosterior": 0.97698,
+            "state": "supported"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "bad",
+            "expected": "æ",
+            "heard": "ɛ",
+            "expectedPosterior": 0.29914,
+            "heardPosterior": 0.83682,
+            "state": "uncertain"
+          },
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "bad",
+            "expected": "d",
+            "heard": "d",
+            "expectedPosterior": 0.99253,
+            "heardPosterior": 0.99253,
+            "state": "supported"
+          }
+        ],
+        "transcript": "bed",
+        "recognizedWordsMatch": false,
+        "diagnostics": {
+          "unconfirmedPhones": [
+            {
+              "target": "æ",
+              "index": 1
+            }
+          ]
+        },
+        "heardPhones": [
+          "b",
+          "ɛ",
+          "d"
+        ],
+        "referencePhones": [
+          "b",
+          "æ",
+          "d"
+        ],
+        "computeMs": 1544.01,
+        "wordEvidence": [
+          {
+            "noSpeechProbability": 0.0382,
+            "averageLogProbability": -0.7534
+          }
+        ],
+        "rawTranscript": "bed",
+        "whisperRevision": "536b0662742c02347bc0e980a01041f333bce120",
+        "elapsedMs": 1599
+      }
+    },
+    {
+      "id": "guy-bed-as-bad",
+      "file": "public/audio/guy/word-1291.mp3",
+      "sha256": "120e4f3456bb54835747cdae05588a31d61f32201d79d49be4e01c1f653ec7ce",
+      "reference": "bad",
+      "spokenFixture": "bed",
+      "expectedCorrect": false,
+      "result": {
+        "version": "crottc-whisper-word-v2",
+        "experimental": true,
+        "reference": "bad",
+        "status": "uncertain",
+        "reason": "words-differ-phoneme-uncertain",
+        "feedback": [],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "bad",
+            "expected": "b",
+            "heard": "d",
+            "expectedPosterior": 0.03428,
+            "heardPosterior": 0.98218,
+            "state": "uncertain"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "bad",
+            "expected": "æ",
+            "heard": "æ",
+            "expectedPosterior": 0.81915,
+            "heardPosterior": 0.81915,
+            "state": "supported"
+          },
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "bad",
+            "expected": "d",
+            "heard": "d",
+            "expectedPosterior": 0.99637,
+            "heardPosterior": 0.99637,
+            "state": "supported"
+          }
+        ],
+        "transcript": "BED",
+        "recognizedWordsMatch": false,
+        "diagnostics": {
+          "unconfirmedPhones": [
+            {
+              "target": "b",
+              "index": 0
+            }
+          ]
+        },
+        "heardPhones": [
+          "d",
+          "æ",
+          "d"
+        ],
+        "referencePhones": [
+          "b",
+          "æ",
+          "d"
+        ],
+        "computeMs": 1532.66,
+        "wordEvidence": [
+          {
+            "noSpeechProbability": 0.0429,
+            "averageLogProbability": -0.7191
+          }
+        ],
+        "rawTranscript": "BED",
+        "whisperRevision": "536b0662742c02347bc0e980a01041f333bce120",
+        "elapsedMs": 1588
+      }
+    },
+    {
+      "id": "aria-light-as-right",
+      "file": "public/audio/aria/word-1852.mp3",
+      "sha256": "f718748a255457e8fb6b28bfd3d111c36716a447c69187d5644ac1ecf7edd337",
+      "reference": "right",
+      "spokenFixture": "light",
+      "expectedCorrect": false,
+      "result": {
+        "version": "crottc-whisper-word-v2",
+        "experimental": true,
+        "reference": "right",
+        "status": "practice",
+        "reason": "phoneme-substitution",
+        "feedback": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "right",
+            "expected": "ɹ",
+            "heard": "l",
+            "expectedPosterior": 3e-05,
+            "heardPosterior": 0.99819,
+            "state": "practice"
+          }
+        ],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "right",
+            "expected": "ɹ",
+            "heard": "l",
+            "expectedPosterior": 3e-05,
+            "heardPosterior": 0.99819,
+            "state": "practice"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "right",
+            "expected": "aɪ",
+            "heard": "aɪ",
+            "expectedPosterior": 0.9974,
+            "heardPosterior": 0.9974,
+            "state": "supported"
+          },
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "right",
+            "expected": "t",
+            "heard": "t",
+            "expectedPosterior": 0.9957,
+            "heardPosterior": 0.9957,
+            "state": "supported"
+          }
+        ],
+        "transcript": "light",
+        "recognizedWordsMatch": false,
+        "diagnostics": {
+          "unconfirmedPhones": []
+        },
+        "heardPhones": [
+          "l",
+          "aɪ",
+          "t"
+        ],
+        "referencePhones": [
+          "ɹ",
+          "aɪ",
+          "t"
+        ],
+        "computeMs": 1568.75,
+        "wordEvidence": [
+          {
+            "noSpeechProbability": 0.0162,
+            "averageLogProbability": -0.7866
+          }
+        ],
+        "rawTranscript": "light",
+        "whisperRevision": "536b0662742c02347bc0e980a01041f333bce120",
+        "elapsedMs": 1620
+      }
+    },
+    {
+      "id": "guy-light-as-right",
+      "file": "public/audio/guy/word-1852.mp3",
+      "sha256": "eee7516495f22dfc96baa88bfea2fb22b32b6896f0e8941846320b451f4f6d57",
+      "reference": "right",
+      "spokenFixture": "light",
+      "expectedCorrect": false,
+      "result": {
+        "version": "crottc-whisper-word-v2",
+        "experimental": true,
+        "reference": "right",
+        "status": "practice",
+        "reason": "phoneme-substitution",
+        "feedback": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "right",
+            "expected": "ɹ",
+            "heard": "l",
+            "expectedPosterior": 2e-05,
+            "heardPosterior": 0.99805,
+            "state": "practice"
+          }
+        ],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "right",
+            "expected": "ɹ",
+            "heard": "l",
+            "expectedPosterior": 2e-05,
+            "heardPosterior": 0.99805,
+            "state": "practice"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "right",
+            "expected": "aɪ",
+            "heard": "aɪ",
+            "expectedPosterior": 0.9982,
+            "heardPosterior": 0.9982,
+            "state": "supported"
+          },
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "right",
+            "expected": "t",
+            "heard": "t",
+            "expectedPosterior": 0.99845,
+            "heardPosterior": 0.99845,
+            "state": "supported"
+          }
+        ],
+        "transcript": "light",
+        "recognizedWordsMatch": false,
+        "diagnostics": {
+          "unconfirmedPhones": []
+        },
+        "heardPhones": [
+          "l",
+          "aɪ",
+          "t"
+        ],
+        "referencePhones": [
+          "ɹ",
+          "aɪ",
+          "t"
+        ],
+        "computeMs": 1570.34,
+        "wordEvidence": [
+          {
+            "noSpeechProbability": 0.026,
+            "averageLogProbability": -0.542
+          }
+        ],
+        "rawTranscript": "light",
+        "whisperRevision": "536b0662742c02347bc0e980a01041f333bce120",
+        "elapsedMs": 1637
+      }
+    }
+  ],
+  "ctcMatchesOfficialBundle": true,
+  "controls": {
+    "silence": {
+      "version": "crottc-whisper-word-v2",
+      "experimental": true,
+      "reference": "Hello",
+      "status": "uncertain",
+      "reason": "no-speech",
+      "feedback": [],
+      "phones": [],
+      "transcript": "",
+      "recognizedWordsMatch": null,
+      "diagnostics": {
+        "unconfirmedPhones": []
+      },
+      "computeMs": 0.42,
+      "wordEvidence": [],
+      "rawTranscript": "",
+      "whisperRevision": "536b0662742c02347bc0e980a01041f333bce120"
+    },
+    "noise": {
+      "version": "crottc-whisper-word-v2",
+      "experimental": true,
+      "reference": "Hello",
+      "status": "uncertain",
+      "reason": "no-clear-phones",
+      "feedback": [],
+      "phones": [],
+      "transcript": "",
+      "recognizedWordsMatch": null,
+      "diagnostics": {
+        "unconfirmedPhones": []
+      },
+      "heardPhones": [],
+      "computeMs": 224.84,
+      "wordEvidence": [],
+      "rawTranscript": "",
+      "whisperRevision": "536b0662742c02347bc0e980a01041f333bce120"
+    },
+    "tone": {
+      "version": "crottc-whisper-word-v2",
+      "experimental": true,
+      "reference": "Hello",
+      "status": "uncertain",
+      "reason": "no-clear-phones",
+      "feedback": [],
+      "phones": [],
+      "transcript": "",
+      "recognizedWordsMatch": null,
+      "diagnostics": {
+        "unconfirmedPhones": []
+      },
+      "heardPhones": [],
+      "computeMs": 193.18,
+      "wordEvidence": [],
+      "rawTranscript": "",
+      "whisperRevision": "536b0662742c02347bc0e980a01041f333bce120"
+    }
+  },
+  "summary": {
+    "synthetic-correct": {
+      "count": 14,
+      "medianMs": 1587.5,
+      "supported": 11,
+      "practice": 0,
+      "uncertain": 3
+    },
+    "synthetic-wrong": {
+      "count": 10,
+      "medianMs": 1600.0,
+      "supported": 0,
+      "practice": 8,
+      "uncertain": 2
+    }
+  },
+  "status": "completed-screening-not-production"
+}

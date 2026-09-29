@@ -1,0 +1,23 @@
+{
+  "results": [
+    {
+      "test": "public Goodbye through browser MediaRecorder and real local API",
+      "status": "supported",
+      "elapsedMs": 1743
+    },
+    {
+      "test": "late microphone grant after cancellation closes tracks",
+      "passed": true
+    },
+    {
+      "test": "recording cancellation restores UI",
+      "passed": true
+    },
+    {
+      "test": "low-confidence candidate remains uncertain (mocked display only)",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "actualUserMicrophoneTested": false
+}

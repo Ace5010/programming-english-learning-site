@@ -1,0 +1,832 @@
+{
+  "scope": "Public synthetic screening, not human accent acceptance or overall accuracy",
+  "newCloudCalls": 0,
+  "newServiceCostCny": 0,
+  "candidates": [
+    {
+      "candidate": "pronounce-whole",
+      "publicCases": 24,
+      "actualEvaluationsIncludingWarmup": 49,
+      "repeatedResultsIdentical": true,
+      "normalFlagged": 2,
+      "wrongFlagged": 4,
+      "incompleteCoverageCases": 0,
+      "warmComputeMedianMs": 285.57,
+      "warmComputeP95NearestRankMs": 303.75,
+      "modelLoadMs": 6690.119399980176,
+      "firstEvaluationMs": 3459.2549999943003
+    },
+    {
+      "candidate": "pronounce-stream",
+      "publicCases": 24,
+      "actualEvaluationsIncludingWarmup": 49,
+      "repeatedResultsIdentical": true,
+      "normalFlagged": 4,
+      "wrongFlagged": 4,
+      "incompleteCoverageCases": 0,
+      "warmComputeMedianMs": 318.26,
+      "warmComputeP95NearestRankMs": 333.55,
+      "modelLoadMs": 3818.328300025314,
+      "firstEvaluationMs": 384.15870000608265
+    },
+    {
+      "candidate": "open-phones",
+      "publicCases": 24,
+      "actualEvaluationsIncludingWarmup": 49,
+      "repeatedResultsIdentical": true,
+      "normalFlagged": 0,
+      "wrongFlagged": 1,
+      "incompleteCoverageCases": 0,
+      "warmComputeMedianMs": 224.925,
+      "warmComputeP95NearestRankMs": 238.84,
+      "modelLoadMs": 3271.432699984871,
+      "firstEvaluationMs": 408.41590001946315
+    },
+    {
+      "candidate": "open-full",
+      "publicCases": 24,
+      "actualEvaluationsIncludingWarmup": 49,
+      "repeatedResultsIdentical": true,
+      "normalFlagged": 0,
+      "wrongFlagged": 1,
+      "incompleteCoverageCases": 0,
+      "warmComputeMedianMs": 842.0450000000001,
+      "warmComputeP95NearestRankMs": 885.81,
+      "modelLoadMs": 4588.508500019088,
+      "firstEvaluationMs": 1959.0343000018038
+    }
+  ],
+  "caseComparison": [
+    {
+      "id": "aria-hello-as-hello",
+      "expectedCorrect": true,
+      "tencentBaseMismatch": false,
+      "tencentStrictMismatch": false,
+      "openRecognizedPhones": [
+        "h",
+        "ɛ",
+        "l",
+        "oʊ"
+      ],
+      "openExpectedPhones": [
+        [
+          "h",
+          "ə",
+          "l",
+          "oʊ"
+        ]
+      ],
+      "openFlagged": false,
+      "openFullScore": 90.0,
+      "openWordTranscription": "HELLO",
+      "pronounce-whole": [],
+      "pronounce-stream": []
+    },
+    {
+      "id": "guy-hello-as-hello",
+      "expectedCorrect": true,
+      "tencentBaseMismatch": false,
+      "tencentStrictMismatch": false,
+      "openRecognizedPhones": [
+        "h",
+        "ɛ",
+        "l",
+        "oʊ"
+      ],
+      "openExpectedPhones": [
+        [
+          "h",
+          "ə",
+          "l",
+          "oʊ"
+        ]
+      ],
+      "openFlagged": false,
+      "openFullScore": 87.48,
+      "openWordTranscription": "HELLO",
+      "pronounce-whole": [],
+      "pronounce-stream": []
+    },
+    {
+      "id": "aria-goodbye-as-goodbye",
+      "expectedCorrect": true,
+      "tencentBaseMismatch": false,
+      "tencentStrictMismatch": null,
+      "openRecognizedPhones": [
+        "ɡ",
+        "ə",
+        "d",
+        "b",
+        "aɪ"
+      ],
+      "openExpectedPhones": [
+        [
+          "ɡ",
+          "ʊ",
+          "d",
+          "b",
+          "aɪ"
+        ]
+      ],
+      "openFlagged": false,
+      "openFullScore": 54.2,
+      "openWordTranscription": "GOOD BYE",
+      "pronounce-whole": [
+        {
+          "phoneme": "d",
+          "decoded": "b",
+          "label": "mispronounced"
+        },
+        {
+          "phoneme": "b",
+          "decoded": "",
+          "label": "omitted"
+        }
+      ],
+      "pronounce-stream": [
+        {
+          "phoneme": "d",
+          "decoded": "b",
+          "label": "mispronounced"
+        },
+        {
+          "phoneme": "b",
+          "decoded": "",
+          "label": "omitted"
+        }
+      ]
+    },
+    {
+      "id": "guy-goodbye-as-goodbye",
+      "expectedCorrect": true,
+      "tencentBaseMismatch": false,
+      "tencentStrictMismatch": null,
+      "openRecognizedPhones": [
+        "ɡ",
+        "ʊ",
+        "d",
+        "b",
+        "aɪ"
+      ],
+      "openExpectedPhones": [
+        [
+          "ɡ",
+          "ʊ",
+          "d",
+          "b",
+          "aɪ"
+        ]
+      ],
+      "openFlagged": false,
+      "openFullScore": 64.47,
+      "openWordTranscription": "GOOD BYE",
+      "pronounce-whole": [
+        {
+          "phoneme": "d",
+          "decoded": "b",
+          "label": "mispronounced"
+        },
+        {
+          "phoneme": "b",
+          "decoded": "",
+          "label": "omitted"
+        }
+      ],
+      "pronounce-stream": [
+        {
+          "phoneme": "d",
+          "decoded": "b",
+          "label": "mispronounced"
+        },
+        {
+          "phoneme": "b",
+          "decoded": "",
+          "label": "omitted"
+        }
+      ]
+    },
+    {
+      "id": "aria-think-as-think",
+      "expectedCorrect": true,
+      "tencentBaseMismatch": false,
+      "tencentStrictMismatch": null,
+      "openRecognizedPhones": [
+        "θ",
+        "ɪ",
+        "ŋ",
+        "k"
+      ],
+      "openExpectedPhones": [
+        [
+          "θ",
+          "ɪ",
+          "ŋ",
+          "k"
+        ]
+      ],
+      "openFlagged": false,
+      "openFullScore": 85.04,
+      "openWordTranscription": "THINK",
+      "pronounce-whole": [],
+      "pronounce-stream": []
+    },
+    {
+      "id": "guy-think-as-think",
+      "expectedCorrect": true,
+      "tencentBaseMismatch": false,
+      "tencentStrictMismatch": null,
+      "openRecognizedPhones": [
+        "θ",
+        "ɪ",
+        "ŋ",
+        "k"
+      ],
+      "openExpectedPhones": [
+        [
+          "θ",
+          "ɪ",
+          "ŋ",
+          "k"
+        ]
+      ],
+      "openFlagged": false,
+      "openFullScore": 80.84,
+      "openWordTranscription": "THINK",
+      "pronounce-whole": [],
+      "pronounce-stream": []
+    },
+    {
+      "id": "aria-ship-as-ship",
+      "expectedCorrect": true,
+      "tencentBaseMismatch": false,
+      "tencentStrictMismatch": false,
+      "openRecognizedPhones": [
+        "ʃ",
+        "ɪ",
+        "p"
+      ],
+      "openExpectedPhones": [
+        [
+          "ʃ",
+          "ɪ",
+          "p"
+        ]
+      ],
+      "openFlagged": false,
+      "openFullScore": 87.24,
+      "openWordTranscription": "SHIP",
+      "pronounce-whole": [],
+      "pronounce-stream": [
+        {
+          "phoneme": "ɪ",
+          "decoded": "ɛ",
+          "label": "mispronounced"
+        }
+      ]
+    },
+    {
+      "id": "guy-ship-as-ship",
+      "expectedCorrect": true,
+      "tencentBaseMismatch": false,
+      "tencentStrictMismatch": false,
+      "openRecognizedPhones": [
+        "ʃ",
+        "ɪ",
+        "p"
+      ],
+      "openExpectedPhones": [
+        [
+          "ʃ",
+          "ɪ",
+          "p"
+        ]
+      ],
+      "openFlagged": false,
+      "openFullScore": 87.54,
+      "openWordTranscription": "SHIP",
+      "pronounce-whole": [],
+      "pronounce-stream": []
+    },
+    {
+      "id": "aria-three-as-three",
+      "expectedCorrect": true,
+      "tencentBaseMismatch": false,
+      "tencentStrictMismatch": null,
+      "openRecognizedPhones": [
+        "θ",
+        "ɹ",
+        "i"
+      ],
+      "openExpectedPhones": [
+        [
+          "θ",
+          "ɹ",
+          "i"
+        ]
+      ],
+      "openFlagged": false,
+      "openFullScore": 78.09,
+      "openWordTranscription": "THREE",
+      "pronounce-whole": [],
+      "pronounce-stream": []
+    },
+    {
+      "id": "guy-three-as-three",
+      "expectedCorrect": true,
+      "tencentBaseMismatch": false,
+      "tencentStrictMismatch": null,
+      "openRecognizedPhones": [
+        "θ",
+        "ɹ",
+        "i"
+      ],
+      "openExpectedPhones": [
+        [
+          "θ",
+          "ɹ",
+          "i"
+        ]
+      ],
+      "openFlagged": false,
+      "openFullScore": 79.19,
+      "openWordTranscription": "THREE",
+      "pronounce-whole": [],
+      "pronounce-stream": []
+    },
+    {
+      "id": "aria-bad-as-bad",
+      "expectedCorrect": true,
+      "tencentBaseMismatch": false,
+      "tencentStrictMismatch": false,
+      "openRecognizedPhones": [
+        "b",
+        "æ",
+        "d"
+      ],
+      "openExpectedPhones": [
+        [
+          "b",
+          "æ",
+          "d"
+        ]
+      ],
+      "openFlagged": false,
+      "openFullScore": 79.56,
+      "openWordTranscription": "BAD",
+      "pronounce-whole": [],
+      "pronounce-stream": [
+        {
+          "phoneme": "b",
+          "decoded": "ð",
+          "label": "mispronounced"
+        }
+      ]
+    },
+    {
+      "id": "guy-bad-as-bad",
+      "expectedCorrect": true,
+      "tencentBaseMismatch": false,
+      "tencentStrictMismatch": false,
+      "openRecognizedPhones": [
+        "b",
+        "ɛ",
+        "d"
+      ],
+      "openExpectedPhones": [
+        [
+          "b",
+          "æ",
+          "d"
+        ]
+      ],
+      "openFlagged": false,
+      "openFullScore": 66.88,
+      "openWordTranscription": "BAD",
+      "pronounce-whole": [],
+      "pronounce-stream": []
+    },
+    {
+      "id": "aria-right-as-right",
+      "expectedCorrect": true,
+      "tencentBaseMismatch": false,
+      "tencentStrictMismatch": null,
+      "openRecognizedPhones": [
+        "ɹ",
+        "aɪ",
+        "t"
+      ],
+      "openExpectedPhones": [
+        [
+          "ɹ",
+          "aɪ",
+          "t"
+        ]
+      ],
+      "openFlagged": false,
+      "openFullScore": 56.02,
+      "openWordTranscription": "RITE",
+      "pronounce-whole": [],
+      "pronounce-stream": []
+    },
+    {
+      "id": "guy-right-as-right",
+      "expectedCorrect": true,
+      "tencentBaseMismatch": false,
+      "tencentStrictMismatch": null,
+      "openRecognizedPhones": [
+        "ɹ",
+        "aɪ",
+        "t"
+      ],
+      "openExpectedPhones": [
+        [
+          "ɹ",
+          "aɪ",
+          "t"
+        ]
+      ],
+      "openFlagged": false,
+      "openFullScore": 55.85,
+      "openWordTranscription": "RITE",
+      "pronounce-whole": [],
+      "pronounce-stream": []
+    },
+    {
+      "id": "aria-sink-as-think",
+      "expectedCorrect": false,
+      "tencentBaseMismatch": false,
+      "tencentStrictMismatch": false,
+      "openRecognizedPhones": [
+        "s",
+        "ɪ",
+        "ŋ",
+        "k"
+      ],
+      "openExpectedPhones": [
+        [
+          "θ",
+          "ɪ",
+          "ŋ",
+          "k"
+        ]
+      ],
+      "openFlagged": false,
+      "openFullScore": 47.79,
+      "openWordTranscription": "SINK",
+      "pronounce-whole": [],
+      "pronounce-stream": []
+    },
+    {
+      "id": "guy-sink-as-think",
+      "expectedCorrect": false,
+      "tencentBaseMismatch": true,
+      "tencentStrictMismatch": true,
+      "openRecognizedPhones": [
+        "s",
+        "ɪ",
+        "ŋ",
+        "k"
+      ],
+      "openExpectedPhones": [
+        [
+          "θ",
+          "ɪ",
+          "ŋ",
+          "k"
+        ]
+      ],
+      "openFlagged": false,
+      "openFullScore": 41.81,
+      "openWordTranscription": "SINK",
+      "pronounce-whole": [],
+      "pronounce-stream": []
+    },
+    {
+      "id": "aria-sheep-as-ship",
+      "expectedCorrect": false,
+      "tencentBaseMismatch": false,
+      "tencentStrictMismatch": true,
+      "openRecognizedPhones": [
+        "ʃ",
+        "i",
+        "p"
+      ],
+      "openExpectedPhones": [
+        [
+          "ʃ",
+          "ɪ",
+          "p"
+        ]
+      ],
+      "openFlagged": false,
+      "openFullScore": 39.03,
+      "openWordTranscription": "SHEEP",
+      "pronounce-whole": [
+        {
+          "phoneme": "ɪ",
+          "decoded": "i",
+          "label": "mispronounced"
+        }
+      ],
+      "pronounce-stream": [
+        {
+          "phoneme": "ɪ",
+          "decoded": "i",
+          "label": "mispronounced"
+        }
+      ]
+    },
+    {
+      "id": "guy-sheep-as-ship",
+      "expectedCorrect": false,
+      "tencentBaseMismatch": false,
+      "tencentStrictMismatch": true,
+      "openRecognizedPhones": [
+        "ʃ",
+        "i",
+        "p"
+      ],
+      "openExpectedPhones": [
+        [
+          "ʃ",
+          "ɪ",
+          "p"
+        ]
+      ],
+      "openFlagged": false,
+      "openFullScore": 37.13,
+      "openWordTranscription": "SHEEP",
+      "pronounce-whole": [
+        {
+          "phoneme": "ɪ",
+          "decoded": "i",
+          "label": "mispronounced"
+        }
+      ],
+      "pronounce-stream": []
+    },
+    {
+      "id": "aria-free-as-three",
+      "expectedCorrect": false,
+      "tencentBaseMismatch": false,
+      "tencentStrictMismatch": null,
+      "openRecognizedPhones": [
+        "f",
+        "ɹ"
+      ],
+      "openExpectedPhones": [
+        [
+          "θ",
+          "ɹ",
+          "i"
+        ]
+      ],
+      "openFlagged": true,
+      "openFullScore": 27.65,
+      "openWordTranscription": "FREE",
+      "pronounce-whole": [],
+      "pronounce-stream": []
+    },
+    {
+      "id": "guy-free-as-three",
+      "expectedCorrect": false,
+      "tencentBaseMismatch": false,
+      "tencentStrictMismatch": null,
+      "openRecognizedPhones": [
+        "f",
+        "ɹ",
+        "i"
+      ],
+      "openExpectedPhones": [
+        [
+          "θ",
+          "ɹ",
+          "i"
+        ]
+      ],
+      "openFlagged": false,
+      "openFullScore": 38.77,
+      "openWordTranscription": "FREE",
+      "pronounce-whole": [],
+      "pronounce-stream": []
+    },
+    {
+      "id": "aria-bed-as-bad",
+      "expectedCorrect": false,
+      "tencentBaseMismatch": false,
+      "tencentStrictMismatch": false,
+      "openRecognizedPhones": [
+        "b",
+        "ɛ",
+        "d"
+      ],
+      "openExpectedPhones": [
+        [
+          "b",
+          "æ",
+          "d"
+        ]
+      ],
+      "openFlagged": false,
+      "openFullScore": 31.76,
+      "openWordTranscription": "BED",
+      "pronounce-whole": [],
+      "pronounce-stream": [
+        {
+          "phoneme": "b",
+          "decoded": "ð",
+          "label": "mispronounced"
+        }
+      ]
+    },
+    {
+      "id": "guy-bed-as-bad",
+      "expectedCorrect": false,
+      "tencentBaseMismatch": false,
+      "tencentStrictMismatch": false,
+      "openRecognizedPhones": [
+        "b",
+        "ɛ",
+        "d"
+      ],
+      "openExpectedPhones": [
+        [
+          "b",
+          "æ",
+          "d"
+        ]
+      ],
+      "openFlagged": false,
+      "openFullScore": 32.13,
+      "openWordTranscription": "BEAD",
+      "pronounce-whole": [],
+      "pronounce-stream": []
+    },
+    {
+      "id": "aria-light-as-right",
+      "expectedCorrect": false,
+      "tencentBaseMismatch": true,
+      "tencentStrictMismatch": null,
+      "openRecognizedPhones": [
+        "l",
+        "aɪ",
+        "t"
+      ],
+      "openExpectedPhones": [
+        [
+          "ɹ",
+          "aɪ",
+          "t"
+        ]
+      ],
+      "openFlagged": false,
+      "openFullScore": 38.05,
+      "openWordTranscription": "LIGHT",
+      "pronounce-whole": [
+        {
+          "phoneme": "r",
+          "decoded": "l",
+          "label": "mispronounced"
+        }
+      ],
+      "pronounce-stream": [
+        {
+          "phoneme": "r",
+          "decoded": "",
+          "label": "omitted"
+        }
+      ]
+    },
+    {
+      "id": "guy-light-as-right",
+      "expectedCorrect": false,
+      "tencentBaseMismatch": true,
+      "tencentStrictMismatch": null,
+      "openRecognizedPhones": [
+        "l",
+        "aɪ",
+        "t"
+      ],
+      "openExpectedPhones": [
+        [
+          "ɹ",
+          "aɪ",
+          "t"
+        ]
+      ],
+      "openFlagged": false,
+      "openFullScore": 26.72,
+      "openWordTranscription": "LIGHT",
+      "pronounce-whole": [
+        {
+          "phoneme": "r",
+          "decoded": "l",
+          "label": "mispronounced"
+        }
+      ],
+      "pronounce-stream": [
+        {
+          "phoneme": "r",
+          "decoded": "l",
+          "label": "mispronounced"
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "wav2vec2-large-960h": {
+      "repo": "facebook/wav2vec2-large-960h",
+      "revision": "bdeaacdf88f7a155f50a2704bc967aa81fbbb2ab",
+      "files": {
+        "config.json": {
+          "bytes": 843,
+          "sha256": "6c139286683060db31aba780ed9aed9e01128230366f509645c7224943f98e39"
+        },
+        "preprocessor_config.json": {
+          "bytes": 159,
+          "sha256": "b225d617c025463b9e157e06afea8b90dc7078fc70b013c533328423e0486b4a"
+        },
+        "pytorch_model.bin": {
+          "bytes": 1262009187,
+          "sha256": "7aef99395c7b7ab5b78b6d00bdf71aebd93a7340b72d614303d598de8f94a10f"
+        },
+        "special_tokens_map.json": {
+          "bytes": 85,
+          "sha256": "bb7068de1150661a10b55f9e4b12a0e77af8bf91f5e45e1b58afaf1d0e17f675"
+        },
+        "tokenizer_config.json": {
+          "bytes": 163,
+          "sha256": "dc790594f5bc351a4311c6624f40acd95850d4aaf2a5cb3c656c9b610720b608"
+        },
+        "vocab.json": {
+          "bytes": 291,
+          "sha256": "19727f8944fe6459fc3f240ae2c198395b740f6a029bd23e06656266b83bcf64"
+        }
+      }
+    },
+    "wav2vec2-lv-60-espeak-cv-ft": {
+      "repo": "facebook/wav2vec2-lv-60-espeak-cv-ft",
+      "revision": "ae45363bf3413b374fecd9dc8bc1df0e24c3b7f4",
+      "files": {
+        "config.json": {
+          "bytes": 1856,
+          "sha256": "4609fb49b7e1d28aecb2840da1926c40bd915bc6f1120a940afacf7159bbfb13"
+        },
+        "preprocessor_config.json": {
+          "bytes": 212,
+          "sha256": "a2254a5b58f72cd4de3632f8eee64f3f098b7c1402128d2f419e7d00ae13e335"
+        },
+        "pytorch_model.bin": {
+          "bytes": 1263535127,
+          "sha256": "3173bde9e9ce490fa0f989e413c42f25bc1820c020adc1e6b9b87025b3cfcc5e"
+        },
+        "special_tokens_map.json": {
+          "bytes": 85,
+          "sha256": "bb7068de1150661a10b55f9e4b12a0e77af8bf91f5e45e1b58afaf1d0e17f675"
+        },
+        "tokenizer_config.json": {
+          "bytes": 321,
+          "sha256": "1273ec458332cc55226ec596904bae811420755ace7e5d69462b61c4f480b457"
+        },
+        "vocab.json": {
+          "bytes": 4637,
+          "sha256": "d732ab2456c0c017930001dc9af0b41b3b93d25b2eb9740bf9d925508d7d87d0"
+        }
+      }
+    },
+    "wav2vec2-xls-r-300m-timit-phoneme": {
+      "repo": "vitouphy/wav2vec2-xls-r-300m-timit-phoneme",
+      "revision": "efb7ae9b88f13db0d42eac8cedbba19739e2a278",
+      "files": {
+        "added_tokens.json": {
+          "bytes": 23,
+          "sha256": "ec58d12af09ef36b4f44ba496b5f3b6cb650b70994ebff692a160f77d2d28c51"
+        },
+        "config.json": {
+          "bytes": 2068,
+          "sha256": "17158b6f99c0bef454c7313b021240c7133a4039f229c28d4495ecd207f9f007"
+        },
+        "model.safetensors": {
+          "bytes": 1261987832,
+          "sha256": "0e3bde20ed7b252a48e69eddf7bd6d7eadc7dbacb06924148514e500ebad4b35"
+        },
+        "preprocessor_config.json": {
+          "bytes": 214,
+          "sha256": "60ca5a31e13f69ee2fbf147504c8676db5f6398fd7a6b12294341dff838edfcf"
+        },
+        "special_tokens_map.json": {
+          "bytes": 309,
+          "sha256": "fe9499f3f127cf340419ded12d4175b3a28a58c99c949bf3f8343a6f6b9fa872"
+        },
+        "tokenizer_config.json": {
+          "bytes": 287,
+          "sha256": "3dd1990023adb889ac3029349f80262802c923fe06beb1807118cb1d5e5f8b02"
+        },
+        "vocab.json": {
+          "bytes": 486,
+          "sha256": "12b7de6be6a1bd3132ffdef8d8fe191c8e98f2d70639666e35d9cf6c9d2af77a"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,2227 @@
+{
+  "status": "completed-synthetic-regression-human-diagnostics-pending",
+  "cloudCalls": 0,
+  "containsUserRecording": false,
+  "usesSyntheticAudio": true,
+  "humanAccentCoverageVerified": false,
+  "cases": [
+    {
+      "id": "aria-hello-as-hello",
+      "source": "public\\audio\\daily\\aria\\hello.mp3",
+      "sha256": "d647bdc233e2be048fef5c9c34d03d6ed22e66cb4031f23d9703eef01495bf5b",
+      "spokenFixture": "hello",
+      "target": "hello",
+      "expectedCorrect": true,
+      "result": {
+        "reference": "hello",
+        "status": "supported",
+        "transcript": "Hello",
+        "feedback": [],
+        "audioSaved": false,
+        "cloudCalls": 0,
+        "experimental": true,
+        "diagnosticVersion": 1,
+        "audioInfo": {
+          "durationMs": 1560,
+          "rms": 0.065507,
+          "clippedSampleFraction": 0.0
+        },
+        "diagnostics": {
+          "uncertaintyReason": "words-and-acoustics-supported",
+          "recognizedWordsMatch": true,
+          "speechEvidenceSupported": true,
+          "greedyPhonemesMatch": true,
+          "alignedTargetsDominate": true,
+          "unconfirmedPhones": [],
+          "transcriptionEvidence": [
+            {
+              "noSpeechProbability": 0.0274,
+              "averageLogProbability": -0.2574
+            }
+          ],
+          "alignmentIsNotPronunciationScore": true
+        },
+        "reason": "words-and-acoustics-supported",
+        "elapsedMs": 9079,
+        "recognizedWordsMatch": true,
+        "greedyPhonemesMatch": true
+      }
+    },
+    {
+      "id": "aria-goodbye-as-goodbye",
+      "source": "public\\audio\\daily\\aria\\goodbye.mp3",
+      "sha256": "39f9feb199cf056ed30b73321bc005e4265f2454e31332afd4dc66d032069639",
+      "spokenFixture": "goodbye",
+      "target": "goodbye",
+      "expectedCorrect": true,
+      "result": {
+        "reference": "goodbye",
+        "status": "supported",
+        "transcript": "Goodbye.",
+        "feedback": [],
+        "audioSaved": false,
+        "cloudCalls": 0,
+        "experimental": true,
+        "diagnosticVersion": 1,
+        "audioInfo": {
+          "durationMs": 1608,
+          "rms": 0.071906,
+          "clippedSampleFraction": 0.0
+        },
+        "diagnostics": {
+          "uncertaintyReason": "words-and-acoustics-supported",
+          "recognizedWordsMatch": true,
+          "speechEvidenceSupported": true,
+          "greedyPhonemesMatch": false,
+          "alignedTargetsDominate": true,
+          "unconfirmedPhones": [],
+          "transcriptionEvidence": [
+            {
+              "noSpeechProbability": 0.0068,
+              "averageLogProbability": -0.6365
+            }
+          ],
+          "alignmentIsNotPronunciationScore": true
+        },
+        "reason": "words-and-acoustics-supported",
+        "elapsedMs": 7703,
+        "recognizedWordsMatch": true,
+        "greedyPhonemesMatch": false
+      }
+    },
+    {
+      "id": "aria-think-as-think",
+      "source": "public\\audio\\aria\\word-2652.mp3",
+      "sha256": "56d9cca2c2277ddc788953d76f26920ef025162bb072ddf76489d80924dd85ee",
+      "spokenFixture": "think",
+      "target": "think",
+      "expectedCorrect": true,
+      "result": {
+        "reference": "think",
+        "status": "supported",
+        "transcript": "Think.",
+        "feedback": [],
+        "audioSaved": false,
+        "cloudCalls": 0,
+        "experimental": true,
+        "diagnosticVersion": 1,
+        "audioInfo": {
+          "durationMs": 1488,
+          "rms": 0.04316,
+          "clippedSampleFraction": 0.0
+        },
+        "diagnostics": {
+          "uncertaintyReason": "words-and-acoustics-supported",
+          "recognizedWordsMatch": true,
+          "speechEvidenceSupported": true,
+          "greedyPhonemesMatch": true,
+          "alignedTargetsDominate": true,
+          "unconfirmedPhones": [],
+          "transcriptionEvidence": [
+            {
+              "noSpeechProbability": 0.0907,
+              "averageLogProbability": -0.4182
+            }
+          ],
+          "alignmentIsNotPronunciationScore": true
+        },
+        "reason": "words-and-acoustics-supported",
+        "elapsedMs": 7094,
+        "recognizedWordsMatch": true,
+        "greedyPhonemesMatch": true
+      }
+    },
+    {
+      "id": "aria-sink-as-sink",
+      "source": "public\\audio\\aria\\word-959.mp3",
+      "sha256": "6e91c5e4a7ea69fc6243dbdf3eed48bba5106c2030d11f4c90937d8a9e9edaa7",
+      "spokenFixture": "sink",
+      "target": "sink",
+      "expectedCorrect": true,
+      "result": {
+        "reference": "sink",
+        "status": "supported",
+        "transcript": "Sink",
+        "feedback": [],
+        "audioSaved": false,
+        "cloudCalls": 0,
+        "experimental": true,
+        "diagnosticVersion": 1,
+        "audioInfo": {
+          "durationMs": 1608,
+          "rms": 0.041496,
+          "clippedSampleFraction": 0.0
+        },
+        "diagnostics": {
+          "uncertaintyReason": "words-and-acoustics-supported",
+          "recognizedWordsMatch": true,
+          "speechEvidenceSupported": true,
+          "greedyPhonemesMatch": true,
+          "alignedTargetsDominate": true,
+          "unconfirmedPhones": [],
+          "transcriptionEvidence": [
+            {
+              "noSpeechProbability": 0.1488,
+              "averageLogProbability": -0.4206
+            }
+          ],
+          "alignmentIsNotPronunciationScore": true
+        },
+        "reason": "words-and-acoustics-supported",
+        "elapsedMs": 7281,
+        "recognizedWordsMatch": true,
+        "greedyPhonemesMatch": true
+      }
+    },
+    {
+      "id": "aria-sink-as-think",
+      "source": "public\\audio\\aria\\word-959.mp3",
+      "sha256": "6e91c5e4a7ea69fc6243dbdf3eed48bba5106c2030d11f4c90937d8a9e9edaa7",
+      "spokenFixture": "sink",
+      "target": "think",
+      "expectedCorrect": false,
+      "result": {
+        "reference": "think",
+        "status": "practice",
+        "transcript": "Sink",
+        "feedback": [
+          {
+            "index": 0,
+            "expected": "θ",
+            "heard": "s"
+          }
+        ],
+        "audioSaved": false,
+        "cloudCalls": 0,
+        "experimental": true,
+        "diagnosticVersion": 1,
+        "audioInfo": {
+          "durationMs": 1608,
+          "rms": 0.041496,
+          "clippedSampleFraction": 0.0
+        },
+        "diagnostics": {
+          "uncertaintyReason": "words-differ-phoneme-uncertain",
+          "recognizedWordsMatch": false,
+          "speechEvidenceSupported": true,
+          "greedyPhonemesMatch": false,
+          "alignedTargetsDominate": false,
+          "unconfirmedPhones": [
+            {
+              "index": 0,
+              "target": "θ",
+              "reason": "alignment-conflict",
+              "targetPosteriorPeak": 0.00152,
+              "marginAgainstOtherPhones": -6.481
+            }
+          ],
+          "transcriptionEvidence": [
+            {
+              "noSpeechProbability": 0.1488,
+              "averageLogProbability": -0.4206
+            }
+          ],
+          "alignmentIsNotPronunciationScore": true
+        },
+        "reason": "agreed-phoneme-substitution",
+        "elapsedMs": 7063,
+        "recognizedWordsMatch": false,
+        "greedyPhonemesMatch": false
+      }
+    },
+    {
+      "id": "aria-ship-as-ship",
+      "source": "public\\audio\\aria\\word-2224.mp3",
+      "sha256": "93e91a16f6060328871735321fa37898b44145ccc7db88a660ef7c06c0402ef4",
+      "spokenFixture": "ship",
+      "target": "ship",
+      "expectedCorrect": true,
+      "result": {
+        "reference": "ship",
+        "status": "supported",
+        "transcript": "Ship",
+        "feedback": [],
+        "audioSaved": false,
+        "cloudCalls": 0,
+        "experimental": true,
+        "diagnosticVersion": 1,
+        "audioInfo": {
+          "durationMs": 1608,
+          "rms": 0.04447,
+          "clippedSampleFraction": 0.0
+        },
+        "diagnostics": {
+          "uncertaintyReason": "words-and-acoustics-supported",
+          "recognizedWordsMatch": true,
+          "speechEvidenceSupported": true,
+          "greedyPhonemesMatch": true,
+          "alignedTargetsDominate": true,
+          "unconfirmedPhones": [],
+          "transcriptionEvidence": [
+            {
+              "noSpeechProbability": 0.0981,
+              "averageLogProbability": -0.3498
+            }
+          ],
+          "alignmentIsNotPronunciationScore": true
+        },
+        "reason": "words-and-acoustics-supported",
+        "elapsedMs": 7000,
+        "recognizedWordsMatch": true,
+        "greedyPhonemesMatch": true
+      }
+    },
+    {
+      "id": "aria-sheep-as-sheep",
+      "source": "public\\audio\\aria\\word-2968.mp3",
+      "sha256": "d78bba621523dcd4fb8efdca6df67c3fc7a32644bc342b5f3f74378b36b259ae",
+      "spokenFixture": "sheep",
+      "target": "sheep",
+      "expectedCorrect": true,
+      "result": {
+        "reference": "sheep",
+        "status": "supported",
+        "transcript": "sheep",
+        "feedback": [],
+        "audioSaved": false,
+        "cloudCalls": 0,
+        "experimental": true,
+        "diagnosticVersion": 1,
+        "audioInfo": {
+          "durationMs": 1632,
+          "rms": 0.044256,
+          "clippedSampleFraction": 0.0
+        },
+        "diagnostics": {
+          "uncertaintyReason": "words-and-acoustics-supported",
+          "recognizedWordsMatch": true,
+          "speechEvidenceSupported": true,
+          "greedyPhonemesMatch": true,
+          "alignedTargetsDominate": true,
+          "unconfirmedPhones": [],
+          "transcriptionEvidence": [
+            {
+              "noSpeechProbability": 0.0468,
+              "averageLogProbability": -0.4565
+            }
+          ],
+          "alignmentIsNotPronunciationScore": true
+        },
+        "reason": "words-and-acoustics-supported",
+        "elapsedMs": 6922,
+        "recognizedWordsMatch": true,
+        "greedyPhonemesMatch": true
+      }
+    },
+    {
+      "id": "aria-sheep-as-ship",
+      "source": "public\\audio\\aria\\word-2968.mp3",
+      "sha256": "d78bba621523dcd4fb8efdca6df67c3fc7a32644bc342b5f3f74378b36b259ae",
+      "spokenFixture": "sheep",
+      "target": "ship",
+      "expectedCorrect": false,
+      "result": {
+        "reference": "ship",
+        "status": "practice",
+        "transcript": "sheep",
+        "feedback": [
+          {
+            "index": 1,
+            "expected": "ɪ",
+            "heard": "i"
+          }
+        ],
+        "audioSaved": false,
+        "cloudCalls": 0,
+        "experimental": true,
+        "diagnosticVersion": 1,
+        "audioInfo": {
+          "durationMs": 1632,
+          "rms": 0.044256,
+          "clippedSampleFraction": 0.0
+        },
+        "diagnostics": {
+          "uncertaintyReason": "words-differ-phoneme-uncertain",
+          "recognizedWordsMatch": false,
+          "speechEvidenceSupported": true,
+          "greedyPhonemesMatch": false,
+          "alignedTargetsDominate": false,
+          "unconfirmedPhones": [
+            {
+              "index": 1,
+              "target": "ɪ",
+              "reason": "alignment-conflict",
+              "targetPosteriorPeak": 0.00203,
+              "marginAgainstOtherPhones": -6.183
+            }
+          ],
+          "transcriptionEvidence": [
+            {
+              "noSpeechProbability": 0.0468,
+              "averageLogProbability": -0.4565
+            }
+          ],
+          "alignmentIsNotPronunciationScore": true
+        },
+        "reason": "agreed-phoneme-substitution",
+        "elapsedMs": 6844,
+        "recognizedWordsMatch": false,
+        "greedyPhonemesMatch": false
+      }
+    },
+    {
+      "id": "aria-three-as-three",
+      "source": "public\\audio\\aria\\word-2400.mp3",
+      "sha256": "dbd32db6d89af3f6ba5865985d6aea396c11469027890c3ff47f2df3858372f5",
+      "spokenFixture": "three",
+      "target": "three",
+      "expectedCorrect": true,
+      "result": {
+        "reference": "three",
+        "status": "supported",
+        "transcript": "Three.",
+        "feedback": [],
+        "audioSaved": false,
+        "cloudCalls": 0,
+        "experimental": true,
+        "diagnosticVersion": 1,
+        "audioInfo": {
+          "durationMs": 1536,
+          "rms": 0.069215,
+          "clippedSampleFraction": 0.0
+        },
+        "diagnostics": {
+          "uncertaintyReason": "words-and-acoustics-supported",
+          "recognizedWordsMatch": true,
+          "speechEvidenceSupported": true,
+          "greedyPhonemesMatch": true,
+          "alignedTargetsDominate": true,
+          "unconfirmedPhones": [],
+          "transcriptionEvidence": [
+            {
+              "noSpeechProbability": 0.081,
+              "averageLogProbability": -0.7434
+            }
+          ],
+          "alignmentIsNotPronunciationScore": true
+        },
+        "reason": "words-and-acoustics-supported",
+        "elapsedMs": 7109,
+        "recognizedWordsMatch": true,
+        "greedyPhonemesMatch": true
+      }
+    },
+    {
+      "id": "aria-free-as-free",
+      "source": "public\\audio\\aria\\word-1649.mp3",
+      "sha256": "ffe976c2022e78e153ed1d4a79e8af3182ef98c58bd42522f04e1376578d0acb",
+      "spokenFixture": "free",
+      "target": "free",
+      "expectedCorrect": true,
+      "result": {
+        "reference": "free",
+        "status": "supported",
+        "transcript": "Free.",
+        "feedback": [],
+        "audioSaved": false,
+        "cloudCalls": 0,
+        "experimental": true,
+        "diagnosticVersion": 1,
+        "audioInfo": {
+          "durationMs": 1512,
+          "rms": 0.058708,
+          "clippedSampleFraction": 0.0
+        },
+        "diagnostics": {
+          "uncertaintyReason": "words-and-acoustics-supported",
+          "recognizedWordsMatch": true,
+          "speechEvidenceSupported": true,
+          "greedyPhonemesMatch": true,
+          "alignedTargetsDominate": true,
+          "unconfirmedPhones": [],
+          "transcriptionEvidence": [
+            {
+              "noSpeechProbability": 0.0853,
+              "averageLogProbability": -0.5763
+            }
+          ],
+          "alignmentIsNotPronunciationScore": true
+        },
+        "reason": "words-and-acoustics-supported",
+        "elapsedMs": 7125,
+        "recognizedWordsMatch": true,
+        "greedyPhonemesMatch": true
+      }
+    },
+    {
+      "id": "aria-free-as-three",
+      "source": "public\\audio\\aria\\word-1649.mp3",
+      "sha256": "ffe976c2022e78e153ed1d4a79e8af3182ef98c58bd42522f04e1376578d0acb",
+      "spokenFixture": "free",
+      "target": "three",
+      "expectedCorrect": false,
+      "result": {
+        "reference": "three",
+        "status": "practice",
+        "transcript": "Free.",
+        "feedback": [
+          {
+            "index": 0,
+            "expected": "θ",
+            "heard": "f"
+          }
+        ],
+        "audioSaved": false,
+        "cloudCalls": 0,
+        "experimental": true,
+        "diagnosticVersion": 1,
+        "audioInfo": {
+          "durationMs": 1512,
+          "rms": 0.058708,
+          "clippedSampleFraction": 0.0
+        },
+        "diagnostics": {
+          "uncertaintyReason": "words-differ-phoneme-uncertain",
+          "recognizedWordsMatch": false,
+          "speechEvidenceSupported": true,
+          "greedyPhonemesMatch": false,
+          "alignedTargetsDominate": false,
+          "unconfirmedPhones": [
+            {
+              "index": 0,
+              "target": "θ",
+              "reason": "alignment-conflict",
+              "targetPosteriorPeak": 0.00094,
+              "marginAgainstOtherPhones": -6.957
+            }
+          ],
+          "transcriptionEvidence": [
+            {
+              "noSpeechProbability": 0.0853,
+              "averageLogProbability": -0.5763
+            }
+          ],
+          "alignmentIsNotPronunciationScore": true
+        },
+        "reason": "agreed-phoneme-substitution",
+        "elapsedMs": 6954,
+        "recognizedWordsMatch": false,
+        "greedyPhonemesMatch": false
+      }
+    },
+    {
+      "id": "aria-bad-as-bad",
+      "source": "public\\audio\\aria\\word-2978.mp3",
+      "sha256": "77e448d4d24a5eb7bce40296318a11d4582a63b0ad88ae2b826b9f74353f92af",
+      "spokenFixture": "bad",
+      "target": "bad",
+      "expectedCorrect": true,
+      "result": {
+        "reference": "bad",
+        "status": "supported",
+        "transcript": "Bad.",
+        "feedback": [],
+        "audioSaved": false,
+        "cloudCalls": 0,
+        "experimental": true,
+        "diagnosticVersion": 1,
+        "audioInfo": {
+          "durationMs": 1512,
+          "rms": 0.054373,
+          "clippedSampleFraction": 0.0
+        },
+        "diagnostics": {
+          "uncertaintyReason": "words-and-acoustics-supported",
+          "recognizedWordsMatch": true,
+          "speechEvidenceSupported": true,
+          "greedyPhonemesMatch": true,
+          "alignedTargetsDominate": true,
+          "unconfirmedPhones": [],
+          "transcriptionEvidence": [
+            {
+              "noSpeechProbability": 0.0175,
+              "averageLogProbability": -0.4753
+            }
+          ],
+          "alignmentIsNotPronunciationScore": true
+        },
+        "reason": "words-and-acoustics-supported",
+        "elapsedMs": 6968,
+        "recognizedWordsMatch": true,
+        "greedyPhonemesMatch": true
+      }
+    },
+    {
+      "id": "aria-bad-as-bed",
+      "source": "public\\audio\\aria\\word-2978.mp3",
+      "sha256": "77e448d4d24a5eb7bce40296318a11d4582a63b0ad88ae2b826b9f74353f92af",
+      "spokenFixture": "bad",
+      "target": "bed",
+      "expectedCorrect": false,
+      "result": {
+        "reference": "bed",
+        "status": "uncertain",
+        "transcript": "Bad.",
+        "feedback": [],
+        "audioSaved": false,
+        "cloudCalls": 0,
+        "experimental": true,
+        "diagnosticVersion": 1,
+        "audioInfo": {
+          "durationMs": 1512,
+          "rms": 0.054373,
+          "clippedSampleFraction": 0.0
+        },
+        "diagnostics": {
+          "uncertaintyReason": "words-differ-phoneme-uncertain",
+          "recognizedWordsMatch": false,
+          "speechEvidenceSupported": true,
+          "greedyPhonemesMatch": false,
+          "alignedTargetsDominate": false,
+          "unconfirmedPhones": [
+            {
+              "index": 1,
+              "target": "ɛ",
+              "reason": "alignment-conflict",
+              "targetPosteriorPeak": 0.00115,
+              "marginAgainstOtherPhones": -6.755
+            }
+          ],
+          "transcriptionEvidence": [
+            {
+              "noSpeechProbability": 0.0175,
+              "averageLogProbability": -0.4753
+            }
+          ],
+          "alignmentIsNotPronunciationScore": true
+        },
+        "reason": "words-differ-phoneme-uncertain",
+        "elapsedMs": 7016,
+        "recognizedWordsMatch": false,
+        "greedyPhonemesMatch": false
+      }
+    },
+    {
+      "id": "aria-bed-as-bed",
+      "source": "public\\audio\\aria\\word-1291.mp3",
+      "sha256": "5e76c091ea05c53403fa281115e8a5bfe08a42b621f6a2893c88beb6b9f133cd",
+      "spokenFixture": "bed",
+      "target": "bed",
+      "expectedCorrect": true,
+      "result": {
+        "reference": "bed",
+        "status": "supported",
+        "transcript": "Bed",
+        "feedback": [],
+        "audioSaved": false,
+        "cloudCalls": 0,
+        "experimental": true,
+        "diagnosticVersion": 1,
+        "audioInfo": {
+          "durationMs": 1440,
+          "rms": 0.053662,
+          "clippedSampleFraction": 0.0
+        },
+        "diagnostics": {
+          "uncertaintyReason": "words-and-acoustics-supported",
+          "recognizedWordsMatch": true,
+          "speechEvidenceSupported": true,
+          "greedyPhonemesMatch": true,
+          "alignedTargetsDominate": true,
+          "unconfirmedPhones": [],
+          "transcriptionEvidence": [
+            {
+              "noSpeechProbability": 0.0465,
+              "averageLogProbability": -0.5353
+            }
+          ],
+          "alignmentIsNotPronunciationScore": true
+        },
+        "reason": "words-and-acoustics-supported",
+        "elapsedMs": 6906,
+        "recognizedWordsMatch": true,
+        "greedyPhonemesMatch": true
+      }
+    },
+    {
+      "id": "aria-bed-as-bad",
+      "source": "public\\audio\\aria\\word-1291.mp3",
+      "sha256": "5e76c091ea05c53403fa281115e8a5bfe08a42b621f6a2893c88beb6b9f133cd",
+      "spokenFixture": "bed",
+      "target": "bad",
+      "expectedCorrect": false,
+      "result": {
+        "reference": "bad",
+        "status": "uncertain",
+        "transcript": "Bed",
+        "feedback": [],
+        "audioSaved": false,
+        "cloudCalls": 0,
+        "experimental": true,
+        "diagnosticVersion": 1,
+        "audioInfo": {
+          "durationMs": 1440,
+          "rms": 0.053662,
+          "clippedSampleFraction": 0.0
+        },
+        "diagnostics": {
+          "uncertaintyReason": "words-differ-phoneme-uncertain",
+          "recognizedWordsMatch": false,
+          "speechEvidenceSupported": true,
+          "greedyPhonemesMatch": false,
+          "alignedTargetsDominate": false,
+          "unconfirmedPhones": [
+            {
+              "index": 1,
+              "target": "æ",
+              "reason": "alignment-conflict",
+              "targetPosteriorPeak": 0.13508,
+              "marginAgainstOtherPhones": -1.837
+            }
+          ],
+          "transcriptionEvidence": [
+            {
+              "noSpeechProbability": 0.0465,
+              "averageLogProbability": -0.5353
+            }
+          ],
+          "alignmentIsNotPronunciationScore": true
+        },
+        "reason": "words-differ-phoneme-uncertain",
+        "elapsedMs": 7078,
+        "recognizedWordsMatch": false,
+        "greedyPhonemesMatch": false
+      }
+    },
+    {
+      "id": "aria-light-as-light",
+      "source": "public\\audio\\aria\\word-1852.mp3",
+      "sha256": "f718748a255457e8fb6b28bfd3d111c36716a447c69187d5644ac1ecf7edd337",
+      "spokenFixture": "light",
+      "target": "light",
+      "expectedCorrect": true,
+      "result": {
+        "reference": "light",
+        "status": "supported",
+        "transcript": "Light",
+        "feedback": [],
+        "audioSaved": false,
+        "cloudCalls": 0,
+        "experimental": true,
+        "diagnosticVersion": 1,
+        "audioInfo": {
+          "durationMs": 1584,
+          "rms": 0.062344,
+          "clippedSampleFraction": 0.0
+        },
+        "diagnostics": {
+          "uncertaintyReason": "words-and-acoustics-supported",
+          "recognizedWordsMatch": true,
+          "speechEvidenceSupported": true,
+          "greedyPhonemesMatch": true,
+          "alignedTargetsDominate": true,
+          "unconfirmedPhones": [],
+          "transcriptionEvidence": [
+            {
+              "noSpeechProbability": 0.1022,
+              "averageLogProbability": -0.6484
+            }
+          ],
+          "alignmentIsNotPronunciationScore": true
+        },
+        "reason": "words-and-acoustics-supported",
+        "elapsedMs": 7187,
+        "recognizedWordsMatch": true,
+        "greedyPhonemesMatch": true
+      }
+    },
+    {
+      "id": "aria-light-as-right",
+      "source": "public\\audio\\aria\\word-1852.mp3",
+      "sha256": "f718748a255457e8fb6b28bfd3d111c36716a447c69187d5644ac1ecf7edd337",
+      "spokenFixture": "light",
+      "target": "right",
+      "expectedCorrect": false,
+      "result": {
+        "reference": "right",
+        "status": "practice",
+        "transcript": "Light",
+        "feedback": [
+          {
+            "index": 0,
+            "expected": "ɹ",
+            "heard": "l"
+          }
+        ],
+        "audioSaved": false,
+        "cloudCalls": 0,
+        "experimental": true,
+        "diagnosticVersion": 1,
+        "audioInfo": {
+          "durationMs": 1584,
+          "rms": 0.062344,
+          "clippedSampleFraction": 0.0
+        },
+        "diagnostics": {
+          "uncertaintyReason": "words-differ-phoneme-uncertain",
+          "recognizedWordsMatch": false,
+          "speechEvidenceSupported": true,
+          "greedyPhonemesMatch": false,
+          "alignedTargetsDominate": false,
+          "unconfirmedPhones": [
+            {
+              "index": 0,
+              "target": "ɹ",
+              "reason": "alignment-conflict",
+              "targetPosteriorPeak": 0.00017,
+              "marginAgainstOtherPhones": -8.677
+            }
+          ],
+          "transcriptionEvidence": [
+            {
+              "noSpeechProbability": 0.1022,
+              "averageLogProbability": -0.6484
+            }
+          ],
+          "alignmentIsNotPronunciationScore": true
+        },
+        "reason": "agreed-phoneme-substitution",
+        "elapsedMs": 7047,
+        "recognizedWordsMatch": false,
+        "greedyPhonemesMatch": false
+      }
+    },
+    {
+      "id": "aria-right-as-right",
+      "source": "public\\audio\\aria\\word-2160.mp3",
+      "sha256": "c4f8341a47942b096bcec86eacade529bb700fd8f725bfff388081846fb358df",
+      "spokenFixture": "right",
+      "target": "right",
+      "expectedCorrect": true,
+      "result": {
+        "reference": "right",
+        "status": "supported",
+        "transcript": "Right.",
+        "feedback": [],
+        "audioSaved": false,
+        "cloudCalls": 0,
+        "experimental": true,
+        "diagnosticVersion": 1,
+        "audioInfo": {
+          "durationMs": 1536,
+          "rms": 0.062557,
+          "clippedSampleFraction": 0.0
+        },
+        "diagnostics": {
+          "uncertaintyReason": "words-and-acoustics-supported",
+          "recognizedWordsMatch": true,
+          "speechEvidenceSupported": true,
+          "greedyPhonemesMatch": true,
+          "alignedTargetsDominate": true,
+          "unconfirmedPhones": [],
+          "transcriptionEvidence": [
+            {
+              "noSpeechProbability": 0.0265,
+              "averageLogProbability": -0.7293
+            }
+          ],
+          "alignmentIsNotPronunciationScore": true
+        },
+        "reason": "words-and-acoustics-supported",
+        "elapsedMs": 7141,
+        "recognizedWordsMatch": true,
+        "greedyPhonemesMatch": true
+      }
+    },
+    {
+      "id": "aria-right-as-light",
+      "source": "public\\audio\\aria\\word-2160.mp3",
+      "sha256": "c4f8341a47942b096bcec86eacade529bb700fd8f725bfff388081846fb358df",
+      "spokenFixture": "right",
+      "target": "light",
+      "expectedCorrect": false,
+      "result": {
+        "reference": "light",
+        "status": "practice",
+        "transcript": "Right.",
+        "feedback": [
+          {
+            "index": 0,
+            "expected": "l",
+            "heard": "ɹ"
+          }
+        ],
+        "audioSaved": false,
+        "cloudCalls": 0,
+        "experimental": true,
+        "diagnosticVersion": 1,
+        "audioInfo": {
+          "durationMs": 1536,
+          "rms": 0.062557,
+          "clippedSampleFraction": 0.0
+        },
+        "diagnostics": {
+          "uncertaintyReason": "words-differ-phoneme-uncertain",
+          "recognizedWordsMatch": false,
+          "speechEvidenceSupported": true,
+          "greedyPhonemesMatch": false,
+          "alignedTargetsDominate": false,
+          "unconfirmedPhones": [
+            {
+              "index": 0,
+              "target": "l",
+              "reason": "alignment-conflict",
+              "targetPosteriorPeak": 9e-05,
+              "marginAgainstOtherPhones": -9.364
+            }
+          ],
+          "transcriptionEvidence": [
+            {
+              "noSpeechProbability": 0.0265,
+              "averageLogProbability": -0.7293
+            }
+          ],
+          "alignmentIsNotPronunciationScore": true
+        },
+        "reason": "agreed-phoneme-substitution",
+        "elapsedMs": 7078,
+        "recognizedWordsMatch": false,
+        "greedyPhonemesMatch": false
+      }
+    },
+    {
+      "id": "aria-thin-as-thin",
+      "source": "public\\audio\\aria\\word-2388.mp3",
+      "sha256": "316efaeb84b4f3b59f973082e4ea09e317fe69f4ba9bb36c28247c048f77c154",
+      "spokenFixture": "thin",
+      "target": "thin",
+      "expectedCorrect": true,
+      "result": {
+        "reference": "thin",
+        "status": "supported",
+        "transcript": "Thin.",
+        "feedback": [],
+        "audioSaved": false,
+        "cloudCalls": 0,
+        "experimental": true,
+        "diagnosticVersion": 1,
+        "audioInfo": {
+          "durationMs": 1488,
+          "rms": 0.060322,
+          "clippedSampleFraction": 0.0
+        },
+        "diagnostics": {
+          "uncertaintyReason": "words-and-acoustics-supported",
+          "recognizedWordsMatch": true,
+          "speechEvidenceSupported": true,
+          "greedyPhonemesMatch": true,
+          "alignedTargetsDominate": true,
+          "unconfirmedPhones": [],
+          "transcriptionEvidence": [
+            {
+              "noSpeechProbability": 0.1471,
+              "averageLogProbability": -0.6883
+            }
+          ],
+          "alignmentIsNotPronunciationScore": true
+        },
+        "reason": "words-and-acoustics-supported",
+        "elapsedMs": 6968,
+        "recognizedWordsMatch": true,
+        "greedyPhonemesMatch": true
+      }
+    },
+    {
+      "id": "aria-thin-as-think",
+      "source": "public\\audio\\aria\\word-2388.mp3",
+      "sha256": "316efaeb84b4f3b59f973082e4ea09e317fe69f4ba9bb36c28247c048f77c154",
+      "spokenFixture": "thin",
+      "target": "think",
+      "expectedCorrect": false,
+      "result": {
+        "reference": "think",
+        "status": "practice",
+        "transcript": "Thin.",
+        "feedback": [
+          {
+            "index": 3,
+            "expected": "k",
+            "heard": "n"
+          }
+        ],
+        "audioSaved": false,
+        "cloudCalls": 0,
+        "experimental": true,
+        "diagnosticVersion": 1,
+        "audioInfo": {
+          "durationMs": 1488,
+          "rms": 0.060322,
+          "clippedSampleFraction": 0.0
+        },
+        "diagnostics": {
+          "uncertaintyReason": "words-differ-phoneme-uncertain",
+          "recognizedWordsMatch": false,
+          "speechEvidenceSupported": true,
+          "greedyPhonemesMatch": false,
+          "alignedTargetsDominate": false,
+          "unconfirmedPhones": [
+            {
+              "index": 2,
+              "target": "ŋ",
+              "reason": "alignment-conflict",
+              "targetPosteriorPeak": 0.0019,
+              "marginAgainstOtherPhones": -6.26
+            }
+          ],
+          "transcriptionEvidence": [
+            {
+              "noSpeechProbability": 0.1471,
+              "averageLogProbability": -0.6883
+            }
+          ],
+          "alignmentIsNotPronunciationScore": true
+        },
+        "reason": "agreed-phoneme-substitution",
+        "elapsedMs": 7110,
+        "recognizedWordsMatch": false,
+        "greedyPhonemesMatch": false
+      }
+    },
+    {
+      "id": "aria-then-as-then",
+      "source": "public\\audio\\aria\\word-2383.mp3",
+      "sha256": "8295d847e9ae7d59ba055e6a5b2aabbd2af7566ce83bfb0a3a2d350367885187",
+      "spokenFixture": "then",
+      "target": "then",
+      "expectedCorrect": true,
+      "result": {
+        "reference": "then",
+        "status": "supported",
+        "transcript": "Then.",
+        "feedback": [],
+        "audioSaved": false,
+        "cloudCalls": 0,
+        "experimental": true,
+        "diagnosticVersion": 1,
+        "audioInfo": {
+          "durationMs": 1488,
+          "rms": 0.06174,
+          "clippedSampleFraction": 0.0
+        },
+        "diagnostics": {
+          "uncertaintyReason": "words-and-acoustics-supported",
+          "recognizedWordsMatch": true,
+          "speechEvidenceSupported": true,
+          "greedyPhonemesMatch": true,
+          "alignedTargetsDominate": true,
+          "unconfirmedPhones": [],
+          "transcriptionEvidence": [
+            {
+              "noSpeechProbability": 0.1643,
+              "averageLogProbability": -0.7026
+            }
+          ],
+          "alignmentIsNotPronunciationScore": true
+        },
+        "reason": "words-and-acoustics-supported",
+        "elapsedMs": 7047,
+        "recognizedWordsMatch": true,
+        "greedyPhonemesMatch": true
+      }
+    },
+    {
+      "id": "guy-hello-as-hello",
+      "source": "public\\audio\\daily\\guy\\hello.mp3",
+      "sha256": "75995d47e90e5015f57dd51844e4e12ede0b163c6fc06b9d829f7edf1d9fa386",
+      "spokenFixture": "hello",
+      "target": "hello",
+      "expectedCorrect": true,
+      "result": {
+        "reference": "hello",
+        "status": "supported",
+        "transcript": "Hello?",
+        "feedback": [],
+        "audioSaved": false,
+        "cloudCalls": 0,
+        "experimental": true,
+        "diagnosticVersion": 1,
+        "audioInfo": {
+          "durationMs": 1536,
+          "rms": 0.07306,
+          "clippedSampleFraction": 0.0
+        },
+        "diagnostics": {
+          "uncertaintyReason": "words-and-acoustics-supported",
+          "recognizedWordsMatch": true,
+          "speechEvidenceSupported": true,
+          "greedyPhonemesMatch": true,
+          "alignedTargetsDominate": true,
+          "unconfirmedPhones": [],
+          "transcriptionEvidence": [
+            {
+              "noSpeechProbability": 0.0334,
+              "averageLogProbability": -0.6198
+            }
+          ],
+          "alignmentIsNotPronunciationScore": true
+        },
+        "reason": "words-and-acoustics-supported",
+        "elapsedMs": 6969,
+        "recognizedWordsMatch": true,
+        "greedyPhonemesMatch": true
+      }
+    },
+    {
+      "id": "guy-goodbye-as-goodbye",
+      "source": "public\\audio\\daily\\guy\\goodbye.mp3",
+      "sha256": "351fcb29dfd2a4825344b9a6b85ee4df13ea1738faed04d97b8ef54fb33b4ba6",
+      "spokenFixture": "goodbye",
+      "target": "goodbye",
+      "expectedCorrect": true,
+      "result": {
+        "reference": "goodbye",
+        "status": "supported",
+        "transcript": "Goodbye.",
+        "feedback": [],
+        "audioSaved": false,
+        "cloudCalls": 0,
+        "experimental": true,
+        "diagnosticVersion": 1,
+        "audioInfo": {
+          "durationMs": 1656,
+          "rms": 0.071814,
+          "clippedSampleFraction": 0.0
+        },
+        "diagnostics": {
+          "uncertaintyReason": "words-and-acoustics-supported",
+          "recognizedWordsMatch": true,
+          "speechEvidenceSupported": true,
+          "greedyPhonemesMatch": false,
+          "alignedTargetsDominate": true,
+          "unconfirmedPhones": [],
+          "transcriptionEvidence": [
+            {
+              "noSpeechProbability": 0.002,
+              "averageLogProbability": -0.4977
+            }
+          ],
+          "alignmentIsNotPronunciationScore": true
+        },
+        "reason": "words-and-acoustics-supported",
+        "elapsedMs": 6922,
+        "recognizedWordsMatch": true,
+        "greedyPhonemesMatch": false
+      }
+    },
+    {
+      "id": "guy-think-as-think",
+      "source": "public\\audio\\guy\\word-2652.mp3",
+      "sha256": "9c53003ff5ca866c3041b440c3075da2da94d8b761c1f267080c2d44b0334daf",
+      "spokenFixture": "think",
+      "target": "think",
+      "expectedCorrect": true,
+      "result": {
+        "reference": "think",
+        "status": "supported",
+        "transcript": "Think!",
+        "feedback": [],
+        "audioSaved": false,
+        "cloudCalls": 0,
+        "experimental": true,
+        "diagnosticVersion": 1,
+        "audioInfo": {
+          "durationMs": 1584,
+          "rms": 0.059602,
+          "clippedSampleFraction": 0.0
+        },
+        "diagnostics": {
+          "uncertaintyReason": "words-and-acoustics-supported",
+          "recognizedWordsMatch": true,
+          "speechEvidenceSupported": true,
+          "greedyPhonemesMatch": true,
+          "alignedTargetsDominate": true,
+          "unconfirmedPhones": [],
+          "transcriptionEvidence": [
+            {
+              "noSpeechProbability": 0.143,
+              "averageLogProbability": -0.6246
+            }
+          ],
+          "alignmentIsNotPronunciationScore": true
+        },
+        "reason": "words-and-acoustics-supported",
+        "elapsedMs": 7016,
+        "recognizedWordsMatch": true,
+        "greedyPhonemesMatch": true
+      }
+    },
+    {
+      "id": "guy-sink-as-sink",
+      "source": "public\\audio\\guy\\word-959.mp3",
+      "sha256": "2a1d15a183d4fe0d4b32443959c39b1854c2107f82f8ba797de5ab88fab4ec94",
+      "spokenFixture": "sink",
+      "target": "sink",
+      "expectedCorrect": true,
+      "result": {
+        "reference": "sink",
+        "status": "supported",
+        "transcript": "Sync",
+        "feedback": [],
+        "audioSaved": false,
+        "cloudCalls": 0,
+        "experimental": true,
+        "diagnosticVersion": 1,
+        "audioInfo": {
+          "durationMs": 1632,
+          "rms": 0.058956,
+          "clippedSampleFraction": 0.0
+        },
+        "diagnostics": {
+          "uncertaintyReason": "words-and-acoustics-supported",
+          "recognizedWordsMatch": true,
+          "speechEvidenceSupported": true,
+          "greedyPhonemesMatch": true,
+          "alignedTargetsDominate": true,
+          "unconfirmedPhones": [],
+          "transcriptionEvidence": [
+            {
+              "noSpeechProbability": 0.1087,
+              "averageLogProbability": -0.5395
+            }
+          ],
+          "alignmentIsNotPronunciationScore": true
+        },
+        "reason": "words-and-acoustics-supported",
+        "elapsedMs": 7109,
+        "recognizedWordsMatch": true,
+        "greedyPhonemesMatch": true
+      }
+    },
+    {
+      "id": "guy-sink-as-think",
+      "source": "public\\audio\\guy\\word-959.mp3",
+      "sha256": "2a1d15a183d4fe0d4b32443959c39b1854c2107f82f8ba797de5ab88fab4ec94",
+      "spokenFixture": "sink",
+      "target": "think",
+      "expectedCorrect": false,
+      "result": {
+        "reference": "think",
+        "status": "practice",
+        "transcript": "Sync",
+        "feedback": [
+          {
+            "index": 0,
+            "expected": "θ",
+            "heard": "s"
+          }
+        ],
+        "audioSaved": false,
+        "cloudCalls": 0,
+        "experimental": true,
+        "diagnosticVersion": 1,
+        "audioInfo": {
+          "durationMs": 1632,
+          "rms": 0.058956,
+          "clippedSampleFraction": 0.0
+        },
+        "diagnostics": {
+          "uncertaintyReason": "words-differ-phoneme-uncertain",
+          "recognizedWordsMatch": false,
+          "speechEvidenceSupported": true,
+          "greedyPhonemesMatch": false,
+          "alignedTargetsDominate": false,
+          "unconfirmedPhones": [
+            {
+              "index": 0,
+              "target": "θ",
+              "reason": "alignment-conflict",
+              "targetPosteriorPeak": 0.00045,
+              "marginAgainstOtherPhones": -7.708
+            }
+          ],
+          "transcriptionEvidence": [
+            {
+              "noSpeechProbability": 0.1087,
+              "averageLogProbability": -0.5395
+            }
+          ],
+          "alignmentIsNotPronunciationScore": true
+        },
+        "reason": "agreed-phoneme-substitution",
+        "elapsedMs": 7016,
+        "recognizedWordsMatch": false,
+        "greedyPhonemesMatch": false
+      }
+    },
+    {
+      "id": "guy-ship-as-ship",
+      "source": "public\\audio\\guy\\word-2224.mp3",
+      "sha256": "3b2f0c745aefc588efad9acea1adb6332eceb4d80dc638578fddda9e808242d5",
+      "spokenFixture": "ship",
+      "target": "ship",
+      "expectedCorrect": true,
+      "result": {
+        "reference": "ship",
+        "status": "supported",
+        "transcript": "Ship",
+        "feedback": [],
+        "audioSaved": false,
+        "cloudCalls": 0,
+        "experimental": true,
+        "diagnosticVersion": 1,
+        "audioInfo": {
+          "durationMs": 1488,
+          "rms": 0.054057,
+          "clippedSampleFraction": 0.0
+        },
+        "diagnostics": {
+          "uncertaintyReason": "words-and-acoustics-supported",
+          "recognizedWordsMatch": true,
+          "speechEvidenceSupported": true,
+          "greedyPhonemesMatch": true,
+          "alignedTargetsDominate": true,
+          "unconfirmedPhones": [],
+          "transcriptionEvidence": [
+            {
+              "noSpeechProbability": 0.0679,
+              "averageLogProbability": -0.287
+            }
+          ],
+          "alignmentIsNotPronunciationScore": true
+        },
+        "reason": "words-and-acoustics-supported",
+        "elapsedMs": 6906,
+        "recognizedWordsMatch": true,
+        "greedyPhonemesMatch": true
+      }
+    },
+    {
+      "id": "guy-sheep-as-sheep",
+      "source": "public\\audio\\guy\\word-2968.mp3",
+      "sha256": "7e6f1a2b72c797d1c095bda747d05fd45f61a62cd85eb1790663f51b2c07f212",
+      "spokenFixture": "sheep",
+      "target": "sheep",
+      "expectedCorrect": true,
+      "result": {
+        "reference": "sheep",
+        "status": "supported",
+        "transcript": "Sheep",
+        "feedback": [],
+        "audioSaved": false,
+        "cloudCalls": 0,
+        "experimental": true,
+        "diagnosticVersion": 1,
+        "audioInfo": {
+          "durationMs": 1512,
+          "rms": 0.044704,
+          "clippedSampleFraction": 0.0
+        },
+        "diagnostics": {
+          "uncertaintyReason": "words-and-acoustics-supported",
+          "recognizedWordsMatch": true,
+          "speechEvidenceSupported": true,
+          "greedyPhonemesMatch": true,
+          "alignedTargetsDominate": true,
+          "unconfirmedPhones": [],
+          "transcriptionEvidence": [
+            {
+              "noSpeechProbability": 0.0399,
+              "averageLogProbability": -0.453
+            }
+          ],
+          "alignmentIsNotPronunciationScore": true
+        },
+        "reason": "words-and-acoustics-supported",
+        "elapsedMs": 7109,
+        "recognizedWordsMatch": true,
+        "greedyPhonemesMatch": true
+      }
+    },
+    {
+      "id": "guy-sheep-as-ship",
+      "source": "public\\audio\\guy\\word-2968.mp3",
+      "sha256": "7e6f1a2b72c797d1c095bda747d05fd45f61a62cd85eb1790663f51b2c07f212",
+      "spokenFixture": "sheep",
+      "target": "ship",
+      "expectedCorrect": false,
+      "result": {
+        "reference": "ship",
+        "status": "practice",
+        "transcript": "Sheep",
+        "feedback": [
+          {
+            "index": 1,
+            "expected": "ɪ",
+            "heard": "i"
+          }
+        ],
+        "audioSaved": false,
+        "cloudCalls": 0,
+        "experimental": true,
+        "diagnosticVersion": 1,
+        "audioInfo": {
+          "durationMs": 1512,
+          "rms": 0.044704,
+          "clippedSampleFraction": 0.0
+        },
+        "diagnostics": {
+          "uncertaintyReason": "words-differ-phoneme-uncertain",
+          "recognizedWordsMatch": false,
+          "speechEvidenceSupported": true,
+          "greedyPhonemesMatch": false,
+          "alignedTargetsDominate": false,
+          "unconfirmedPhones": [
+            {
+              "index": 1,
+              "target": "ɪ",
+              "reason": "alignment-conflict",
+              "targetPosteriorPeak": 0.00255,
+              "marginAgainstOtherPhones": -5.959
+            }
+          ],
+          "transcriptionEvidence": [
+            {
+              "noSpeechProbability": 0.0399,
+              "averageLogProbability": -0.453
+            }
+          ],
+          "alignmentIsNotPronunciationScore": true
+        },
+        "reason": "agreed-phoneme-substitution",
+        "elapsedMs": 7110,
+        "recognizedWordsMatch": false,
+        "greedyPhonemesMatch": false
+      }
+    },
+    {
+      "id": "guy-three-as-three",
+      "source": "public\\audio\\guy\\word-2400.mp3",
+      "sha256": "94ceb6bcde145714f09292b63ae0d6624a89be5cb173720ac695119dafe3a0c2",
+      "spokenFixture": "three",
+      "target": "three",
+      "expectedCorrect": true,
+      "result": {
+        "reference": "three",
+        "status": "supported",
+        "transcript": "3",
+        "feedback": [],
+        "audioSaved": false,
+        "cloudCalls": 0,
+        "experimental": true,
+        "diagnosticVersion": 1,
+        "audioInfo": {
+          "durationMs": 1656,
+          "rms": 0.061119,
+          "clippedSampleFraction": 0.0
+        },
+        "diagnostics": {
+          "uncertaintyReason": "words-and-acoustics-supported",
+          "recognizedWordsMatch": true,
+          "speechEvidenceSupported": true,
+          "greedyPhonemesMatch": true,
+          "alignedTargetsDominate": true,
+          "unconfirmedPhones": [],
+          "transcriptionEvidence": [
+            {
+              "noSpeechProbability": 0.1122,
+              "averageLogProbability": -0.5527
+            }
+          ],
+          "alignmentIsNotPronunciationScore": true
+        },
+        "reason": "words-and-acoustics-supported",
+        "elapsedMs": 7062,
+        "recognizedWordsMatch": true,
+        "greedyPhonemesMatch": true
+      }
+    },
+    {
+      "id": "guy-free-as-free",
+      "source": "public\\audio\\guy\\word-1649.mp3",
+      "sha256": "b64d197492c3ab8a73bcb5eb526e016455a9f5793081c3f58d95e56470fa5991",
+      "spokenFixture": "free",
+      "target": "free",
+      "expectedCorrect": true,
+      "result": {
+        "reference": "free",
+        "status": "supported",
+        "transcript": "Free.",
+        "feedback": [],
+        "audioSaved": false,
+        "cloudCalls": 0,
+        "experimental": true,
+        "diagnosticVersion": 1,
+        "audioInfo": {
+          "durationMs": 1608,
+          "rms": 0.069955,
+          "clippedSampleFraction": 0.0
+        },
+        "diagnostics": {
+          "uncertaintyReason": "words-and-acoustics-supported",
+          "recognizedWordsMatch": true,
+          "speechEvidenceSupported": true,
+          "greedyPhonemesMatch": true,
+          "alignedTargetsDominate": true,
+          "unconfirmedPhones": [],
+          "transcriptionEvidence": [
+            {
+              "noSpeechProbability": 0.0997,
+              "averageLogProbability": -0.6033
+            }
+          ],
+          "alignmentIsNotPronunciationScore": true
+        },
+        "reason": "words-and-acoustics-supported",
+        "elapsedMs": 7375,
+        "recognizedWordsMatch": true,
+        "greedyPhonemesMatch": true
+      }
+    },
+    {
+      "id": "guy-free-as-three",
+      "source": "public\\audio\\guy\\word-1649.mp3",
+      "sha256": "b64d197492c3ab8a73bcb5eb526e016455a9f5793081c3f58d95e56470fa5991",
+      "spokenFixture": "free",
+      "target": "three",
+      "expectedCorrect": false,
+      "result": {
+        "reference": "three",
+        "status": "practice",
+        "transcript": "Free.",
+        "feedback": [
+          {
+            "index": 0,
+            "expected": "θ",
+            "heard": "f"
+          }
+        ],
+        "audioSaved": false,
+        "cloudCalls": 0,
+        "experimental": true,
+        "diagnosticVersion": 1,
+        "audioInfo": {
+          "durationMs": 1608,
+          "rms": 0.069955,
+          "clippedSampleFraction": 0.0
+        },
+        "diagnostics": {
+          "uncertaintyReason": "words-differ-phoneme-uncertain",
+          "recognizedWordsMatch": false,
+          "speechEvidenceSupported": true,
+          "greedyPhonemesMatch": false,
+          "alignedTargetsDominate": false,
+          "unconfirmedPhones": [
+            {
+              "index": 0,
+              "target": "θ",
+              "reason": "alignment-conflict",
+              "targetPosteriorPeak": 0.00113,
+              "marginAgainstOtherPhones": -6.782
+            }
+          ],
+          "transcriptionEvidence": [
+            {
+              "noSpeechProbability": 0.0997,
+              "averageLogProbability": -0.6033
+            }
+          ],
+          "alignmentIsNotPronunciationScore": true
+        },
+        "reason": "agreed-phoneme-substitution",
+        "elapsedMs": 6938,
+        "recognizedWordsMatch": false,
+        "greedyPhonemesMatch": false
+      }
+    },
+    {
+      "id": "guy-bad-as-bad",
+      "source": "public\\audio\\guy\\word-2978.mp3",
+      "sha256": "07160402b698581188f51423fc62d77102d77c247bbea7481bf140293e5dbcde",
+      "spokenFixture": "bad",
+      "target": "bad",
+      "expectedCorrect": true,
+      "result": {
+        "reference": "bad",
+        "status": "supported",
+        "transcript": "Bad.",
+        "feedback": [],
+        "audioSaved": false,
+        "cloudCalls": 0,
+        "experimental": true,
+        "diagnosticVersion": 1,
+        "audioInfo": {
+          "durationMs": 1512,
+          "rms": 0.057079,
+          "clippedSampleFraction": 0.0
+        },
+        "diagnostics": {
+          "uncertaintyReason": "words-and-acoustics-supported",
+          "recognizedWordsMatch": true,
+          "speechEvidenceSupported": true,
+          "greedyPhonemesMatch": true,
+          "alignedTargetsDominate": true,
+          "unconfirmedPhones": [],
+          "transcriptionEvidence": [
+            {
+              "noSpeechProbability": 0.0382,
+              "averageLogProbability": -0.3938
+            }
+          ],
+          "alignmentIsNotPronunciationScore": true
+        },
+        "reason": "words-and-acoustics-supported",
+        "elapsedMs": 6906,
+        "recognizedWordsMatch": true,
+        "greedyPhonemesMatch": true
+      }
+    },
+    {
+      "id": "guy-bad-as-bed",
+      "source": "public\\audio\\guy\\word-2978.mp3",
+      "sha256": "07160402b698581188f51423fc62d77102d77c247bbea7481bf140293e5dbcde",
+      "spokenFixture": "bad",
+      "target": "bed",
+      "expectedCorrect": false,
+      "result": {
+        "reference": "bed",
+        "status": "practice",
+        "transcript": "Bad.",
+        "feedback": [
+          {
+            "index": 1,
+            "expected": "ɛ",
+            "heard": "æ"
+          }
+        ],
+        "audioSaved": false,
+        "cloudCalls": 0,
+        "experimental": true,
+        "diagnosticVersion": 1,
+        "audioInfo": {
+          "durationMs": 1512,
+          "rms": 0.057079,
+          "clippedSampleFraction": 0.0
+        },
+        "diagnostics": {
+          "uncertaintyReason": "words-differ-phoneme-uncertain",
+          "recognizedWordsMatch": false,
+          "speechEvidenceSupported": true,
+          "greedyPhonemesMatch": false,
+          "alignedTargetsDominate": false,
+          "unconfirmedPhones": [
+            {
+              "index": 1,
+              "target": "ɛ",
+              "reason": "alignment-conflict",
+              "targetPosteriorPeak": 0.00092,
+              "marginAgainstOtherPhones": -6.99
+            }
+          ],
+          "transcriptionEvidence": [
+            {
+              "noSpeechProbability": 0.0382,
+              "averageLogProbability": -0.3938
+            }
+          ],
+          "alignmentIsNotPronunciationScore": true
+        },
+        "reason": "agreed-phoneme-substitution",
+        "elapsedMs": 7062,
+        "recognizedWordsMatch": false,
+        "greedyPhonemesMatch": false
+      }
+    },
+    {
+      "id": "guy-bed-as-bed",
+      "source": "public\\audio\\guy\\word-1291.mp3",
+      "sha256": "120e4f3456bb54835747cdae05588a31d61f32201d79d49be4e01c1f653ec7ce",
+      "spokenFixture": "bed",
+      "target": "bed",
+      "expectedCorrect": true,
+      "result": {
+        "reference": "bed",
+        "status": "uncertain",
+        "transcript": "Bed",
+        "feedback": [],
+        "audioSaved": false,
+        "cloudCalls": 0,
+        "experimental": true,
+        "diagnosticVersion": 1,
+        "audioInfo": {
+          "durationMs": 1464,
+          "rms": 0.058298,
+          "clippedSampleFraction": 0.0
+        },
+        "diagnostics": {
+          "uncertaintyReason": "phoneme-evidence-conflict",
+          "recognizedWordsMatch": true,
+          "speechEvidenceSupported": true,
+          "greedyPhonemesMatch": false,
+          "alignedTargetsDominate": false,
+          "unconfirmedPhones": [
+            {
+              "index": 0,
+              "target": "b",
+              "reason": "alignment-conflict",
+              "targetPosteriorPeak": 0.01278,
+              "marginAgainstOtherPhones": -4.289
+            }
+          ],
+          "transcriptionEvidence": [
+            {
+              "noSpeechProbability": 0.0634,
+              "averageLogProbability": -0.6412
+            }
+          ],
+          "alignmentIsNotPronunciationScore": true
+        },
+        "reason": "phoneme-evidence-conflict",
+        "elapsedMs": 6797,
+        "recognizedWordsMatch": true,
+        "greedyPhonemesMatch": false
+      }
+    },
+    {
+      "id": "guy-bed-as-bad",
+      "source": "public\\audio\\guy\\word-1291.mp3",
+      "sha256": "120e4f3456bb54835747cdae05588a31d61f32201d79d49be4e01c1f653ec7ce",
+      "spokenFixture": "bed",
+      "target": "bad",
+      "expectedCorrect": false,
+      "result": {
+        "reference": "bad",
+        "status": "uncertain",
+        "transcript": "Bed",
+        "feedback": [],
+        "audioSaved": false,
+        "cloudCalls": 0,
+        "experimental": true,
+        "diagnosticVersion": 1,
+        "audioInfo": {
+          "durationMs": 1464,
+          "rms": 0.058298,
+          "clippedSampleFraction": 0.0
+        },
+        "diagnostics": {
+          "uncertaintyReason": "words-differ-phoneme-uncertain",
+          "recognizedWordsMatch": false,
+          "speechEvidenceSupported": true,
+          "greedyPhonemesMatch": false,
+          "alignedTargetsDominate": false,
+          "unconfirmedPhones": [
+            {
+              "index": 0,
+              "target": "b",
+              "reason": "alignment-conflict",
+              "targetPosteriorPeak": 0.01278,
+              "marginAgainstOtherPhones": -4.289
+            },
+            {
+              "index": 1,
+              "target": "æ",
+              "reason": "alignment-conflict",
+              "targetPosteriorPeak": 0.4169,
+              "marginAgainstOtherPhones": -0.254
+            }
+          ],
+          "transcriptionEvidence": [
+            {
+              "noSpeechProbability": 0.0634,
+              "averageLogProbability": -0.6412
+            }
+          ],
+          "alignmentIsNotPronunciationScore": true
+        },
+        "reason": "words-differ-phoneme-uncertain",
+        "elapsedMs": 6531,
+        "recognizedWordsMatch": false,
+        "greedyPhonemesMatch": false
+      }
+    },
+    {
+      "id": "guy-light-as-light",
+      "source": "public\\audio\\guy\\word-1852.mp3",
+      "sha256": "eee7516495f22dfc96baa88bfea2fb22b32b6896f0e8941846320b451f4f6d57",
+      "spokenFixture": "light",
+      "target": "light",
+      "expectedCorrect": true,
+      "result": {
+        "reference": "light",
+        "status": "supported",
+        "transcript": "Light",
+        "feedback": [],
+        "audioSaved": false,
+        "cloudCalls": 0,
+        "experimental": true,
+        "diagnosticVersion": 1,
+        "audioInfo": {
+          "durationMs": 1536,
+          "rms": 0.073419,
+          "clippedSampleFraction": 0.0
+        },
+        "diagnostics": {
+          "uncertaintyReason": "words-and-acoustics-supported",
+          "recognizedWordsMatch": true,
+          "speechEvidenceSupported": true,
+          "greedyPhonemesMatch": true,
+          "alignedTargetsDominate": true,
+          "unconfirmedPhones": [],
+          "transcriptionEvidence": [
+            {
+              "noSpeechProbability": 0.0307,
+              "averageLogProbability": -0.6675
+            }
+          ],
+          "alignmentIsNotPronunciationScore": true
+        },
+        "reason": "words-and-acoustics-supported",
+        "elapsedMs": 7125,
+        "recognizedWordsMatch": true,
+        "greedyPhonemesMatch": true
+      }
+    },
+    {
+      "id": "guy-light-as-right",
+      "source": "public\\audio\\guy\\word-1852.mp3",
+      "sha256": "eee7516495f22dfc96baa88bfea2fb22b32b6896f0e8941846320b451f4f6d57",
+      "spokenFixture": "light",
+      "target": "right",
+      "expectedCorrect": false,
+      "result": {
+        "reference": "right",
+        "status": "practice",
+        "transcript": "Light",
+        "feedback": [
+          {
+            "index": 0,
+            "expected": "ɹ",
+            "heard": "l"
+          }
+        ],
+        "audioSaved": false,
+        "cloudCalls": 0,
+        "experimental": true,
+        "diagnosticVersion": 1,
+        "audioInfo": {
+          "durationMs": 1536,
+          "rms": 0.073419,
+          "clippedSampleFraction": 0.0
+        },
+        "diagnostics": {
+          "uncertaintyReason": "words-differ-phoneme-uncertain",
+          "recognizedWordsMatch": false,
+          "speechEvidenceSupported": true,
+          "greedyPhonemesMatch": false,
+          "alignedTargetsDominate": false,
+          "unconfirmedPhones": [
+            {
+              "index": 0,
+              "target": "ɹ",
+              "reason": "alignment-conflict",
+              "targetPosteriorPeak": 0.00014,
+              "marginAgainstOtherPhones": -8.854
+            }
+          ],
+          "transcriptionEvidence": [
+            {
+              "noSpeechProbability": 0.0307,
+              "averageLogProbability": -0.6675
+            }
+          ],
+          "alignmentIsNotPronunciationScore": true
+        },
+        "reason": "agreed-phoneme-substitution",
+        "elapsedMs": 7188,
+        "recognizedWordsMatch": false,
+        "greedyPhonemesMatch": false
+      }
+    },
+    {
+      "id": "guy-right-as-right",
+      "source": "public\\audio\\guy\\word-2160.mp3",
+      "sha256": "d80d39b42a0d25f74b7b139ea295162b0436f554e01b7d8b5290e11e93556d0b",
+      "spokenFixture": "right",
+      "target": "right",
+      "expectedCorrect": true,
+      "result": {
+        "reference": "right",
+        "status": "supported",
+        "transcript": "Right.",
+        "feedback": [],
+        "audioSaved": false,
+        "cloudCalls": 0,
+        "experimental": true,
+        "diagnosticVersion": 1,
+        "audioInfo": {
+          "durationMs": 1536,
+          "rms": 0.073833,
+          "clippedSampleFraction": 0.0
+        },
+        "diagnostics": {
+          "uncertaintyReason": "words-and-acoustics-supported",
+          "recognizedWordsMatch": true,
+          "speechEvidenceSupported": true,
+          "greedyPhonemesMatch": true,
+          "alignedTargetsDominate": true,
+          "unconfirmedPhones": [],
+          "transcriptionEvidence": [
+            {
+              "noSpeechProbability": 0.0231,
+              "averageLogProbability": -0.6486
+            }
+          ],
+          "alignmentIsNotPronunciationScore": true
+        },
+        "reason": "words-and-acoustics-supported",
+        "elapsedMs": 7735,
+        "recognizedWordsMatch": true,
+        "greedyPhonemesMatch": true
+      }
+    },
+    {
+      "id": "guy-right-as-light",
+      "source": "public\\audio\\guy\\word-2160.mp3",
+      "sha256": "d80d39b42a0d25f74b7b139ea295162b0436f554e01b7d8b5290e11e93556d0b",
+      "spokenFixture": "right",
+      "target": "light",
+      "expectedCorrect": false,
+      "result": {
+        "reference": "light",
+        "status": "practice",
+        "transcript": "Right.",
+        "feedback": [
+          {
+            "index": 0,
+            "expected": "l",
+            "heard": "ɹ"
+          }
+        ],
+        "audioSaved": false,
+        "cloudCalls": 0,
+        "experimental": true,
+        "diagnosticVersion": 1,
+        "audioInfo": {
+          "durationMs": 1536,
+          "rms": 0.073833,
+          "clippedSampleFraction": 0.0
+        },
+        "diagnostics": {
+          "uncertaintyReason": "words-differ-phoneme-uncertain",
+          "recognizedWordsMatch": false,
+          "speechEvidenceSupported": true,
+          "greedyPhonemesMatch": false,
+          "alignedTargetsDominate": false,
+          "unconfirmedPhones": [
+            {
+              "index": 0,
+              "target": "l",
+              "reason": "alignment-conflict",
+              "targetPosteriorPeak": 0.00013,
+              "marginAgainstOtherPhones": -8.979
+            }
+          ],
+          "transcriptionEvidence": [
+            {
+              "noSpeechProbability": 0.0231,
+              "averageLogProbability": -0.6486
+            }
+          ],
+          "alignmentIsNotPronunciationScore": true
+        },
+        "reason": "agreed-phoneme-substitution",
+        "elapsedMs": 7562,
+        "recognizedWordsMatch": false,
+        "greedyPhonemesMatch": false
+      }
+    },
+    {
+      "id": "guy-thin-as-thin",
+      "source": "public\\audio\\guy\\word-2388.mp3",
+      "sha256": "472c6d3edc5a8f7e96d8f3f5e57112c78e8998d9f2e08ec98486f70c2ee1be65",
+      "spokenFixture": "thin",
+      "target": "thin",
+      "expectedCorrect": true,
+      "result": {
+        "reference": "thin",
+        "status": "supported",
+        "transcript": "Thin.",
+        "feedback": [],
+        "audioSaved": false,
+        "cloudCalls": 0,
+        "experimental": true,
+        "diagnosticVersion": 1,
+        "audioInfo": {
+          "durationMs": 1536,
+          "rms": 0.055659,
+          "clippedSampleFraction": 0.0
+        },
+        "diagnostics": {
+          "uncertaintyReason": "words-and-acoustics-supported",
+          "recognizedWordsMatch": true,
+          "speechEvidenceSupported": true,
+          "greedyPhonemesMatch": true,
+          "alignedTargetsDominate": true,
+          "unconfirmedPhones": [],
+          "transcriptionEvidence": [
+            {
+              "noSpeechProbability": 0.0747,
+              "averageLogProbability": -0.547
+            }
+          ],
+          "alignmentIsNotPronunciationScore": true
+        },
+        "reason": "words-and-acoustics-supported",
+        "elapsedMs": 7141,
+        "recognizedWordsMatch": true,
+        "greedyPhonemesMatch": true
+      }
+    },
+    {
+      "id": "guy-thin-as-think",
+      "source": "public\\audio\\guy\\word-2388.mp3",
+      "sha256": "472c6d3edc5a8f7e96d8f3f5e57112c78e8998d9f2e08ec98486f70c2ee1be65",
+      "spokenFixture": "thin",
+      "target": "think",
+      "expectedCorrect": false,
+      "result": {
+        "reference": "think",
+        "status": "practice",
+        "transcript": "Thin.",
+        "feedback": [
+          {
+            "index": 3,
+            "expected": "k",
+            "heard": "n"
+          }
+        ],
+        "audioSaved": false,
+        "cloudCalls": 0,
+        "experimental": true,
+        "diagnosticVersion": 1,
+        "audioInfo": {
+          "durationMs": 1536,
+          "rms": 0.055659,
+          "clippedSampleFraction": 0.0
+        },
+        "diagnostics": {
+          "uncertaintyReason": "words-differ-phoneme-uncertain",
+          "recognizedWordsMatch": false,
+          "speechEvidenceSupported": true,
+          "greedyPhonemesMatch": false,
+          "alignedTargetsDominate": false,
+          "unconfirmedPhones": [
+            {
+              "index": 2,
+              "target": "ŋ",
+              "reason": "alignment-conflict",
+              "targetPosteriorPeak": 0.00072,
+              "marginAgainstOtherPhones": -7.233
+            }
+          ],
+          "transcriptionEvidence": [
+            {
+              "noSpeechProbability": 0.0747,
+              "averageLogProbability": -0.547
+            }
+          ],
+          "alignmentIsNotPronunciationScore": true
+        },
+        "reason": "agreed-phoneme-substitution",
+        "elapsedMs": 7187,
+        "recognizedWordsMatch": false,
+        "greedyPhonemesMatch": false
+      }
+    },
+    {
+      "id": "guy-then-as-then",
+      "source": "public\\audio\\guy\\word-2383.mp3",
+      "sha256": "f913bdfc51bbbbffacbb5f965a6f5aa3cc61df98b5c4d47f2ea4562e866a36c1",
+      "spokenFixture": "then",
+      "target": "then",
+      "expectedCorrect": true,
+      "result": {
+        "reference": "then",
+        "status": "uncertain",
+        "transcript": "Then.",
+        "feedback": [],
+        "audioSaved": false,
+        "cloudCalls": 0,
+        "experimental": true,
+        "diagnosticVersion": 1,
+        "audioInfo": {
+          "durationMs": 1536,
+          "rms": 0.059182,
+          "clippedSampleFraction": 0.0
+        },
+        "diagnostics": {
+          "uncertaintyReason": "phoneme-evidence-conflict",
+          "recognizedWordsMatch": true,
+          "speechEvidenceSupported": true,
+          "greedyPhonemesMatch": false,
+          "alignedTargetsDominate": false,
+          "unconfirmedPhones": [
+            {
+              "index": 0,
+              "target": "ð",
+              "reason": "alignment-conflict",
+              "targetPosteriorPeak": 0.10501,
+              "marginAgainstOtherPhones": -2.082
+            }
+          ],
+          "transcriptionEvidence": [
+            {
+              "noSpeechProbability": 0.0316,
+              "averageLogProbability": -0.545
+            }
+          ],
+          "alignmentIsNotPronunciationScore": true
+        },
+        "reason": "phoneme-evidence-conflict",
+        "elapsedMs": 7422,
+        "recognizedWordsMatch": true,
+        "greedyPhonemesMatch": false
+      }
+    }
+  ],
+  "inputChecks": [
+    {
+      "id": "empty",
+      "httpStatus": 422,
+      "result": {
+        "error": "empty-audio"
+      }
+    },
+    {
+      "id": "invalid-container",
+      "httpStatus": 422,
+      "result": {
+        "error": "invalid-audio"
+      }
+    },
+    {
+      "id": "silent",
+      "httpStatus": 200,
+      "result": {
+        "reference": "Goodbye",
+        "status": "uncertain",
+        "transcript": "",
+        "feedback": [],
+        "audioSaved": false,
+        "cloudCalls": 0,
+        "experimental": true,
+        "diagnosticVersion": 1,
+        "audioInfo": {
+          "durationMs": 1000,
+          "rms": 0.0,
+          "clippedSampleFraction": 0.0
+        },
+        "reason": "no-speech"
+      }
+    },
+    {
+      "id": "too-short",
+      "httpStatus": 422,
+      "result": {
+        "error": "invalid-duration"
+      }
+    },
+    {
+      "id": "missing-token",
+      "httpStatus": 403,
+      "result": {
+        "error": "request-not-authorized"
+      }
+    },
+    {
+      "id": "foreign-origin",
+      "httpStatus": 403,
+      "result": {
+        "error": "request-not-authorized"
+      }
+    }
+  ],
+  "summary": {
+    "correctFixtures": {
+      "supported": 26,
+      "uncertain": 2
+    },
+    "wrongWordFixtures": {
+      "practice": 13,
+      "uncertain": 3
+    }
+  },
+  "uncertainCases": [
+    {
+      "id": "aria-bad-as-bed",
+      "reason": "words-differ-phoneme-uncertain",
+      "unconfirmedPhones": [
+        {
+          "index": 1,
+          "target": "ɛ",
+          "reason": "alignment-conflict",
+          "targetPosteriorPeak": 0.00115,
+          "marginAgainstOtherPhones": -6.755
+        }
+      ]
+    },
+    {
+      "id": "aria-bed-as-bad",
+      "reason": "words-differ-phoneme-uncertain",
+      "unconfirmedPhones": [
+        {
+          "index": 1,
+          "target": "æ",
+          "reason": "alignment-conflict",
+          "targetPosteriorPeak": 0.13508,
+          "marginAgainstOtherPhones": -1.837
+        }
+      ]
+    },
+    {
+      "id": "guy-bed-as-bed",
+      "reason": "phoneme-evidence-conflict",
+      "unconfirmedPhones": [
+        {
+          "index": 0,
+          "target": "b",
+          "reason": "alignment-conflict",
+          "targetPosteriorPeak": 0.01278,
+          "marginAgainstOtherPhones": -4.289
+        }
+      ]
+    },
+    {
+      "id": "guy-bed-as-bad",
+      "reason": "words-differ-phoneme-uncertain",
+      "unconfirmedPhones": [
+        {
+          "index": 0,
+          "target": "b",
+          "reason": "alignment-conflict",
+          "targetPosteriorPeak": 0.01278,
+          "marginAgainstOtherPhones": -4.289
+        },
+        {
+          "index": 1,
+          "target": "æ",
+          "reason": "alignment-conflict",
+          "targetPosteriorPeak": 0.4169,
+          "marginAgainstOtherPhones": -0.254
+        }
+      ]
+    },
+    {
+      "id": "guy-then-as-then",
+      "reason": "phoneme-evidence-conflict",
+      "unconfirmedPhones": [
+        {
+          "index": 0,
+          "target": "ð",
+          "reason": "alignment-conflict",
+          "targetPosteriorPeak": 0.10501,
+          "marginAgainstOtherPhones": -2.082
+        }
+      ]
+    }
+  ]
+}

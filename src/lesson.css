@@ -102,11 +102,11 @@
 .lesson-summary-intro, .lesson-empty-copy { margin: 0 0 26px; color: var(--muted); font-size: 16px; line-height: 1.8; }
 .lesson-summary-list { list-style: none; padding: 0; margin: 28px 0 22px; border-top: 1px solid var(--line); }
 .lesson-summary-list li { padding: 21px 0; border-bottom: 1px solid var(--line); }
-.lesson-summary-word { display: flex; align-items: center; gap: 16px; margin-bottom: 12px; }
-.lesson-summary-word strong { min-width: 0; flex: 0 1 36%; font-size: 22px; line-height: 1.5; font-weight: 600; overflow-wrap: anywhere; }
-.lesson-summary-word > span { flex: 1; min-width: 0; color: var(--ink-soft); font-size: 15px; overflow-wrap: anywhere; }
+.lesson-summary-word { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 8px 16px; margin-bottom: 12px; }
+.lesson-summary-word strong { grid-column: 1; grid-row: 2; min-width: 0; font-size: 24px; line-height: 1.5; font-weight: 600; overflow-wrap: anywhere; }
+.lesson-summary-word > .lesson-summary-meaning { grid-column: 1 / -1; grid-row: 1; min-width: 0; color: var(--ink); font: 700 30px/1.4 var(--sans); overflow-wrap: anywhere; }
 .lesson-summary-word button { display: inline-flex; align-items: center; justify-content: center; flex: 0 0 42px; width: 42px; height: 42px; padding: 8px; border: 1px solid var(--accent-line); border-radius: 10px; background: var(--surface); color: var(--accent); }
-.lesson-summary-audio { display: inline-flex; align-items: center; gap: 8px; flex: 0 0 auto; }
+.lesson-summary-audio { grid-column: 2; grid-row: 2; display: inline-flex; align-items: center; gap: 8px; flex: 0 0 auto; }
 .lesson-summary-word .lesson-summary-slow { flex: 0 0 auto; width: auto; padding-inline: 12px; font-size: 15px; }
 .lesson-summary-word button:hover, .lesson-summary-word button.lesson-is-playing { background: var(--accent-soft); border-color: var(--accent); }
 .lesson-summary-evidence { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 24px; }
@@ -171,9 +171,9 @@
   .lesson-feedback-icon { flex-basis: 34px; width: 34px; height: 34px; }
   .lesson-feedback-copy > strong { font-size: 18px; }
   .lesson-feedback .lesson-answer { font-size: 16px; }
-  .lesson-summary-word { gap: 12px; flex-wrap: wrap; }
-  .lesson-summary-word strong { flex: 1 1 110px; font-size: 21px; }
-  .lesson-summary-word > span { flex-basis: 100%; order: 2; }
+  .lesson-summary-word { gap: 8px 12px; }
+  .lesson-summary-word strong { font-size: 22px; }
+  .lesson-summary-word > .lesson-summary-meaning { font-size: 28px; }
   .lesson-summary-evidence { grid-template-columns: 1fr; gap: 5px; }
 }
 @media (prefers-reduced-motion: reduce) {

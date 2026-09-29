@@ -189,6 +189,7 @@ export function updateReviewProgress(
   outcome: Outcome,
   now = Date.now(),
   recordAttempt = true,
+  difficultyRecorded = false,
 ): ReviewProgress {
   const previous = getSkill(progress, question.wordId, question.ability);
   const day = localDay(now);
@@ -205,7 +206,7 @@ export function updateReviewProgress(
   }
   if (outcome !== 'independent') {
     const harderPractice = question.ability === 'spelling' && question.exposed && question.level > previous.level;
-    next = {
+    if (!difficultyRecorded) next = {
       ...next,
       // A harder practice attempt does not invalidate the easier format the
       // learner has already established. Same-day repeats also demote once.

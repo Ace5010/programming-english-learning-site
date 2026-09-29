@@ -1,0 +1,46 @@
+[
+  {
+    "id": 5,
+    "type": "pause",
+    "src": "http://localhost:5186/audio/aria/word-3561.mp3",
+    "rate": 1,
+    "duration": 1.872,
+    "currentTime": 0,
+    "paused": true,
+    "ended": false,
+    "preservesPitch": true
+  },
+  {
+    "id": 0,
+    "type": "playing",
+    "src": "http://localhost:5186/audio/aria/word-3561.mp3?v=code",
+    "rate": 1,
+    "duration": 1.872,
+    "currentTime": 0,
+    "paused": false,
+    "ended": false,
+    "preservesPitch": true
+  },
+  {
+    "id": 0,
+    "type": "pause",
+    "src": "http://localhost:5186/audio/aria/word-3561.mp3?v=code",
+    "rate": 1,
+    "duration": 1.872,
+    "currentTime": 1.872,
+    "paused": true,
+    "ended": true,
+    "preservesPitch": true
+  },
+  {
+    "id": 0,
+    "type": "ended",
+    "src": "http://localhost:5186/audio/aria/word-3561.mp3?v=code",
+    "rate": 1,
+    "duration": 1.872,
+    "currentTime": 1.872,
+    "paused": true,
+    "ended": true,
+    "preservesPitch": true
+  }
+]

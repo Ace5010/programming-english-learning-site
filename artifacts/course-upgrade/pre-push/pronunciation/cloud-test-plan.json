@@ -1,0 +1,93 @@
+{
+  "status": "public-sample-trial-completed-api-integration-pending",
+  "site": "https://speech.microsoft.com/portal/pronunciationassessmenttool",
+  "limitSecondsPerClip": 5,
+  "userAuthorizedPublicCourseAudio": true,
+  "uploadedClips": 10,
+  "audioContainsUserRecording": false,
+  "paidServiceEnabled": false,
+  "error": "",
+  "cases": [
+    {
+      "durationSeconds": 1.608,
+      "sha256": "39f9feb199cf056ed30b73321bc005e4265f2454e31332afd4dc66d032069639",
+      "reference": "Goodbye.",
+      "file": "public/audio/daily/aria/goodbye.mp3",
+      "id": "aria-goodbye",
+      "expected": "Accept correct speech, no false missing d"
+    },
+    {
+      "durationSeconds": 1.656,
+      "sha256": "351fcb29dfd2a4825344b9a6b85ee4df13ea1738faed04d97b8ef54fb33b4ba6",
+      "reference": "Goodbye.",
+      "file": "public/audio/daily/guy/goodbye.mp3",
+      "id": "guy-goodbye",
+      "expected": "Accept correct speech, no false missing d"
+    },
+    {
+      "durationSeconds": 1.56,
+      "sha256": "d647bdc233e2be048fef5c9c34d03d6ed22e66cb4031f23d9703eef01495bf5b",
+      "reference": "Hello.",
+      "file": "public/audio/daily/aria/hello.mp3",
+      "id": "aria-hello",
+      "expected": "Accept schwa variant"
+    },
+    {
+      "durationSeconds": 1.536,
+      "sha256": "75995d47e90e5015f57dd51844e4e12ede0b163c6fc06b9d829f7edf1d9fa386",
+      "reference": "Hello.",
+      "file": "public/audio/daily/guy/hello.mp3",
+      "id": "guy-hello",
+      "expected": "Accept epsilon variant"
+    },
+    {
+      "durationSeconds": 1.488,
+      "sha256": "56d9cca2c2277ddc788953d76f26920ef025162bb072ddf76489d80924dd85ee",
+      "reference": "Think.",
+      "file": "public/audio/aria/word-2652.mp3",
+      "id": "think-correct",
+      "expected": "Accept theta"
+    },
+    {
+      "durationSeconds": 1.608,
+      "sha256": "6e91c5e4a7ea69fc6243dbdf3eed48bba5106c2030d11f4c90937d8a9e9edaa7",
+      "reference": "Think.",
+      "file": "public/audio/aria/word-959.mp3",
+      "id": "sink-for-think",
+      "expected": "Identify theta versus s, not a spurious vowel error"
+    },
+    {
+      "durationSeconds": 1.608,
+      "sha256": "93e91a16f6060328871735321fa37898b44145ccc7db88a660ef7c06c0402ef4",
+      "reference": "Ship.",
+      "file": "public/audio/aria/word-2224.mp3",
+      "id": "ship-correct",
+      "expected": "Accept short vowel"
+    },
+    {
+      "durationSeconds": 1.632,
+      "sha256": "d78bba621523dcd4fb8efdca6df67c3fc7a32644bc342b5f3f74378b36b259ae",
+      "reference": "Ship.",
+      "file": "public/audio/aria/word-2968.mp3",
+      "id": "sheep-for-ship",
+      "expected": "Identify vowel substitution"
+    },
+    {
+      "durationSeconds": 1.656,
+      "sha256": "94ceb6bcde145714f09292b63ae0d6624a89be5cb173720ac695119dafe3a0c2",
+      "reference": "Three.",
+      "file": "public/audio/guy/word-2400.mp3",
+      "id": "three-correct",
+      "expected": "Accept theta"
+    },
+    {
+      "durationSeconds": 1.608,
+      "sha256": "b64d197492c3ab8a73bcb5eb526e016455a9f5793081c3f58d95e56470fa5991",
+      "reference": "Three.",
+      "file": "public/audio/guy/word-1649.mp3",
+      "id": "free-for-three",
+      "expected": "Identify theta versus f"
+    }
+  ],
+  "resultsFile": "cloud-test-results.json"
+}

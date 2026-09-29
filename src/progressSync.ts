@@ -79,6 +79,7 @@ export class ProgressSync {
   private async request(code: string, init: RequestInit = {}) {
     const response = await this.options.fetch(this.options.endpoint ?? SYNC_ENDPOINT, { ...init, cache: 'no-store', credentials: 'omit', referrerPolicy: 'no-referrer', signal: AbortSignal.timeout(15000), headers: { Authorization: `Bearer ${code}`, ...(init.body ? { 'Content-Type': 'application/json' } : {}) } });
     if (response.status === 404 || response.status === 409) return { response, data: null };
+    if (response.status === 400 || response.status === 426) throw new Error('同步服务或设备版本需要更新。本机学习记录已保存，请使用支持英语基础的新版本。');
     if (!response.ok) throw new Error(response.status === 429 ? '同步服务繁忙，请稍后再试。本机记录已保存。' : '同步服务暂时不可用，本机记录已保存，稍后重试。');
     const data: Remote = await response.json();
     if (data.version !== 1 || !Number.isSafeInteger(data.revision) || data.revision < 1) throw new Error('同步服务返回了不支持的记录。');

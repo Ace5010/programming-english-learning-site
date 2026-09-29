@@ -1,0 +1,1086 @@
+{
+  "results": [
+    "complete grouped chart is the entry point; keyboard accessible; no progress changes",
+    "local Cambridge recordings play without external network at normal and slow speeds",
+    "all 44 local single sounds and 44 British examples finish with external network blocked",
+    "local asset failure is visible and retry recovers; leaving page stops audio",
+    "minimal 1440px: all cells and details fit",
+    "minimal 390px: all cells and details fit",
+    "minimal 320px: all cells and details fit",
+    "sketch 1440px: all cells and details fit",
+    "sketch 390px: all cells and details fit",
+    "sketch 320px: all cells and details fit",
+    "print 1440px: all cells and details fit",
+    "print 390px: all cells and details fit",
+    "print 320px: all cells and details fit",
+    "graffiti 1440px: all cells and details fit",
+    "graffiti 390px: all cells and details fit",
+    "graffiti 320px: all cells and details fit"
+  ],
+  "failures": [],
+  "errors": [],
+  "audio": [
+    {
+      "event": "playing",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_sheep_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_sheep_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_word_sheep_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_word_sheep_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_day_2023feb_002.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_day_2023feb_002.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_word_day_2023feb_002.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_word_day_2023feb_002.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_day_2023feb_001.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_day_2023feb_001.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_word_day_2023feb_001.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_word_day_2023feb_001.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_think_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_think_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_word_think_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_word_think_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_fish_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_fish_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_word_fish_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_word_fish_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_pure_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_pure_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_word_pure_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_word_pure_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_sheep_2023feb.mp3",
+      "rate": 0.72
+    },
+    {
+      "event": "ended",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_sheep_2023feb.mp3",
+      "rate": 0.72
+    },
+    {
+      "event": "playing",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_word_sheep_2023feb.mp3",
+      "rate": 0.72
+    },
+    {
+      "event": "ended",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_word_sheep_2023feb.mp3",
+      "rate": 0.72
+    },
+    {
+      "event": "playing",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_ship_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_ship_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_sheep_2023feb.mp3",
+      "rate": 0.72
+    },
+    {
+      "event": "ended",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_sheep_2023feb.mp3",
+      "rate": 0.72
+    },
+    {
+      "event": "playing",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_ship_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_ship_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_sheep_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_sheep_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_word_sheep_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_word_sheep_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_ship_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_ship_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_word_ship_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_word_ship_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_foot_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_foot_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_word_foot_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_word_foot_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_blue_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_blue_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_word_blue_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_word_blue_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_head_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_head_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_word_head_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_word_head_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_above_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_above_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_word_above_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_word_above_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_bird_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_bird_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_word_bird_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_word_bird_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_horse_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_horse_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_word_horse_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_word_horse_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_hat_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_hat_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_word_hat_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_word_hat_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_cup_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_cup_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_word_cup_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_word_cup_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_father_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_father_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_word_father_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_word_father_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_sock_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_sock_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_word_sock_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_word_sock_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_day_2023feb_002.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_day_2023feb_002.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_word_day_2023feb_002.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_word_day_2023feb_002.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_eye_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_eye_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_word_eye_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_word_eye_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_boy_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_boy_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_word_boy_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_word_boy_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_nose_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_nose_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_word_nose_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_word_nose_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_mouth_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_mouth_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_word_mouth_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_word_mouth_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_ear_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_ear_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_word_ear_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_word_ear_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_hair_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_hair_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_word_hair_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_word_hair_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_pure_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_pure_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_word_pure_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_word_pure_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_pen_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_pen_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_word_pen_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_word_pen_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_book_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_book_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_word_book_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_word_book_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_town_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_town_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_word_town_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_word_town_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_day_2023feb_001.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_day_2023feb_001.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_word_day_2023feb_001.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_word_day_2023feb_001.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_cat_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_cat_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_word_cat_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_word_cat_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_give_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_give_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_word_give_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_word_give_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_cheese_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_cheese_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_word_cheese_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_word_cheese_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_jump_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_jump_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_word_jump_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_word_jump_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_fish_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_fish_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_word_fish_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_word_fish_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_very_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_very_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_word_very_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_word_very_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_think_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_think_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_word_think_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_word_think_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_this_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_this_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_word_this_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_word_this_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_say_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_say_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_word_say_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_word_say_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_zoo_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_zoo_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_word_zoo_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_word_zoo_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_she_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_she_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_word_she_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_word_she_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_vision_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_vision_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_word_vision_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_word_vision_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_moon_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_moon_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_word_moon_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_word_moon_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_name_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_name_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_word_name_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_word_name_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_sing_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_sing_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_word_sing_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_word_sing_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_hand_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_hand_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_word_hand_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_word_hand_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_look_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_look_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_word_look_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_word_look_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_run_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_run_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_word_run_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_word_run_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_we_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_we_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_word_we_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_word_we_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_yes_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_yes_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_word_yes_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_word_yes_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_fish_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_fish_2023feb.mp3",
+      "rate": 1
+    }
+  ],
+  "externalRequests": [],
+  "networkPolicy": "External network blocked; local app server allowed; fresh browser contexts, no preloaded audio cache."
+}

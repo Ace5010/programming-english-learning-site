@@ -110,8 +110,13 @@ public final class MainActivity extends Activity {
             WebViewCompat.addWebMessageListener(web, "CodeWordsAudio", Collections.singleton(ORIGIN), (view, message, origin, mainFrame, reply) -> {
                 if (!mainFrame || !ORIGIN.equals(origin.toString())) return;
                 String data = message.getData();
-                if (data == null || data.length() > 512) return;
-                try { audio.message(new JSONObject(data), reply); }
+                // A queue carries up to 256 bounded asset paths and segment ranges.
+                if (data == null || data.length() > 65536) return;
+                try {
+                    JSONObject request = new JSONObject(data);
+                    if (!"queue".equals(request.optString("action")) && data.length() > 512) return;
+                    audio.message(request, reply);
+                }
                 catch (Exception ignored) { /* Invalid audio messages cannot access other assets. */ }
             });
             WebViewCompat.addWebMessageListener(web, "CodeWordsNative", Collections.singleton(ORIGIN), (view, message, origin, mainFrame, reply) -> {

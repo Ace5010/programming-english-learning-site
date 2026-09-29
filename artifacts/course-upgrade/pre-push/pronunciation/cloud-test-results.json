@@ -1,0 +1,98 @@
+{
+  "date": "2026-09-24",
+  "provider": "Microsoft Speech Studio anonymous free pronunciation assessment trial",
+  "source": "https://speech.microsoft.com/portal/pronunciationassessmenttool",
+  "method": "Authorized public MP3 files uploaded through the visible browser UI; waited for actual cloud results and read displayed word and phoneme scores. No mocked responses.",
+  "locale": "en-US",
+  "uploadedClips": 10,
+  "totalSourceAudioSeconds": 15.96,
+  "audioContainsUserRecording": false,
+  "azureAccountSignedIn": false,
+  "paidServiceEnabled": false,
+  "positiveCases": 7,
+  "minimalPairSubstitutions": 3,
+  "positiveAccuracy100": 7,
+  "trueSubstitutionIsLowestPhonemeScore": 3,
+  "allPortalWordErrorCounts": 0,
+  "acceptance": "Useful phoneme-level signal on these synthetic samples; not accepted as a production pronunciation gate or a learner-accent validation.",
+  "limitations": [
+    "All audio is existing synthetic Aria/Guy course audio, not human learner recordings.",
+    "Phoneme labels below are the provider's target-aligned phonemes; the portal did not expose NBestPhonemes for the most likely spoken sound.",
+    "All three incorrect words still had word scores of 70-87 and zero portal word errors, so text match, the portal ErrorType, or a word-score-only threshold would miss these mistakes.",
+    "Sink-for-think also lowered the neighboring vowel to 46, and sheep-for-ship lowered final p to 57. Do not label every low score as a separate learner error.",
+    "Correct samples had prosody scores of 71-86. Prosody, fluency and voice similarity must not gate course passing.",
+    "No API credentials are configured; the public trial page is not an application API or a reusable credential source."
+  ],
+  "results": [
+    {
+      "id": "aria-goodbye", "reference": "Goodbye.", "file": "public/audio/daily/aria/goodbye.mp3",
+      "observedAt": "2026-09-24T05:46:16.001Z", "wordScore": 100,
+      "phonemes": [["g",100],["ʊ",100],["d",100],["b",100],["aɪ",100]],
+      "prosodyScore": 86, "portalWordErrorCount": 0,
+      "visibleResultLabel": "goodbye100g100ʊ100d100b100aɪ100"
+    },
+    {
+      "id": "sink-for-think", "reference": "Think.", "file": "public/audio/aria/word-959.mp3",
+      "observedAt": "2026-09-24T05:47:27.047Z", "wordScore": 83,
+      "phonemes": [["θ",44],["ɪ",46],["ŋ",100],["k",100]],
+      "prosodyScore": 75, "portalWordErrorCount": 0,
+      "visibleResultLabel": "think83θ44ɪ46ŋ100k100"
+    },
+    {
+      "id": "think-correct", "reference": "Think.", "file": "public/audio/aria/word-2652.mp3",
+      "observedAt": "2026-09-24T05:47:56.301Z", "wordScore": 100,
+      "phonemes": [["θ",100],["ɪ",100],["ŋ",100],["k",100]],
+      "prosodyScore": 78, "portalWordErrorCount": 0,
+      "visibleResultLabel": "think100θ100ɪ100ŋ100k100"
+    },
+    {
+      "id": "sheep-for-ship", "reference": "Ship.", "file": "public/audio/aria/word-2968.mp3",
+      "observedAt": "2026-09-24T05:48:13.986Z", "wordScore": 70,
+      "phonemes": [["ʃ",82],["ɪ",37],["p",57]],
+      "prosodyScore": 67, "portalWordErrorCount": 0,
+      "visibleResultLabel": "ship70ʃ82ɪ37p57"
+    },
+    {
+      "id": "ship-correct", "reference": "Ship.", "file": "public/audio/aria/word-2224.mp3",
+      "observedAt": "2026-09-24T05:48:57.261Z", "wordScore": 100,
+      "phonemes": [["ʃ",100],["ɪ",100],["p",100]],
+      "prosodyScore": 72, "portalWordErrorCount": 0,
+      "visibleResultLabel": "ship100ʃ100ɪ100p100"
+    },
+    {
+      "id": "free-for-three", "reference": "Three.", "file": "public/audio/guy/word-1649.mp3",
+      "observedAt": "2026-09-24T05:49:14.772Z", "wordScore": 87,
+      "phonemes": [["θ",32],["ɹ",87],["i",100]],
+      "prosodyScore": 69, "portalWordErrorCount": 0,
+      "visibleResultLabel": "three87θ32ɹ87i100"
+    },
+    {
+      "id": "three-correct", "reference": "Three.", "file": "public/audio/guy/word-2400.mp3",
+      "observedAt": "2026-09-24T05:49:52.337Z", "wordScore": 100,
+      "phonemes": [["θ",100],["ɹ",100],["i",100]],
+      "prosodyScore": 71, "portalWordErrorCount": 0,
+      "visibleResultLabel": "three100θ100ɹ100i100"
+    },
+    {
+      "id": "guy-goodbye", "reference": "Goodbye.", "file": "public/audio/daily/guy/goodbye.mp3",
+      "observedAt": "2026-09-24T05:50:31.654Z", "wordScore": 100,
+      "phonemes": [["g",100],["ʊ",100],["d",100],["b",100],["aɪ",100]],
+      "prosodyScore": 86, "portalWordErrorCount": 0,
+      "visibleResultLabel": "goodbye100g100ʊ100d100b100aɪ100"
+    },
+    {
+      "id": "aria-hello", "reference": "Hello.", "file": "public/audio/daily/aria/hello.mp3",
+      "observedAt": "2026-09-24T05:50:58.315Z", "wordScore": 100,
+      "phonemes": [["h",100],["ɛ",100],["l",100],["oʊ",100]],
+      "prosodyScore": 78, "portalWordErrorCount": 0,
+      "visibleResultLabel": "hello100h100ɛ100l100oʊ100"
+    },
+    {
+      "id": "guy-hello", "reference": "Hello.", "file": "public/audio/daily/guy/hello.mp3",
+      "observedAt": "2026-09-24T05:51:27.540Z", "wordScore": 100,
+      "phonemes": [["h",100],["ɛ",100],["l",100],["oʊ",100]],
+      "prosodyScore": 77, "portalWordErrorCount": 0,
+      "visibleResultLabel": "hello100h100ɛ100l100oʊ100"
+    }
+  ]
+}

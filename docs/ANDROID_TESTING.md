@@ -1,6 +1,18 @@
-# 安卓测试版 1.1.2
+# 安卓测试版 1.1.3
 
-2026-09-23。包名 `com.codewords.english`，版本号 4，最低 Android 8.0（API 26），目标 Android 15（API 35）。使用较新的 Android System WebView。APK 位于 `artifacts/android/codewords-1.1.2-release.apk`，约 203.4 MiB，包含所有课程、3,620 个词及双声线点读录音。
+2026-09-28 逐词慢读本地候选包：`artifacts/android/codewords-slow-reading-release.apk`。正常整句录音保留，多词内容慢速使用原生片段队列；额外资源分包以保持部署文件数量。Release/Debug/Lint、签名、内嵌文件一致性与无联网权限的独立测试包原生播放已验证，实体手机和主观听感仍待验收，详见 [本轮记录](../artifacts/slow-reading/verification.md) 和 [实现说明](WORD_BY_WORD_AUDIO.md)。以下旧版记录保持其原有验收范围。
+
+2026-09-24。包名 `com.codewords.english`，版本号 5，最低 Android 8.0（API 26），目标 Android 15（API 35）。使用较新的 Android System WebView。APK 位于 `artifacts/android/codewords-1.1.3-release.apk`，约 210.3 MiB，包含所有课程、3,620 个词及双声线点读录音。
+
+## 1.1.3 课程交互与手机回归
+
+内置一次局部纠错、文字／听音配对、听句补词、渐进排序与跟读，以及逐词点读和练习提示音。修复纠错恢复时输入框抢焦点、错误解释停留在屏幕下方的问题；带句末标点的单词也可在局部拼写错误时重试。
+
+2026-09-24 在 MuMu Android 12 / WebView 110 测试实例安装运行并覆盖安装，保留课程答题进度；正常／0.72 倍播放、错误修改和重新打开均进行了实际操作。Release、Debug、Android Lint、APK 签名和内嵌网页逐文件一致性检查通过。证据见 [提交前验收](../artifacts/course-upgrade/pre-push/verification.md)。
+
+麦克风采集检查实际读取 48,128 个 PCM 样本，存在非零输入，不保存录音。模拟器最初没有系统识别服务，后已按用户要求安装独立离线英语 `RecognitionService`。用户真实麦克风输入经系统回调返回 `hello`、`good bye`，并在课程重开后保留；最新 QA APK 已回放真实 `good bye` 记录，确认分词不再误判。小型识别模型也曾误听为 `with by`，所以服务连通不代表发音评测准确率通过。此 QA 应用使用相同网页和 Java 源码、独立学习记录，不覆盖正式包的数据。
+
+另在 Chrome 真实识别服务中用课程录音完成短句、长句、重读和自由表达检查；该检查不使用物理麦克风。**用户新增的音素评测尚未完成，继续暂缓提交推送**；本地模型测试及下一步见 [发音评测验证状态](PRONUNCIATION_ASSESSMENT.md)。实体手机安装、扬声器实听和真实跨设备 D1 同步仍未验收。
 
 ## 使用及记录
 
@@ -78,7 +90,7 @@ Manifest 申请 `RECORD_AUDIO` 和同步所需的 `INTERNET`，不申请存储�
 npx tsc --noEmit
 node --test tools/test-audio-playback.mjs tools/test-native-android.mjs
 ./scripts/Build-Android.ps1 -SdkPath '<SDK 路径>' -JavaPath '<JDK 路径>' -GradlePath '<gradle.bat 路径>' -InitializeSigning -Validate
-python tools/verify_android.py artifacts/android/codewords-1.1.2-release.apk --output artifacts/android/apk-validation-1.1.2.json
+python tools/verify_android.py artifacts/android/codewords-1.1.3-release.apk --output artifacts/android/apk-validation-1.1.3.json
 # 使用 SDK 的 build-tools/35.0.0/apksigner.bat verify --verbose <apk> 验证签名。
 ```
 

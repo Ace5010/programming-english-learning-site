@@ -1,0 +1,14 @@
+{
+  "correct": {
+    "sha256": "c3d07a98a6a5c623c1778c6719d116d27b26b82ae5e5a10e89d1229b61dbef4a",
+    "source": "Original synthesized preview approved by user, 2026-09-24"
+  },
+  "complete": {
+    "sha256": "3f33100b8285615044c6a357937e26fe0fbc8725e5ac2cb87be03491aed13a8a",
+    "source": "Original synthesized preview approved by user, 2026-09-24"
+  },
+  "pair": {
+    "sha256": "3beaf17cda88a9945acbf98bec50e2178156aff3e676dcbee2f0af6c0b8dfeb4",
+    "source": "Original synthesized short pairing cue for the course upgrade, 2026-09-24"
+  }
+}

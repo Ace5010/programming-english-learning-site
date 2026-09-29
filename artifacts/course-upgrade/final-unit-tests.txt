@@ -1,0 +1,1277 @@
+TAP version 13
+# Subtest: actual adaptive programming content completes teaching, delayed admission and replay-safe storage
+ok 1 - actual adaptive programming content completes teaching, delayed admission and replay-safe storage
+  ---
+  duration_ms: 18162.6807
+  type: 'test'
+  ...
+# Real-content run: 57 generated lessons, 716 checked answers, 592 distinct questions; admission after 4-17 answers per target.
+# Subtest: historical self-confirmed words remain reviewable and prepareLearning skips their initial teaching
+ok 2 - historical self-confirmed words remain reviewable and prepareLearning skips their initial teaching
+  ---
+  duration_ms: 2.742
+  type: 'test'
+  ...
+# Subtest: later word-review failures return the weak target to the next generated lesson only once
+ok 3 - later word-review failures return the weak target to the next generated lesson only once
+  ---
+  duration_ms: 7.8634
+  type: 'test'
+  ...
+# Subtest: each focused review contains only its selected ability and excludes pending targets
+ok 4 - each focused review contains only its selected ability and excludes pending targets
+  ---
+  duration_ms: 79.8901
+  type: 'test'
+  ...
+# Subtest: teaching persists exposure without readiness, unknown targets, or fabricated answers
+ok 5 - teaching persists exposure without readiness, unknown targets, or fabricated answers
+  ---
+  duration_ms: 11.9897
+  type: 'test'
+  ...
+# Subtest: saved sessions replay exactly and historical live sessions remain untouched
+ok 6 - saved sessions replay exactly and historical live sessions remain untouched
+  ---
+  duration_ms: 0.9108
+  type: 'test'
+  ...
+# Subtest: teaching includes focused words and examples, with at most two source explanations
+ok 7 - teaching includes focused words and examples, with at most two source explanations
+  ---
+  duration_ms: 1.0757
+  type: 'test'
+  ...
+# Subtest: new targets begin with recognition and one answer never grants admission
+ok 8 - new targets begin with recognition and one answer never grants admission
+  ---
+  duration_ms: 6.1557
+  type: 'test'
+  ...
+# Subtest: hints immediately lower confidence once and cannot transfer or invent another answer
+ok 9 - hints immediately lower confidence once and cannot transfer or invent another answer
+  ---
+  duration_ms: 1.5259
+  type: 'test'
+  ...
+# Subtest: next selection is deterministic after restoring feedback and never mutates the input
+ok 10 - next selection is deterministic after restoring feedback and never mutates the input
+  ---
+  duration_ms: 1.923
+  type: 'test'
+  ...
+# Subtest: failures produce bounded extra practice, no duplicate questions, and no unseen targets
+ok 11 - failures produce bounded extra practice, no duplicate questions, and no unseen targets
+  ---
+  duration_ms: 60.1821
+  type: 'test'
+  ...
+# Subtest: mastered-looking history only migrates exposure and does not suppress supplemental lessons
+ok 12 - mastered-looking history only migrates exposure and does not suppress supplemental lessons
+  ---
+  duration_ms: 0.4959
+  type: 'test'
+  ...
+# Subtest: eligibility needs spaced changed context, not repeated choices or immediate corrected memory
+ok 13 - eligibility needs spaced changed context, not repeated choices or immediate corrected memory
+  ---
+  duration_ms: 1.1173
+  type: 'test'
+  ...
+# Subtest: completed source ranges still generate learning rounds until confidence is established
+ok 14 - completed source ranges still generate learning rounds until confidence is established
+  ---
+  duration_ms: 30.3311
+  type: 'test'
+  ...
+# Subtest: long-term review difficulties return admitted targets to teaching without revoking admission
+ok 15 - long-term review difficulties return admitted targets to teaching without revoking admission
+  ---
+  duration_ms: 0.5708
+  type: 'test'
+  ...
+# Subtest: nonadaptive review mistakes and hints flow back into learning with durable admission and replay protection
+ok 16 - nonadaptive review mistakes and hints flow back into learning with durable admission and replay protection
+  ---
+  duration_ms: 1.1839
+  type: 'test'
+  ...
+# Subtest: speaking remains available once per round but self-checks never grant confidence or readiness
+ok 17 - speaking remains available once per round but self-checks never grant confidence or readiness
+  ---
+  duration_ms: 2.396
+  type: 'test'
+  ...
+# Subtest: daily recall can establish transfer without requiring a context-ability field
+ok 18 - daily recall can establish transfer without requiring a context-ability field
+  ---
+  duration_ms: 0.792
+  type: 'test'
+  ...
+# Subtest: random seeds vary the first question while keeping it in introduced teaching scope
+ok 19 - random seeds vary the first question while keeping it in introduced teaching scope
+  ---
+  duration_ms: 9.0146
+  type: 'test'
+  ...
+# Subtest: programming actual content completes bounded resumable rounds without leaking future targets
+ok 20 - programming actual content completes bounded resumable rounds without leaking future targets
+  ---
+  duration_ms: 211.1878
+  type: 'test'
+  ...
+# Subtest: daily actual content completes bounded resumable rounds without leaking future targets
+ok 21 - daily actual content completes bounded resumable rounds without leaking future targets
+  ---
+  duration_ms: 150.0365
+  type: 'test'
+  ...
+# Subtest: teaching confirmation enrolls knowledge without inventing any tested ability
+ok 22 - teaching confirmation enrolls knowledge without inventing any tested ability
+  ---
+  duration_ms: 49.5751
+  type: 'test'
+  ...
+# Subtest: knowledge mapping records the actual expression and tested ability independently
+ok 23 - knowledge mapping records the actual expression and tested ability independently
+  ---
+  duration_ms: 6.6181
+  type: 'test'
+  ...
+# Subtest: focused reviews select weak or due knowledge instead of repeating the full lesson
+ok 24 - focused reviews select weak or due knowledge instead of repeating the full lesson
+  ---
+  duration_ms: 9.2317
+  type: 'test'
+  ...
+# Subtest: delayed knowledge recall advances only its own ability, not same-day repetition
+ok 25 - delayed knowledge recall advances only its own ability, not same-day repetition
+  ---
+  duration_ms: 1.3873
+  type: 'test'
+  ...
+# Subtest: the earliest incomplete lesson controls unlock even with historical skipped completions
+ok 26 - the earliest incomplete lesson controls unlock even with historical skipped completions
+  ---
+  duration_ms: 0.3437
+  type: 'test'
+  ...
+# Subtest: custom course keys preserve daily data and retain the same conflict protections
+ok 27 - custom course keys preserve daily data and retain the same conflict protections
+  ---
+  duration_ms: 0.5394
+  type: 'test'
+  ...
+# Subtest: invalid knowledge or favorites extensions preserve raw records without sanitizing
+ok 28 - invalid knowledge or favorites extensions preserve raw records without sanitizing
+  ---
+  duration_ms: 0.8838
+  type: 'test'
+  ...
+# Subtest: review filters exclude still-learning errors and unrelated ability due dates
+ok 29 - review filters exclude still-learning errors and unrelated ability due dates
+  ---
+  duration_ms: 0.8982
+  type: 'test'
+  ...
+# Subtest: local correction marks swapped words, insertions and spelling without exposing expected text
+ok 30 - local correction marks swapped words, insertions and spelling without exposing expected text
+  ---
+  duration_ms: 14.1712
+  type: 'test'
+  ...
+# Subtest: first error is durable, unchanged/empty clicks consume nothing, one edited retry is assisted
+ok 31 - first error is durable, unchanged/empty clicks consume nothing, one edited retry is assisted
+  ---
+  duration_ms: 8.1185
+  type: 'test'
+  ...
+# Subtest: second error ends the retry and choices do not invite elimination guessing
+ok 32 - second error ends the retry and choices do not invite elimination guessing
+  ---
+  duration_ms: 1.2741
+  type: 'test'
+  ...
+# Subtest: local fill and fixed writing can retry; revealed answers cannot regain a retry
+ok 33 - local fill and fixed writing can retry; revealed answers cannot regain a retry
+  ---
+  duration_ms: 2.3029
+  type: 'test'
+  ...
+# Subtest: adaptive correction lowers confidence only at the first error, including refresh and next-day completion
+ok 34 - adaptive correction lowers confidence only at the first error, including refresh and next-day completion
+  ---
+  duration_ms: 2.3983
+  type: 'test'
+  ...
+# Subtest: pair mistakes affect only that target, duplicate clicks are inert, forced last pair is unmeasured
+ok 35 - pair mistakes affect only that target, duplicate clicks are inert, forced last pair is unmeasured
+  ---
+  duration_ms: 0.514
+  type: 'test'
+  ...
+# Subtest: pair course progress preserves mixed per-target evidence and last-pair non-evidence on reload
+ok 36 - pair course progress preserves mixed per-target evidence and last-pair non-evidence on reload
+  ---
+  duration_ms: 3.2772
+  type: 'test'
+  ...
+# Subtest: new variations stay bounded, reference existing targets, and only count the tested ability
+ok 37 - new variations stay bounded, reference existing targets, and only count the tested ability
+  ---
+  duration_ms: 13.4663
+  type: 'test'
+  ...
+# Subtest: showing masked speech text and self checks never add mastery evidence
+ok 38 - showing masked speech text and self checks never add mastery evidence
+  ---
+  duration_ms: 22.3233
+  type: 'test'
+  ...
+# Subtest: an already recorded review difficulty is not demoted again after a next-day correction
+ok 39 - an already recorded review difficulty is not demoted again after a next-day correction
+  ---
+  duration_ms: 1.2793
+  type: 'test'
+  ...
+# Subtest: feedback waits for speech, replaces a pending cue, and navigation or mute cancels it
+ok 40 - feedback waits for speech, replaces a pending cue, and navigation or mute cancels it
+  ---
+  duration_ms: 249.9324
+  type: 'test'
+  ...
+# Subtest: four complete units provide taught material, varied tasks and unique stable IDs
+ok 41 - four complete units provide taught material, varied tasks and unique stable IDs
+  ---
+  duration_ms: 3.0064
+  type: 'test'
+  ...
+# Subtest: every audio ID resolves to one bilingual expression
+ok 42 - every audio ID resolves to one bilingual expression
+  ---
+  duration_ms: 1.297
+  type: 'test'
+  ...
+# Subtest: all objective items have satisfiable answers and exact matching audio text
+ok 43 - all objective items have satisfiable answers and exact matching audio text
+  ---
+  duration_ms: 27.2324
+  type: 'test'
+  ...
+# Subtest: first four units culminate in a cross-unit task, without blind first-lesson long spelling
+ok 44 - first four units culminate in a cross-unit task, without blind first-lesson long spelling
+  ---
+  duration_ms: 0.3411
+  type: 'test'
+  ...
+# Subtest: the adaptive pool preserves all 24 lessons, original exercises, English and recording IDs
+ok 45 - the adaptive pool preserves all 24 lessons, original exercises, English and recording IDs
+  ---
+  duration_ms: 2.4916
+  type: 'test'
+  ...
+# Subtest: every candidate has precise taught targets, a stable unique ID and a short signature
+ok 46 - every candidate has precise taught targets, a stable unique ID and a short signature
+  ---
+  duration_ms: 9.2773
+  type: 'test'
+  ...
+# Subtest: original audio and answer targets remain exact, including earlier knowledge in integrated lessons
+ok 47 - original audio and answer targets remain exact, including earlier knowledge in integrated lessons
+  ---
+  duration_ms: 0.796
+  type: 'test'
+  ...
+# Subtest: all available items are answerable by the existing checker and reject empty answers
+ok 48 - all available items are answerable by the existing checker and reject empty answers
+  ---
+  duration_ms: 156.9812
+  type: 'test'
+  ...
+# Subtest: generated distractors use current or earlier recordings and exclude equivalent valid answers
+ok 49 - generated distractors use current or earlier recordings and exclude equivalent valid answers
+  ---
+  duration_ms: 405.7892
+  type: 'test'
+  ...
+# Subtest: every expression supports scaffolded recognition, listening and later writing without a fixed quota
+ok 50 - every expression supports scaffolded recognition, listening and later writing without a fixed quota
+  ---
+  duration_ms: 3.6315
+  type: 'test'
+  ...
+# Subtest: generated English and audio are existing phrases, and lengthy introductions use manageable blocks
+ok 51 - generated English and audio are existing phrases, and lengthy introductions use manageable blocks
+  ---
+  duration_ms: 29.0661
+  type: 'test'
+  ...
+# Subtest: existing contraction tolerance remains, while wrong names and grammar still fail
+ok 52 - existing contraction tolerance remains, while wrong names and grammar still fail
+  ---
+  duration_ms: 4.3247
+  type: 'test'
+  ...
+# Subtest: the same expression and variant keep their signature across later integrated lessons
+ok 53 - the same expression and variant keep their signature across later integrated lessons
+  ---
+  duration_ms: 1.8683
+  type: 'test'
+  ...
+# Subtest: written matching accepts equivalent contractions while preserving negation and word boundaries
+ok 54 - written matching accepts equivalent contractions while preserving negation and word boundaries
+  ---
+  duration_ms: 7.3473
+  type: 'test'
+  ...
+# Subtest: multi-blank checking validates each position and supports explicit alternatives
+ok 55 - multi-blank checking validates each position and supports explicit alternatives
+  ---
+  duration_ms: 1.741
+  type: 'test'
+  ...
+# Subtest: order checks answer sentence, allows distractors, and disallows duplicating a tile
+ok 56 - order checks answer sentence, allows distractors, and disallows duplicating a tile
+  ---
+  duration_ms: 0.7296
+  type: 'test'
+  ...
+# Subtest: choice cannot be spoofed with an answer absent from its options
+ok 57 - choice cannot be spoofed with an answer absent from its options
+  ---
+  duration_ms: 0.1632
+  type: 'test'
+  ...
+# Subtest: lesson completion is durable at summary; workbook and review cannot complete a new lesson
+ok 58 - lesson completion is durable at summary; workbook and review cannot complete a new lesson
+  ---
+  duration_ms: 10.0983
+  type: 'test'
+  ...
+# Subtest: first lesson and repeated same-day independent work add observations, not delayed recall
+ok 59 - first lesson and repeated same-day independent work add observations, not delayed recall
+  ---
+  duration_ms: 0.7277
+  type: 'test'
+  ...
+# Subtest: separate-day due independent review adds one success, while early practice does not
+ok 60 - separate-day due independent review adds one success, while early practice does not
+  ---
+  duration_ms: 1.2454
+  type: 'test'
+  ...
+# Subtest: mistake saves immediate weakness and a bounded variant; retry cannot erase it
+ok 61 - mistake saves immediate weakness and a bounded variant; retry cannot erase it
+  ---
+  duration_ms: 0.6768
+  type: 'test'
+  ...
+# Subtest: same-day second session cannot clear an error; independent next-day original can
+ok 62 - same-day second session cannot clear an error; independent next-day original can
+  ---
+  duration_ms: 1.1458
+  type: 'test'
+  ...
+# Subtest: help is durable before submit and cannot be revoked by editing a draft
+ok 63 - help is durable before submit and cannot be revoked by editing a draft
+  ---
+  duration_ms: 0.6328
+  type: 'test'
+  ...
+# Subtest: revealed answers can be skipped, never counted independently, and duplicate submit is inert
+ok 64 - revealed answers can be skipped, never counted independently, and duplicate submit is inert
+  ---
+  duration_ms: 0.2324
+  type: 'test'
+  ...
+# Subtest: speak needs nonempty learner action and complete checklist, never produces automatic mastery
+ok 65 - speak needs nonempty learner action and complete checklist, never produces automatic mastery
+  ---
+  duration_ms: 0.1808
+  type: 'test'
+  ...
+# Subtest: one final question mistake defers its retry instead of immediate repetition
+ok 66 - one final question mistake defers its retry instead of immediate repetition
+  ---
+  duration_ms: 0.168
+  type: 'test'
+  ...
+# Subtest: at most five unique variants and no retry-of-retry loops under repeated failure
+ok 67 - at most five unique variants and no retry-of-retry loops under repeated failure
+  ---
+  duration_ms: 0.9177
+  type: 'test'
+  ...
+# Subtest: refresh restores multi-blank draft, help flag, queue, feedback and summary exactly
+ok 68 - refresh restores multi-blank draft, help flag, queue, feedback and summary exactly
+  ---
+  duration_ms: 1.3973
+  type: 'test'
+  ...
+# Subtest: empty storage is writable; malformed or unsupported records remain available without overwrite
+ok 69 - empty storage is writable; malformed or unsupported records remain available without overwrite
+  ---
+  duration_ms: 0.2697
+  type: 'test'
+  ...
+# Subtest: invalid counters, unknown active lesson, invalid queue and draft are protected, not sanitized
+ok 70 - invalid counters, unknown active lesson, invalid queue and draft are protected, not sanitized
+  ---
+  duration_ms: 0.7817
+  type: 'test'
+  ...
+# Subtest: unknown historical lesson records remain intact when current session is supported
+ok 71 - unknown historical lesson records remain intact when current session is supported
+  ---
+  duration_ms: 1.3965
+  type: 'test'
+  ...
+# Subtest: storage writes only the new daily key and detects stale tabs or damaged records
+ok 72 - storage writes only the new daily key and detects stale tabs or damaged records
+  ---
+  duration_ms: 0.3407
+  type: 'test'
+  ...
+# Subtest: quota/read errors preserve in-memory progress and warn without reporting success
+ok 73 - quota/read errors preserve in-memory progress and warn without reporting success
+  ---
+  duration_ms: 0.4213
+  type: 'test'
+  ...
+# Subtest: due lessons use observed non-speaking evidence and keep unresolved errors separate
+ok 74 - due lessons use observed non-speaking evidence and keep unresolved errors separate
+  ---
+  duration_ms: 0.6705
+  type: 'test'
+  ...
+# Subtest: unanswered exercises cannot advance or complete; changing other section data is impossible
+ok 75 - unanswered exercises cannot advance or complete; changing other section data is impossible
+  ---
+  duration_ms: 0.184
+  type: 'test'
+  ...
+# Subtest: every speaking task has existing audio references; first greeting includes goodbye and final objects use distance correctly
+ok 76 - every speaking task has existing audio references; first greeting includes goodbye and final objects use distance correctly
+  ---
+  duration_ms: 1.7838
+  type: 'test'
+  ...
+# Subtest: read-aloud requires every target, rejects manual text and mismatched or extra recognized words
+ok 77 - read-aloud requires every target, rejects manual text and mismatched or extra recognized words
+  ---
+  duration_ms: 18.8852
+  type: 'test'
+  ...
+# Subtest: recognized progress survives parsing and saving without upgrading speaking mastery or touching legacy keys
+ok 78 - recognized progress survives parsing and saving without upgrading speaking mastery or touching legacy keys
+  ---
+  duration_ms: 22.6706
+  type: 'test'
+  ...
+# Subtest: old self-check drafts and feedback still parse; switching to personal expression uses its own checklist
+ok 79 - old self-check drafts and feedback still parse; switching to personal expression uses its own checklist
+  ---
+  duration_ms: 0.3652
+  type: 'test'
+  ...
+# Subtest: corrupt speech extensions preserve the original data as readonly
+ok 80 - corrupt speech extensions preserve the original data as readonly
+  ---
+  duration_ms: 0.3386
+  type: 'test'
+  ...
+# Subtest: reported I [blank] Mia accepts full and abbreviated am, including an omitted apostrophe
+ok 81 - reported I [blank] Mia accepts full and abbreviated am, including an omitted apostrophe
+  ---
+  duration_ms: 7.8697
+  type: 'test'
+  ...
+# Subtest: contraction fragments are accepted in later I, He, It, They and My name fill contexts
+ok 82 - contraction fragments are accepted in later I, He, It, They and My name fill contexts
+  ---
+  duration_ms: 30.8127
+  type: 'test'
+  ...
+# Subtest: the template still preserves short-answer grammar, each gap, letters and plural endings
+ok 83 - the template still preserves short-answer grammar, each gap, letters and plural endings
+  ---
+  duration_ms: 0.9338
+  type: 'test'
+  ...
+# Subtest: written equivalents cover ordinary name introductions, negative contractions and American as a noun
+ok 84 - written equivalents cover ordinary name introductions, negative contractions and American as a noun
+  ---
+  duration_ms: 5.4367
+  type: 'test'
+  ...
+# Subtest: US alternatives stay in the country gap and preserve the given article and origin
+ok 85 - US alternatives stay in the country gap and preserve the given article and origin
+  ---
+  duration_ms: 6.7472
+  type: 'test'
+  ...
+# Subtest: tolerated answers save as correct, add no false difficulty/recheck and survive refresh
+ok 86 - tolerated answers save as correct, add no false difficulty/recheck and survive refresh
+  ---
+  duration_ms: 3.7608
+  type: 'test'
+  ...
+# Subtest: dictation scaffolding progresses from one or two gaps to independent input
+ok 87 - dictation scaffolding progresses from one or two gaps to independent input
+  ---
+  duration_ms: 19.0818
+  type: 'test'
+  ...
+# Subtest: short words still require an answer and fixed symbols are not editable gaps
+ok 88 - short words still require an answer and fixed symbols are not editable gaps
+  ---
+  duration_ms: 0.3541
+  type: 'test'
+  ...
+# Subtest: dictation corrections identify the error without asking for another attempt in this task
+ok 89 - dictation corrections identify the error without asking for another attempt in this task
+  ---
+  duration_ms: 0.8127
+  type: 'test'
+  ...
+# Subtest: dictation rejects wrong explicit symbols while accepting omitted fixed symbols
+ok 90 - dictation rejects wrong explicit symbols while accepting omitted fixed symbols
+  ---
+  duration_ms: 0.1973
+  type: 'test'
+  ...
+# Subtest: revealing unfinished pairs keeps each already completed outcome unchanged
+ok 91 - revealing unfinished pairs keeps each already completed outcome unchanged
+  ---
+  duration_ms: 0.3873
+  type: 'test'
+  ...
+# Subtest: duplicate word IDs cannot create duplicate pair cards or repeated results
+ok 92 - duplicate word IDs cannot create duplicate pair cards or repeated results
+  ---
+  duration_ms: 0.1529
+  type: 'test'
+  ...
+# Subtest: choice shuffling is stable for a task and leaves the source list unchanged
+ok 93 - choice shuffling is stable for a task and leaves the source list unchanged
+  ---
+  duration_ms: 0.333
+  type: 'test'
+  ...
+# Subtest: cloze initially includes the semantic clue without recording difficulty
+ok 94 - cloze initially includes the semantic clue without recording difficulty
+  ---
+  duration_ms: 14.7201
+  type: 'test'
+  ...
+# Subtest: the cloze clue does not leak into listening or dictation
+ok 95 - the cloze clue does not leak into listening or dictation
+  ---
+  duration_ms: 2.918
+  type: 'test'
+  ...
+# Subtest: five words begin with reading when no ability has evidence, with bounded follow-up practice
+ok 96 - five words begin with reading when no ability has evidence, with bounded follow-up practice
+  ---
+  duration_ms: 145.5468
+  type: 'test'
+  ...
+# Subtest: each word has one unexposed first encounter and all later practice is exposed
+ok 97 - each word has one unexposed first encounter and all later practice is exposed
+  ---
+  duration_ms: 480.9499
+  type: 'test'
+  ...
+# Subtest: initial choice distractors do not expose future selected words
+ok 98 - initial choice distractors do not expose future selected words
+  ---
+  duration_ms: 121.5947
+  type: 'test'
+  ...
+# Subtest: a weak spelling ability gets an unexposed dictation before seeing the word
+ok 99 - a weak spelling ability gets an unexposed dictation before seeing the word
+  ---
+  duration_ms: 84.1518
+  type: 'test'
+  ...
+# Subtest: the first exercise follows each real due weakness instead of a fixed mixed-question order
+ok 100 - the first exercise follows each real due weakness instead of a fixed mixed-question order
+  ---
+  duration_ms: 255.5689
+  type: 'test'
+  ...
+# Subtest: listening lessons record listening alone and context lessons record context alone
+ok 101 - listening lessons record listening alone and context lessons record context alone
+  ---
+  duration_ms: 130.7727
+  type: 'test'
+  ...
+# Subtest: a harder follow-up dictation cannot add delayed-recall evidence beyond the first answer
+ok 102 - a harder follow-up dictation cannot add delayed-recall evidence beyond the first answer
+  ---
+  duration_ms: 65.4677
+  type: 'test'
+  ...
+# Subtest: a failed established dictation lowers its remaining practice instead of keeping a harder challenge
+ok 103 - a failed established dictation lowers its remaining practice instead of keeping a harder challenge
+  ---
+  duration_ms: 22.5631
+  type: 'test'
+  ...
+# Subtest: a failed harder challenge reduces future dictation to the established level and preserves other words
+ok 104 - a failed harder challenge reduces future dictation to the established level and preserves other words
+  ---
+  duration_ms: 94.4203
+  type: 'test'
+  ...
+# Subtest: meaning mistakes do not reduce planned spelling difficulty
+ok 105 - meaning mistakes do not reduce planned spelling difficulty
+  ---
+  duration_ms: 72.2519
+  type: 'test'
+  ...
+# Subtest: pairing records each word separately and rejects incomplete or duplicated results
+ok 106 - pairing records each word separately and rejects incomplete or duplicated results
+  ---
+  duration_ms: 82.9055
+  type: 'test'
+  ...
+# Subtest: single, two, three and four-word pools stay valid without self-answering one-pair tasks
+ok 107 - single, two, three and four-word pools stay valid without self-answering one-pair tasks
+  ---
+  duration_ms: 436.1406
+  type: 'test'
+  ...
+# Subtest: overlapping pair meanings are split into unambiguous individual tasks
+ok 108 - overlapping pair meanings are split into unambiguous individual tasks
+  ---
+  duration_ms: 113.4559
+  type: 'test'
+  ...
+# Subtest: unlimited mistakes still create no more than one spaced retry per word and fifteen tasks
+ok 109 - unlimited mistakes still create no more than one spaced retry per word and fifteen tasks
+  ---
+  duration_ms: 111.8456
+  type: 'test'
+  ...
+# Subtest: context correction changes exercise form and dictation correction supplies an easier level
+ok 110 - context correction changes exercise form and dictation correction supplies an easier level
+  ---
+  duration_ms: 118.2656
+  type: 'test'
+  ...
+# Subtest: the last word error waits for another session when no different word can intervene
+ok 111 - the last word error waits for another session when no different word can intervene
+  ---
+  duration_ms: 79.0457
+  type: 'test'
+  ...
+# Subtest: Next requires an answer and duplicate submission is ignored
+ok 112 - Next requires an answer and duplicate submission is ignored
+  ---
+  duration_ms: 58.1893
+  type: 'test'
+  ...
+# Subtest: cloze masks every exact occurrence, case-insensitively, without stemming
+ok 113 - cloze masks every exact occurrence, case-insensitively, without stemming
+  ---
+  duration_ms: 5.3169
+  type: 'test'
+  ...
+# Subtest: annotated abbreviation cloze handles literal parentheses and masks both full name and abbreviation
+ok 114 - annotated abbreviation cloze handles literal parentheses and masks both full name and abbreviation
+  ---
+  duration_ms: 4.3304
+  type: 'test'
+  ...
+# Subtest: choice options exclude overlaps, duplicates and broad multiple meanings, with a maximum of three
+ok 115 - choice options exclude overlaps, duplicates and broad multiple meanings, with a maximum of three
+  ---
+  duration_ms: 0.5609
+  type: 'test'
+  ...
+# Subtest: summaries do not claim independent dictation from listening recognition or exposed follow-ups
+ok 116 - summaries do not claim independent dictation from listening recognition or exposed follow-ups
+  ---
+  duration_ms: 114.8864
+  type: 'test'
+  ...
+# Subtest: known identical pronunciations are not used as listening-choice distractors
+ok 117 - known identical pronunciations are not used as listening-choice distractors
+  ---
+  duration_ms: 0.4581
+  type: 'test'
+  ...
+# Subtest: four complete programming units teach 24 lessons with distinct stable tasks
+ok 118 - four complete programming units teach 24 lessons with distinct stable tasks
+  ---
+  duration_ms: 2.4479
+  type: 'test'
+  ...
+# Subtest: all tested vocabulary is taught first and unit six adds no new core terms
+ok 119 - all tested vocabulary is taught first and unit six adds no new core terms
+  ---
+  duration_ms: 2.2578
+  type: 'test'
+  ...
+# Subtest: teaching text and all playback IDs exactly match existing vocabulary audio
+ok 120 - teaching text and all playback IDs exactly match existing vocabulary audio
+  ---
+  duration_ms: 226.8845
+  type: 'test'
+  ...
+# Subtest: every task is solvable by the shared answer checker and rejects an empty or wrong answer
+ok 121 - every task is solvable by the shared answer checker and rejects an empty or wrong answer
+  ---
+  duration_ms: 39.4066
+  type: 'test'
+  ...
+# Subtest: reading dominates meaning, spelling and listening; first encounter has no long blind spelling
+ok 122 - reading dominates meaning, spelling and listening; first encounter has no long blind spelling
+  ---
+  duration_ms: 0.4624
+  type: 'test'
+  ...
+# Subtest: choice answers occupy every position and command tiles are not systematically pre-solved
+ok 123 - choice answers occupy every position and command tiles are not systematically pre-solved
+  ---
+  duration_ms: 0.3737
+  type: 'test'
+  ...
+# Subtest: new reading contexts cover negation, direction, code roles and real error messages
+ok 124 - new reading contexts cover negation, direction, code roles and real error messages
+  ---
+  duration_ms: 0.2968
+  type: 'test'
+  ...
+# Subtest: adaptive candidates preserve existing teaching and stable historical exercise references
+ok 125 - adaptive candidates preserve existing teaching and stable historical exercise references
+  ---
+  duration_ms: 46.9732
+  type: 'test'
+  ...
+# Subtest: every target offers distinct recognition, context, listening and recall candidates
+ok 126 - every target offers distinct recognition, context, listening and recall candidates
+  ---
+  duration_ms: 73.9369
+  type: 'test'
+  ...
+# Subtest: every generated answer works with shared matching and every distractor is rejected
+ok 127 - every generated answer works with shared matching and every distractor is rejected
+  ---
+  duration_ms: 340.9425
+  type: 'test'
+  ...
+# Subtest: all English sentences and recordings reuse the actual vocabulary with no invented audio
+ok 128 - all English sentences and recordings reuse the actual vocabulary with no invented audio
+  ---
+  duration_ms: 29.0178
+  type: 'test'
+  ...
+# Subtest: distractors use previously introduced words and do not confuse known near synonyms
+ok 129 - distractors use previously introduced words and do not confuse known near synonyms
+  ---
+  duration_ms: 65.6588
+  type: 'test'
+  ...
+# Subtest: candidate content and signatures stay stable across repeated construction
+ok 130 - candidate content and signatures stay stable across repeated construction
+  ---
+  duration_ms: 211.9095
+  type: 'test'
+  ...
+# Subtest: self-confirmed old words keep review eligibility and original markers, without completing courses or inventing answers
+ok 131 - self-confirmed old words keep review eligibility and original markers, without completing courses or inventing answers
+  ---
+  duration_ms: 3.5997
+  type: 'test'
+  ...
+# Subtest: teaching enrolls new words for tomorrow even if the lesson is left unfinished, without claiming skill
+ok 132 - teaching enrolls new words for tomorrow even if the lesson is left unfinished, without claiming skill
+  ---
+  duration_ms: 1.2096
+  type: 'test'
+  ...
+# Subtest: course evidence is replay-safe across typing, next, reload and repeated initialization
+ok 133 - course evidence is replay-safe across typing, next, reload and repeated initialization
+  ---
+  duration_ms: 5.0302
+  type: 'test'
+  ...
+# Subtest: a hint survives leaving before submit and does not count an extra answer
+ok 134 - a hint survives leaving before submit and does not count an extra answer
+  ---
+  duration_ms: 1.9728
+  type: 'test'
+  ...
+# Subtest: recovering an unsynchronized hint days later preserves the saved event day and deadline
+ok 135 - recovering an unsynchronized hint days later preserves the saved event day and deadline
+  ---
+  duration_ms: 0.4172
+  type: 'test'
+  ...
+# Subtest: a retry hint recovers the timestamp stored against its original exercise
+ok 136 - a retry hint recovers the timestamp stored against its original exercise
+  ---
+  duration_ms: 1.8222
+  type: 'test'
+  ...
+# Subtest: meaning, context and listening observations do not create spelling evidence
+ok 137 - meaning, context and listening observations do not create spelling evidence
+  ---
+  duration_ms: 1.111
+  type: 'test'
+  ...
+# Subtest: broken records and save failure never erase existing progress
+ok 138 - broken records and save failure never erase existing progress
+  ---
+  duration_ms: 2.8998
+  type: 'test'
+  ...
+# Subtest: word-review persistence rejects a changed review snapshot before either write
+ok 139 - word-review persistence rejects a changed review snapshot before either write
+  ---
+  duration_ms: 11.8207
+  type: 'test'
+  ...
+# Subtest: word-review persistence rejects changed history before touching the primary review record
+ok 140 - word-review persistence rejects changed history before touching the primary review record
+  ---
+  duration_ms: 1.3814
+  type: 'test'
+  ...
+# Subtest: a history race after the primary save is reported without overwriting newer history
+ok 141 - a history race after the primary save is reported without overwriting newer history
+  ---
+  duration_ms: 0.3891
+  type: 'test'
+  ...
+# Subtest: normal word-review saves both records while hint-only saves leave legacy history unchanged
+ok 142 - normal word-review saves both records while hint-only saves leave legacy history unchanged
+  ---
+  duration_ms: 0.4143
+  type: 'test'
+  ...
+# Subtest: scene choice questions use context separately from meaning and order does not imply spelling
+ok 143 - scene choice questions use context separately from meaning and order does not imply spelling
+  ---
+  duration_ms: 2.5597
+  type: 'test'
+  ...
+# Subtest: scene scheduling immediately reflects correction in shared word skills
+ok 144 - scene scheduling immediately reflects correction in shared word skills
+  ---
+  duration_ms: 2.0552
+  type: 'test'
+  ...
+# Subtest: only learned scenes become available; future skills remain available for voluntary practice
+ok 145 - only learned scenes become available; future skills remain available for voluntary practice
+  ---
+  duration_ms: 1.246
+  type: 'test'
+  ...
+# Subtest: programming rechecks target the failed ability and word instead of another choice question
+ok 146 - programming rechecks target the failed ability and word instead of another choice question
+  ---
+  duration_ms: 12.0763
+  type: 'test'
+  ...
+# Subtest: current course vocabulary and option inventory matches the shipped recordings
+ok 147 - current course vocabulary and option inventory matches the shipped recordings
+  ---
+  duration_ms: 74.6444
+  type: 'test'
+  ...
+# Subtest: audio help survives refresh, leaves answers hidden, and never counts as independent listening
+ok 148 - audio help survives refresh, leaves answers hidden, and never counts as independent listening
+  ---
+  duration_ms: 4.4328
+  type: 'test'
+  ...
+# Subtest: feedback is once per action, ignores muted actions, and completes at normal speed
+ok 149 - feedback is once per action, ignores muted actions, and completes at normal speed
+  ---
+  duration_ms: 1.5581
+  type: 'test'
+  ...
+# Subtest: default session contains five unique words, starts with reading and spaces its follow-up evidence
+ok 150 - default session contains five unique words, starts with reading and spaces its follow-up evidence
+  ---
+  duration_ms: 3.0855
+  type: 'test'
+  ...
+# Subtest: even repeated mistakes have at most one spaced retry per word and 15 total questions
+ok 151 - even repeated mistakes have at most one spaced retry per word and 15 total questions
+  ---
+  duration_ms: 0.7052
+  type: 'test'
+  ...
+# Subtest: single-word pools finish after two base questions without immediate fake retries
+ok 152 - single-word pools finish after two base questions without immediate fake retries
+  ---
+  duration_ms: 0.2048
+  type: 'test'
+  ...
+# Subtest: an error on the final question is left for a later session when no spacing remains
+ok 153 - an error on the final question is left for a later session when no spacing remains
+  ---
+  duration_ms: 0.2753
+  type: 'test'
+  ...
+# Subtest: two-word pools can schedule bounded retries with a different word in between
+ok 154 - two-word pools can schedule bounded retries with a different word in between
+  ---
+  duration_ms: 1.0939
+  type: 'test'
+  ...
+# Subtest: submitting once does not advance, double submission and premature Next are ignored
+ok 155 - submitting once does not advance, double submission and premature Next are ignored
+  ---
+  duration_ms: 0.2595
+  type: 'test'
+  ...
+# Subtest: meaning and spelling evidence stay separate without changing legacy records
+ok 156 - meaning and spelling evidence stay separate without changing legacy records
+  ---
+  duration_ms: 0.8734
+  type: 'test'
+  ...
+# Subtest: difficulty and spacing advance only on distinct due review days
+ok 157 - difficulty and spacing advance only on distinct due review days
+  ---
+  duration_ms: 5.6837
+  type: 'test'
+  ...
+# Subtest: same-day practice and early practice do not inflate level or postpone a due review
+ok 158 - same-day practice and early practice do not inflate level or postpone a due review
+  ---
+  duration_ms: 0.5749
+  type: 'test'
+  ...
+# Subtest: same-day corrected mistakes and retries keep weakness, even across midnight
+ok 159 - same-day corrected mistakes and retries keep weakness, even across midnight
+  ---
+  duration_ms: 0.3333
+  type: 'test'
+  ...
+# Subtest: repeated failures lower at most one level per day and bring mature words back sooner
+ok 160 - repeated failures lower at most one level per day and bring mature words back sooner
+  ---
+  duration_ms: 0.4334
+  type: 'test'
+  ...
+# Subtest: an old easier spelling question cannot count as evidence for a harder format
+ok 161 - an old easier spelling question cannot count as evidence for a harder format
+  ---
+  duration_ms: 0.1523
+  type: 'test'
+  ...
+# Subtest: a harder in-session challenge can record trouble without lowering the established spelling level
+ok 162 - a harder in-session challenge can record trouble without lowering the established spelling level
+  ---
+  duration_ms: 0.2106
+  type: 'test'
+  ...
+# Subtest: spelling gets the first question when needed and repeats when the other abilities are stable and not due
+ok 163 - spelling gets the first question when needed and repeats when the other abilities are stable and not due
+  ---
+  duration_ms: 0.4565
+  type: 'test'
+  ...
+# Subtest: a just-seen spelling answer creates a next-day baseline without becoming delayed recall evidence
+ok 164 - a just-seen spelling answer creates a next-day baseline without becoming delayed recall evidence
+  ---
+  duration_ms: 0.309
+  type: 'test'
+  ...
+# Subtest: exposed success cannot clear an earlier mistake, advance a level, or delay the due date
+ok 165 - exposed success cannot clear an earlier mistake, advance a level, or delay the due date
+  ---
+  duration_ms: 0.1039
+  type: 'test'
+  ...
+# Subtest: the one retry follows the more serious failure, then the most recent failure when tied
+ok 166 - the one retry follows the more serious failure, then the most recent failure when tied
+  ---
+  duration_ms: 0.218
+  type: 'test'
+  ...
+# Subtest: practiced overdue weak words no longer starve other overdue weak words
+ok 167 - practiced overdue weak words no longer starve other overdue weak words
+  ---
+  duration_ms: 0.4847
+  type: 'test'
+  ...
+# Subtest: assisted completion lowers difficulty once per day and resets the harder format evidence
+ok 168 - assisted completion lowers difficulty once per day and resets the harder format evidence
+  ---
+  duration_ms: 0.1202
+  type: 'test'
+  ...
+# Subtest: weak due words take priority while one truly untested word keeps a place
+ok 169 - weak due words take priority while one truly untested word keeps a place
+  ---
+  duration_ms: 0.3346
+  type: 'test'
+  ...
+# Subtest: valid data round-trips and absent data starts fresh without touching old keys
+ok 170 - valid data round-trips and absent data starts fresh without touching old keys
+  ---
+  duration_ms: 1.2175
+  type: 'test'
+  ...
+# Subtest: each of the four abilities can take priority when it is the real due weakness
+ok 171 - each of the four abilities can take priority when it is the real due weakness
+  ---
+  duration_ms: 0.4594
+  type: 'test'
+  ...
+# Subtest: listening success and context success never promote their spelling or meaning siblings
+ok 172 - listening success and context success never promote their spelling or meaning siblings
+  ---
+  duration_ms: 0.3736
+  type: 'test'
+  ...
+# Subtest: course enrollment makes a next-day review without recording an answer or invented mastery
+ok 173 - course enrollment makes a next-day review without recording an answer or invented mastery
+  ---
+  duration_ms: 0.1743
+  type: 'test'
+  ...
+# Subtest: old two-ability records still parse and legacy enrollment preserves their real evidence
+ok 174 - old two-ability records still parse and legacy enrollment preserves their real evidence
+  ---
+  duration_ms: 0.4112
+  type: 'test'
+  ...
+# Subtest: corrupt, unsupported, and dangerous storage cannot silently become empty progress
+ok 175 - corrupt, unsupported, and dangerous storage cannot silently become empty progress
+  ---
+  duration_ms: 0.9332
+  type: 'test'
+  ...
+# Subtest: result descriptions separate scaffolding, full spelling, and same-session correction
+ok 176 - result descriptions separate scaffolding, full spelling, and same-session correction
+  ---
+  duration_ms: 1.2725
+  type: 'test'
+  ...
+# Subtest: matches case, surrounding punctuation, curly apostrophes and full-width letters
+ok 177 - matches case, surrounding punctuation, curly apostrophes and full-width letters
+  ---
+  duration_ms: 8.4402
+  type: 'test'
+  ...
+# Subtest: returns original target tokens and offsets for punctuation-preserving highlighting
+ok 178 - returns original target tokens and offsets for punctuation-preserving highlighting
+  ---
+  duration_ms: 25.3997
+  type: 'test'
+  ...
+# Subtest: a missing word does not make following words incorrect
+ok 179 - a missing word does not make following words incorrect
+  ---
+  duration_ms: 0.3546
+  type: 'test'
+  ...
+# Subtest: reports a replacement beside its target and retains later exact matches
+ok 180 - reports a replacement beside its target and retains later exact matches
+  ---
+  duration_ms: 21.6177
+  type: 'test'
+  ...
+# Subtest: extra words are not ignored even when every target word matches
+ok 181 - extra words are not ignored even when every target word matches
+  ---
+  duration_ms: 0.561
+  type: 'test'
+  ...
+# Subtest: repeated words consume separate positions rather than using set membership
+ok 182 - repeated words consume separate positions rather than using set membership
+  ---
+  duration_ms: 0.2684
+  type: 'test'
+  ...
+# Subtest: word order matters, and equal-cost alignment preserves exact words
+ok 183 - word order matters, and equal-cost alignment preserves exact words
+  ---
+  duration_ms: 0.2111
+  type: 'test'
+  ...
+# Subtest: normalizes common A1 contractions in either direction
+ok 184 - normalizes common A1 contractions in either direction
+  ---
+  duration_ms: 0.9191
+  type: 'test'
+  ...
+# Subtest: partial contraction recognition stays incomplete, including a partially extra word
+ok 185 - partial contraction recognition stays incomplete, including a partially extra word
+  ---
+  duration_ms: 0.4452
+  type: 'test'
+  ...
+# Subtest: does not turn possessives or ambiguous apostrophe-free words into contractions
+ok 186 - does not turn possessives or ambiguous apostrophe-free words into contractions
+  ---
+  duration_ms: 0.6175
+  type: 'test'
+  ...
+# Subtest: normalizes elementary integer numerals, including hyphenated tens
+ok 187 - normalizes elementary integer numerals, including hyphenated tens
+  ---
+  duration_ms: 0.3973
+  type: 'test'
+  ...
+# Subtest: does not invent equivalences for decimals, leading zeros, homophones or joined words
+ok 188 - does not invent equivalences for decimals, leading zeros, homophones or joined words
+  ---
+  duration_ms: 0.9165
+  type: 'test'
+  ...
+# Subtest: blank or punctuation-only speech never succeeds
+ok 189 - blank or punctuation-only speech never succeeds
+  ---
+  duration_ms: 0.4366
+  type: 'test'
+  ...
+# Subtest: comparison is deterministic and keeps transcript names and non-English words literal
+ok 190 - comparison is deterministic and keeps transcript names and non-English words literal
+  ---
+  duration_ms: 0.3408
+  type: 'test'
+  ...
+# Subtest: ordinary words that are Object prototype names remain literal
+ok 191 - ordinary words that are Object prototype names remain literal
+  ---
+  duration_ms: 0.1139
+  type: 'test'
+  ...
+# Subtest: capitalization and extra whitespace do not turn a correct spelling into an error
+ok 192 - capitalization and extra whitespace do not turn a correct spelling into an error
+  ---
+  duration_ms: 1.333
+  type: 'test'
+  ...
+# Subtest: a swapped pair is located without revealing the answer
+ok 193 - a swapped pair is located without revealing the answer
+  ---
+  duration_ms: 0.3094
+  type: 'test'
+  ...
+# Subtest: missing and additional letters receive different actionable corrections
+ok 194 - missing and additional letters receive different actionable corrections
+  ---
+  duration_ms: 0.2733
+  type: 'test'
+  ...
+# Subtest: repeated letters must all be present in the correct order
+ok 195 - repeated letters must all be present in the correct order
+  ---
+  duration_ms: 0.1682
+  type: 'test'
+  ...
+# Subtest: fixed numbers and symbols can be omitted or supplied correctly
+ok 196 - fixed numbers and symbols can be omitted or supplied correctly
+  ---
+  duration_ms: 0.457
+  type: 'test'
+  ...
+# Subtest: explicitly wrong symbols, numbers or symbol positions cannot pass
+ok 197 - explicitly wrong symbols, numbers or symbol positions cannot pass
+  ---
+  duration_ms: 0.1822
+  type: 'test'
+  ...
+# Subtest: symbol tolerance never makes incorrect English letters correct
+ok 198 - symbol tolerance never makes incorrect English letters correct
+  ---
+  duration_ms: 0.1308
+  type: 'test'
+  ...
+# Subtest: gap exercises stay bounded and target English letters even for short terms or phrases
+ok 199 - gap exercises stay bounded and target English letters even for short terms or phrases
+  ---
+  duration_ms: 0.8186
+  type: 'test'
+  ...
+# Subtest: typography: case, full width, curly apostrophes and sentence punctuation
+ok 200 - typography: case, full width, curly apostrophes and sentence punctuation
+  ---
+  duration_ms: 9.1511
+  type: 'test'
+  ...
+# Subtest: I am contraction accepts missing apostrophe and a separated contraction suffix
+ok 201 - I am contraction accepts missing apostrophe and a separated contraction suffix
+  ---
+  duration_ms: 2.3175
+  type: 'test'
+  ...
+# Subtest: pronoun contractions preserve the subject and its auxiliary
+ok 202 - pronoun contractions preserve the subject and its auxiliary
+  ---
+  duration_ms: 2.7131
+  type: 'test'
+  ...
+# Subtest: s contractions are accepted for explicit current A1 predicates
+ok 203 - s contractions are accepted for explicit current A1 predicates
+  ---
+  duration_ms: 2.6121
+  type: 'test'
+  ...
+# Subtest: omitted apostrophes in ordinary-looking words are accepted at the matching reference position
+ok 204 - omitted apostrophes in ordinary-looking words are accepted at the matching reference position
+  ---
+  duration_ms: 2.7665
+  type: 'test'
+  ...
+# Subtest: reference-aware apostrophes preserve tense, possession, names, missing words and negation
+ok 205 - reference-aware apostrophes preserve tense, possession, names, missing words and negation
+  ---
+  duration_ms: 3.0539
+  type: 'test'
+  ...
+# Subtest: ambiguous s/has expansion remains different from an unsupported interpretation
+ok 206 - ambiguous s/has expansion remains different from an unsupported interpretation
+  ---
+  duration_ms: 0.8719
+  type: 'test'
+  ...
+# Subtest: negative contractions preserve not and accept explicit expanded equivalents
+ok 207 - negative contractions preserve not and accept explicit expanded equivalents
+  ---
+  duration_ms: 17.0656
+  type: 'test'
+  ...
+# Subtest: positive contractions cannot replace a clause-final auxiliary
+ok 208 - positive contractions cannot replace a clause-final auxiliary
+  ---
+  duration_ms: 3.9639
+  type: 'test'
+  ...
+# Subtest: spelling meaning, sentence order, articles and number stay meaningful
+ok 209 - spelling meaning, sentence order, articles and number stay meaningful
+  ---
+  duration_ms: 2.0969
+  type: 'test'
+  ...
+# Subtest: numbers retain signs and decimal precision; common country dots are harmless
+ok 210 - numbers retain signs and decimal precision; common country dots are harmless
+  ---
+  duration_ms: 3.5575
+  type: 'test'
+  ...
+# Subtest: empty input and unrelated punctuation cannot form a correct answer
+ok 211 - empty input and unrelated punctuation cannot form a correct answer
+  ---
+  duration_ms: 0.6707
+  type: 'test'
+  ...
+1..211
+# tests 211
+# suites 0
+# pass 211
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 18935.0561

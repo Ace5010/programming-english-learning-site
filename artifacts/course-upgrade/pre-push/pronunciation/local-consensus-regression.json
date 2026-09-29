@@ -1,0 +1,79 @@
+{
+  "cloudCalls": 0,
+  "containsUserRecording": false,
+  "status": "passed-with-known-uncertainty",
+  "cases": [
+    {
+      "id": "guy-bed-as-bad",
+      "source": "public/audio/guy/word-1291.mp3",
+      "expected": "uncertain",
+      "result": {
+        "reference": "Bad",
+        "status": "uncertain",
+        "transcript": "Bed",
+        "feedback": [],
+        "audioSaved": false,
+        "cloudCalls": 0,
+        "experimental": true,
+        "reason": "words-differ-phoneme-uncertain",
+        "elapsedMs": 6407,
+        "recognizedWordsMatch": false,
+        "greedyPhonemesMatch": false
+      }
+    },
+    {
+      "id": "guy-bed-correct",
+      "source": "public/audio/guy/word-1291.mp3",
+      "expected": "uncertain",
+      "result": {
+        "reference": "Bed",
+        "status": "uncertain",
+        "transcript": "Bed",
+        "feedback": [],
+        "audioSaved": false,
+        "cloudCalls": 0,
+        "experimental": true,
+        "reason": "recognizers-disagree",
+        "elapsedMs": 6218,
+        "recognizedWordsMatch": true,
+        "greedyPhonemesMatch": false
+      }
+    },
+    {
+      "id": "guy-then-correct",
+      "source": "public/audio/guy/word-2383.mp3",
+      "expected": "uncertain",
+      "result": {
+        "reference": "Then",
+        "status": "uncertain",
+        "transcript": "Then.",
+        "feedback": [],
+        "audioSaved": false,
+        "cloudCalls": 0,
+        "experimental": true,
+        "reason": "recognizers-disagree",
+        "elapsedMs": 6157,
+        "recognizedWordsMatch": true,
+        "greedyPhonemesMatch": false
+      }
+    },
+    {
+      "id": "guy-three-number",
+      "source": "public/audio/guy/word-2400.mp3",
+      "expected": "supported",
+      "result": {
+        "reference": "Three",
+        "status": "supported",
+        "transcript": "3",
+        "feedback": [],
+        "audioSaved": false,
+        "cloudCalls": 0,
+        "experimental": true,
+        "reason": "words-and-acoustics-supported",
+        "elapsedMs": 6250,
+        "recognizedWordsMatch": true,
+        "greedyPhonemesMatch": true
+      }
+    }
+  ]
+}

@@ -11,6 +11,12 @@ export interface LearningTarget {
   transfer: boolean;
   readyAt: number;
   reviewFeedbackAt?: number;
+  contexts?: string[];
+  independentRecallAt?: number;
+  lastEvidenceAt?: number;
+  lastErrorAbility?: 'spelling' | 'context';
+  lastSessionId?: string;
+  evidence?: Partial<Record<'recognition' | 'recall' | 'newContext' | 'laterSession', { attempts: number; independent: number; assisted: number; revealed: number; elapsedMs: number }>>;
 }
 export interface LearningState {
   version: 1;
@@ -35,5 +41,10 @@ export type LearningExercise = DailyExerciseSpec & {
 export type LearningLesson = DailyLesson & DailyLessonSpec & {
   practice: LearningExercise[];
   learningTargets: string[];
-  learningGoal: 'reading' | 'communication';
+  learningGoal: 'reading' | 'communication' | 'listening';
+  /** Optional prerequisite concepts and a smaller focus for absolute beginners. */
+  prerequisiteIds?: string[];
+  focusLimit?: number;
+  /** Retained for lookup and old sessions, excluded from new adaptive rounds. */
+  referenceOnly?: boolean;
 };

@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { progressStorage, blockSyncApply } from './progressStorage';
 import type { VocabularyItem } from './vocabulary';
 import LessonExercise, { type ExerciseHandle } from './LessonExercise';
@@ -8,6 +8,9 @@ import { persistProgrammingReviewSnapshot } from './programmingProgress';
 import './lesson.css';
 import ThemePicker, { type Theme } from './ThemePicker';
 import type { PlaybackSpeed } from './SpeechControls';
+import ReadAloudText from './ReadAloud';
+import type { FeedbackSound } from './feedbackAudio';
+import { readReviewSession, saveReviewSession, type ReviewExerciseDraft } from './reviewSession';
 
 const legacyKey = 'codewords-quiz-last-tested';
 function readLegacyHistory(raw = localStorage.getItem(legacyKey)): Record<string, number> {
@@ -38,35 +41,50 @@ type Props = {
   pool: VocabularyItem[]; onClose: () => void; onFinished: () => void;
   playWord: (item: VocabularyItem, slow?: boolean, key?: string) => void;
   playExample: (item: VocabularyItem) => void;
+  playFeedback: (sound: FeedbackSound, eventId: string) => void;
   speaking?: string;
   theme: Theme;
   onThemeChange: (value: Theme) => void;
   speed: PlaybackSpeed;
   onSpeedChange: (value: PlaybackSpeed) => void;
+  stopAudio?: () => void;
 };
 
-export default function ReviewLesson({ pool, onClose, onFinished, playWord, speaking = '', theme, onThemeChange, speed, onSpeedChange }: Props) {
+export default function ReviewLesson({ pool, onClose, onFinished, playWord, playFeedback, speaking = '', theme, onThemeChange, speed, onSpeedChange, stopAudio }: Props) {
   useEffect(() => { blockSyncApply('review-quiz', true); return () => blockSyncApply('review-quiz', false); }, []);
   const [initial] = useState(loadReview);
   const progress = useRef(initial.progress);
   const legacy = useRef(initial.history);
   const canSave = useRef(!initial.warning);
   const [warning, setWarning] = useState(initial.warning);
-  const [lesson, setLesson] = useState(() => createLesson(pool, initial.progress, initial.history));
+  const [resume] = useState(() => { const saved = readReviewSession(); return saved && !saved.lesson.finished && saved.lesson.items.every(item => pool.some(word => word.id === item.id)) ? saved : undefined; });
+  const [lesson, setLesson] = useState(() => resume?.lesson ?? createLesson(pool, initial.progress, initial.history));
   const [ready, setReady] = useState(false);
-  const [feedback, setFeedback] = useState<Feedback | null>(null);
+  const [feedback, setFeedback] = useState<Feedback | null>(resume?.feedback ?? null);
+  const [retrying, setRetrying] = useState(!!resume?.draft?.correction);
+  const draftSnapshot = useRef<ReviewExerciseDraft | undefined>(resume?.draft);
+  const savedState = useRef({ lesson, feedback }); savedState.current = { lesson, feedback };
+  const snapshot = useCallback((draft: ReviewExerciseDraft) => {
+    if (draft.taskId !== savedState.current.lesson.tasks[savedState.current.lesson.index]?.id) return;
+    draftSnapshot.current = draft; setRetrying(!!draft.correction);
+    if (!saveReviewSession({ version: 1, active: true, ...savedState.current, draft })) setWarning('本页答案仍保留，浏览器暂时无法保存续学草稿。');
+  }, []);
+  useEffect(() => {
+    const draft = draftSnapshot.current?.taskId === lesson.tasks[lesson.index]?.id ? draftSnapshot.current : undefined;
+    if (!saveReviewSession({ version: 1, active: !lesson.finished, lesson, feedback, draft })) setWarning('本页答案仍保留，浏览器暂时无法保存续学草稿。');
+  }, [lesson, feedback]);
   const exercise = useRef<ExerciseHandle>(null);
-  const completed = useRef(false);
-  const observed = useRef(new Set<number>());
+  const completed = useRef(!!resume?.feedback);
+  const observed = useRef(new Set<number>(resume?.draft?.observed));
   const counted = useRef(new Set<string>());
-  const autoPlayed = useRef('');
+  const autoPlayed = useRef(resume?.lesson.tasks[resume.lesson.index]?.id ?? '');
   const dialog = useRef<HTMLDivElement>(null);
   const heading = useRef<HTMLHeadingElement>(null);
   const nextButton = useRef<HTMLButtonElement>(null);
   const closeRef = useRef(onClose);
   closeRef.current = onClose;
   const task = lesson.tasks[lesson.index];
-  const difficult = lesson.items.filter(word => lesson.results.some(result => result.answers.some(answer => answer.wordId === word.id && answer.outcome !== 'independent')));
+  const difficult = lesson.items.filter(word => lesson.results.some(result => result.answers.some(answer => answer.wordId === word.id && !answer.unmeasured && answer.outcome !== 'independent')));
 
   useEffect(() => {
     const returnFocus = document.activeElement instanceof HTMLElement ? document.activeElement : null;
@@ -86,9 +104,15 @@ export default function ReviewLesson({ pool, onClose, onFinished, playWord, spea
   }, []);
 
   useEffect(() => {
-    dialog.current?.querySelector('.lesson-stage')?.scrollTo({ top: 0 });
-    const input = dialog.current?.querySelector<HTMLInputElement>('input:not([disabled])');
-    if (input) input.focus(); else heading.current?.focus();
+    const correction = dialog.current?.querySelector<HTMLElement>('.answer-correction');
+    if (correction) {
+      correction.focus({ preventScroll: true });
+      correction.scrollIntoView({ block: 'center', behavior: 'instant' });
+    } else {
+      dialog.current?.querySelector('.lesson-stage')?.scrollTo({ top: 0 });
+      const input = dialog.current?.querySelector<HTMLInputElement>('input:not([disabled])');
+      if (input) input.focus(); else heading.current?.focus();
+    }
     if (task && (task.kind === 'listen' || task.kind === 'dictation') && autoPlayed.current !== task.id) {
       autoPlayed.current = task.id;
       playWord(task.words[0], undefined, `lesson-${task.id}`);
@@ -106,9 +130,10 @@ export default function ReviewLesson({ pool, onClose, onFinished, playWord, spea
       catch { canSave.current = false; setWarning('暂时无法读取复习记录。原记录保留，本轮后续结果暂不保存。'); }
     }
     for (const answer of answers) {
+      if (answer.unmeasured) continue;
       const evidence = task.evidence.find(question => question.wordId === answer.wordId);
       if (!evidence) continue;
-      snapshot = updateReviewProgress(snapshot, evidence, answer.outcome, now, finishedAnswer);
+      snapshot = updateReviewProgress(snapshot, evidence, answer.outcome, now, finishedAnswer, finishedAnswer && observed.current.has(answer.wordId));
       if (finishedAnswer) legacy.current = { ...legacy.current, [answer.wordId]: now };
     }
     progress.current = snapshot;
@@ -118,7 +143,7 @@ export default function ReviewLesson({ pool, onClose, onFinished, playWord, spea
         if (finishedAnswer) {
           const raw = localStorage.getItem(legacyKey);
           const history = readLegacyHistory(raw);
-          for (const answer of answers) history[answer.wordId] = now;
+          for (const answer of answers) if (!answer.unmeasured) history[answer.wordId] = now;
           historyUpdate = { raw, history };
         }
         persistProgrammingReviewSnapshot(progressStorage, snapshot, expectedRaw, historyUpdate);
@@ -137,13 +162,15 @@ export default function ReviewLesson({ pool, onClose, onFinished, playWord, spea
     persistAnswers(answers, true);
     setLesson(answerLesson(lesson, answers));
     setFeedback(result);
+    if (result.correct) playFeedback('correct', `${lesson.id}:${task.id}`);
   }
-  function resetTask() { completed.current = false; observed.current.clear(); setReady(false); setFeedback(null); }
+  function resetTask() { completed.current = false; observed.current.clear(); draftSnapshot.current = undefined; setRetrying(false); setReady(false); setFeedback(null); }
   function next() {
     if (!feedback) return;
+    stopAudio?.();
     const updated = nextLesson(lesson);
     setLesson(updated); resetTask();
-    if (updated.finished && !counted.current.has(updated.id)) { counted.current.add(updated.id); onFinished(); }
+    if (updated.finished && !counted.current.has(updated.id)) { counted.current.add(updated.id); onFinished(); playFeedback('complete', updated.id); }
   }
   function restart() { setLesson(createLesson(difficult.length ? difficult : pool, progress.current, legacy.current)); resetTask(); }
 
@@ -167,25 +194,25 @@ export default function ReviewLesson({ pool, onClose, onFinished, playWord, spea
         <p className="lesson-summary-intro">{difficult.length ? `${difficult.length} 个词还需要再练，之后会优先复习。` : '下次继续回忆这些词，再逐渐减少提示。'}</p>
         <ul className="lesson-summary-list">{lesson.items.map(word => {
           const summary = summarizeLesson(lesson, word.id);
-          return <li key={word.id}><div className="lesson-summary-word"><strong>{word.word}</strong><span>{word.meaning}</span><div className="lesson-summary-audio">
+          return <li key={word.id}><div className="lesson-summary-word"><span className="lesson-summary-meaning" lang="zh-CN">{word.meaning}</span><strong lang="en"><ReadAloudText text={word.word} /></strong><div className="lesson-summary-audio">
             <button type="button" className={speaking === `lesson-summary-${word.id}` ? 'lesson-is-playing' : ''} onClick={() => playWord(word, false, `lesson-summary-${word.id}`)} aria-label={`正常播放 ${word.word}`} aria-pressed={speaking === `lesson-summary-${word.id}`}><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4V5Z" /><path d="M15 8a6 6 0 0 1 0 8M18 5a10 10 0 0 1 0 14" /></svg></button>
             <button type="button" className={`lesson-summary-slow${speaking === `lesson-summary-slow-${word.id}` ? ' lesson-is-playing' : ''}`} onClick={() => playWord(word, true, `lesson-summary-slow-${word.id}`)} aria-label={`慢速播放 ${word.word}`} aria-pressed={speaking === `lesson-summary-slow-${word.id}`}>慢速</button>
           </div></div><div className="lesson-summary-evidence"><p>{summary.context}</p><p>{summary.meaning}</p><p>{summary.spelling}</p><p>{summary.listening}</p></div></li>;
         })}</ul><p className="lesson-save-note">{canSave.current ? '记录已保存在当前浏览器。' : '本轮记录未完整保存。'}</p>
       </> : task && <>
         <div className="lesson-question-header">{task.retry && <p className="lesson-kicker">再练一次</p>}<h1 id="lesson-heading" ref={heading} tabIndex={-1}>{taskTitle(task)}</h1></div>
-        <LessonExercise key={task.id} ref={exercise} task={task} onReady={setReady} onResult={complete} onDifficulty={observeDifficulty} playWord={playWord} speaking={speaking} speed={speed} onSpeedChange={onSpeedChange} />
+        <LessonExercise key={task.id} ref={exercise} task={task} onReady={setReady} onResult={complete} onDifficulty={observeDifficulty} playWord={playWord} speaking={speaking} speed={speed} onSpeedChange={onSpeedChange} savedDraft={draftSnapshot.current} onSnapshot={snapshot} onPairCorrect={wordId => playFeedback('pair', `${lesson.id}:${task.id}:${wordId}`)} />
       </>}
     </div></main>
     <footer className={`lesson-footer${feedback ? feedback.correct ? ' lesson-footer-correct' : ' lesson-footer-correction' : ''}`}><div className="lesson-footer-inner">
       {empty ? <><span /><button className="lesson-primary" onClick={onClose}>返回学习</button></> : done ? <>
         <button className="lesson-secondary" onClick={onClose}>返回学习</button><button className="lesson-primary" onClick={restart}>{difficult.length ? '再练需要巩固的词' : '再复习一组'}</button>
       </> : feedback ? <>
-        <div className="lesson-feedback" role="status"><span className="lesson-feedback-icon" aria-hidden="true"><svg width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round">{feedback.correct ? <path d="m5 12 4 4L19 6" /> : <><path d="M12 7v6" /><circle cx="12" cy="17" r=".8" fill="currentColor" stroke="none" /></>}</svg></span><div className="lesson-feedback-copy"><strong>{feedback.correct ? '正确' : '正确答案'}</strong>{!feedback.correct && <>{feedback.answer && <p className="lesson-answer">{feedback.answer}</p>}{feedback.message && <p>{feedback.message}</p>}</>}</div></div>
+        <div className="lesson-feedback" role="status"><span className="lesson-feedback-icon" aria-hidden="true"><svg width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round">{feedback.correct ? <path d="m5 12 4 4L19 6" /> : <><path d="M12 7v6" /><circle cx="12" cy="17" r=".8" fill="currentColor" stroke="none" /></>}</svg></span><div className="lesson-feedback-copy"><strong>{feedback.correct ? feedback.message === '修改正确' ? '修改正确' : task?.kind === 'pairs' ? '配对完成' : '正确' : '正确答案'}</strong>{!feedback.correct && <>{feedback.answer && <p className="lesson-answer"><ReadAloudText text={feedback.answer} /></p>}{feedback.message && <p>{feedback.message}</p>}</>}</div></div>
         <button ref={nextButton} className="lesson-primary" onClick={next}>{lesson.index === lesson.tasks.length - 1 ? '完成复习' : '继续'}</button>
       </> : <>
         <div className="lesson-secondary-actions"><button className="lesson-secondary" onClick={() => exercise.current?.hint()}>提示</button><button className="lesson-secondary" onClick={() => exercise.current?.reveal()}>暂时不会</button></div>
-        <button className="lesson-primary" onClick={() => exercise.current?.check()} disabled={!ready}>检查</button>
+        <button className="lesson-primary" onClick={() => exercise.current?.check()} disabled={!ready}>{retrying ? '再检查' : '检查'}</button>
       </>}
     </div></footer>
   </div>;

@@ -1,0 +1,41 @@
+{
+  "officialRepo": "iic/SenseVoiceSmall",
+  "conversionRepo": "danieldong/sensevoice-small-onnx-quant",
+  "matchingPublishedArtifacts": {
+    "model.pt": {
+      "sha256": "833ca2dcfdf8ec91bd4f31cfac36d6124e0c459074d5e909aec9cabe6204a3ea",
+      "officialRevision": "70514a3da51f1160f51d18449dab6128bbd4928b",
+      "conversionRevision": "0fa75a7bcea5a24a858c77c06d2e6d8a3d72c4ab"
+    },
+    "am.mvn": {
+      "sha256": "29b3c740a2c0cfc6b308126d31d7f265fa2be74f3bb095cd2f143ea970896ae5",
+      "officialRevision": "70514a3da51f1160f51d18449dab6128bbd4928b",
+      "conversionRevision": "0fa75a7bcea5a24a858c77c06d2e6d8a3d72c4ab"
+    },
+    "config.yaml": {
+      "sha256": "f71e239ba36705564b5bf2d2ffd07eece07b8e3f2bbf6d2c99d8df856339ac19",
+      "officialRevision": "70514a3da51f1160f51d18449dab6128bbd4928b",
+      "conversionRevision": "0fa75a7bcea5a24a858c77c06d2e6d8a3d72c4ab"
+    },
+    "chn_jpn_yue_eng_ko_spectok.bpe.model": {
+      "sha256": "aa87f86064c3730d799ddf7af3c04659151102cba548bce325cf06ba4da4e6a8",
+      "officialRevision": "70514a3da51f1160f51d18449dab6128bbd4928b",
+      "conversionRevision": "0fa75a7bcea5a24a858c77c06d2e6d8a3d72c4ab"
+    }
+  },
+  "onnxParityTested": false,
+  "onnx": {
+    "Size": 937615184,
+    "Sha256": "db9df447f53ab277db1a10335173f739d25444abb2eb961fc4f88e98b5f03122",
+    "Revision": "0fa75a7bcea5a24a858c77c06d2e6d8a3d72c4ab"
+  },
+  "directPageCheck": {
+    "url": "https://www.modelscope.cn/models/danieldong/sensevoice-small-onnx-quant",
+    "status": 200,
+    "bytes": 19703,
+    "elapsedMs": 1724,
+    "ipv4InterfaceIndex": 9,
+    "environmentProxyDisabled": true,
+    "scope": "HTML only; browser assets not all verified"
+  }
+}

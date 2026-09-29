@@ -51,6 +51,8 @@ export async function onRequest({ request, env }: Context): Promise<Response> {
     try {
       body = JSON.parse(new TextDecoder().decode(bytes));
       if (body.version !== 1 || !Number.isSafeInteger(body.revision) || body.revision < 0) throw new Error();
+      // An older writer must never erase a foundation record it cannot read.
+      if (body.snapshot && !Object.prototype.hasOwnProperty.call(body.snapshot, 'codewords-foundation-v1')) return reply({ error: 'update-required' }, 426);
       assertSnapshot(body.snapshot);
     } catch { return reply({ error: 'record' }, 400); }
     const next = body.revision + 1, now = Date.now(), writeId = crypto.randomUUID();

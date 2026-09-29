@@ -3,13 +3,14 @@
 import assert from 'node:assert/strict';
 import { createRequire } from 'node:module';
 import { mkdir, writeFile } from 'node:fs/promises';
+import path from 'node:path';
 import { adaptiveDailyLessons } from '../src/dailyPractice.ts';
 import { createDailyProgress, createDailySession } from '../src/dailyProgress.ts';
 const require = createRequire(import.meta.url);
 const { chromium } = require(process.env.CODEWORDS_PLAYWRIGHT || 'playwright');
 const url = process.env.CODEWORDS_TEST_URL;
 assert.ok(url, 'Set CODEWORDS_TEST_URL to the running fixed-port website.');
-const browser = await chromium.launch({ channel: 'chrome', headless: true });
+const browser = await chromium.launch({ channel: 'chrome', headless: true, args: ['--no-proxy-server'] });
 const lesson = adaptiveDailyLessons[0];
 const task = lesson.exercises.find(item => item.kind === 'speak');
 const now = Date.now(), ids = task.knowledgeIds;
@@ -19,8 +20,10 @@ const seed = {
   session: { ...createDailySession({ ...lesson, exercises: [task] }, 'lesson', now), stage: 'exercise', adaptive: { version: 1, round: 1, focusIds: ids, newIds: ids, sourceLessonId: lesson.id, seed: 1, budget: 8 } },
 };
 const results = [], errors = [];
+const output = path.resolve(process.env.CODEWORDS_ARTIFACT_DIR || 'artifacts/daily-speech');
 async function open({ unsupported = false, lateLocal = false } = {}) {
   const context = await browser.newContext({ viewport: { width: 1440, height: 1050 }, reducedMotion: 'reduce' });
+  await context.route('http://127.0.0.1:18768/api/course-session', route => route.abort());
   const page = await context.newPage(); page.setDefaultTimeout(10000);
   page.on('pageerror', error => errors.push(error.message));
   await page.addInitScript(({ seed, unsupported, lateLocal }) => {
@@ -46,7 +49,7 @@ async function open({ unsupported = false, lateLocal = false } = {}) {
       if (final && !current.stopped) current.onend?.();
     };
   }, { seed, unsupported, lateLocal });
-  await page.goto(url); await page.locator('.daily-speaking').waitFor();
+  await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 30000 }); await page.locator('.daily-speaking').waitFor();
   return { context, page };
 }
 const record = page => page.evaluate(() => JSON.parse(localStorage.getItem('codewords-daily-v1')));
@@ -166,6 +169,6 @@ try {
     assert.equal((await record(page)).session.answers.length, 0);
   });
   assert.deepEqual(errors, []);
-  await mkdir('artifacts/daily-speech', { recursive: true });
-  await writeFile('artifacts/daily-speech/simulated-browser-results.json', JSON.stringify({ input: 'simulated recognition events', results, errors }, null, 2));
+  await mkdir(output, { recursive: true });
+  await writeFile(path.join(output, 'simulated-browser-results.json'), JSON.stringify({ input: 'simulated recognition events', results, errors }, null, 2));
 } finally { await browser.close(); }

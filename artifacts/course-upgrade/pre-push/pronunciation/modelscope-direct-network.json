@@ -1,0 +1,28 @@
+{
+  "environmentProxyDisabled": true,
+  "windowsOutgoingInterface": "physical Ethernet",
+  "IP_UNICAST_IF": 9,
+  "globalNetworkSettingsChanged": false,
+  "checks": [
+    {
+      "url": "https://www.modelscope.cn/models/Qwen/Qwen3-ASR-1.7B",
+      "status": 200,
+      "bytes": 90844,
+      "ms": 3071
+    },
+    {
+      "url": "https://www.modelscope.cn/api/v1/models/Qwen/Qwen3-ASR-1.7B/repo?Revision=d69410f1c275f2b0fa60cbb9960edfcdb0ae0aec&FilePath=config.json",
+      "status": 200,
+      "bytes": 6194,
+      "ms": 736
+    },
+    {
+      "url": "https://www.modelscope.cn/api/v1/models/Qwen/Qwen3-ASR-1.7B/repo?Revision=d69410f1c275f2b0fa60cbb9960edfcdb0ae0aec&FilePath=model-00001-of-00002.safetensors",
+      "status": 200,
+      "range": "bytes 0-1048575/4220320824",
+      "bytes": 1048576,
+      "matchesLocalChunk": true,
+      "ms": 3377
+    }
+  ]
+}

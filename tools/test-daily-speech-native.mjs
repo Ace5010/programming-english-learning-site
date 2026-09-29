@@ -5,8 +5,8 @@ import assert from 'node:assert/strict';
 import { createRequire } from 'node:module';
 import { mkdir, writeFile } from 'node:fs/promises';
 import path from 'node:path';
-import { dailyLessons } from '../src/dailyCourse.ts';
-import { createDailyProgress, createDailySession, beginDailyExercises, createDailyDraft, updateDailyDraft, submitDailyAnswer, advanceDailySession, parseDailyProgress } from '../src/dailyProgress.ts';
+import { adaptiveDailyLessons as dailyLessons } from '../src/dailyPractice.ts';
+import { createDailyProgress, createDailySession, parseDailyProgress } from '../src/dailyProgress.ts';
 import { installNativeSpeechInput, prepareNativeSpeechInput } from './helpers/native-speech-input.mjs';
 
 const require = createRequire(import.meta.url);
@@ -15,35 +15,25 @@ const baseURL = process.env.CODEWORDS_TEST_URL;
 assert.ok(baseURL, 'CODEWORDS_TEST_URL must identify the running fixed-port server.');
 const output = path.resolve(process.env.CODEWORDS_SPEECH_ARTIFACTS || 'artifacts/daily-speech');
 await mkdir(output, { recursive: true });
-const browser = await chromium.launch({ channel: 'chrome', headless: true, args: ['--use-fake-device-for-media-stream', '--use-fake-ui-for-media-stream', '--autoplay-policy=no-user-gesture-required'] });
+const browser = await chromium.launch({ channel: 'chrome', headless: true, args: ['--no-proxy-server', '--use-fake-device-for-media-stream', '--use-fake-ui-for-media-stream', '--autoplay-policy=no-user-gesture-required'] });
 const problems = [];
 const report = { at: new Date().toISOString(), browser: await browser.version(), input: 'Synthetic existing course MP3 -> Web Audio -> native SpeechRecognition.start(audioTrack). No physical microphone, user profile, or result mocking.', results: [], evidence: [], screenshots: [] };
 const legacy = { 'codewords-mastered': '[1,2,3]', 'codewords-favorites': '[17]', 'codewords-review-v1': '{"speech-native-test-sentinel":true}' };
 
 function beforeSpeaking(lessonId) {
   const lesson = dailyLessons.find(item => item.id === lessonId);
-  let progress = createDailyProgress();
-  progress.session = beginDailyExercises(createDailySession(lesson));
-  for (const task of lesson.exercises) {
-    if (task.kind === 'speak') break;
-    const draft = createDailyDraft(task);
-    if (['choice', 'listen'].includes(task.kind)) draft.choice = task.answers[0];
-    if (task.kind === 'fill') draft.blanks = task.blanks.map(items => items[0]);
-    if (task.kind === 'write') draft.text = task.answers[0];
-    if (task.kind === 'order') {
-      const used = new Set();
-      draft.order = task.answers[0].split(' ').map(word => { const index = task.options.findIndex((item, i) => item === word && !used.has(i)); assert.ok(index >= 0); used.add(index); return index; });
-    }
-    progress.session = updateDailyDraft(progress.session, draft);
-    progress = advanceDailySession(submitDailyAnswer(progress, lesson), lesson);
-  }
-  assert.equal(lesson.exercises[progress.session.index].kind, 'speak');
+  const task = lesson.exercises.find(item => item.kind === 'speak');
+  assert.ok(task);
+  const progress = createDailyProgress(), now = Date.now(), ids = task.knowledgeIds;
+  progress.learning = { version: 1, turns: 0, rounds: 0, targets: Object.fromEntries(ids.map(id => [id, { introducedAt: now, confidence: .4, abilities: {}, lastSeenTurn: 0, lastFailureTurn: 0, signatures: [], transfer: false, readyAt: 0 }])) };
+  progress.session = { ...createDailySession({ ...lesson, exercises: [task] }, 'lesson', now), stage: 'exercise', adaptive: { version: 1, round: 1, focusIds: ids, newIds: ids, sourceLessonId: lesson.id, seed: 1, budget: 1 } };
   assert.equal(parseDailyProgress(JSON.stringify(progress), dailyLessons).writable, true);
   return progress;
 }
 
 async function open(progress) {
   const context = await browser.newContext({ viewport: { width: 1440, height: 1000 }, reducedMotion: 'reduce' });
+  await context.route('http://127.0.0.1:18768/api/course-session', route => route.abort());
   const page = await context.newPage();
   page.setDefaultTimeout(15000);
   page.on('pageerror', error => problems.push(error.message));
@@ -120,7 +110,9 @@ try {
     assert.equal((await saved(page)).session.feedback.outcome, 'self');
     await page.getByRole('button', { name: '继续', exact: true }).click();
     await page.getByRole('heading', { name: '这一课已完成', exact: true }).waitFor();
-    assert.ok((await saved(page)).lessons['A1-01-01'].completedAt > 0);
+    assert.equal((await saved(page)).session.stage, 'summary');
+    assert.equal((await saved(page)).learning.rounds, 1);
+    assert.equal((await saved(page)).lessons['A1-01-01'].completedAt, 0, 'Speaking self-report alone does not complete the whole teaching scope.');
     assert.equal((await saved(page)).lessons['A1-01-01'].skills.speaking.independentAnswers, 0);
     assert.equal((await saved(page)).lessons['A1-01-01'].skills.speaking.selfReports, 1);
     await screenshot(page, 'read-complete-1440.png');

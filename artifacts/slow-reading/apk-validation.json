@@ -1,0 +1,10 @@
+{
+  "apk": "codewords-slow-reading-release.apk",
+  "bytes": 262642734,
+  "sha256": "5a152c5570675cff4b60af905e402c77d86fa1e9ea7ff84c24a18e0ea9ca9227",
+  "matchedWebFiles": 15994,
+  "mp3Files": 15971,
+  "payloadMatchesDist": true,
+  "noSigningFilesBundled": true,
+  "note": "Archive/payload verification only; installation and native device behavior are separate checks."
+}

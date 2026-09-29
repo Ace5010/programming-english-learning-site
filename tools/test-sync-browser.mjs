@@ -10,7 +10,7 @@ import { SYNC_KEYS, sameValue } from '../src/syncProtocol.ts';
 const require = createRequire(import.meta.url);
 const { chromium } = require(process.env.CODEWORDS_PLAYWRIGHT || 'C:/Users/shenwuqiang/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
 const webOrigin = 'https://programming-english-learning-site.pages.dev', phoneOrigin = 'https://appassets.androidplatform.net';
-const live = process.env.CODEWORDS_LIVE_SYNC === '1', dist = path.resolve('dist'), output = path.resolve('artifacts/sync-audit');
+const live = process.env.CODEWORDS_LIVE_SYNC === '1', dist = path.resolve('dist'), output = path.resolve(process.env.CODEWORDS_ARTIFACT_DIR || 'artifacts/sync-audit');
 await mkdir(output, { recursive: true });
 const server = syncServer(), errors = [], results = [];
 const earned = JSON.parse(await readFile('artifacts/adaptive-course/earned-fixtures.json', 'utf8'));

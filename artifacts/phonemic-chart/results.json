@@ -1,0 +1,203 @@
+{
+  "results": [
+    "complete grouped chart is the entry point; keyboard accessible; no progress changes",
+    "real Cambridge audio plays at normal and slow speeds, single sound and word are distinct",
+    "network failure is visible and retry recovers; leaving page stops pending and playing audio",
+    "minimal 1440px: all cells and details fit",
+    "minimal 390px: all cells and details fit",
+    "minimal 320px: all cells and details fit",
+    "sketch 1440px: all cells and details fit",
+    "sketch 390px: all cells and details fit",
+    "sketch 320px: all cells and details fit",
+    "print 1440px: all cells and details fit",
+    "print 390px: all cells and details fit",
+    "print 320px: all cells and details fit",
+    "graffiti 1440px: all cells and details fit",
+    "graffiti 390px: all cells and details fit",
+    "graffiti 320px: all cells and details fit"
+  ],
+  "failures": [],
+  "errors": [],
+  "audio": [
+    {
+      "event": "playing",
+      "url": "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_sound_sheep_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_sound_sheep_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_word_sheep_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_word_sheep_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_sound_day_2023feb_002.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_sound_day_2023feb_002.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_word_day_2023feb_002.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_word_day_2023feb_002.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_sound_day_2023feb_001.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_sound_day_2023feb_001.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_word_day_2023feb_001.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_word_day_2023feb_001.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_sound_think_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_sound_think_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_word_think_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_word_think_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_sound_fish_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_sound_fish_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_word_fish_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_word_fish_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_sound_pure_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_sound_pure_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_word_pure_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_word_pure_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_sound_sheep_2023feb.mp3",
+      "rate": 0.72
+    },
+    {
+      "event": "ended",
+      "url": "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_sound_sheep_2023feb.mp3",
+      "rate": 0.72
+    },
+    {
+      "event": "playing",
+      "url": "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_word_sheep_2023feb.mp3",
+      "rate": 0.72
+    },
+    {
+      "event": "ended",
+      "url": "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_word_sheep_2023feb.mp3",
+      "rate": 0.72
+    },
+    {
+      "event": "playing",
+      "url": "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_sound_ship_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_sound_ship_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_sound_sheep_2023feb.mp3",
+      "rate": 0.72
+    },
+    {
+      "event": "ended",
+      "url": "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_sound_sheep_2023feb.mp3",
+      "rate": 0.72
+    },
+    {
+      "event": "playing",
+      "url": "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_sound_ship_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_sound_ship_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "url": "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_sound_fish_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "ended",
+      "url": "https://dictionary.cambridge.org/media/english/uk_phonetic/uk_phonetics_sound_fish_2023feb.mp3",
+      "rate": 1
+    }
+  ]
+}

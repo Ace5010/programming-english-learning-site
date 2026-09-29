@@ -1,0 +1,9 @@
+{
+  "completedAt": "2026-09-27T04:45:31.012Z",
+  "recordings": 88,
+  "bytes": 2148600,
+  "destination": "public/audio/phonemes/uk",
+  "previousFailureReport": "../phonemic-chart/offline-download-status.json",
+  "method": "PowerShell Invoke-WebRequest, no custom headers or authentication",
+  "decodedRecordings": 88
+}

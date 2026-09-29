@@ -1,0 +1,7102 @@
+{
+  "version": 1,
+  "cloudCalls": 0,
+  "engineSha256": "34e43acb14ec064eea62d4a25bfd09e544faa7b00dcb462ce7d95c28e1b79d44",
+  "cases": [
+    {
+      "id": "aria-hello-as-hello",
+      "file": "public/audio/daily/aria/hello.mp3",
+      "sha256": "d647bdc233e2be048fef5c9c34d03d6ed22e66cb4031f23d9703eef01495bf5b",
+      "reference": "hello",
+      "spokenFixture": "hello",
+      "expectedCorrect": true,
+      "split": "regression",
+      "result": {
+        "version": "openpronounce-feedback-v1",
+        "experimental": true,
+        "reference": "hello",
+        "status": "supported",
+        "reason": "phonetic-evidence-agrees",
+        "feedback": [],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "hello",
+            "expected": "h",
+            "heard": "h",
+            "expectedPosterior": 0.95986,
+            "heardPosterior": 0.95986,
+            "state": "supported"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "hello",
+            "expected": "ɛ",
+            "heard": "ɛ",
+            "expectedPosterior": 0.76118,
+            "heardPosterior": 0.76118,
+            "state": "supported"
+          },
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "hello",
+            "expected": "l",
+            "heard": "l",
+            "expectedPosterior": 0.98574,
+            "heardPosterior": 0.98574,
+            "state": "supported"
+          },
+          {
+            "index": 3,
+            "wordIndex": 0,
+            "word": "hello",
+            "expected": "oʊ",
+            "heard": "oʊ",
+            "expectedPosterior": 0.37605,
+            "heardPosterior": 0.37605,
+            "state": "supported"
+          }
+        ],
+        "transcript": "HELLO",
+        "recognizedWordsMatch": true,
+        "diagnostics": {
+          "unconfirmedPhones": []
+        },
+        "heardPhones": [
+          "h",
+          "ɛ",
+          "l",
+          "oʊ"
+        ],
+        "referencePhones": [
+          "h",
+          "ɛ",
+          "l",
+          "oʊ"
+        ],
+        "computeMs": 794.05,
+        "elapsedMs": 838
+      }
+    },
+    {
+      "id": "guy-hello-as-hello",
+      "file": "public/audio/daily/guy/hello.mp3",
+      "sha256": "75995d47e90e5015f57dd51844e4e12ede0b163c6fc06b9d829f7edf1d9fa386",
+      "reference": "hello",
+      "spokenFixture": "hello",
+      "expectedCorrect": true,
+      "split": "regression",
+      "result": {
+        "version": "openpronounce-feedback-v1",
+        "experimental": true,
+        "reference": "hello",
+        "status": "supported",
+        "reason": "phonetic-evidence-agrees",
+        "feedback": [],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "hello",
+            "expected": "h",
+            "heard": "h",
+            "expectedPosterior": 0.97923,
+            "heardPosterior": 0.97923,
+            "state": "supported"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "hello",
+            "expected": "ɛ",
+            "heard": "ɛ",
+            "expectedPosterior": 0.53713,
+            "heardPosterior": 0.53713,
+            "state": "supported"
+          },
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "hello",
+            "expected": "l",
+            "heard": "l",
+            "expectedPosterior": 0.98253,
+            "heardPosterior": 0.98253,
+            "state": "supported"
+          },
+          {
+            "index": 3,
+            "wordIndex": 0,
+            "word": "hello",
+            "expected": "oʊ",
+            "heard": "oʊ",
+            "expectedPosterior": 0.60157,
+            "heardPosterior": 0.60157,
+            "state": "supported"
+          }
+        ],
+        "transcript": "HELLO",
+        "recognizedWordsMatch": true,
+        "diagnostics": {
+          "unconfirmedPhones": []
+        },
+        "heardPhones": [
+          "h",
+          "ɛ",
+          "l",
+          "oʊ"
+        ],
+        "referencePhones": [
+          "h",
+          "ɛ",
+          "l",
+          "oʊ"
+        ],
+        "computeMs": 469.97,
+        "elapsedMs": 516
+      }
+    },
+    {
+      "id": "aria-goodbye-as-goodbye",
+      "file": "public/audio/daily/aria/goodbye.mp3",
+      "sha256": "39f9feb199cf056ed30b73321bc005e4265f2454e31332afd4dc66d032069639",
+      "reference": "goodbye",
+      "spokenFixture": "goodbye",
+      "expectedCorrect": true,
+      "split": "regression",
+      "result": {
+        "version": "openpronounce-feedback-v1",
+        "experimental": true,
+        "reference": "goodbye",
+        "status": "supported",
+        "reason": "phonetic-evidence-agrees",
+        "feedback": [],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "goodbye",
+            "expected": "ɡ",
+            "heard": "ɡ",
+            "expectedPosterior": 0.85072,
+            "heardPosterior": 0.85072,
+            "state": "supported"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "goodbye",
+            "expected": "ʊ",
+            "heard": "ə",
+            "expectedPosterior": 0.11098,
+            "heardPosterior": 0.28757,
+            "state": "supported"
+          },
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "goodbye",
+            "expected": "d",
+            "heard": "d",
+            "expectedPosterior": 0.9828,
+            "heardPosterior": 0.9828,
+            "state": "supported"
+          },
+          {
+            "index": 3,
+            "wordIndex": 0,
+            "word": "goodbye",
+            "expected": "b",
+            "heard": "b",
+            "expectedPosterior": 0.97669,
+            "heardPosterior": 0.97669,
+            "state": "supported"
+          },
+          {
+            "index": 4,
+            "wordIndex": 0,
+            "word": "goodbye",
+            "expected": "aɪ",
+            "heard": "aɪ",
+            "expectedPosterior": 0.6306,
+            "heardPosterior": 0.6306,
+            "state": "supported"
+          }
+        ],
+        "transcript": "GOOD BYE",
+        "recognizedWordsMatch": true,
+        "diagnostics": {
+          "unconfirmedPhones": []
+        },
+        "heardPhones": [
+          "ɡ",
+          "ə",
+          "d",
+          "b",
+          "aɪ"
+        ],
+        "referencePhones": [
+          "ɡ",
+          "ʊ",
+          "d",
+          "b",
+          "aɪ"
+        ],
+        "computeMs": 478.99,
+        "elapsedMs": 520
+      }
+    },
+    {
+      "id": "guy-goodbye-as-goodbye",
+      "file": "public/audio/daily/guy/goodbye.mp3",
+      "sha256": "351fcb29dfd2a4825344b9a6b85ee4df13ea1738faed04d97b8ef54fb33b4ba6",
+      "reference": "goodbye",
+      "spokenFixture": "goodbye",
+      "expectedCorrect": true,
+      "split": "regression",
+      "result": {
+        "version": "openpronounce-feedback-v1",
+        "experimental": true,
+        "reference": "goodbye",
+        "status": "supported",
+        "reason": "phonetic-evidence-agrees",
+        "feedback": [],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "goodbye",
+            "expected": "ɡ",
+            "heard": "ɡ",
+            "expectedPosterior": 0.85981,
+            "heardPosterior": 0.85981,
+            "state": "supported"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "goodbye",
+            "expected": "ʊ",
+            "heard": "ʊ",
+            "expectedPosterior": 0.42854,
+            "heardPosterior": 0.42854,
+            "state": "supported"
+          },
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "goodbye",
+            "expected": "d",
+            "heard": "d",
+            "expectedPosterior": 0.98476,
+            "heardPosterior": 0.98476,
+            "state": "supported"
+          },
+          {
+            "index": 3,
+            "wordIndex": 0,
+            "word": "goodbye",
+            "expected": "b",
+            "heard": "b",
+            "expectedPosterior": 0.97134,
+            "heardPosterior": 0.97134,
+            "state": "supported"
+          },
+          {
+            "index": 4,
+            "wordIndex": 0,
+            "word": "goodbye",
+            "expected": "aɪ",
+            "heard": "aɪ",
+            "expectedPosterior": 0.72109,
+            "heardPosterior": 0.72109,
+            "state": "supported"
+          }
+        ],
+        "transcript": "GOOD BYE",
+        "recognizedWordsMatch": true,
+        "diagnostics": {
+          "unconfirmedPhones": []
+        },
+        "heardPhones": [
+          "ɡ",
+          "ʊ",
+          "d",
+          "b",
+          "aɪ"
+        ],
+        "referencePhones": [
+          "ɡ",
+          "ʊ",
+          "d",
+          "b",
+          "aɪ"
+        ],
+        "computeMs": 485.42,
+        "elapsedMs": 530
+      }
+    },
+    {
+      "id": "aria-think-as-think",
+      "file": "public/audio/aria/word-2652.mp3",
+      "sha256": "56d9cca2c2277ddc788953d76f26920ef025162bb072ddf76489d80924dd85ee",
+      "reference": "think",
+      "spokenFixture": "think",
+      "expectedCorrect": true,
+      "split": "regression",
+      "result": {
+        "version": "openpronounce-feedback-v1",
+        "experimental": true,
+        "reference": "think",
+        "status": "supported",
+        "reason": "phonetic-evidence-agrees",
+        "feedback": [],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "think",
+            "expected": "θ",
+            "heard": "θ",
+            "expectedPosterior": 0.83914,
+            "heardPosterior": 0.83914,
+            "state": "supported"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "think",
+            "expected": "ɪ",
+            "heard": "ɪ",
+            "expectedPosterior": 0.70636,
+            "heardPosterior": 0.70636,
+            "state": "supported"
+          },
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "think",
+            "expected": "ŋ",
+            "heard": "ŋ",
+            "expectedPosterior": 0.77043,
+            "heardPosterior": 0.77043,
+            "state": "supported"
+          },
+          {
+            "index": 3,
+            "wordIndex": 0,
+            "word": "think",
+            "expected": "k",
+            "heard": "k",
+            "expectedPosterior": 0.95368,
+            "heardPosterior": 0.95368,
+            "state": "supported"
+          }
+        ],
+        "transcript": "THINK",
+        "recognizedWordsMatch": true,
+        "diagnostics": {
+          "unconfirmedPhones": []
+        },
+        "heardPhones": [
+          "θ",
+          "ɪ",
+          "ŋ",
+          "k"
+        ],
+        "referencePhones": [
+          "θ",
+          "ɪ",
+          "ŋ",
+          "k"
+        ],
+        "computeMs": 433.65,
+        "elapsedMs": 476
+      }
+    },
+    {
+      "id": "guy-think-as-think",
+      "file": "public/audio/guy/word-2652.mp3",
+      "sha256": "9c53003ff5ca866c3041b440c3075da2da94d8b761c1f267080c2d44b0334daf",
+      "reference": "think",
+      "spokenFixture": "think",
+      "expectedCorrect": true,
+      "split": "regression",
+      "result": {
+        "version": "openpronounce-feedback-v1",
+        "experimental": true,
+        "reference": "think",
+        "status": "supported",
+        "reason": "phonetic-evidence-agrees",
+        "feedback": [],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "think",
+            "expected": "θ",
+            "heard": "θ",
+            "expectedPosterior": 0.56704,
+            "heardPosterior": 0.56704,
+            "state": "supported"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "think",
+            "expected": "ɪ",
+            "heard": "ɪ",
+            "expectedPosterior": 0.346,
+            "heardPosterior": 0.346,
+            "state": "supported"
+          },
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "think",
+            "expected": "ŋ",
+            "heard": "ŋ",
+            "expectedPosterior": 0.53164,
+            "heardPosterior": 0.53164,
+            "state": "supported"
+          },
+          {
+            "index": 3,
+            "wordIndex": 0,
+            "word": "think",
+            "expected": "k",
+            "heard": "k",
+            "expectedPosterior": 0.98488,
+            "heardPosterior": 0.98488,
+            "state": "supported"
+          }
+        ],
+        "transcript": "THINK",
+        "recognizedWordsMatch": true,
+        "diagnostics": {
+          "unconfirmedPhones": []
+        },
+        "heardPhones": [
+          "θ",
+          "ɪ",
+          "ŋ",
+          "k"
+        ],
+        "referencePhones": [
+          "θ",
+          "ɪ",
+          "ŋ",
+          "k"
+        ],
+        "computeMs": 453.83,
+        "elapsedMs": 495
+      }
+    },
+    {
+      "id": "aria-ship-as-ship",
+      "file": "public/audio/aria/word-2224.mp3",
+      "sha256": "93e91a16f6060328871735321fa37898b44145ccc7db88a660ef7c06c0402ef4",
+      "reference": "ship",
+      "spokenFixture": "ship",
+      "expectedCorrect": true,
+      "split": "regression",
+      "result": {
+        "version": "openpronounce-feedback-v1",
+        "experimental": true,
+        "reference": "ship",
+        "status": "supported",
+        "reason": "phonetic-evidence-agrees",
+        "feedback": [],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "ship",
+            "expected": "ʃ",
+            "heard": "ʃ",
+            "expectedPosterior": 0.9428,
+            "heardPosterior": 0.9428,
+            "state": "supported"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "ship",
+            "expected": "ɪ",
+            "heard": "ɪ",
+            "expectedPosterior": 0.78326,
+            "heardPosterior": 0.78326,
+            "state": "supported"
+          },
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "ship",
+            "expected": "p",
+            "heard": "p",
+            "expectedPosterior": 0.94348,
+            "heardPosterior": 0.94348,
+            "state": "supported"
+          }
+        ],
+        "transcript": "SHIP",
+        "recognizedWordsMatch": true,
+        "diagnostics": {
+          "unconfirmedPhones": []
+        },
+        "heardPhones": [
+          "ʃ",
+          "ɪ",
+          "p"
+        ],
+        "referencePhones": [
+          "ʃ",
+          "ɪ",
+          "p"
+        ],
+        "computeMs": 471.07,
+        "elapsedMs": 514
+      }
+    },
+    {
+      "id": "guy-ship-as-ship",
+      "file": "public/audio/guy/word-2224.mp3",
+      "sha256": "3b2f0c745aefc588efad9acea1adb6332eceb4d80dc638578fddda9e808242d5",
+      "reference": "ship",
+      "spokenFixture": "ship",
+      "expectedCorrect": true,
+      "split": "regression",
+      "result": {
+        "version": "openpronounce-feedback-v1",
+        "experimental": true,
+        "reference": "ship",
+        "status": "supported",
+        "reason": "phonetic-evidence-agrees",
+        "feedback": [],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "ship",
+            "expected": "ʃ",
+            "heard": "ʃ",
+            "expectedPosterior": 0.86328,
+            "heardPosterior": 0.86328,
+            "state": "supported"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "ship",
+            "expected": "ɪ",
+            "heard": "ɪ",
+            "expectedPosterior": 0.49441,
+            "heardPosterior": 0.49441,
+            "state": "supported"
+          },
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "ship",
+            "expected": "p",
+            "heard": "p",
+            "expectedPosterior": 0.86507,
+            "heardPosterior": 0.86507,
+            "state": "supported"
+          }
+        ],
+        "transcript": "SHIP",
+        "recognizedWordsMatch": true,
+        "diagnostics": {
+          "unconfirmedPhones": []
+        },
+        "heardPhones": [
+          "ʃ",
+          "ɪ",
+          "p"
+        ],
+        "referencePhones": [
+          "ʃ",
+          "ɪ",
+          "p"
+        ],
+        "computeMs": 422.91,
+        "elapsedMs": 463
+      }
+    },
+    {
+      "id": "aria-three-as-three",
+      "file": "public/audio/aria/word-2400.mp3",
+      "sha256": "dbd32db6d89af3f6ba5865985d6aea396c11469027890c3ff47f2df3858372f5",
+      "reference": "three",
+      "spokenFixture": "three",
+      "expectedCorrect": true,
+      "split": "regression",
+      "result": {
+        "version": "openpronounce-feedback-v1",
+        "experimental": true,
+        "reference": "three",
+        "status": "supported",
+        "reason": "phonetic-evidence-agrees",
+        "feedback": [],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "three",
+            "expected": "θ",
+            "heard": "θ",
+            "expectedPosterior": 0.8664,
+            "heardPosterior": 0.8664,
+            "state": "supported"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "three",
+            "expected": "ɹ",
+            "heard": "ɹ",
+            "expectedPosterior": 0.92605,
+            "heardPosterior": 0.92605,
+            "state": "supported"
+          },
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "three",
+            "expected": "i",
+            "heard": "i",
+            "expectedPosterior": 0.63254,
+            "heardPosterior": 0.63254,
+            "state": "supported"
+          }
+        ],
+        "transcript": "THREE",
+        "recognizedWordsMatch": true,
+        "diagnostics": {
+          "unconfirmedPhones": []
+        },
+        "heardPhones": [
+          "θ",
+          "ɹ",
+          "i"
+        ],
+        "referencePhones": [
+          "θ",
+          "ɹ",
+          "i"
+        ],
+        "computeMs": 458.92,
+        "elapsedMs": 508
+      }
+    },
+    {
+      "id": "guy-three-as-three",
+      "file": "public/audio/guy/word-2400.mp3",
+      "sha256": "94ceb6bcde145714f09292b63ae0d6624a89be5cb173720ac695119dafe3a0c2",
+      "reference": "three",
+      "spokenFixture": "three",
+      "expectedCorrect": true,
+      "split": "regression",
+      "result": {
+        "version": "openpronounce-feedback-v1",
+        "experimental": true,
+        "reference": "three",
+        "status": "supported",
+        "reason": "phonetic-evidence-agrees",
+        "feedback": [],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "three",
+            "expected": "θ",
+            "heard": "θ",
+            "expectedPosterior": 0.91244,
+            "heardPosterior": 0.91244,
+            "state": "supported"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "three",
+            "expected": "ɹ",
+            "heard": "ɹ",
+            "expectedPosterior": 0.95896,
+            "heardPosterior": 0.95896,
+            "state": "supported"
+          },
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "three",
+            "expected": "i",
+            "heard": "i",
+            "expectedPosterior": 0.70203,
+            "heardPosterior": 0.70203,
+            "state": "supported"
+          }
+        ],
+        "transcript": "THREE",
+        "recognizedWordsMatch": true,
+        "diagnostics": {
+          "unconfirmedPhones": []
+        },
+        "heardPhones": [
+          "θ",
+          "ɹ",
+          "i"
+        ],
+        "referencePhones": [
+          "θ",
+          "ɹ",
+          "i"
+        ],
+        "computeMs": 465.09,
+        "elapsedMs": 509
+      }
+    },
+    {
+      "id": "aria-bad-as-bad",
+      "file": "public/audio/aria/word-2978.mp3",
+      "sha256": "77e448d4d24a5eb7bce40296318a11d4582a63b0ad88ae2b826b9f74353f92af",
+      "reference": "bad",
+      "spokenFixture": "bad",
+      "expectedCorrect": true,
+      "split": "regression",
+      "result": {
+        "version": "openpronounce-feedback-v1",
+        "experimental": true,
+        "reference": "bad",
+        "status": "supported",
+        "reason": "phonetic-evidence-agrees",
+        "feedback": [],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "bad",
+            "expected": "b",
+            "heard": "b",
+            "expectedPosterior": 0.96569,
+            "heardPosterior": 0.96569,
+            "state": "supported"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "bad",
+            "expected": "æ",
+            "heard": "æ",
+            "expectedPosterior": 0.37791,
+            "heardPosterior": 0.37791,
+            "state": "supported"
+          },
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "bad",
+            "expected": "d",
+            "heard": "d",
+            "expectedPosterior": 0.98352,
+            "heardPosterior": 0.98352,
+            "state": "supported"
+          }
+        ],
+        "transcript": "BAD",
+        "recognizedWordsMatch": true,
+        "diagnostics": {
+          "unconfirmedPhones": []
+        },
+        "heardPhones": [
+          "b",
+          "æ",
+          "d"
+        ],
+        "referencePhones": [
+          "b",
+          "æ",
+          "d"
+        ],
+        "computeMs": 448.76,
+        "elapsedMs": 494
+      }
+    },
+    {
+      "id": "guy-bad-as-bad",
+      "file": "public/audio/guy/word-2978.mp3",
+      "sha256": "07160402b698581188f51423fc62d77102d77c247bbea7481bf140293e5dbcde",
+      "reference": "bad",
+      "spokenFixture": "bad",
+      "expectedCorrect": true,
+      "split": "regression",
+      "result": {
+        "version": "openpronounce-feedback-v1",
+        "experimental": true,
+        "reference": "bad",
+        "status": "supported",
+        "reason": "phonetic-evidence-agrees",
+        "feedback": [],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "bad",
+            "expected": "b",
+            "heard": "b",
+            "expectedPosterior": 0.95842,
+            "heardPosterior": 0.95842,
+            "state": "supported"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "bad",
+            "expected": "æ",
+            "heard": "ɛ",
+            "expectedPosterior": 0.11793,
+            "heardPosterior": 0.47259,
+            "state": "supported"
+          },
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "bad",
+            "expected": "d",
+            "heard": "d",
+            "expectedPosterior": 0.98355,
+            "heardPosterior": 0.98355,
+            "state": "supported"
+          }
+        ],
+        "transcript": "BAD",
+        "recognizedWordsMatch": true,
+        "diagnostics": {
+          "unconfirmedPhones": []
+        },
+        "heardPhones": [
+          "b",
+          "ɛ",
+          "d"
+        ],
+        "referencePhones": [
+          "b",
+          "æ",
+          "d"
+        ],
+        "computeMs": 455.33,
+        "elapsedMs": 497
+      }
+    },
+    {
+      "id": "aria-right-as-right",
+      "file": "public/audio/aria/word-2160.mp3",
+      "sha256": "c4f8341a47942b096bcec86eacade529bb700fd8f725bfff388081846fb358df",
+      "reference": "right",
+      "spokenFixture": "right",
+      "expectedCorrect": true,
+      "split": "regression",
+      "result": {
+        "version": "openpronounce-feedback-v1",
+        "experimental": true,
+        "reference": "right",
+        "status": "supported",
+        "reason": "phonetic-evidence-agrees",
+        "feedback": [],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "right",
+            "expected": "ɹ",
+            "heard": "ɹ",
+            "expectedPosterior": 0.91515,
+            "heardPosterior": 0.91515,
+            "state": "supported"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "right",
+            "expected": "aɪ",
+            "heard": "aɪ",
+            "expectedPosterior": 0.83815,
+            "heardPosterior": 0.83815,
+            "state": "supported"
+          },
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "right",
+            "expected": "t",
+            "heard": "t",
+            "expectedPosterior": 0.97122,
+            "heardPosterior": 0.97122,
+            "state": "supported"
+          }
+        ],
+        "transcript": "RITE",
+        "recognizedWordsMatch": true,
+        "diagnostics": {
+          "unconfirmedPhones": []
+        },
+        "heardPhones": [
+          "ɹ",
+          "aɪ",
+          "t"
+        ],
+        "referencePhones": [
+          "ɹ",
+          "aɪ",
+          "t"
+        ],
+        "computeMs": 438.15,
+        "elapsedMs": 482
+      }
+    },
+    {
+      "id": "guy-right-as-right",
+      "file": "public/audio/guy/word-2160.mp3",
+      "sha256": "d80d39b42a0d25f74b7b139ea295162b0436f554e01b7d8b5290e11e93556d0b",
+      "reference": "right",
+      "spokenFixture": "right",
+      "expectedCorrect": true,
+      "split": "regression",
+      "result": {
+        "version": "openpronounce-feedback-v1",
+        "experimental": true,
+        "reference": "right",
+        "status": "supported",
+        "reason": "phonetic-evidence-agrees",
+        "feedback": [],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "right",
+            "expected": "ɹ",
+            "heard": "ɹ",
+            "expectedPosterior": 0.8113,
+            "heardPosterior": 0.8113,
+            "state": "supported"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "right",
+            "expected": "aɪ",
+            "heard": "aɪ",
+            "expectedPosterior": 0.82511,
+            "heardPosterior": 0.82511,
+            "state": "supported"
+          },
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "right",
+            "expected": "t",
+            "heard": "t",
+            "expectedPosterior": 0.9351,
+            "heardPosterior": 0.9351,
+            "state": "supported"
+          }
+        ],
+        "transcript": "RITE",
+        "recognizedWordsMatch": true,
+        "diagnostics": {
+          "unconfirmedPhones": []
+        },
+        "heardPhones": [
+          "ɹ",
+          "aɪ",
+          "t"
+        ],
+        "referencePhones": [
+          "ɹ",
+          "aɪ",
+          "t"
+        ],
+        "computeMs": 435.37,
+        "elapsedMs": 477
+      }
+    },
+    {
+      "id": "aria-sink-as-think",
+      "file": "public/audio/aria/word-959.mp3",
+      "sha256": "6e91c5e4a7ea69fc6243dbdf3eed48bba5106c2030d11f4c90937d8a9e9edaa7",
+      "reference": "think",
+      "spokenFixture": "sink",
+      "expectedCorrect": false,
+      "split": "regression",
+      "result": {
+        "version": "openpronounce-feedback-v1",
+        "experimental": true,
+        "reference": "think",
+        "status": "practice",
+        "reason": "phoneme-substitution",
+        "feedback": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "think",
+            "expected": "θ",
+            "heard": "s",
+            "expectedPosterior": 0.00087,
+            "heardPosterior": 0.98922,
+            "state": "practice"
+          }
+        ],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "think",
+            "expected": "θ",
+            "heard": "s",
+            "expectedPosterior": 0.00087,
+            "heardPosterior": 0.98922,
+            "state": "practice"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "think",
+            "expected": "ɪ",
+            "heard": "ɪ",
+            "expectedPosterior": 0.90592,
+            "heardPosterior": 0.90592,
+            "state": "supported"
+          },
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "think",
+            "expected": "ŋ",
+            "heard": "ŋ",
+            "expectedPosterior": 0.84464,
+            "heardPosterior": 0.84464,
+            "state": "supported"
+          },
+          {
+            "index": 3,
+            "wordIndex": 0,
+            "word": "think",
+            "expected": "k",
+            "heard": "k",
+            "expectedPosterior": 0.98173,
+            "heardPosterior": 0.98173,
+            "state": "supported"
+          }
+        ],
+        "transcript": "SINK",
+        "recognizedWordsMatch": false,
+        "diagnostics": {
+          "unconfirmedPhones": []
+        },
+        "heardPhones": [
+          "s",
+          "ɪ",
+          "ŋ",
+          "k"
+        ],
+        "referencePhones": [
+          "θ",
+          "ɪ",
+          "ŋ",
+          "k"
+        ],
+        "computeMs": 485.37,
+        "elapsedMs": 527
+      }
+    },
+    {
+      "id": "guy-sink-as-think",
+      "file": "public/audio/guy/word-959.mp3",
+      "sha256": "2a1d15a183d4fe0d4b32443959c39b1854c2107f82f8ba797de5ab88fab4ec94",
+      "reference": "think",
+      "spokenFixture": "sink",
+      "expectedCorrect": false,
+      "split": "regression",
+      "result": {
+        "version": "openpronounce-feedback-v1",
+        "experimental": true,
+        "reference": "think",
+        "status": "practice",
+        "reason": "phoneme-substitution",
+        "feedback": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "think",
+            "expected": "θ",
+            "heard": "s",
+            "expectedPosterior": 0.00058,
+            "heardPosterior": 0.9726,
+            "state": "practice"
+          }
+        ],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "think",
+            "expected": "θ",
+            "heard": "s",
+            "expectedPosterior": 0.00058,
+            "heardPosterior": 0.9726,
+            "state": "practice"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "think",
+            "expected": "ɪ",
+            "heard": "ɪ",
+            "expectedPosterior": 0.44652,
+            "heardPosterior": 0.44652,
+            "state": "supported"
+          },
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "think",
+            "expected": "ŋ",
+            "heard": "ŋ",
+            "expectedPosterior": 0.49078,
+            "heardPosterior": 0.49078,
+            "state": "supported"
+          },
+          {
+            "index": 3,
+            "wordIndex": 0,
+            "word": "think",
+            "expected": "k",
+            "heard": "k",
+            "expectedPosterior": 0.98697,
+            "heardPosterior": 0.98697,
+            "state": "supported"
+          }
+        ],
+        "transcript": "SINK",
+        "recognizedWordsMatch": false,
+        "diagnostics": {
+          "unconfirmedPhones": []
+        },
+        "heardPhones": [
+          "s",
+          "ɪ",
+          "ŋ",
+          "k"
+        ],
+        "referencePhones": [
+          "θ",
+          "ɪ",
+          "ŋ",
+          "k"
+        ],
+        "computeMs": 471.12,
+        "elapsedMs": 514
+      }
+    },
+    {
+      "id": "aria-sheep-as-ship",
+      "file": "public/audio/aria/word-2968.mp3",
+      "sha256": "d78bba621523dcd4fb8efdca6df67c3fc7a32644bc342b5f3f74378b36b259ae",
+      "reference": "ship",
+      "spokenFixture": "sheep",
+      "expectedCorrect": false,
+      "split": "regression",
+      "result": {
+        "version": "openpronounce-feedback-v1",
+        "experimental": true,
+        "reference": "ship",
+        "status": "practice",
+        "reason": "phoneme-substitution",
+        "feedback": [
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "ship",
+            "expected": "ɪ",
+            "heard": "i",
+            "expectedPosterior": 0.01757,
+            "heardPosterior": 0.85698,
+            "state": "practice"
+          }
+        ],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "ship",
+            "expected": "ʃ",
+            "heard": "ʃ",
+            "expectedPosterior": 0.96066,
+            "heardPosterior": 0.96066,
+            "state": "supported"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "ship",
+            "expected": "ɪ",
+            "heard": "i",
+            "expectedPosterior": 0.01757,
+            "heardPosterior": 0.85698,
+            "state": "practice"
+          },
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "ship",
+            "expected": "p",
+            "heard": "p",
+            "expectedPosterior": 0.90423,
+            "heardPosterior": 0.90423,
+            "state": "supported"
+          }
+        ],
+        "transcript": "SHEEP",
+        "recognizedWordsMatch": false,
+        "diagnostics": {
+          "unconfirmedPhones": []
+        },
+        "heardPhones": [
+          "ʃ",
+          "i",
+          "p"
+        ],
+        "referencePhones": [
+          "ʃ",
+          "ɪ",
+          "p"
+        ],
+        "computeMs": 475.44,
+        "elapsedMs": 522
+      }
+    },
+    {
+      "id": "guy-sheep-as-ship",
+      "file": "public/audio/guy/word-2968.mp3",
+      "sha256": "7e6f1a2b72c797d1c095bda747d05fd45f61a62cd85eb1790663f51b2c07f212",
+      "reference": "ship",
+      "spokenFixture": "sheep",
+      "expectedCorrect": false,
+      "split": "regression",
+      "result": {
+        "version": "openpronounce-feedback-v1",
+        "experimental": true,
+        "reference": "ship",
+        "status": "practice",
+        "reason": "phoneme-substitution",
+        "feedback": [
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "ship",
+            "expected": "ɪ",
+            "heard": "i",
+            "expectedPosterior": 0.01107,
+            "heardPosterior": 0.90932,
+            "state": "practice"
+          }
+        ],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "ship",
+            "expected": "ʃ",
+            "heard": "ʃ",
+            "expectedPosterior": 0.95155,
+            "heardPosterior": 0.95155,
+            "state": "supported"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "ship",
+            "expected": "ɪ",
+            "heard": "i",
+            "expectedPosterior": 0.01107,
+            "heardPosterior": 0.90932,
+            "state": "practice"
+          },
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "ship",
+            "expected": "p",
+            "heard": "p",
+            "expectedPosterior": 0.91763,
+            "heardPosterior": 0.91763,
+            "state": "supported"
+          }
+        ],
+        "transcript": "SHEEP",
+        "recognizedWordsMatch": false,
+        "diagnostics": {
+          "unconfirmedPhones": []
+        },
+        "heardPhones": [
+          "ʃ",
+          "i",
+          "p"
+        ],
+        "referencePhones": [
+          "ʃ",
+          "ɪ",
+          "p"
+        ],
+        "computeMs": 460.9,
+        "elapsedMs": 509
+      }
+    },
+    {
+      "id": "aria-free-as-three",
+      "file": "public/audio/aria/word-1649.mp3",
+      "sha256": "ffe976c2022e78e153ed1d4a79e8af3182ef98c58bd42522f04e1376578d0acb",
+      "reference": "three",
+      "spokenFixture": "free",
+      "expectedCorrect": false,
+      "split": "regression",
+      "result": {
+        "version": "openpronounce-feedback-v1",
+        "experimental": true,
+        "reference": "three",
+        "status": "practice",
+        "reason": "phoneme-substitution",
+        "feedback": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "three",
+            "expected": "θ",
+            "heard": "f",
+            "expectedPosterior": 0.00391,
+            "heardPosterior": 0.97075,
+            "state": "practice"
+          }
+        ],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "three",
+            "expected": "θ",
+            "heard": "f",
+            "expectedPosterior": 0.00391,
+            "heardPosterior": 0.97075,
+            "state": "practice"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "three",
+            "expected": "ɹ",
+            "heard": "ɹ",
+            "expectedPosterior": 0.95552,
+            "heardPosterior": 0.95552,
+            "state": "supported"
+          }
+        ],
+        "transcript": "FREE",
+        "recognizedWordsMatch": false,
+        "diagnostics": {
+          "unconfirmedPhones": [
+            {
+              "target": "i",
+              "index": 2
+            }
+          ]
+        },
+        "heardPhones": [
+          "f",
+          "ɹ"
+        ],
+        "referencePhones": [
+          "θ",
+          "ɹ",
+          "i"
+        ],
+        "computeMs": 434.23,
+        "elapsedMs": 477
+      }
+    },
+    {
+      "id": "guy-free-as-three",
+      "file": "public/audio/guy/word-1649.mp3",
+      "sha256": "b64d197492c3ab8a73bcb5eb526e016455a9f5793081c3f58d95e56470fa5991",
+      "reference": "three",
+      "spokenFixture": "free",
+      "expectedCorrect": false,
+      "split": "regression",
+      "result": {
+        "version": "openpronounce-feedback-v1",
+        "experimental": true,
+        "reference": "three",
+        "status": "practice",
+        "reason": "phoneme-substitution",
+        "feedback": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "three",
+            "expected": "θ",
+            "heard": "f",
+            "expectedPosterior": 0.00143,
+            "heardPosterior": 0.98712,
+            "state": "practice"
+          }
+        ],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "three",
+            "expected": "θ",
+            "heard": "f",
+            "expectedPosterior": 0.00143,
+            "heardPosterior": 0.98712,
+            "state": "practice"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "three",
+            "expected": "ɹ",
+            "heard": "ɹ",
+            "expectedPosterior": 0.96914,
+            "heardPosterior": 0.96914,
+            "state": "supported"
+          },
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "three",
+            "expected": "i",
+            "heard": "i",
+            "expectedPosterior": 0.50105,
+            "heardPosterior": 0.50105,
+            "state": "supported"
+          }
+        ],
+        "transcript": "FREE",
+        "recognizedWordsMatch": false,
+        "diagnostics": {
+          "unconfirmedPhones": []
+        },
+        "heardPhones": [
+          "f",
+          "ɹ",
+          "i"
+        ],
+        "referencePhones": [
+          "θ",
+          "ɹ",
+          "i"
+        ],
+        "computeMs": 480.1,
+        "elapsedMs": 521
+      }
+    },
+    {
+      "id": "aria-bed-as-bad",
+      "file": "public/audio/aria/word-1291.mp3",
+      "sha256": "5e76c091ea05c53403fa281115e8a5bfe08a42b621f6a2893c88beb6b9f133cd",
+      "reference": "bad",
+      "spokenFixture": "bed",
+      "expectedCorrect": false,
+      "split": "regression",
+      "result": {
+        "version": "openpronounce-feedback-v1",
+        "experimental": true,
+        "reference": "bad",
+        "status": "practice",
+        "reason": "phoneme-substitution",
+        "feedback": [
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "bad",
+            "expected": "æ",
+            "heard": "ɛ",
+            "expectedPosterior": 0.00412,
+            "heardPosterior": 0.88585,
+            "state": "practice"
+          }
+        ],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "bad",
+            "expected": "b",
+            "heard": "b",
+            "expectedPosterior": 0.75931,
+            "heardPosterior": 0.75931,
+            "state": "supported"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "bad",
+            "expected": "æ",
+            "heard": "ɛ",
+            "expectedPosterior": 0.00412,
+            "heardPosterior": 0.88585,
+            "state": "practice"
+          },
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "bad",
+            "expected": "d",
+            "heard": "d",
+            "expectedPosterior": 0.98601,
+            "heardPosterior": 0.98601,
+            "state": "supported"
+          }
+        ],
+        "transcript": "BED",
+        "recognizedWordsMatch": false,
+        "diagnostics": {
+          "unconfirmedPhones": []
+        },
+        "heardPhones": [
+          "b",
+          "ɛ",
+          "d"
+        ],
+        "referencePhones": [
+          "b",
+          "æ",
+          "d"
+        ],
+        "computeMs": 437.57,
+        "elapsedMs": 480
+      }
+    },
+    {
+      "id": "guy-bed-as-bad",
+      "file": "public/audio/guy/word-1291.mp3",
+      "sha256": "120e4f3456bb54835747cdae05588a31d61f32201d79d49be4e01c1f653ec7ce",
+      "reference": "bad",
+      "spokenFixture": "bed",
+      "expectedCorrect": false,
+      "split": "regression",
+      "result": {
+        "version": "openpronounce-feedback-v1",
+        "experimental": true,
+        "reference": "bad",
+        "status": "practice",
+        "reason": "phoneme-substitution",
+        "feedback": [
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "bad",
+            "expected": "æ",
+            "heard": "ɛ",
+            "expectedPosterior": 0.01422,
+            "heardPosterior": 0.67074,
+            "state": "practice"
+          }
+        ],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "bad",
+            "expected": "b",
+            "heard": "b",
+            "expectedPosterior": 0.83469,
+            "heardPosterior": 0.83469,
+            "state": "supported"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "bad",
+            "expected": "æ",
+            "heard": "ɛ",
+            "expectedPosterior": 0.01422,
+            "heardPosterior": 0.67074,
+            "state": "practice"
+          },
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "bad",
+            "expected": "d",
+            "heard": "d",
+            "expectedPosterior": 0.97546,
+            "heardPosterior": 0.97546,
+            "state": "supported"
+          }
+        ],
+        "transcript": "BEAD",
+        "recognizedWordsMatch": false,
+        "diagnostics": {
+          "unconfirmedPhones": []
+        },
+        "heardPhones": [
+          "b",
+          "ɛ",
+          "d"
+        ],
+        "referencePhones": [
+          "b",
+          "æ",
+          "d"
+        ],
+        "computeMs": 444.99,
+        "elapsedMs": 487
+      }
+    },
+    {
+      "id": "aria-light-as-right",
+      "file": "public/audio/aria/word-1852.mp3",
+      "sha256": "f718748a255457e8fb6b28bfd3d111c36716a447c69187d5644ac1ecf7edd337",
+      "reference": "right",
+      "spokenFixture": "light",
+      "expectedCorrect": false,
+      "split": "regression",
+      "result": {
+        "version": "openpronounce-feedback-v1",
+        "experimental": true,
+        "reference": "right",
+        "status": "practice",
+        "reason": "phoneme-substitution",
+        "feedback": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "right",
+            "expected": "ɹ",
+            "heard": "l",
+            "expectedPosterior": 0.0001,
+            "heardPosterior": 0.98993,
+            "state": "practice"
+          }
+        ],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "right",
+            "expected": "ɹ",
+            "heard": "l",
+            "expectedPosterior": 0.0001,
+            "heardPosterior": 0.98993,
+            "state": "practice"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "right",
+            "expected": "aɪ",
+            "heard": "aɪ",
+            "expectedPosterior": 0.88403,
+            "heardPosterior": 0.88403,
+            "state": "supported"
+          },
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "right",
+            "expected": "t",
+            "heard": "t",
+            "expectedPosterior": 0.97043,
+            "heardPosterior": 0.97043,
+            "state": "supported"
+          }
+        ],
+        "transcript": "LIGHT",
+        "recognizedWordsMatch": false,
+        "diagnostics": {
+          "unconfirmedPhones": []
+        },
+        "heardPhones": [
+          "l",
+          "aɪ",
+          "t"
+        ],
+        "referencePhones": [
+          "ɹ",
+          "aɪ",
+          "t"
+        ],
+        "computeMs": 441.11,
+        "elapsedMs": 485
+      }
+    },
+    {
+      "id": "guy-light-as-right",
+      "file": "public/audio/guy/word-1852.mp3",
+      "sha256": "eee7516495f22dfc96baa88bfea2fb22b32b6896f0e8941846320b451f4f6d57",
+      "reference": "right",
+      "spokenFixture": "light",
+      "expectedCorrect": false,
+      "split": "regression",
+      "result": {
+        "version": "openpronounce-feedback-v1",
+        "experimental": true,
+        "reference": "right",
+        "status": "practice",
+        "reason": "phoneme-substitution",
+        "feedback": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "right",
+            "expected": "ɹ",
+            "heard": "l",
+            "expectedPosterior": 0.00023,
+            "heardPosterior": 0.98263,
+            "state": "practice"
+          }
+        ],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "right",
+            "expected": "ɹ",
+            "heard": "l",
+            "expectedPosterior": 0.00023,
+            "heardPosterior": 0.98263,
+            "state": "practice"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "right",
+            "expected": "aɪ",
+            "heard": "aɪ",
+            "expectedPosterior": 0.88089,
+            "heardPosterior": 0.88089,
+            "state": "supported"
+          },
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "right",
+            "expected": "t",
+            "heard": "t",
+            "expectedPosterior": 0.90419,
+            "heardPosterior": 0.90419,
+            "state": "supported"
+          }
+        ],
+        "transcript": "LIGHT",
+        "recognizedWordsMatch": false,
+        "diagnostics": {
+          "unconfirmedPhones": []
+        },
+        "heardPhones": [
+          "l",
+          "aɪ",
+          "t"
+        ],
+        "referencePhones": [
+          "ɹ",
+          "aɪ",
+          "t"
+        ],
+        "computeMs": 445.59,
+        "elapsedMs": 488
+      }
+    },
+    {
+      "id": "aria-cap-as-cap",
+      "file": "public/audio/aria/word-1362.mp3",
+      "sha256": "1e551d5bb35f48552f30d0fe9de8ad40ad1f0ba92392c5f7e31e403e02ac2d86",
+      "reference": "cap",
+      "spokenFixture": "cap",
+      "expectedCorrect": true,
+      "split": "held-out",
+      "result": {
+        "version": "openpronounce-feedback-v1",
+        "experimental": true,
+        "reference": "cap",
+        "status": "supported",
+        "reason": "phonetic-evidence-agrees",
+        "feedback": [],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "cap",
+            "expected": "k",
+            "heard": "k",
+            "expectedPosterior": 0.98883,
+            "heardPosterior": 0.98883,
+            "state": "supported"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "cap",
+            "expected": "æ",
+            "heard": "æ",
+            "expectedPosterior": 0.42575,
+            "heardPosterior": 0.42575,
+            "state": "supported"
+          },
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "cap",
+            "expected": "p",
+            "heard": "p",
+            "expectedPosterior": 0.94166,
+            "heardPosterior": 0.94166,
+            "state": "supported"
+          }
+        ],
+        "transcript": "CAP",
+        "recognizedWordsMatch": true,
+        "diagnostics": {
+          "unconfirmedPhones": []
+        },
+        "heardPhones": [
+          "k",
+          "æ",
+          "p"
+        ],
+        "referencePhones": [
+          "k",
+          "æ",
+          "p"
+        ],
+        "computeMs": 439.22,
+        "elapsedMs": 482
+      }
+    },
+    {
+      "id": "aria-cap-as-cab",
+      "file": "public/audio/aria/word-1362.mp3",
+      "sha256": "1e551d5bb35f48552f30d0fe9de8ad40ad1f0ba92392c5f7e31e403e02ac2d86",
+      "reference": "cab",
+      "spokenFixture": "cap",
+      "expectedCorrect": false,
+      "split": "held-out",
+      "result": {
+        "version": "openpronounce-feedback-v1",
+        "experimental": true,
+        "reference": "cab",
+        "status": "uncertain",
+        "reason": "insufficient-evidence",
+        "feedback": [],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "cab",
+            "expected": "k",
+            "heard": "k",
+            "expectedPosterior": 0.98883,
+            "heardPosterior": 0.98883,
+            "state": "supported"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "cab",
+            "expected": "æ",
+            "heard": "æ",
+            "expectedPosterior": 0.42575,
+            "heardPosterior": 0.42575,
+            "state": "supported"
+          },
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "cab",
+            "expected": "b",
+            "heard": "p",
+            "expectedPosterior": 0.04619,
+            "heardPosterior": 0.94166,
+            "state": "uncertain"
+          }
+        ],
+        "transcript": "CAP",
+        "recognizedWordsMatch": false,
+        "diagnostics": {
+          "unconfirmedPhones": [
+            {
+              "target": "b",
+              "index": 2
+            }
+          ]
+        },
+        "heardPhones": [
+          "k",
+          "æ",
+          "p"
+        ],
+        "referencePhones": [
+          "k",
+          "æ",
+          "b"
+        ],
+        "computeMs": 422.68,
+        "elapsedMs": 463
+      }
+    },
+    {
+      "id": "aria-cab-as-cab",
+      "file": "public/audio/aria/word-3441.mp3",
+      "sha256": "f9d777a0a84c75a5e9f337c7d63706bc8004c21ee6a33d298aa0dd6eec1fe129",
+      "reference": "cab",
+      "spokenFixture": "cab",
+      "expectedCorrect": true,
+      "split": "held-out",
+      "result": {
+        "version": "openpronounce-feedback-v1",
+        "experimental": true,
+        "reference": "cab",
+        "status": "supported",
+        "reason": "phonetic-evidence-agrees",
+        "feedback": [],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "cab",
+            "expected": "k",
+            "heard": "k",
+            "expectedPosterior": 0.98809,
+            "heardPosterior": 0.98809,
+            "state": "supported"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "cab",
+            "expected": "æ",
+            "heard": "æ",
+            "expectedPosterior": 0.48304,
+            "heardPosterior": 0.48304,
+            "state": "supported"
+          },
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "cab",
+            "expected": "b",
+            "heard": "b",
+            "expectedPosterior": 0.97199,
+            "heardPosterior": 0.97199,
+            "state": "supported"
+          }
+        ],
+        "transcript": "CAB",
+        "recognizedWordsMatch": true,
+        "diagnostics": {
+          "unconfirmedPhones": []
+        },
+        "heardPhones": [
+          "k",
+          "æ",
+          "b"
+        ],
+        "referencePhones": [
+          "k",
+          "æ",
+          "b"
+        ],
+        "computeMs": 442.67,
+        "elapsedMs": 483
+      }
+    },
+    {
+      "id": "aria-cab-as-cap",
+      "file": "public/audio/aria/word-3441.mp3",
+      "sha256": "f9d777a0a84c75a5e9f337c7d63706bc8004c21ee6a33d298aa0dd6eec1fe129",
+      "reference": "cap",
+      "spokenFixture": "cab",
+      "expectedCorrect": false,
+      "split": "held-out",
+      "result": {
+        "version": "openpronounce-feedback-v1",
+        "experimental": true,
+        "reference": "cap",
+        "status": "practice",
+        "reason": "phoneme-substitution",
+        "feedback": [
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "cap",
+            "expected": "p",
+            "heard": "b",
+            "expectedPosterior": 0.00202,
+            "heardPosterior": 0.97199,
+            "state": "practice"
+          }
+        ],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "cap",
+            "expected": "k",
+            "heard": "k",
+            "expectedPosterior": 0.98809,
+            "heardPosterior": 0.98809,
+            "state": "supported"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "cap",
+            "expected": "æ",
+            "heard": "æ",
+            "expectedPosterior": 0.48304,
+            "heardPosterior": 0.48304,
+            "state": "supported"
+          },
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "cap",
+            "expected": "p",
+            "heard": "b",
+            "expectedPosterior": 0.00202,
+            "heardPosterior": 0.97199,
+            "state": "practice"
+          }
+        ],
+        "transcript": "CAB",
+        "recognizedWordsMatch": false,
+        "diagnostics": {
+          "unconfirmedPhones": []
+        },
+        "heardPhones": [
+          "k",
+          "æ",
+          "b"
+        ],
+        "referencePhones": [
+          "k",
+          "æ",
+          "p"
+        ],
+        "computeMs": 446.41,
+        "elapsedMs": 487
+      }
+    },
+    {
+      "id": "aria-coat-as-coat",
+      "file": "public/audio/aria/word-1421.mp3",
+      "sha256": "a995ff5a9f8301b6ca7fa5036c5ebb222d3f7b65788c943737ea271a122b6d9a",
+      "reference": "coat",
+      "spokenFixture": "coat",
+      "expectedCorrect": true,
+      "split": "held-out",
+      "result": {
+        "version": "openpronounce-feedback-v1",
+        "experimental": true,
+        "reference": "coat",
+        "status": "supported",
+        "reason": "phonetic-evidence-agrees",
+        "feedback": [],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "coat",
+            "expected": "k",
+            "heard": "k",
+            "expectedPosterior": 0.99099,
+            "heardPosterior": 0.99099,
+            "state": "supported"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "coat",
+            "expected": "oʊ",
+            "heard": "oʊ",
+            "expectedPosterior": 0.5114,
+            "heardPosterior": 0.5114,
+            "state": "supported"
+          },
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "coat",
+            "expected": "t",
+            "heard": "t",
+            "expectedPosterior": 0.95152,
+            "heardPosterior": 0.95152,
+            "state": "supported"
+          }
+        ],
+        "transcript": "COAT",
+        "recognizedWordsMatch": true,
+        "diagnostics": {
+          "unconfirmedPhones": []
+        },
+        "heardPhones": [
+          "k",
+          "oʊ",
+          "t"
+        ],
+        "referencePhones": [
+          "k",
+          "oʊ",
+          "t"
+        ],
+        "computeMs": 422.77,
+        "elapsedMs": 466
+      }
+    },
+    {
+      "id": "aria-coat-as-goat",
+      "file": "public/audio/aria/word-1421.mp3",
+      "sha256": "a995ff5a9f8301b6ca7fa5036c5ebb222d3f7b65788c943737ea271a122b6d9a",
+      "reference": "goat",
+      "spokenFixture": "coat",
+      "expectedCorrect": false,
+      "split": "held-out",
+      "result": {
+        "version": "openpronounce-feedback-v1",
+        "experimental": true,
+        "reference": "goat",
+        "status": "practice",
+        "reason": "phoneme-substitution",
+        "feedback": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "goat",
+            "expected": "ɡ",
+            "heard": "k",
+            "expectedPosterior": 0.00154,
+            "heardPosterior": 0.99099,
+            "state": "practice"
+          }
+        ],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "goat",
+            "expected": "ɡ",
+            "heard": "k",
+            "expectedPosterior": 0.00154,
+            "heardPosterior": 0.99099,
+            "state": "practice"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "goat",
+            "expected": "oʊ",
+            "heard": "oʊ",
+            "expectedPosterior": 0.5114,
+            "heardPosterior": 0.5114,
+            "state": "supported"
+          },
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "goat",
+            "expected": "t",
+            "heard": "t",
+            "expectedPosterior": 0.95152,
+            "heardPosterior": 0.95152,
+            "state": "supported"
+          }
+        ],
+        "transcript": "COAT",
+        "recognizedWordsMatch": false,
+        "diagnostics": {
+          "unconfirmedPhones": []
+        },
+        "heardPhones": [
+          "k",
+          "oʊ",
+          "t"
+        ],
+        "referencePhones": [
+          "ɡ",
+          "oʊ",
+          "t"
+        ],
+        "computeMs": 457.72,
+        "elapsedMs": 499
+      }
+    },
+    {
+      "id": "aria-goat-as-goat",
+      "file": "public/audio/aria/word-1675.mp3",
+      "sha256": "f3b12bb152c370ec33a5d4e6ffa38fd8ddfdd5b811f1d24a74b1944f09bbe91a",
+      "reference": "goat",
+      "spokenFixture": "goat",
+      "expectedCorrect": true,
+      "split": "held-out",
+      "result": {
+        "version": "openpronounce-feedback-v1",
+        "experimental": true,
+        "reference": "goat",
+        "status": "uncertain",
+        "reason": "insufficient-evidence",
+        "feedback": [],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "goat",
+            "expected": "ɡ",
+            "heard": "ɡ",
+            "expectedPosterior": 0.96383,
+            "heardPosterior": 0.96383,
+            "state": "supported"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "goat",
+            "expected": "oʊ",
+            "heard": "oʊ",
+            "expectedPosterior": 0.20212,
+            "heardPosterior": 0.20212,
+            "state": "supported"
+          },
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "goat",
+            "expected": "t",
+            "heard": "t",
+            "expectedPosterior": 0.75712,
+            "heardPosterior": 0.75712,
+            "state": "supported"
+          }
+        ],
+        "transcript": "DOTE",
+        "recognizedWordsMatch": false,
+        "diagnostics": {
+          "unconfirmedPhones": []
+        },
+        "heardPhones": [
+          "ɡ",
+          "oʊ",
+          "t"
+        ],
+        "referencePhones": [
+          "ɡ",
+          "oʊ",
+          "t"
+        ],
+        "computeMs": 416.0,
+        "elapsedMs": 465
+      }
+    },
+    {
+      "id": "aria-goat-as-coat",
+      "file": "public/audio/aria/word-1675.mp3",
+      "sha256": "f3b12bb152c370ec33a5d4e6ffa38fd8ddfdd5b811f1d24a74b1944f09bbe91a",
+      "reference": "coat",
+      "spokenFixture": "goat",
+      "expectedCorrect": false,
+      "split": "held-out",
+      "result": {
+        "version": "openpronounce-feedback-v1",
+        "experimental": true,
+        "reference": "coat",
+        "status": "practice",
+        "reason": "phoneme-substitution",
+        "feedback": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "coat",
+            "expected": "k",
+            "heard": "ɡ",
+            "expectedPosterior": 0.00486,
+            "heardPosterior": 0.96383,
+            "state": "practice"
+          }
+        ],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "coat",
+            "expected": "k",
+            "heard": "ɡ",
+            "expectedPosterior": 0.00486,
+            "heardPosterior": 0.96383,
+            "state": "practice"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "coat",
+            "expected": "oʊ",
+            "heard": "oʊ",
+            "expectedPosterior": 0.20212,
+            "heardPosterior": 0.20212,
+            "state": "supported"
+          },
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "coat",
+            "expected": "t",
+            "heard": "t",
+            "expectedPosterior": 0.75712,
+            "heardPosterior": 0.75712,
+            "state": "supported"
+          }
+        ],
+        "transcript": "DOTE",
+        "recognizedWordsMatch": false,
+        "diagnostics": {
+          "unconfirmedPhones": []
+        },
+        "heardPhones": [
+          "ɡ",
+          "oʊ",
+          "t"
+        ],
+        "referencePhones": [
+          "k",
+          "oʊ",
+          "t"
+        ],
+        "computeMs": 430.21,
+        "elapsedMs": 471
+      }
+    },
+    {
+      "id": "aria-full-as-full",
+      "file": "public/audio/aria/word-1659.mp3",
+      "sha256": "fdff918781b1befd9fba1b789a76dd2d929a8ecaa2a01f6782603836a5f7ccb1",
+      "reference": "full",
+      "spokenFixture": "full",
+      "expectedCorrect": true,
+      "split": "held-out",
+      "result": {
+        "version": "openpronounce-feedback-v1",
+        "experimental": true,
+        "reference": "full",
+        "status": "uncertain",
+        "reason": "insufficient-evidence",
+        "feedback": [],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "full",
+            "expected": "f",
+            "heard": "f",
+            "expectedPosterior": 0.93679,
+            "heardPosterior": 0.93679,
+            "state": "supported"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "full",
+            "expected": "ʊ",
+            "heard": "ɑ",
+            "expectedPosterior": 0.00464,
+            "heardPosterior": 0.28427,
+            "state": "uncertain"
+          }
+        ],
+        "transcript": "FULL",
+        "recognizedWordsMatch": true,
+        "diagnostics": {
+          "unconfirmedPhones": [
+            {
+              "target": "ʊ",
+              "index": 1
+            },
+            {
+              "target": "l",
+              "index": 2
+            }
+          ]
+        },
+        "heardPhones": [
+          "f",
+          "ɑ"
+        ],
+        "referencePhones": [
+          "f",
+          "ʊ",
+          "l"
+        ],
+        "computeMs": 467.05,
+        "elapsedMs": 509
+      }
+    },
+    {
+      "id": "aria-full-as-fool",
+      "file": "public/audio/aria/word-1659.mp3",
+      "sha256": "fdff918781b1befd9fba1b789a76dd2d929a8ecaa2a01f6782603836a5f7ccb1",
+      "reference": "fool",
+      "spokenFixture": "full",
+      "expectedCorrect": false,
+      "split": "held-out",
+      "result": {
+        "version": "openpronounce-feedback-v1",
+        "experimental": true,
+        "reference": "fool",
+        "status": "uncertain",
+        "reason": "insufficient-evidence",
+        "feedback": [],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "fool",
+            "expected": "f",
+            "heard": "f",
+            "expectedPosterior": 0.93679,
+            "heardPosterior": 0.93679,
+            "state": "supported"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "fool",
+            "expected": "u",
+            "heard": "ɑ",
+            "expectedPosterior": 0.02058,
+            "heardPosterior": 0.28427,
+            "state": "uncertain"
+          }
+        ],
+        "transcript": "FULL",
+        "recognizedWordsMatch": false,
+        "diagnostics": {
+          "unconfirmedPhones": [
+            {
+              "target": "u",
+              "index": 1
+            },
+            {
+              "target": "l",
+              "index": 2
+            }
+          ]
+        },
+        "heardPhones": [
+          "f",
+          "ɑ"
+        ],
+        "referencePhones": [
+          "f",
+          "u",
+          "l"
+        ],
+        "computeMs": 447.98,
+        "elapsedMs": 491
+      }
+    },
+    {
+      "id": "aria-fool-as-fool",
+      "file": "public/audio/aria/word-2993.mp3",
+      "sha256": "47301ecf220604e93e852c5e706c6f99f5a932e57268255bdd6868c607c8a72a",
+      "reference": "fool",
+      "spokenFixture": "fool",
+      "expectedCorrect": true,
+      "split": "held-out",
+      "result": {
+        "version": "openpronounce-feedback-v1",
+        "experimental": true,
+        "reference": "fool",
+        "status": "uncertain",
+        "reason": "insufficient-evidence",
+        "feedback": [],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "fool",
+            "expected": "f",
+            "heard": "f",
+            "expectedPosterior": 0.95822,
+            "heardPosterior": 0.95822,
+            "state": "supported"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "fool",
+            "expected": "u",
+            "heard": "u",
+            "expectedPosterior": 0.45651,
+            "heardPosterior": 0.45651,
+            "state": "supported"
+          }
+        ],
+        "transcript": "FOUR",
+        "recognizedWordsMatch": false,
+        "diagnostics": {
+          "unconfirmedPhones": [
+            {
+              "target": "l",
+              "index": 2
+            }
+          ]
+        },
+        "heardPhones": [
+          "f",
+          "u"
+        ],
+        "referencePhones": [
+          "f",
+          "u",
+          "l"
+        ],
+        "computeMs": 449.6,
+        "elapsedMs": 495
+      }
+    },
+    {
+      "id": "aria-fool-as-full",
+      "file": "public/audio/aria/word-2993.mp3",
+      "sha256": "47301ecf220604e93e852c5e706c6f99f5a932e57268255bdd6868c607c8a72a",
+      "reference": "full",
+      "spokenFixture": "fool",
+      "expectedCorrect": false,
+      "split": "held-out",
+      "result": {
+        "version": "openpronounce-feedback-v1",
+        "experimental": true,
+        "reference": "full",
+        "status": "uncertain",
+        "reason": "insufficient-evidence",
+        "feedback": [],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "full",
+            "expected": "f",
+            "heard": "f",
+            "expectedPosterior": 0.95822,
+            "heardPosterior": 0.95822,
+            "state": "supported"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "full",
+            "expected": "ʊ",
+            "heard": "u",
+            "expectedPosterior": 0.01901,
+            "heardPosterior": 0.45651,
+            "state": "uncertain"
+          }
+        ],
+        "transcript": "FOUR",
+        "recognizedWordsMatch": false,
+        "diagnostics": {
+          "unconfirmedPhones": [
+            {
+              "target": "ʊ",
+              "index": 1
+            },
+            {
+              "target": "l",
+              "index": 2
+            }
+          ]
+        },
+        "heardPhones": [
+          "f",
+          "u"
+        ],
+        "referencePhones": [
+          "f",
+          "ʊ",
+          "l"
+        ],
+        "computeMs": 465.37,
+        "elapsedMs": 509
+      }
+    },
+    {
+      "id": "aria-cheap-as-cheap",
+      "file": "public/audio/aria/word-1386.mp3",
+      "sha256": "87af34f5f53e457caa375560097a263bacc84fd37595db1aa777fd0158f4eb39",
+      "reference": "cheap",
+      "spokenFixture": "cheap",
+      "expectedCorrect": true,
+      "split": "held-out",
+      "result": {
+        "version": "openpronounce-feedback-v1",
+        "experimental": true,
+        "reference": "cheap",
+        "status": "supported",
+        "reason": "phonetic-evidence-agrees",
+        "feedback": [],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "cheap",
+            "expected": "tʃ",
+            "heard": "ʃ",
+            "expectedPosterior": 0.18928,
+            "heardPosterior": 0.65375,
+            "state": "supported"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "cheap",
+            "expected": "i",
+            "heard": "i",
+            "expectedPosterior": 0.81397,
+            "heardPosterior": 0.81397,
+            "state": "supported"
+          },
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "cheap",
+            "expected": "p",
+            "heard": "p",
+            "expectedPosterior": 0.91343,
+            "heardPosterior": 0.91343,
+            "state": "supported"
+          }
+        ],
+        "transcript": "CHEAP",
+        "recognizedWordsMatch": true,
+        "diagnostics": {
+          "unconfirmedPhones": []
+        },
+        "heardPhones": [
+          "ʃ",
+          "i",
+          "p"
+        ],
+        "referencePhones": [
+          "tʃ",
+          "i",
+          "p"
+        ],
+        "computeMs": 446.3,
+        "elapsedMs": 490
+      }
+    },
+    {
+      "id": "aria-cheap-as-chip",
+      "file": "public/audio/aria/word-1386.mp3",
+      "sha256": "87af34f5f53e457caa375560097a263bacc84fd37595db1aa777fd0158f4eb39",
+      "reference": "chip",
+      "spokenFixture": "cheap",
+      "expectedCorrect": false,
+      "split": "held-out",
+      "result": {
+        "version": "openpronounce-feedback-v1",
+        "experimental": true,
+        "reference": "chip",
+        "status": "uncertain",
+        "reason": "insufficient-evidence",
+        "feedback": [],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "chip",
+            "expected": "tʃ",
+            "heard": "ʃ",
+            "expectedPosterior": 0.18928,
+            "heardPosterior": 0.65375,
+            "state": "uncertain"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "chip",
+            "expected": "ɪ",
+            "heard": "i",
+            "expectedPosterior": 0.02006,
+            "heardPosterior": 0.81397,
+            "state": "uncertain"
+          },
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "chip",
+            "expected": "p",
+            "heard": "p",
+            "expectedPosterior": 0.91343,
+            "heardPosterior": 0.91343,
+            "state": "supported"
+          }
+        ],
+        "transcript": "CHEAP",
+        "recognizedWordsMatch": false,
+        "diagnostics": {
+          "unconfirmedPhones": [
+            {
+              "target": "tʃ",
+              "index": 0
+            },
+            {
+              "target": "ɪ",
+              "index": 1
+            }
+          ]
+        },
+        "heardPhones": [
+          "ʃ",
+          "i",
+          "p"
+        ],
+        "referencePhones": [
+          "tʃ",
+          "ɪ",
+          "p"
+        ],
+        "computeMs": 438.66,
+        "elapsedMs": 477
+      }
+    },
+    {
+      "id": "aria-chip-as-chip",
+      "file": "public/audio/aria/word-215.mp3",
+      "sha256": "59512e09c8faeeb599e44178638a468f040246cb99e4a4ee0ed50c20a40f06a6",
+      "reference": "chip",
+      "spokenFixture": "chip",
+      "expectedCorrect": true,
+      "split": "held-out",
+      "result": {
+        "version": "openpronounce-feedback-v1",
+        "experimental": true,
+        "reference": "chip",
+        "status": "uncertain",
+        "reason": "insufficient-evidence",
+        "feedback": [],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "chip",
+            "expected": "tʃ",
+            "heard": "tʃ",
+            "expectedPosterior": 0.61316,
+            "heardPosterior": 0.61316,
+            "state": "supported"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "chip",
+            "expected": "ɪ",
+            "heard": "e",
+            "expectedPosterior": 0.00671,
+            "heardPosterior": 0.38507,
+            "state": "uncertain"
+          },
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "chip",
+            "expected": "p",
+            "heard": "p",
+            "expectedPosterior": 0.56094,
+            "heardPosterior": 0.56094,
+            "state": "supported"
+          }
+        ],
+        "transcript": "CHIP",
+        "recognizedWordsMatch": true,
+        "diagnostics": {
+          "unconfirmedPhones": [
+            {
+              "target": "ɪ",
+              "index": 1
+            }
+          ]
+        },
+        "heardPhones": [
+          "tʃ",
+          "e",
+          "p"
+        ],
+        "referencePhones": [
+          "tʃ",
+          "ɪ",
+          "p"
+        ],
+        "computeMs": 495.57,
+        "elapsedMs": 539
+      }
+    },
+    {
+      "id": "aria-chip-as-cheap",
+      "file": "public/audio/aria/word-215.mp3",
+      "sha256": "59512e09c8faeeb599e44178638a468f040246cb99e4a4ee0ed50c20a40f06a6",
+      "reference": "cheap",
+      "spokenFixture": "chip",
+      "expectedCorrect": false,
+      "split": "held-out",
+      "result": {
+        "version": "openpronounce-feedback-v1",
+        "experimental": true,
+        "reference": "cheap",
+        "status": "uncertain",
+        "reason": "insufficient-evidence",
+        "feedback": [],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "cheap",
+            "expected": "tʃ",
+            "heard": "tʃ",
+            "expectedPosterior": 0.61316,
+            "heardPosterior": 0.61316,
+            "state": "supported"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "cheap",
+            "expected": "i",
+            "heard": "e",
+            "expectedPosterior": 0.01302,
+            "heardPosterior": 0.38507,
+            "state": "uncertain"
+          },
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "cheap",
+            "expected": "p",
+            "heard": "p",
+            "expectedPosterior": 0.56094,
+            "heardPosterior": 0.56094,
+            "state": "supported"
+          }
+        ],
+        "transcript": "CHIP",
+        "recognizedWordsMatch": false,
+        "diagnostics": {
+          "unconfirmedPhones": [
+            {
+              "target": "i",
+              "index": 1
+            }
+          ]
+        },
+        "heardPhones": [
+          "tʃ",
+          "e",
+          "p"
+        ],
+        "referencePhones": [
+          "tʃ",
+          "i",
+          "p"
+        ],
+        "computeMs": 431.69,
+        "elapsedMs": 477
+      }
+    },
+    {
+      "id": "aria-back-as-back",
+      "file": "public/audio/aria/word-1275.mp3",
+      "sha256": "a81a4a5221e81884a72d496ac9145bc9e811b4bb2014551c81d1e7452d15250f",
+      "reference": "back",
+      "spokenFixture": "back",
+      "expectedCorrect": true,
+      "split": "held-out",
+      "result": {
+        "version": "openpronounce-feedback-v1",
+        "experimental": true,
+        "reference": "back",
+        "status": "uncertain",
+        "reason": "insufficient-evidence",
+        "feedback": [],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "back",
+            "expected": "b",
+            "heard": "b",
+            "expectedPosterior": 0.8524,
+            "heardPosterior": 0.8524,
+            "state": "supported"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "back",
+            "expected": "æ",
+            "heard": "ɛ",
+            "expectedPosterior": 0.0434,
+            "heardPosterior": 0.3404,
+            "state": "uncertain"
+          },
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "back",
+            "expected": "k",
+            "heard": "k",
+            "expectedPosterior": 0.95586,
+            "heardPosterior": 0.95586,
+            "state": "supported"
+          }
+        ],
+        "transcript": "BACK",
+        "recognizedWordsMatch": true,
+        "diagnostics": {
+          "unconfirmedPhones": [
+            {
+              "target": "æ",
+              "index": 1
+            }
+          ]
+        },
+        "heardPhones": [
+          "b",
+          "ɛ",
+          "k"
+        ],
+        "referencePhones": [
+          "b",
+          "æ",
+          "k"
+        ],
+        "computeMs": 436.58,
+        "elapsedMs": 480
+      }
+    },
+    {
+      "id": "aria-back-as-bag",
+      "file": "public/audio/aria/word-1275.mp3",
+      "sha256": "a81a4a5221e81884a72d496ac9145bc9e811b4bb2014551c81d1e7452d15250f",
+      "reference": "bag",
+      "spokenFixture": "back",
+      "expectedCorrect": false,
+      "split": "held-out",
+      "result": {
+        "version": "openpronounce-feedback-v1",
+        "experimental": true,
+        "reference": "bag",
+        "status": "uncertain",
+        "reason": "insufficient-evidence",
+        "feedback": [],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "bag",
+            "expected": "b",
+            "heard": "b",
+            "expectedPosterior": 0.8524,
+            "heardPosterior": 0.8524,
+            "state": "supported"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "bag",
+            "expected": "æ",
+            "heard": "ɛ",
+            "expectedPosterior": 0.0434,
+            "heardPosterior": 0.3404,
+            "state": "uncertain"
+          },
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "bag",
+            "expected": "ɡ",
+            "heard": "k",
+            "expectedPosterior": 0.029,
+            "heardPosterior": 0.95586,
+            "state": "uncertain"
+          }
+        ],
+        "transcript": "BACK",
+        "recognizedWordsMatch": false,
+        "diagnostics": {
+          "unconfirmedPhones": [
+            {
+              "target": "æ",
+              "index": 1
+            },
+            {
+              "target": "ɡ",
+              "index": 2
+            }
+          ]
+        },
+        "heardPhones": [
+          "b",
+          "ɛ",
+          "k"
+        ],
+        "referencePhones": [
+          "b",
+          "æ",
+          "ɡ"
+        ],
+        "computeMs": 437.19,
+        "elapsedMs": 479
+      }
+    },
+    {
+      "id": "aria-bag-as-bag",
+      "file": "public/audio/aria/word-1276.mp3",
+      "sha256": "7b0a6090beebd8352d2223426437c9ffb2d224b5ea0c00c6bb91d83451c3d16f",
+      "reference": "bag",
+      "spokenFixture": "bag",
+      "expectedCorrect": true,
+      "split": "held-out",
+      "result": {
+        "version": "openpronounce-feedback-v1",
+        "experimental": true,
+        "reference": "bag",
+        "status": "supported",
+        "reason": "phonetic-evidence-agrees",
+        "feedback": [],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "bag",
+            "expected": "b",
+            "heard": "b",
+            "expectedPosterior": 0.95448,
+            "heardPosterior": 0.95448,
+            "state": "supported"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "bag",
+            "expected": "æ",
+            "heard": "ɛ",
+            "expectedPosterior": 0.24147,
+            "heardPosterior": 0.56844,
+            "state": "supported"
+          },
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "bag",
+            "expected": "ɡ",
+            "heard": "ɡ",
+            "expectedPosterior": 0.97956,
+            "heardPosterior": 0.97956,
+            "state": "supported"
+          }
+        ],
+        "transcript": "BAG",
+        "recognizedWordsMatch": true,
+        "diagnostics": {
+          "unconfirmedPhones": []
+        },
+        "heardPhones": [
+          "b",
+          "ɛ",
+          "ɡ"
+        ],
+        "referencePhones": [
+          "b",
+          "æ",
+          "ɡ"
+        ],
+        "computeMs": 445.71,
+        "elapsedMs": 487
+      }
+    },
+    {
+      "id": "aria-bag-as-back",
+      "file": "public/audio/aria/word-1276.mp3",
+      "sha256": "7b0a6090beebd8352d2223426437c9ffb2d224b5ea0c00c6bb91d83451c3d16f",
+      "reference": "back",
+      "spokenFixture": "bag",
+      "expectedCorrect": false,
+      "split": "held-out",
+      "result": {
+        "version": "openpronounce-feedback-v1",
+        "experimental": true,
+        "reference": "back",
+        "status": "practice",
+        "reason": "phoneme-substitution",
+        "feedback": [
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "back",
+            "expected": "k",
+            "heard": "ɡ",
+            "expectedPosterior": 0.00652,
+            "heardPosterior": 0.97956,
+            "state": "practice"
+          }
+        ],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "back",
+            "expected": "b",
+            "heard": "b",
+            "expectedPosterior": 0.95448,
+            "heardPosterior": 0.95448,
+            "state": "supported"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "back",
+            "expected": "æ",
+            "heard": "ɛ",
+            "expectedPosterior": 0.24147,
+            "heardPosterior": 0.56844,
+            "state": "uncertain"
+          },
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "back",
+            "expected": "k",
+            "heard": "ɡ",
+            "expectedPosterior": 0.00652,
+            "heardPosterior": 0.97956,
+            "state": "practice"
+          }
+        ],
+        "transcript": "BAG",
+        "recognizedWordsMatch": false,
+        "diagnostics": {
+          "unconfirmedPhones": [
+            {
+              "target": "æ",
+              "index": 1
+            }
+          ]
+        },
+        "heardPhones": [
+          "b",
+          "ɛ",
+          "ɡ"
+        ],
+        "referencePhones": [
+          "b",
+          "æ",
+          "k"
+        ],
+        "computeMs": 438.76,
+        "elapsedMs": 479
+      }
+    },
+    {
+      "id": "aria-leave-as-leave",
+      "file": "public/audio/aria/word-2859.mp3",
+      "sha256": "c322c9dcbae31d9ab38f973601d4b8fc662ae19ed53f8f2ae0ed411dabdd7e55",
+      "reference": "leave",
+      "spokenFixture": "leave",
+      "expectedCorrect": true,
+      "split": "held-out",
+      "result": {
+        "version": "openpronounce-feedback-v1",
+        "experimental": true,
+        "reference": "leave",
+        "status": "supported",
+        "reason": "phonetic-evidence-agrees",
+        "feedback": [],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "leave",
+            "expected": "l",
+            "heard": "l",
+            "expectedPosterior": 0.99286,
+            "heardPosterior": 0.99286,
+            "state": "supported"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "leave",
+            "expected": "i",
+            "heard": "i",
+            "expectedPosterior": 0.8112,
+            "heardPosterior": 0.8112,
+            "state": "supported"
+          },
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "leave",
+            "expected": "v",
+            "heard": "v",
+            "expectedPosterior": 0.90411,
+            "heardPosterior": 0.90411,
+            "state": "supported"
+          }
+        ],
+        "transcript": "LEAVE",
+        "recognizedWordsMatch": true,
+        "diagnostics": {
+          "unconfirmedPhones": []
+        },
+        "heardPhones": [
+          "l",
+          "i",
+          "v"
+        ],
+        "referencePhones": [
+          "l",
+          "i",
+          "v"
+        ],
+        "computeMs": 469.49,
+        "elapsedMs": 510
+      }
+    },
+    {
+      "id": "aria-leave-as-live",
+      "file": "public/audio/aria/word-2859.mp3",
+      "sha256": "c322c9dcbae31d9ab38f973601d4b8fc662ae19ed53f8f2ae0ed411dabdd7e55",
+      "reference": "live",
+      "spokenFixture": "leave",
+      "expectedCorrect": false,
+      "split": "held-out",
+      "result": {
+        "version": "openpronounce-feedback-v1",
+        "experimental": true,
+        "reference": "live",
+        "status": "practice",
+        "reason": "phoneme-substitution",
+        "feedback": [
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "live",
+            "expected": "aɪ",
+            "heard": "i",
+            "expectedPosterior": 0.00073,
+            "heardPosterior": 0.8112,
+            "state": "practice"
+          }
+        ],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "live",
+            "expected": "l",
+            "heard": "l",
+            "expectedPosterior": 0.99286,
+            "heardPosterior": 0.99286,
+            "state": "supported"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "live",
+            "expected": "aɪ",
+            "heard": "i",
+            "expectedPosterior": 0.00073,
+            "heardPosterior": 0.8112,
+            "state": "practice"
+          },
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "live",
+            "expected": "v",
+            "heard": "v",
+            "expectedPosterior": 0.90411,
+            "heardPosterior": 0.90411,
+            "state": "supported"
+          }
+        ],
+        "transcript": "LEAVE",
+        "recognizedWordsMatch": false,
+        "diagnostics": {
+          "unconfirmedPhones": []
+        },
+        "heardPhones": [
+          "l",
+          "i",
+          "v"
+        ],
+        "referencePhones": [
+          "l",
+          "aɪ",
+          "v"
+        ],
+        "computeMs": 460.47,
+        "elapsedMs": 504
+      }
+    },
+    {
+      "id": "aria-live-as-live",
+      "file": "public/audio/aria/word-1859.mp3",
+      "sha256": "6a7d6d060893473b1f03d9068cdcc97f26c5c33622c5280788a1482898658aea",
+      "reference": "live",
+      "spokenFixture": "live",
+      "expectedCorrect": true,
+      "split": "held-out",
+      "result": {
+        "version": "openpronounce-feedback-v1",
+        "experimental": true,
+        "reference": "live",
+        "status": "supported",
+        "reason": "phonetic-evidence-agrees",
+        "feedback": [],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "live",
+            "expected": "l",
+            "heard": "l",
+            "expectedPosterior": 0.99097,
+            "heardPosterior": 0.99097,
+            "state": "supported"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "live",
+            "expected": "aɪ",
+            "heard": "aɪ",
+            "expectedPosterior": 0.72818,
+            "heardPosterior": 0.72818,
+            "state": "supported"
+          },
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "live",
+            "expected": "v",
+            "heard": "v",
+            "expectedPosterior": 0.92321,
+            "heardPosterior": 0.92321,
+            "state": "supported"
+          }
+        ],
+        "transcript": "LIVE",
+        "recognizedWordsMatch": true,
+        "diagnostics": {
+          "unconfirmedPhones": []
+        },
+        "heardPhones": [
+          "l",
+          "aɪ",
+          "v"
+        ],
+        "referencePhones": [
+          "l",
+          "aɪ",
+          "v"
+        ],
+        "computeMs": 485.2,
+        "elapsedMs": 528
+      }
+    },
+    {
+      "id": "aria-live-as-leave",
+      "file": "public/audio/aria/word-1859.mp3",
+      "sha256": "6a7d6d060893473b1f03d9068cdcc97f26c5c33622c5280788a1482898658aea",
+      "reference": "leave",
+      "spokenFixture": "live",
+      "expectedCorrect": false,
+      "split": "held-out",
+      "result": {
+        "version": "openpronounce-feedback-v1",
+        "experimental": true,
+        "reference": "leave",
+        "status": "practice",
+        "reason": "phoneme-substitution",
+        "feedback": [
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "leave",
+            "expected": "i",
+            "heard": "aɪ",
+            "expectedPosterior": 0.00574,
+            "heardPosterior": 0.72818,
+            "state": "practice"
+          }
+        ],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "leave",
+            "expected": "l",
+            "heard": "l",
+            "expectedPosterior": 0.99097,
+            "heardPosterior": 0.99097,
+            "state": "supported"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "leave",
+            "expected": "i",
+            "heard": "aɪ",
+            "expectedPosterior": 0.00574,
+            "heardPosterior": 0.72818,
+            "state": "practice"
+          },
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "leave",
+            "expected": "v",
+            "heard": "v",
+            "expectedPosterior": 0.92321,
+            "heardPosterior": 0.92321,
+            "state": "supported"
+          }
+        ],
+        "transcript": "LIVE",
+        "recognizedWordsMatch": false,
+        "diagnostics": {
+          "unconfirmedPhones": []
+        },
+        "heardPhones": [
+          "l",
+          "aɪ",
+          "v"
+        ],
+        "referencePhones": [
+          "l",
+          "i",
+          "v"
+        ],
+        "computeMs": 474.99,
+        "elapsedMs": 517
+      }
+    },
+    {
+      "id": "guy-cap-as-cap",
+      "file": "public/audio/guy/word-1362.mp3",
+      "sha256": "c3626e35ddbca0cef27d095705b291497364ef10b8d5bb9099cb6ced0ca84248",
+      "reference": "cap",
+      "spokenFixture": "cap",
+      "expectedCorrect": true,
+      "split": "held-out",
+      "result": {
+        "version": "openpronounce-feedback-v1",
+        "experimental": true,
+        "reference": "cap",
+        "status": "supported",
+        "reason": "phonetic-evidence-agrees",
+        "feedback": [],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "cap",
+            "expected": "k",
+            "heard": "k",
+            "expectedPosterior": 0.9893,
+            "heardPosterior": 0.9893,
+            "state": "supported"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "cap",
+            "expected": "æ",
+            "heard": "ɛ",
+            "expectedPosterior": 0.22729,
+            "heardPosterior": 0.5596,
+            "state": "supported"
+          },
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "cap",
+            "expected": "p",
+            "heard": "p",
+            "expectedPosterior": 0.94985,
+            "heardPosterior": 0.94985,
+            "state": "supported"
+          }
+        ],
+        "transcript": "CAP",
+        "recognizedWordsMatch": true,
+        "diagnostics": {
+          "unconfirmedPhones": []
+        },
+        "heardPhones": [
+          "k",
+          "ɛ",
+          "p"
+        ],
+        "referencePhones": [
+          "k",
+          "æ",
+          "p"
+        ],
+        "computeMs": 445.02,
+        "elapsedMs": 486
+      }
+    },
+    {
+      "id": "guy-cap-as-cab",
+      "file": "public/audio/guy/word-1362.mp3",
+      "sha256": "c3626e35ddbca0cef27d095705b291497364ef10b8d5bb9099cb6ced0ca84248",
+      "reference": "cab",
+      "spokenFixture": "cap",
+      "expectedCorrect": false,
+      "split": "held-out",
+      "result": {
+        "version": "openpronounce-feedback-v1",
+        "experimental": true,
+        "reference": "cab",
+        "status": "uncertain",
+        "reason": "insufficient-evidence",
+        "feedback": [],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "cab",
+            "expected": "k",
+            "heard": "k",
+            "expectedPosterior": 0.9893,
+            "heardPosterior": 0.9893,
+            "state": "supported"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "cab",
+            "expected": "æ",
+            "heard": "ɛ",
+            "expectedPosterior": 0.22729,
+            "heardPosterior": 0.5596,
+            "state": "uncertain"
+          },
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "cab",
+            "expected": "b",
+            "heard": "p",
+            "expectedPosterior": 0.03689,
+            "heardPosterior": 0.94985,
+            "state": "uncertain"
+          }
+        ],
+        "transcript": "CAP",
+        "recognizedWordsMatch": false,
+        "diagnostics": {
+          "unconfirmedPhones": [
+            {
+              "target": "æ",
+              "index": 1
+            },
+            {
+              "target": "b",
+              "index": 2
+            }
+          ]
+        },
+        "heardPhones": [
+          "k",
+          "ɛ",
+          "p"
+        ],
+        "referencePhones": [
+          "k",
+          "æ",
+          "b"
+        ],
+        "computeMs": 448.18,
+        "elapsedMs": 488
+      }
+    },
+    {
+      "id": "guy-cab-as-cab",
+      "file": "public/audio/guy/word-3441.mp3",
+      "sha256": "acd9e925462a81b497a6d315432428501f7586a17bd444dc169c86b99b31a4b5",
+      "reference": "cab",
+      "spokenFixture": "cab",
+      "expectedCorrect": true,
+      "split": "held-out",
+      "result": {
+        "version": "openpronounce-feedback-v1",
+        "experimental": true,
+        "reference": "cab",
+        "status": "uncertain",
+        "reason": "insufficient-evidence",
+        "feedback": [],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "cab",
+            "expected": "k",
+            "heard": "k",
+            "expectedPosterior": 0.98911,
+            "heardPosterior": 0.98911,
+            "state": "supported"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "cab",
+            "expected": "æ",
+            "heard": "a",
+            "expectedPosterior": 0.01108,
+            "heardPosterior": 0.29719,
+            "state": "uncertain"
+          },
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "cab",
+            "expected": "b",
+            "heard": "b",
+            "expectedPosterior": 0.96557,
+            "heardPosterior": 0.96557,
+            "state": "supported"
+          }
+        ],
+        "transcript": "CAB",
+        "recognizedWordsMatch": true,
+        "diagnostics": {
+          "unconfirmedPhones": [
+            {
+              "target": "æ",
+              "index": 1
+            }
+          ]
+        },
+        "heardPhones": [
+          "k",
+          "a",
+          "b"
+        ],
+        "referencePhones": [
+          "k",
+          "æ",
+          "b"
+        ],
+        "computeMs": 434.03,
+        "elapsedMs": 480
+      }
+    },
+    {
+      "id": "guy-cab-as-cap",
+      "file": "public/audio/guy/word-3441.mp3",
+      "sha256": "acd9e925462a81b497a6d315432428501f7586a17bd444dc169c86b99b31a4b5",
+      "reference": "cap",
+      "spokenFixture": "cab",
+      "expectedCorrect": false,
+      "split": "held-out",
+      "result": {
+        "version": "openpronounce-feedback-v1",
+        "experimental": true,
+        "reference": "cap",
+        "status": "practice",
+        "reason": "phoneme-substitution",
+        "feedback": [
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "cap",
+            "expected": "p",
+            "heard": "b",
+            "expectedPosterior": 0.00128,
+            "heardPosterior": 0.96557,
+            "state": "practice"
+          }
+        ],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "cap",
+            "expected": "k",
+            "heard": "k",
+            "expectedPosterior": 0.98911,
+            "heardPosterior": 0.98911,
+            "state": "supported"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "cap",
+            "expected": "æ",
+            "heard": "a",
+            "expectedPosterior": 0.01108,
+            "heardPosterior": 0.29719,
+            "state": "uncertain"
+          },
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "cap",
+            "expected": "p",
+            "heard": "b",
+            "expectedPosterior": 0.00128,
+            "heardPosterior": 0.96557,
+            "state": "practice"
+          }
+        ],
+        "transcript": "CAB",
+        "recognizedWordsMatch": false,
+        "diagnostics": {
+          "unconfirmedPhones": [
+            {
+              "target": "æ",
+              "index": 1
+            }
+          ]
+        },
+        "heardPhones": [
+          "k",
+          "a",
+          "b"
+        ],
+        "referencePhones": [
+          "k",
+          "æ",
+          "p"
+        ],
+        "computeMs": 437.0,
+        "elapsedMs": 479
+      }
+    },
+    {
+      "id": "guy-coat-as-coat",
+      "file": "public/audio/guy/word-1421.mp3",
+      "sha256": "d5f9f7135d4ec1260890cb04ba494424153d26c8951939f906410819ab1d3115",
+      "reference": "coat",
+      "spokenFixture": "coat",
+      "expectedCorrect": true,
+      "split": "held-out",
+      "result": {
+        "version": "openpronounce-feedback-v1",
+        "experimental": true,
+        "reference": "coat",
+        "status": "supported",
+        "reason": "phonetic-evidence-agrees",
+        "feedback": [],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "coat",
+            "expected": "k",
+            "heard": "k",
+            "expectedPosterior": 0.99176,
+            "heardPosterior": 0.99176,
+            "state": "supported"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "coat",
+            "expected": "oʊ",
+            "heard": "oʊ",
+            "expectedPosterior": 0.3971,
+            "heardPosterior": 0.3971,
+            "state": "supported"
+          },
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "coat",
+            "expected": "t",
+            "heard": "t",
+            "expectedPosterior": 0.97418,
+            "heardPosterior": 0.97418,
+            "state": "supported"
+          }
+        ],
+        "transcript": "COAT",
+        "recognizedWordsMatch": true,
+        "diagnostics": {
+          "unconfirmedPhones": []
+        },
+        "heardPhones": [
+          "k",
+          "oʊ",
+          "t"
+        ],
+        "referencePhones": [
+          "k",
+          "oʊ",
+          "t"
+        ],
+        "computeMs": 443.61,
+        "elapsedMs": 484
+      }
+    },
+    {
+      "id": "guy-coat-as-goat",
+      "file": "public/audio/guy/word-1421.mp3",
+      "sha256": "d5f9f7135d4ec1260890cb04ba494424153d26c8951939f906410819ab1d3115",
+      "reference": "goat",
+      "spokenFixture": "coat",
+      "expectedCorrect": false,
+      "split": "held-out",
+      "result": {
+        "version": "openpronounce-feedback-v1",
+        "experimental": true,
+        "reference": "goat",
+        "status": "practice",
+        "reason": "phoneme-substitution",
+        "feedback": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "goat",
+            "expected": "ɡ",
+            "heard": "k",
+            "expectedPosterior": 0.00228,
+            "heardPosterior": 0.99176,
+            "state": "practice"
+          }
+        ],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "goat",
+            "expected": "ɡ",
+            "heard": "k",
+            "expectedPosterior": 0.00228,
+            "heardPosterior": 0.99176,
+            "state": "practice"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "goat",
+            "expected": "oʊ",
+            "heard": "oʊ",
+            "expectedPosterior": 0.3971,
+            "heardPosterior": 0.3971,
+            "state": "supported"
+          },
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "goat",
+            "expected": "t",
+            "heard": "t",
+            "expectedPosterior": 0.97418,
+            "heardPosterior": 0.97418,
+            "state": "supported"
+          }
+        ],
+        "transcript": "COAT",
+        "recognizedWordsMatch": false,
+        "diagnostics": {
+          "unconfirmedPhones": []
+        },
+        "heardPhones": [
+          "k",
+          "oʊ",
+          "t"
+        ],
+        "referencePhones": [
+          "ɡ",
+          "oʊ",
+          "t"
+        ],
+        "computeMs": 436.84,
+        "elapsedMs": 479
+      }
+    },
+    {
+      "id": "guy-goat-as-goat",
+      "file": "public/audio/guy/word-1675.mp3",
+      "sha256": "cefdb82454dab9eb82da73fe06be1c53efc7c459f3bc9a3598d612e931fedf5f",
+      "reference": "goat",
+      "spokenFixture": "goat",
+      "expectedCorrect": true,
+      "split": "held-out",
+      "result": {
+        "version": "openpronounce-feedback-v1",
+        "experimental": true,
+        "reference": "goat",
+        "status": "supported",
+        "reason": "phonetic-evidence-agrees",
+        "feedback": [],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "goat",
+            "expected": "ɡ",
+            "heard": "ɡ",
+            "expectedPosterior": 0.9743,
+            "heardPosterior": 0.9743,
+            "state": "supported"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "goat",
+            "expected": "oʊ",
+            "heard": "o",
+            "expectedPosterior": 0.09806,
+            "heardPosterior": 0.26553,
+            "state": "supported"
+          },
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "goat",
+            "expected": "t",
+            "heard": "t",
+            "expectedPosterior": 0.869,
+            "heardPosterior": 0.869,
+            "state": "supported"
+          }
+        ],
+        "transcript": "GOAT",
+        "recognizedWordsMatch": true,
+        "diagnostics": {
+          "unconfirmedPhones": []
+        },
+        "heardPhones": [
+          "ɡ",
+          "o",
+          "t"
+        ],
+        "referencePhones": [
+          "ɡ",
+          "oʊ",
+          "t"
+        ],
+        "computeMs": 433.68,
+        "elapsedMs": 475
+      }
+    },
+    {
+      "id": "guy-goat-as-coat",
+      "file": "public/audio/guy/word-1675.mp3",
+      "sha256": "cefdb82454dab9eb82da73fe06be1c53efc7c459f3bc9a3598d612e931fedf5f",
+      "reference": "coat",
+      "spokenFixture": "goat",
+      "expectedCorrect": false,
+      "split": "held-out",
+      "result": {
+        "version": "openpronounce-feedback-v1",
+        "experimental": true,
+        "reference": "coat",
+        "status": "practice",
+        "reason": "phoneme-substitution",
+        "feedback": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "coat",
+            "expected": "k",
+            "heard": "ɡ",
+            "expectedPosterior": 0.01048,
+            "heardPosterior": 0.9743,
+            "state": "practice"
+          }
+        ],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "coat",
+            "expected": "k",
+            "heard": "ɡ",
+            "expectedPosterior": 0.01048,
+            "heardPosterior": 0.9743,
+            "state": "practice"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "coat",
+            "expected": "oʊ",
+            "heard": "o",
+            "expectedPosterior": 0.09806,
+            "heardPosterior": 0.26553,
+            "state": "uncertain"
+          },
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "coat",
+            "expected": "t",
+            "heard": "t",
+            "expectedPosterior": 0.869,
+            "heardPosterior": 0.869,
+            "state": "supported"
+          }
+        ],
+        "transcript": "GOAT",
+        "recognizedWordsMatch": false,
+        "diagnostics": {
+          "unconfirmedPhones": [
+            {
+              "target": "oʊ",
+              "index": 1
+            }
+          ]
+        },
+        "heardPhones": [
+          "ɡ",
+          "o",
+          "t"
+        ],
+        "referencePhones": [
+          "k",
+          "oʊ",
+          "t"
+        ],
+        "computeMs": 443.35,
+        "elapsedMs": 485
+      }
+    },
+    {
+      "id": "guy-full-as-full",
+      "file": "public/audio/guy/word-1659.mp3",
+      "sha256": "8045c6d817f3aee8f4a51d0d716648b1e9fe9d7834b275a01e0af3a4551f5662",
+      "reference": "full",
+      "spokenFixture": "full",
+      "expectedCorrect": true,
+      "split": "held-out",
+      "result": {
+        "version": "openpronounce-feedback-v1",
+        "experimental": true,
+        "reference": "full",
+        "status": "uncertain",
+        "reason": "insufficient-evidence",
+        "feedback": [],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "full",
+            "expected": "f",
+            "heard": "f",
+            "expectedPosterior": 0.98348,
+            "heardPosterior": 0.98348,
+            "state": "supported"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "full",
+            "expected": "ʊ",
+            "heard": "u",
+            "expectedPosterior": 0.10634,
+            "heardPosterior": 0.38691,
+            "state": "uncertain"
+          },
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "full",
+            "expected": "l",
+            "heard": "l",
+            "expectedPosterior": 0.62688,
+            "heardPosterior": 0.62688,
+            "state": "supported"
+          }
+        ],
+        "transcript": "FUOL",
+        "recognizedWordsMatch": false,
+        "diagnostics": {
+          "unconfirmedPhones": [
+            {
+              "target": "ʊ",
+              "index": 1
+            }
+          ]
+        },
+        "heardPhones": [
+          "f",
+          "u",
+          "l"
+        ],
+        "referencePhones": [
+          "f",
+          "ʊ",
+          "l"
+        ],
+        "computeMs": 443.07,
+        "elapsedMs": 489
+      }
+    },
+    {
+      "id": "guy-full-as-fool",
+      "file": "public/audio/guy/word-1659.mp3",
+      "sha256": "8045c6d817f3aee8f4a51d0d716648b1e9fe9d7834b275a01e0af3a4551f5662",
+      "reference": "fool",
+      "spokenFixture": "full",
+      "expectedCorrect": false,
+      "split": "held-out",
+      "result": {
+        "version": "openpronounce-feedback-v1",
+        "experimental": true,
+        "reference": "fool",
+        "status": "uncertain",
+        "reason": "insufficient-evidence",
+        "feedback": [],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "fool",
+            "expected": "f",
+            "heard": "f",
+            "expectedPosterior": 0.98348,
+            "heardPosterior": 0.98348,
+            "state": "supported"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "fool",
+            "expected": "u",
+            "heard": "u",
+            "expectedPosterior": 0.38691,
+            "heardPosterior": 0.38691,
+            "state": "supported"
+          },
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "fool",
+            "expected": "l",
+            "heard": "l",
+            "expectedPosterior": 0.62688,
+            "heardPosterior": 0.62688,
+            "state": "supported"
+          }
+        ],
+        "transcript": "FUOL",
+        "recognizedWordsMatch": false,
+        "diagnostics": {
+          "unconfirmedPhones": []
+        },
+        "heardPhones": [
+          "f",
+          "u",
+          "l"
+        ],
+        "referencePhones": [
+          "f",
+          "u",
+          "l"
+        ],
+        "computeMs": 443.45,
+        "elapsedMs": 484
+      }
+    },
+    {
+      "id": "guy-fool-as-fool",
+      "file": "public/audio/guy/word-2993.mp3",
+      "sha256": "771eadadea69538e2ec7432a9e268043941dbe72be3d926427d741d12592805c",
+      "reference": "fool",
+      "spokenFixture": "fool",
+      "expectedCorrect": true,
+      "split": "held-out",
+      "result": {
+        "version": "openpronounce-feedback-v1",
+        "experimental": true,
+        "reference": "fool",
+        "status": "uncertain",
+        "reason": "insufficient-evidence",
+        "feedback": [],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "fool",
+            "expected": "f",
+            "heard": "f",
+            "expectedPosterior": 0.98365,
+            "heardPosterior": 0.98365,
+            "state": "supported"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "fool",
+            "expected": "u",
+            "heard": "u",
+            "expectedPosterior": 0.80721,
+            "heardPosterior": 0.80721,
+            "state": "supported"
+          }
+        ],
+        "transcript": "FOOL",
+        "recognizedWordsMatch": true,
+        "diagnostics": {
+          "unconfirmedPhones": [
+            {
+              "target": "l",
+              "index": 2
+            }
+          ]
+        },
+        "heardPhones": [
+          "f",
+          "u"
+        ],
+        "referencePhones": [
+          "f",
+          "u",
+          "l"
+        ],
+        "computeMs": 458.1,
+        "elapsedMs": 501
+      }
+    },
+    {
+      "id": "guy-fool-as-full",
+      "file": "public/audio/guy/word-2993.mp3",
+      "sha256": "771eadadea69538e2ec7432a9e268043941dbe72be3d926427d741d12592805c",
+      "reference": "full",
+      "spokenFixture": "fool",
+      "expectedCorrect": false,
+      "split": "held-out",
+      "result": {
+        "version": "openpronounce-feedback-v1",
+        "experimental": true,
+        "reference": "full",
+        "status": "practice",
+        "reason": "phoneme-substitution",
+        "feedback": [
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "full",
+            "expected": "ʊ",
+            "heard": "u",
+            "expectedPosterior": 0.00924,
+            "heardPosterior": 0.80721,
+            "state": "practice"
+          }
+        ],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "full",
+            "expected": "f",
+            "heard": "f",
+            "expectedPosterior": 0.98365,
+            "heardPosterior": 0.98365,
+            "state": "supported"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "full",
+            "expected": "ʊ",
+            "heard": "u",
+            "expectedPosterior": 0.00924,
+            "heardPosterior": 0.80721,
+            "state": "practice"
+          }
+        ],
+        "transcript": "FOOL",
+        "recognizedWordsMatch": false,
+        "diagnostics": {
+          "unconfirmedPhones": [
+            {
+              "target": "l",
+              "index": 2
+            }
+          ]
+        },
+        "heardPhones": [
+          "f",
+          "u"
+        ],
+        "referencePhones": [
+          "f",
+          "ʊ",
+          "l"
+        ],
+        "computeMs": 444.43,
+        "elapsedMs": 493
+      }
+    },
+    {
+      "id": "guy-cheap-as-cheap",
+      "file": "public/audio/guy/word-1386.mp3",
+      "sha256": "e68e776e35def5e6364744c0c1b4ca3635061a585d126f584e3ef035115e6c74",
+      "reference": "cheap",
+      "spokenFixture": "cheap",
+      "expectedCorrect": true,
+      "split": "held-out",
+      "result": {
+        "version": "openpronounce-feedback-v1",
+        "experimental": true,
+        "reference": "cheap",
+        "status": "uncertain",
+        "reason": "insufficient-evidence",
+        "feedback": [],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "cheap",
+            "expected": "tʃ",
+            "heard": "ʃ",
+            "expectedPosterior": 0.19044,
+            "heardPosterior": 0.71633,
+            "state": "uncertain"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "cheap",
+            "expected": "i",
+            "heard": "i",
+            "expectedPosterior": 0.81871,
+            "heardPosterior": 0.81871,
+            "state": "supported"
+          },
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "cheap",
+            "expected": "p",
+            "heard": "p",
+            "expectedPosterior": 0.81249,
+            "heardPosterior": 0.81249,
+            "state": "supported"
+          }
+        ],
+        "transcript": "SHEEP",
+        "recognizedWordsMatch": false,
+        "diagnostics": {
+          "unconfirmedPhones": [
+            {
+              "target": "tʃ",
+              "index": 0
+            }
+          ]
+        },
+        "heardPhones": [
+          "ʃ",
+          "i",
+          "p"
+        ],
+        "referencePhones": [
+          "tʃ",
+          "i",
+          "p"
+        ],
+        "computeMs": 436.84,
+        "elapsedMs": 481
+      }
+    },
+    {
+      "id": "guy-cheap-as-chip",
+      "file": "public/audio/guy/word-1386.mp3",
+      "sha256": "e68e776e35def5e6364744c0c1b4ca3635061a585d126f584e3ef035115e6c74",
+      "reference": "chip",
+      "spokenFixture": "cheap",
+      "expectedCorrect": false,
+      "split": "held-out",
+      "result": {
+        "version": "openpronounce-feedback-v1",
+        "experimental": true,
+        "reference": "chip",
+        "status": "practice",
+        "reason": "phoneme-substitution",
+        "feedback": [
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "chip",
+            "expected": "ɪ",
+            "heard": "i",
+            "expectedPosterior": 0.01727,
+            "heardPosterior": 0.81871,
+            "state": "practice"
+          }
+        ],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "chip",
+            "expected": "tʃ",
+            "heard": "ʃ",
+            "expectedPosterior": 0.19044,
+            "heardPosterior": 0.71633,
+            "state": "uncertain"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "chip",
+            "expected": "ɪ",
+            "heard": "i",
+            "expectedPosterior": 0.01727,
+            "heardPosterior": 0.81871,
+            "state": "practice"
+          },
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "chip",
+            "expected": "p",
+            "heard": "p",
+            "expectedPosterior": 0.81249,
+            "heardPosterior": 0.81249,
+            "state": "supported"
+          }
+        ],
+        "transcript": "SHEEP",
+        "recognizedWordsMatch": false,
+        "diagnostics": {
+          "unconfirmedPhones": [
+            {
+              "target": "tʃ",
+              "index": 0
+            }
+          ]
+        },
+        "heardPhones": [
+          "ʃ",
+          "i",
+          "p"
+        ],
+        "referencePhones": [
+          "tʃ",
+          "ɪ",
+          "p"
+        ],
+        "computeMs": 437.75,
+        "elapsedMs": 480
+      }
+    },
+    {
+      "id": "guy-chip-as-chip",
+      "file": "public/audio/guy/word-215.mp3",
+      "sha256": "bca9e92bbf5281ca34ea9d51a7ce66db5eefb4131ec25421056cfd10ce781456",
+      "reference": "chip",
+      "spokenFixture": "chip",
+      "expectedCorrect": true,
+      "split": "held-out",
+      "result": {
+        "version": "openpronounce-feedback-v1",
+        "experimental": true,
+        "reference": "chip",
+        "status": "uncertain",
+        "reason": "insufficient-evidence",
+        "feedback": [],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "chip",
+            "expected": "tʃ",
+            "heard": "tʃ",
+            "expectedPosterior": 0.68306,
+            "heardPosterior": 0.68306,
+            "state": "supported"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "chip",
+            "expected": "ɪ",
+            "heard": "e",
+            "expectedPosterior": 0.00851,
+            "heardPosterior": 0.48392,
+            "state": "uncertain"
+          },
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "chip",
+            "expected": "p",
+            "heard": "p",
+            "expectedPosterior": 0.73166,
+            "heardPosterior": 0.73166,
+            "state": "supported"
+          }
+        ],
+        "transcript": "CHIP",
+        "recognizedWordsMatch": true,
+        "diagnostics": {
+          "unconfirmedPhones": [
+            {
+              "target": "ɪ",
+              "index": 1
+            }
+          ]
+        },
+        "heardPhones": [
+          "tʃ",
+          "e",
+          "p"
+        ],
+        "referencePhones": [
+          "tʃ",
+          "ɪ",
+          "p"
+        ],
+        "computeMs": 429.04,
+        "elapsedMs": 471
+      }
+    },
+    {
+      "id": "guy-chip-as-cheap",
+      "file": "public/audio/guy/word-215.mp3",
+      "sha256": "bca9e92bbf5281ca34ea9d51a7ce66db5eefb4131ec25421056cfd10ce781456",
+      "reference": "cheap",
+      "spokenFixture": "chip",
+      "expectedCorrect": false,
+      "split": "held-out",
+      "result": {
+        "version": "openpronounce-feedback-v1",
+        "experimental": true,
+        "reference": "cheap",
+        "status": "uncertain",
+        "reason": "insufficient-evidence",
+        "feedback": [],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "cheap",
+            "expected": "tʃ",
+            "heard": "tʃ",
+            "expectedPosterior": 0.68306,
+            "heardPosterior": 0.68306,
+            "state": "supported"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "cheap",
+            "expected": "i",
+            "heard": "e",
+            "expectedPosterior": 0.01288,
+            "heardPosterior": 0.48392,
+            "state": "uncertain"
+          },
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "cheap",
+            "expected": "p",
+            "heard": "p",
+            "expectedPosterior": 0.73166,
+            "heardPosterior": 0.73166,
+            "state": "supported"
+          }
+        ],
+        "transcript": "CHIP",
+        "recognizedWordsMatch": false,
+        "diagnostics": {
+          "unconfirmedPhones": [
+            {
+              "target": "i",
+              "index": 1
+            }
+          ]
+        },
+        "heardPhones": [
+          "tʃ",
+          "e",
+          "p"
+        ],
+        "referencePhones": [
+          "tʃ",
+          "i",
+          "p"
+        ],
+        "computeMs": 432.07,
+        "elapsedMs": 474
+      }
+    },
+    {
+      "id": "guy-back-as-back",
+      "file": "public/audio/guy/word-1275.mp3",
+      "sha256": "e77dc9464cb6004bb7967bc265c5f05851c70a3e88205df969849836d408d166",
+      "reference": "back",
+      "spokenFixture": "back",
+      "expectedCorrect": true,
+      "split": "held-out",
+      "result": {
+        "version": "openpronounce-feedback-v1",
+        "experimental": true,
+        "reference": "back",
+        "status": "uncertain",
+        "reason": "insufficient-evidence",
+        "feedback": [],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "back",
+            "expected": "b",
+            "heard": "b",
+            "expectedPosterior": 0.93224,
+            "heardPosterior": 0.93224,
+            "state": "supported"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "back",
+            "expected": "æ",
+            "heard": "a",
+            "expectedPosterior": 0.04126,
+            "heardPosterior": 0.28811,
+            "state": "uncertain"
+          },
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "back",
+            "expected": "k",
+            "heard": "k",
+            "expectedPosterior": 0.97545,
+            "heardPosterior": 0.97545,
+            "state": "supported"
+          }
+        ],
+        "transcript": "BACK",
+        "recognizedWordsMatch": true,
+        "diagnostics": {
+          "unconfirmedPhones": [
+            {
+              "target": "æ",
+              "index": 1
+            }
+          ]
+        },
+        "heardPhones": [
+          "b",
+          "a",
+          "k"
+        ],
+        "referencePhones": [
+          "b",
+          "æ",
+          "k"
+        ],
+        "computeMs": 429.63,
+        "elapsedMs": 470
+      }
+    },
+    {
+      "id": "guy-back-as-bag",
+      "file": "public/audio/guy/word-1275.mp3",
+      "sha256": "e77dc9464cb6004bb7967bc265c5f05851c70a3e88205df969849836d408d166",
+      "reference": "bag",
+      "spokenFixture": "back",
+      "expectedCorrect": false,
+      "split": "held-out",
+      "result": {
+        "version": "openpronounce-feedback-v1",
+        "experimental": true,
+        "reference": "bag",
+        "status": "practice",
+        "reason": "phoneme-substitution",
+        "feedback": [
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "bag",
+            "expected": "ɡ",
+            "heard": "k",
+            "expectedPosterior": 0.01466,
+            "heardPosterior": 0.97545,
+            "state": "practice"
+          }
+        ],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "bag",
+            "expected": "b",
+            "heard": "b",
+            "expectedPosterior": 0.93224,
+            "heardPosterior": 0.93224,
+            "state": "supported"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "bag",
+            "expected": "æ",
+            "heard": "a",
+            "expectedPosterior": 0.04126,
+            "heardPosterior": 0.28811,
+            "state": "uncertain"
+          },
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "bag",
+            "expected": "ɡ",
+            "heard": "k",
+            "expectedPosterior": 0.01466,
+            "heardPosterior": 0.97545,
+            "state": "practice"
+          }
+        ],
+        "transcript": "BACK",
+        "recognizedWordsMatch": false,
+        "diagnostics": {
+          "unconfirmedPhones": [
+            {
+              "target": "æ",
+              "index": 1
+            }
+          ]
+        },
+        "heardPhones": [
+          "b",
+          "a",
+          "k"
+        ],
+        "referencePhones": [
+          "b",
+          "æ",
+          "ɡ"
+        ],
+        "computeMs": 427.84,
+        "elapsedMs": 474
+      }
+    },
+    {
+      "id": "guy-bag-as-bag",
+      "file": "public/audio/guy/word-1276.mp3",
+      "sha256": "2288e187cd70c41c093748c3d52ab8b90f6a1e02eb60da646a76b073f285a5ec",
+      "reference": "bag",
+      "spokenFixture": "bag",
+      "expectedCorrect": true,
+      "split": "held-out",
+      "result": {
+        "version": "openpronounce-feedback-v1",
+        "experimental": true,
+        "reference": "bag",
+        "status": "uncertain",
+        "reason": "insufficient-evidence",
+        "feedback": [],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "bag",
+            "expected": "b",
+            "heard": "b",
+            "expectedPosterior": 0.96939,
+            "heardPosterior": 0.96939,
+            "state": "supported"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "bag",
+            "expected": "æ",
+            "heard": "ɛ",
+            "expectedPosterior": 0.03666,
+            "heardPosterior": 0.58938,
+            "state": "uncertain"
+          },
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "bag",
+            "expected": "ɡ",
+            "heard": "ɡ",
+            "expectedPosterior": 0.97012,
+            "heardPosterior": 0.97012,
+            "state": "supported"
+          }
+        ],
+        "transcript": "BAG",
+        "recognizedWordsMatch": true,
+        "diagnostics": {
+          "unconfirmedPhones": [
+            {
+              "target": "æ",
+              "index": 1
+            }
+          ]
+        },
+        "heardPhones": [
+          "b",
+          "ɛ",
+          "ɡ"
+        ],
+        "referencePhones": [
+          "b",
+          "æ",
+          "ɡ"
+        ],
+        "computeMs": 427.36,
+        "elapsedMs": 470
+      }
+    },
+    {
+      "id": "guy-bag-as-back",
+      "file": "public/audio/guy/word-1276.mp3",
+      "sha256": "2288e187cd70c41c093748c3d52ab8b90f6a1e02eb60da646a76b073f285a5ec",
+      "reference": "back",
+      "spokenFixture": "bag",
+      "expectedCorrect": false,
+      "split": "held-out",
+      "result": {
+        "version": "openpronounce-feedback-v1",
+        "experimental": true,
+        "reference": "back",
+        "status": "practice",
+        "reason": "phoneme-substitution",
+        "feedback": [
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "back",
+            "expected": "k",
+            "heard": "ɡ",
+            "expectedPosterior": 0.00955,
+            "heardPosterior": 0.97012,
+            "state": "practice"
+          }
+        ],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "back",
+            "expected": "b",
+            "heard": "b",
+            "expectedPosterior": 0.96939,
+            "heardPosterior": 0.96939,
+            "state": "supported"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "back",
+            "expected": "æ",
+            "heard": "ɛ",
+            "expectedPosterior": 0.03666,
+            "heardPosterior": 0.58938,
+            "state": "uncertain"
+          },
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "back",
+            "expected": "k",
+            "heard": "ɡ",
+            "expectedPosterior": 0.00955,
+            "heardPosterior": 0.97012,
+            "state": "practice"
+          }
+        ],
+        "transcript": "BAG",
+        "recognizedWordsMatch": false,
+        "diagnostics": {
+          "unconfirmedPhones": [
+            {
+              "target": "æ",
+              "index": 1
+            }
+          ]
+        },
+        "heardPhones": [
+          "b",
+          "ɛ",
+          "ɡ"
+        ],
+        "referencePhones": [
+          "b",
+          "æ",
+          "k"
+        ],
+        "computeMs": 443.78,
+        "elapsedMs": 488
+      }
+    },
+    {
+      "id": "guy-leave-as-leave",
+      "file": "public/audio/guy/word-2859.mp3",
+      "sha256": "3717e3a6d1cd341fadede14d0ae5ff39d24b712d42691f0248a8c22c97d4e304",
+      "reference": "leave",
+      "spokenFixture": "leave",
+      "expectedCorrect": true,
+      "split": "held-out",
+      "result": {
+        "version": "openpronounce-feedback-v1",
+        "experimental": true,
+        "reference": "leave",
+        "status": "supported",
+        "reason": "phonetic-evidence-agrees",
+        "feedback": [],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "leave",
+            "expected": "l",
+            "heard": "l",
+            "expectedPosterior": 0.99333,
+            "heardPosterior": 0.99333,
+            "state": "supported"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "leave",
+            "expected": "i",
+            "heard": "i",
+            "expectedPosterior": 0.85881,
+            "heardPosterior": 0.85881,
+            "state": "supported"
+          },
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "leave",
+            "expected": "v",
+            "heard": "v",
+            "expectedPosterior": 0.9644,
+            "heardPosterior": 0.9644,
+            "state": "supported"
+          }
+        ],
+        "transcript": "LEAVE",
+        "recognizedWordsMatch": true,
+        "diagnostics": {
+          "unconfirmedPhones": []
+        },
+        "heardPhones": [
+          "l",
+          "i",
+          "v"
+        ],
+        "referencePhones": [
+          "l",
+          "i",
+          "v"
+        ],
+        "computeMs": 441.02,
+        "elapsedMs": 484
+      }
+    },
+    {
+      "id": "guy-leave-as-live",
+      "file": "public/audio/guy/word-2859.mp3",
+      "sha256": "3717e3a6d1cd341fadede14d0ae5ff39d24b712d42691f0248a8c22c97d4e304",
+      "reference": "live",
+      "spokenFixture": "leave",
+      "expectedCorrect": false,
+      "split": "held-out",
+      "result": {
+        "version": "openpronounce-feedback-v1",
+        "experimental": true,
+        "reference": "live",
+        "status": "practice",
+        "reason": "phoneme-substitution",
+        "feedback": [
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "live",
+            "expected": "aɪ",
+            "heard": "i",
+            "expectedPosterior": 0.00033,
+            "heardPosterior": 0.85881,
+            "state": "practice"
+          }
+        ],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "live",
+            "expected": "l",
+            "heard": "l",
+            "expectedPosterior": 0.99333,
+            "heardPosterior": 0.99333,
+            "state": "supported"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "live",
+            "expected": "aɪ",
+            "heard": "i",
+            "expectedPosterior": 0.00033,
+            "heardPosterior": 0.85881,
+            "state": "practice"
+          },
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "live",
+            "expected": "v",
+            "heard": "v",
+            "expectedPosterior": 0.9644,
+            "heardPosterior": 0.9644,
+            "state": "supported"
+          }
+        ],
+        "transcript": "LEAVE",
+        "recognizedWordsMatch": false,
+        "diagnostics": {
+          "unconfirmedPhones": []
+        },
+        "heardPhones": [
+          "l",
+          "i",
+          "v"
+        ],
+        "referencePhones": [
+          "l",
+          "aɪ",
+          "v"
+        ],
+        "computeMs": 439.26,
+        "elapsedMs": 485
+      }
+    },
+    {
+      "id": "guy-live-as-live",
+      "file": "public/audio/guy/word-1859.mp3",
+      "sha256": "4046e090d214f8c06a9212b7fb9c563c748b6ecfa83ec7aeb342c5e05092f9a9",
+      "reference": "live",
+      "spokenFixture": "live",
+      "expectedCorrect": true,
+      "split": "held-out",
+      "result": {
+        "version": "openpronounce-feedback-v1",
+        "experimental": true,
+        "reference": "live",
+        "status": "supported",
+        "reason": "phonetic-evidence-agrees",
+        "feedback": [],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "live",
+            "expected": "l",
+            "heard": "l",
+            "expectedPosterior": 0.97649,
+            "heardPosterior": 0.97649,
+            "state": "supported"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "live",
+            "expected": "aɪ",
+            "heard": "aɪ",
+            "expectedPosterior": 0.81242,
+            "heardPosterior": 0.81242,
+            "state": "supported"
+          },
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "live",
+            "expected": "v",
+            "heard": "v",
+            "expectedPosterior": 0.98469,
+            "heardPosterior": 0.98469,
+            "state": "supported"
+          }
+        ],
+        "transcript": "LIVE",
+        "recognizedWordsMatch": true,
+        "diagnostics": {
+          "unconfirmedPhones": []
+        },
+        "heardPhones": [
+          "l",
+          "aɪ",
+          "v"
+        ],
+        "referencePhones": [
+          "l",
+          "aɪ",
+          "v"
+        ],
+        "computeMs": 439.06,
+        "elapsedMs": 481
+      }
+    },
+    {
+      "id": "guy-live-as-leave",
+      "file": "public/audio/guy/word-1859.mp3",
+      "sha256": "4046e090d214f8c06a9212b7fb9c563c748b6ecfa83ec7aeb342c5e05092f9a9",
+      "reference": "leave",
+      "spokenFixture": "live",
+      "expectedCorrect": false,
+      "split": "held-out",
+      "result": {
+        "version": "openpronounce-feedback-v1",
+        "experimental": true,
+        "reference": "leave",
+        "status": "practice",
+        "reason": "phoneme-substitution",
+        "feedback": [
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "leave",
+            "expected": "i",
+            "heard": "aɪ",
+            "expectedPosterior": 0.0053,
+            "heardPosterior": 0.81242,
+            "state": "practice"
+          }
+        ],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "leave",
+            "expected": "l",
+            "heard": "l",
+            "expectedPosterior": 0.97649,
+            "heardPosterior": 0.97649,
+            "state": "supported"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "leave",
+            "expected": "i",
+            "heard": "aɪ",
+            "expectedPosterior": 0.0053,
+            "heardPosterior": 0.81242,
+            "state": "practice"
+          },
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "leave",
+            "expected": "v",
+            "heard": "v",
+            "expectedPosterior": 0.98469,
+            "heardPosterior": 0.98469,
+            "state": "supported"
+          }
+        ],
+        "transcript": "LIVE",
+        "recognizedWordsMatch": false,
+        "diagnostics": {
+          "unconfirmedPhones": []
+        },
+        "heardPhones": [
+          "l",
+          "aɪ",
+          "v"
+        ],
+        "referencePhones": [
+          "l",
+          "i",
+          "v"
+        ],
+        "computeMs": 442.38,
+        "elapsedMs": 487
+      }
+    },
+    {
+      "id": "piper-lessac-cap-as-cap",
+      "file": "public/audio/piper-lessac/word-1362.mp3",
+      "sha256": "2b720ca64bf9a4a753dae55fdcf32c5bb21610f79652c42c080ccff0d118c572",
+      "reference": "cap",
+      "spokenFixture": "cap",
+      "expectedCorrect": true,
+      "split": "held-out",
+      "result": {
+        "version": "openpronounce-feedback-v1",
+        "experimental": true,
+        "reference": "cap",
+        "status": "uncertain",
+        "reason": "insufficient-evidence",
+        "feedback": [],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "cap",
+            "expected": "k",
+            "heard": "k",
+            "expectedPosterior": 0.85325,
+            "heardPosterior": 0.85325,
+            "state": "supported"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "cap",
+            "expected": "æ",
+            "heard": "ɛ",
+            "expectedPosterior": 0.01008,
+            "heardPosterior": 0.34732,
+            "state": "uncertain"
+          },
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "cap",
+            "expected": "p",
+            "heard": "b",
+            "expectedPosterior": 0.12457,
+            "heardPosterior": 0.84228,
+            "state": "supported"
+          }
+        ],
+        "transcript": "CAP",
+        "recognizedWordsMatch": true,
+        "diagnostics": {
+          "unconfirmedPhones": [
+            {
+              "target": "æ",
+              "index": 1
+            }
+          ]
+        },
+        "heardPhones": [
+          "k",
+          "ɛ",
+          "b"
+        ],
+        "referencePhones": [
+          "k",
+          "æ",
+          "p"
+        ],
+        "computeMs": 259.93,
+        "elapsedMs": 302
+      }
+    },
+    {
+      "id": "piper-lessac-cap-as-cab",
+      "file": "public/audio/piper-lessac/word-1362.mp3",
+      "sha256": "2b720ca64bf9a4a753dae55fdcf32c5bb21610f79652c42c080ccff0d118c572",
+      "reference": "cab",
+      "spokenFixture": "cap",
+      "expectedCorrect": false,
+      "split": "held-out",
+      "result": {
+        "version": "openpronounce-feedback-v1",
+        "experimental": true,
+        "reference": "cab",
+        "status": "uncertain",
+        "reason": "insufficient-evidence",
+        "feedback": [],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "cab",
+            "expected": "k",
+            "heard": "k",
+            "expectedPosterior": 0.85325,
+            "heardPosterior": 0.85325,
+            "state": "supported"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "cab",
+            "expected": "æ",
+            "heard": "ɛ",
+            "expectedPosterior": 0.01008,
+            "heardPosterior": 0.34732,
+            "state": "uncertain"
+          },
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "cab",
+            "expected": "b",
+            "heard": "b",
+            "expectedPosterior": 0.84228,
+            "heardPosterior": 0.84228,
+            "state": "supported"
+          }
+        ],
+        "transcript": "CAP",
+        "recognizedWordsMatch": false,
+        "diagnostics": {
+          "unconfirmedPhones": [
+            {
+              "target": "æ",
+              "index": 1
+            }
+          ]
+        },
+        "heardPhones": [
+          "k",
+          "ɛ",
+          "b"
+        ],
+        "referencePhones": [
+          "k",
+          "æ",
+          "b"
+        ],
+        "computeMs": 255.44,
+        "elapsedMs": 297
+      }
+    },
+    {
+      "id": "piper-lessac-cab-as-cab",
+      "file": "public/audio/piper-lessac/word-3441.mp3",
+      "sha256": "c8e9b418673be23f7042e394054e124302b8af74990c135c2bd95d48ff550545",
+      "reference": "cab",
+      "spokenFixture": "cab",
+      "expectedCorrect": true,
+      "split": "held-out",
+      "result": {
+        "version": "openpronounce-feedback-v1",
+        "experimental": true,
+        "reference": "cab",
+        "status": "uncertain",
+        "reason": "insufficient-evidence",
+        "feedback": [],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "cab",
+            "expected": "k",
+            "heard": "k",
+            "expectedPosterior": 0.95361,
+            "heardPosterior": 0.95361,
+            "state": "supported"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "cab",
+            "expected": "æ",
+            "heard": "l",
+            "expectedPosterior": 0.0,
+            "heardPosterior": 0.543,
+            "state": "uncertain"
+          },
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "cab",
+            "expected": "b",
+            "heard": "b",
+            "expectedPosterior": 0.94102,
+            "heardPosterior": 0.94102,
+            "state": "supported"
+          }
+        ],
+        "transcript": "CAB",
+        "recognizedWordsMatch": true,
+        "diagnostics": {
+          "unconfirmedPhones": [
+            {
+              "target": "æ",
+              "index": 1
+            }
+          ]
+        },
+        "heardPhones": [
+          "k",
+          "a",
+          "l",
+          "b"
+        ],
+        "referencePhones": [
+          "k",
+          "æ",
+          "b"
+        ],
+        "computeMs": 295.55,
+        "elapsedMs": 340
+      }
+    },
+    {
+      "id": "piper-lessac-cab-as-cap",
+      "file": "public/audio/piper-lessac/word-3441.mp3",
+      "sha256": "c8e9b418673be23f7042e394054e124302b8af74990c135c2bd95d48ff550545",
+      "reference": "cap",
+      "spokenFixture": "cab",
+      "expectedCorrect": false,
+      "split": "held-out",
+      "result": {
+        "version": "openpronounce-feedback-v1",
+        "experimental": true,
+        "reference": "cap",
+        "status": "practice",
+        "reason": "phoneme-substitution",
+        "feedback": [
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "cap",
+            "expected": "p",
+            "heard": "b",
+            "expectedPosterior": 0.00312,
+            "heardPosterior": 0.94102,
+            "state": "practice"
+          }
+        ],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "cap",
+            "expected": "k",
+            "heard": "k",
+            "expectedPosterior": 0.95361,
+            "heardPosterior": 0.95361,
+            "state": "supported"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "cap",
+            "expected": "æ",
+            "heard": "l",
+            "expectedPosterior": 0.0,
+            "heardPosterior": 0.543,
+            "state": "uncertain"
+          },
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "cap",
+            "expected": "p",
+            "heard": "b",
+            "expectedPosterior": 0.00312,
+            "heardPosterior": 0.94102,
+            "state": "practice"
+          }
+        ],
+        "transcript": "CAB",
+        "recognizedWordsMatch": false,
+        "diagnostics": {
+          "unconfirmedPhones": [
+            {
+              "target": "æ",
+              "index": 1
+            }
+          ]
+        },
+        "heardPhones": [
+          "k",
+          "a",
+          "l",
+          "b"
+        ],
+        "referencePhones": [
+          "k",
+          "æ",
+          "p"
+        ],
+        "computeMs": 268.84,
+        "elapsedMs": 310
+      }
+    },
+    {
+      "id": "piper-lessac-coat-as-coat",
+      "file": "public/audio/piper-lessac/word-1421.mp3",
+      "sha256": "7207ee3b5bb03b26957279997ce8d85d113ab3ba416bf5e3f3089771248e7b55",
+      "reference": "coat",
+      "spokenFixture": "coat",
+      "expectedCorrect": true,
+      "split": "held-out",
+      "result": {
+        "version": "openpronounce-feedback-v1",
+        "experimental": true,
+        "reference": "coat",
+        "status": "uncertain",
+        "reason": "insufficient-evidence",
+        "feedback": [],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "coat",
+            "expected": "k",
+            "heard": "k",
+            "expectedPosterior": 0.97541,
+            "heardPosterior": 0.97541,
+            "state": "supported"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "coat",
+            "expected": "oʊ",
+            "heard": "u",
+            "expectedPosterior": 0.01925,
+            "heardPosterior": 0.50234,
+            "state": "uncertain"
+          },
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "coat",
+            "expected": "t",
+            "heard": "d",
+            "expectedPosterior": 0.31648,
+            "heardPosterior": 0.65113,
+            "state": "uncertain"
+          }
+        ],
+        "transcript": "COT",
+        "recognizedWordsMatch": false,
+        "diagnostics": {
+          "unconfirmedPhones": [
+            {
+              "target": "oʊ",
+              "index": 1
+            },
+            {
+              "target": "t",
+              "index": 2
+            }
+          ]
+        },
+        "heardPhones": [
+          "k",
+          "u",
+          "d"
+        ],
+        "referencePhones": [
+          "k",
+          "oʊ",
+          "t"
+        ],
+        "computeMs": 258.12,
+        "elapsedMs": 299
+      }
+    },
+    {
+      "id": "piper-lessac-coat-as-goat",
+      "file": "public/audio/piper-lessac/word-1421.mp3",
+      "sha256": "7207ee3b5bb03b26957279997ce8d85d113ab3ba416bf5e3f3089771248e7b55",
+      "reference": "goat",
+      "spokenFixture": "coat",
+      "expectedCorrect": false,
+      "split": "held-out",
+      "result": {
+        "version": "openpronounce-feedback-v1",
+        "experimental": true,
+        "reference": "goat",
+        "status": "practice",
+        "reason": "phoneme-substitution",
+        "feedback": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "goat",
+            "expected": "ɡ",
+            "heard": "k",
+            "expectedPosterior": 0.01352,
+            "heardPosterior": 0.97541,
+            "state": "practice"
+          }
+        ],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "goat",
+            "expected": "ɡ",
+            "heard": "k",
+            "expectedPosterior": 0.01352,
+            "heardPosterior": 0.97541,
+            "state": "practice"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "goat",
+            "expected": "oʊ",
+            "heard": "u",
+            "expectedPosterior": 0.01925,
+            "heardPosterior": 0.50234,
+            "state": "uncertain"
+          },
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "goat",
+            "expected": "t",
+            "heard": "d",
+            "expectedPosterior": 0.31648,
+            "heardPosterior": 0.65113,
+            "state": "uncertain"
+          }
+        ],
+        "transcript": "COT",
+        "recognizedWordsMatch": false,
+        "diagnostics": {
+          "unconfirmedPhones": [
+            {
+              "target": "oʊ",
+              "index": 1
+            },
+            {
+              "target": "t",
+              "index": 2
+            }
+          ]
+        },
+        "heardPhones": [
+          "k",
+          "u",
+          "d"
+        ],
+        "referencePhones": [
+          "ɡ",
+          "oʊ",
+          "t"
+        ],
+        "computeMs": 273.3,
+        "elapsedMs": 313
+      }
+    },
+    {
+      "id": "piper-lessac-goat-as-goat",
+      "file": "public/audio/piper-lessac/word-1675.mp3",
+      "sha256": "ec4282a4dd667409ee01330594324f9c635de25070cbe155a7b46f1b7da2c232",
+      "reference": "goat",
+      "spokenFixture": "goat",
+      "expectedCorrect": true,
+      "split": "held-out",
+      "result": {
+        "version": "openpronounce-feedback-v1",
+        "experimental": true,
+        "reference": "goat",
+        "status": "uncertain",
+        "reason": "insufficient-evidence",
+        "feedback": [],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "goat",
+            "expected": "ɡ",
+            "heard": "ɡ",
+            "expectedPosterior": 0.84465,
+            "heardPosterior": 0.84465,
+            "state": "supported"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "goat",
+            "expected": "oʊ",
+            "heard": "ɑ",
+            "expectedPosterior": 0.03222,
+            "heardPosterior": 0.30751,
+            "state": "uncertain"
+          },
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "goat",
+            "expected": "t",
+            "heard": "d",
+            "expectedPosterior": 0.20013,
+            "heardPosterior": 0.76139,
+            "state": "supported"
+          }
+        ],
+        "transcript": "GOAT",
+        "recognizedWordsMatch": true,
+        "diagnostics": {
+          "unconfirmedPhones": [
+            {
+              "target": "oʊ",
+              "index": 1
+            }
+          ]
+        },
+        "heardPhones": [
+          "ɡ",
+          "ɑ",
+          "d"
+        ],
+        "referencePhones": [
+          "ɡ",
+          "oʊ",
+          "t"
+        ],
+        "computeMs": 270.26,
+        "elapsedMs": 316
+      }
+    },
+    {
+      "id": "piper-lessac-goat-as-coat",
+      "file": "public/audio/piper-lessac/word-1675.mp3",
+      "sha256": "ec4282a4dd667409ee01330594324f9c635de25070cbe155a7b46f1b7da2c232",
+      "reference": "coat",
+      "spokenFixture": "goat",
+      "expectedCorrect": false,
+      "split": "held-out",
+      "result": {
+        "version": "openpronounce-feedback-v1",
+        "experimental": true,
+        "reference": "coat",
+        "status": "uncertain",
+        "reason": "insufficient-evidence",
+        "feedback": [],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "coat",
+            "expected": "k",
+            "heard": "ɡ",
+            "expectedPosterior": 0.11165,
+            "heardPosterior": 0.84465,
+            "state": "uncertain"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "coat",
+            "expected": "oʊ",
+            "heard": "ɑ",
+            "expectedPosterior": 0.03222,
+            "heardPosterior": 0.30751,
+            "state": "uncertain"
+          },
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "coat",
+            "expected": "t",
+            "heard": "d",
+            "expectedPosterior": 0.20013,
+            "heardPosterior": 0.76139,
+            "state": "uncertain"
+          }
+        ],
+        "transcript": "GOAT",
+        "recognizedWordsMatch": false,
+        "diagnostics": {
+          "unconfirmedPhones": [
+            {
+              "target": "k",
+              "index": 0
+            },
+            {
+              "target": "oʊ",
+              "index": 1
+            },
+            {
+              "target": "t",
+              "index": 2
+            }
+          ]
+        },
+        "heardPhones": [
+          "ɡ",
+          "ɑ",
+          "d"
+        ],
+        "referencePhones": [
+          "k",
+          "oʊ",
+          "t"
+        ],
+        "computeMs": 247.31,
+        "elapsedMs": 288
+      }
+    },
+    {
+      "id": "piper-lessac-full-as-full",
+      "file": "public/audio/piper-lessac/word-1659.mp3",
+      "sha256": "d6c9103a4c12b6d4d306379bd7b7dc12bd76243c07a6799a720231ec625f324c",
+      "reference": "full",
+      "spokenFixture": "full",
+      "expectedCorrect": true,
+      "split": "held-out",
+      "result": {
+        "version": "openpronounce-feedback-v1",
+        "experimental": true,
+        "reference": "full",
+        "status": "uncertain",
+        "reason": "insufficient-evidence",
+        "feedback": [],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "full",
+            "expected": "f",
+            "heard": "f",
+            "expectedPosterior": 0.98216,
+            "heardPosterior": 0.98216,
+            "state": "supported"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "full",
+            "expected": "ʊ",
+            "heard": "u",
+            "expectedPosterior": 0.0176,
+            "heardPosterior": 0.17749,
+            "state": "uncertain"
+          }
+        ],
+        "transcript": "FULL",
+        "recognizedWordsMatch": true,
+        "diagnostics": {
+          "unconfirmedPhones": [
+            {
+              "target": "ʊ",
+              "index": 1
+            },
+            {
+              "target": "l",
+              "index": 2
+            }
+          ]
+        },
+        "heardPhones": [
+          "f",
+          "u"
+        ],
+        "referencePhones": [
+          "f",
+          "ʊ",
+          "l"
+        ],
+        "computeMs": 288.64,
+        "elapsedMs": 331
+      }
+    },
+    {
+      "id": "piper-lessac-full-as-fool",
+      "file": "public/audio/piper-lessac/word-1659.mp3",
+      "sha256": "d6c9103a4c12b6d4d306379bd7b7dc12bd76243c07a6799a720231ec625f324c",
+      "reference": "fool",
+      "spokenFixture": "full",
+      "expectedCorrect": false,
+      "split": "held-out",
+      "result": {
+        "version": "openpronounce-feedback-v1",
+        "experimental": true,
+        "reference": "fool",
+        "status": "uncertain",
+        "reason": "insufficient-evidence",
+        "feedback": [],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "fool",
+            "expected": "f",
+            "heard": "f",
+            "expectedPosterior": 0.98216,
+            "heardPosterior": 0.98216,
+            "state": "supported"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "fool",
+            "expected": "u",
+            "heard": "u",
+            "expectedPosterior": 0.17749,
+            "heardPosterior": 0.17749,
+            "state": "supported"
+          }
+        ],
+        "transcript": "FULL",
+        "recognizedWordsMatch": false,
+        "diagnostics": {
+          "unconfirmedPhones": [
+            {
+              "target": "l",
+              "index": 2
+            }
+          ]
+        },
+        "heardPhones": [
+          "f",
+          "u"
+        ],
+        "referencePhones": [
+          "f",
+          "u",
+          "l"
+        ],
+        "computeMs": 281.63,
+        "elapsedMs": 325
+      }
+    },
+    {
+      "id": "piper-lessac-fool-as-fool",
+      "file": "public/audio/piper-lessac/word-2993.mp3",
+      "sha256": "4f692dba74c4af5274c0a427043f01d6524e573d1eded3954162ba9fb074c199",
+      "reference": "fool",
+      "spokenFixture": "fool",
+      "expectedCorrect": true,
+      "split": "held-out",
+      "result": {
+        "version": "openpronounce-feedback-v1",
+        "experimental": true,
+        "reference": "fool",
+        "status": "uncertain",
+        "reason": "insufficient-evidence",
+        "feedback": [],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "fool",
+            "expected": "f",
+            "heard": "f",
+            "expectedPosterior": 0.70218,
+            "heardPosterior": 0.70218,
+            "state": "supported"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "fool",
+            "expected": "u",
+            "heard": "u",
+            "expectedPosterior": 0.48279,
+            "heardPosterior": 0.48279,
+            "state": "supported"
+          }
+        ],
+        "transcript": "FOOL",
+        "recognizedWordsMatch": true,
+        "diagnostics": {
+          "unconfirmedPhones": [
+            {
+              "target": "l",
+              "index": 2
+            }
+          ]
+        },
+        "heardPhones": [
+          "f",
+          "u"
+        ],
+        "referencePhones": [
+          "f",
+          "u",
+          "l"
+        ],
+        "computeMs": 299.52,
+        "elapsedMs": 345
+      }
+    },
+    {
+      "id": "piper-lessac-fool-as-full",
+      "file": "public/audio/piper-lessac/word-2993.mp3",
+      "sha256": "4f692dba74c4af5274c0a427043f01d6524e573d1eded3954162ba9fb074c199",
+      "reference": "full",
+      "spokenFixture": "fool",
+      "expectedCorrect": false,
+      "split": "held-out",
+      "result": {
+        "version": "openpronounce-feedback-v1",
+        "experimental": true,
+        "reference": "full",
+        "status": "uncertain",
+        "reason": "insufficient-evidence",
+        "feedback": [],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "full",
+            "expected": "f",
+            "heard": "f",
+            "expectedPosterior": 0.70218,
+            "heardPosterior": 0.70218,
+            "state": "supported"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "full",
+            "expected": "ʊ",
+            "heard": "u",
+            "expectedPosterior": 0.00078,
+            "heardPosterior": 0.48279,
+            "state": "uncertain"
+          }
+        ],
+        "transcript": "FOOL",
+        "recognizedWordsMatch": false,
+        "diagnostics": {
+          "unconfirmedPhones": [
+            {
+              "target": "ʊ",
+              "index": 1
+            },
+            {
+              "target": "l",
+              "index": 2
+            }
+          ]
+        },
+        "heardPhones": [
+          "f",
+          "u"
+        ],
+        "referencePhones": [
+          "f",
+          "ʊ",
+          "l"
+        ],
+        "computeMs": 272.81,
+        "elapsedMs": 315
+      }
+    },
+    {
+      "id": "piper-lessac-cheap-as-cheap",
+      "file": "public/audio/piper-lessac/word-1386.mp3",
+      "sha256": "d4140f4c2a16781e51ba055841bdd6d130eea63d5ba7f8dce386318efeb185bf",
+      "reference": "cheap",
+      "spokenFixture": "cheap",
+      "expectedCorrect": true,
+      "split": "held-out",
+      "result": {
+        "version": "openpronounce-feedback-v1",
+        "experimental": true,
+        "reference": "cheap",
+        "status": "uncertain",
+        "reason": "insufficient-evidence",
+        "feedback": [],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "cheap",
+            "expected": "tʃ",
+            "heard": "ɕ",
+            "expectedPosterior": 0.00209,
+            "heardPosterior": 0.37335,
+            "state": "uncertain"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "cheap",
+            "expected": "i",
+            "heard": "i",
+            "expectedPosterior": 0.70291,
+            "heardPosterior": 0.70291,
+            "state": "supported"
+          }
+        ],
+        "transcript": "SHEEP",
+        "recognizedWordsMatch": false,
+        "diagnostics": {
+          "unconfirmedPhones": [
+            {
+              "target": "tʃ",
+              "index": 0
+            },
+            {
+              "target": "p",
+              "index": 2
+            }
+          ]
+        },
+        "heardPhones": [
+          "ɕ",
+          "i"
+        ],
+        "referencePhones": [
+          "tʃ",
+          "i",
+          "p"
+        ],
+        "computeMs": 248.9,
+        "elapsedMs": 292
+      }
+    },
+    {
+      "id": "piper-lessac-cheap-as-chip",
+      "file": "public/audio/piper-lessac/word-1386.mp3",
+      "sha256": "d4140f4c2a16781e51ba055841bdd6d130eea63d5ba7f8dce386318efeb185bf",
+      "reference": "chip",
+      "spokenFixture": "cheap",
+      "expectedCorrect": false,
+      "split": "held-out",
+      "result": {
+        "version": "openpronounce-feedback-v1",
+        "experimental": true,
+        "reference": "chip",
+        "status": "practice",
+        "reason": "phoneme-substitution",
+        "feedback": [
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "chip",
+            "expected": "ɪ",
+            "heard": "i",
+            "expectedPosterior": 0.00105,
+            "heardPosterior": 0.70291,
+            "state": "practice"
+          }
+        ],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "chip",
+            "expected": "tʃ",
+            "heard": "ɕ",
+            "expectedPosterior": 0.00209,
+            "heardPosterior": 0.37335,
+            "state": "uncertain"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "chip",
+            "expected": "ɪ",
+            "heard": "i",
+            "expectedPosterior": 0.00105,
+            "heardPosterior": 0.70291,
+            "state": "practice"
+          }
+        ],
+        "transcript": "SHEEP",
+        "recognizedWordsMatch": false,
+        "diagnostics": {
+          "unconfirmedPhones": [
+            {
+              "target": "tʃ",
+              "index": 0
+            },
+            {
+              "target": "p",
+              "index": 2
+            }
+          ]
+        },
+        "heardPhones": [
+          "ɕ",
+          "i"
+        ],
+        "referencePhones": [
+          "tʃ",
+          "ɪ",
+          "p"
+        ],
+        "computeMs": 263.45,
+        "elapsedMs": 310
+      }
+    },
+    {
+      "id": "piper-lessac-chip-as-chip",
+      "file": "public/audio/piper-lessac/word-215.mp3",
+      "sha256": "f863173066c6127570c6ac473db0af33b45c25243c5ad9b91feb4864cbeccaa8",
+      "reference": "chip",
+      "spokenFixture": "chip",
+      "expectedCorrect": true,
+      "split": "held-out",
+      "result": {
+        "version": "openpronounce-feedback-v1",
+        "experimental": true,
+        "reference": "chip",
+        "status": "practice",
+        "reason": "phoneme-substitution",
+        "feedback": [
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "chip",
+            "expected": "p",
+            "heard": "n",
+            "expectedPosterior": 1e-05,
+            "heardPosterior": 0.80131,
+            "state": "practice"
+          }
+        ],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "chip",
+            "expected": "tʃ",
+            "heard": "tʃ",
+            "expectedPosterior": 0.29627,
+            "heardPosterior": 0.29627,
+            "state": "supported"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "chip",
+            "expected": "ɪ",
+            "heard": "e",
+            "expectedPosterior": 0.01706,
+            "heardPosterior": 0.41165,
+            "state": "uncertain"
+          },
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "chip",
+            "expected": "p",
+            "heard": "n",
+            "expectedPosterior": 1e-05,
+            "heardPosterior": 0.80131,
+            "state": "practice"
+          }
+        ],
+        "transcript": "CHIP",
+        "recognizedWordsMatch": true,
+        "diagnostics": {
+          "unconfirmedPhones": [
+            {
+              "target": "ɪ",
+              "index": 1
+            }
+          ]
+        },
+        "heardPhones": [
+          "tʃ",
+          "e",
+          "n"
+        ],
+        "referencePhones": [
+          "tʃ",
+          "ɪ",
+          "p"
+        ],
+        "computeMs": 281.74,
+        "elapsedMs": 325
+      }
+    },
+    {
+      "id": "piper-lessac-chip-as-cheap",
+      "file": "public/audio/piper-lessac/word-215.mp3",
+      "sha256": "f863173066c6127570c6ac473db0af33b45c25243c5ad9b91feb4864cbeccaa8",
+      "reference": "cheap",
+      "spokenFixture": "chip",
+      "expectedCorrect": false,
+      "split": "held-out",
+      "result": {
+        "version": "openpronounce-feedback-v1",
+        "experimental": true,
+        "reference": "cheap",
+        "status": "practice",
+        "reason": "phoneme-substitution",
+        "feedback": [
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "cheap",
+            "expected": "p",
+            "heard": "n",
+            "expectedPosterior": 1e-05,
+            "heardPosterior": 0.80131,
+            "state": "practice"
+          }
+        ],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "cheap",
+            "expected": "tʃ",
+            "heard": "tʃ",
+            "expectedPosterior": 0.29627,
+            "heardPosterior": 0.29627,
+            "state": "supported"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "cheap",
+            "expected": "i",
+            "heard": "e",
+            "expectedPosterior": 0.04377,
+            "heardPosterior": 0.41165,
+            "state": "uncertain"
+          },
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "cheap",
+            "expected": "p",
+            "heard": "n",
+            "expectedPosterior": 1e-05,
+            "heardPosterior": 0.80131,
+            "state": "practice"
+          }
+        ],
+        "transcript": "CHIP",
+        "recognizedWordsMatch": false,
+        "diagnostics": {
+          "unconfirmedPhones": [
+            {
+              "target": "i",
+              "index": 1
+            }
+          ]
+        },
+        "heardPhones": [
+          "tʃ",
+          "e",
+          "n"
+        ],
+        "referencePhones": [
+          "tʃ",
+          "i",
+          "p"
+        ],
+        "computeMs": 242.45,
+        "elapsedMs": 285
+      }
+    },
+    {
+      "id": "piper-lessac-back-as-back",
+      "file": "public/audio/piper-lessac/word-1275.mp3",
+      "sha256": "4a190dcda3c5f59eb2955cb748599565180aa34ba3513f5226a3a21105db0a72",
+      "reference": "back",
+      "spokenFixture": "back",
+      "expectedCorrect": true,
+      "split": "held-out",
+      "result": {
+        "version": "openpronounce-feedback-v1",
+        "experimental": true,
+        "reference": "back",
+        "status": "uncertain",
+        "reason": "insufficient-evidence",
+        "feedback": [],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "back",
+            "expected": "b",
+            "heard": "b",
+            "expectedPosterior": 0.91487,
+            "heardPosterior": 0.91487,
+            "state": "supported"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "back",
+            "expected": "æ",
+            "heard": "a",
+            "expectedPosterior": 0.00988,
+            "heardPosterior": 0.45885,
+            "state": "uncertain"
+          },
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "back",
+            "expected": "k",
+            "heard": "k",
+            "expectedPosterior": 0.8448,
+            "heardPosterior": 0.8448,
+            "state": "supported"
+          }
+        ],
+        "transcript": "PACK",
+        "recognizedWordsMatch": false,
+        "diagnostics": {
+          "unconfirmedPhones": [
+            {
+              "target": "æ",
+              "index": 1
+            }
+          ]
+        },
+        "heardPhones": [
+          "b",
+          "a",
+          "k"
+        ],
+        "referencePhones": [
+          "b",
+          "æ",
+          "k"
+        ],
+        "computeMs": 258.05,
+        "elapsedMs": 298
+      }
+    },
+    {
+      "id": "piper-lessac-back-as-bag",
+      "file": "public/audio/piper-lessac/word-1275.mp3",
+      "sha256": "4a190dcda3c5f59eb2955cb748599565180aa34ba3513f5226a3a21105db0a72",
+      "reference": "bag",
+      "spokenFixture": "back",
+      "expectedCorrect": false,
+      "split": "held-out",
+      "result": {
+        "version": "openpronounce-feedback-v1",
+        "experimental": true,
+        "reference": "bag",
+        "status": "uncertain",
+        "reason": "insufficient-evidence",
+        "feedback": [],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "bag",
+            "expected": "b",
+            "heard": "b",
+            "expectedPosterior": 0.91487,
+            "heardPosterior": 0.91487,
+            "state": "supported"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "bag",
+            "expected": "æ",
+            "heard": "a",
+            "expectedPosterior": 0.00988,
+            "heardPosterior": 0.45885,
+            "state": "uncertain"
+          },
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "bag",
+            "expected": "ɡ",
+            "heard": "k",
+            "expectedPosterior": 0.13235,
+            "heardPosterior": 0.8448,
+            "state": "uncertain"
+          }
+        ],
+        "transcript": "PACK",
+        "recognizedWordsMatch": false,
+        "diagnostics": {
+          "unconfirmedPhones": [
+            {
+              "target": "æ",
+              "index": 1
+            },
+            {
+              "target": "ɡ",
+              "index": 2
+            }
+          ]
+        },
+        "heardPhones": [
+          "b",
+          "a",
+          "k"
+        ],
+        "referencePhones": [
+          "b",
+          "æ",
+          "ɡ"
+        ],
+        "computeMs": 255.18,
+        "elapsedMs": 296
+      }
+    },
+    {
+      "id": "piper-lessac-bag-as-bag",
+      "file": "public/audio/piper-lessac/word-1276.mp3",
+      "sha256": "a70c2748fb2372148a228dc04646c6adf45c8f71c90df6bb8f495a122039f13f",
+      "reference": "bag",
+      "spokenFixture": "bag",
+      "expectedCorrect": true,
+      "split": "held-out",
+      "result": {
+        "version": "openpronounce-feedback-v1",
+        "experimental": true,
+        "reference": "bag",
+        "status": "uncertain",
+        "reason": "insufficient-evidence",
+        "feedback": [],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "bag",
+            "expected": "b",
+            "heard": "b",
+            "expectedPosterior": 0.71768,
+            "heardPosterior": 0.71768,
+            "state": "supported"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "bag",
+            "expected": "æ",
+            "heard": "a",
+            "expectedPosterior": 0.00938,
+            "heardPosterior": 0.4955,
+            "state": "uncertain"
+          },
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "bag",
+            "expected": "ɡ",
+            "heard": "ɡ",
+            "expectedPosterior": 0.94311,
+            "heardPosterior": 0.94311,
+            "state": "supported"
+          }
+        ],
+        "transcript": "BAG",
+        "recognizedWordsMatch": true,
+        "diagnostics": {
+          "unconfirmedPhones": [
+            {
+              "target": "æ",
+              "index": 1
+            }
+          ]
+        },
+        "heardPhones": [
+          "b",
+          "a",
+          "ɡ"
+        ],
+        "referencePhones": [
+          "b",
+          "æ",
+          "ɡ"
+        ],
+        "computeMs": 295.04,
+        "elapsedMs": 338
+      }
+    },
+    {
+      "id": "piper-lessac-bag-as-back",
+      "file": "public/audio/piper-lessac/word-1276.mp3",
+      "sha256": "a70c2748fb2372148a228dc04646c6adf45c8f71c90df6bb8f495a122039f13f",
+      "reference": "back",
+      "spokenFixture": "bag",
+      "expectedCorrect": false,
+      "split": "held-out",
+      "result": {
+        "version": "openpronounce-feedback-v1",
+        "experimental": true,
+        "reference": "back",
+        "status": "uncertain",
+        "reason": "insufficient-evidence",
+        "feedback": [],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "back",
+            "expected": "b",
+            "heard": "b",
+            "expectedPosterior": 0.71768,
+            "heardPosterior": 0.71768,
+            "state": "supported"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "back",
+            "expected": "æ",
+            "heard": "a",
+            "expectedPosterior": 0.00938,
+            "heardPosterior": 0.4955,
+            "state": "uncertain"
+          },
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "back",
+            "expected": "k",
+            "heard": "ɡ",
+            "expectedPosterior": 0.02734,
+            "heardPosterior": 0.94311,
+            "state": "uncertain"
+          }
+        ],
+        "transcript": "BAG",
+        "recognizedWordsMatch": false,
+        "diagnostics": {
+          "unconfirmedPhones": [
+            {
+              "target": "æ",
+              "index": 1
+            },
+            {
+              "target": "k",
+              "index": 2
+            }
+          ]
+        },
+        "heardPhones": [
+          "b",
+          "a",
+          "ɡ"
+        ],
+        "referencePhones": [
+          "b",
+          "æ",
+          "k"
+        ],
+        "computeMs": 273.12,
+        "elapsedMs": 316
+      }
+    },
+    {
+      "id": "piper-lessac-leave-as-leave",
+      "file": "public/audio/piper-lessac/word-2859.mp3",
+      "sha256": "48e772b15610f0c60c31ca7572c6721de465ad64dbe781da41535a0b98e882b4",
+      "reference": "leave",
+      "spokenFixture": "leave",
+      "expectedCorrect": true,
+      "split": "held-out",
+      "result": {
+        "version": "openpronounce-feedback-v1",
+        "experimental": true,
+        "reference": "leave",
+        "status": "practice",
+        "reason": "phoneme-substitution",
+        "feedback": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "leave",
+            "expected": "l",
+            "heard": "n",
+            "expectedPosterior": 0.00258,
+            "heardPosterior": 0.98919,
+            "state": "practice"
+          }
+        ],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "leave",
+            "expected": "l",
+            "heard": "n",
+            "expectedPosterior": 0.00258,
+            "heardPosterior": 0.98919,
+            "state": "practice"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "leave",
+            "expected": "i",
+            "heard": "əɪ",
+            "expectedPosterior": 0.15945,
+            "heardPosterior": 0.22291,
+            "state": "uncertain"
+          },
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "leave",
+            "expected": "v",
+            "heard": "ð",
+            "expectedPosterior": 0.34303,
+            "heardPosterior": 0.54176,
+            "state": "uncertain"
+          }
+        ],
+        "transcript": "LEAF",
+        "recognizedWordsMatch": false,
+        "diagnostics": {
+          "unconfirmedPhones": [
+            {
+              "target": "i",
+              "index": 1
+            },
+            {
+              "target": "v",
+              "index": 2
+            }
+          ]
+        },
+        "heardPhones": [
+          "n",
+          "əɪ",
+          "ð"
+        ],
+        "referencePhones": [
+          "l",
+          "i",
+          "v"
+        ],
+        "computeMs": 279.02,
+        "elapsedMs": 323
+      }
+    },
+    {
+      "id": "piper-lessac-leave-as-live",
+      "file": "public/audio/piper-lessac/word-2859.mp3",
+      "sha256": "48e772b15610f0c60c31ca7572c6721de465ad64dbe781da41535a0b98e882b4",
+      "reference": "live",
+      "spokenFixture": "leave",
+      "expectedCorrect": false,
+      "split": "held-out",
+      "result": {
+        "version": "openpronounce-feedback-v1",
+        "experimental": true,
+        "reference": "live",
+        "status": "practice",
+        "reason": "phoneme-substitution",
+        "feedback": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "live",
+            "expected": "l",
+            "heard": "n",
+            "expectedPosterior": 0.00258,
+            "heardPosterior": 0.98919,
+            "state": "practice"
+          }
+        ],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "live",
+            "expected": "l",
+            "heard": "n",
+            "expectedPosterior": 0.00258,
+            "heardPosterior": 0.98919,
+            "state": "practice"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "live",
+            "expected": "aɪ",
+            "heard": "əɪ",
+            "expectedPosterior": 0.00624,
+            "heardPosterior": 0.22291,
+            "state": "uncertain"
+          },
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "live",
+            "expected": "v",
+            "heard": "ð",
+            "expectedPosterior": 0.34303,
+            "heardPosterior": 0.54176,
+            "state": "uncertain"
+          }
+        ],
+        "transcript": "LEAF",
+        "recognizedWordsMatch": false,
+        "diagnostics": {
+          "unconfirmedPhones": [
+            {
+              "target": "aɪ",
+              "index": 1
+            },
+            {
+              "target": "v",
+              "index": 2
+            }
+          ]
+        },
+        "heardPhones": [
+          "n",
+          "əɪ",
+          "ð"
+        ],
+        "referencePhones": [
+          "l",
+          "aɪ",
+          "v"
+        ],
+        "computeMs": 287.63,
+        "elapsedMs": 333
+      }
+    },
+    {
+      "id": "piper-lessac-live-as-live",
+      "file": "public/audio/piper-lessac/word-1859.mp3",
+      "sha256": "72b495c5c5ccec10f52cbd08b7c90657679ed84efb19d2dcca7502aa07df44a7",
+      "reference": "live",
+      "spokenFixture": "live",
+      "expectedCorrect": true,
+      "split": "held-out",
+      "result": {
+        "version": "openpronounce-feedback-v1",
+        "experimental": true,
+        "reference": "live",
+        "status": "practice",
+        "reason": "phoneme-substitution",
+        "feedback": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "live",
+            "expected": "l",
+            "heard": "n",
+            "expectedPosterior": 0.00311,
+            "heardPosterior": 0.99037,
+            "state": "practice"
+          }
+        ],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "live",
+            "expected": "l",
+            "heard": "n",
+            "expectedPosterior": 0.00311,
+            "heardPosterior": 0.99037,
+            "state": "practice"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "live",
+            "expected": "aɪ",
+            "heard": "aɪ",
+            "expectedPosterior": 0.17631,
+            "heardPosterior": 0.17631,
+            "state": "supported"
+          },
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "live",
+            "expected": "v",
+            "heard": "v",
+            "expectedPosterior": 0.90762,
+            "heardPosterior": 0.90762,
+            "state": "supported"
+          }
+        ],
+        "transcript": "LIVE",
+        "recognizedWordsMatch": true,
+        "diagnostics": {
+          "unconfirmedPhones": []
+        },
+        "heardPhones": [
+          "n",
+          "aɪ",
+          "v"
+        ],
+        "referencePhones": [
+          "l",
+          "aɪ",
+          "v"
+        ],
+        "computeMs": 331.64,
+        "elapsedMs": 390
+      }
+    },
+    {
+      "id": "piper-lessac-live-as-leave",
+      "file": "public/audio/piper-lessac/word-1859.mp3",
+      "sha256": "72b495c5c5ccec10f52cbd08b7c90657679ed84efb19d2dcca7502aa07df44a7",
+      "reference": "leave",
+      "spokenFixture": "live",
+      "expectedCorrect": false,
+      "split": "held-out",
+      "result": {
+        "version": "openpronounce-feedback-v1",
+        "experimental": true,
+        "reference": "leave",
+        "status": "practice",
+        "reason": "phoneme-substitution",
+        "feedback": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "leave",
+            "expected": "l",
+            "heard": "n",
+            "expectedPosterior": 0.00311,
+            "heardPosterior": 0.99037,
+            "state": "practice"
+          }
+        ],
+        "phones": [
+          {
+            "index": 0,
+            "wordIndex": 0,
+            "word": "leave",
+            "expected": "l",
+            "heard": "n",
+            "expectedPosterior": 0.00311,
+            "heardPosterior": 0.99037,
+            "state": "practice"
+          },
+          {
+            "index": 1,
+            "wordIndex": 0,
+            "word": "leave",
+            "expected": "i",
+            "heard": "aɪ",
+            "expectedPosterior": 0.00608,
+            "heardPosterior": 0.17631,
+            "state": "uncertain"
+          },
+          {
+            "index": 2,
+            "wordIndex": 0,
+            "word": "leave",
+            "expected": "v",
+            "heard": "v",
+            "expectedPosterior": 0.90762,
+            "heardPosterior": 0.90762,
+            "state": "supported"
+          }
+        ],
+        "transcript": "LIVE",
+        "recognizedWordsMatch": false,
+        "diagnostics": {
+          "unconfirmedPhones": [
+            {
+              "target": "i",
+              "index": 1
+            }
+          ]
+        },
+        "heardPhones": [
+          "n",
+          "aɪ",
+          "v"
+        ],
+        "referencePhones": [
+          "l",
+          "i",
+          "v"
+        ],
+        "computeMs": 318.73,
+        "elapsedMs": 360
+      }
+    }
+  ],
+  "loadMs": 5289,
+  "controls": {
+    "silence": {
+      "version": "openpronounce-feedback-v1",
+      "experimental": true,
+      "reference": "hello",
+      "status": "uncertain",
+      "reason": "no-speech",
+      "feedback": [],
+      "phones": [],
+      "transcript": "",
+      "recognizedWordsMatch": null,
+      "diagnostics": {
+        "unconfirmedPhones": []
+      },
+      "computeMs": 0.35,
+      "elapsedMs": 46
+    },
+    "noise": {
+      "version": "openpronounce-feedback-v1",
+      "experimental": true,
+      "reference": "hello",
+      "status": "uncertain",
+      "reason": "no-clear-phones",
+      "feedback": [],
+      "phones": [],
+      "transcript": "",
+      "recognizedWordsMatch": null,
+      "diagnostics": {
+        "unconfirmedPhones": []
+      },
+      "heardPhones": [],
+      "computeMs": 172.11,
+      "elapsedMs": 215
+    },
+    "tone": {
+      "version": "openpronounce-feedback-v1",
+      "experimental": true,
+      "reference": "hello",
+      "status": "uncertain",
+      "reason": "no-clear-phones",
+      "feedback": [],
+      "phones": [],
+      "transcript": "",
+      "recognizedWordsMatch": null,
+      "diagnostics": {
+        "unconfirmedPhones": []
+      },
+      "heardPhones": [],
+      "computeMs": 171.74,
+      "elapsedMs": 215
+    }
+  },
+  "summary": {
+    "regression": {
+      "count": 24,
+      "medianMs": 502.5,
+      "normal": {
+        "supported": 14,
+        "practice": 0,
+        "uncertain": 0
+      },
+      "wrong": {
+        "supported": 0,
+        "practice": 10,
+        "uncertain": 0
+      }
+    },
+    "held-out": {
+      "count": 72,
+      "medianMs": 478.0,
+      "normal": {
+        "supported": 12,
+        "practice": 3,
+        "uncertain": 21
+      },
+      "wrong": {
+        "supported": 0,
+        "practice": 21,
+        "uncertain": 15
+      }
+    }
+  },
+  "status": "completed-screening-not-production"
+}

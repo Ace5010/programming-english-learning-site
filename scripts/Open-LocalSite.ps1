@@ -4,6 +4,31 @@ $ErrorActionPreference = 'Stop'
 $projectRoot = Split-Path $PSScriptRoot -Parent
 $siteUrl = 'http://localhost:5186/'
 $logDirectory = Join-Path $env:LOCALAPPDATA 'CodeWords-Local'
+$speechUrl = 'http://127.0.0.1:18768/health'
+
+function Test-SenseVoiceReady {
+    try {
+        $health = Invoke-RestMethod -Uri $speechUrl -TimeoutSec 2
+        if ($health.ready -ne $true -or $health.engine -ne 'sensevoice-asr-trial-v1') { return $false }
+        $session = Invoke-RestMethod -Uri 'http://127.0.0.1:18768/api/course-session' -Headers @{ Origin = 'http://localhost:5186' } -TimeoutSec 2
+        return ($session.ready -eq $true -and $session.engine -eq 'sensevoice-asr-trial-v1')
+    } catch { return $false }
+}
+
+function Start-LocalSenseVoice {
+    if (Test-SenseVoiceReady) { return }
+    $python = Join-Path $projectRoot '.runtime\pronunciation\mdd-venv\Scripts\python.exe'
+    $serverScript = Join-Path $projectRoot 'tools\serve_pronunciation_lab.py'
+    if (-not (Test-Path -LiteralPath $python)) { return }
+    $listener = Get-NetTCPConnection -LocalAddress '127.0.0.1' -LocalPort 18768 -State Listen -ErrorAction SilentlyContinue
+    if ($listener) { return }
+    New-Item -ItemType Directory -Path $logDirectory -Force | Out-Null
+    $speech = Start-Process -FilePath $python -ArgumentList @(('"{0}"' -f $serverScript), '--engine', 'sensevoice', '--port', '18768') -WorkingDirectory $projectRoot -WindowStyle Hidden -RedirectStandardOutput (Join-Path $logDirectory 'speech.log') -RedirectStandardError (Join-Path $logDirectory 'speech-error.log') -PassThru
+    $deadline = (Get-Date).AddSeconds(20)
+    while (-not (Test-SenseVoiceReady) -and -not $speech.HasExited -and (Get-Date) -lt $deadline) {
+        Start-Sleep -Milliseconds 400
+    }
+}
 
 function Test-SiteReady {
     try {
@@ -28,6 +53,7 @@ try {
             Start-Sleep -Milliseconds 300
         }
     }
+    Start-LocalSenseVoice
     if (-not $CheckOnly) {
         $chromePaths = @(
             (Join-Path $env:ProgramFiles 'Google\Chrome\Application\chrome.exe'),

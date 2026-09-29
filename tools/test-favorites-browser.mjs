@@ -13,7 +13,7 @@ const require = createRequire(import.meta.url);
 const { chromium } = require(process.env.CODEWORDS_PLAYWRIGHT || 'C:/Users/shenwuqiang/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
 const baseURL = process.env.CODEWORDS_TEST_URL || 'http://localhost:5186/';
 assert.match(baseURL, /^https?:\/\/(localhost|127\.0\.0\.1)(:|\/)/);
-const output = path.resolve('artifacts/favorites');
+const output = path.resolve('artifacts/palette-rollout/favorites');
 const earned = JSON.parse(await readFile('artifacts/adaptive-course/earned-fixtures.json', 'utf8'));
 const word = vocabulary[0], secondWord = vocabulary[1], phrase = dailyPhrases[0], secondPhrase = dailyPhrases[1];
 const favoriteKey = 'codewords-favorites';
@@ -114,7 +114,7 @@ scenario('saved word favorites are visible independently of library filters', {}
 });
 
 scenario('saved expression favorites preserve learning records and survive refresh', {}, async ({ page }) => {
-  await section(page, '日常英语'); await go(page, '表达库');
+  await section(page, '日常英语'); await go(page, '词汇库');
   await daily(page).getByLabel('查找表达').fill('no-such-expression-filter');
   await daily(page).getByLabel('显示内容').selectOption('learned');
   await go(page, '收藏');
@@ -128,7 +128,7 @@ scenario('saved expression favorites preserve learning records and survive refre
   assert.equal(await daily(page).locator('.daily-expression').count(), 2);
   await daily(page).getByRole('button', { name: `取消收藏 ${phrase.en}`, exact: true }).click();
   await daily(page).getByRole('button', { name: `取消收藏 ${secondPhrase.en}`, exact: true }).click();
-  await daily(page).getByRole('heading', { name: '还没有收藏表达', exact: true }).waitFor();
+  await daily(page).getByRole('heading', { name: '还没有收藏词汇', exact: true }).waitFor();
   const after = await read(page, DAILY_KEY);
   assert.deepEqual(after.favorites, ['historical-expression']);
   const { revision: oldRevision, favorites: oldFavorites, ...oldEvidence } = before;
@@ -136,7 +136,7 @@ scenario('saved expression favorites preserve learning records and survive refre
   assert.deepEqual(newEvidence, oldEvidence);
   assert.equal(await raw(page, PROGRAMMING_COURSE_KEY), programmingBefore);
   assert.equal(await raw(page, favoriteKey), wordFavorites);
-  await daily(page).getByRole('button', { name: '去表达库收藏', exact: true }).click();
+  await daily(page).getByRole('button', { name: '去词汇库收藏', exact: true }).click();
   assert.equal(await daily(page).getByLabel('查找表达').inputValue(), 'no-such-expression-filter');
   await daily(page).getByLabel('查找表达').fill(''); await daily(page).getByLabel('显示内容').selectOption('all');
   await daily(page).getByRole('button', { name: `收藏 ${phrase.en}`, exact: true }).click();
@@ -149,7 +149,7 @@ for (const name of ['编程英语', '日常英语']) scenario(`${name} course dr
   await section(page, name);
   const scope = page.locator(name === '日常英语' ? '#daily-content' : '#programming-content');
   const key = name === '日常英语' ? DAILY_KEY : PROGRAMMING_COURSE_KEY;
-  await scope.locator('.daily-lesson-row').getByRole('button').click();
+  await scope.locator('.course-start').getByRole('button').click();
   await scope.locator('.daily-study-card').getByRole('button', { name: '开始练习', exact: true }).click();
   await scope.locator('.daily-question .daily-option').first().click();
   const before = (await read(page, key)).session;
@@ -157,8 +157,7 @@ for (const name of ['编程英语', '日常英语']) scenario(`${name} course dr
   await go(page, '收藏');
   assert.equal(await scope.locator('.daily-question:visible').count(), 0);
   await go(page, '课程');
-  // Re-activating programming resumes immediately; the daily page keeps its explicit resume entry.
-  if (!await scope.locator('.daily-question').isVisible()) await scope.locator('.daily-resume').getByRole('button', { name: '继续', exact: true }).click();
+  if (!await scope.locator('.daily-question').isVisible()) await scope.locator('.course-start').getByRole('button', { name: '继续学习', exact: true }).click();
   assert.deepEqual((await read(page, key)).session, before);
   assert.equal(await scope.locator('.daily-question').getByRole('button', { name: before.draft.choice, exact: true }).getAttribute('aria-pressed'), 'true');
 });
@@ -178,8 +177,8 @@ scenario('favorites pagination exposes every saved word and damaged records rema
 });
 
 for (const width of [1440, 390, 320]) scenario(`favorites navigation and local controls fit all themes at ${width}px`, { width }, async ({ page }) => {
-  for (const theme of ['minimal', 'sketch', 'print', 'graffiti']) {
-    await page.getByLabel('界面风格', { exact: true }).selectOption(theme);
+  for (const theme of ['lagoon', 'pearl', 'sky', 'mint']) {
+    await page.getByLabel('界面配色', { exact: true }).selectOption(theme);
     for (const [name, scope] of [['编程英语', words(page)], ['日常英语', daily(page)]]) {
       await section(page, name); await go(page, '收藏');
       await scope.locator('h1').waitFor();

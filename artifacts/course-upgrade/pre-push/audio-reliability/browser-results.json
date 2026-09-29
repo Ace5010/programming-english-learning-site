@@ -1,0 +1,294 @@
+{
+  "results": [
+    {
+      "scenario": "first audio click in a fresh browser context",
+      "voice": "aria",
+      "word": "repository",
+      "completed": true
+    },
+    {
+      "scenario": "first audio click in a fresh browser context",
+      "voice": "aria",
+      "word": "project",
+      "completed": true
+    },
+    {
+      "scenario": "first audio click in a fresh browser context",
+      "voice": "aria",
+      "word": "code",
+      "completed": true
+    },
+    {
+      "scenario": "first audio click in a fresh browser context",
+      "voice": "aria",
+      "word": "readme",
+      "completed": true
+    },
+    {
+      "scenario": "first audio click in a fresh browser context",
+      "voice": "guy",
+      "word": "repository",
+      "completed": true
+    },
+    {
+      "scenario": "first audio click in a fresh browser context",
+      "voice": "guy",
+      "word": "project",
+      "completed": true
+    },
+    {
+      "scenario": "first audio click in a fresh browser context",
+      "voice": "guy",
+      "word": "code",
+      "completed": true
+    },
+    {
+      "scenario": "first audio click in a fresh browser context",
+      "voice": "guy",
+      "word": "readme",
+      "completed": true
+    },
+    {
+      "voice": "aria",
+      "text": "repository",
+      "rate": 1,
+      "completed": true
+    },
+    {
+      "voice": "aria",
+      "text": "repository",
+      "rate": 0.72,
+      "completed": true
+    },
+    {
+      "voice": "aria",
+      "text": "Open this repository.",
+      "rate": 1,
+      "completed": true
+    },
+    {
+      "voice": "aria",
+      "text": "Open this repository.",
+      "rate": 0.72,
+      "completed": true
+    },
+    {
+      "voice": "aria",
+      "text": "project",
+      "rate": 1,
+      "completed": true
+    },
+    {
+      "voice": "aria",
+      "text": "project",
+      "rate": 0.72,
+      "completed": true
+    },
+    {
+      "voice": "aria",
+      "text": "Open this project.",
+      "rate": 1,
+      "completed": true
+    },
+    {
+      "voice": "aria",
+      "text": "Open this project.",
+      "rate": 0.72,
+      "completed": true
+    },
+    {
+      "voice": "aria",
+      "text": "code",
+      "rate": 1,
+      "completed": true
+    },
+    {
+      "voice": "aria",
+      "text": "code",
+      "rate": 0.72,
+      "completed": true
+    },
+    {
+      "voice": "aria",
+      "text": "Read this code.",
+      "rate": 1,
+      "completed": true
+    },
+    {
+      "voice": "aria",
+      "text": "Read this code.",
+      "rate": 0.72,
+      "completed": true
+    },
+    {
+      "voice": "aria",
+      "text": "readme",
+      "rate": 1,
+      "completed": true
+    },
+    {
+      "voice": "aria",
+      "text": "readme",
+      "rate": 0.72,
+      "completed": true
+    },
+    {
+      "voice": "aria",
+      "text": "Read the README for help.",
+      "rate": 1,
+      "completed": true
+    },
+    {
+      "voice": "aria",
+      "text": "Read the README for help.",
+      "rate": 0.72,
+      "completed": true
+    },
+    {
+      "voice": "guy",
+      "text": "repository",
+      "rate": 1,
+      "completed": true
+    },
+    {
+      "voice": "guy",
+      "text": "repository",
+      "rate": 0.72,
+      "completed": true
+    },
+    {
+      "voice": "guy",
+      "text": "Open this repository.",
+      "rate": 1,
+      "completed": true
+    },
+    {
+      "voice": "guy",
+      "text": "Open this repository.",
+      "rate": 0.72,
+      "completed": true
+    },
+    {
+      "voice": "guy",
+      "text": "project",
+      "rate": 1,
+      "completed": true
+    },
+    {
+      "voice": "guy",
+      "text": "project",
+      "rate": 0.72,
+      "completed": true
+    },
+    {
+      "voice": "guy",
+      "text": "Open this project.",
+      "rate": 1,
+      "completed": true
+    },
+    {
+      "voice": "guy",
+      "text": "Open this project.",
+      "rate": 0.72,
+      "completed": true
+    },
+    {
+      "voice": "guy",
+      "text": "code",
+      "rate": 1,
+      "completed": true
+    },
+    {
+      "voice": "guy",
+      "text": "code",
+      "rate": 0.72,
+      "completed": true
+    },
+    {
+      "voice": "guy",
+      "text": "Read this code.",
+      "rate": 1,
+      "completed": true
+    },
+    {
+      "voice": "guy",
+      "text": "Read this code.",
+      "rate": 0.72,
+      "completed": true
+    },
+    {
+      "voice": "guy",
+      "text": "readme",
+      "rate": 1,
+      "completed": true
+    },
+    {
+      "voice": "guy",
+      "text": "readme",
+      "rate": 0.72,
+      "completed": true
+    },
+    {
+      "voice": "guy",
+      "text": "Read the README for help.",
+      "rate": 1,
+      "completed": true
+    },
+    {
+      "voice": "guy",
+      "text": "Read the README for help.",
+      "rate": 0.72,
+      "completed": true
+    },
+    {
+      "scenario": "1.2-second loading delay plus 3 taps still completes once"
+    },
+    {
+      "scenario": "navigation stops playback; returning to the saved lesson can play again"
+    },
+    {
+      "scenario": "returning to an earlier word and repeating normal/slow",
+      "word": "repository",
+      "rate": 1,
+      "completed": true
+    },
+    {
+      "scenario": "returning to an earlier word and repeating normal/slow",
+      "word": "project",
+      "rate": 1,
+      "completed": true
+    },
+    {
+      "scenario": "returning to an earlier word and repeating normal/slow",
+      "word": "repository",
+      "rate": 1,
+      "completed": true
+    },
+    {
+      "scenario": "returning to an earlier word and repeating normal/slow",
+      "word": "code",
+      "rate": 1,
+      "completed": true
+    },
+    {
+      "scenario": "returning to an earlier word and repeating normal/slow",
+      "word": "code",
+      "rate": 0.72,
+      "completed": true
+    },
+    {
+      "scenario": "returning to an earlier word and repeating normal/slow",
+      "word": "code",
+      "rate": 1,
+      "completed": true
+    },
+    {
+      "scenario": "returning to an earlier word and repeating normal/slow",
+      "word": "code",
+      "rate": 1,
+      "completed": true
+    }
+  ],
+  "errors": [],
+  "note": "Real MP3 browser playback; no claim of hearing the device speaker."
+}

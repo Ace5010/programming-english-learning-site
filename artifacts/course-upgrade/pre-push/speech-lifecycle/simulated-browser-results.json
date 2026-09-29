@@ -1,0 +1,42 @@
+{
+  "input": "simulated recognition events",
+  "results": [
+    {
+      "name": "no automatic microphone; only final results save; mismatch and reread",
+      "passed": true
+    },
+    {
+      "name": "permission, network and silence errors are actionable and do not add wrong answers",
+      "passed": true
+    },
+    {
+      "name": "manual stop retains a late final result without calling stop twice",
+      "passed": true
+    },
+    {
+      "name": "theme preserves listening; mode, section and page exit abort and ignore late events",
+      "passed": true
+    },
+    {
+      "name": "free expression is editable and a different name is not marked wrong",
+      "passed": true
+    },
+    {
+      "name": "unsupported browser keeps an explicit self-expression path",
+      "passed": true
+    },
+    {
+      "name": "late local availability does not relabel an active remote recognition",
+      "passed": true
+    },
+    {
+      "name": "cancelling a pending start and another-tab changes stop capture",
+      "passed": true
+    },
+    {
+      "name": "waiting for permissions times out without fabricated audio or progress",
+      "passed": true
+    }
+  ],
+  "errors": []
+}

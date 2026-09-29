@@ -1,5 +1,5 @@
 // Shared by the browser and Pages Function. Existing storage keys/formats stay intact.
-export const SYNC_KEYS = ['codewords-mastered', 'codewords-favorites', 'codewords-quiz-last-tested', 'codewords-quiz-sessions', 'codewords-best-score', 'codewords-review-v1', 'codewords-programming-course-v1', 'codewords-daily-v1'] as const;
+export const SYNC_KEYS = ['codewords-mastered', 'codewords-favorites', 'codewords-quiz-last-tested', 'codewords-quiz-sessions', 'codewords-best-score', 'codewords-review-v1', 'codewords-programming-course-v1', 'codewords-daily-v1', 'codewords-foundation-v1'] as const;
 export type SyncKey = typeof SYNC_KEYS[number];
 export type Snapshot = Record<SyncKey, string | null>;
 export const SYNC_LIMIT = 8 * 1024 * 1024;
@@ -7,9 +7,12 @@ export const emptySnapshot = (): Snapshot => Object.fromEntries(SYNC_KEYS.map(ke
 export function assertSnapshot(value: unknown): asserts value is Snapshot {
   if (!value || typeof value !== 'object' || Array.isArray(value)) throw new Error('同步记录格式无效。');
   const entries = Object.entries(value);
-  if (entries.length !== SYNC_KEYS.length || entries.some(([key, raw]) => !SYNC_KEYS.includes(key as SyncKey) || raw !== null && typeof raw !== 'string')) throw new Error('同步记录包含不支持的字段。');
+  const legacy = !Object.prototype.hasOwnProperty.call(value, 'codewords-foundation-v1');
+  if (entries.length !== SYNC_KEYS.length - Number(legacy) || entries.some(([key, raw]) => !SYNC_KEYS.includes(key as SyncKey) || raw !== null && typeof raw !== 'string')) throw new Error('同步记录包含不支持的字段。');
   if (new TextEncoder().encode(JSON.stringify(value)).length > SYNC_LIMIT) throw new Error('记录超过同步容量，现有记录仍保留。');
   for (const [, raw] of entries) if (raw !== null) JSON.parse(raw as string);
+  // Older stored snapshots remain readable without touching their course data.
+  if (legacy) (value as Record<string, unknown>)['codewords-foundation-v1'] = null;
 }
 export function normalizeSyncCode(value: string) { return value.replace(/[\s-]/g, '').toLowerCase(); }
 export function validSyncCode(value: string) { return /^[a-f0-9]{64}$/.test(value); }
@@ -24,6 +27,7 @@ export const sameSnapshot = (a: Snapshot, b: Snapshot) => SYNC_KEYS.every(key =>
 const groups: { name: string; keys: SyncKey[] }[] = [
   { name: '编程课程和复习', keys: ['codewords-mastered', 'codewords-review-v1', 'codewords-programming-course-v1', 'codewords-quiz-last-tested', 'codewords-quiz-sessions', 'codewords-best-score'] },
   { name: '日常英语', keys: ['codewords-daily-v1'] },
+  { name: '英语基础', keys: ['codewords-foundation-v1'] },
 ];
 function vacant(key: SyncKey, raw: string | null) {
   if (raw === null) return true;

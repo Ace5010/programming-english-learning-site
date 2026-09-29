@@ -14,7 +14,7 @@ const require = createRequire(import.meta.url);
 const { chromium } = require(process.env.CODEWORDS_PLAYWRIGHT || 'C:/Users/shenwuqiang/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
 const baseURL = process.env.CODEWORDS_TEST_URL || 'http://localhost:5186/';
 assert.match(baseURL, /^https?:\/\/(localhost|127\.0\.0\.1)(:|\/)/);
-const output = path.resolve('artifacts/review-page');
+const output = path.resolve('artifacts/palette-rollout/review-page');
 const earned = JSON.parse(await readFile('artifacts/adaptive-course/earned-fixtures.json', 'utf8')).programming;
 const course = JSON.parse(earned.course);
 assert.equal(parseDailyProgress(earned.course, adaptiveProgrammingLessons).writable, true);
@@ -46,7 +46,7 @@ const loadedApplicationScripts = new Set();
 const raw = (page, key) => page.evaluate(key => localStorage.getItem(key), key);
 const read = async (page, key) => JSON.parse(await raw(page, key));
 async function navigate(page, name) { await page.getByRole('navigation', { name: '学习导航' }).getByRole('button', { name, exact: true }).click(); }
-const themes = ['minimal', 'sketch', 'print', 'graffiti'];
+const themes = ['lagoon', 'pearl', 'sky', 'mint'];
 let browser;
 async function open({ state = seed, width = 1440 } = {}) {
   const context = await browser.newContext({ viewport: { width, height: width < 600 ? 844 : 1000 }, reducedMotion: 'reduce' });
@@ -169,7 +169,7 @@ scenario('single word practice preserves selected answer across themes and chang
   const count = await page.locator('.lesson-count').innerText();
   const options = await page.locator('.lesson-option').allTextContents();
   for (const theme of themes) {
-    await page.locator('.lesson-overlay').getByLabel('界面风格', { exact: true }).selectOption(theme);
+    await page.locator('.lesson-overlay').getByLabel('界面配色', { exact: true }).selectOption(theme);
     assert.equal(await option.getAttribute('aria-pressed'), 'true');
     assert.equal(await page.locator('.lesson-count').innerText(), count);
     assert.deepEqual(await page.locator('.lesson-option').allTextContents(), options);
@@ -197,6 +197,13 @@ scenario('filtered practice uses only matching words; batch practice remains cap
   await closeQuiz(page);
   assert.equal(await page.getByLabel('搜索已学词汇', { exact: true }).inputValue(), 'fork');
   await page.getByRole('button', { name: '清除已学词搜索', exact: true }).click();
+  await panel(page).getByRole('button', { name: '练习已学词', exact: true }).click();
+  await page.locator('.lesson-overlay').waitFor();
+  // A broader pool must resume the unfinished single-word session first.
+  assert.match(await page.locator('.lesson-context').innerText(), /本轮 1 个词/);
+  for (let step = 0; step < 20 && await page.locator('.lesson-exercise').isVisible(); step++) await answerWord(page, vocabulary.find(word => word.id === 5));
+  assert.equal(await page.locator('.lesson-exercise').isVisible(), false);
+  await closeQuiz(page);
   await panel(page).getByRole('button', { name: '练习已学词', exact: true }).click();
   await page.locator('.lesson-overlay').waitFor();
   assert.match(await page.locator('.lesson-context').innerText(), /本轮 5 个词/);
@@ -257,10 +264,10 @@ scenario('scene practice opens and its draft survives the word list, overlay, th
   await row(page, admitted[0].id).getByRole('button', { name: `练习 ${admitted[0].word}`, exact: true }).click();
   await page.locator('.lesson-overlay').waitFor(); await closeQuiz(page);
   assert.deepEqual((await read(page, PROGRAMMING_COURSE_KEY)).session, saved.session);
-  await page.getByLabel('界面风格', { exact: true }).selectOption('sketch');
+  await page.getByLabel('界面配色', { exact: true }).selectOption('pearl');
   await page.getByRole('button', { name: '日常英语', exact: true }).click();
   await navigate(page, '复习');
-  await page.locator('#daily-content').getByRole('heading', { name: '先学习当前课程', exact: true }).waitFor();
+  await page.locator('#daily-content').getByRole('heading', { name: '暂无可复习的词汇', exact: true }).waitFor();
   assert.equal(await page.locator('#daily-content .review-vocabulary').count(), 0, 'Daily review retains its own UI');
   await page.getByRole('button', { name: '编程英语', exact: true }).click();
   if (!await page.locator('#programming-content .daily-question').isVisible()) await page.locator('#programming-content .daily-resume').getByRole('button', { name: '继续', exact: true }).click();
@@ -280,7 +287,7 @@ scenario('empty admission pool has a usable course entry without fake mastered w
   assert.equal(await panel(page).getByRole('button', { name: '开始到期复习', exact: true }).isDisabled(), true);
   assert.equal(await panel(page).getByRole('button', { name: '练习已学词', exact: true }).isDisabled(), true);
   await panel(page).getByRole('button', { name: '去学习当前课程', exact: true }).click();
-  await page.locator('#programming-content .daily-lesson-row').getByRole('button', { name: '开始学习', exact: true }).waitFor();
+  await page.locator('#programming-content .course-start').getByRole('button', { name: '开始学习', exact: true }).waitFor();
 });
 
 scenario('last weak word leaves the filtered list and closing practice focuses the search box', {}, async ({ page }) => {
@@ -346,7 +353,7 @@ scenario('long lists load in pages and remain reachable by scrolling', { state: 
 for (const width of [1440, 390, 768, 900]) scenario(`four styles at ${width}px show words in the first viewport with no horizontal overflow`, { width }, async ({ page }) => {
   const positions = [];
   for (const theme of themes) {
-    await page.getByLabel('界面风格', { exact: true }).selectOption(theme);
+    await page.getByLabel('界面配色', { exact: true }).selectOption(theme);
     await page.evaluate(() => scrollTo({ top: 0, behavior: 'instant' }));
     await noOverflow(page);
     const first = await rows(page).first().locator('.word-button').boundingBox();

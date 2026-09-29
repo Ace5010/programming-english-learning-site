@@ -1,0 +1,92 @@
+{
+  "date": "2026-09-25",
+  "source": "public\\audio\\daily\\aria\\goodbye.mp3",
+  "scope": "public synthetic audio only; not user microphone audio",
+  "engine": "openpronounce-feedback-v2",
+  "rows": [
+    {
+      "condition": "original",
+      "seconds": 1.608,
+      "status": "supported",
+      "transcript": "GOOD BYE",
+      "heardPhones": [
+        "ɡ",
+        "ə",
+        "d",
+        "b",
+        "aɪ"
+      ],
+      "elapsedMs": 547
+    },
+    {
+      "condition": "gain-minus-12db",
+      "seconds": 1.608,
+      "status": "supported",
+      "transcript": "GOOD BYE",
+      "heardPhones": [
+        "ɡ",
+        "ə",
+        "d",
+        "b",
+        "aɪ"
+      ],
+      "elapsedMs": 542
+    },
+    {
+      "condition": "gain-plus-6db",
+      "seconds": 1.608,
+      "status": "supported",
+      "transcript": "GOOD BYE",
+      "heardPhones": [
+        "ɡ",
+        "ə",
+        "d",
+        "b",
+        "aɪ"
+      ],
+      "elapsedMs": 532
+    },
+    {
+      "condition": "silence-2s-each",
+      "seconds": 5.608,
+      "status": "supported",
+      "transcript": "GOOD BYE",
+      "heardPhones": [
+        "ɡ",
+        "ə",
+        "d",
+        "b",
+        "aɪ"
+      ],
+      "elapsedMs": 1283
+    },
+    {
+      "condition": "silence-6s-each",
+      "seconds": 13.608,
+      "status": "supported",
+      "transcript": "GOODBY",
+      "heardPhones": [
+        "k",
+        "ʉ",
+        "d",
+        "b",
+        "aɪ"
+      ],
+      "elapsedMs": 3088
+    },
+    {
+      "condition": "noise-minus-40db",
+      "seconds": 1.608,
+      "status": "supported",
+      "transcript": "GOOD BYE",
+      "heardPhones": [
+        "ɡ",
+        "ə",
+        "d",
+        "b",
+        "aɪ"
+      ],
+      "elapsedMs": 569
+    }
+  ]
+}

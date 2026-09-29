@@ -1,0 +1,10 @@
+--------- beginning of main
+I/CodeWordsAudio( 6829): queue audio-13 clips=4 rate=0.72
+I/CodeWordsAudio( 6829): playing audio-13 elapsed_ms=55 position_ms=59 clip=0 rate=0.72
+I/CodeWordsAudio( 6829): stopped audio-13 elapsed_ms=167 position_ms=141 clip=0 rate=0.72
+I/CodeWordsAudio( 6829): queue audio-1 clips=4 rate=0.72
+I/CodeWordsAudio( 6829): playing audio-1 elapsed_ms=40 position_ms=44 clip=0 rate=0.72
+I/CodeWordsAudio( 6829): stopped audio-1 elapsed_ms=165 position_ms=134 clip=0 rate=0.72
+I/CodeWordsAudio( 6829): queue audio-2 clips=11 rate=0.72
+I/CodeWordsAudio( 6829): playing audio-2 elapsed_ms=40 position_ms=43 clip=0 rate=0.72
+I/CodeWordsAudio( 6829): stopped audio-2 elapsed_ms=99 position_ms=85 clip=0 rate=0.72

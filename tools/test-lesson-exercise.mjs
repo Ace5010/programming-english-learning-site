@@ -1,7 +1,7 @@
 // Run: node --test tools/test-lesson-exercise.mjs
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { readFileSync } from 'node:fs';
+import { readFileSync, existsSync } from 'node:fs';
 import { createRequire } from 'node:module';
 import { createElement } from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
@@ -10,12 +10,20 @@ import ts from 'typescript';
 const modules = new Map();
 function loadTsx(url) {
   if (modules.has(url.href)) return modules.get(url.href);
+  if (url.pathname.endsWith('.css')) return {};
+  if (url.pathname.endsWith('.json')) return JSON.parse(readFileSync(url, 'utf8'));
   const require = createRequire(url);
   const compiled = ts.transpileModule(readFileSync(url, 'utf8'), {
-    compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2020, jsx: ts.JsxEmit.ReactJSX },
+    compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2020, jsx: ts.JsxEmit.ReactJSX, esModuleInterop: true },
   }).outputText;
   const loaded = { exports: {} };
-  const localRequire = name => name.startsWith('.') ? loadTsx(new URL(`${name}.tsx`, url)) : require(name);
+  const localRequire = name => {
+    if (!name.startsWith('.')) return require(name);
+    const candidates = /\.(tsx?|json|css)$/.test(name) ? [name] : [`${name}.tsx`, `${name}.ts`];
+    const resolved = candidates.map(candidate => new URL(candidate, url)).find(candidate => existsSync(candidate));
+    if (!resolved) throw new Error(`Missing test import: ${name}`);
+    return loadTsx(resolved);
+  };
   new Function('require', 'exports', 'module', compiled)(localRequire, loaded.exports, loaded);
   modules.set(url.href, loaded.exports);
   return loaded.exports;

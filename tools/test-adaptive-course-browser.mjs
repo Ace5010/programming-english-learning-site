@@ -446,7 +446,7 @@ try {
         await env.page.waitForFunction(({ start, voice, type, id }) => window.__adaptiveAudio.events.slice(start).some(event => event.type === 'playing' && event.src.includes(`/audio/${voice}/${type}-${id}.mp3`) && event.duration > 0), { start, voice, type, id: word.id });
       }
       await env.page.getByRole('button', { name: '日常英语', exact: true }).click();
-      await navigate(env.page, '表达库');
+      await navigate(env.page, '词汇库');
       await root({ ...env, config: configs.daily }).getByLabel('查找表达').fill('Hello!');
       await env.page.getByRole('button', { name: '朗读 Hello!', exact: true }).click();
       await env.page.waitForFunction(voice => window.__adaptiveAudio.events.some(event => event.type === 'playing' && event.src.includes(`/audio/daily/${voice}/hello.mp3`) && event.duration > 0), voice);
@@ -468,7 +468,7 @@ try {
       await env.page.screenshot({ path: path.join(output, `${section}-exercise-${theme}-${width}.png`) });
       await navigate(env.page, '复习'); await noOverflow(env.page);
       await env.page.screenshot({ path: path.join(output, `${section}-review-${theme}-${width}.png`) });
-      await navigate(env.page, section === 'programming' ? '词汇库' : '表达库'); await noOverflow(env.page);
+      await navigate(env.page, section === 'programming' ? '词汇库' : '词汇库'); await noOverflow(env.page);
       await navigate(env.page, '课程'); await resume(env);
     }
   });

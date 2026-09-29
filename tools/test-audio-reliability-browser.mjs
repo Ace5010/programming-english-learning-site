@@ -2,10 +2,12 @@
 import assert from 'node:assert/strict';
 import { createRequire } from 'node:module';
 import { mkdir, writeFile } from 'node:fs/promises';
+import path from 'node:path';
 const require = createRequire(import.meta.url);
 const { chromium } = require(process.env.CODEWORDS_PLAYWRIGHT || 'C:/Users/shenwuqiang/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
 const browser = await chromium.launch({ channel: 'chrome', headless: true });
 const results = [], errors = [];
+const output = path.resolve(process.env.CODEWORDS_ARTIFACT_DIR || 'artifacts/audio-reliability');
 const base = process.env.CODEWORDS_TEST_URL || 'http://127.0.0.1:5186';
 async function open(voice, delayed = false) {
   const context = await browser.newContext({ viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true });
@@ -82,7 +84,7 @@ try {
     results.push({ scenario: 'returning to an earlier word and repeating normal/slow', word, rate: slow ? .72 : 1, completed: true });
   }
   await context.close(); assert.deepEqual(errors, []);
-  await mkdir('artifacts/audio-reliability', { recursive: true });
-  await writeFile('artifacts/audio-reliability/browser-results.json', JSON.stringify({ results, errors, note: 'Real MP3 browser playback; no claim of hearing the device speaker.' }, null, 2));
+  await mkdir(output, { recursive: true });
+  await writeFile(path.join(output, 'browser-results.json'), JSON.stringify({ results, errors, note: 'Real MP3 browser playback; no claim of hearing the device speaker.' }, null, 2));
   console.log(`PASS ${results.length} reliability cases`);
 } finally { await browser.close(); }

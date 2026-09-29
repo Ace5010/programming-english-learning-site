@@ -1,0 +1,11 @@
+{
+  "host": "soe.cloud.tencent.com",
+  "interfaceIndex": 9,
+  "proxy": false,
+  "tlsCertificateVerified": true,
+  "tlsVersion": "TLSv1.2",
+  "tcpAndTlsMs": 1084,
+  "audioUploaded": false,
+  "assessmentRequests": 0,
+  "note": "Transport reachability only, not evaluation latency; current system DNS"
+}

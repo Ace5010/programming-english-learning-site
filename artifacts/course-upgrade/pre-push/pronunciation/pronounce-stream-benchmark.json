@@ -1,0 +1,3823 @@
+{
+  "candidate": "pronounce-stream",
+  "device": "CPU Ryzen 5 7500F, 6 torch threads",
+  "torch": "2.14.0+cpu",
+  "offline": true,
+  "audioPcm": "16kHz mono int16 -> float32",
+  "modelLoadMs": 3818.328300025314,
+  "firstEvaluationMs": 384.15870000608265,
+  "repeats": 2,
+  "timing": "Full available waveform/chunks processed unpaced, including native prosody if present; excludes audio decoding and recording.",
+  "cases": [
+    {
+      "id": "aria-hello-as-hello",
+      "file": "public/audio/daily/aria/hello.mp3",
+      "sha256": "d647bdc233e2be048fef5c9c34d03d6ed22e66cb4031f23d9703eef01495bf5b",
+      "reference": "hello",
+      "spokenFixture": "hello",
+      "expectedCorrect": true,
+      "repeat": 0,
+      "computeMs": 169.96,
+      "result": {
+        "referencePhones": [
+          "h",
+          "ɛ",
+          "l",
+          "oʊ"
+        ],
+        "events": [
+          {
+            "phoneme": "h",
+            "position": 0,
+            "label": "correct",
+            "decoded": "h",
+            "target_logit": 8.714834213256836,
+            "decoded_logit": 8.714834213256836,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "ɛ",
+            "position": 1,
+            "label": "correct",
+            "decoded": "æ",
+            "target_logit": 5.8228020668029785,
+            "decoded_logit": 6.170995712280273,
+            "gop": 0.7059621810913086,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "l",
+            "position": 2,
+            "label": "correct",
+            "decoded": "l",
+            "target_logit": 9.651777267456055,
+            "decoded_logit": 9.651777267456055,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "oʊ",
+            "position": 3,
+            "label": "correct",
+            "decoded": "oʊ",
+            "target_logit": 7.478153705596924,
+            "decoded_logit": 7.478153705596924,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": null,
+            "position": null,
+            "label": "prosody",
+            "decoded": null,
+            "target_logit": null,
+            "decoded_logit": null,
+            "gop": null,
+            "monotony_score": 0.65,
+            "rhythm_score": null,
+            "boundary_score": 1.0,
+            "speaking_rate": 0.64
+          }
+        ],
+        "unscoredPositions": [],
+        "flagged": false
+      }
+    },
+    {
+      "id": "guy-hello-as-hello",
+      "file": "public/audio/daily/guy/hello.mp3",
+      "sha256": "75995d47e90e5015f57dd51844e4e12ede0b163c6fc06b9d829f7edf1d9fa386",
+      "reference": "hello",
+      "spokenFixture": "hello",
+      "expectedCorrect": true,
+      "repeat": 0,
+      "computeMs": 176.32,
+      "result": {
+        "referencePhones": [
+          "h",
+          "ɛ",
+          "l",
+          "oʊ"
+        ],
+        "events": [
+          {
+            "phoneme": "h",
+            "position": 0,
+            "label": "correct",
+            "decoded": "h",
+            "target_logit": 8.522162437438965,
+            "decoded_logit": 8.522162437438965,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "ɛ",
+            "position": 1,
+            "label": "correct",
+            "decoded": "aʊ",
+            "target_logit": 5.343262195587158,
+            "decoded_logit": 5.994126319885254,
+            "gop": 0.5215948820114136,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "l",
+            "position": 2,
+            "label": "correct",
+            "decoded": "l",
+            "target_logit": 8.917559623718262,
+            "decoded_logit": 8.917559623718262,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "oʊ",
+            "position": 3,
+            "label": "correct",
+            "decoded": "oʊ",
+            "target_logit": 8.232086181640625,
+            "decoded_logit": 8.232086181640625,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": null,
+            "position": null,
+            "label": "prosody",
+            "decoded": null,
+            "target_logit": null,
+            "decoded_logit": null,
+            "gop": null,
+            "monotony_score": 0.0,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": 0.0
+          }
+        ],
+        "unscoredPositions": [],
+        "flagged": false
+      }
+    },
+    {
+      "id": "aria-goodbye-as-goodbye",
+      "file": "public/audio/daily/aria/goodbye.mp3",
+      "sha256": "39f9feb199cf056ed30b73321bc005e4265f2454e31332afd4dc66d032069639",
+      "reference": "goodbye",
+      "spokenFixture": "goodbye",
+      "expectedCorrect": true,
+      "repeat": 0,
+      "computeMs": 309.53,
+      "result": {
+        "referencePhones": [
+          "g",
+          "ʊ",
+          "d",
+          "b",
+          "aɪ"
+        ],
+        "events": [
+          {
+            "phoneme": "g",
+            "position": 0,
+            "label": "correct",
+            "decoded": "g",
+            "target_logit": 8.821493148803711,
+            "decoded_logit": 8.821493148803711,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "ʊ",
+            "position": 1,
+            "label": "correct",
+            "decoded": "ʊ",
+            "target_logit": 7.620360851287842,
+            "decoded_logit": 7.620360851287842,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "d",
+            "position": 2,
+            "label": "mispronounced",
+            "decoded": "b",
+            "target_logit": 0.6421265006065369,
+            "decoded_logit": 8.490909576416016,
+            "gop": 0.00039022660348564386,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "b",
+            "position": 3,
+            "label": "omitted",
+            "decoded": "",
+            "target_logit": null,
+            "decoded_logit": null,
+            "gop": 0.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "aɪ",
+            "position": 4,
+            "label": "correct",
+            "decoded": "aɪ",
+            "target_logit": 6.167630195617676,
+            "decoded_logit": 6.167630195617676,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": null,
+            "position": null,
+            "label": "prosody",
+            "decoded": null,
+            "target_logit": null,
+            "decoded_logit": null,
+            "gop": null,
+            "monotony_score": 1.0,
+            "rhythm_score": 1.0,
+            "boundary_score": 1.0,
+            "speaking_rate": 1.24
+          }
+        ],
+        "unscoredPositions": [],
+        "flagged": true
+      }
+    },
+    {
+      "id": "guy-goodbye-as-goodbye",
+      "file": "public/audio/daily/guy/goodbye.mp3",
+      "sha256": "351fcb29dfd2a4825344b9a6b85ee4df13ea1738faed04d97b8ef54fb33b4ba6",
+      "reference": "goodbye",
+      "spokenFixture": "goodbye",
+      "expectedCorrect": true,
+      "repeat": 0,
+      "computeMs": 328.79,
+      "result": {
+        "referencePhones": [
+          "g",
+          "ʊ",
+          "d",
+          "b",
+          "aɪ"
+        ],
+        "events": [
+          {
+            "phoneme": "g",
+            "position": 0,
+            "label": "correct",
+            "decoded": "g",
+            "target_logit": 8.924860954284668,
+            "decoded_logit": 8.924860954284668,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "ʊ",
+            "position": 1,
+            "label": "correct",
+            "decoded": "ʊ",
+            "target_logit": 7.707840442657471,
+            "decoded_logit": 7.707840442657471,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "d",
+            "position": 2,
+            "label": "mispronounced",
+            "decoded": "b",
+            "target_logit": 0.6243825554847717,
+            "decoded_logit": 7.636229515075684,
+            "gop": 0.0009011426591314375,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "b",
+            "position": 3,
+            "label": "omitted",
+            "decoded": "",
+            "target_logit": null,
+            "decoded_logit": null,
+            "gop": 0.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "aɪ",
+            "position": 4,
+            "label": "correct",
+            "decoded": "aɪ",
+            "target_logit": 7.845200061798096,
+            "decoded_logit": 7.845200061798096,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": null,
+            "position": null,
+            "label": "prosody",
+            "decoded": null,
+            "target_logit": null,
+            "decoded_logit": null,
+            "gop": null,
+            "monotony_score": 0.296,
+            "rhythm_score": null,
+            "boundary_score": 1.0,
+            "speaking_rate": 0.6
+          }
+        ],
+        "unscoredPositions": [],
+        "flagged": true
+      }
+    },
+    {
+      "id": "aria-think-as-think",
+      "file": "public/audio/aria/word-2652.mp3",
+      "sha256": "56d9cca2c2277ddc788953d76f26920ef025162bb072ddf76489d80924dd85ee",
+      "reference": "think",
+      "spokenFixture": "think",
+      "expectedCorrect": true,
+      "repeat": 0,
+      "computeMs": 326.35,
+      "result": {
+        "referencePhones": [
+          "θ",
+          "ɪ",
+          "ŋ",
+          "k"
+        ],
+        "events": [
+          {
+            "phoneme": "θ",
+            "position": 0,
+            "label": "correct",
+            "decoded": "θ",
+            "target_logit": 8.029629707336426,
+            "decoded_logit": 8.029629707336426,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "ɪ",
+            "position": 1,
+            "label": "correct",
+            "decoded": "ɪ",
+            "target_logit": 7.25685977935791,
+            "decoded_logit": 7.25685977935791,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "ŋ",
+            "position": 2,
+            "label": "correct",
+            "decoded": "ŋ",
+            "target_logit": 8.321699142456055,
+            "decoded_logit": 8.321699142456055,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "k",
+            "position": 3,
+            "label": "correct",
+            "decoded": "g",
+            "target_logit": 3.9449539184570312,
+            "decoded_logit": 7.883258819580078,
+            "gop": 0.01948121003806591,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": null,
+            "position": null,
+            "label": "prosody",
+            "decoded": null,
+            "target_logit": null,
+            "decoded_logit": null,
+            "gop": null,
+            "monotony_score": 0.0,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": 0.0
+          }
+        ],
+        "unscoredPositions": [],
+        "flagged": false
+      }
+    },
+    {
+      "id": "guy-think-as-think",
+      "file": "public/audio/guy/word-2652.mp3",
+      "sha256": "9c53003ff5ca866c3041b440c3075da2da94d8b761c1f267080c2d44b0334daf",
+      "reference": "think",
+      "spokenFixture": "think",
+      "expectedCorrect": true,
+      "repeat": 0,
+      "computeMs": 336.71,
+      "result": {
+        "referencePhones": [
+          "θ",
+          "ɪ",
+          "ŋ",
+          "k"
+        ],
+        "events": [
+          {
+            "phoneme": "θ",
+            "position": 0,
+            "label": "correct",
+            "decoded": "f",
+            "target_logit": 5.7861223220825195,
+            "decoded_logit": 6.429996967315674,
+            "gop": 0.5252532958984375,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "ɪ",
+            "position": 1,
+            "label": "correct",
+            "decoded": "ɪ",
+            "target_logit": 8.624896049499512,
+            "decoded_logit": 8.624896049499512,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "ŋ",
+            "position": 2,
+            "label": "correct",
+            "decoded": "ŋ",
+            "target_logit": 7.752300262451172,
+            "decoded_logit": 7.752300262451172,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "k",
+            "position": 3,
+            "label": "correct",
+            "decoded": "k",
+            "target_logit": 9.17812728881836,
+            "decoded_logit": 9.17812728881836,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": null,
+            "position": null,
+            "label": "prosody",
+            "decoded": null,
+            "target_logit": null,
+            "decoded_logit": null,
+            "gop": null,
+            "monotony_score": 0.314,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": 0.63
+          }
+        ],
+        "unscoredPositions": [],
+        "flagged": false
+      }
+    },
+    {
+      "id": "aria-ship-as-ship",
+      "file": "public/audio/aria/word-2224.mp3",
+      "sha256": "93e91a16f6060328871735321fa37898b44145ccc7db88a660ef7c06c0402ef4",
+      "reference": "ship",
+      "spokenFixture": "ship",
+      "expectedCorrect": true,
+      "repeat": 0,
+      "computeMs": 325.1,
+      "result": {
+        "referencePhones": [
+          "ʃ",
+          "ɪ",
+          "p"
+        ],
+        "events": [
+          {
+            "phoneme": "ʃ",
+            "position": 0,
+            "label": "correct",
+            "decoded": "ʃ",
+            "target_logit": 8.925994873046875,
+            "decoded_logit": 8.925994873046875,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "ɪ",
+            "position": 1,
+            "label": "mispronounced",
+            "decoded": "ɛ",
+            "target_logit": 2.9112956523895264,
+            "decoded_logit": 5.377367973327637,
+            "gop": 0.08491773158311844,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "p",
+            "position": 2,
+            "label": "correct",
+            "decoded": "p",
+            "target_logit": 8.146049499511719,
+            "decoded_logit": 8.146049499511719,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": null,
+            "position": null,
+            "label": "prosody",
+            "decoded": null,
+            "target_logit": null,
+            "decoded_logit": null,
+            "gop": null,
+            "monotony_score": 0.0,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": 0.0
+          }
+        ],
+        "unscoredPositions": [],
+        "flagged": true
+      }
+    },
+    {
+      "id": "guy-ship-as-ship",
+      "file": "public/audio/guy/word-2224.mp3",
+      "sha256": "3b2f0c745aefc588efad9acea1adb6332eceb4d80dc638578fddda9e808242d5",
+      "reference": "ship",
+      "spokenFixture": "ship",
+      "expectedCorrect": true,
+      "repeat": 0,
+      "computeMs": 317.51,
+      "result": {
+        "referencePhones": [
+          "ʃ",
+          "ɪ",
+          "p"
+        ],
+        "events": [
+          {
+            "phoneme": "ʃ",
+            "position": 0,
+            "label": "correct",
+            "decoded": "ʃ",
+            "target_logit": 8.939820289611816,
+            "decoded_logit": 8.939820289611816,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "ɪ",
+            "position": 1,
+            "label": "correct",
+            "decoded": "ɪ",
+            "target_logit": 7.080738544464111,
+            "decoded_logit": 7.080738544464111,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "p",
+            "position": 2,
+            "label": "correct",
+            "decoded": "p",
+            "target_logit": 6.6116838455200195,
+            "decoded_logit": 6.6116838455200195,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": null,
+            "position": null,
+            "label": "prosody",
+            "decoded": null,
+            "target_logit": null,
+            "decoded_logit": null,
+            "gop": null,
+            "monotony_score": 0.0,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": 0.0
+          }
+        ],
+        "unscoredPositions": [],
+        "flagged": false
+      }
+    },
+    {
+      "id": "aria-three-as-three",
+      "file": "public/audio/aria/word-2400.mp3",
+      "sha256": "dbd32db6d89af3f6ba5865985d6aea396c11469027890c3ff47f2df3858372f5",
+      "reference": "three",
+      "spokenFixture": "three",
+      "expectedCorrect": true,
+      "repeat": 0,
+      "computeMs": 177.33,
+      "result": {
+        "referencePhones": [
+          "θ",
+          "r",
+          "i"
+        ],
+        "events": [
+          {
+            "phoneme": "θ",
+            "position": 0,
+            "label": "correct",
+            "decoded": "θ",
+            "target_logit": 7.51802921295166,
+            "decoded_logit": 7.51802921295166,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "r",
+            "position": 1,
+            "label": "correct",
+            "decoded": "r",
+            "target_logit": 9.258508682250977,
+            "decoded_logit": 9.258508682250977,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "i",
+            "position": 2,
+            "label": "correct",
+            "decoded": "i",
+            "target_logit": 9.23058032989502,
+            "decoded_logit": 9.23058032989502,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": null,
+            "position": null,
+            "label": "prosody",
+            "decoded": null,
+            "target_logit": null,
+            "decoded_logit": null,
+            "gop": null,
+            "monotony_score": 1.0,
+            "rhythm_score": null,
+            "boundary_score": 1.0,
+            "speaking_rate": 0.65
+          }
+        ],
+        "unscoredPositions": [],
+        "flagged": false
+      }
+    },
+    {
+      "id": "guy-three-as-three",
+      "file": "public/audio/guy/word-2400.mp3",
+      "sha256": "94ceb6bcde145714f09292b63ae0d6624a89be5cb173720ac695119dafe3a0c2",
+      "reference": "three",
+      "spokenFixture": "three",
+      "expectedCorrect": true,
+      "repeat": 0,
+      "computeMs": 316.66,
+      "result": {
+        "referencePhones": [
+          "θ",
+          "r",
+          "i"
+        ],
+        "events": [
+          {
+            "phoneme": "θ",
+            "position": 0,
+            "label": "correct",
+            "decoded": "θ",
+            "target_logit": 8.178304672241211,
+            "decoded_logit": 8.178304672241211,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "r",
+            "position": 1,
+            "label": "correct",
+            "decoded": "r",
+            "target_logit": 7.610018253326416,
+            "decoded_logit": 7.610018253326416,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "i",
+            "position": 2,
+            "label": "correct",
+            "decoded": "i",
+            "target_logit": 7.105808258056641,
+            "decoded_logit": 7.105808258056641,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": null,
+            "position": null,
+            "label": "prosody",
+            "decoded": null,
+            "target_logit": null,
+            "decoded_logit": null,
+            "gop": null,
+            "monotony_score": 0.0,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": 0.0
+          }
+        ],
+        "unscoredPositions": [],
+        "flagged": false
+      }
+    },
+    {
+      "id": "aria-bad-as-bad",
+      "file": "public/audio/aria/word-2978.mp3",
+      "sha256": "77e448d4d24a5eb7bce40296318a11d4582a63b0ad88ae2b826b9f74353f92af",
+      "reference": "bad",
+      "spokenFixture": "bad",
+      "expectedCorrect": true,
+      "repeat": 0,
+      "computeMs": 318.78,
+      "result": {
+        "referencePhones": [
+          "b",
+          "æ",
+          "d"
+        ],
+        "events": [
+          {
+            "phoneme": "b",
+            "position": 0,
+            "label": "mispronounced",
+            "decoded": "ð",
+            "target_logit": 0.8364663124084473,
+            "decoded_logit": 6.744072437286377,
+            "gop": 0.002718687290325761,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "æ",
+            "position": 1,
+            "label": "correct",
+            "decoded": "æ",
+            "target_logit": 8.066166877746582,
+            "decoded_logit": 8.066166877746582,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "d",
+            "position": 2,
+            "label": "correct",
+            "decoded": "d",
+            "target_logit": 8.64004898071289,
+            "decoded_logit": 8.64004898071289,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": null,
+            "position": null,
+            "label": "prosody",
+            "decoded": null,
+            "target_logit": null,
+            "decoded_logit": null,
+            "gop": null,
+            "monotony_score": 0.971,
+            "rhythm_score": null,
+            "boundary_score": 1.0,
+            "speaking_rate": 0.66
+          }
+        ],
+        "unscoredPositions": [],
+        "flagged": true
+      }
+    },
+    {
+      "id": "guy-bad-as-bad",
+      "file": "public/audio/guy/word-2978.mp3",
+      "sha256": "07160402b698581188f51423fc62d77102d77c247bbea7481bf140293e5dbcde",
+      "reference": "bad",
+      "spokenFixture": "bad",
+      "expectedCorrect": true,
+      "repeat": 0,
+      "computeMs": 313.19,
+      "result": {
+        "referencePhones": [
+          "b",
+          "æ",
+          "d"
+        ],
+        "events": [
+          {
+            "phoneme": "b",
+            "position": 0,
+            "label": "correct",
+            "decoded": "b",
+            "target_logit": 8.199477195739746,
+            "decoded_logit": 8.199477195739746,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "æ",
+            "position": 1,
+            "label": "correct",
+            "decoded": "æ",
+            "target_logit": 7.670158386230469,
+            "decoded_logit": 7.670158386230469,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "d",
+            "position": 2,
+            "label": "correct",
+            "decoded": "d",
+            "target_logit": 8.477045059204102,
+            "decoded_logit": 8.477045059204102,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": null,
+            "position": null,
+            "label": "prosody",
+            "decoded": null,
+            "target_logit": null,
+            "decoded_logit": null,
+            "gop": null,
+            "monotony_score": 0.0,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": 0.0
+          }
+        ],
+        "unscoredPositions": [],
+        "flagged": false
+      }
+    },
+    {
+      "id": "aria-right-as-right",
+      "file": "public/audio/aria/word-2160.mp3",
+      "sha256": "c4f8341a47942b096bcec86eacade529bb700fd8f725bfff388081846fb358df",
+      "reference": "right",
+      "spokenFixture": "right",
+      "expectedCorrect": true,
+      "repeat": 0,
+      "computeMs": 327.58,
+      "result": {
+        "referencePhones": [
+          "r",
+          "aɪ",
+          "t"
+        ],
+        "events": [
+          {
+            "phoneme": "r",
+            "position": 0,
+            "label": "correct",
+            "decoded": "r",
+            "target_logit": 7.9542155265808105,
+            "decoded_logit": 7.9542155265808105,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "aɪ",
+            "position": 1,
+            "label": "correct",
+            "decoded": "aɪ",
+            "target_logit": 8.078518867492676,
+            "decoded_logit": 8.078518867492676,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "t",
+            "position": 2,
+            "label": "correct",
+            "decoded": "t",
+            "target_logit": 8.352958679199219,
+            "decoded_logit": 8.352958679199219,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": null,
+            "position": null,
+            "label": "prosody",
+            "decoded": null,
+            "target_logit": null,
+            "decoded_logit": null,
+            "gop": null,
+            "monotony_score": 0.307,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": 0.65
+          }
+        ],
+        "unscoredPositions": [],
+        "flagged": false
+      }
+    },
+    {
+      "id": "guy-right-as-right",
+      "file": "public/audio/guy/word-2160.mp3",
+      "sha256": "d80d39b42a0d25f74b7b139ea295162b0436f554e01b7d8b5290e11e93556d0b",
+      "reference": "right",
+      "spokenFixture": "right",
+      "expectedCorrect": true,
+      "repeat": 0,
+      "computeMs": 321.61,
+      "result": {
+        "referencePhones": [
+          "r",
+          "aɪ",
+          "t"
+        ],
+        "events": [
+          {
+            "phoneme": "r",
+            "position": 0,
+            "label": "correct",
+            "decoded": "r",
+            "target_logit": 9.373025894165039,
+            "decoded_logit": 9.373025894165039,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "aɪ",
+            "position": 1,
+            "label": "correct",
+            "decoded": "aɪ",
+            "target_logit": 7.759912967681885,
+            "decoded_logit": 7.759912967681885,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "t",
+            "position": 2,
+            "label": "correct",
+            "decoded": "t",
+            "target_logit": 5.7547454833984375,
+            "decoded_logit": 5.7547454833984375,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": null,
+            "position": null,
+            "label": "prosody",
+            "decoded": null,
+            "target_logit": null,
+            "decoded_logit": null,
+            "gop": null,
+            "monotony_score": 0.0,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": 0.0
+          }
+        ],
+        "unscoredPositions": [],
+        "flagged": false
+      }
+    },
+    {
+      "id": "aria-sink-as-think",
+      "file": "public/audio/aria/word-959.mp3",
+      "sha256": "6e91c5e4a7ea69fc6243dbdf3eed48bba5106c2030d11f4c90937d8a9e9edaa7",
+      "reference": "think",
+      "spokenFixture": "sink",
+      "expectedCorrect": false,
+      "repeat": 0,
+      "computeMs": 321.82,
+      "result": {
+        "referencePhones": [
+          "θ",
+          "ɪ",
+          "ŋ",
+          "k"
+        ],
+        "events": [
+          {
+            "phoneme": "θ",
+            "position": 0,
+            "label": "correct",
+            "decoded": "s",
+            "target_logit": 2.0274317264556885,
+            "decoded_logit": 9.476991653442383,
+            "gop": 0.0005816974444314837,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "ɪ",
+            "position": 1,
+            "label": "correct",
+            "decoded": "ɪ",
+            "target_logit": 7.478265285491943,
+            "decoded_logit": 7.478265285491943,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "ŋ",
+            "position": 2,
+            "label": "correct",
+            "decoded": "ŋ",
+            "target_logit": 7.728754997253418,
+            "decoded_logit": 7.728754997253418,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "k",
+            "position": 3,
+            "label": "correct",
+            "decoded": "k",
+            "target_logit": 8.95849609375,
+            "decoded_logit": 8.95849609375,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": null,
+            "position": null,
+            "label": "prosody",
+            "decoded": null,
+            "target_logit": null,
+            "decoded_logit": null,
+            "gop": null,
+            "monotony_score": 0.0,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": 0.0
+          }
+        ],
+        "unscoredPositions": [],
+        "flagged": false
+      }
+    },
+    {
+      "id": "guy-sink-as-think",
+      "file": "public/audio/guy/word-959.mp3",
+      "sha256": "2a1d15a183d4fe0d4b32443959c39b1854c2107f82f8ba797de5ab88fab4ec94",
+      "reference": "think",
+      "spokenFixture": "sink",
+      "expectedCorrect": false,
+      "repeat": 0,
+      "computeMs": 319.87,
+      "result": {
+        "referencePhones": [
+          "θ",
+          "ɪ",
+          "ŋ",
+          "k"
+        ],
+        "events": [
+          {
+            "phoneme": "θ",
+            "position": 0,
+            "label": "correct",
+            "decoded": "s",
+            "target_logit": 1.5916590690612793,
+            "decoded_logit": 9.633013725280762,
+            "gop": 0.0003218724741600454,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "ɪ",
+            "position": 1,
+            "label": "correct",
+            "decoded": "ɪ",
+            "target_logit": 8.136540412902832,
+            "decoded_logit": 8.136540412902832,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "ɪ",
+            "position": 1,
+            "label": "correct",
+            "decoded": "i",
+            "target_logit": 6.72685432434082,
+            "decoded_logit": 6.922555923461914,
+            "gop": 0.8222575783729553,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "ŋ",
+            "position": 2,
+            "label": "correct",
+            "decoded": "ŋ",
+            "target_logit": 7.888521194458008,
+            "decoded_logit": 7.888521194458008,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "k",
+            "position": 3,
+            "label": "correct",
+            "decoded": "k",
+            "target_logit": 8.831337928771973,
+            "decoded_logit": 8.831337928771973,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": null,
+            "position": null,
+            "label": "prosody",
+            "decoded": null,
+            "target_logit": null,
+            "decoded_logit": null,
+            "gop": null,
+            "monotony_score": 0.0,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": 0.0
+          }
+        ],
+        "unscoredPositions": [],
+        "flagged": false
+      }
+    },
+    {
+      "id": "aria-sheep-as-ship",
+      "file": "public/audio/aria/word-2968.mp3",
+      "sha256": "d78bba621523dcd4fb8efdca6df67c3fc7a32644bc342b5f3f74378b36b259ae",
+      "reference": "ship",
+      "spokenFixture": "sheep",
+      "expectedCorrect": false,
+      "repeat": 0,
+      "computeMs": 323.64,
+      "result": {
+        "referencePhones": [
+          "ʃ",
+          "ɪ",
+          "p"
+        ],
+        "events": [
+          {
+            "phoneme": "ʃ",
+            "position": 0,
+            "label": "correct",
+            "decoded": "ʃ",
+            "target_logit": 9.036245346069336,
+            "decoded_logit": 9.036245346069336,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "ɪ",
+            "position": 1,
+            "label": "mispronounced",
+            "decoded": "i",
+            "target_logit": 2.3123233318328857,
+            "decoded_logit": 7.283133506774902,
+            "gop": 0.006937527097761631,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "p",
+            "position": 2,
+            "label": "correct",
+            "decoded": "p",
+            "target_logit": 8.393470764160156,
+            "decoded_logit": 8.393470764160156,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": null,
+            "position": null,
+            "label": "prosody",
+            "decoded": null,
+            "target_logit": null,
+            "decoded_logit": null,
+            "gop": null,
+            "monotony_score": 0.0,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": 0.0
+          }
+        ],
+        "unscoredPositions": [],
+        "flagged": true
+      }
+    },
+    {
+      "id": "guy-sheep-as-ship",
+      "file": "public/audio/guy/word-2968.mp3",
+      "sha256": "7e6f1a2b72c797d1c095bda747d05fd45f61a62cd85eb1790663f51b2c07f212",
+      "reference": "ship",
+      "spokenFixture": "sheep",
+      "expectedCorrect": false,
+      "repeat": 0,
+      "computeMs": 326.41,
+      "result": {
+        "referencePhones": [
+          "ʃ",
+          "ɪ",
+          "p"
+        ],
+        "events": [
+          {
+            "phoneme": "ʃ",
+            "position": 0,
+            "label": "correct",
+            "decoded": "ʃ",
+            "target_logit": 9.069936752319336,
+            "decoded_logit": 9.069936752319336,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "ɪ",
+            "position": 1,
+            "label": "correct",
+            "decoded": "i",
+            "target_logit": 3.825624942779541,
+            "decoded_logit": 7.986286640167236,
+            "gop": 0.015597234480082989,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "p",
+            "position": 2,
+            "label": "correct",
+            "decoded": "p",
+            "target_logit": 8.304479598999023,
+            "decoded_logit": 8.304479598999023,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": null,
+            "position": null,
+            "label": "prosody",
+            "decoded": null,
+            "target_logit": null,
+            "decoded_logit": null,
+            "gop": null,
+            "monotony_score": 0.0,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": 0.0
+          }
+        ],
+        "unscoredPositions": [],
+        "flagged": false
+      }
+    },
+    {
+      "id": "aria-free-as-three",
+      "file": "public/audio/aria/word-1649.mp3",
+      "sha256": "ffe976c2022e78e153ed1d4a79e8af3182ef98c58bd42522f04e1376578d0acb",
+      "reference": "three",
+      "spokenFixture": "free",
+      "expectedCorrect": false,
+      "repeat": 0,
+      "computeMs": 180.09,
+      "result": {
+        "referencePhones": [
+          "θ",
+          "r",
+          "i"
+        ],
+        "events": [
+          {
+            "phoneme": "θ",
+            "position": 0,
+            "label": "correct",
+            "decoded": "f",
+            "target_logit": 0.6498482823371887,
+            "decoded_logit": 8.370516777038574,
+            "gop": 0.0004435640585143119,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "r",
+            "position": 1,
+            "label": "correct",
+            "decoded": "r",
+            "target_logit": 9.048702239990234,
+            "decoded_logit": 9.048702239990234,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "i",
+            "position": 2,
+            "label": "correct",
+            "decoded": "i",
+            "target_logit": 8.103102684020996,
+            "decoded_logit": 8.103102684020996,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": null,
+            "position": null,
+            "label": "prosody",
+            "decoded": null,
+            "target_logit": null,
+            "decoded_logit": null,
+            "gop": null,
+            "monotony_score": 1.0,
+            "rhythm_score": null,
+            "boundary_score": 1.0,
+            "speaking_rate": 0.66
+          }
+        ],
+        "unscoredPositions": [],
+        "flagged": false
+      }
+    },
+    {
+      "id": "guy-free-as-three",
+      "file": "public/audio/guy/word-1649.mp3",
+      "sha256": "b64d197492c3ab8a73bcb5eb526e016455a9f5793081c3f58d95e56470fa5991",
+      "reference": "three",
+      "spokenFixture": "free",
+      "expectedCorrect": false,
+      "repeat": 0,
+      "computeMs": 175.62,
+      "result": {
+        "referencePhones": [
+          "θ",
+          "r",
+          "i"
+        ],
+        "events": [
+          {
+            "phoneme": "θ",
+            "position": 0,
+            "label": "correct",
+            "decoded": "f",
+            "target_logit": 0.9631597995758057,
+            "decoded_logit": 8.366005897521973,
+            "gop": 0.000609515409450978,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "r",
+            "position": 1,
+            "label": "correct",
+            "decoded": "r",
+            "target_logit": 9.373787879943848,
+            "decoded_logit": 9.373787879943848,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "i",
+            "position": 2,
+            "label": "correct",
+            "decoded": "i",
+            "target_logit": 6.157266616821289,
+            "decoded_logit": 6.157266616821289,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": null,
+            "position": null,
+            "label": "prosody",
+            "decoded": null,
+            "target_logit": null,
+            "decoded_logit": null,
+            "gop": null,
+            "monotony_score": 0.0,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": 0.0
+          }
+        ],
+        "unscoredPositions": [],
+        "flagged": false
+      }
+    },
+    {
+      "id": "aria-bed-as-bad",
+      "file": "public/audio/aria/word-1291.mp3",
+      "sha256": "5e76c091ea05c53403fa281115e8a5bfe08a42b621f6a2893c88beb6b9f133cd",
+      "reference": "bad",
+      "spokenFixture": "bed",
+      "expectedCorrect": false,
+      "repeat": 0,
+      "computeMs": 323.34,
+      "result": {
+        "referencePhones": [
+          "b",
+          "æ",
+          "d"
+        ],
+        "events": [
+          {
+            "phoneme": "b",
+            "position": 0,
+            "label": "mispronounced",
+            "decoded": "ð",
+            "target_logit": 2.0399351119995117,
+            "decoded_logit": 6.798563003540039,
+            "gop": 0.008577370084822178,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "æ",
+            "position": 1,
+            "label": "correct",
+            "decoded": "æ",
+            "target_logit": 7.471536636352539,
+            "decoded_logit": 7.471536636352539,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "d",
+            "position": 2,
+            "label": "correct",
+            "decoded": "d",
+            "target_logit": 7.01582670211792,
+            "decoded_logit": 7.01582670211792,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": null,
+            "position": null,
+            "label": "prosody",
+            "decoded": null,
+            "target_logit": null,
+            "decoded_logit": null,
+            "gop": null,
+            "monotony_score": 1.0,
+            "rhythm_score": null,
+            "boundary_score": 1.0,
+            "speaking_rate": 0.69
+          }
+        ],
+        "unscoredPositions": [],
+        "flagged": true
+      }
+    },
+    {
+      "id": "guy-bed-as-bad",
+      "file": "public/audio/guy/word-1291.mp3",
+      "sha256": "120e4f3456bb54835747cdae05588a31d61f32201d79d49be4e01c1f653ec7ce",
+      "reference": "bad",
+      "spokenFixture": "bed",
+      "expectedCorrect": false,
+      "repeat": 0,
+      "computeMs": 322.65,
+      "result": {
+        "referencePhones": [
+          "b",
+          "æ",
+          "d"
+        ],
+        "events": [
+          {
+            "phoneme": "b",
+            "position": 0,
+            "label": "correct",
+            "decoded": "b",
+            "target_logit": 8.501205444335938,
+            "decoded_logit": 8.501205444335938,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "æ",
+            "position": 1,
+            "label": "correct",
+            "decoded": "æ",
+            "target_logit": 8.57022762298584,
+            "decoded_logit": 8.57022762298584,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "d",
+            "position": 2,
+            "label": "correct",
+            "decoded": "d",
+            "target_logit": 7.890351295471191,
+            "decoded_logit": 7.890351295471191,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": null,
+            "position": null,
+            "label": "prosody",
+            "decoded": null,
+            "target_logit": null,
+            "decoded_logit": null,
+            "gop": null,
+            "monotony_score": 0.0,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": 0.0
+          }
+        ],
+        "unscoredPositions": [],
+        "flagged": false
+      }
+    },
+    {
+      "id": "aria-light-as-right",
+      "file": "public/audio/aria/word-1852.mp3",
+      "sha256": "f718748a255457e8fb6b28bfd3d111c36716a447c69187d5644ac1ecf7edd337",
+      "reference": "right",
+      "spokenFixture": "light",
+      "expectedCorrect": false,
+      "repeat": 0,
+      "computeMs": 315.41,
+      "result": {
+        "referencePhones": [
+          "r",
+          "aɪ",
+          "t"
+        ],
+        "events": [
+          {
+            "phoneme": "r",
+            "position": 0,
+            "label": "omitted",
+            "decoded": "",
+            "target_logit": null,
+            "decoded_logit": null,
+            "gop": 0.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "aɪ",
+            "position": 1,
+            "label": "correct",
+            "decoded": "aɪ",
+            "target_logit": 8.557304382324219,
+            "decoded_logit": 8.557304382324219,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "t",
+            "position": 2,
+            "label": "correct",
+            "decoded": "t",
+            "target_logit": 6.4368062019348145,
+            "decoded_logit": 6.4368062019348145,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": null,
+            "position": null,
+            "label": "prosody",
+            "decoded": null,
+            "target_logit": null,
+            "decoded_logit": null,
+            "gop": null,
+            "monotony_score": 0.179,
+            "rhythm_score": null,
+            "boundary_score": 1.0,
+            "speaking_rate": 0.63
+          }
+        ],
+        "unscoredPositions": [],
+        "flagged": true
+      }
+    },
+    {
+      "id": "guy-light-as-right",
+      "file": "public/audio/guy/word-1852.mp3",
+      "sha256": "eee7516495f22dfc96baa88bfea2fb22b32b6896f0e8941846320b451f4f6d57",
+      "reference": "right",
+      "spokenFixture": "light",
+      "expectedCorrect": false,
+      "repeat": 0,
+      "computeMs": 320.21,
+      "result": {
+        "referencePhones": [
+          "r",
+          "aɪ",
+          "t"
+        ],
+        "events": [
+          {
+            "phoneme": "r",
+            "position": 0,
+            "label": "mispronounced",
+            "decoded": "l",
+            "target_logit": 0.11966820061206818,
+            "decoded_logit": 9.456596374511719,
+            "gop": 8.810965664451942e-05,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "aɪ",
+            "position": 1,
+            "label": "correct",
+            "decoded": "aɪ",
+            "target_logit": 8.22015380859375,
+            "decoded_logit": 8.22015380859375,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "t",
+            "position": 2,
+            "label": "correct",
+            "decoded": "t",
+            "target_logit": 5.146578788757324,
+            "decoded_logit": 5.146578788757324,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": null,
+            "position": null,
+            "label": "prosody",
+            "decoded": null,
+            "target_logit": null,
+            "decoded_logit": null,
+            "gop": null,
+            "monotony_score": 0.0,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": 0.0
+          }
+        ],
+        "unscoredPositions": [],
+        "flagged": true
+      }
+    },
+    {
+      "id": "aria-hello-as-hello",
+      "file": "public/audio/daily/aria/hello.mp3",
+      "sha256": "d647bdc233e2be048fef5c9c34d03d6ed22e66cb4031f23d9703eef01495bf5b",
+      "reference": "hello",
+      "spokenFixture": "hello",
+      "expectedCorrect": true,
+      "repeat": 1,
+      "computeMs": 176.38,
+      "result": {
+        "referencePhones": [
+          "h",
+          "ɛ",
+          "l",
+          "oʊ"
+        ],
+        "events": [
+          {
+            "phoneme": "h",
+            "position": 0,
+            "label": "correct",
+            "decoded": "h",
+            "target_logit": 8.714834213256836,
+            "decoded_logit": 8.714834213256836,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "ɛ",
+            "position": 1,
+            "label": "correct",
+            "decoded": "æ",
+            "target_logit": 5.8228020668029785,
+            "decoded_logit": 6.170995712280273,
+            "gop": 0.7059621810913086,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "l",
+            "position": 2,
+            "label": "correct",
+            "decoded": "l",
+            "target_logit": 9.651777267456055,
+            "decoded_logit": 9.651777267456055,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "oʊ",
+            "position": 3,
+            "label": "correct",
+            "decoded": "oʊ",
+            "target_logit": 7.478153705596924,
+            "decoded_logit": 7.478153705596924,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": null,
+            "position": null,
+            "label": "prosody",
+            "decoded": null,
+            "target_logit": null,
+            "decoded_logit": null,
+            "gop": null,
+            "monotony_score": 0.65,
+            "rhythm_score": null,
+            "boundary_score": 1.0,
+            "speaking_rate": 0.64
+          }
+        ],
+        "unscoredPositions": [],
+        "flagged": false
+      }
+    },
+    {
+      "id": "guy-hello-as-hello",
+      "file": "public/audio/daily/guy/hello.mp3",
+      "sha256": "75995d47e90e5015f57dd51844e4e12ede0b163c6fc06b9d829f7edf1d9fa386",
+      "reference": "hello",
+      "spokenFixture": "hello",
+      "expectedCorrect": true,
+      "repeat": 1,
+      "computeMs": 173.21,
+      "result": {
+        "referencePhones": [
+          "h",
+          "ɛ",
+          "l",
+          "oʊ"
+        ],
+        "events": [
+          {
+            "phoneme": "h",
+            "position": 0,
+            "label": "correct",
+            "decoded": "h",
+            "target_logit": 8.522162437438965,
+            "decoded_logit": 8.522162437438965,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "ɛ",
+            "position": 1,
+            "label": "correct",
+            "decoded": "aʊ",
+            "target_logit": 5.343262195587158,
+            "decoded_logit": 5.994126319885254,
+            "gop": 0.5215948820114136,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "l",
+            "position": 2,
+            "label": "correct",
+            "decoded": "l",
+            "target_logit": 8.917559623718262,
+            "decoded_logit": 8.917559623718262,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "oʊ",
+            "position": 3,
+            "label": "correct",
+            "decoded": "oʊ",
+            "target_logit": 8.232086181640625,
+            "decoded_logit": 8.232086181640625,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": null,
+            "position": null,
+            "label": "prosody",
+            "decoded": null,
+            "target_logit": null,
+            "decoded_logit": null,
+            "gop": null,
+            "monotony_score": 0.0,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": 0.0
+          }
+        ],
+        "unscoredPositions": [],
+        "flagged": false
+      }
+    },
+    {
+      "id": "aria-goodbye-as-goodbye",
+      "file": "public/audio/daily/aria/goodbye.mp3",
+      "sha256": "39f9feb199cf056ed30b73321bc005e4265f2454e31332afd4dc66d032069639",
+      "reference": "goodbye",
+      "spokenFixture": "goodbye",
+      "expectedCorrect": true,
+      "repeat": 1,
+      "computeMs": 333.55,
+      "result": {
+        "referencePhones": [
+          "g",
+          "ʊ",
+          "d",
+          "b",
+          "aɪ"
+        ],
+        "events": [
+          {
+            "phoneme": "g",
+            "position": 0,
+            "label": "correct",
+            "decoded": "g",
+            "target_logit": 8.821493148803711,
+            "decoded_logit": 8.821493148803711,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "ʊ",
+            "position": 1,
+            "label": "correct",
+            "decoded": "ʊ",
+            "target_logit": 7.620360851287842,
+            "decoded_logit": 7.620360851287842,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "d",
+            "position": 2,
+            "label": "mispronounced",
+            "decoded": "b",
+            "target_logit": 0.6421265006065369,
+            "decoded_logit": 8.490909576416016,
+            "gop": 0.00039022660348564386,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "b",
+            "position": 3,
+            "label": "omitted",
+            "decoded": "",
+            "target_logit": null,
+            "decoded_logit": null,
+            "gop": 0.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "aɪ",
+            "position": 4,
+            "label": "correct",
+            "decoded": "aɪ",
+            "target_logit": 6.167630195617676,
+            "decoded_logit": 6.167630195617676,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": null,
+            "position": null,
+            "label": "prosody",
+            "decoded": null,
+            "target_logit": null,
+            "decoded_logit": null,
+            "gop": null,
+            "monotony_score": 1.0,
+            "rhythm_score": 1.0,
+            "boundary_score": 1.0,
+            "speaking_rate": 1.24
+          }
+        ],
+        "unscoredPositions": [],
+        "flagged": true
+      }
+    },
+    {
+      "id": "guy-goodbye-as-goodbye",
+      "file": "public/audio/daily/guy/goodbye.mp3",
+      "sha256": "351fcb29dfd2a4825344b9a6b85ee4df13ea1738faed04d97b8ef54fb33b4ba6",
+      "reference": "goodbye",
+      "spokenFixture": "goodbye",
+      "expectedCorrect": true,
+      "repeat": 1,
+      "computeMs": 322.3,
+      "result": {
+        "referencePhones": [
+          "g",
+          "ʊ",
+          "d",
+          "b",
+          "aɪ"
+        ],
+        "events": [
+          {
+            "phoneme": "g",
+            "position": 0,
+            "label": "correct",
+            "decoded": "g",
+            "target_logit": 8.924860954284668,
+            "decoded_logit": 8.924860954284668,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "ʊ",
+            "position": 1,
+            "label": "correct",
+            "decoded": "ʊ",
+            "target_logit": 7.707840442657471,
+            "decoded_logit": 7.707840442657471,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "d",
+            "position": 2,
+            "label": "mispronounced",
+            "decoded": "b",
+            "target_logit": 0.6243825554847717,
+            "decoded_logit": 7.636229515075684,
+            "gop": 0.0009011426591314375,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "b",
+            "position": 3,
+            "label": "omitted",
+            "decoded": "",
+            "target_logit": null,
+            "decoded_logit": null,
+            "gop": 0.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "aɪ",
+            "position": 4,
+            "label": "correct",
+            "decoded": "aɪ",
+            "target_logit": 7.845200061798096,
+            "decoded_logit": 7.845200061798096,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": null,
+            "position": null,
+            "label": "prosody",
+            "decoded": null,
+            "target_logit": null,
+            "decoded_logit": null,
+            "gop": null,
+            "monotony_score": 0.296,
+            "rhythm_score": null,
+            "boundary_score": 1.0,
+            "speaking_rate": 0.6
+          }
+        ],
+        "unscoredPositions": [],
+        "flagged": true
+      }
+    },
+    {
+      "id": "aria-think-as-think",
+      "file": "public/audio/aria/word-2652.mp3",
+      "sha256": "56d9cca2c2277ddc788953d76f26920ef025162bb072ddf76489d80924dd85ee",
+      "reference": "think",
+      "spokenFixture": "think",
+      "expectedCorrect": true,
+      "repeat": 1,
+      "computeMs": 316.11,
+      "result": {
+        "referencePhones": [
+          "θ",
+          "ɪ",
+          "ŋ",
+          "k"
+        ],
+        "events": [
+          {
+            "phoneme": "θ",
+            "position": 0,
+            "label": "correct",
+            "decoded": "θ",
+            "target_logit": 8.029629707336426,
+            "decoded_logit": 8.029629707336426,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "ɪ",
+            "position": 1,
+            "label": "correct",
+            "decoded": "ɪ",
+            "target_logit": 7.25685977935791,
+            "decoded_logit": 7.25685977935791,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "ŋ",
+            "position": 2,
+            "label": "correct",
+            "decoded": "ŋ",
+            "target_logit": 8.321699142456055,
+            "decoded_logit": 8.321699142456055,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "k",
+            "position": 3,
+            "label": "correct",
+            "decoded": "g",
+            "target_logit": 3.9449539184570312,
+            "decoded_logit": 7.883258819580078,
+            "gop": 0.01948121003806591,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": null,
+            "position": null,
+            "label": "prosody",
+            "decoded": null,
+            "target_logit": null,
+            "decoded_logit": null,
+            "gop": null,
+            "monotony_score": 0.0,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": 0.0
+          }
+        ],
+        "unscoredPositions": [],
+        "flagged": false
+      }
+    },
+    {
+      "id": "guy-think-as-think",
+      "file": "public/audio/guy/word-2652.mp3",
+      "sha256": "9c53003ff5ca866c3041b440c3075da2da94d8b761c1f267080c2d44b0334daf",
+      "reference": "think",
+      "spokenFixture": "think",
+      "expectedCorrect": true,
+      "repeat": 1,
+      "computeMs": 325.67,
+      "result": {
+        "referencePhones": [
+          "θ",
+          "ɪ",
+          "ŋ",
+          "k"
+        ],
+        "events": [
+          {
+            "phoneme": "θ",
+            "position": 0,
+            "label": "correct",
+            "decoded": "f",
+            "target_logit": 5.7861223220825195,
+            "decoded_logit": 6.429996967315674,
+            "gop": 0.5252532958984375,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "ɪ",
+            "position": 1,
+            "label": "correct",
+            "decoded": "ɪ",
+            "target_logit": 8.624896049499512,
+            "decoded_logit": 8.624896049499512,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "ŋ",
+            "position": 2,
+            "label": "correct",
+            "decoded": "ŋ",
+            "target_logit": 7.752300262451172,
+            "decoded_logit": 7.752300262451172,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "k",
+            "position": 3,
+            "label": "correct",
+            "decoded": "k",
+            "target_logit": 9.17812728881836,
+            "decoded_logit": 9.17812728881836,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": null,
+            "position": null,
+            "label": "prosody",
+            "decoded": null,
+            "target_logit": null,
+            "decoded_logit": null,
+            "gop": null,
+            "monotony_score": 0.314,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": 0.63
+          }
+        ],
+        "unscoredPositions": [],
+        "flagged": false
+      }
+    },
+    {
+      "id": "aria-ship-as-ship",
+      "file": "public/audio/aria/word-2224.mp3",
+      "sha256": "93e91a16f6060328871735321fa37898b44145ccc7db88a660ef7c06c0402ef4",
+      "reference": "ship",
+      "spokenFixture": "ship",
+      "expectedCorrect": true,
+      "repeat": 1,
+      "computeMs": 325.01,
+      "result": {
+        "referencePhones": [
+          "ʃ",
+          "ɪ",
+          "p"
+        ],
+        "events": [
+          {
+            "phoneme": "ʃ",
+            "position": 0,
+            "label": "correct",
+            "decoded": "ʃ",
+            "target_logit": 8.925994873046875,
+            "decoded_logit": 8.925994873046875,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "ɪ",
+            "position": 1,
+            "label": "mispronounced",
+            "decoded": "ɛ",
+            "target_logit": 2.9112956523895264,
+            "decoded_logit": 5.377367973327637,
+            "gop": 0.08491773158311844,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "p",
+            "position": 2,
+            "label": "correct",
+            "decoded": "p",
+            "target_logit": 8.146049499511719,
+            "decoded_logit": 8.146049499511719,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": null,
+            "position": null,
+            "label": "prosody",
+            "decoded": null,
+            "target_logit": null,
+            "decoded_logit": null,
+            "gop": null,
+            "monotony_score": 0.0,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": 0.0
+          }
+        ],
+        "unscoredPositions": [],
+        "flagged": true
+      }
+    },
+    {
+      "id": "guy-ship-as-ship",
+      "file": "public/audio/guy/word-2224.mp3",
+      "sha256": "3b2f0c745aefc588efad9acea1adb6332eceb4d80dc638578fddda9e808242d5",
+      "reference": "ship",
+      "spokenFixture": "ship",
+      "expectedCorrect": true,
+      "repeat": 1,
+      "computeMs": 324.64,
+      "result": {
+        "referencePhones": [
+          "ʃ",
+          "ɪ",
+          "p"
+        ],
+        "events": [
+          {
+            "phoneme": "ʃ",
+            "position": 0,
+            "label": "correct",
+            "decoded": "ʃ",
+            "target_logit": 8.939820289611816,
+            "decoded_logit": 8.939820289611816,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "ɪ",
+            "position": 1,
+            "label": "correct",
+            "decoded": "ɪ",
+            "target_logit": 7.080738544464111,
+            "decoded_logit": 7.080738544464111,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "p",
+            "position": 2,
+            "label": "correct",
+            "decoded": "p",
+            "target_logit": 6.6116838455200195,
+            "decoded_logit": 6.6116838455200195,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": null,
+            "position": null,
+            "label": "prosody",
+            "decoded": null,
+            "target_logit": null,
+            "decoded_logit": null,
+            "gop": null,
+            "monotony_score": 0.0,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": 0.0
+          }
+        ],
+        "unscoredPositions": [],
+        "flagged": false
+      }
+    },
+    {
+      "id": "aria-three-as-three",
+      "file": "public/audio/aria/word-2400.mp3",
+      "sha256": "dbd32db6d89af3f6ba5865985d6aea396c11469027890c3ff47f2df3858372f5",
+      "reference": "three",
+      "spokenFixture": "three",
+      "expectedCorrect": true,
+      "repeat": 1,
+      "computeMs": 178.77,
+      "result": {
+        "referencePhones": [
+          "θ",
+          "r",
+          "i"
+        ],
+        "events": [
+          {
+            "phoneme": "θ",
+            "position": 0,
+            "label": "correct",
+            "decoded": "θ",
+            "target_logit": 7.51802921295166,
+            "decoded_logit": 7.51802921295166,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "r",
+            "position": 1,
+            "label": "correct",
+            "decoded": "r",
+            "target_logit": 9.258508682250977,
+            "decoded_logit": 9.258508682250977,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "i",
+            "position": 2,
+            "label": "correct",
+            "decoded": "i",
+            "target_logit": 9.23058032989502,
+            "decoded_logit": 9.23058032989502,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": null,
+            "position": null,
+            "label": "prosody",
+            "decoded": null,
+            "target_logit": null,
+            "decoded_logit": null,
+            "gop": null,
+            "monotony_score": 1.0,
+            "rhythm_score": null,
+            "boundary_score": 1.0,
+            "speaking_rate": 0.65
+          }
+        ],
+        "unscoredPositions": [],
+        "flagged": false
+      }
+    },
+    {
+      "id": "guy-three-as-three",
+      "file": "public/audio/guy/word-2400.mp3",
+      "sha256": "94ceb6bcde145714f09292b63ae0d6624a89be5cb173720ac695119dafe3a0c2",
+      "reference": "three",
+      "spokenFixture": "three",
+      "expectedCorrect": true,
+      "repeat": 1,
+      "computeMs": 323.58,
+      "result": {
+        "referencePhones": [
+          "θ",
+          "r",
+          "i"
+        ],
+        "events": [
+          {
+            "phoneme": "θ",
+            "position": 0,
+            "label": "correct",
+            "decoded": "θ",
+            "target_logit": 8.178304672241211,
+            "decoded_logit": 8.178304672241211,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "r",
+            "position": 1,
+            "label": "correct",
+            "decoded": "r",
+            "target_logit": 7.610018253326416,
+            "decoded_logit": 7.610018253326416,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "i",
+            "position": 2,
+            "label": "correct",
+            "decoded": "i",
+            "target_logit": 7.105808258056641,
+            "decoded_logit": 7.105808258056641,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": null,
+            "position": null,
+            "label": "prosody",
+            "decoded": null,
+            "target_logit": null,
+            "decoded_logit": null,
+            "gop": null,
+            "monotony_score": 0.0,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": 0.0
+          }
+        ],
+        "unscoredPositions": [],
+        "flagged": false
+      }
+    },
+    {
+      "id": "aria-bad-as-bad",
+      "file": "public/audio/aria/word-2978.mp3",
+      "sha256": "77e448d4d24a5eb7bce40296318a11d4582a63b0ad88ae2b826b9f74353f92af",
+      "reference": "bad",
+      "spokenFixture": "bad",
+      "expectedCorrect": true,
+      "repeat": 1,
+      "computeMs": 316.49,
+      "result": {
+        "referencePhones": [
+          "b",
+          "æ",
+          "d"
+        ],
+        "events": [
+          {
+            "phoneme": "b",
+            "position": 0,
+            "label": "mispronounced",
+            "decoded": "ð",
+            "target_logit": 0.8364663124084473,
+            "decoded_logit": 6.744072437286377,
+            "gop": 0.002718687290325761,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "æ",
+            "position": 1,
+            "label": "correct",
+            "decoded": "æ",
+            "target_logit": 8.066166877746582,
+            "decoded_logit": 8.066166877746582,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "d",
+            "position": 2,
+            "label": "correct",
+            "decoded": "d",
+            "target_logit": 8.64004898071289,
+            "decoded_logit": 8.64004898071289,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": null,
+            "position": null,
+            "label": "prosody",
+            "decoded": null,
+            "target_logit": null,
+            "decoded_logit": null,
+            "gop": null,
+            "monotony_score": 0.971,
+            "rhythm_score": null,
+            "boundary_score": 1.0,
+            "speaking_rate": 0.66
+          }
+        ],
+        "unscoredPositions": [],
+        "flagged": true
+      }
+    },
+    {
+      "id": "guy-bad-as-bad",
+      "file": "public/audio/guy/word-2978.mp3",
+      "sha256": "07160402b698581188f51423fc62d77102d77c247bbea7481bf140293e5dbcde",
+      "reference": "bad",
+      "spokenFixture": "bad",
+      "expectedCorrect": true,
+      "repeat": 1,
+      "computeMs": 315.35,
+      "result": {
+        "referencePhones": [
+          "b",
+          "æ",
+          "d"
+        ],
+        "events": [
+          {
+            "phoneme": "b",
+            "position": 0,
+            "label": "correct",
+            "decoded": "b",
+            "target_logit": 8.199477195739746,
+            "decoded_logit": 8.199477195739746,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "æ",
+            "position": 1,
+            "label": "correct",
+            "decoded": "æ",
+            "target_logit": 7.670158386230469,
+            "decoded_logit": 7.670158386230469,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "d",
+            "position": 2,
+            "label": "correct",
+            "decoded": "d",
+            "target_logit": 8.477045059204102,
+            "decoded_logit": 8.477045059204102,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": null,
+            "position": null,
+            "label": "prosody",
+            "decoded": null,
+            "target_logit": null,
+            "decoded_logit": null,
+            "gop": null,
+            "monotony_score": 0.0,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": 0.0
+          }
+        ],
+        "unscoredPositions": [],
+        "flagged": false
+      }
+    },
+    {
+      "id": "aria-right-as-right",
+      "file": "public/audio/aria/word-2160.mp3",
+      "sha256": "c4f8341a47942b096bcec86eacade529bb700fd8f725bfff388081846fb358df",
+      "reference": "right",
+      "spokenFixture": "right",
+      "expectedCorrect": true,
+      "repeat": 1,
+      "computeMs": 319.28,
+      "result": {
+        "referencePhones": [
+          "r",
+          "aɪ",
+          "t"
+        ],
+        "events": [
+          {
+            "phoneme": "r",
+            "position": 0,
+            "label": "correct",
+            "decoded": "r",
+            "target_logit": 7.9542155265808105,
+            "decoded_logit": 7.9542155265808105,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "aɪ",
+            "position": 1,
+            "label": "correct",
+            "decoded": "aɪ",
+            "target_logit": 8.078518867492676,
+            "decoded_logit": 8.078518867492676,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "t",
+            "position": 2,
+            "label": "correct",
+            "decoded": "t",
+            "target_logit": 8.352958679199219,
+            "decoded_logit": 8.352958679199219,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": null,
+            "position": null,
+            "label": "prosody",
+            "decoded": null,
+            "target_logit": null,
+            "decoded_logit": null,
+            "gop": null,
+            "monotony_score": 0.307,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": 0.65
+          }
+        ],
+        "unscoredPositions": [],
+        "flagged": false
+      }
+    },
+    {
+      "id": "guy-right-as-right",
+      "file": "public/audio/guy/word-2160.mp3",
+      "sha256": "d80d39b42a0d25f74b7b139ea295162b0436f554e01b7d8b5290e11e93556d0b",
+      "reference": "right",
+      "spokenFixture": "right",
+      "expectedCorrect": true,
+      "repeat": 1,
+      "computeMs": 347.44,
+      "result": {
+        "referencePhones": [
+          "r",
+          "aɪ",
+          "t"
+        ],
+        "events": [
+          {
+            "phoneme": "r",
+            "position": 0,
+            "label": "correct",
+            "decoded": "r",
+            "target_logit": 9.373025894165039,
+            "decoded_logit": 9.373025894165039,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "aɪ",
+            "position": 1,
+            "label": "correct",
+            "decoded": "aɪ",
+            "target_logit": 7.759912967681885,
+            "decoded_logit": 7.759912967681885,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "t",
+            "position": 2,
+            "label": "correct",
+            "decoded": "t",
+            "target_logit": 5.7547454833984375,
+            "decoded_logit": 5.7547454833984375,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": null,
+            "position": null,
+            "label": "prosody",
+            "decoded": null,
+            "target_logit": null,
+            "decoded_logit": null,
+            "gop": null,
+            "monotony_score": 0.0,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": 0.0
+          }
+        ],
+        "unscoredPositions": [],
+        "flagged": false
+      }
+    },
+    {
+      "id": "aria-sink-as-think",
+      "file": "public/audio/aria/word-959.mp3",
+      "sha256": "6e91c5e4a7ea69fc6243dbdf3eed48bba5106c2030d11f4c90937d8a9e9edaa7",
+      "reference": "think",
+      "spokenFixture": "sink",
+      "expectedCorrect": false,
+      "repeat": 1,
+      "computeMs": 319.93,
+      "result": {
+        "referencePhones": [
+          "θ",
+          "ɪ",
+          "ŋ",
+          "k"
+        ],
+        "events": [
+          {
+            "phoneme": "θ",
+            "position": 0,
+            "label": "correct",
+            "decoded": "s",
+            "target_logit": 2.0274317264556885,
+            "decoded_logit": 9.476991653442383,
+            "gop": 0.0005816974444314837,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "ɪ",
+            "position": 1,
+            "label": "correct",
+            "decoded": "ɪ",
+            "target_logit": 7.478265285491943,
+            "decoded_logit": 7.478265285491943,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "ŋ",
+            "position": 2,
+            "label": "correct",
+            "decoded": "ŋ",
+            "target_logit": 7.728754997253418,
+            "decoded_logit": 7.728754997253418,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "k",
+            "position": 3,
+            "label": "correct",
+            "decoded": "k",
+            "target_logit": 8.95849609375,
+            "decoded_logit": 8.95849609375,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": null,
+            "position": null,
+            "label": "prosody",
+            "decoded": null,
+            "target_logit": null,
+            "decoded_logit": null,
+            "gop": null,
+            "monotony_score": 0.0,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": 0.0
+          }
+        ],
+        "unscoredPositions": [],
+        "flagged": false
+      }
+    },
+    {
+      "id": "guy-sink-as-think",
+      "file": "public/audio/guy/word-959.mp3",
+      "sha256": "2a1d15a183d4fe0d4b32443959c39b1854c2107f82f8ba797de5ab88fab4ec94",
+      "reference": "think",
+      "spokenFixture": "sink",
+      "expectedCorrect": false,
+      "repeat": 1,
+      "computeMs": 318.36,
+      "result": {
+        "referencePhones": [
+          "θ",
+          "ɪ",
+          "ŋ",
+          "k"
+        ],
+        "events": [
+          {
+            "phoneme": "θ",
+            "position": 0,
+            "label": "correct",
+            "decoded": "s",
+            "target_logit": 1.5916590690612793,
+            "decoded_logit": 9.633013725280762,
+            "gop": 0.0003218724741600454,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "ɪ",
+            "position": 1,
+            "label": "correct",
+            "decoded": "ɪ",
+            "target_logit": 8.136540412902832,
+            "decoded_logit": 8.136540412902832,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "ɪ",
+            "position": 1,
+            "label": "correct",
+            "decoded": "i",
+            "target_logit": 6.72685432434082,
+            "decoded_logit": 6.922555923461914,
+            "gop": 0.8222575783729553,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "ŋ",
+            "position": 2,
+            "label": "correct",
+            "decoded": "ŋ",
+            "target_logit": 7.888521194458008,
+            "decoded_logit": 7.888521194458008,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "k",
+            "position": 3,
+            "label": "correct",
+            "decoded": "k",
+            "target_logit": 8.831337928771973,
+            "decoded_logit": 8.831337928771973,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": null,
+            "position": null,
+            "label": "prosody",
+            "decoded": null,
+            "target_logit": null,
+            "decoded_logit": null,
+            "gop": null,
+            "monotony_score": 0.0,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": 0.0
+          }
+        ],
+        "unscoredPositions": [],
+        "flagged": false
+      }
+    },
+    {
+      "id": "aria-sheep-as-ship",
+      "file": "public/audio/aria/word-2968.mp3",
+      "sha256": "d78bba621523dcd4fb8efdca6df67c3fc7a32644bc342b5f3f74378b36b259ae",
+      "reference": "ship",
+      "spokenFixture": "sheep",
+      "expectedCorrect": false,
+      "repeat": 1,
+      "computeMs": 313.76,
+      "result": {
+        "referencePhones": [
+          "ʃ",
+          "ɪ",
+          "p"
+        ],
+        "events": [
+          {
+            "phoneme": "ʃ",
+            "position": 0,
+            "label": "correct",
+            "decoded": "ʃ",
+            "target_logit": 9.036245346069336,
+            "decoded_logit": 9.036245346069336,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "ɪ",
+            "position": 1,
+            "label": "mispronounced",
+            "decoded": "i",
+            "target_logit": 2.3123233318328857,
+            "decoded_logit": 7.283133506774902,
+            "gop": 0.006937527097761631,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "p",
+            "position": 2,
+            "label": "correct",
+            "decoded": "p",
+            "target_logit": 8.393470764160156,
+            "decoded_logit": 8.393470764160156,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": null,
+            "position": null,
+            "label": "prosody",
+            "decoded": null,
+            "target_logit": null,
+            "decoded_logit": null,
+            "gop": null,
+            "monotony_score": 0.0,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": 0.0
+          }
+        ],
+        "unscoredPositions": [],
+        "flagged": true
+      }
+    },
+    {
+      "id": "guy-sheep-as-ship",
+      "file": "public/audio/guy/word-2968.mp3",
+      "sha256": "7e6f1a2b72c797d1c095bda747d05fd45f61a62cd85eb1790663f51b2c07f212",
+      "reference": "ship",
+      "spokenFixture": "sheep",
+      "expectedCorrect": false,
+      "repeat": 1,
+      "computeMs": 315.8,
+      "result": {
+        "referencePhones": [
+          "ʃ",
+          "ɪ",
+          "p"
+        ],
+        "events": [
+          {
+            "phoneme": "ʃ",
+            "position": 0,
+            "label": "correct",
+            "decoded": "ʃ",
+            "target_logit": 9.069936752319336,
+            "decoded_logit": 9.069936752319336,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "ɪ",
+            "position": 1,
+            "label": "correct",
+            "decoded": "i",
+            "target_logit": 3.825624942779541,
+            "decoded_logit": 7.986286640167236,
+            "gop": 0.015597234480082989,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "p",
+            "position": 2,
+            "label": "correct",
+            "decoded": "p",
+            "target_logit": 8.304479598999023,
+            "decoded_logit": 8.304479598999023,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": null,
+            "position": null,
+            "label": "prosody",
+            "decoded": null,
+            "target_logit": null,
+            "decoded_logit": null,
+            "gop": null,
+            "monotony_score": 0.0,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": 0.0
+          }
+        ],
+        "unscoredPositions": [],
+        "flagged": false
+      }
+    },
+    {
+      "id": "aria-free-as-three",
+      "file": "public/audio/aria/word-1649.mp3",
+      "sha256": "ffe976c2022e78e153ed1d4a79e8af3182ef98c58bd42522f04e1376578d0acb",
+      "reference": "three",
+      "spokenFixture": "free",
+      "expectedCorrect": false,
+      "repeat": 1,
+      "computeMs": 171.56,
+      "result": {
+        "referencePhones": [
+          "θ",
+          "r",
+          "i"
+        ],
+        "events": [
+          {
+            "phoneme": "θ",
+            "position": 0,
+            "label": "correct",
+            "decoded": "f",
+            "target_logit": 0.6498482823371887,
+            "decoded_logit": 8.370516777038574,
+            "gop": 0.0004435640585143119,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "r",
+            "position": 1,
+            "label": "correct",
+            "decoded": "r",
+            "target_logit": 9.048702239990234,
+            "decoded_logit": 9.048702239990234,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "i",
+            "position": 2,
+            "label": "correct",
+            "decoded": "i",
+            "target_logit": 8.103102684020996,
+            "decoded_logit": 8.103102684020996,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": null,
+            "position": null,
+            "label": "prosody",
+            "decoded": null,
+            "target_logit": null,
+            "decoded_logit": null,
+            "gop": null,
+            "monotony_score": 1.0,
+            "rhythm_score": null,
+            "boundary_score": 1.0,
+            "speaking_rate": 0.66
+          }
+        ],
+        "unscoredPositions": [],
+        "flagged": false
+      }
+    },
+    {
+      "id": "guy-free-as-three",
+      "file": "public/audio/guy/word-1649.mp3",
+      "sha256": "b64d197492c3ab8a73bcb5eb526e016455a9f5793081c3f58d95e56470fa5991",
+      "reference": "three",
+      "spokenFixture": "free",
+      "expectedCorrect": false,
+      "repeat": 1,
+      "computeMs": 178.04,
+      "result": {
+        "referencePhones": [
+          "θ",
+          "r",
+          "i"
+        ],
+        "events": [
+          {
+            "phoneme": "θ",
+            "position": 0,
+            "label": "correct",
+            "decoded": "f",
+            "target_logit": 0.9631597995758057,
+            "decoded_logit": 8.366005897521973,
+            "gop": 0.000609515409450978,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "r",
+            "position": 1,
+            "label": "correct",
+            "decoded": "r",
+            "target_logit": 9.373787879943848,
+            "decoded_logit": 9.373787879943848,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "i",
+            "position": 2,
+            "label": "correct",
+            "decoded": "i",
+            "target_logit": 6.157266616821289,
+            "decoded_logit": 6.157266616821289,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": null,
+            "position": null,
+            "label": "prosody",
+            "decoded": null,
+            "target_logit": null,
+            "decoded_logit": null,
+            "gop": null,
+            "monotony_score": 0.0,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": 0.0
+          }
+        ],
+        "unscoredPositions": [],
+        "flagged": false
+      }
+    },
+    {
+      "id": "aria-bed-as-bad",
+      "file": "public/audio/aria/word-1291.mp3",
+      "sha256": "5e76c091ea05c53403fa281115e8a5bfe08a42b621f6a2893c88beb6b9f133cd",
+      "reference": "bad",
+      "spokenFixture": "bed",
+      "expectedCorrect": false,
+      "repeat": 1,
+      "computeMs": 318.16,
+      "result": {
+        "referencePhones": [
+          "b",
+          "æ",
+          "d"
+        ],
+        "events": [
+          {
+            "phoneme": "b",
+            "position": 0,
+            "label": "mispronounced",
+            "decoded": "ð",
+            "target_logit": 2.0399351119995117,
+            "decoded_logit": 6.798563003540039,
+            "gop": 0.008577370084822178,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "æ",
+            "position": 1,
+            "label": "correct",
+            "decoded": "æ",
+            "target_logit": 7.471536636352539,
+            "decoded_logit": 7.471536636352539,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "d",
+            "position": 2,
+            "label": "correct",
+            "decoded": "d",
+            "target_logit": 7.01582670211792,
+            "decoded_logit": 7.01582670211792,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": null,
+            "position": null,
+            "label": "prosody",
+            "decoded": null,
+            "target_logit": null,
+            "decoded_logit": null,
+            "gop": null,
+            "monotony_score": 1.0,
+            "rhythm_score": null,
+            "boundary_score": 1.0,
+            "speaking_rate": 0.69
+          }
+        ],
+        "unscoredPositions": [],
+        "flagged": true
+      }
+    },
+    {
+      "id": "guy-bed-as-bad",
+      "file": "public/audio/guy/word-1291.mp3",
+      "sha256": "120e4f3456bb54835747cdae05588a31d61f32201d79d49be4e01c1f653ec7ce",
+      "reference": "bad",
+      "spokenFixture": "bed",
+      "expectedCorrect": false,
+      "repeat": 1,
+      "computeMs": 320.13,
+      "result": {
+        "referencePhones": [
+          "b",
+          "æ",
+          "d"
+        ],
+        "events": [
+          {
+            "phoneme": "b",
+            "position": 0,
+            "label": "correct",
+            "decoded": "b",
+            "target_logit": 8.501205444335938,
+            "decoded_logit": 8.501205444335938,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "æ",
+            "position": 1,
+            "label": "correct",
+            "decoded": "æ",
+            "target_logit": 8.57022762298584,
+            "decoded_logit": 8.57022762298584,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "d",
+            "position": 2,
+            "label": "correct",
+            "decoded": "d",
+            "target_logit": 7.890351295471191,
+            "decoded_logit": 7.890351295471191,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": null,
+            "position": null,
+            "label": "prosody",
+            "decoded": null,
+            "target_logit": null,
+            "decoded_logit": null,
+            "gop": null,
+            "monotony_score": 0.0,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": 0.0
+          }
+        ],
+        "unscoredPositions": [],
+        "flagged": false
+      }
+    },
+    {
+      "id": "aria-light-as-right",
+      "file": "public/audio/aria/word-1852.mp3",
+      "sha256": "f718748a255457e8fb6b28bfd3d111c36716a447c69187d5644ac1ecf7edd337",
+      "reference": "right",
+      "spokenFixture": "light",
+      "expectedCorrect": false,
+      "repeat": 1,
+      "computeMs": 318.04,
+      "result": {
+        "referencePhones": [
+          "r",
+          "aɪ",
+          "t"
+        ],
+        "events": [
+          {
+            "phoneme": "r",
+            "position": 0,
+            "label": "omitted",
+            "decoded": "",
+            "target_logit": null,
+            "decoded_logit": null,
+            "gop": 0.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "aɪ",
+            "position": 1,
+            "label": "correct",
+            "decoded": "aɪ",
+            "target_logit": 8.557304382324219,
+            "decoded_logit": 8.557304382324219,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "t",
+            "position": 2,
+            "label": "correct",
+            "decoded": "t",
+            "target_logit": 6.4368062019348145,
+            "decoded_logit": 6.4368062019348145,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": null,
+            "position": null,
+            "label": "prosody",
+            "decoded": null,
+            "target_logit": null,
+            "decoded_logit": null,
+            "gop": null,
+            "monotony_score": 0.179,
+            "rhythm_score": null,
+            "boundary_score": 1.0,
+            "speaking_rate": 0.63
+          }
+        ],
+        "unscoredPositions": [],
+        "flagged": true
+      }
+    },
+    {
+      "id": "guy-light-as-right",
+      "file": "public/audio/guy/word-1852.mp3",
+      "sha256": "eee7516495f22dfc96baa88bfea2fb22b32b6896f0e8941846320b451f4f6d57",
+      "reference": "right",
+      "spokenFixture": "light",
+      "expectedCorrect": false,
+      "repeat": 1,
+      "computeMs": 320.22,
+      "result": {
+        "referencePhones": [
+          "r",
+          "aɪ",
+          "t"
+        ],
+        "events": [
+          {
+            "phoneme": "r",
+            "position": 0,
+            "label": "mispronounced",
+            "decoded": "l",
+            "target_logit": 0.11966820061206818,
+            "decoded_logit": 9.456596374511719,
+            "gop": 8.810965664451942e-05,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "aɪ",
+            "position": 1,
+            "label": "correct",
+            "decoded": "aɪ",
+            "target_logit": 8.22015380859375,
+            "decoded_logit": 8.22015380859375,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": "t",
+            "position": 2,
+            "label": "correct",
+            "decoded": "t",
+            "target_logit": 5.146578788757324,
+            "decoded_logit": 5.146578788757324,
+            "gop": 1.0,
+            "monotony_score": null,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": null
+          },
+          {
+            "phoneme": null,
+            "position": null,
+            "label": "prosody",
+            "decoded": null,
+            "target_logit": null,
+            "decoded_logit": null,
+            "gop": null,
+            "monotony_score": 0.0,
+            "rhythm_score": null,
+            "boundary_score": null,
+            "speaking_rate": 0.0
+          }
+        ],
+        "unscoredPositions": [],
+        "flagged": true
+      }
+    }
+  ]
+}

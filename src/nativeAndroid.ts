@@ -1,4 +1,4 @@
-import type { NativeAudioStart } from './audioPlayback.ts';
+import type { AudioEvent, AudioClip, NativeAudioStart, NativeQueueStart } from './audioPlayback.ts';
 
 /** Narrow native bridge, injected only into the APK's bundled HTTPS origin. */
 type NativeMessage = { id: string; event: string; text?: string; code?: string; positionMs?: number };
@@ -31,11 +31,20 @@ export const hasNativeAudio = () => typeof window !== 'undefined'
   && window.location.origin === 'https://appassets.androidplatform.net'
   && typeof (window as unknown as { CodeWordsAudio?: Bridge }).CodeWordsAudio?.postMessage === 'function';
 
-export const startNativeAudio: NativeAudioStart = (url, rate, notify) => {
-  if (!hasNativeAudio()) return;
+function bundledPath(url: string) {
   const parsed = new URL(url);
   const path = parsed.pathname.replace(/^\/assets\/web\//, '');
-  if (parsed.origin !== window.location.origin || !/^audio\/(?:daily\/)?(?:aria|guy)\/[a-z0-9-]+\.mp3$/.test(path)) return;
+  if (parsed.origin !== window.location.origin || !/^audio\/(?:(?:daily|reading|foundation|slow)\/)?(?:aria|guy)\/[a-z0-9-]+\.mp3$/.test(path)) return;
+  return path;
+}
+export const startNativeAudio: NativeAudioStart = (url, rate, notify) => startAudio(url, rate, notify);
+export const startNativeQueue: NativeQueueStart = (clips, rate, notify) => startAudio(clips[0].url, rate, notify, clips);
+function startAudio(url: string, rate: number, notify: Parameters<NativeAudioStart>[2], clips?: AudioClip[]) {
+  if (!hasNativeAudio()) return;
+  const path = bundledPath(url);
+  if (!path) return;
+  const queue = clips?.map(clip => ({ path: bundledPath(clip.url), startMs: clip.startMs, endMs: clip.endMs, pauseMs: clip.pauseMs }));
+  if (queue && (!queue.length || queue.length > 256 || queue.some(clip => !clip.path || !Number.isFinite(clip.startMs) || !Number.isFinite(clip.endMs) || clip.startMs < 0 || clip.endMs <= clip.startMs || !Number.isFinite(clip.pauseMs) || clip.pauseMs < 0 || clip.pauseMs > 550))) throw new Error('Invalid bundled audio queue');
   const native = (window as unknown as { CodeWordsAudio: Bridge }).CodeWordsAudio;
   if (native !== audioBridge) {
     audioBridge = native;
@@ -46,23 +55,23 @@ export const startNativeAudio: NativeAudioStart = (url, rate, notify) => {
   const id = `audio-${++sequence}`;
   const send = (action: string, values = {}) => native.postMessage(JSON.stringify({ action, id, ...values }));
   audioListeners.set(id, message => {
-    if (!['playing', 'progress', 'ended', 'stopped', 'error'].includes(message.event)) return;
-    if (message.event !== 'playing' && message.event !== 'progress') audioListeners.delete(id);
-    notify(message.event as 'playing' | 'progress' | 'ended' | 'stopped' | 'error', message.code, message.positionMs);
+    if (!['playing', 'progress', 'gap', 'ended', 'stopped', 'error'].includes(message.event)) return;
+    if (!['playing', 'progress', 'gap'].includes(message.event)) audioListeners.delete(id);
+    notify(message.event as AudioEvent, message.code, message.positionMs);
   });
-  try { send('play', { path, rate }); }
+  try { send(queue ? 'queue' : 'play', queue ? { clips: queue, rate } : { path, rate }); }
   catch (error) { audioListeners.delete(id); throw error; }
   return {
     stop: () => {
       audioListeners.delete(id);
       try { send('stop'); } catch { /* The document/bridge may already have closed. */ }
     },
-    setRate: next => {
+    setRate: (next: number) => {
       try { send('rate', { rate: next }); }
       catch { audioListeners.delete(id); notify('error', 'bridge-unavailable'); }
     },
   };
-};
+}
 
 export function downloadRecord(filename: string, content: string) {
   const native = bridge();

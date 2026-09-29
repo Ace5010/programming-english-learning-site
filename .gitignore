@@ -13,3 +13,4 @@ android/keystore.properties
 *.jks
 *.apk
 *.aab
+__pycache__/

@@ -1,0 +1,1059 @@
+[
+  {
+    "voice": "aria",
+    "text": "I am a student.",
+    "slow": true,
+    "events": [
+      {
+        "id": 16,
+        "type": "playing",
+        "url": "http://localhost:5186/audio/aria/word-1758.mp3?v=e0899bfd6e2e3e76",
+        "position": 0.16,
+        "rate": 0.72,
+        "pitch": true,
+        "at": 1021.2999999970198,
+        "active": 1
+      },
+      {
+        "id": 16,
+        "type": "pause",
+        "url": "http://localhost:5186/audio/aria/word-1758.mp3?v=e0899bfd6e2e3e76",
+        "position": 0.631833,
+        "rate": 0.72,
+        "pitch": true,
+        "at": 1747.9000000059605,
+        "active": 0
+      },
+      {
+        "id": 16,
+        "type": "playing",
+        "url": "http://localhost:5186/audio/aria/word-2984.mp3?v=92189ce35830631a",
+        "position": 0.16,
+        "rate": 0.72,
+        "pitch": true,
+        "at": 1910.2999999970198,
+        "active": 1
+      },
+      {
+        "id": 16,
+        "type": "pause",
+        "url": "http://localhost:5186/audio/aria/word-2984.mp3?v=92189ce35830631a",
+        "position": 0.75425,
+        "rate": 0.72,
+        "pitch": true,
+        "at": 2770.2000000029802,
+        "active": 0
+      },
+      {
+        "id": 16,
+        "type": "playing",
+        "url": "http://localhost:5186/audio/aria/word-2580.mp3?v=f76cdeb0dde2fea1",
+        "position": 0.16,
+        "rate": 0.72,
+        "pitch": true,
+        "at": 2933,
+        "active": 1
+      },
+      {
+        "id": 16,
+        "type": "pause",
+        "url": "http://localhost:5186/audio/aria/word-2580.mp3?v=f76cdeb0dde2fea1",
+        "position": 0.613126,
+        "rate": 0.72,
+        "pitch": true,
+        "at": 3591.5,
+        "active": 0
+      },
+      {
+        "id": 16,
+        "type": "playing",
+        "url": "http://localhost:5186/audio/aria/word-2327.mp3?v=4281c72c9fa6cc70",
+        "position": 0.16,
+        "rate": 0.72,
+        "pitch": true,
+        "at": 3754.7999999970198,
+        "active": 1
+      }
+    ]
+  },
+  {
+    "voice": "aria",
+    "text": "What's your name?",
+    "slow": true,
+    "events": [
+      {
+        "id": 25,
+        "type": "playing",
+        "url": "http://localhost:5186/audio/slow/aria/pack-4.mp3?v=3f52f473b0acb149",
+        "position": 30.8,
+        "rate": 0.72,
+        "pitch": true,
+        "at": 5039,
+        "active": 1
+      },
+      {
+        "id": 25,
+        "type": "pause",
+        "url": "http://localhost:5186/audio/slow/aria/pack-4.mp3?v=3f52f473b0acb149",
+        "position": 31.429742,
+        "rate": 0.72,
+        "pitch": true,
+        "at": 6073.70000000298,
+        "active": 0
+      },
+      {
+        "id": 25,
+        "type": "playing",
+        "url": "http://localhost:5186/audio/aria/word-2567.mp3?v=6b53539858cc8b16",
+        "position": 0.15,
+        "rate": 0.72,
+        "pitch": true,
+        "at": 6236.20000000298,
+        "active": 1
+      },
+      {
+        "id": 25,
+        "type": "pause",
+        "url": "http://localhost:5186/audio/aria/word-2567.mp3?v=6b53539858cc8b16",
+        "position": 0.723579,
+        "rate": 0.72,
+        "pitch": true,
+        "at": 7058.5,
+        "active": 0
+      },
+      {
+        "id": 25,
+        "type": "playing",
+        "url": "http://localhost:5186/audio/aria/word-1934.mp3?v=9e62b841de7b8e3a",
+        "position": 0.15,
+        "rate": 0.72,
+        "pitch": true,
+        "at": 7220.9000000059605,
+        "active": 1
+      }
+    ]
+  },
+  {
+    "voice": "aria",
+    "text": "We are students.",
+    "slow": true,
+    "events": [
+      {
+        "id": 30,
+        "type": "playing",
+        "url": "http://localhost:5186/audio/foundation/aria/f-f3fe997b8d1ce818.mp3?v=5d6725ca4452a249",
+        "position": 0.15,
+        "rate": 0.72,
+        "pitch": true,
+        "at": 8185.79999999702,
+        "active": 1
+      },
+      {
+        "id": 30,
+        "type": "pause",
+        "url": "http://localhost:5186/audio/foundation/aria/f-f3fe997b8d1ce818.mp3?v=5d6725ca4452a249",
+        "position": 0.665042,
+        "rate": 0.72,
+        "pitch": true,
+        "at": 8926.29999999702,
+        "active": 0
+      },
+      {
+        "id": 30,
+        "type": "playing",
+        "url": "http://localhost:5186/audio/aria/word-2918.mp3?v=292051be1f328055",
+        "position": 0.16,
+        "rate": 0.72,
+        "pitch": true,
+        "at": 9089.90000000596,
+        "active": 1
+      },
+      {
+        "id": 30,
+        "type": "pause",
+        "url": "http://localhost:5186/audio/aria/word-2918.mp3?v=292051be1f328055",
+        "position": 0.732625,
+        "rate": 0.72,
+        "pitch": true,
+        "at": 9918.90000000596,
+        "active": 0
+      },
+      {
+        "id": 30,
+        "type": "playing",
+        "url": "http://localhost:5186/audio/reading/aria/read-dac4970ce624959f.mp3?v=09e87780653bfef7",
+        "position": 0.16,
+        "rate": 0.72,
+        "pitch": true,
+        "at": 10082,
+        "active": 1
+      }
+    ]
+  },
+  {
+    "voice": "aria",
+    "text": "He is Ben. He is from China. He is a teacher.",
+    "slow": true,
+    "events": [
+      {
+        "id": 38,
+        "type": "playing",
+        "url": "http://localhost:5186/audio/aria/word-1714.mp3?v=beb2329a028a8d9e",
+        "position": 0.16,
+        "rate": 0.72,
+        "pitch": true,
+        "at": 11289.29999999702,
+        "active": 1
+      },
+      {
+        "id": 38,
+        "type": "pause",
+        "url": "http://localhost:5186/audio/aria/word-1714.mp3?v=beb2329a028a8d9e",
+        "position": 0.658925,
+        "rate": 0.72,
+        "pitch": true,
+        "at": 12015.29999999702,
+        "active": 0
+      },
+      {
+        "id": 38,
+        "type": "playing",
+        "url": "http://localhost:5186/audio/aria/word-3018.mp3?v=79439558a3437be0",
+        "position": 0.16,
+        "rate": 0.72,
+        "pitch": true,
+        "at": 12178.20000000298,
+        "active": 1
+      },
+      {
+        "id": 38,
+        "type": "pause",
+        "url": "http://localhost:5186/audio/aria/word-3018.mp3?v=79439558a3437be0",
+        "position": 0.783564,
+        "rate": 0.72,
+        "pitch": true,
+        "at": 13078.10000000894,
+        "active": 0
+      },
+      {
+        "id": 38,
+        "type": "playing",
+        "url": "http://localhost:5186/audio/reading/aria/read-6700869c8ff7480e.mp3?v=24ed4f3782627944",
+        "position": 0.16,
+        "rate": 0.72,
+        "pitch": true,
+        "at": 13241.40000000596,
+        "active": 1
+      },
+      {
+        "id": 38,
+        "type": "pause",
+        "url": "http://localhost:5186/audio/reading/aria/read-6700869c8ff7480e.mp3?v=24ed4f3782627944",
+        "position": 0.690472,
+        "rate": 0.72,
+        "pitch": true,
+        "at": 14008.79999999702,
+        "active": 0
+      },
+      {
+        "id": 38,
+        "type": "playing",
+        "url": "http://localhost:5186/audio/aria/word-1714.mp3?v=beb2329a028a8d9e",
+        "position": 0.16,
+        "rate": 0.72,
+        "pitch": true,
+        "at": 14421.29999999702,
+        "active": 1
+      },
+      {
+        "id": 38,
+        "type": "pause",
+        "url": "http://localhost:5186/audio/aria/word-1714.mp3?v=beb2329a028a8d9e",
+        "position": 0.652605,
+        "rate": 0.72,
+        "pitch": true,
+        "at": 15136.10000000894,
+        "active": 0
+      },
+      {
+        "id": 38,
+        "type": "playing",
+        "url": "http://localhost:5186/audio/aria/word-3018.mp3?v=79439558a3437be0",
+        "position": 0.16,
+        "rate": 0.72,
+        "pitch": true,
+        "at": 15298.90000000596,
+        "active": 1
+      },
+      {
+        "id": 38,
+        "type": "pause",
+        "url": "http://localhost:5186/audio/aria/word-3018.mp3?v=79439558a3437be0",
+        "position": 0.784201,
+        "rate": 0.72,
+        "pitch": true,
+        "at": 16199.29999999702,
+        "active": 0
+      },
+      {
+        "id": 38,
+        "type": "playing",
+        "url": "http://localhost:5186/audio/aria/word-2824.mp3?v=f6a3a02f6d2dee8f",
+        "position": 0.2,
+        "rate": 0.72,
+        "pitch": true,
+        "at": 16361.5,
+        "active": 1
+      },
+      {
+        "id": 38,
+        "type": "pause",
+        "url": "http://localhost:5186/audio/aria/word-2824.mp3?v=f6a3a02f6d2dee8f",
+        "position": 0.808625,
+        "rate": 0.72,
+        "pitch": true,
+        "at": 17242.10000000894,
+        "active": 0
+      },
+      {
+        "id": 38,
+        "type": "playing",
+        "url": "http://localhost:5186/audio/aria/word-1395.mp3?v=3569a348d91feea2",
+        "position": 0.16,
+        "rate": 0.72,
+        "pitch": true,
+        "at": 17405.20000000298,
+        "active": 1
+      },
+      {
+        "id": 38,
+        "type": "pause",
+        "url": "http://localhost:5186/audio/aria/word-1395.mp3?v=3569a348d91feea2",
+        "position": 0.804625,
+        "rate": 0.72,
+        "pitch": true,
+        "at": 18330.40000000596,
+        "active": 0
+      },
+      {
+        "id": 38,
+        "type": "playing",
+        "url": "http://localhost:5186/audio/aria/word-1714.mp3?v=beb2329a028a8d9e",
+        "position": 0.16,
+        "rate": 0.72,
+        "pitch": true,
+        "at": 18743.10000000894,
+        "active": 1
+      },
+      {
+        "id": 38,
+        "type": "pause",
+        "url": "http://localhost:5186/audio/aria/word-1714.mp3?v=beb2329a028a8d9e",
+        "position": 0.662376,
+        "rate": 0.72,
+        "pitch": true,
+        "at": 19469.90000000596,
+        "active": 0
+      },
+      {
+        "id": 38,
+        "type": "playing",
+        "url": "http://localhost:5186/audio/aria/word-3018.mp3?v=79439558a3437be0",
+        "position": 0.16,
+        "rate": 0.72,
+        "pitch": true,
+        "at": 19632.79999999702,
+        "active": 1
+      },
+      {
+        "id": 38,
+        "type": "pause",
+        "url": "http://localhost:5186/audio/aria/word-3018.mp3?v=79439558a3437be0",
+        "position": 0.783368,
+        "rate": 0.72,
+        "pitch": true,
+        "at": 20527.70000000298,
+        "active": 0
+      },
+      {
+        "id": 38,
+        "type": "playing",
+        "url": "http://localhost:5186/audio/aria/word-2580.mp3?v=f76cdeb0dde2fea1",
+        "position": 0.16,
+        "rate": 0.72,
+        "pitch": true,
+        "at": 20690.10000000894,
+        "active": 1
+      },
+      {
+        "id": 38,
+        "type": "pause",
+        "url": "http://localhost:5186/audio/aria/word-2580.mp3?v=f76cdeb0dde2fea1",
+        "position": 0.610808,
+        "rate": 0.72,
+        "pitch": true,
+        "at": 21348.29999999702,
+        "active": 0
+      },
+      {
+        "id": 38,
+        "type": "playing",
+        "url": "http://localhost:5186/audio/aria/word-2363.mp3?v=bb60d67728de6328",
+        "position": 0.16,
+        "rate": 0.72,
+        "pitch": true,
+        "at": 21512.29999999702,
+        "active": 1
+      }
+    ]
+  },
+  {
+    "voice": "aria",
+    "text": "I am a student.",
+    "slow": false,
+    "events": [
+      {
+        "id": 11,
+        "type": "playing",
+        "url": "http://localhost:5186/audio/daily/aria/i-am-a-student.mp3?v=I%20am%20a%20student.",
+        "position": 0,
+        "rate": 1,
+        "pitch": true,
+        "at": 22498.79999999702,
+        "active": 1
+      },
+      {
+        "id": 11,
+        "type": "pause",
+        "url": "http://localhost:5186/audio/daily/aria/i-am-a-student.mp3?v=I%20am%20a%20student.",
+        "position": 1.968,
+        "rate": 1,
+        "pitch": true,
+        "at": 24517.60000000894,
+        "active": 0
+      },
+      {
+        "id": 11,
+        "type": "ended",
+        "url": "http://localhost:5186/audio/daily/aria/i-am-a-student.mp3?v=I%20am%20a%20student.",
+        "position": 1.968,
+        "rate": 1,
+        "pitch": true,
+        "at": 24519.20000000298,
+        "active": 0
+      }
+    ]
+  },
+  {
+    "voice": "aria",
+    "text": "student",
+    "slow": true,
+    "events": [
+      {
+        "id": 43,
+        "type": "playing",
+        "url": "http://localhost:5186/audio/daily/aria/daily-word-student.mp3?v=student",
+        "position": 0,
+        "rate": 0.72,
+        "pitch": true,
+        "at": 24559.29999999702,
+        "active": 1
+      },
+      {
+        "id": 43,
+        "type": "pause",
+        "url": "http://localhost:5186/audio/daily/aria/daily-word-student.mp3?v=student",
+        "position": 2.088,
+        "rate": 0.72,
+        "pitch": true,
+        "at": 27427.5,
+        "active": 0
+      },
+      {
+        "id": 43,
+        "type": "ended",
+        "url": "http://localhost:5186/audio/daily/aria/daily-word-student.mp3?v=student",
+        "position": 2.088,
+        "rate": 0.72,
+        "pitch": true,
+        "at": 27428.90000000596,
+        "active": 0
+      }
+    ]
+  },
+  {
+    "voice": "aria",
+    "scenario": "double-tap and navigation cancellation",
+    "passed": true
+  },
+  {
+    "voice": "guy",
+    "text": "I am a student.",
+    "slow": true,
+    "events": [
+      {
+        "id": 16,
+        "type": "playing",
+        "url": "http://localhost:5186/audio/guy/word-1758.mp3?v=3581f87c56777659",
+        "position": 0.17,
+        "rate": 0.72,
+        "pitch": true,
+        "at": 897.8999999910593,
+        "active": 1
+      },
+      {
+        "id": 16,
+        "type": "pause",
+        "url": "http://localhost:5186/audio/guy/word-1758.mp3?v=3581f87c56777659",
+        "position": 0.580665,
+        "rate": 0.72,
+        "pitch": true,
+        "at": 1553.8999999910593,
+        "active": 0
+      },
+      {
+        "id": 16,
+        "type": "playing",
+        "url": "http://localhost:5186/audio/guy/word-2984.mp3?v=88b85b1f7cdfe765",
+        "position": 0.17,
+        "rate": 0.72,
+        "pitch": true,
+        "at": 1718.2999999970198,
+        "active": 1
+      },
+      {
+        "id": 16,
+        "type": "pause",
+        "url": "http://localhost:5186/audio/guy/word-2984.mp3?v=88b85b1f7cdfe765",
+        "position": 0.693285,
+        "rate": 0.72,
+        "pitch": true,
+        "at": 2470.3999999910593,
+        "active": 0
+      },
+      {
+        "id": 16,
+        "type": "playing",
+        "url": "http://localhost:5186/audio/guy/word-2580.mp3?v=26dfc6ebc63ab784",
+        "position": 0.16,
+        "rate": 0.72,
+        "pitch": true,
+        "at": 2633.5,
+        "active": 1
+      },
+      {
+        "id": 16,
+        "type": "pause",
+        "url": "http://localhost:5186/audio/guy/word-2580.mp3?v=26dfc6ebc63ab784",
+        "position": 0.623102,
+        "rate": 0.72,
+        "pitch": true,
+        "at": 3306.5999999940395,
+        "active": 0
+      },
+      {
+        "id": 16,
+        "type": "playing",
+        "url": "http://localhost:5186/audio/guy/word-2327.mp3?v=44e4847093fc5afe",
+        "position": 0.18,
+        "rate": 0.72,
+        "pitch": true,
+        "at": 3469.699999988079,
+        "active": 1
+      }
+    ]
+  },
+  {
+    "voice": "guy",
+    "text": "What's your name?",
+    "slow": true,
+    "events": [
+      {
+        "id": 25,
+        "type": "playing",
+        "url": "http://localhost:5186/audio/slow/guy/pack-4.mp3?v=1e89ab608667fe91",
+        "position": 30.76,
+        "rate": 0.72,
+        "pitch": true,
+        "at": 4894.5,
+        "active": 1
+      },
+      {
+        "id": 25,
+        "type": "pause",
+        "url": "http://localhost:5186/audio/slow/guy/pack-4.mp3?v=1e89ab608667fe91",
+        "position": 31.299176,
+        "rate": 0.72,
+        "pitch": true,
+        "at": 5756.5999999940395,
+        "active": 0
+      },
+      {
+        "id": 25,
+        "type": "playing",
+        "url": "http://localhost:5186/audio/guy/word-2567.mp3?v=48eba6a9204530fe",
+        "position": 0.19,
+        "rate": 0.72,
+        "pitch": true,
+        "at": 5919.199999988079,
+        "active": 1
+      },
+      {
+        "id": 25,
+        "type": "pause",
+        "url": "http://localhost:5186/audio/guy/word-2567.mp3?v=48eba6a9204530fe",
+        "position": 0.718377,
+        "rate": 0.72,
+        "pitch": true,
+        "at": 6687.5,
+        "active": 0
+      },
+      {
+        "id": 25,
+        "type": "playing",
+        "url": "http://localhost:5186/audio/guy/word-1934.mp3?v=9fccbad90754276a",
+        "position": 0.18,
+        "rate": 0.72,
+        "pitch": true,
+        "at": 6850.5,
+        "active": 1
+      }
+    ]
+  },
+  {
+    "voice": "guy",
+    "text": "We are students.",
+    "slow": true,
+    "events": [
+      {
+        "id": 30,
+        "type": "playing",
+        "url": "http://localhost:5186/audio/foundation/guy/f-f3fe997b8d1ce818.mp3?v=fa8f7a7bc19ba129",
+        "position": 0.18,
+        "rate": 0.72,
+        "pitch": true,
+        "at": 7780,
+        "active": 1
+      },
+      {
+        "id": 30,
+        "type": "pause",
+        "url": "http://localhost:5186/audio/foundation/guy/f-f3fe997b8d1ce818.mp3?v=fa8f7a7bc19ba129",
+        "position": 0.695042,
+        "rate": 0.72,
+        "pitch": true,
+        "at": 8521.59999999404,
+        "active": 0
+      },
+      {
+        "id": 30,
+        "type": "playing",
+        "url": "http://localhost:5186/audio/guy/word-2918.mp3?v=1f2fabf4e9f1a028",
+        "position": 0.17,
+        "rate": 0.72,
+        "pitch": true,
+        "at": 8684.5,
+        "active": 1
+      },
+      {
+        "id": 30,
+        "type": "pause",
+        "url": "http://localhost:5186/audio/guy/word-2918.mp3?v=1f2fabf4e9f1a028",
+        "position": 0.703423,
+        "rate": 0.72,
+        "pitch": true,
+        "at": 9454.29999999702,
+        "active": 0
+      },
+      {
+        "id": 30,
+        "type": "playing",
+        "url": "http://localhost:5186/audio/reading/guy/read-dac4970ce624959f.mp3?v=cb148e9dca9f6484",
+        "position": 0.18,
+        "rate": 0.72,
+        "pitch": true,
+        "at": 9616.79999999702,
+        "active": 1
+      }
+    ]
+  },
+  {
+    "voice": "guy",
+    "text": "He is Ben. He is from China. He is a teacher.",
+    "slow": true,
+    "events": [
+      {
+        "id": 38,
+        "type": "playing",
+        "url": "http://localhost:5186/audio/guy/word-1714.mp3?v=d1b05304960fe84c",
+        "position": 0.18,
+        "rate": 0.72,
+        "pitch": true,
+        "at": 10861.29999999702,
+        "active": 1
+      },
+      {
+        "id": 38,
+        "type": "pause",
+        "url": "http://localhost:5186/audio/guy/word-1714.mp3?v=d1b05304960fe84c",
+        "position": 0.63025,
+        "rate": 0.72,
+        "pitch": true,
+        "at": 11510.199999988079,
+        "active": 0
+      },
+      {
+        "id": 38,
+        "type": "playing",
+        "url": "http://localhost:5186/audio/guy/word-3018.mp3?v=dd5f92133f35973a",
+        "position": 0.16,
+        "rate": 0.72,
+        "pitch": true,
+        "at": 11672.59999999404,
+        "active": 1
+      },
+      {
+        "id": 38,
+        "type": "pause",
+        "url": "http://localhost:5186/audio/guy/word-3018.mp3?v=dd5f92133f35973a",
+        "position": 0.603114,
+        "rate": 0.72,
+        "pitch": true,
+        "at": 12328.89999999106,
+        "active": 0
+      },
+      {
+        "id": 38,
+        "type": "playing",
+        "url": "http://localhost:5186/audio/reading/guy/read-6700869c8ff7480e.mp3?v=9ddff647a4da4007",
+        "position": 0.18,
+        "rate": 0.72,
+        "pitch": true,
+        "at": 12492.79999999702,
+        "active": 1
+      },
+      {
+        "id": 38,
+        "type": "pause",
+        "url": "http://localhost:5186/audio/reading/guy/read-6700869c8ff7480e.mp3?v=9ddff647a4da4007",
+        "position": 0.683501,
+        "rate": 0.72,
+        "pitch": true,
+        "at": 13222.89999999106,
+        "active": 0
+      },
+      {
+        "id": 38,
+        "type": "playing",
+        "url": "http://localhost:5186/audio/guy/word-1714.mp3?v=d1b05304960fe84c",
+        "position": 0.18,
+        "rate": 0.72,
+        "pitch": true,
+        "at": 13635.699999988079,
+        "active": 1
+      },
+      {
+        "id": 38,
+        "type": "pause",
+        "url": "http://localhost:5186/audio/guy/word-1714.mp3?v=d1b05304960fe84c",
+        "position": 0.633471,
+        "rate": 0.72,
+        "pitch": true,
+        "at": 14293.29999999702,
+        "active": 0
+      },
+      {
+        "id": 38,
+        "type": "playing",
+        "url": "http://localhost:5186/audio/guy/word-3018.mp3?v=dd5f92133f35973a",
+        "position": 0.16,
+        "rate": 0.72,
+        "pitch": true,
+        "at": 14456.29999999702,
+        "active": 1
+      },
+      {
+        "id": 38,
+        "type": "pause",
+        "url": "http://localhost:5186/audio/guy/word-3018.mp3?v=dd5f92133f35973a",
+        "position": 0.605737,
+        "rate": 0.72,
+        "pitch": true,
+        "at": 15102.59999999404,
+        "active": 0
+      },
+      {
+        "id": 38,
+        "type": "playing",
+        "url": "http://localhost:5186/audio/guy/word-2824.mp3?v=a139eab74f75f1d1",
+        "position": 0.21,
+        "rate": 0.72,
+        "pitch": true,
+        "at": 15266.199999988079,
+        "active": 1
+      },
+      {
+        "id": 38,
+        "type": "pause",
+        "url": "http://localhost:5186/audio/guy/word-2824.mp3?v=a139eab74f75f1d1",
+        "position": 0.861833,
+        "rate": 0.72,
+        "pitch": true,
+        "at": 16201.199999988079,
+        "active": 0
+      },
+      {
+        "id": 38,
+        "type": "playing",
+        "url": "http://localhost:5186/audio/guy/word-1395.mp3?v=62e85c711c24ac08",
+        "position": 0.16,
+        "rate": 0.72,
+        "pitch": true,
+        "at": 16363.59999999404,
+        "active": 1
+      },
+      {
+        "id": 38,
+        "type": "pause",
+        "url": "http://localhost:5186/audio/guy/word-1395.mp3?v=62e85c711c24ac08",
+        "position": 0.75425,
+        "rate": 0.72,
+        "pitch": true,
+        "at": 17223.19999998808,
+        "active": 0
+      },
+      {
+        "id": 38,
+        "type": "playing",
+        "url": "http://localhost:5186/audio/guy/word-1714.mp3?v=d1b05304960fe84c",
+        "position": 0.18,
+        "rate": 0.72,
+        "pitch": true,
+        "at": 17635.59999999404,
+        "active": 1
+      },
+      {
+        "id": 38,
+        "type": "pause",
+        "url": "http://localhost:5186/audio/guy/word-1714.mp3?v=d1b05304960fe84c",
+        "position": 0.625009,
+        "rate": 0.72,
+        "pitch": true,
+        "at": 18281.69999998808,
+        "active": 0
+      },
+      {
+        "id": 38,
+        "type": "playing",
+        "url": "http://localhost:5186/audio/guy/word-3018.mp3?v=dd5f92133f35973a",
+        "position": 0.16,
+        "rate": 0.72,
+        "pitch": true,
+        "at": 18443.89999999106,
+        "active": 1
+      },
+      {
+        "id": 38,
+        "type": "pause",
+        "url": "http://localhost:5186/audio/guy/word-3018.mp3?v=dd5f92133f35973a",
+        "position": 0.611895,
+        "rate": 0.72,
+        "pitch": true,
+        "at": 19101.19999998808,
+        "active": 0
+      },
+      {
+        "id": 38,
+        "type": "playing",
+        "url": "http://localhost:5186/audio/guy/word-2580.mp3?v=26dfc6ebc63ab784",
+        "position": 0.16,
+        "rate": 0.72,
+        "pitch": true,
+        "at": 19263.39999999106,
+        "active": 1
+      },
+      {
+        "id": 38,
+        "type": "pause",
+        "url": "http://localhost:5186/audio/guy/word-2580.mp3?v=26dfc6ebc63ab784",
+        "position": 0.631833,
+        "rate": 0.72,
+        "pitch": true,
+        "at": 19951.29999999702,
+        "active": 0
+      },
+      {
+        "id": 38,
+        "type": "playing",
+        "url": "http://localhost:5186/audio/guy/word-2363.mp3?v=ea770b3d1d6616ce",
+        "position": 0.16,
+        "rate": 0.72,
+        "pitch": true,
+        "at": 20113.5,
+        "active": 1
+      }
+    ]
+  },
+  {
+    "voice": "guy",
+    "text": "I am a student.",
+    "slow": false,
+    "events": [
+      {
+        "id": 11,
+        "type": "playing",
+        "url": "http://localhost:5186/audio/daily/guy/i-am-a-student.mp3?v=I%20am%20a%20student.",
+        "position": 0,
+        "rate": 1,
+        "pitch": true,
+        "at": 21163,
+        "active": 1
+      },
+      {
+        "id": 11,
+        "type": "pause",
+        "url": "http://localhost:5186/audio/daily/guy/i-am-a-student.mp3?v=I%20am%20a%20student.",
+        "position": 2.016,
+        "rate": 1,
+        "pitch": true,
+        "at": 23219,
+        "active": 0
+      },
+      {
+        "id": 11,
+        "type": "ended",
+        "url": "http://localhost:5186/audio/daily/guy/i-am-a-student.mp3?v=I%20am%20a%20student.",
+        "position": 2.016,
+        "rate": 1,
+        "pitch": true,
+        "at": 23220.39999999106,
+        "active": 0
+      }
+    ]
+  },
+  {
+    "voice": "guy",
+    "text": "student",
+    "slow": true,
+    "events": [
+      {
+        "id": 43,
+        "type": "playing",
+        "url": "http://localhost:5186/audio/daily/guy/daily-word-student.mp3?v=student",
+        "position": 0,
+        "rate": 0.72,
+        "pitch": true,
+        "at": 23248.29999999702,
+        "active": 1
+      },
+      {
+        "id": 43,
+        "type": "pause",
+        "url": "http://localhost:5186/audio/daily/guy/daily-word-student.mp3?v=student",
+        "position": 2.088,
+        "rate": 0.72,
+        "pitch": true,
+        "at": 26119,
+        "active": 0
+      },
+      {
+        "id": 43,
+        "type": "ended",
+        "url": "http://localhost:5186/audio/daily/guy/daily-word-student.mp3?v=student",
+        "position": 2.088,
+        "rate": 0.72,
+        "pitch": true,
+        "at": 26120.39999999106,
+        "active": 0
+      }
+    ]
+  },
+  {
+    "voice": "guy",
+    "scenario": "double-tap and navigation cancellation",
+    "passed": true
+  },
+  {
+    "scenario": "multiword vocabulary",
+    "events": [
+      {
+        "id": 24,
+        "type": "playing",
+        "url": "http://localhost:5186/audio/aria/word-13.mp3?v=ba30dc22644da8c7",
+        "position": 0.15,
+        "rate": 0.72,
+        "pitch": true,
+        "at": 978.2999999970198,
+        "active": 1
+      },
+      {
+        "id": 24,
+        "type": "pause",
+        "url": "http://localhost:5186/audio/aria/word-13.mp3?v=ba30dc22644da8c7",
+        "position": 0.691518,
+        "rate": 0.72,
+        "pitch": true,
+        "at": 1883.7999999970198,
+        "active": 0
+      },
+      {
+        "id": 24,
+        "type": "playing",
+        "url": "http://localhost:5186/audio/aria/word-65.mp3?v=ed3e70b84d479b84",
+        "position": 0.15,
+        "rate": 0.72,
+        "pitch": true,
+        "at": 2054.0999999940395,
+        "active": 1
+      }
+    ]
+  },
+  {
+    "scenario": "real second-word HTTP failure stops the task",
+    "events": [
+      {
+        "id": 13,
+        "type": "error",
+        "url": "http://localhost:5186/audio/aria/word-2984.mp3?v=92189ce35830631a",
+        "position": 0,
+        "rate": 1,
+        "pitch": true,
+        "at": 828.2999999970198,
+        "active": 0
+      },
+      {
+        "id": 16,
+        "type": "playing",
+        "url": "http://localhost:5186/audio/aria/word-1758.mp3?v=e0899bfd6e2e3e76",
+        "position": 0.16,
+        "rate": 0.72,
+        "pitch": true,
+        "at": 903,
+        "active": 1
+      },
+      {
+        "id": 16,
+        "type": "pause",
+        "url": "http://localhost:5186/audio/aria/word-1758.mp3?v=e0899bfd6e2e3e76",
+        "position": 0.63826,
+        "rate": 0.72,
+        "pitch": true,
+        "at": 1680.0999999940395,
+        "active": 0
+      },
+      {
+        "id": 16,
+        "type": "error",
+        "url": "http://localhost:5186/audio/aria/word-2984.mp3?v=92189ce35830631a",
+        "position": 0.16,
+        "rate": 0.72,
+        "pitch": true,
+        "at": 1844.7000000029802,
+        "active": 1
+      }
+    ],
+    "errors": [
+      "这次读音未能播放，请再点一次。"
+    ]
+  }
+]

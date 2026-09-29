@@ -1,0 +1,3443 @@
+{
+  "source": "https://github.com/jimbozhang/speechocean762",
+  "revision": "613968e3b0b789fc33936fb5eba1973176ba7d11",
+  "selection": "sorted test IDs; adult age >=18; max 2 utterances per speaker across groups; 12 with all phone scores >=1 and accuracy >=8; 12 with any phone score <=0.4",
+  "labelMeaning": "2 correct; 1 correct with heavy accent; 0 incorrect or omitted; aggregate expert scores",
+  "cases": [
+    {
+      "id": "human-000240010",
+      "file": ".runtime/pronunciation/speechocean/WAVE/SPEAKER0024/000240010.WAV",
+      "reference": "IT WAS GOOD FOR ME",
+      "sha256": "fcc9c69b477738c22f2ec1304ec636037638021d6070753c76bc9a60c5475a17",
+      "group": "acceptable",
+      "speaker": "0024",
+      "annotations": {
+        "accuracy": 9,
+        "completeness": 10,
+        "fluency": 10,
+        "prosodic": 9,
+        "text": "IT WAS GOOD FOR ME",
+        "total": 9,
+        "words": [
+          {
+            "accuracy": 10,
+            "phones": [
+              "IH0",
+              "T"
+            ],
+            "phones-accuracy": [
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "IT",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "W",
+              "AH0",
+              "Z"
+            ],
+            "phones-accuracy": [
+              2,
+              2,
+              1.8
+            ],
+            "stress": 10,
+            "text": "WAS",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "G",
+              "UH0",
+              "D"
+            ],
+            "phones-accuracy": [
+              2,
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "GOOD",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "F",
+              "AO0",
+              "R"
+            ],
+            "phones-accuracy": [
+              2,
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "FOR",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "M",
+              "IY0"
+            ],
+            "phones-accuracy": [
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "ME",
+            "total": 10
+          }
+        ]
+      }
+    },
+    {
+      "id": "human-000240031",
+      "file": ".runtime/pronunciation/speechocean/WAVE/SPEAKER0024/000240031.WAV",
+      "reference": "WE HAVE CLIMBED ONE STEP UP THE LADDER",
+      "sha256": "4440ba3f3b411cacdc5ad0cd0a7269dc42117ec227765bfb94e625dfe1444bc2",
+      "group": "acceptable",
+      "speaker": "0024",
+      "annotations": {
+        "accuracy": 10,
+        "completeness": 10,
+        "fluency": 10,
+        "prosodic": 9,
+        "text": "WE HAVE CLIMBED ONE STEP UP THE LADDER",
+        "total": 9,
+        "words": [
+          {
+            "accuracy": 10,
+            "phones": [
+              "W",
+              "IY0"
+            ],
+            "phones-accuracy": [
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "WE",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "HH",
+              "AE0",
+              "V"
+            ],
+            "phones-accuracy": [
+              2,
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "HAVE",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "K",
+              "L",
+              "AY0",
+              "M",
+              "D"
+            ],
+            "phones-accuracy": [
+              2,
+              2,
+              2,
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "CLIMBED",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "W",
+              "AH0",
+              "N"
+            ],
+            "phones-accuracy": [
+              2,
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "ONE",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "S",
+              "T",
+              "EH0",
+              "P"
+            ],
+            "phones-accuracy": [
+              2,
+              2,
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "STEP",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "AH0",
+              "P"
+            ],
+            "phones-accuracy": [
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "UP",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "DH",
+              "AH0"
+            ],
+            "phones-accuracy": [
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "THE",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "L",
+              "AE1",
+              "D",
+              "ER0"
+            ],
+            "phones-accuracy": [
+              2,
+              2,
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "LADDER",
+            "total": 10
+          }
+        ]
+      }
+    },
+    {
+      "id": "human-001200015",
+      "file": ".runtime/pronunciation/speechocean/WAVE/SPEAKER0120/001200015.WAV",
+      "reference": "WE WERE FORTUNATE TO GET BACK INTO THE BALL GAME",
+      "sha256": "a5a580e119a75a9fca04f9c6c52d301bc904e313581a60d5e94588bbfb38ddda",
+      "group": "acceptable",
+      "speaker": "0120",
+      "annotations": {
+        "accuracy": 9,
+        "completeness": 10,
+        "fluency": 9,
+        "prosodic": 8,
+        "text": "WE WERE FORTUNATE TO GET BACK INTO THE BALL GAME",
+        "total": 8,
+        "words": [
+          {
+            "accuracy": 10,
+            "phones": [
+              "W",
+              "IY0"
+            ],
+            "phones-accuracy": [
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "WE",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "W",
+              "ER0"
+            ],
+            "phones-accuracy": [
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "WERE",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "F",
+              "AO1",
+              "R",
+              "CH",
+              "AH0",
+              "N",
+              "AH0",
+              "T"
+            ],
+            "phones-accuracy": [
+              2,
+              2,
+              2,
+              2,
+              1.6,
+              2,
+              1.2,
+              2
+            ],
+            "stress": 10,
+            "text": "FORTUNATE",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "T",
+              "UW0"
+            ],
+            "phones-accuracy": [
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "TO",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "G",
+              "EH0",
+              "T"
+            ],
+            "phones-accuracy": [
+              2,
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "GET",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "B",
+              "AE0",
+              "K"
+            ],
+            "phones-accuracy": [
+              2,
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "BACK",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "IH1",
+              "N",
+              "T",
+              "UW0"
+            ],
+            "phones-accuracy": [
+              2,
+              2,
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "INTO",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "DH",
+              "AH0"
+            ],
+            "phones-accuracy": [
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "THE",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "B",
+              "AO0",
+              "L"
+            ],
+            "phones-accuracy": [
+              2,
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "BALL",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "G",
+              "EY0",
+              "M"
+            ],
+            "phones-accuracy": [
+              2,
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "GAME",
+            "total": 10
+          }
+        ]
+      }
+    },
+    {
+      "id": "human-001200050",
+      "file": ".runtime/pronunciation/speechocean/WAVE/SPEAKER0120/001200050.WAV",
+      "reference": "I WILL PUT PRESSURE ON HIM AND MAKE HIM MISS",
+      "sha256": "9be207d3a148df91c2db73177427cbe7f8bb5808666d20d211972b78ce0d7c1c",
+      "group": "acceptable",
+      "speaker": "0120",
+      "annotations": {
+        "accuracy": 9,
+        "completeness": 10,
+        "fluency": 9,
+        "prosodic": 8,
+        "text": "I WILL PUT PRESSURE ON HIM AND MAKE HIM MISS",
+        "total": 8,
+        "words": [
+          {
+            "accuracy": 10,
+            "phones": [
+              "AY0"
+            ],
+            "phones-accuracy": [
+              2
+            ],
+            "stress": 10,
+            "text": "I",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "W",
+              "IH0",
+              "L"
+            ],
+            "phones-accuracy": [
+              2,
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "WILL",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "P",
+              "UH0",
+              "T"
+            ],
+            "phones-accuracy": [
+              2,
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "PUT",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "P",
+              "R",
+              "EH1",
+              "SH",
+              "AH0"
+            ],
+            "phones-accuracy": [
+              2,
+              2,
+              2,
+              2,
+              1.6
+            ],
+            "stress": 10,
+            "text": "PRESSURE",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "AH0",
+              "N"
+            ],
+            "phones-accuracy": [
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "ON",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "HH",
+              "IH0",
+              "M"
+            ],
+            "phones-accuracy": [
+              2,
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "HIM",
+            "total": 10
+          },
+          {
+            "accuracy": 8,
+            "phones": [
+              "AE0",
+              "N",
+              "D"
+            ],
+            "phones-accuracy": [
+              1.4,
+              1.6,
+              1.2
+            ],
+            "stress": 10,
+            "text": "AND",
+            "total": 8
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "M",
+              "EY0",
+              "K"
+            ],
+            "phones-accuracy": [
+              2,
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "MAKE",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "HH",
+              "IH0",
+              "M"
+            ],
+            "phones-accuracy": [
+              2,
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "HIM",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "M",
+              "IH0",
+              "S"
+            ],
+            "phones-accuracy": [
+              2,
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "MISS",
+            "total": 10
+          }
+        ]
+      }
+    },
+    {
+      "id": "human-001570024",
+      "file": ".runtime/pronunciation/speechocean/WAVE/SPEAKER0157/001570024.WAV",
+      "reference": "THE RESEARCHERS FOUND THAT TO BE THE CASE",
+      "sha256": "0253783338ba943f3998ac13e0a036d0cbe9424b09b388d45cd5d45377563936",
+      "group": "acceptable",
+      "speaker": "0157",
+      "annotations": {
+        "accuracy": 9,
+        "completeness": 10,
+        "fluency": 10,
+        "prosodic": 8,
+        "text": "THE RESEARCHERS FOUND THAT TO BE THE CASE",
+        "total": 8,
+        "words": [
+          {
+            "accuracy": 10,
+            "phones": [
+              "DH",
+              "AH0"
+            ],
+            "phones-accuracy": [
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "THE",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "R",
+              "IH1",
+              "S",
+              "ER0",
+              "CH",
+              "AH0",
+              "Z"
+            ],
+            "phones-accuracy": [
+              2,
+              2,
+              2,
+              2,
+              2,
+              2,
+              1.8
+            ],
+            "stress": 10,
+            "text": "RESEARCHERS",
+            "total": 9
+          },
+          {
+            "accuracy": 8,
+            "phones": [
+              "F",
+              "AW0",
+              "N",
+              "D"
+            ],
+            "phones-accuracy": [
+              2,
+              1,
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "FOUND",
+            "total": 8
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "DH",
+              "AE0",
+              "T"
+            ],
+            "phones-accuracy": [
+              2,
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "THAT",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "T",
+              "UW0"
+            ],
+            "phones-accuracy": [
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "TO",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "B",
+              "IY0"
+            ],
+            "phones-accuracy": [
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "BE",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "DH",
+              "AH0"
+            ],
+            "phones-accuracy": [
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "THE",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "K",
+              "EY0",
+              "S"
+            ],
+            "phones-accuracy": [
+              2,
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "CASE",
+            "total": 10
+          }
+        ]
+      }
+    },
+    {
+      "id": "human-001570030",
+      "file": ".runtime/pronunciation/speechocean/WAVE/SPEAKER0157/001570030.WAV",
+      "reference": "THEREFORE THE PICTURE WAS RATED ACCEPTABLE BY THE SOCIETY",
+      "sha256": "a286fbc68dd2a50f95972825f1fa97e34a3861f9d62581db9e0e34bd339f4070",
+      "group": "acceptable",
+      "speaker": "0157",
+      "annotations": {
+        "accuracy": 9,
+        "completeness": 10,
+        "fluency": 10,
+        "prosodic": 9,
+        "text": "THEREFORE THE PICTURE WAS RATED ACCEPTABLE BY THE SOCIETY",
+        "total": 9,
+        "words": [
+          {
+            "accuracy": 10,
+            "phones": [
+              "DH",
+              "EH1",
+              "R",
+              "F",
+              "AO0",
+              "R"
+            ],
+            "phones-accuracy": [
+              2,
+              2,
+              2,
+              2,
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "THEREFORE",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "DH",
+              "AH0"
+            ],
+            "phones-accuracy": [
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "THE",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "P",
+              "IH1",
+              "K",
+              "CH",
+              "ER0"
+            ],
+            "phones-accuracy": [
+              2,
+              2,
+              2,
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "PICTURE",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "W",
+              "AH0",
+              "Z"
+            ],
+            "phones-accuracy": [
+              2,
+              2,
+              1.8
+            ],
+            "stress": 10,
+            "text": "WAS",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "R",
+              "EY1",
+              "T",
+              "IH0",
+              "D"
+            ],
+            "phones-accuracy": [
+              2,
+              2,
+              2,
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "RATED",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "AH0",
+              "K",
+              "S",
+              "EH1",
+              "P",
+              "T",
+              "AH0",
+              "B",
+              "L"
+            ],
+            "phones-accuracy": [
+              2,
+              2,
+              2,
+              2,
+              2,
+              2,
+              2,
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "ACCEPTABLE",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "B",
+              "AY0"
+            ],
+            "phones-accuracy": [
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "BY",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "DH",
+              "AH0"
+            ],
+            "phones-accuracy": [
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "THE",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "S",
+              "AH0",
+              "S",
+              "AY1",
+              "AH0",
+              "T",
+              "IY0"
+            ],
+            "phones-accuracy": [
+              2,
+              2,
+              2,
+              2,
+              2,
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "SOCIETY",
+            "total": 10
+          }
+        ]
+      }
+    },
+    {
+      "id": "human-003060226",
+      "file": ".runtime/pronunciation/speechocean/WAVE/SPEAKER0306/003060226.WAV",
+      "reference": "MAKE SURE YOU HAVE A GREAT ONE",
+      "sha256": "822d4e6c3c3a8f386a76df3aea31531f7a9bcd63d6bf2747252b107a290f5e3b",
+      "group": "acceptable",
+      "speaker": "0306",
+      "annotations": {
+        "accuracy": 8,
+        "completeness": 10,
+        "fluency": 7,
+        "prosodic": 6,
+        "text": "MAKE SURE YOU HAVE A GREAT ONE",
+        "total": 7,
+        "words": [
+          {
+            "accuracy": 10,
+            "phones": [
+              "M",
+              "EY0",
+              "K"
+            ],
+            "phones-accuracy": [
+              2,
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "MAKE",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "SH",
+              "UH",
+              "AH0"
+            ],
+            "phones-accuracy": [
+              2,
+              1.8,
+              1.8
+            ],
+            "stress": 10,
+            "text": "SURE",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "Y",
+              "UW0"
+            ],
+            "phones-accuracy": [
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "YOU",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "HH",
+              "AE0",
+              "V"
+            ],
+            "phones-accuracy": [
+              2,
+              2,
+              1.6
+            ],
+            "stress": 10,
+            "text": "HAVE",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "AH0"
+            ],
+            "phones-accuracy": [
+              2
+            ],
+            "stress": 10,
+            "text": "A",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "G",
+              "R",
+              "EY0",
+              "T"
+            ],
+            "phones-accuracy": [
+              2,
+              2,
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "GREAT",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "W",
+              "AH0",
+              "N"
+            ],
+            "phones-accuracy": [
+              2,
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "ONE",
+            "total": 10
+          }
+        ]
+      }
+    },
+    {
+      "id": "human-004570289",
+      "file": ".runtime/pronunciation/speechocean/WAVE/SPEAKER0457/004570289.WAV",
+      "reference": "IT'S SO GOOD TO BE HOME FOR AN ENTIRE WEEK",
+      "sha256": "4d1eb53c052e7a2fd4ae5f08c424ba72626546fa102562ca4d165c3044b51b9a",
+      "group": "acceptable",
+      "speaker": "0457",
+      "annotations": {
+        "accuracy": 8,
+        "completeness": 10,
+        "fluency": 7,
+        "prosodic": 5,
+        "text": "IT'S SO GOOD TO BE HOME FOR AN ENTIRE WEEK",
+        "total": 7,
+        "words": [
+          {
+            "accuracy": 10,
+            "phones": [
+              "IH0",
+              "T",
+              "S"
+            ],
+            "phones-accuracy": [
+              2,
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "IT'S",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "S",
+              "OW0"
+            ],
+            "phones-accuracy": [
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "SO",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "G",
+              "UH0",
+              "D"
+            ],
+            "phones-accuracy": [
+              2,
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "GOOD",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "T",
+              "UW0"
+            ],
+            "phones-accuracy": [
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "TO",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "B",
+              "IY0"
+            ],
+            "phones-accuracy": [
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "BE",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "HH",
+              "OW0",
+              "M"
+            ],
+            "phones-accuracy": [
+              2,
+              1.6,
+              1.6
+            ],
+            "stress": 10,
+            "text": "HOME",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "F",
+              "AO0"
+            ],
+            "phones-accuracy": [
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "FOR",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "AH0",
+              "N"
+            ],
+            "phones-accuracy": [
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "AN",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "IH0",
+              "N",
+              "T",
+              "AY1",
+              "AH0"
+            ],
+            "phones-accuracy": [
+              2,
+              2,
+              2,
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "ENTIRE",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "W",
+              "IY0",
+              "K"
+            ],
+            "phones-accuracy": [
+              2,
+              2,
+              1.4
+            ],
+            "stress": 10,
+            "text": "WEEK",
+            "total": 10
+          }
+        ]
+      }
+    },
+    {
+      "id": "human-004570304",
+      "file": ".runtime/pronunciation/speechocean/WAVE/SPEAKER0457/004570304.WAV",
+      "reference": "GET OUT OF MY BED",
+      "sha256": "33b50903081188966ba4792e012f95ca718b768cc2d6513bb4bf3bad594dab63",
+      "group": "acceptable",
+      "speaker": "0457",
+      "annotations": {
+        "accuracy": 8,
+        "completeness": 10,
+        "fluency": 8,
+        "prosodic": 6,
+        "text": "GET OUT OF MY BED",
+        "total": 7,
+        "words": [
+          {
+            "accuracy": 10,
+            "phones": [
+              "G",
+              "EH0",
+              "T"
+            ],
+            "phones-accuracy": [
+              2,
+              2,
+              1.8
+            ],
+            "stress": 10,
+            "text": "GET",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "AW0",
+              "T"
+            ],
+            "phones-accuracy": [
+              2,
+              1.4
+            ],
+            "stress": 10,
+            "text": "OUT",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "AH0",
+              "V"
+            ],
+            "phones-accuracy": [
+              2,
+              1.8
+            ],
+            "stress": 10,
+            "text": "OF",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "M",
+              "AY0"
+            ],
+            "phones-accuracy": [
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "MY",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "B",
+              "EH0",
+              "D"
+            ],
+            "phones-accuracy": [
+              2,
+              1.4,
+              1.6
+            ],
+            "stress": 10,
+            "text": "BED",
+            "total": 10
+          }
+        ]
+      }
+    },
+    {
+      "id": "human-004610148",
+      "file": ".runtime/pronunciation/speechocean/WAVE/SPEAKER0461/004610148.WAV",
+      "reference": "NO NEED FOR A DOCK",
+      "sha256": "8e96427d42aaaee6958fb46f806325ef17d93803d9e0689ad6f32336589b9ac1",
+      "group": "acceptable",
+      "speaker": "0461",
+      "annotations": {
+        "accuracy": 8,
+        "completeness": 10,
+        "fluency": 7,
+        "prosodic": 6,
+        "text": "NO NEED FOR A DOCK",
+        "total": 8,
+        "words": [
+          {
+            "accuracy": 10,
+            "phones": [
+              "N",
+              "OW0"
+            ],
+            "phones-accuracy": [
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "NO",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "N",
+              "IY0",
+              "D"
+            ],
+            "phones-accuracy": [
+              2,
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "NEED",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "F",
+              "AO0"
+            ],
+            "phones-accuracy": [
+              2,
+              1.8
+            ],
+            "stress": 10,
+            "text": "FOR",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "AH0"
+            ],
+            "phones-accuracy": [
+              2
+            ],
+            "stress": 10,
+            "text": "A",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "D",
+              "AH0",
+              "K"
+            ],
+            "phones-accuracy": [
+              2,
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "DOCK",
+            "total": 10
+          }
+        ]
+      }
+    },
+    {
+      "id": "human-004610151",
+      "file": ".runtime/pronunciation/speechocean/WAVE/SPEAKER0461/004610151.WAV",
+      "reference": "TIME FOR A BIT OF HONOR",
+      "sha256": "be1a5895e657300b7bba19c31db8ee21b53ac12f1314ec8f3968cf271dc53a19",
+      "group": "acceptable",
+      "speaker": "0461",
+      "annotations": {
+        "accuracy": 8,
+        "completeness": 10,
+        "fluency": 7,
+        "prosodic": 6,
+        "text": "TIME FOR A BIT OF HONOR",
+        "total": 7,
+        "words": [
+          {
+            "accuracy": 10,
+            "phones": [
+              "T",
+              "AY0",
+              "M"
+            ],
+            "phones-accuracy": [
+              2,
+              1.8,
+              2
+            ],
+            "stress": 10,
+            "text": "TIME",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "F",
+              "AO0"
+            ],
+            "phones-accuracy": [
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "FOR",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "AH0"
+            ],
+            "phones-accuracy": [
+              2
+            ],
+            "stress": 10,
+            "text": "A",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "B",
+              "IH0",
+              "T"
+            ],
+            "phones-accuracy": [
+              2,
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "BIT",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "AH0",
+              "V"
+            ],
+            "phones-accuracy": [
+              2,
+              1.8
+            ],
+            "stress": 10,
+            "text": "OF",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "AH1",
+              "N",
+              "AH0"
+            ],
+            "phones-accuracy": [
+              2,
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "HONOR",
+            "total": 10
+          }
+        ]
+      }
+    },
+    {
+      "id": "human-005630081",
+      "file": ".runtime/pronunciation/speechocean/WAVE/SPEAKER0563/005630081.WAV",
+      "reference": "HE LOVED THE GAME AND HE LOVED TALKING ABOUT IT",
+      "sha256": "8b8c00c4e10e5e082362fba7358b4885b383ac0de8eeaa2c9e2bb5ff567fb3d5",
+      "group": "acceptable",
+      "speaker": "0563",
+      "annotations": {
+        "accuracy": 8,
+        "completeness": 10,
+        "fluency": 8,
+        "prosodic": 7,
+        "text": "HE LOVED THE GAME AND HE LOVED TALKING ABOUT IT",
+        "total": 7,
+        "words": [
+          {
+            "accuracy": 10,
+            "phones": [
+              "HH",
+              "IY0"
+            ],
+            "phones-accuracy": [
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "HE",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "L",
+              "AH0",
+              "V",
+              "D"
+            ],
+            "phones-accuracy": [
+              2,
+              1.8,
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "LOVED",
+            "total": 9
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "DH",
+              "AH0"
+            ],
+            "phones-accuracy": [
+              1.8,
+              2
+            ],
+            "stress": 10,
+            "text": "THE",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "G",
+              "EY0",
+              "M"
+            ],
+            "phones-accuracy": [
+              2,
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "GAME",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "AE0",
+              "N",
+              "D"
+            ],
+            "phones-accuracy": [
+              2,
+              2,
+              1.8
+            ],
+            "stress": 10,
+            "text": "AND",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "HH",
+              "IY0"
+            ],
+            "phones-accuracy": [
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "HE",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "L",
+              "AH0",
+              "V",
+              "D"
+            ],
+            "phones-accuracy": [
+              2,
+              1.8,
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "LOVED",
+            "total": 9
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "T",
+              "AO1",
+              "K",
+              "IH0",
+              "NG"
+            ],
+            "phones-accuracy": [
+              2,
+              2,
+              2,
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "TALKING",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "AH0",
+              "B",
+              "AW1",
+              "T"
+            ],
+            "phones-accuracy": [
+              2,
+              2,
+              1.8,
+              2
+            ],
+            "stress": 10,
+            "text": "ABOUT",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "IH0",
+              "T"
+            ],
+            "phones-accuracy": [
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "IT",
+            "total": 10
+          }
+        ]
+      }
+    },
+    {
+      "id": "human-003060002",
+      "file": ".runtime/pronunciation/speechocean/WAVE/SPEAKER0306/003060002.WAV",
+      "reference": "JUST SET HOOK AND PUT THE PRESSURE",
+      "sha256": "d862b9084cdf6b171589a310efc74808f7d42a8d1e8329c4ac2e4c48c47352a3",
+      "group": "clear-error",
+      "speaker": "0306",
+      "annotations": {
+        "accuracy": 4,
+        "completeness": 10,
+        "fluency": 8,
+        "prosodic": 6,
+        "text": "JUST SET HOOK AND PUT THE PRESSURE",
+        "total": 4,
+        "words": [
+          {
+            "accuracy": 10,
+            "phones": [
+              "JH",
+              "AH0",
+              "S",
+              "T"
+            ],
+            "phones-accuracy": [
+              1.4,
+              2,
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "JUST",
+            "total": 9
+          },
+          {
+            "accuracy": 3,
+            "mispronunciations": [
+              {
+                "canonical-phone": "EH",
+                "index": 1,
+                "pronounced-phone": "IH"
+              }
+            ],
+            "phones": [
+              "S",
+              "EH0",
+              "T"
+            ],
+            "phones-accuracy": [
+              2,
+              0.4,
+              2
+            ],
+            "stress": 10,
+            "text": "SET",
+            "total": 4
+          },
+          {
+            "accuracy": 3,
+            "mispronunciations": [
+              {
+                "canonical-phone": "UH",
+                "index": 1,
+                "pronounced-phone": "AA"
+              }
+            ],
+            "phones": [
+              "HH",
+              "UH0",
+              "K"
+            ],
+            "phones-accuracy": [
+              2,
+              0.4,
+              2
+            ],
+            "stress": 10,
+            "text": "HOOK",
+            "total": 4
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "AE0",
+              "N",
+              "D"
+            ],
+            "phones-accuracy": [
+              2,
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "AND",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "P",
+              "UH0",
+              "T"
+            ],
+            "phones-accuracy": [
+              2,
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "PUT",
+            "total": 10
+          },
+          {
+            "accuracy": 3,
+            "mispronunciations": [
+              {
+                "canonical-phone": "AH",
+                "index": 1,
+                "pronounced-phone": "IH"
+              }
+            ],
+            "phones": [
+              "DH",
+              "AH0"
+            ],
+            "phones-accuracy": [
+              1.6,
+              0
+            ],
+            "stress": 10,
+            "text": "THE",
+            "total": 4
+          },
+          {
+            "accuracy": 5,
+            "mispronunciations": [
+              {
+                "canonical-phone": "EH",
+                "index": 2,
+                "pronounced-phone": "IH"
+              }
+            ],
+            "phones": [
+              "P",
+              "R",
+              "EH1",
+              "SH",
+              "ER0"
+            ],
+            "phones-accuracy": [
+              2,
+              1.2,
+              0,
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "PRESSURE",
+            "total": 5
+          }
+        ]
+      }
+    },
+    {
+      "id": "human-005630160",
+      "file": ".runtime/pronunciation/speechocean/WAVE/SPEAKER0563/005630160.WAV",
+      "reference": "BUT FOR A GOOD CAUSE",
+      "sha256": "890aeb904efdfdcf241fc0844b93bd75f7b6f02826c18d989868392225d07396",
+      "group": "clear-error",
+      "speaker": "0563",
+      "annotations": {
+        "accuracy": 7,
+        "completeness": 10,
+        "fluency": 7,
+        "prosodic": 6,
+        "text": "BUT FOR A GOOD CAUSE",
+        "total": 6,
+        "words": [
+          {
+            "accuracy": 10,
+            "phones": [
+              "B",
+              "AH0",
+              "T"
+            ],
+            "phones-accuracy": [
+              2,
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "BUT",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "F",
+              "AO0"
+            ],
+            "phones-accuracy": [
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "FOR",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "AH0"
+            ],
+            "phones-accuracy": [
+              2
+            ],
+            "stress": 10,
+            "text": "A",
+            "total": 10
+          },
+          {
+            "accuracy": 3,
+            "mispronunciations": [
+              {
+                "canonical-phone": "UH",
+                "index": 1,
+                "pronounced-phone": "OW"
+              }
+            ],
+            "phones": [
+              "G",
+              "UH0",
+              "D"
+            ],
+            "phones-accuracy": [
+              2,
+              0.4,
+              2
+            ],
+            "stress": 10,
+            "text": "GOOD",
+            "total": 4
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "K",
+              "AO0",
+              "Z"
+            ],
+            "phones-accuracy": [
+              2,
+              2,
+              1.6
+            ],
+            "stress": 10,
+            "text": "CAUSE",
+            "total": 10
+          }
+        ]
+      }
+    },
+    {
+      "id": "human-005670043",
+      "file": ".runtime/pronunciation/speechocean/WAVE/SPEAKER0567/005670043.WAV",
+      "reference": "WHO KNOWS WHAT TO EXPECT",
+      "sha256": "79bdb7bbb7eda0425e05643e911f719b7c7a68537226f81e416ff63c308ec23c",
+      "group": "clear-error",
+      "speaker": "0567",
+      "annotations": {
+        "accuracy": 7,
+        "completeness": 10,
+        "fluency": 7,
+        "prosodic": 6,
+        "text": "WHO KNOWS WHAT TO EXPECT",
+        "total": 6,
+        "words": [
+          {
+            "accuracy": 10,
+            "phones": [
+              "HH",
+              "UW0"
+            ],
+            "phones-accuracy": [
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "WHO",
+            "total": 10
+          },
+          {
+            "accuracy": 8,
+            "phones": [
+              "N",
+              "OW0",
+              "Z"
+            ],
+            "phones-accuracy": [
+              2,
+              1.4,
+              1.4
+            ],
+            "stress": 10,
+            "text": "KNOWS",
+            "total": 8
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "W",
+              "AH0",
+              "T"
+            ],
+            "phones-accuracy": [
+              2,
+              1.8,
+              2
+            ],
+            "stress": 10,
+            "text": "WHAT",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "T",
+              "UW0"
+            ],
+            "phones-accuracy": [
+              1.8,
+              2
+            ],
+            "stress": 10,
+            "text": "TO",
+            "total": 10
+          },
+          {
+            "accuracy": 5,
+            "mispronunciations": [
+              {
+                "canonical-phone": "EH",
+                "index": 4,
+                "pronounced-phone": "EY"
+              }
+            ],
+            "phones": [
+              "IH0",
+              "K",
+              "S",
+              "P",
+              "EH1",
+              "K",
+              "T"
+            ],
+            "phones-accuracy": [
+              2,
+              2,
+              2,
+              0.6,
+              0.4,
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "EXPECT",
+            "total": 6
+          }
+        ]
+      }
+    },
+    {
+      "id": "human-005670348",
+      "file": ".runtime/pronunciation/speechocean/WAVE/SPEAKER0567/005670348.WAV",
+      "reference": "I WILL KNOW WHAT TO DO",
+      "sha256": "d0c13c9a8706b73ce5b6f56a2872846f05a18efb2c844447e5274ce6694727f5",
+      "group": "clear-error",
+      "speaker": "0567",
+      "annotations": {
+        "accuracy": 6,
+        "completeness": 10,
+        "fluency": 8,
+        "prosodic": 7,
+        "text": "I WILL KNOW WHAT TO DO",
+        "total": 6,
+        "words": [
+          {
+            "accuracy": 10,
+            "phones": [
+              "AY0"
+            ],
+            "phones-accuracy": [
+              2
+            ],
+            "stress": 10,
+            "text": "I",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "W",
+              "IH0",
+              "L"
+            ],
+            "phones-accuracy": [
+              2,
+              1.6,
+              1.2
+            ],
+            "stress": 10,
+            "text": "WILL",
+            "total": 10
+          },
+          {
+            "accuracy": 3,
+            "mispronunciations": [
+              {
+                "canonical-phone": "OW",
+                "index": 1,
+                "pronounced-phone": "AW"
+              }
+            ],
+            "phones": [
+              "N",
+              "OW0"
+            ],
+            "phones-accuracy": [
+              2,
+              0.4
+            ],
+            "stress": 10,
+            "text": "KNOW",
+            "total": 4
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "W",
+              "AH0",
+              "T"
+            ],
+            "phones-accuracy": [
+              2,
+              1.8,
+              1.6
+            ],
+            "stress": 10,
+            "text": "WHAT",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "T",
+              "UW0"
+            ],
+            "phones-accuracy": [
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "TO",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "D",
+              "UH0"
+            ],
+            "phones-accuracy": [
+              2,
+              1.8
+            ],
+            "stress": 10,
+            "text": "DO",
+            "total": 10
+          }
+        ]
+      }
+    },
+    {
+      "id": "human-007360006",
+      "file": ".runtime/pronunciation/speechocean/WAVE/SPEAKER0736/007360006.WAV",
+      "reference": "HE'S JUST BEING HIMSELF AND THAT'S ALL WE NEED",
+      "sha256": "b14e3c587feee6fb20d6bb6442880a741523c7ddffb11345ccfe0f5fc9f469ff",
+      "group": "clear-error",
+      "speaker": "0736",
+      "annotations": {
+        "accuracy": 5,
+        "completeness": 10,
+        "fluency": 6,
+        "prosodic": 5,
+        "text": "HE'S JUST BEING HIMSELF AND THAT'S ALL WE NEED",
+        "total": 5,
+        "words": [
+          {
+            "accuracy": 8,
+            "phones": [
+              "HH",
+              "IY0",
+              "Z"
+            ],
+            "phones-accuracy": [
+              2,
+              2,
+              1
+            ],
+            "stress": 10,
+            "text": "HE'S",
+            "total": 8
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "JH",
+              "AH0",
+              "S",
+              "T"
+            ],
+            "phones-accuracy": [
+              2,
+              2,
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "JUST",
+            "total": 10
+          },
+          {
+            "accuracy": 5,
+            "mispronunciations": [
+              {
+                "canonical-phone": "NG",
+                "index": 3,
+                "pronounced-phone": "NG*"
+              }
+            ],
+            "phones": [
+              "B",
+              "IY1",
+              "IH0",
+              "NG"
+            ],
+            "phones-accuracy": [
+              1.6,
+              1.6,
+              1.2,
+              0.4
+            ],
+            "stress": 10,
+            "text": "BEING",
+            "total": 6
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "HH",
+              "IH0",
+              "M",
+              "S",
+              "EH1",
+              "L",
+              "F"
+            ],
+            "phones-accuracy": [
+              2,
+              2,
+              1.6,
+              2,
+              2,
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "HIMSELF",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "AE0",
+              "N",
+              "D"
+            ],
+            "phones-accuracy": [
+              2,
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "AND",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "DH",
+              "AE0",
+              "T",
+              "S"
+            ],
+            "phones-accuracy": [
+              2,
+              2,
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "THAT'S",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "AO0",
+              "L"
+            ],
+            "phones-accuracy": [
+              2,
+              1.8
+            ],
+            "stress": 10,
+            "text": "ALL",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "W",
+              "IY0"
+            ],
+            "phones-accuracy": [
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "WE",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "N",
+              "IY0",
+              "D"
+            ],
+            "phones-accuracy": [
+              2,
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "NEED",
+            "total": 9
+          }
+        ]
+      }
+    },
+    {
+      "id": "human-007360036",
+      "file": ".runtime/pronunciation/speechocean/WAVE/SPEAKER0736/007360036.WAV",
+      "reference": "I THOUGHT IT WOULD FIT RIGHT IN",
+      "sha256": "128e87006abfaff845aae7ce6e8d99d78d850f9487d6133180617aa1463d09f1",
+      "group": "clear-error",
+      "speaker": "0736",
+      "annotations": {
+        "accuracy": 7,
+        "completeness": 10,
+        "fluency": 7,
+        "prosodic": 5,
+        "text": "I THOUGHT IT WOULD FIT RIGHT IN",
+        "total": 6,
+        "words": [
+          {
+            "accuracy": 10,
+            "phones": [
+              "AY0"
+            ],
+            "phones-accuracy": [
+              2
+            ],
+            "stress": 10,
+            "text": "I",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "TH",
+              "AO0",
+              "T"
+            ],
+            "phones-accuracy": [
+              1.6,
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "THOUGHT",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "IH0",
+              "T"
+            ],
+            "phones-accuracy": [
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "IT",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "W",
+              "UH0",
+              "D"
+            ],
+            "phones-accuracy": [
+              2,
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "WOULD",
+            "total": 10
+          },
+          {
+            "accuracy": 3,
+            "mispronunciations": [
+              {
+                "canonical-phone": "IH",
+                "index": 1,
+                "pronounced-phone": "EH"
+              }
+            ],
+            "phones": [
+              "F",
+              "IH0",
+              "T"
+            ],
+            "phones-accuracy": [
+              1.6,
+              0,
+              1.6
+            ],
+            "stress": 10,
+            "text": "FIT",
+            "total": 4
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "R",
+              "AY0",
+              "T"
+            ],
+            "phones-accuracy": [
+              2,
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "RIGHT",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "IH0",
+              "N"
+            ],
+            "phones-accuracy": [
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "IN",
+            "total": 10
+          }
+        ]
+      }
+    },
+    {
+      "id": "human-007650036",
+      "file": ".runtime/pronunciation/speechocean/WAVE/SPEAKER0765/007650036.WAV",
+      "reference": "HOWEVER MARKET CONDITIONS HAVE LEFT US WITH NO OTHER CHOICE",
+      "sha256": "3d6191675bfcb87cd726b6fe8a3915a886de3b88501c1ba1b800720adaa1cc3c",
+      "group": "clear-error",
+      "speaker": "0765",
+      "annotations": {
+        "accuracy": 7,
+        "completeness": 10,
+        "fluency": 6,
+        "prosodic": 6,
+        "text": "HOWEVER MARKET CONDITIONS HAVE LEFT US WITH NO OTHER CHOICE",
+        "total": 6,
+        "words": [
+          {
+            "accuracy": 10,
+            "phones": [
+              "HH",
+              "AW0",
+              "EH1",
+              "V",
+              "ER0"
+            ],
+            "phones-accuracy": [
+              2,
+              2,
+              2,
+              1.8,
+              2
+            ],
+            "stress": 10,
+            "text": "HOWEVER",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "M",
+              "AA1",
+              "K",
+              "IH0",
+              "T"
+            ],
+            "phones-accuracy": [
+              2,
+              2,
+              2,
+              1.8,
+              2
+            ],
+            "stress": 10,
+            "text": "MARKET",
+            "total": 10
+          },
+          {
+            "accuracy": 5,
+            "mispronunciations": [
+              {
+                "canonical-phone": "N",
+                "index": 2,
+                "pronounced-phone": "<DEL>"
+              }
+            ],
+            "phones": [
+              "K",
+              "AH0",
+              "N",
+              "D",
+              "IH1",
+              "SH",
+              "N",
+              "Z"
+            ],
+            "phones-accuracy": [
+              2,
+              2,
+              0.4,
+              2,
+              2,
+              2,
+              2,
+              1.6
+            ],
+            "stress": 10,
+            "text": "CONDITIONS",
+            "total": 6
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "HH",
+              "AE0",
+              "V"
+            ],
+            "phones-accuracy": [
+              1.6,
+              1.6,
+              2
+            ],
+            "stress": 10,
+            "text": "HAVE",
+            "total": 10
+          },
+          {
+            "accuracy": 5,
+            "phones": [
+              "L",
+              "EH0",
+              "F",
+              "T"
+            ],
+            "phones-accuracy": [
+              0.8,
+              2,
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "LEFT",
+            "total": 6
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "AH0",
+              "S"
+            ],
+            "phones-accuracy": [
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "US",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "W",
+              "IH0",
+              "DH"
+            ],
+            "phones-accuracy": [
+              2,
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "WITH",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "N",
+              "OW0"
+            ],
+            "phones-accuracy": [
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "NO",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "AH1",
+              "DH",
+              "ER0"
+            ],
+            "phones-accuracy": [
+              2,
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "OTHER",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "CH",
+              "OY0",
+              "S"
+            ],
+            "phones-accuracy": [
+              2,
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "CHOICE",
+            "total": 10
+          }
+        ]
+      }
+    },
+    {
+      "id": "human-007650061",
+      "file": ".runtime/pronunciation/speechocean/WAVE/SPEAKER0765/007650061.WAV",
+      "reference": "NEARLY ALL REPUBLICANS VOTED AGAINST THE MEASURE",
+      "sha256": "80298d691ab4c210c4495575b7caec2d85b1933d77c44111a3bfb562d7e8c0c1",
+      "group": "clear-error",
+      "speaker": "0765",
+      "annotations": {
+        "accuracy": 6,
+        "completeness": 10,
+        "fluency": 6,
+        "prosodic": 5,
+        "text": "NEARLY ALL REPUBLICANS VOTED AGAINST THE MEASURE",
+        "total": 5,
+        "words": [
+          {
+            "accuracy": 10,
+            "phones": [
+              "N",
+              "IH",
+              "AH1",
+              "L",
+              "IY0"
+            ],
+            "phones-accuracy": [
+              2,
+              2,
+              2,
+              1.2,
+              2
+            ],
+            "stress": 10,
+            "text": "NEARLY",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "AO0",
+              "L"
+            ],
+            "phones-accuracy": [
+              1.6,
+              1.6
+            ],
+            "stress": 10,
+            "text": "ALL",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "R",
+              "IH0",
+              "P",
+              "AH1",
+              "B",
+              "L",
+              "IH0",
+              "K",
+              "AH0",
+              "N",
+              "Z"
+            ],
+            "phones-accuracy": [
+              2,
+              2,
+              2,
+              2,
+              2,
+              1.2,
+              2,
+              2,
+              2,
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "REPUBLICANS",
+            "total": 9
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "V",
+              "OW1",
+              "T",
+              "IH0",
+              "D"
+            ],
+            "phones-accuracy": [
+              1.8,
+              2,
+              2,
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "VOTED",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "AH0",
+              "G",
+              "EY0",
+              "N",
+              "S",
+              "T"
+            ],
+            "phones-accuracy": [
+              2,
+              2,
+              1.8,
+              2,
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "AGAINST",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "DH",
+              "AH0"
+            ],
+            "phones-accuracy": [
+              2,
+              1.2
+            ],
+            "stress": 10,
+            "text": "THE",
+            "total": 10
+          },
+          {
+            "accuracy": 5,
+            "mispronunciations": [
+              {
+                "canonical-phone": "ZH",
+                "index": 2,
+                "pronounced-phone": "Y"
+              }
+            ],
+            "phones": [
+              "M",
+              "EH1",
+              "ZH",
+              "ER0"
+            ],
+            "phones-accuracy": [
+              2,
+              1.2,
+              0.4,
+              1.6
+            ],
+            "stress": 10,
+            "text": "MEASURE",
+            "total": 6
+          }
+        ]
+      }
+    },
+    {
+      "id": "human-008110287",
+      "file": ".runtime/pronunciation/speechocean/WAVE/SPEAKER0811/008110287.WAV",
+      "reference": "SORRY NOT A FAN OF THAT DECISION",
+      "sha256": "56d19b69e70eab1f44bd48e714ca13e18cc2dca6e0624f3469d512e0a045d0b5",
+      "group": "clear-error",
+      "speaker": "0811",
+      "annotations": {
+        "accuracy": 8,
+        "completeness": 10,
+        "fluency": 10,
+        "prosodic": 9,
+        "text": "SORRY NOT A FAN OF THAT DECISION",
+        "total": 8,
+        "words": [
+          {
+            "accuracy": 10,
+            "phones": [
+              "S",
+              "AH1",
+              "R",
+              "IY0"
+            ],
+            "phones-accuracy": [
+              2,
+              2,
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "SORRY",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "N",
+              "AH0",
+              "T"
+            ],
+            "phones-accuracy": [
+              2,
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "NOT",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "AH0"
+            ],
+            "phones-accuracy": [
+              2
+            ],
+            "stress": 10,
+            "text": "A",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "F",
+              "AE0",
+              "N"
+            ],
+            "phones-accuracy": [
+              2,
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "FAN",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "AH0",
+              "V"
+            ],
+            "phones-accuracy": [
+              2,
+              1.8
+            ],
+            "stress": 10,
+            "text": "OF",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "DH",
+              "AE0",
+              "T"
+            ],
+            "phones-accuracy": [
+              1.6,
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "THAT",
+            "total": 10
+          },
+          {
+            "accuracy": 5,
+            "mispronunciations": [
+              {
+                "canonical-phone": "S",
+                "index": 2,
+                "pronounced-phone": "<unk>"
+              }
+            ],
+            "phones": [
+              "D",
+              "IH0",
+              "S",
+              "IH1",
+              "ZH",
+              "N"
+            ],
+            "phones-accuracy": [
+              2,
+              2,
+              0.4,
+              1.2,
+              1.2,
+              1.2
+            ],
+            "stress": 10,
+            "text": "DECISION",
+            "total": 6
+          }
+        ]
+      }
+    },
+    {
+      "id": "human-009810073",
+      "file": ".runtime/pronunciation/speechocean/WAVE/SPEAKER0981/009810073.WAV",
+      "reference": "BUT IT'S JUST A MATTER OF TIME",
+      "sha256": "ef18122a4124d50bbc2090ba6d183e6ff19cd3f6008eb42d9c7b3e500070e6d5",
+      "group": "clear-error",
+      "speaker": "0981",
+      "annotations": {
+        "accuracy": 7,
+        "completeness": 10,
+        "fluency": 7,
+        "prosodic": 6,
+        "text": "BUT IT'S JUST A MATTER OF TIME",
+        "total": 7,
+        "words": [
+          {
+            "accuracy": 10,
+            "phones": [
+              "B",
+              "AH0",
+              "T"
+            ],
+            "phones-accuracy": [
+              2,
+              1.8,
+              2
+            ],
+            "stress": 10,
+            "text": "BUT",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "IH0",
+              "T",
+              "S"
+            ],
+            "phones-accuracy": [
+              2,
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "IT'S",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "JH",
+              "AH0",
+              "S",
+              "T"
+            ],
+            "phones-accuracy": [
+              2,
+              2,
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "JUST",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "AH0"
+            ],
+            "phones-accuracy": [
+              2
+            ],
+            "stress": 10,
+            "text": "A",
+            "total": 10
+          },
+          {
+            "accuracy": 5,
+            "mispronunciations": [
+              {
+                "canonical-phone": "AE",
+                "index": 1,
+                "pronounced-phone": "AH"
+              }
+            ],
+            "phones": [
+              "M",
+              "AE1",
+              "T",
+              "AH0"
+            ],
+            "phones-accuracy": [
+              2,
+              0.4,
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "MATTER",
+            "total": 6
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "AH0",
+              "V"
+            ],
+            "phones-accuracy": [
+              1.8,
+              1.8
+            ],
+            "stress": 10,
+            "text": "OF",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "T",
+              "AY0",
+              "M"
+            ],
+            "phones-accuracy": [
+              2,
+              1.6,
+              1.6
+            ],
+            "stress": 10,
+            "text": "TIME",
+            "total": 10
+          }
+        ]
+      }
+    },
+    {
+      "id": "human-011350027",
+      "file": ".runtime/pronunciation/speechocean/WAVE/SPEAKER1135/011350027.WAV",
+      "reference": "STARTING ON TUESDAY IT'S BACK TO WORK",
+      "sha256": "636d2b79ac6e35a3b0824b612b5e9ecc2d8c91ebbb5553fc4be346620c59154d",
+      "group": "clear-error",
+      "speaker": "1135",
+      "annotations": {
+        "accuracy": 7,
+        "completeness": 10,
+        "fluency": 8,
+        "prosodic": 7,
+        "text": "STARTING ON TUESDAY IT'S BACK TO WORK",
+        "total": 6,
+        "words": [
+          {
+            "accuracy": 10,
+            "phones": [
+              "S",
+              "T",
+              "AA1",
+              "R",
+              "T",
+              "IH0",
+              "NG"
+            ],
+            "phones-accuracy": [
+              2,
+              2,
+              2,
+              2,
+              2,
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "STARTING",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "AH0",
+              "N"
+            ],
+            "phones-accuracy": [
+              2,
+              1.6
+            ],
+            "stress": 10,
+            "text": "ON",
+            "total": 10
+          },
+          {
+            "accuracy": 5,
+            "mispronunciations": [
+              {
+                "canonical-phone": "Z",
+                "index": 3,
+                "pronounced-phone": "<DEL>"
+              }
+            ],
+            "phones": [
+              "T",
+              "Y",
+              "UW1",
+              "Z",
+              "D",
+              "EY0"
+            ],
+            "phones-accuracy": [
+              2,
+              2,
+              1.6,
+              0.4,
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "TUESDAY",
+            "total": 6
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "IH0",
+              "T",
+              "S"
+            ],
+            "phones-accuracy": [
+              2,
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "IT'S",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "B",
+              "AE0",
+              "K"
+            ],
+            "phones-accuracy": [
+              2,
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "BACK",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "T",
+              "UW0"
+            ],
+            "phones-accuracy": [
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "TO",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "W",
+              "ER0",
+              "K"
+            ],
+            "phones-accuracy": [
+              2,
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "WORK",
+            "total": 10
+          }
+        ]
+      }
+    },
+    {
+      "id": "human-011350064",
+      "file": ".runtime/pronunciation/speechocean/WAVE/SPEAKER1135/011350064.WAV",
+      "reference": "IN COLLEGE YOU COULD GET AWAY WITH THINGS",
+      "sha256": "8a51451e13a7726e19c72396e0c19ff5380946955a3f734f4f8056961ec97a8a",
+      "group": "clear-error",
+      "speaker": "1135",
+      "annotations": {
+        "accuracy": 7,
+        "completeness": 10,
+        "fluency": 8,
+        "prosodic": 7,
+        "text": "IN COLLEGE YOU COULD GET AWAY WITH THINGS",
+        "total": 7,
+        "words": [
+          {
+            "accuracy": 10,
+            "phones": [
+              "IH0",
+              "N"
+            ],
+            "phones-accuracy": [
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "IN",
+            "total": 10
+          },
+          {
+            "accuracy": 5,
+            "mispronunciations": [
+              {
+                "canonical-phone": "L",
+                "index": 2,
+                "pronounced-phone": "R"
+              }
+            ],
+            "phones": [
+              "K",
+              "AH1",
+              "L",
+              "IH0",
+              "JH"
+            ],
+            "phones-accuracy": [
+              2,
+              2,
+              0,
+              1.2,
+              1.6
+            ],
+            "stress": 10,
+            "text": "COLLEGE",
+            "total": 6
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "Y",
+              "UW0"
+            ],
+            "phones-accuracy": [
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "YOU",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "K",
+              "UH0",
+              "D"
+            ],
+            "phones-accuracy": [
+              2,
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "COULD",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "G",
+              "EH0",
+              "T"
+            ],
+            "phones-accuracy": [
+              2,
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "GET",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "AH0",
+              "W",
+              "EY1"
+            ],
+            "phones-accuracy": [
+              2,
+              1.8,
+              2
+            ],
+            "stress": 10,
+            "text": "AWAY",
+            "total": 9
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "W",
+              "IH0",
+              "DH"
+            ],
+            "phones-accuracy": [
+              2,
+              2,
+              2
+            ],
+            "stress": 10,
+            "text": "WITH",
+            "total": 10
+          },
+          {
+            "accuracy": 10,
+            "phones": [
+              "TH",
+              "IH0",
+              "NG",
+              "Z"
+            ],
+            "phones-accuracy": [
+              2,
+              2,
+              2,
+              1.8
+            ],
+            "stress": 10,
+            "text": "THINGS",
+            "total": 10
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,867 @@
+{
+  "provider": "tencent-soe-new",
+  "evalMode": 4,
+  "scoreCoeff": 1.5,
+  "publicSyntheticCases": 24,
+  "successfulCalls": 24,
+  "userRecordingsUploaded": 0,
+  "costAtPublishedRateCny": 0.12,
+  "billingReconciled": false,
+  "normalCases": 14,
+  "normalCasesWithoutExplicitMismatch": 14,
+  "wrongWordCases": 10,
+  "wrongWordCasesWithExplicitMismatch": 3,
+  "timingMs": {
+    "connectionSetupMs": {
+      "median": 1492.5,
+      "p95NearestRank": 1656,
+      "min": 1453,
+      "max": 1844
+    },
+    "afterRecordingMs": {
+      "median": 606.5,
+      "p95NearestRank": 706,
+      "min": 567,
+      "max": 743
+    },
+    "totalMs": {
+      "median": 3679.5,
+      "p95NearestRank": 3906,
+      "min": 3515,
+      "max": 4000
+    }
+  },
+  "scope": "Synthetic screening only; mismatch counts are not overall accuracy; no pass threshold calibrated",
+  "productionAccepted": false,
+  "cases": [
+    {
+      "id": "aria-hello-as-hello",
+      "expectedCorrect": true,
+      "wordScore": 84.24562072753906,
+      "explicitMismatch": false,
+      "phones": [
+        {
+          "reference": "hh",
+          "heard": "hh",
+          "matchTag": 0,
+          "rawAccuracy": 0.8938997387886047
+        },
+        {
+          "reference": "ah",
+          "heard": "ah",
+          "matchTag": 0,
+          "rawAccuracy": 0.5576924681663513
+        },
+        {
+          "reference": "l",
+          "heard": "l",
+          "matchTag": 0,
+          "rawAccuracy": 0.9237855076789856
+        },
+        {
+          "reference": "ow",
+          "heard": "ow",
+          "matchTag": 0,
+          "rawAccuracy": 0.9944472312927246
+        }
+      ],
+      "timing": {
+        "audioMs": 1560,
+        "connectionSetupMs": 1844,
+        "afterRecordingMs": 596,
+        "totalMs": 4000
+      }
+    },
+    {
+      "id": "guy-hello-as-hello",
+      "expectedCorrect": true,
+      "wordScore": 71.9847412109375,
+      "explicitMismatch": false,
+      "phones": [
+        {
+          "reference": "hh",
+          "heard": "hh",
+          "matchTag": 0,
+          "rawAccuracy": 0.5149319171905518
+        },
+        {
+          "reference": "ah",
+          "heard": "ah",
+          "matchTag": 0,
+          "rawAccuracy": 0.4088611304759979
+        },
+        {
+          "reference": "l",
+          "heard": "l",
+          "matchTag": 0,
+          "rawAccuracy": 0.9609373807907104
+        },
+        {
+          "reference": "ow",
+          "heard": "ow",
+          "matchTag": 0,
+          "rawAccuracy": 0.9946591854095459
+        }
+      ],
+      "timing": {
+        "audioMs": 1536,
+        "connectionSetupMs": 1531,
+        "afterRecordingMs": 605,
+        "totalMs": 3672
+      }
+    },
+    {
+      "id": "aria-goodbye-as-goodbye",
+      "expectedCorrect": true,
+      "wordScore": 94.87568664550781,
+      "explicitMismatch": false,
+      "phones": [
+        {
+          "reference": "g",
+          "heard": "g",
+          "matchTag": 0,
+          "rawAccuracy": 0.8693757653236389
+        },
+        {
+          "reference": "uh",
+          "heard": "uh",
+          "matchTag": 0,
+          "rawAccuracy": 0.9127916693687439
+        },
+        {
+          "reference": "d",
+          "heard": "d",
+          "matchTag": 0,
+          "rawAccuracy": 0.9722990393638611
+        },
+        {
+          "reference": "b",
+          "heard": "b",
+          "matchTag": 0,
+          "rawAccuracy": 0.9949232935905457
+        },
+        {
+          "reference": "ay",
+          "heard": "ay",
+          "matchTag": 0,
+          "rawAccuracy": 0.9943944811820984
+        }
+      ],
+      "timing": {
+        "audioMs": 1608,
+        "connectionSetupMs": 1469,
+        "afterRecordingMs": 595,
+        "totalMs": 3672
+      }
+    },
+    {
+      "id": "guy-goodbye-as-goodbye",
+      "expectedCorrect": true,
+      "wordScore": 99.27779388427734,
+      "explicitMismatch": false,
+      "phones": [
+        {
+          "reference": "g",
+          "heard": "g",
+          "matchTag": 0,
+          "rawAccuracy": 0.9874201416969299
+        },
+        {
+          "reference": "uh",
+          "heard": "uh",
+          "matchTag": 0,
+          "rawAccuracy": 0.9935137629508972
+        },
+        {
+          "reference": "d",
+          "heard": "d",
+          "matchTag": 0,
+          "rawAccuracy": 0.9932229518890381
+        },
+        {
+          "reference": "b",
+          "heard": "b",
+          "matchTag": 0,
+          "rawAccuracy": 0.9952966570854187
+        },
+        {
+          "reference": "ay",
+          "heard": "ay",
+          "matchTag": 0,
+          "rawAccuracy": 0.9944362044334412
+        }
+      ],
+      "timing": {
+        "audioMs": 1656,
+        "connectionSetupMs": 1500,
+        "afterRecordingMs": 579,
+        "totalMs": 3735
+      }
+    },
+    {
+      "id": "aria-think-as-think",
+      "expectedCorrect": true,
+      "wordScore": 99.16459655761719,
+      "explicitMismatch": false,
+      "phones": [
+        {
+          "reference": "th",
+          "heard": "th",
+          "matchTag": 0,
+          "rawAccuracy": 0.9885017275810242
+        },
+        {
+          "reference": "ih",
+          "heard": "ih",
+          "matchTag": 0,
+          "rawAccuracy": 0.9929813146591187
+        },
+        {
+          "reference": "ng",
+          "heard": "ng",
+          "matchTag": 0,
+          "rawAccuracy": 0.9923228621482849
+        },
+        {
+          "reference": "k",
+          "heard": "k",
+          "matchTag": 0,
+          "rawAccuracy": 0.9927780032157898
+        }
+      ],
+      "timing": {
+        "audioMs": 1488,
+        "connectionSetupMs": 1468,
+        "afterRecordingMs": 606,
+        "totalMs": 3562
+      }
+    },
+    {
+      "id": "guy-think-as-think",
+      "expectedCorrect": true,
+      "wordScore": 97.8864517211914,
+      "explicitMismatch": false,
+      "phones": [
+        {
+          "reference": "th",
+          "heard": "th",
+          "matchTag": 0,
+          "rawAccuracy": 0.9380937218666077
+        },
+        {
+          "reference": "ih",
+          "heard": "ih",
+          "matchTag": 0,
+          "rawAccuracy": 0.9907352328300476
+        },
+        {
+          "reference": "ng",
+          "heard": "ng",
+          "matchTag": 0,
+          "rawAccuracy": 0.9938247203826904
+        },
+        {
+          "reference": "k",
+          "heard": "k",
+          "matchTag": 0,
+          "rawAccuracy": 0.9928045272827148
+        }
+      ],
+      "timing": {
+        "audioMs": 1584,
+        "connectionSetupMs": 1453,
+        "afterRecordingMs": 619,
+        "totalMs": 3656
+      }
+    },
+    {
+      "id": "aria-ship-as-ship",
+      "expectedCorrect": true,
+      "wordScore": 99.23690795898438,
+      "explicitMismatch": false,
+      "phones": [
+        {
+          "reference": "sh",
+          "heard": "sh",
+          "matchTag": 0,
+          "rawAccuracy": 0.990766704082489
+        },
+        {
+          "reference": "ih",
+          "heard": "ih",
+          "matchTag": 0,
+          "rawAccuracy": 0.9946033954620361
+        },
+        {
+          "reference": "p",
+          "heard": "p",
+          "matchTag": 0,
+          "rawAccuracy": 0.9917371869087219
+        }
+      ],
+      "timing": {
+        "audioMs": 1608,
+        "connectionSetupMs": 1485,
+        "afterRecordingMs": 595,
+        "totalMs": 3688
+      }
+    },
+    {
+      "id": "guy-ship-as-ship",
+      "expectedCorrect": true,
+      "wordScore": 99.26288604736328,
+      "explicitMismatch": false,
+      "phones": [
+        {
+          "reference": "sh",
+          "heard": "sh",
+          "matchTag": 0,
+          "rawAccuracy": 0.9919154644012451
+        },
+        {
+          "reference": "ih",
+          "heard": "ih",
+          "matchTag": 0,
+          "rawAccuracy": 0.9945392608642578
+        },
+        {
+          "reference": "p",
+          "heard": "p",
+          "matchTag": 0,
+          "rawAccuracy": 0.9914318919181824
+        }
+      ],
+      "timing": {
+        "audioMs": 1488,
+        "connectionSetupMs": 1453,
+        "afterRecordingMs": 574,
+        "totalMs": 3515
+      }
+    },
+    {
+      "id": "aria-three-as-three",
+      "expectedCorrect": true,
+      "wordScore": 99.3489761352539,
+      "explicitMismatch": false,
+      "phones": [
+        {
+          "reference": "th",
+          "heard": "th",
+          "matchTag": 0,
+          "rawAccuracy": 0.9909804463386536
+        },
+        {
+          "reference": "r",
+          "heard": "r",
+          "matchTag": 0,
+          "rawAccuracy": 0.9946314096450806
+        },
+        {
+          "reference": "iy",
+          "heard": "iy",
+          "matchTag": 0,
+          "rawAccuracy": 0.9948572516441345
+        }
+      ],
+      "timing": {
+        "audioMs": 1536,
+        "connectionSetupMs": 1515,
+        "afterRecordingMs": 574,
+        "totalMs": 3625
+      }
+    },
+    {
+      "id": "guy-three-as-three",
+      "expectedCorrect": true,
+      "wordScore": 99.32181549072266,
+      "explicitMismatch": false,
+      "phones": [
+        {
+          "reference": "th",
+          "heard": "th",
+          "matchTag": 0,
+          "rawAccuracy": 0.9896140694618225
+        },
+        {
+          "reference": "r",
+          "heard": "r",
+          "matchTag": 0,
+          "rawAccuracy": 0.9952486753463745
+        },
+        {
+          "reference": "iy",
+          "heard": "iy",
+          "matchTag": 0,
+          "rawAccuracy": 0.9947914481163025
+        }
+      ],
+      "timing": {
+        "audioMs": 1656,
+        "connectionSetupMs": 1468,
+        "afterRecordingMs": 610,
+        "totalMs": 3734
+      }
+    },
+    {
+      "id": "aria-bad-as-bad",
+      "expectedCorrect": true,
+      "wordScore": 98.65164947509766,
+      "explicitMismatch": false,
+      "phones": [
+        {
+          "reference": "b",
+          "heard": "b",
+          "matchTag": 0,
+          "rawAccuracy": 0.9800148606300354
+        },
+        {
+          "reference": "ae",
+          "heard": "ae",
+          "matchTag": 0,
+          "rawAccuracy": 0.9904289245605469
+        },
+        {
+          "reference": "d",
+          "heard": "d",
+          "matchTag": 0,
+          "rawAccuracy": 0.9891056418418884
+        }
+      ],
+      "timing": {
+        "audioMs": 1512,
+        "connectionSetupMs": 1656,
+        "afterRecordingMs": 567,
+        "totalMs": 3735
+      }
+    },
+    {
+      "id": "guy-bad-as-bad",
+      "expectedCorrect": true,
+      "wordScore": 98.9203872680664,
+      "explicitMismatch": false,
+      "phones": [
+        {
+          "reference": "b",
+          "heard": "b",
+          "matchTag": 0,
+          "rawAccuracy": 0.9897500276565552
+        },
+        {
+          "reference": "ae",
+          "heard": "ae",
+          "matchTag": 0,
+          "rawAccuracy": 0.9874206781387329
+        },
+        {
+          "reference": "d",
+          "heard": "d",
+          "matchTag": 0,
+          "rawAccuracy": 0.9904407858848572
+        }
+      ],
+      "timing": {
+        "audioMs": 1512,
+        "connectionSetupMs": 1454,
+        "afterRecordingMs": 613,
+        "totalMs": 3579
+      }
+    },
+    {
+      "id": "aria-right-as-right",
+      "expectedCorrect": true,
+      "wordScore": 99.38724517822266,
+      "explicitMismatch": false,
+      "phones": [
+        {
+          "reference": "r",
+          "heard": "r",
+          "matchTag": 0,
+          "rawAccuracy": 0.9934687614440918
+        },
+        {
+          "reference": "ay",
+          "heard": "ay",
+          "matchTag": 0,
+          "rawAccuracy": 0.9952564239501953
+        },
+        {
+          "reference": "t",
+          "heard": "t",
+          "matchTag": 0,
+          "rawAccuracy": 0.9928922653198242
+        }
+      ],
+      "timing": {
+        "audioMs": 1536,
+        "connectionSetupMs": 1469,
+        "afterRecordingMs": 573,
+        "totalMs": 3578
+      }
+    },
+    {
+      "id": "guy-right-as-right",
+      "expectedCorrect": true,
+      "wordScore": 99.36431121826172,
+      "explicitMismatch": false,
+      "phones": [
+        {
+          "reference": "r",
+          "heard": "r",
+          "matchTag": 0,
+          "rawAccuracy": 0.9922524690628052
+        },
+        {
+          "reference": "ay",
+          "heard": "ay",
+          "matchTag": 0,
+          "rawAccuracy": 0.9951944947242737
+        },
+        {
+          "reference": "t",
+          "heard": "t",
+          "matchTag": 0,
+          "rawAccuracy": 0.9934824705123901
+        }
+      ],
+      "timing": {
+        "audioMs": 1536,
+        "connectionSetupMs": 1500,
+        "afterRecordingMs": 604,
+        "totalMs": 3640
+      }
+    },
+    {
+      "id": "aria-sink-as-think",
+      "expectedCorrect": false,
+      "wordScore": 76.73599243164062,
+      "explicitMismatch": false,
+      "phones": [
+        {
+          "reference": "th",
+          "heard": "th",
+          "matchTag": 0,
+          "rawAccuracy": 0.24748945236206055
+        },
+        {
+          "reference": "ih",
+          "heard": "ih",
+          "matchTag": 0,
+          "rawAccuracy": 0.8370480537414551
+        },
+        {
+          "reference": "ng",
+          "heard": "ng",
+          "matchTag": 0,
+          "rawAccuracy": 0.9922298192977905
+        },
+        {
+          "reference": "k",
+          "heard": "k",
+          "matchTag": 0,
+          "rawAccuracy": 0.9926721453666687
+        }
+      ],
+      "timing": {
+        "audioMs": 1608,
+        "connectionSetupMs": 1484,
+        "afterRecordingMs": 642,
+        "totalMs": 3734
+      }
+    },
+    {
+      "id": "guy-sink-as-think",
+      "expectedCorrect": false,
+      "wordScore": 93.1034164428711,
+      "explicitMismatch": true,
+      "phones": [
+        {
+          "reference": "th",
+          "heard": "s",
+          "matchTag": 3,
+          "rawAccuracy": 0.9857558608055115
+        },
+        {
+          "reference": "ih",
+          "heard": "ih",
+          "matchTag": 0,
+          "rawAccuracy": 0.992237389087677
+        },
+        {
+          "reference": "ng",
+          "heard": "ng",
+          "matchTag": 0,
+          "rawAccuracy": 0.994378924369812
+        },
+        {
+          "reference": "k",
+          "heard": "k",
+          "matchTag": 0,
+          "rawAccuracy": 0.9926930069923401
+        }
+      ],
+      "timing": {
+        "audioMs": 1632,
+        "connectionSetupMs": 1500,
+        "afterRecordingMs": 696,
+        "totalMs": 3828
+      }
+    },
+    {
+      "id": "aria-sheep-as-ship",
+      "expectedCorrect": false,
+      "wordScore": 90.13566589355469,
+      "explicitMismatch": false,
+      "phones": [
+        {
+          "reference": "sh",
+          "heard": "sh",
+          "matchTag": 0,
+          "rawAccuracy": 0.9595150351524353
+        },
+        {
+          "reference": "ih",
+          "heard": "ih",
+          "matchTag": 0,
+          "rawAccuracy": 0.77438884973526
+        },
+        {
+          "reference": "p",
+          "heard": "p",
+          "matchTag": 0,
+          "rawAccuracy": 0.9701663255691528
+        }
+      ],
+      "timing": {
+        "audioMs": 1632,
+        "connectionSetupMs": 1531,
+        "afterRecordingMs": 743,
+        "totalMs": 3906
+      }
+    },
+    {
+      "id": "guy-sheep-as-ship",
+      "expectedCorrect": false,
+      "wordScore": 88.8572006225586,
+      "explicitMismatch": false,
+      "phones": [
+        {
+          "reference": "sh",
+          "heard": "sh",
+          "matchTag": 0,
+          "rawAccuracy": 0.9652252793312073
+        },
+        {
+          "reference": "ih",
+          "heard": "ih",
+          "matchTag": 0,
+          "rawAccuracy": 0.7142848372459412
+        },
+        {
+          "reference": "p",
+          "heard": "p",
+          "matchTag": 0,
+          "rawAccuracy": 0.9862058162689209
+        }
+      ],
+      "timing": {
+        "audioMs": 1512,
+        "connectionSetupMs": 1469,
+        "afterRecordingMs": 706,
+        "totalMs": 3687
+      }
+    },
+    {
+      "id": "aria-free-as-three",
+      "expectedCorrect": false,
+      "wordScore": 66.33043670654297,
+      "explicitMismatch": false,
+      "phones": [
+        {
+          "reference": "th",
+          "heard": "th",
+          "matchTag": 0,
+          "rawAccuracy": 0.4966040551662445
+        },
+        {
+          "reference": "r",
+          "heard": "r",
+          "matchTag": 0,
+          "rawAccuracy": 0.49959564208984375
+        },
+        {
+          "reference": "iy",
+          "heard": "iy",
+          "matchTag": 0,
+          "rawAccuracy": 0.9937135577201843
+        }
+      ],
+      "timing": {
+        "audioMs": 1512,
+        "connectionSetupMs": 1469,
+        "afterRecordingMs": 582,
+        "totalMs": 3563
+      }
+    },
+    {
+      "id": "guy-free-as-three",
+      "expectedCorrect": false,
+      "wordScore": 79.13800811767578,
+      "explicitMismatch": false,
+      "phones": [
+        {
+          "reference": "th",
+          "heard": "th",
+          "matchTag": 0,
+          "rawAccuracy": 0.5081446170806885
+        },
+        {
+          "reference": "r",
+          "heard": "r",
+          "matchTag": 0,
+          "rawAccuracy": 0.8720218539237976
+        },
+        {
+          "reference": "iy",
+          "heard": "iy",
+          "matchTag": 0,
+          "rawAccuracy": 0.9939737915992737
+        }
+      ],
+      "timing": {
+        "audioMs": 1608,
+        "connectionSetupMs": 1500,
+        "afterRecordingMs": 610,
+        "totalMs": 3718
+      }
+    },
+    {
+      "id": "aria-bed-as-bad",
+      "expectedCorrect": false,
+      "wordScore": 95.24299621582031,
+      "explicitMismatch": false,
+      "phones": [
+        {
+          "reference": "b",
+          "heard": "b",
+          "matchTag": 0,
+          "rawAccuracy": 0.9639109373092651
+        },
+        {
+          "reference": "ae",
+          "heard": "ae",
+          "matchTag": 0,
+          "rawAccuracy": 0.9291645884513855
+        },
+        {
+          "reference": "d",
+          "heard": "d",
+          "matchTag": 0,
+          "rawAccuracy": 0.9642144441604614
+        }
+      ],
+      "timing": {
+        "audioMs": 1440,
+        "connectionSetupMs": 1484,
+        "afterRecordingMs": 607,
+        "totalMs": 3531
+      }
+    },
+    {
+      "id": "guy-bed-as-bad",
+      "expectedCorrect": false,
+      "wordScore": 97.3080825805664,
+      "explicitMismatch": false,
+      "phones": [
+        {
+          "reference": "b",
+          "heard": "b",
+          "matchTag": 0,
+          "rawAccuracy": 0.9893271327018738
+        },
+        {
+          "reference": "ae",
+          "heard": "ae",
+          "matchTag": 0,
+          "rawAccuracy": 0.9644531607627869
+        },
+        {
+          "reference": "d",
+          "heard": "d",
+          "matchTag": 0,
+          "rawAccuracy": 0.9654622077941895
+        }
+      ],
+      "timing": {
+        "audioMs": 1464,
+        "connectionSetupMs": 1500,
+        "afterRecordingMs": 614,
+        "totalMs": 3578
+      }
+    },
+    {
+      "id": "aria-light-as-right",
+      "expectedCorrect": false,
+      "wordScore": 88.31442260742188,
+      "explicitMismatch": true,
+      "phones": [
+        {
+          "reference": "r",
+          "heard": "l",
+          "matchTag": 3,
+          "rawAccuracy": 0.9893812537193298
+        },
+        {
+          "reference": "ay",
+          "heard": "ay",
+          "matchTag": 0,
+          "rawAccuracy": 0.9932172894477844
+        },
+        {
+          "reference": "t",
+          "heard": "t",
+          "matchTag": 0,
+          "rawAccuracy": 0.993857204914093
+        }
+      ],
+      "timing": {
+        "audioMs": 1584,
+        "connectionSetupMs": 1500,
+        "afterRecordingMs": 635,
+        "totalMs": 3719
+      }
+    },
+    {
+      "id": "guy-light-as-right",
+      "expectedCorrect": false,
+      "wordScore": 88.00994110107422,
+      "explicitMismatch": true,
+      "phones": [
+        {
+          "reference": "r",
+          "heard": "l",
+          "matchTag": 3,
+          "rawAccuracy": 0.9835171699523926
+        },
+        {
+          "reference": "ay",
+          "heard": "ay",
+          "matchTag": 0,
+          "rawAccuracy": 0.9868202209472656
+        },
+        {
+          "reference": "t",
+          "heard": "t",
+          "matchTag": 0,
+          "rawAccuracy": 0.9934035539627075
+        }
+      ],
+      "timing": {
+        "audioMs": 1536,
+        "connectionSetupMs": 1562,
+        "afterRecordingMs": 652,
+        "totalMs": 3750
+      }
+    }
+  ],
+  "consoleUsageVerified": 24
+}

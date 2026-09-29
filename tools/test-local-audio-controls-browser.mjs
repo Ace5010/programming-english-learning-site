@@ -10,16 +10,17 @@ import { adaptiveProgrammingLessons } from '../src/programmingPractice.ts';
 import { DAILY_KEY, createDailyProgress, createDailySession, parseDailyProgress } from '../src/dailyProgress.ts';
 import { PROGRAMMING_COURSE_KEY } from '../src/programmingProgress.ts';
 import { REVIEW_KEY, parseReviewProgress, serializeReviewProgress, reviewAbilities } from '../src/review.ts';
+import { expectedSlowQueue } from './helpers/slow-audio-expectation.mjs';
 
 const require = createRequire(import.meta.url);
 const { chromium } = require(process.env.CODEWORDS_PLAYWRIGHT || 'C:/Users/shenwuqiang/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
 const baseURL = process.env.CODEWORDS_TEST_URL || 'http://localhost:5186/';
 assert.match(baseURL, /^https?:\/\/(localhost|127\.0\.0\.1)(:|\/)/);
-const output = path.resolve('artifacts/local-audio-controls');
+const output = path.resolve(process.env.CODEWORDS_ARTIFACT_DIR || 'artifacts/local-audio-controls');
 const earned = JSON.parse(await readFile('artifacts/adaptive-course/earned-fixtures.json', 'utf8'));
 const settings = {
   programming: { root: '#programming-content', key: PROGRAMMING_COURSE_KEY, lessons: adaptiveProgrammingLessons, label: '编程英语', library: '词汇库' },
-  daily: { root: '#daily-content', key: DAILY_KEY, lessons: adaptiveDailyLessons, label: '日常英语', library: '表达库' },
+  daily: { root: '#daily-content', key: DAILY_KEY, lessons: adaptiveDailyLessons, label: '日常英语', library: '词汇库' },
 };
 const now = Math.max(...Object.values(JSON.parse(earned.programming.course).learning.targets).map(target => target.readyAt)) + 3600000;
 const seed = { [PROGRAMMING_COURSE_KEY]: earned.programming.course, [DAILY_KEY]: earned.daily.course, [REVIEW_KEY]: earned.programming.review };
@@ -29,7 +30,7 @@ const raw = (page, key) => page.evaluate(key => localStorage.getItem(key), key);
 const read = async (page, key) => JSON.parse(await raw(page, key));
 const main = env => env.page.locator(env.config.root);
 let browser;
-const themes = ['minimal', 'sketch', 'print', 'graffiti'];
+const themes = ['lagoon', 'pearl', 'sky', 'mint'];
 async function navigate(page, label) { await page.getByRole('navigation', { name: '学习导航' }).getByRole('button', { name: label, exact: true }).click(); }
 async function open({ section = 'programming', state = {}, width = 1440 } = {}) {
   const context = await browser.newContext({ viewport: { width, height: width < 600 ? 844 : 1000 }, reducedMotion: 'reduce' });
@@ -67,6 +68,10 @@ async function open({ section = 'programming', state = {}, width = 1440 } = {}) 
 }
 function scenario(name, options, run) { scenarios.push({ name, options, run }); }
 async function waitPlayback(env, start, rate, includes, label) {
+  if (rate === .72) {
+    const voice = await env.page.evaluate(() => localStorage.getItem('codewords-voice') === 'guy' ? 'guy' : 'aria');
+    includes = expectedSlowQueue(includes, voice, baseURL)?.[0].url ?? includes;
+  }
   await env.page.waitForFunction(({ start, rate, includes }) => window.__speedAudio.events.slice(start).some(event => event.type === 'playing' && Math.abs(event.rate - rate) < 0.0001 && event.duration > 0 && event.src.includes(includes)), { start, rate, includes });
   const evidence = await env.page.evaluate(({ start, rate, includes }) => window.__speedAudio.events.slice(start).find(event => event.type === 'playing' && Math.abs(event.rate - rate) < 0.0001 && event.src.includes(includes)), { start, rate, includes });
   playbackEvidence.push({ label, ...evidence });
@@ -149,17 +154,17 @@ scenario('distant library cards offer immediate local word and example playback'
 
 for (const section of ['programming', 'daily']) {
   scenario(`${section} teaching has local normal and slow without changing the lesson`, { section, width: 390 }, async env => {
-    await main(env).locator('.daily-lesson-row').getByRole('button').click();
+    await main(env).getByRole('button', { name: '开始学习', exact: true }).click();
     await main(env).locator('.daily-study-card').waitFor();
     const session = (await read(env.page, env.config.key)).session;
     const card = main(env).locator('.daily-phrase').first();
     const clip = section === 'daily' ? '/audio/daily/aria/' : '/audio/aria/';
     await noGlobalSpeed(env.page);
-    await localPlay(env, card.locator('.daily-phrase-content'), 1, clip, `${section} teaching normal`);
+    await localPlay(env, card.getByRole('button', { name: /^朗读 / }), 1, clip, `${section} teaching normal`);
     await localPlay(env, card.locator('.daily-inline-slow'), .72, clip, `${section} teaching slow`);
-    await localPlay(env, card.locator('.daily-phrase-content'), 1, clip, `${section} teaching returns to normal`);
+    await localPlay(env, card.getByRole('button', { name: /^朗读 / }), 1, clip, `${section} teaching returns to normal`);
     for (const theme of themes) {
-      await env.page.getByLabel('界面风格', { exact: true }).selectOption(theme);
+      await env.page.getByLabel('界面配色', { exact: true }).selectOption(theme);
       await card.scrollIntoViewIfNeeded();
       await noOverflow(env.page);
       const box = await card.locator('.daily-inline-slow').boundingBox();
@@ -180,7 +185,7 @@ for (const section of ['programming', 'daily']) {
     const before = (await read(env.page, env.config.key)).session;
     const row = main(env).locator('.daily-audio-row');
     await localPlay(env, row.getByRole('button', { name: '听一听', exact: true }), 1, `/${task.audioId}.mp3`, `${section} listening normal`);
-    await localPlay(env, row.getByRole('button', { name: /^慢速朗读 / }), .72, `/${task.audioId}.mp3`, `${section} listening slow`);
+    await localPlay(env, row.getByRole('button', { name: '慢速播放录音', exact: true }), .72, `/${task.audioId}.mp3`, `${section} listening slow`);
     assert.deepEqual((await read(env.page, env.config.key)).session, before);
     await main(env).locator('.daily-controls .primary').click();
     const feedback = main(env).locator('.daily-feedback');
@@ -200,15 +205,17 @@ for (const section of ['programming', 'daily']) {
     await navigate(env.page, '复习');
     if (section === 'programming') await main(env).locator('.review-scenarios > summary').click();
     await main(env).getByLabel('复习内容', { exact: true }).selectOption('listening');
-    await main(env).locator('.daily-early-review > summary').click();
-    await main(env).locator('.daily-early-review .daily-lesson-row').first().getByRole('button', { name: '开始练习', exact: true }).click();
+    if (section === 'programming') {
+      await main(env).locator('.daily-early-review > summary').click();
+      await main(env).locator('.daily-early-review .daily-lesson-row').first().getByRole('button', { name: '开始练习', exact: true }).click();
+    } else await main(env).getByRole('button', { name: '开始练习', exact: true }).click();
     await main(env).locator('.daily-question').waitFor();
     const session = (await read(env.page, env.config.key)).session;
     const task = taskFor(env, session);
     assert.equal(task.kind, 'listen');
     const row = main(env).locator('.daily-audio-row');
     await noGlobalSpeed(env.page);
-    await localPlay(env, row.getByRole('button', { name: /^慢速朗读 / }), .72, `/${task.audioId}.mp3`, `${section} scene review slow`);
+    await localPlay(env, row.getByRole('button', { name: '慢速播放录音', exact: true }), .72, `/${task.audioId}.mp3`, `${section} scene review slow`);
     await localPlay(env, row.getByRole('button', { name: '听一听', exact: true }), 1, `/${task.audioId}.mp3`, `${section} scene review normal`);
     assert.deepEqual((await read(env.page, env.config.key)).session, session);
   });
@@ -265,7 +272,7 @@ scenario('speaking demonstrations and own-expression references have both local 
 });
 
 scenario('expression library local playback keeps voice selection and long sentences usable', { section: 'daily', width: 390 }, async env => {
-  await navigate(env.page, '表达库');
+  await navigate(env.page, '词汇库');
   const phrase = [...dailyPhrases].sort((left, right) => right.en.length - left.en.length)[0];
   await main(env).getByLabel('查找表达').fill(phrase.en);
   const row = main(env).locator('.daily-expression').first();
@@ -284,21 +291,21 @@ scenario('expression library local playback keeps voice selection and long sente
 for (const width of [1440, 390]) scenario(`local controls fit four themes at ${width}px`, { state: seed, width }, async env => {
   const boxes = [];
   for (const theme of themes) {
-    await env.page.getByLabel('界面风格', { exact: true }).selectOption(theme);
-    for (const view of ['词汇库', '复习', '表达库']) {
-      await env.page.getByRole('button', { name: view === '表达库' ? '日常英语' : '编程英语', exact: true }).click();
+    await env.page.getByLabel('界面配色', { exact: true }).selectOption(theme);
+    for (const view of ['词汇库', '复习', '词汇库']) {
+      await env.page.getByRole('button', { name: view === '词汇库' ? '日常英语' : '编程英语', exact: true }).click();
       await navigate(env.page, view);
-      const scope = env.page.locator(view === '表达库' ? '#daily-content' : view === '词汇库' ? '#vocabulary-content' : '#programming-content');
-      const row = scope.locator(view === '表达库' ? '.daily-expression' : 'article[data-word-id]').first();
+      const scope = env.page.locator(view === '词汇库' ? '#daily-content' : view === '词汇库' ? '#vocabulary-content' : '#programming-content');
+      const row = scope.locator(view === '词汇库' ? '.daily-expression' : 'article[data-word-id]').first();
       await row.scrollIntoViewIfNeeded();
       await noGlobalSpeed(env.page); await noOverflow(env.page);
       assert.equal(await row.locator('button button').count(), 0);
-      const slow = row.getByRole('button', { name: view === '表达库' ? /^慢速朗读 / : /^慢速朗读单词 / });
+      const slow = row.getByRole('button', { name: view === '词汇库' ? /^慢速朗读 / : /^慢速朗读单词 / });
       const box = await slow.boundingBox();
       const bounds = await row.boundingBox();
       assert.ok(box && bounds && box.x >= bounds.x && box.x + box.width <= bounds.x + bounds.width + 1 && box.x + box.width <= width + 1 && box.y >= bounds.y && box.y + box.height <= bounds.y + bounds.height + 1, `${theme}/${view}: ${JSON.stringify({ box, bounds })}`);
       boxes.push({ theme, view, box });
-      await env.page.screenshot({ path: path.join(output, `local-${view === '表达库' ? 'expression' : view === '复习' ? 'review' : 'library'}-${theme}-${width}.png`) });
+      await env.page.screenshot({ path: path.join(output, `local-${view === '词汇库' ? 'expression' : view === '复习' ? 'review' : 'library'}-${theme}-${width}.png`) });
     }
   }
   return boxes;

@@ -1,0 +1,848 @@
+{
+  "provider": "xfyun-ise",
+  "date": "2026-09-24",
+  "network": "Physical Ethernet interface selected with Winsock IP_UNICAST_IF; proxy=None; TLS validated",
+  "accountFreeQuotaBefore": 500,
+  "attemptedCalls": 10,
+  "status": "rejected-for-phoneme-grading",
+  "productionIntegrated": false,
+  "containsUserRecording": false,
+  "paidServiceEnabled": false,
+  "cases": [
+    {
+      "id": "aria-goodbye",
+      "file": "public/audio/daily/aria/goodbye.mp3",
+      "sha256": "39f9feb199cf056ed30b73321bc005e4265f2454e31332afd4dc66d032069639",
+      "reference": "Goodbye.",
+      "status": "completed",
+      "durationSeconds": 1.608,
+      "result": {
+        "provider": "xfyun-ise",
+        "phonemeCount": 5,
+        "nodes": [
+          {
+            "level": "read_word"
+          },
+          {
+            "level": "read_word",
+            "accuracy_score": "94.429540",
+            "beg_pos": "0",
+            "content": "goodbye",
+            "end_pos": "159",
+            "except_info": "0",
+            "is_rejected": "false",
+            "standard_score": "0.000000",
+            "total_score": "94.429540"
+          },
+          {
+            "level": "sentence",
+            "beg_pos": "0",
+            "content": "goodbye",
+            "end_pos": "159"
+          },
+          {
+            "level": "word",
+            "beg_pos": "14",
+            "content": "goodbye",
+            "dp_message": "0",
+            "end_pos": "76",
+            "total_score": "94.429540"
+          },
+          {
+            "level": "syll",
+            "beg_pos": "14",
+            "content": "g uh d",
+            "end_pos": "34",
+            "serr_msg": "0",
+            "syll_score": "91.346440"
+          },
+          {
+            "level": "phone",
+            "beg_pos": "14",
+            "content": "g",
+            "dp_message": "0",
+            "end_pos": "22"
+          },
+          {
+            "level": "phone",
+            "beg_pos": "22",
+            "content": "uh",
+            "dp_message": "0",
+            "end_pos": "28"
+          },
+          {
+            "level": "phone",
+            "beg_pos": "28",
+            "content": "d",
+            "dp_message": "0",
+            "end_pos": "34"
+          },
+          {
+            "level": "syll",
+            "beg_pos": "34",
+            "content": "b ay",
+            "end_pos": "76",
+            "serr_msg": "0",
+            "syll_score": "99.054140"
+          },
+          {
+            "level": "phone",
+            "beg_pos": "34",
+            "content": "b",
+            "dp_message": "0",
+            "end_pos": "41"
+          },
+          {
+            "level": "phone",
+            "beg_pos": "41",
+            "content": "ay",
+            "dp_message": "0",
+            "end_pos": "76"
+          }
+        ],
+        "pronunciationAccepted": false,
+        "note": "Trial evidence only; no inferred heard phones or automatic pass/fail threshold"
+      },
+      "elapsedMs": 2984
+    },
+    {
+      "id": "guy-goodbye",
+      "file": "public/audio/daily/guy/goodbye.mp3",
+      "sha256": "351fcb29dfd2a4825344b9a6b85ee4df13ea1738faed04d97b8ef54fb33b4ba6",
+      "reference": "Goodbye.",
+      "status": "completed",
+      "durationSeconds": 1.656,
+      "result": {
+        "provider": "xfyun-ise",
+        "phonemeCount": 5,
+        "nodes": [
+          {
+            "level": "read_word"
+          },
+          {
+            "level": "read_word",
+            "accuracy_score": "97.762380",
+            "beg_pos": "0",
+            "content": "goodbye",
+            "end_pos": "164",
+            "except_info": "0",
+            "is_rejected": "false",
+            "standard_score": "0.000000",
+            "total_score": "97.762380"
+          },
+          {
+            "level": "sentence",
+            "beg_pos": "0",
+            "content": "goodbye",
+            "end_pos": "164"
+          },
+          {
+            "level": "word",
+            "beg_pos": "15",
+            "content": "goodbye",
+            "dp_message": "0",
+            "end_pos": "80",
+            "total_score": "97.762380"
+          },
+          {
+            "level": "syll",
+            "beg_pos": "15",
+            "content": "g uh d",
+            "end_pos": "34",
+            "serr_msg": "0",
+            "syll_score": "96.460940"
+          },
+          {
+            "level": "phone",
+            "beg_pos": "15",
+            "content": "g",
+            "dp_message": "0",
+            "end_pos": "23"
+          },
+          {
+            "level": "phone",
+            "beg_pos": "23",
+            "content": "uh",
+            "dp_message": "0",
+            "end_pos": "30"
+          },
+          {
+            "level": "phone",
+            "beg_pos": "30",
+            "content": "d",
+            "dp_message": "0",
+            "end_pos": "34"
+          },
+          {
+            "level": "syll",
+            "beg_pos": "34",
+            "content": "b ay",
+            "end_pos": "80",
+            "serr_msg": "2048",
+            "syll_score": "75.783020"
+          },
+          {
+            "level": "phone",
+            "beg_pos": "34",
+            "content": "b",
+            "dp_message": "0",
+            "end_pos": "43"
+          },
+          {
+            "level": "phone",
+            "beg_pos": "43",
+            "content": "ay",
+            "dp_message": "0",
+            "end_pos": "80"
+          }
+        ],
+        "pronunciationAccepted": false,
+        "note": "Trial evidence only; no inferred heard phones or automatic pass/fail threshold"
+      },
+      "elapsedMs": 2672
+    },
+    {
+      "id": "aria-hello",
+      "file": "public/audio/daily/aria/hello.mp3",
+      "sha256": "d647bdc233e2be048fef5c9c34d03d6ed22e66cb4031f23d9703eef01495bf5b",
+      "reference": "Hello.",
+      "status": "completed",
+      "durationSeconds": 1.56,
+      "result": {
+        "provider": "xfyun-ise",
+        "phonemeCount": 4,
+        "nodes": [
+          {
+            "level": "read_word"
+          },
+          {
+            "level": "read_word",
+            "accuracy_score": "99.288740",
+            "beg_pos": "0",
+            "content": "hello",
+            "end_pos": "154",
+            "except_info": "0",
+            "is_rejected": "false",
+            "standard_score": "0.000000",
+            "total_score": "99.288740"
+          },
+          {
+            "level": "sentence",
+            "beg_pos": "0",
+            "content": "hello",
+            "end_pos": "154"
+          },
+          {
+            "level": "word",
+            "beg_pos": "14",
+            "content": "hello",
+            "dp_message": "0",
+            "end_pos": "71",
+            "total_score": "99.288740"
+          },
+          {
+            "level": "syll",
+            "beg_pos": "14",
+            "content": "hh eh",
+            "end_pos": "31",
+            "serr_msg": "0",
+            "syll_score": "98.755460"
+          },
+          {
+            "level": "phone",
+            "beg_pos": "14",
+            "content": "hh",
+            "dp_message": "0",
+            "end_pos": "25"
+          },
+          {
+            "level": "phone",
+            "beg_pos": "25",
+            "content": "eh",
+            "dp_message": "0",
+            "end_pos": "31"
+          },
+          {
+            "level": "syll",
+            "beg_pos": "31",
+            "content": "l ow",
+            "end_pos": "71",
+            "serr_msg": "2048",
+            "syll_score": "75.864740"
+          },
+          {
+            "level": "phone",
+            "beg_pos": "31",
+            "content": "l",
+            "dp_message": "0",
+            "end_pos": "41"
+          },
+          {
+            "level": "phone",
+            "beg_pos": "41",
+            "content": "ow",
+            "dp_message": "0",
+            "end_pos": "71"
+          }
+        ],
+        "pronunciationAccepted": false,
+        "note": "Trial evidence only; no inferred heard phones or automatic pass/fail threshold"
+      },
+      "elapsedMs": 1718
+    },
+    {
+      "id": "guy-hello",
+      "file": "public/audio/daily/guy/hello.mp3",
+      "sha256": "75995d47e90e5015f57dd51844e4e12ede0b163c6fc06b9d829f7edf1d9fa386",
+      "reference": "Hello.",
+      "status": "completed",
+      "durationSeconds": 1.536,
+      "result": {
+        "provider": "xfyun-ise",
+        "phonemeCount": 4,
+        "nodes": [
+          {
+            "level": "read_word"
+          },
+          {
+            "level": "read_word",
+            "accuracy_score": "94.337860",
+            "beg_pos": "0",
+            "content": "hello",
+            "end_pos": "152",
+            "except_info": "0",
+            "is_rejected": "false",
+            "standard_score": "0.000000",
+            "total_score": "94.337860"
+          },
+          {
+            "level": "sentence",
+            "beg_pos": "0",
+            "content": "hello",
+            "end_pos": "152"
+          },
+          {
+            "level": "word",
+            "beg_pos": "14",
+            "content": "hello",
+            "dp_message": "0",
+            "end_pos": "72",
+            "total_score": "94.337860"
+          },
+          {
+            "level": "syll",
+            "beg_pos": "14",
+            "content": "hh eh",
+            "end_pos": "27",
+            "serr_msg": "0",
+            "syll_score": "89.113220"
+          },
+          {
+            "level": "phone",
+            "beg_pos": "14",
+            "content": "hh",
+            "dp_message": "0",
+            "end_pos": "23"
+          },
+          {
+            "level": "phone",
+            "beg_pos": "23",
+            "content": "eh",
+            "dp_message": "0",
+            "end_pos": "27"
+          },
+          {
+            "level": "syll",
+            "beg_pos": "27",
+            "content": "l ow",
+            "end_pos": "72",
+            "serr_msg": "0",
+            "syll_score": "99.562520"
+          },
+          {
+            "level": "phone",
+            "beg_pos": "27",
+            "content": "l",
+            "dp_message": "0",
+            "end_pos": "38"
+          },
+          {
+            "level": "phone",
+            "beg_pos": "38",
+            "content": "ow",
+            "dp_message": "0",
+            "end_pos": "72"
+          }
+        ],
+        "pronunciationAccepted": false,
+        "note": "Trial evidence only; no inferred heard phones or automatic pass/fail threshold"
+      },
+      "elapsedMs": 1906
+    },
+    {
+      "id": "think-correct",
+      "file": "public/audio/aria/word-2652.mp3",
+      "sha256": "56d9cca2c2277ddc788953d76f26920ef025162bb072ddf76489d80924dd85ee",
+      "reference": "Think.",
+      "status": "completed",
+      "durationSeconds": 1.488,
+      "result": {
+        "provider": "xfyun-ise",
+        "phonemeCount": 4,
+        "nodes": [
+          {
+            "level": "read_word"
+          },
+          {
+            "level": "read_word",
+            "accuracy_score": "99.611280",
+            "beg_pos": "0",
+            "content": "think",
+            "end_pos": "147",
+            "except_info": "0",
+            "is_rejected": "false",
+            "standard_score": "0.000000",
+            "total_score": "99.611280"
+          },
+          {
+            "level": "sentence",
+            "beg_pos": "0",
+            "content": "think",
+            "end_pos": "147"
+          },
+          {
+            "level": "word",
+            "beg_pos": "14",
+            "content": "think",
+            "dp_message": "0",
+            "end_pos": "69",
+            "total_score": "99.611280"
+          },
+          {
+            "level": "syll",
+            "beg_pos": "14",
+            "content": "th ih ng k",
+            "end_pos": "69",
+            "serr_msg": "0",
+            "syll_score": "99.611280"
+          },
+          {
+            "level": "phone",
+            "beg_pos": "14",
+            "content": "th",
+            "dp_message": "0",
+            "end_pos": "24"
+          },
+          {
+            "level": "phone",
+            "beg_pos": "24",
+            "content": "ih",
+            "dp_message": "0",
+            "end_pos": "38"
+          },
+          {
+            "level": "phone",
+            "beg_pos": "38",
+            "content": "ng",
+            "dp_message": "0",
+            "end_pos": "50"
+          },
+          {
+            "level": "phone",
+            "beg_pos": "50",
+            "content": "k",
+            "dp_message": "0",
+            "end_pos": "69"
+          }
+        ],
+        "pronunciationAccepted": false,
+        "note": "Trial evidence only; no inferred heard phones or automatic pass/fail threshold"
+      },
+      "elapsedMs": 1719
+    },
+    {
+      "id": "sink-for-think",
+      "file": "public/audio/aria/word-959.mp3",
+      "sha256": "6e91c5e4a7ea69fc6243dbdf3eed48bba5106c2030d11f4c90937d8a9e9edaa7",
+      "reference": "Think.",
+      "status": "completed",
+      "durationSeconds": 1.608,
+      "result": {
+        "provider": "xfyun-ise",
+        "phonemeCount": 4,
+        "nodes": [
+          {
+            "level": "read_word"
+          },
+          {
+            "level": "read_word",
+            "accuracy_score": "98.341380",
+            "beg_pos": "0",
+            "content": "think",
+            "end_pos": "159",
+            "except_info": "0",
+            "is_rejected": "false",
+            "standard_score": "0.000000",
+            "total_score": "98.341380"
+          },
+          {
+            "level": "sentence",
+            "beg_pos": "0",
+            "content": "think",
+            "end_pos": "159"
+          },
+          {
+            "level": "word",
+            "beg_pos": "15",
+            "content": "think",
+            "dp_message": "0",
+            "end_pos": "81",
+            "total_score": "98.341380"
+          },
+          {
+            "level": "syll",
+            "beg_pos": "15",
+            "content": "th ih ng k",
+            "end_pos": "81",
+            "serr_msg": "0",
+            "syll_score": "98.341380"
+          },
+          {
+            "level": "phone",
+            "beg_pos": "15",
+            "content": "th",
+            "dp_message": "0",
+            "end_pos": "37"
+          },
+          {
+            "level": "phone",
+            "beg_pos": "37",
+            "content": "ih",
+            "dp_message": "0",
+            "end_pos": "51"
+          },
+          {
+            "level": "phone",
+            "beg_pos": "51",
+            "content": "ng",
+            "dp_message": "0",
+            "end_pos": "62"
+          },
+          {
+            "level": "phone",
+            "beg_pos": "62",
+            "content": "k",
+            "dp_message": "0",
+            "end_pos": "81"
+          }
+        ],
+        "pronunciationAccepted": false,
+        "note": "Trial evidence only; no inferred heard phones or automatic pass/fail threshold"
+      },
+      "elapsedMs": 1641
+    },
+    {
+      "id": "ship-correct",
+      "file": "public/audio/aria/word-2224.mp3",
+      "sha256": "93e91a16f6060328871735321fa37898b44145ccc7db88a660ef7c06c0402ef4",
+      "reference": "Ship.",
+      "status": "completed",
+      "durationSeconds": 1.608,
+      "result": {
+        "provider": "xfyun-ise",
+        "phonemeCount": 3,
+        "nodes": [
+          {
+            "level": "read_word"
+          },
+          {
+            "level": "read_word",
+            "accuracy_score": "78.170300",
+            "beg_pos": "0",
+            "content": "ship",
+            "end_pos": "159",
+            "except_info": "0",
+            "is_rejected": "false",
+            "standard_score": "0.000000",
+            "total_score": "78.170300"
+          },
+          {
+            "level": "sentence",
+            "beg_pos": "0",
+            "content": "ship",
+            "end_pos": "159"
+          },
+          {
+            "level": "word",
+            "beg_pos": "14",
+            "content": "ship",
+            "dp_message": "0",
+            "end_pos": "82",
+            "total_score": "78.170300"
+          },
+          {
+            "level": "syll",
+            "beg_pos": "14",
+            "content": "sh ih p",
+            "end_pos": "82",
+            "serr_msg": "0",
+            "syll_score": "78.170300"
+          },
+          {
+            "level": "phone",
+            "beg_pos": "14",
+            "content": "sh",
+            "dp_message": "0",
+            "end_pos": "37"
+          },
+          {
+            "level": "phone",
+            "beg_pos": "37",
+            "content": "ih",
+            "dp_message": "0",
+            "end_pos": "58"
+          },
+          {
+            "level": "phone",
+            "beg_pos": "58",
+            "content": "p",
+            "dp_message": "0",
+            "end_pos": "82"
+          }
+        ],
+        "pronunciationAccepted": false,
+        "note": "Trial evidence only; no inferred heard phones or automatic pass/fail threshold"
+      },
+      "elapsedMs": 1718
+    },
+    {
+      "id": "sheep-for-ship",
+      "file": "public/audio/aria/word-2968.mp3",
+      "sha256": "d78bba621523dcd4fb8efdca6df67c3fc7a32644bc342b5f3f74378b36b259ae",
+      "reference": "Ship.",
+      "status": "completed",
+      "durationSeconds": 1.632,
+      "result": {
+        "provider": "xfyun-ise",
+        "phonemeCount": 3,
+        "nodes": [
+          {
+            "level": "read_word"
+          },
+          {
+            "level": "read_word",
+            "accuracy_score": "97.828200",
+            "beg_pos": "0",
+            "content": "ship",
+            "end_pos": "161",
+            "except_info": "0",
+            "is_rejected": "false",
+            "standard_score": "0.000000",
+            "total_score": "97.828200"
+          },
+          {
+            "level": "sentence",
+            "beg_pos": "0",
+            "content": "ship",
+            "end_pos": "161"
+          },
+          {
+            "level": "word",
+            "beg_pos": "14",
+            "content": "ship",
+            "dp_message": "0",
+            "end_pos": "83",
+            "total_score": "97.828200"
+          },
+          {
+            "level": "syll",
+            "beg_pos": "14",
+            "content": "sh ih p",
+            "end_pos": "83",
+            "serr_msg": "0",
+            "syll_score": "97.828200"
+          },
+          {
+            "level": "phone",
+            "beg_pos": "14",
+            "content": "sh",
+            "dp_message": "0",
+            "end_pos": "36"
+          },
+          {
+            "level": "phone",
+            "beg_pos": "36",
+            "content": "ih",
+            "dp_message": "0",
+            "end_pos": "61"
+          },
+          {
+            "level": "phone",
+            "beg_pos": "61",
+            "content": "p",
+            "dp_message": "0",
+            "end_pos": "83"
+          }
+        ],
+        "pronunciationAccepted": false,
+        "note": "Trial evidence only; no inferred heard phones or automatic pass/fail threshold"
+      },
+      "elapsedMs": 1657
+    },
+    {
+      "id": "three-correct",
+      "file": "public/audio/guy/word-2400.mp3",
+      "sha256": "94ceb6bcde145714f09292b63ae0d6624a89be5cb173720ac695119dafe3a0c2",
+      "reference": "Three.",
+      "status": "completed",
+      "durationSeconds": 1.656,
+      "result": {
+        "provider": "xfyun-ise",
+        "phonemeCount": 3,
+        "nodes": [
+          {
+            "level": "read_word"
+          },
+          {
+            "level": "read_word",
+            "accuracy_score": "82.361240",
+            "beg_pos": "0",
+            "content": "three",
+            "end_pos": "164",
+            "except_info": "0",
+            "is_rejected": "false",
+            "standard_score": "0.000000",
+            "total_score": "82.361240"
+          },
+          {
+            "level": "sentence",
+            "beg_pos": "0",
+            "content": "three",
+            "end_pos": "164"
+          },
+          {
+            "level": "word",
+            "beg_pos": "22",
+            "content": "three",
+            "dp_message": "0",
+            "end_pos": "79",
+            "total_score": "82.361240"
+          },
+          {
+            "level": "syll",
+            "beg_pos": "22",
+            "content": "th r iy",
+            "end_pos": "79",
+            "serr_msg": "0",
+            "syll_score": "82.361240"
+          },
+          {
+            "level": "phone",
+            "beg_pos": "22",
+            "content": "th",
+            "dp_message": "0",
+            "end_pos": "33"
+          },
+          {
+            "level": "phone",
+            "beg_pos": "33",
+            "content": "r",
+            "dp_message": "0",
+            "end_pos": "49"
+          },
+          {
+            "level": "phone",
+            "beg_pos": "49",
+            "content": "iy",
+            "dp_message": "0",
+            "end_pos": "79"
+          }
+        ],
+        "pronunciationAccepted": false,
+        "note": "Trial evidence only; no inferred heard phones or automatic pass/fail threshold"
+      },
+      "elapsedMs": 1703
+    },
+    {
+      "id": "free-for-three",
+      "file": "public/audio/guy/word-1649.mp3",
+      "sha256": "b64d197492c3ab8a73bcb5eb526e016455a9f5793081c3f58d95e56470fa5991",
+      "reference": "Three.",
+      "status": "completed",
+      "durationSeconds": 1.608,
+      "result": {
+        "provider": "xfyun-ise",
+        "phonemeCount": 3,
+        "nodes": [
+          {
+            "level": "read_word"
+          },
+          {
+            "level": "read_word",
+            "accuracy_score": "63.279700",
+            "beg_pos": "0",
+            "content": "three",
+            "end_pos": "159",
+            "except_info": "0",
+            "is_rejected": "false",
+            "standard_score": "0.000000",
+            "total_score": "63.279700"
+          },
+          {
+            "level": "sentence",
+            "beg_pos": "0",
+            "content": "three",
+            "end_pos": "159"
+          },
+          {
+            "level": "word",
+            "beg_pos": "32",
+            "content": "three",
+            "dp_message": "0",
+            "end_pos": "76",
+            "total_score": "63.279700"
+          },
+          {
+            "level": "syll",
+            "beg_pos": "32",
+            "content": "th r iy",
+            "end_pos": "76",
+            "serr_msg": "1",
+            "syll_score": "63.279700"
+          },
+          {
+            "level": "phone",
+            "beg_pos": "32",
+            "content": "th",
+            "dp_message": "0",
+            "end_pos": "35"
+          },
+          {
+            "level": "phone",
+            "beg_pos": "35",
+            "content": "r",
+            "dp_message": "0",
+            "end_pos": "47"
+          },
+          {
+            "level": "phone",
+            "beg_pos": "47",
+            "content": "iy",
+            "dp_message": "0",
+            "end_pos": "76"
+          }
+        ],
+        "pronunciationAccepted": false,
+        "note": "Trial evidence only; no inferred heard phones or automatic pass/fail threshold"
+      },
+      "elapsedMs": 1672
+    }
+  ],
+  "findings": [
+    "Normal Goodbye did not receive a missing-d flag",
+    "sink-for-think received 98.341380 with all phoneme dp_message values zero",
+    "sheep-for-ship received 97.828200, higher than correct ship 78.170300; all phoneme flags zero",
+    "free-for-three received 63.279700 and syllable error 1, but no localized phoneme error",
+    "Target phone labels are not recognized speech; do not infer actual pronounced phones from them"
+  ]
+}

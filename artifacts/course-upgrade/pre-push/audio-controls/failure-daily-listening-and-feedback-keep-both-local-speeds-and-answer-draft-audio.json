@@ -1,0 +1,46 @@
+[
+  {
+    "id": 4,
+    "type": "pause",
+    "src": "http://localhost:5186/audio/daily/aria/hi.mp3?v=Hi!",
+    "rate": 1,
+    "duration": 1.536,
+    "currentTime": 0,
+    "paused": true,
+    "ended": false,
+    "preservesPitch": true
+  },
+  {
+    "id": 0,
+    "type": "playing",
+    "src": "http://localhost:5186/audio/daily/aria/goodbye.mp3?v=Goodbye!",
+    "rate": 1,
+    "duration": 1.608,
+    "currentTime": 0,
+    "paused": false,
+    "ended": false,
+    "preservesPitch": true
+  },
+  {
+    "id": 0,
+    "type": "pause",
+    "src": "http://localhost:5186/audio/daily/aria/goodbye.mp3?v=Goodbye!",
+    "rate": 1,
+    "duration": 1.608,
+    "currentTime": 1.608,
+    "paused": true,
+    "ended": true,
+    "preservesPitch": true
+  },
+  {
+    "id": 0,
+    "type": "ended",
+    "src": "http://localhost:5186/audio/daily/aria/goodbye.mp3?v=Goodbye!",
+    "rate": 1,
+    "duration": 1.608,
+    "currentTime": 1.608,
+    "paused": true,
+    "ended": true,
+    "preservesPitch": true
+  }
+]

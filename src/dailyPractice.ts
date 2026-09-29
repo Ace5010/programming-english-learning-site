@@ -1,6 +1,8 @@
 import { dailyUnits, dailyPhrases, type DailyExercise, type DailyLesson, type DailyPhrase, type DailyUnit } from './dailyCourse.ts';
 import type { LearningExercise, LearningLesson } from './learningTypes.ts';
 import { normalizeWrittenAnswer, writtenAnswersMatch } from './writtenAnswer.ts';
+import { sentenceVariants } from './courseVariants.ts';
+import { dailyWordTargets, wordsForPhrase } from './dailyWordTargets.ts';
 
 export type AdaptiveDailyExercise = LearningExercise & {
   knowledgeIds: string[];
@@ -81,7 +83,7 @@ function extendOriginal(task: DailyExercise, taught: DailyPhrase[]): AdaptiveDai
   const literalListening = task.kind === 'listen' && phrase && task.answers?.includes(phrase.en);
   const learningDifficulty = task.kind === 'write' || task.kind === 'speak' ? 'recall'
     : literalListening ? 'recognition' : 'context';
-  return { ...task, knowledgeIds, learningDifficulty, learningSignature: `daily:original:${task.id}` };
+  return { ...task, knowledgeIds, learningDifficulty, learningSignature: `daily:original:${task.id}`, learningContext: `phrase:${knowledgeIds.join(',')}` };
 }
 
 type PracticeDraft = Omit<LearningExercise, 'id' | 'knowledgeIds' | 'learningDifficulty' | 'learningSignature'>;
@@ -91,7 +93,9 @@ function candidate(lessonId: string, phrase: DailyPhrase, variant: string,
   return { ...draft, id, knowledgeIds: [phrase.id], learningDifficulty: difficulty,
     // Seeing an identical expression/format again in a later unit is not a new
     // transfer context merely because the surrounding lesson has changed.
-    learningSignature: `daily:${phrase.id}:${variant}` };
+    learningSignature: `daily:${phrase.id}:${variant}`, learningContext: `phrase:${phrase.id}`,
+    ...(variant === 'letters' ? { recallSupport: true } : {}),
+    ...(phrase.id.startsWith('daily-word-') && (variant === 'write' || variant === 'letters') ? { ability: 'spelling', hint: `首字母是 ${phrase.en[0]}，共 ${phrase.en.length} 个字母。` } : {}) };
 }
 
 const specificWritingPrompts: Record<string, string> = {
@@ -157,7 +161,25 @@ function variants(lesson: DailyLesson, phrase: DailyPhrase, taught: DailyPhrase[
     prompt: specificWritingPrompts[phrase.id] ?? `写出下面的英语表达，可使用合适的缩写：\n${phrase.zh}`,
     answers: acceptable, explanation: explain,
   }));
+  for (const { variant, distractor, ...draft } of sentenceVariants(phrase.en, phrase.zh, phrase.id, taught.flatMap(item => item.en.split(/\s+/)))) {
+    const source = distractor && taught.find(item => item.en.split(/\s+/).some(word => word.toLowerCase() === distractor.toLowerCase()));
+    tasks.push(make(variant, variant === 'order-blocks' ? 'recognition' : 'context', { ...draft, ...(source ? { prerequisiteIds: [source.id] } : {}) }));
+  }
   return tasks;
+}
+
+function pairVariants(lesson: DailyLesson, taught: DailyPhrase[]): AdaptiveDailyExercise[] {
+  const selected: DailyPhrase[] = [];
+  for (const phrase of [...lesson.phrases, ...taught]) {
+    if (phrase.en.split(/\s+/).length > 7 || selected.some(other => equivalent(phrase, other))) continue;
+    selected.push(phrase);
+    if (selected.length === 4) break;
+  }
+  if (selected.length < 3) return [];
+  return (['text', 'audio'] as const).map(pairMode => ({ id: `${lesson.id}-p-match-${pairMode}`, kind: 'match', pairMode,
+    prompt: pairMode === 'audio' ? '听声音，选择对应的中文。' : '配对英文和中文。', explanation: '配对后读一遍，记住声音、英文和含义。',
+    pairs: selected.map(item => ({ id: item.id, en: item.en, zh: item.zh, audioId: item.id })),
+    knowledgeIds: selected.map(item => item.id), learningDifficulty: 'recognition', learningSignature: `daily:pairs:${pairMode}:${selected.map(item => item.id).sort().join(',')}`.slice(0, 180) }));
 }
 
 const introduced = new Map<string, DailyPhrase>();
@@ -165,14 +187,43 @@ export const adaptiveDailyUnits: AdaptiveDailyUnit[] = dailyUnits.map(unit => ({
   ...unit,
   lessons: unit.lessons.map(lesson => {
     for (const phrase of lesson.phrases) introduced.set(phrase.id, phrase);
+    const focusWords = dailyWordTargets.filter(word => word.contexts.some(id => lesson.phrases.some(phrase => phrase.id === id)));
+    for (const word of focusWords) introduced.set(word.id, word);
     const taught = [...new Map([...lesson.phrases, ...[...introduced.values()].reverse()].map(phrase => [phrase.id, phrase])).values()];
     const exercises = lesson.exercises.map(task => extendOriginal(task, taught));
     const rechecks = lesson.rechecks.map(task => extendOriginal(task, taught));
     return {
-      ...lesson, exercises, rechecks,
-      learningTargets: lesson.phrases.map(phrase => phrase.id), learningGoal: 'communication',
+      ...lesson, phrases: [...lesson.phrases, ...focusWords], exercises, rechecks,
+      learningTargets: [...lesson.phrases.map(phrase => phrase.id), ...focusWords.map(word => word.id)], learningGoal: 'communication',
       // A candidate pool, never a fixed per-phrase repetition quota or checklist.
-      practice: [...exercises, ...rechecks, ...lesson.phrases.flatMap(phrase => variants(lesson, phrase, taught))],
+      practice: [...exercises, ...rechecks, ...[...lesson.phrases, ...focusWords].flatMap(phrase => variants(lesson, phrase, taught)),
+        ...lesson.phrases.flatMap(phrase => wordsForPhrase(phrase.id).flatMap(word => {
+          const match = new RegExp(`\\b${word.en}\\b`, 'i').exec(phrase.en);
+          if (!match) return [];
+          const gaps: AdaptiveDailyExercise[] = [false, true].map(audioPrompt => ({
+            id: `${lesson.id}-p-${word.id}-${phrase.id}-${audioPrompt ? 'hear' : 'recall'}`,
+            kind: 'fill' as const, audioId: phrase.id, audioPrompt,
+            prompt: audioPrompt ? '听完整句子，补上重点词。' : `根据中文补上重点词：\n${phrase.zh}`,
+            parts: [phrase.en.slice(0, match.index), phrase.en.slice(match.index + match[0].length)], blanks: [[match[0]]],
+            explanation: `${phrase.en} 表示“${phrase.zh}”。`, knowledgeIds: [word.id], prerequisiteIds: [phrase.id],
+            learningDifficulty: 'recall' as const, learningSignature: `${word.id}:${phrase.id}:${audioPrompt ? 'hear' : 'recall'}`,
+            learningContext: `sentence:${phrase.en.toLowerCase()}`,
+            ability: audioPrompt ? 'listening' : 'context',
+            hint: `重点词的首字母是 ${word.en[0]}。`,
+          }));
+          const article = phrase.en.indexOf(`a ${word.en}`);
+          if (word.chunk && article >= 0) gaps.push({
+            id: `${lesson.id}-p-${word.id}-${phrase.id}-chunk`, kind: 'fill', audioId: phrase.id,
+            prompt: `补全这句身份表达：\n${phrase.zh}`, parts: [phrase.en.slice(0, article), phrase.en.slice(article + 1)], blanks: [['a']],
+            explanation: `${phrase.en} 表示“${phrase.zh}”。单数身份表达保留冠词。`, knowledgeIds: [word.id], prerequisiteIds: [phrase.id],
+            ability: 'context', learningDifficulty: 'context', learningSignature: `${word.id}:${phrase.id}:chunk`, learningContext: `chunk:${word.chunk}`,
+          });
+          return gaps;
+        })), ...pairVariants(lesson, taught),
+        ...exercises.filter(task => task.kind === 'speak' && task.readAloud?.length).flatMap(task => (['partial', 'hidden'] as const).map(speechSupport => ({
+          ...task, id: `${task.id}-${speechSupport}`, speechSupport, prompt: speechSupport === 'partial' ? '听示范，补全遮住的词并说出整句。' : '听示范后，试着复述整句。',
+          learningSignature: `${task.learningSignature}:${speechSupport}`,
+        })))],
     };
   }),
 }));

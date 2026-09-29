@@ -1,3 +1,4 @@
+import { correctDraft } from './helpers/course-answer.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { planAdaptiveSession, resolveAdaptiveLesson, beginAdaptiveLearning, recordAdaptiveAnswer, advanceAdaptiveSession, hasAdaptiveContent } from '../src/adaptiveLearning.ts';
@@ -29,24 +30,7 @@ function start(progress = createDailyProgress(), catalog = lessons, value = 0.37
 function currentTask(progress, catalog = lessons) {
   return resolveAdaptiveLesson(progress.session, catalog).exercises.find(task => task.id === progress.session.queue[progress.session.index].exerciseId);
 }
-function correctDraft(task) {
-  if (task.kind === 'order') {
-    const remaining = task.options.map((value, index) => ({ value, index }));
-    const desired = task.answers[0];
-    const ordered = [];
-    let tail = desired;
-    while (remaining.length) {
-      const index = remaining.findIndex(item => tail === item.value || tail.startsWith(`${item.value} `));
-      assert.notEqual(index, -1, `Cannot order ${task.id}`);
-      const [item] = remaining.splice(index, 1); ordered.push(item.index); tail = tail.slice(item.value.length).trimStart();
-    }
-    return { order: ordered };
-  }
-  if (task.kind === 'fill') return { blanks: task.blanks.map(values => values[0]) };
-  if (task.kind === 'write') return { text: task.answers[0] };
-  if (task.kind === 'speak') return { text: task.sample, checks: task.checks.map(() => true) };
-  return { choice: task.answers[0] };
-}
+
 function answer(progress, catalog = lessons, failed = false, time = NOW) {
   const task = currentTask(progress, catalog);
   let next = { ...progress, session: updateDailyDraft(progress.session, correctDraft(task)) };

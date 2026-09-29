@@ -1,0 +1,742 @@
+{
+  "date": "2026-09-24",
+  "status": "not-accepted-for-production-grading",
+  "input": "Existing public course TTS MP3 files, not learner recordings",
+  "referenceAudioSimilarityUsed": false,
+  "expectedPhonesFedToDecoder": false,
+  "learnerAccentValidation": false,
+  "firstModel": {
+    "source": "https://huggingface.co/asingingbird/buddy-pronunciation-onnx",
+    "revision": "bbc37113ff91fdda6b2b1a79f44fbb78bdc4c588",
+    "file": "en/v1/model.int8.onnx",
+    "sha256": "616794bd723a99e00ed9d1ce5360e7fad9bf66a539ff2d843d4a58c0e5125e70",
+    "decision": "Rejected: same predicted phones for think and sink; combined ASR pass statuses below are feasibility outputs, not acceptance results",
+    "results": [
+      {
+        "case": "aria-hello",
+        "expected": "passed",
+        "assessment": {
+          "version": 1,
+          "status": "passed",
+          "reference": "Hello!",
+          "transcript": "Hello",
+          "words": [
+            {
+              "word": "Hello",
+              "expected": "h ɛ l oʊ",
+              "status": "passed",
+              "sounds": []
+            }
+          ],
+          "heard": [
+            {
+              "phone": "HH",
+              "confidence": 0.9845,
+              "start": 0.243,
+              "end": 0.263
+            },
+            {
+              "phone": "EH",
+              "confidence": 0.3847,
+              "start": 0.263,
+              "end": 0.284
+            },
+            {
+              "phone": "L",
+              "confidence": 0.9829,
+              "start": 0.385,
+              "end": 0.405
+            },
+            {
+              "phone": "OW",
+              "confidence": 0.9141,
+              "start": 0.405,
+              "end": 0.425
+            }
+          ],
+          "recognizedWordsMatch": true,
+          "phonemesMatch": true,
+          "elapsedMs": 6797,
+          "audioSaved": false
+        }
+      },
+      {
+        "case": "guy-goodbye",
+        "expected": "passed",
+        "assessment": {
+          "version": 1,
+          "status": "passed",
+          "reference": "Goodbye!",
+          "transcript": "Goodbye.",
+          "words": [
+            {
+              "word": "Goodbye",
+              "expected": "ɡ ʊ d b aɪ",
+              "status": "passed",
+              "sounds": []
+            }
+          ],
+          "heard": [
+            {
+              "phone": "G",
+              "confidence": 0.9344,
+              "start": 0.202,
+              "end": 0.242
+            },
+            {
+              "phone": "UH",
+              "confidence": 0.9392,
+              "start": 0.242,
+              "end": 0.263
+            },
+            {
+              "phone": "D",
+              "confidence": 0.8345,
+              "start": 0.283,
+              "end": 0.323
+            },
+            {
+              "phone": "B",
+              "confidence": 0.9773,
+              "start": 0.404,
+              "end": 0.424
+            },
+            {
+              "phone": "AY",
+              "confidence": 0.9616,
+              "start": 0.424,
+              "end": 0.444
+            }
+          ],
+          "recognizedWordsMatch": true,
+          "phonemesMatch": true,
+          "elapsedMs": 6969,
+          "audioSaved": false
+        }
+      },
+      {
+        "case": "aria-goodbye",
+        "expected": "passed",
+        "assessment": {
+          "version": 1,
+          "status": "passed",
+          "reference": "Goodbye!",
+          "transcript": "Goodbye.",
+          "words": [
+            {
+              "word": "Goodbye",
+              "expected": "ɡ ʊ d b aɪ",
+              "status": "passed",
+              "sounds": []
+            }
+          ],
+          "heard": [
+            {
+              "phone": "G",
+              "confidence": 0.9805,
+              "start": 0.201,
+              "end": 0.221
+            },
+            {
+              "phone": "UH",
+              "confidence": 0.9314,
+              "start": 0.221,
+              "end": 0.241
+            },
+            {
+              "phone": "D",
+              "confidence": 0.9558,
+              "start": 0.281,
+              "end": 0.322
+            },
+            {
+              "phone": "B",
+              "confidence": 0.9761,
+              "start": 0.382,
+              "end": 0.402
+            },
+            {
+              "phone": "AY",
+              "confidence": 0.961,
+              "start": 0.402,
+              "end": 0.422
+            }
+          ],
+          "recognizedWordsMatch": true,
+          "phonemesMatch": true,
+          "elapsedMs": 7000,
+          "audioSaved": false
+        }
+      },
+      {
+        "case": "think-correct",
+        "expected": "passed",
+        "assessment": {
+          "version": 1,
+          "status": "passed",
+          "reference": "think",
+          "transcript": "Think.",
+          "words": [
+            {
+              "word": "think",
+              "expected": "θ ɪ ŋ k",
+              "status": "uncertain",
+              "sounds": [
+                {
+                  "expected": "ɪ",
+                  "heard": "æ",
+                  "confidence": 0.9679,
+                  "status": "uncertain"
+                }
+              ]
+            }
+          ],
+          "heard": [
+            {
+              "phone": "TH",
+              "confidence": 0.8975,
+              "start": 0.241,
+              "end": 0.261
+            },
+            {
+              "phone": "AE",
+              "confidence": 0.9679,
+              "start": 0.261,
+              "end": 0.282
+            },
+            {
+              "phone": "NG",
+              "confidence": 0.8702,
+              "start": 0.382,
+              "end": 0.422
+            },
+            {
+              "phone": "K",
+              "confidence": 0.9887,
+              "start": 0.543,
+              "end": 0.563
+            }
+          ],
+          "recognizedWordsMatch": true,
+          "phonemesMatch": false,
+          "elapsedMs": 7656,
+          "audioSaved": false
+        }
+      },
+      {
+        "case": "sink-for-think",
+        "expected": "practice",
+        "assessment": {
+          "version": 1,
+          "status": "practice",
+          "reference": "think",
+          "transcript": "Sink",
+          "words": [
+            {
+              "word": "think",
+              "expected": "θ ɪ ŋ k",
+              "status": "practice",
+              "sounds": [
+                {
+                  "expected": "ɪ",
+                  "heard": "æ",
+                  "confidence": 0.9698,
+                  "status": "practice"
+                }
+              ]
+            }
+          ],
+          "heard": [
+            {
+              "phone": "TH",
+              "confidence": 0.9046,
+              "start": 0.362,
+              "end": 0.382
+            },
+            {
+              "phone": "AE",
+              "confidence": 0.9698,
+              "start": 0.382,
+              "end": 0.402
+            },
+            {
+              "phone": "NG",
+              "confidence": 0.9453,
+              "start": 0.502,
+              "end": 0.543
+            },
+            {
+              "phone": "K",
+              "confidence": 0.9467,
+              "start": 0.663,
+              "end": 0.704
+            }
+          ],
+          "recognizedWordsMatch": false,
+          "phonemesMatch": false,
+          "elapsedMs": 6797,
+          "audioSaved": false
+        }
+      },
+      {
+        "case": "sheep-for-ship",
+        "expected": "practice",
+        "assessment": {
+          "version": 1,
+          "status": "practice",
+          "reference": "ship",
+          "transcript": "sheep",
+          "words": [
+            {
+              "word": "ship",
+              "expected": "ʃ ɪ p",
+              "status": "practice",
+              "sounds": [
+                {
+                  "expected": "ɪ",
+                  "heard": "iː",
+                  "confidence": 0.9222,
+                  "status": "practice"
+                }
+              ]
+            }
+          ],
+          "heard": [
+            {
+              "phone": "SH",
+              "confidence": 0.9277,
+              "start": 0.363,
+              "end": 0.383
+            },
+            {
+              "phone": "IY",
+              "confidence": 0.9222,
+              "start": 0.383,
+              "end": 0.403
+            },
+            {
+              "phone": "P",
+              "confidence": 0.9793,
+              "start": 0.685,
+              "end": 0.705
+            }
+          ],
+          "recognizedWordsMatch": false,
+          "phonemesMatch": false,
+          "elapsedMs": 6203,
+          "audioSaved": false
+        }
+      },
+      {
+        "case": "free-for-three",
+        "expected": "practice",
+        "assessment": {
+          "version": 1,
+          "status": "uncertain",
+          "reference": "three",
+          "transcript": "Free.",
+          "words": [
+            {
+              "word": "three",
+              "expected": "θ ɹ iː",
+              "status": "uncertain",
+              "sounds": [
+                {
+                  "expected": "θ",
+                  "heard": "f",
+                  "confidence": 0.799,
+                  "status": "uncertain"
+                }
+              ]
+            }
+          ],
+          "heard": [
+            {
+              "phone": "F",
+              "confidence": 0.799,
+              "start": 0.342,
+              "end": 0.382
+            },
+            {
+              "phone": "R",
+              "confidence": 0.7488,
+              "start": 0.402,
+              "end": 0.442
+            },
+            {
+              "phone": "IY",
+              "confidence": 0.9626,
+              "start": 0.442,
+              "end": 0.462
+            }
+          ],
+          "recognizedWordsMatch": false,
+          "phonemesMatch": false,
+          "elapsedMs": 6203,
+          "audioSaved": false
+        }
+      },
+      {
+        "case": "long-introduction",
+        "expected": "passed",
+        "assessment": {
+          "version": 1,
+          "status": "passed",
+          "reference": "Hi! My name is Ben. Are you Mia?",
+          "transcript": "Hi. My name is Ben. Are you Mia?",
+          "words": [
+            {
+              "word": "Hi",
+              "expected": "h aɪ",
+              "status": "passed",
+              "sounds": []
+            },
+            {
+              "word": "My",
+              "expected": "m aɪ",
+              "status": "passed",
+              "sounds": []
+            },
+            {
+              "word": "name",
+              "expected": "n eɪ m",
+              "status": "passed",
+              "sounds": []
+            },
+            {
+              "word": "is",
+              "expected": "ɪ z",
+              "status": "passed",
+              "sounds": []
+            },
+            {
+              "word": "Ben",
+              "expected": "b ɛ n",
+              "status": "passed",
+              "sounds": []
+            },
+            {
+              "word": "Are",
+              "expected": "ɑ ɹ",
+              "status": "uncertain",
+              "sounds": [
+                {
+                  "expected": "ɹ",
+                  "heard": null,
+                  "confidence": 0,
+                  "status": "uncertain"
+                }
+              ]
+            },
+            {
+              "word": "you",
+              "expected": "j uː",
+              "status": "passed",
+              "sounds": []
+            },
+            {
+              "word": "Mia",
+              "expected": "m iː ə",
+              "status": "uncertain",
+              "sounds": [
+                {
+                  "expected": "iː",
+                  "heard": null,
+                  "confidence": 0,
+                  "status": "uncertain"
+                },
+                {
+                  "expected": "ə",
+                  "heard": "ɪ",
+                  "confidence": 0.3489,
+                  "status": "uncertain"
+                }
+              ]
+            }
+          ],
+          "heard": [
+            {
+              "phone": "HH",
+              "confidence": 0.9862,
+              "start": 0.261,
+              "end": 0.281
+            },
+            {
+              "phone": "AY",
+              "confidence": 0.9129,
+              "start": 0.281,
+              "end": 0.301
+            },
+            {
+              "phone": "M",
+              "confidence": 0.8947,
+              "start": 1.687,
+              "end": 1.727
+            },
+            {
+              "phone": "AY",
+              "confidence": 0.9761,
+              "start": 1.727,
+              "end": 1.747
+            },
+            {
+              "phone": "N",
+              "confidence": 0.9566,
+              "start": 1.867,
+              "end": 1.908
+            },
+            {
+              "phone": "EY",
+              "confidence": 0.8681,
+              "start": 1.908,
+              "end": 1.928
+            },
+            {
+              "phone": "M",
+              "confidence": 0.8355,
+              "start": 2.048,
+              "end": 2.088
+            },
+            {
+              "phone": "IH",
+              "confidence": 0.9824,
+              "start": 2.088,
+              "end": 2.108
+            },
+            {
+              "phone": "Z",
+              "confidence": 0.9775,
+              "start": 2.169,
+              "end": 2.189
+            },
+            {
+              "phone": "B",
+              "confidence": 0.9437,
+              "start": 2.269,
+              "end": 2.289
+            },
+            {
+              "phone": "EH",
+              "confidence": 0.8308,
+              "start": 2.289,
+              "end": 2.309
+            },
+            {
+              "phone": "N",
+              "confidence": 0.9329,
+              "start": 2.47,
+              "end": 2.51
+            },
+            {
+              "phone": "AA",
+              "confidence": 0.6954,
+              "start": 3.594,
+              "end": 3.614
+            },
+            {
+              "phone": "Y",
+              "confidence": 0.9728,
+              "start": 3.735,
+              "end": 3.755
+            },
+            {
+              "phone": "UW",
+              "confidence": 0.8547,
+              "start": 3.755,
+              "end": 3.775
+            },
+            {
+              "phone": "M",
+              "confidence": 0.7686,
+              "start": 3.875,
+              "end": 3.916
+            },
+            {
+              "phone": "IH",
+              "confidence": 0.3489,
+              "start": 3.916,
+              "end": 3.936
+            }
+          ],
+          "recognizedWordsMatch": true,
+          "phonemesMatch": false,
+          "elapsedMs": 6922,
+          "audioSaved": false
+        }
+      }
+    ]
+  },
+  "secondModel": {
+    "source": "https://huggingface.co/proclivitystudios/vitouphy-wav2vec2-xls-r-300m-timit-phoneme-ONNX",
+    "revision": "88e0ecc4e4a005f34851c7c519371c9d78bf63c7",
+    "file": "onnx/model_quantized.onnx",
+    "sha256": "6e4db638b07c60c9fb9523b32e33f9b251f21449bbce98cc5cfef8148cfea32a",
+    "decision": "Not accepted: detects selected minimal pairs but omits d in both correct Goodbye clips",
+    "exactSequenceMatches": 14,
+    "samples": 16,
+    "results": [
+      {
+        "voice": "aria",
+        "clip": "hello",
+        "expectedVariants": [
+          "h ə l oʊ",
+          "h ɛ l oʊ"
+        ],
+        "phones": "h ə l oʊ",
+        "phonemesMatch": true,
+        "elapsedMs": 204
+      },
+      {
+        "voice": "aria",
+        "clip": "goodbye",
+        "expectedVariants": [
+          "g ʊ d b aɪ"
+        ],
+        "phones": "g ʊ b aɪ",
+        "phonemesMatch": false,
+        "elapsedMs": 203
+      },
+      {
+        "voice": "aria",
+        "clip": "think",
+        "expectedVariants": [
+          "θ ɪ ŋ k"
+        ],
+        "phones": "θ ɪ ŋ k",
+        "phonemesMatch": true,
+        "elapsedMs": 187
+      },
+      {
+        "voice": "aria",
+        "clip": "sink",
+        "expectedVariants": [
+          "s ɪ ŋ k"
+        ],
+        "phones": "s ɪ ŋ k",
+        "phonemesMatch": true,
+        "elapsedMs": 219
+      },
+      {
+        "voice": "aria",
+        "clip": "ship",
+        "expectedVariants": [
+          "ʃ ɪ p"
+        ],
+        "phones": "ʃ ɪ p",
+        "phonemesMatch": true,
+        "elapsedMs": 187
+      },
+      {
+        "voice": "aria",
+        "clip": "sheep",
+        "expectedVariants": [
+          "ʃ i p"
+        ],
+        "phones": "ʃ i p",
+        "phonemesMatch": true,
+        "elapsedMs": 219
+      },
+      {
+        "voice": "aria",
+        "clip": "three",
+        "expectedVariants": [
+          "θ ɹ i"
+        ],
+        "phones": "θ ɹ i",
+        "phonemesMatch": true,
+        "elapsedMs": 203
+      },
+      {
+        "voice": "aria",
+        "clip": "free",
+        "expectedVariants": [
+          "f ɹ i"
+        ],
+        "phones": "f ɹ i",
+        "phonemesMatch": true,
+        "elapsedMs": 187
+      },
+      {
+        "voice": "guy",
+        "clip": "hello",
+        "expectedVariants": [
+          "h ə l oʊ",
+          "h ɛ l oʊ"
+        ],
+        "phones": "h ɛ l oʊ",
+        "phonemesMatch": true,
+        "elapsedMs": 203
+      },
+      {
+        "voice": "guy",
+        "clip": "goodbye",
+        "expectedVariants": [
+          "g ʊ d b aɪ"
+        ],
+        "phones": "g ʊ b aɪ",
+        "phonemesMatch": false,
+        "elapsedMs": 203
+      },
+      {
+        "voice": "guy",
+        "clip": "think",
+        "expectedVariants": [
+          "θ ɪ ŋ k"
+        ],
+        "phones": "θ ɪ ŋ k",
+        "phonemesMatch": true,
+        "elapsedMs": 203
+      },
+      {
+        "voice": "guy",
+        "clip": "sink",
+        "expectedVariants": [
+          "s ɪ ŋ k"
+        ],
+        "phones": "s ɪ ŋ k",
+        "phonemesMatch": true,
+        "elapsedMs": 204
+      },
+      {
+        "voice": "guy",
+        "clip": "ship",
+        "expectedVariants": [
+          "ʃ ɪ p"
+        ],
+        "phones": "ʃ ɪ p",
+        "phonemesMatch": true,
+        "elapsedMs": 203
+      },
+      {
+        "voice": "guy",
+        "clip": "sheep",
+        "expectedVariants": [
+          "ʃ i p"
+        ],
+        "phones": "ʃ i p",
+        "phonemesMatch": true,
+        "elapsedMs": 187
+      },
+      {
+        "voice": "guy",
+        "clip": "three",
+        "expectedVariants": [
+          "θ ɹ i"
+        ],
+        "phones": "θ ɹ i",
+        "phonemesMatch": true,
+        "elapsedMs": 203
+      },
+      {
+        "voice": "guy",
+        "clip": "free",
+        "expectedVariants": [
+          "f ɹ i"
+        ],
+        "phones": "f ɹ i",
+        "phonemesMatch": true,
+        "elapsedMs": 203
+      }
+    ]
+  }
+}

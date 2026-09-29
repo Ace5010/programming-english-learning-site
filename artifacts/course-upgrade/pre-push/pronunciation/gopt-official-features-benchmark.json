@@ -1,0 +1,22 @@
+{
+  "status": "official-feature-evaluation-only",
+  "sourceRevision": "bed909daf8eca035095871e51642525acc5b9b55",
+  "checkpointSha256": "ab07451e51648f9d2455505a51055b20ac4ad7921d771ccc5170ff486a826259",
+  "datasetZipSha256": "67afce3591f00db674de28e9ad149dd9cd2b89efa7832da8762b02aed33d7146",
+  "torch": "2.14.0+cpu",
+  "nUtterances": 2500,
+  "nScoredPhones": 47369,
+  "phonePcc": 0.6183311747680265,
+  "phoneMse": 0.08347309356191225,
+  "utterancePcc": [
+    0.7178858010453266,
+    0.08689712158237536,
+    0.7561598943573609,
+    0.7647802226814586,
+    0.7437872379216153
+  ],
+  "modelLoadMs": 18.007999984547496,
+  "medianScoreHeadMs": 0.9513500262983143,
+  "p95ScoreHeadMs": 1.5540399588644498,
+  "notComparableToTencentLatency": "Excludes Kaldi acoustic inference, alignment, GOP extraction, and audio loading. No course fixtures assessed; raw-audio path blocked by absent Linux/Kaldi."
+}

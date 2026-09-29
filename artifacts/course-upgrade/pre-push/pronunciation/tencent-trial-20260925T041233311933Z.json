@@ -1,0 +1,1675 @@
+{
+  "status": "completed-public-fixtures-only-not-human-acceptance",
+  "provider": "tencent-soe-new",
+  "evalMode": 4,
+  "scoreCoeff": 1.5,
+  "interfaceIndex": 9,
+  "containsUserRecording": false,
+  "autoRetry": false,
+  "maximumAttempts": 23,
+  "cases": [
+    {
+      "id": "guy-hello-as-hello",
+      "expectedCorrect": true,
+      "status": "received",
+      "result": {
+        "results": [
+          {
+            "SuggestedScore": 0.7198474407196045,
+            "PronAccuracy": 0.7198474407196045,
+            "PronFluency": 0.9346314072608948,
+            "PronCompletion": 1,
+            "Words": [
+              {
+                "MemBeginTime": 300,
+                "MemEndTime": 920,
+                "PronAccuracy": 71.9847412109375,
+                "PronFluency": 0.9346314072608948,
+                "ReferenceWord": "",
+                "Word": "hello",
+                "MatchTag": 0,
+                "PhoneInfos": [
+                  {
+                    "MemBeginTime": 300,
+                    "MemEndTime": 360,
+                    "PronAccuracy": 0.5149319171905518,
+                    "DetectedStress": false,
+                    "Phone": "hh",
+                    "ReferencePhone": "hh",
+                    "ReferenceLetter": "",
+                    "Stress": false,
+                    "MatchTag": 0
+                  },
+                  {
+                    "MemBeginTime": 360,
+                    "MemEndTime": 420,
+                    "PronAccuracy": 0.4088611304759979,
+                    "DetectedStress": false,
+                    "Phone": "ah",
+                    "ReferencePhone": "ah",
+                    "ReferenceLetter": "",
+                    "Stress": false,
+                    "MatchTag": 0
+                  },
+                  {
+                    "MemBeginTime": 420,
+                    "MemEndTime": 500,
+                    "PronAccuracy": 0.9609373807907104,
+                    "DetectedStress": false,
+                    "Phone": "l",
+                    "ReferencePhone": "l",
+                    "ReferenceLetter": "",
+                    "Stress": true,
+                    "MatchTag": 0
+                  },
+                  {
+                    "MemBeginTime": 500,
+                    "MemEndTime": 920,
+                    "PronAccuracy": 0.9946591854095459,
+                    "DetectedStress": false,
+                    "Phone": "ow",
+                    "ReferencePhone": "ow",
+                    "ReferenceLetter": "",
+                    "Stress": false,
+                    "MatchTag": 0
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "automaticPassDecision": null,
+        "timing": {
+          "audioMs": 1536,
+          "connectionSetupMs": 1531,
+          "afterRecordingMs": 605,
+          "totalMs": 3672
+        }
+      }
+    },
+    {
+      "id": "aria-goodbye-as-goodbye",
+      "expectedCorrect": true,
+      "status": "received",
+      "result": {
+        "results": [
+          {
+            "SuggestedScore": 0.9487568736076355,
+            "PronAccuracy": 0.9487568736076355,
+            "PronFluency": 0.9504949450492859,
+            "PronCompletion": 1,
+            "Words": [
+              {
+                "MemBeginTime": 300,
+                "MemEndTime": 980,
+                "PronAccuracy": 94.87568664550781,
+                "PronFluency": 0.9504949450492859,
+                "ReferenceWord": "",
+                "Word": "goodbye",
+                "MatchTag": 0,
+                "PhoneInfos": [
+                  {
+                    "MemBeginTime": 300,
+                    "MemEndTime": 360,
+                    "PronAccuracy": 0.8693757653236389,
+                    "DetectedStress": false,
+                    "Phone": "g",
+                    "ReferencePhone": "g",
+                    "ReferenceLetter": "",
+                    "Stress": false,
+                    "MatchTag": 0
+                  },
+                  {
+                    "MemBeginTime": 360,
+                    "MemEndTime": 420,
+                    "PronAccuracy": 0.9127916693687439,
+                    "DetectedStress": false,
+                    "Phone": "uh",
+                    "ReferencePhone": "uh",
+                    "ReferenceLetter": "",
+                    "Stress": false,
+                    "MatchTag": 0
+                  },
+                  {
+                    "MemBeginTime": 420,
+                    "MemEndTime": 470,
+                    "PronAccuracy": 0.9722990393638611,
+                    "DetectedStress": false,
+                    "Phone": "d",
+                    "ReferencePhone": "d",
+                    "ReferenceLetter": "",
+                    "Stress": false,
+                    "MatchTag": 0
+                  },
+                  {
+                    "MemBeginTime": 470,
+                    "MemEndTime": 540,
+                    "PronAccuracy": 0.9949232935905457,
+                    "DetectedStress": false,
+                    "Phone": "b",
+                    "ReferencePhone": "b",
+                    "ReferenceLetter": "",
+                    "Stress": true,
+                    "MatchTag": 0
+                  },
+                  {
+                    "MemBeginTime": 540,
+                    "MemEndTime": 980,
+                    "PronAccuracy": 0.9943944811820984,
+                    "DetectedStress": false,
+                    "Phone": "ay",
+                    "ReferencePhone": "ay",
+                    "ReferenceLetter": "",
+                    "Stress": false,
+                    "MatchTag": 0
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "automaticPassDecision": null,
+        "timing": {
+          "audioMs": 1608,
+          "connectionSetupMs": 1469,
+          "afterRecordingMs": 595,
+          "totalMs": 3672
+        }
+      }
+    },
+    {
+      "id": "guy-goodbye-as-goodbye",
+      "expectedCorrect": true,
+      "status": "received",
+      "result": {
+        "results": [
+          {
+            "SuggestedScore": 0.992777943611145,
+            "PronAccuracy": 0.992777943611145,
+            "PronFluency": 0.9503098726272583,
+            "PronCompletion": 1,
+            "Words": [
+              {
+                "MemBeginTime": 310,
+                "MemEndTime": 1010,
+                "PronAccuracy": 99.27779388427734,
+                "PronFluency": 0.9503098726272583,
+                "ReferenceWord": "",
+                "Word": "goodbye",
+                "MatchTag": 0,
+                "PhoneInfos": [
+                  {
+                    "MemBeginTime": 310,
+                    "MemEndTime": 380,
+                    "PronAccuracy": 0.9874201416969299,
+                    "DetectedStress": false,
+                    "Phone": "g",
+                    "ReferencePhone": "g",
+                    "ReferenceLetter": "",
+                    "Stress": false,
+                    "MatchTag": 0
+                  },
+                  {
+                    "MemBeginTime": 380,
+                    "MemEndTime": 430,
+                    "PronAccuracy": 0.9935137629508972,
+                    "DetectedStress": false,
+                    "Phone": "uh",
+                    "ReferencePhone": "uh",
+                    "ReferenceLetter": "",
+                    "Stress": false,
+                    "MatchTag": 0
+                  },
+                  {
+                    "MemBeginTime": 430,
+                    "MemEndTime": 490,
+                    "PronAccuracy": 0.9932229518890381,
+                    "DetectedStress": false,
+                    "Phone": "d",
+                    "ReferencePhone": "d",
+                    "ReferenceLetter": "",
+                    "Stress": false,
+                    "MatchTag": 0
+                  },
+                  {
+                    "MemBeginTime": 490,
+                    "MemEndTime": 550,
+                    "PronAccuracy": 0.9952966570854187,
+                    "DetectedStress": false,
+                    "Phone": "b",
+                    "ReferencePhone": "b",
+                    "ReferenceLetter": "",
+                    "Stress": true,
+                    "MatchTag": 0
+                  },
+                  {
+                    "MemBeginTime": 550,
+                    "MemEndTime": 1010,
+                    "PronAccuracy": 0.9944362044334412,
+                    "DetectedStress": false,
+                    "Phone": "ay",
+                    "ReferencePhone": "ay",
+                    "ReferenceLetter": "",
+                    "Stress": false,
+                    "MatchTag": 0
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "automaticPassDecision": null,
+        "timing": {
+          "audioMs": 1656,
+          "connectionSetupMs": 1500,
+          "afterRecordingMs": 579,
+          "totalMs": 3735
+        }
+      }
+    },
+    {
+      "id": "aria-think-as-think",
+      "expectedCorrect": true,
+      "status": "received",
+      "result": {
+        "results": [
+          {
+            "SuggestedScore": 0.9916459918022156,
+            "PronAccuracy": 0.9916459918022156,
+            "PronFluency": 0.8987787961959839,
+            "PronCompletion": 1,
+            "Words": [
+              {
+                "MemBeginTime": 290,
+                "MemEndTime": 940,
+                "PronAccuracy": 99.16459655761719,
+                "PronFluency": 0.8987787961959839,
+                "ReferenceWord": "",
+                "Word": "think",
+                "MatchTag": 0,
+                "PhoneInfos": [
+                  {
+                    "MemBeginTime": 290,
+                    "MemEndTime": 370,
+                    "PronAccuracy": 0.9885017275810242,
+                    "DetectedStress": false,
+                    "Phone": "th",
+                    "ReferencePhone": "th",
+                    "ReferenceLetter": "",
+                    "Stress": false,
+                    "MatchTag": 0
+                  },
+                  {
+                    "MemBeginTime": 370,
+                    "MemEndTime": 470,
+                    "PronAccuracy": 0.9929813146591187,
+                    "DetectedStress": false,
+                    "Phone": "ih",
+                    "ReferencePhone": "ih",
+                    "ReferenceLetter": "",
+                    "Stress": false,
+                    "MatchTag": 0
+                  },
+                  {
+                    "MemBeginTime": 470,
+                    "MemEndTime": 590,
+                    "PronAccuracy": 0.9923228621482849,
+                    "DetectedStress": false,
+                    "Phone": "ng",
+                    "ReferencePhone": "ng",
+                    "ReferenceLetter": "",
+                    "Stress": false,
+                    "MatchTag": 0
+                  },
+                  {
+                    "MemBeginTime": 590,
+                    "MemEndTime": 940,
+                    "PronAccuracy": 0.9927780032157898,
+                    "DetectedStress": false,
+                    "Phone": "k",
+                    "ReferencePhone": "k",
+                    "ReferenceLetter": "",
+                    "Stress": false,
+                    "MatchTag": 0
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "automaticPassDecision": null,
+        "timing": {
+          "audioMs": 1488,
+          "connectionSetupMs": 1468,
+          "afterRecordingMs": 606,
+          "totalMs": 3562
+        }
+      }
+    },
+    {
+      "id": "guy-think-as-think",
+      "expectedCorrect": true,
+      "status": "received",
+      "result": {
+        "results": [
+          {
+            "SuggestedScore": 0.9788645505905151,
+            "PronAccuracy": 0.9788645505905151,
+            "PronFluency": 0.8809576034545898,
+            "PronCompletion": 1,
+            "Words": [
+              {
+                "MemBeginTime": 320,
+                "MemEndTime": 1040,
+                "PronAccuracy": 97.8864517211914,
+                "PronFluency": 0.8809576034545898,
+                "ReferenceWord": "",
+                "Word": "think",
+                "MatchTag": 0,
+                "PhoneInfos": [
+                  {
+                    "MemBeginTime": 320,
+                    "MemEndTime": 480,
+                    "PronAccuracy": 0.9380937218666077,
+                    "DetectedStress": false,
+                    "Phone": "th",
+                    "ReferencePhone": "th",
+                    "ReferenceLetter": "",
+                    "Stress": false,
+                    "MatchTag": 0
+                  },
+                  {
+                    "MemBeginTime": 480,
+                    "MemEndTime": 620,
+                    "PronAccuracy": 0.9907352328300476,
+                    "DetectedStress": false,
+                    "Phone": "ih",
+                    "ReferencePhone": "ih",
+                    "ReferenceLetter": "",
+                    "Stress": false,
+                    "MatchTag": 0
+                  },
+                  {
+                    "MemBeginTime": 620,
+                    "MemEndTime": 700,
+                    "PronAccuracy": 0.9938247203826904,
+                    "DetectedStress": false,
+                    "Phone": "ng",
+                    "ReferencePhone": "ng",
+                    "ReferenceLetter": "",
+                    "Stress": false,
+                    "MatchTag": 0
+                  },
+                  {
+                    "MemBeginTime": 700,
+                    "MemEndTime": 1040,
+                    "PronAccuracy": 0.9928045272827148,
+                    "DetectedStress": false,
+                    "Phone": "k",
+                    "ReferencePhone": "k",
+                    "ReferenceLetter": "",
+                    "Stress": false,
+                    "MatchTag": 0
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "automaticPassDecision": null,
+        "timing": {
+          "audioMs": 1584,
+          "connectionSetupMs": 1453,
+          "afterRecordingMs": 619,
+          "totalMs": 3656
+        }
+      }
+    },
+    {
+      "id": "aria-ship-as-ship",
+      "expectedCorrect": true,
+      "status": "received",
+      "result": {
+        "results": [
+          {
+            "SuggestedScore": 0.9923691153526306,
+            "PronAccuracy": 0.9923691153526306,
+            "PronFluency": 0.7999647259712219,
+            "PronCompletion": 1,
+            "Words": [
+              {
+                "MemBeginTime": 280,
+                "MemEndTime": 1060,
+                "PronAccuracy": 99.23690795898438,
+                "PronFluency": 0.7999647259712219,
+                "ReferenceWord": "",
+                "Word": "ship",
+                "MatchTag": 0,
+                "PhoneInfos": [
+                  {
+                    "MemBeginTime": 280,
+                    "MemEndTime": 480,
+                    "PronAccuracy": 0.990766704082489,
+                    "DetectedStress": false,
+                    "Phone": "sh",
+                    "ReferencePhone": "sh",
+                    "ReferenceLetter": "",
+                    "Stress": false,
+                    "MatchTag": 0
+                  },
+                  {
+                    "MemBeginTime": 480,
+                    "MemEndTime": 680,
+                    "PronAccuracy": 0.9946033954620361,
+                    "DetectedStress": false,
+                    "Phone": "ih",
+                    "ReferencePhone": "ih",
+                    "ReferenceLetter": "",
+                    "Stress": false,
+                    "MatchTag": 0
+                  },
+                  {
+                    "MemBeginTime": 680,
+                    "MemEndTime": 1060,
+                    "PronAccuracy": 0.9917371869087219,
+                    "DetectedStress": false,
+                    "Phone": "p",
+                    "ReferencePhone": "p",
+                    "ReferenceLetter": "",
+                    "Stress": false,
+                    "MatchTag": 0
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "automaticPassDecision": null,
+        "timing": {
+          "audioMs": 1608,
+          "connectionSetupMs": 1485,
+          "afterRecordingMs": 595,
+          "totalMs": 3688
+        }
+      }
+    },
+    {
+      "id": "guy-ship-as-ship",
+      "expectedCorrect": true,
+      "status": "received",
+      "result": {
+        "results": [
+          {
+            "SuggestedScore": 0.9926288723945618,
+            "PronAccuracy": 0.9926288723945618,
+            "PronFluency": 0.853199303150177,
+            "PronCompletion": 1,
+            "Words": [
+              {
+                "MemBeginTime": 320,
+                "MemEndTime": 950,
+                "PronAccuracy": 99.26288604736328,
+                "PronFluency": 0.853199303150177,
+                "ReferenceWord": "",
+                "Word": "ship",
+                "MatchTag": 0,
+                "PhoneInfos": [
+                  {
+                    "MemBeginTime": 320,
+                    "MemEndTime": 480,
+                    "PronAccuracy": 0.9919154644012451,
+                    "DetectedStress": false,
+                    "Phone": "sh",
+                    "ReferencePhone": "sh",
+                    "ReferenceLetter": "",
+                    "Stress": false,
+                    "MatchTag": 0
+                  },
+                  {
+                    "MemBeginTime": 480,
+                    "MemEndTime": 620,
+                    "PronAccuracy": 0.9945392608642578,
+                    "DetectedStress": false,
+                    "Phone": "ih",
+                    "ReferencePhone": "ih",
+                    "ReferenceLetter": "",
+                    "Stress": false,
+                    "MatchTag": 0
+                  },
+                  {
+                    "MemBeginTime": 620,
+                    "MemEndTime": 950,
+                    "PronAccuracy": 0.9914318919181824,
+                    "DetectedStress": false,
+                    "Phone": "p",
+                    "ReferencePhone": "p",
+                    "ReferenceLetter": "",
+                    "Stress": false,
+                    "MatchTag": 0
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "automaticPassDecision": null,
+        "timing": {
+          "audioMs": 1488,
+          "connectionSetupMs": 1453,
+          "afterRecordingMs": 574,
+          "totalMs": 3515
+        }
+      }
+    },
+    {
+      "id": "aria-three-as-three",
+      "expectedCorrect": true,
+      "status": "received",
+      "result": {
+        "results": [
+          {
+            "SuggestedScore": 0.9934897422790527,
+            "PronAccuracy": 0.9934897422790527,
+            "PronFluency": 0.8714013695716858,
+            "PronCompletion": 1,
+            "Words": [
+              {
+                "MemBeginTime": 290,
+                "MemEndTime": 910,
+                "PronAccuracy": 99.3489761352539,
+                "PronFluency": 0.8714013695716858,
+                "ReferenceWord": "",
+                "Word": "three",
+                "MatchTag": 0,
+                "PhoneInfos": [
+                  {
+                    "MemBeginTime": 290,
+                    "MemEndTime": 370,
+                    "PronAccuracy": 0.9909804463386536,
+                    "DetectedStress": false,
+                    "Phone": "th",
+                    "ReferencePhone": "th",
+                    "ReferenceLetter": "",
+                    "Stress": false,
+                    "MatchTag": 0
+                  },
+                  {
+                    "MemBeginTime": 370,
+                    "MemEndTime": 510,
+                    "PronAccuracy": 0.9946314096450806,
+                    "DetectedStress": false,
+                    "Phone": "r",
+                    "ReferencePhone": "r",
+                    "ReferenceLetter": "",
+                    "Stress": false,
+                    "MatchTag": 0
+                  },
+                  {
+                    "MemBeginTime": 510,
+                    "MemEndTime": 910,
+                    "PronAccuracy": 0.9948572516441345,
+                    "DetectedStress": false,
+                    "Phone": "iy",
+                    "ReferencePhone": "iy",
+                    "ReferenceLetter": "",
+                    "Stress": false,
+                    "MatchTag": 0
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "automaticPassDecision": null,
+        "timing": {
+          "audioMs": 1536,
+          "connectionSetupMs": 1515,
+          "afterRecordingMs": 574,
+          "totalMs": 3625
+        }
+      }
+    },
+    {
+      "id": "guy-three-as-three",
+      "expectedCorrect": true,
+      "status": "received",
+      "result": {
+        "results": [
+          {
+            "SuggestedScore": 0.9932181239128113,
+            "PronAccuracy": 0.9932181239128113,
+            "PronFluency": 0.8325238823890686,
+            "PronCompletion": 1,
+            "Words": [
+              {
+                "MemBeginTime": 280,
+                "MemEndTime": 1020,
+                "PronAccuracy": 99.32181549072266,
+                "PronFluency": 0.8325238823890686,
+                "ReferenceWord": "",
+                "Word": "three",
+                "MatchTag": 0,
+                "PhoneInfos": [
+                  {
+                    "MemBeginTime": 280,
+                    "MemEndTime": 480,
+                    "PronAccuracy": 0.9896140694618225,
+                    "DetectedStress": false,
+                    "Phone": "th",
+                    "ReferencePhone": "th",
+                    "ReferenceLetter": "",
+                    "Stress": false,
+                    "MatchTag": 0
+                  },
+                  {
+                    "MemBeginTime": 480,
+                    "MemEndTime": 640,
+                    "PronAccuracy": 0.9952486753463745,
+                    "DetectedStress": false,
+                    "Phone": "r",
+                    "ReferencePhone": "r",
+                    "ReferenceLetter": "",
+                    "Stress": false,
+                    "MatchTag": 0
+                  },
+                  {
+                    "MemBeginTime": 640,
+                    "MemEndTime": 1020,
+                    "PronAccuracy": 0.9947914481163025,
+                    "DetectedStress": false,
+                    "Phone": "iy",
+                    "ReferencePhone": "iy",
+                    "ReferenceLetter": "",
+                    "Stress": false,
+                    "MatchTag": 0
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "automaticPassDecision": null,
+        "timing": {
+          "audioMs": 1656,
+          "connectionSetupMs": 1468,
+          "afterRecordingMs": 610,
+          "totalMs": 3734
+        }
+      }
+    },
+    {
+      "id": "aria-bad-as-bad",
+      "expectedCorrect": true,
+      "status": "received",
+      "result": {
+        "results": [
+          {
+            "SuggestedScore": 0.9865164756774902,
+            "PronAccuracy": 0.9865164756774902,
+            "PronFluency": 0.8465590476989746,
+            "PronCompletion": 1,
+            "Words": [
+              {
+                "MemBeginTime": 300,
+                "MemEndTime": 900,
+                "PronAccuracy": 98.65164947509766,
+                "PronFluency": 0.8465590476989746,
+                "ReferenceWord": "",
+                "Word": "bad",
+                "MatchTag": 0,
+                "PhoneInfos": [
+                  {
+                    "MemBeginTime": 300,
+                    "MemEndTime": 380,
+                    "PronAccuracy": 0.9800148606300354,
+                    "DetectedStress": false,
+                    "Phone": "b",
+                    "ReferencePhone": "b",
+                    "ReferenceLetter": "",
+                    "Stress": false,
+                    "MatchTag": 0
+                  },
+                  {
+                    "MemBeginTime": 380,
+                    "MemEndTime": 620,
+                    "PronAccuracy": 0.9904289245605469,
+                    "DetectedStress": false,
+                    "Phone": "ae",
+                    "ReferencePhone": "ae",
+                    "ReferenceLetter": "",
+                    "Stress": false,
+                    "MatchTag": 0
+                  },
+                  {
+                    "MemBeginTime": 620,
+                    "MemEndTime": 900,
+                    "PronAccuracy": 0.9891056418418884,
+                    "DetectedStress": false,
+                    "Phone": "d",
+                    "ReferencePhone": "d",
+                    "ReferenceLetter": "",
+                    "Stress": false,
+                    "MatchTag": 0
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "automaticPassDecision": null,
+        "timing": {
+          "audioMs": 1512,
+          "connectionSetupMs": 1656,
+          "afterRecordingMs": 567,
+          "totalMs": 3735
+        }
+      }
+    },
+    {
+      "id": "guy-bad-as-bad",
+      "expectedCorrect": true,
+      "status": "received",
+      "result": {
+        "results": [
+          {
+            "SuggestedScore": 0.9892038702964783,
+            "PronAccuracy": 0.9892038702964783,
+            "PronFluency": 0.7829608917236328,
+            "PronCompletion": 1,
+            "Words": [
+              {
+                "MemBeginTime": 260,
+                "MemEndTime": 990,
+                "PronAccuracy": 98.9203872680664,
+                "PronFluency": 0.7829608917236328,
+                "ReferenceWord": "",
+                "Word": "bad",
+                "MatchTag": 0,
+                "PhoneInfos": [
+                  {
+                    "MemBeginTime": 260,
+                    "MemEndTime": 390,
+                    "PronAccuracy": 0.9897500276565552,
+                    "DetectedStress": false,
+                    "Phone": "b",
+                    "ReferencePhone": "b",
+                    "ReferenceLetter": "",
+                    "Stress": false,
+                    "MatchTag": 0
+                  },
+                  {
+                    "MemBeginTime": 390,
+                    "MemEndTime": 620,
+                    "PronAccuracy": 0.9874206781387329,
+                    "DetectedStress": false,
+                    "Phone": "ae",
+                    "ReferencePhone": "ae",
+                    "ReferenceLetter": "",
+                    "Stress": false,
+                    "MatchTag": 0
+                  },
+                  {
+                    "MemBeginTime": 620,
+                    "MemEndTime": 990,
+                    "PronAccuracy": 0.9904407858848572,
+                    "DetectedStress": false,
+                    "Phone": "d",
+                    "ReferencePhone": "d",
+                    "ReferenceLetter": "",
+                    "Stress": false,
+                    "MatchTag": 0
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "automaticPassDecision": null,
+        "timing": {
+          "audioMs": 1512,
+          "connectionSetupMs": 1454,
+          "afterRecordingMs": 613,
+          "totalMs": 3579
+        }
+      }
+    },
+    {
+      "id": "aria-right-as-right",
+      "expectedCorrect": true,
+      "status": "received",
+      "result": {
+        "results": [
+          {
+            "SuggestedScore": 0.9938724637031555,
+            "PronAccuracy": 0.9938724637031555,
+            "PronFluency": 0.8444221615791321,
+            "PronCompletion": 1,
+            "Words": [
+              {
+                "MemBeginTime": 290,
+                "MemEndTime": 990,
+                "PronAccuracy": 99.38724517822266,
+                "PronFluency": 0.8444221615791321,
+                "ReferenceWord": "",
+                "Word": "right",
+                "MatchTag": 0,
+                "PhoneInfos": [
+                  {
+                    "MemBeginTime": 290,
+                    "MemEndTime": 450,
+                    "PronAccuracy": 0.9934687614440918,
+                    "DetectedStress": false,
+                    "Phone": "r",
+                    "ReferencePhone": "r",
+                    "ReferenceLetter": "",
+                    "Stress": false,
+                    "MatchTag": 0
+                  },
+                  {
+                    "MemBeginTime": 450,
+                    "MemEndTime": 650,
+                    "PronAccuracy": 0.9952564239501953,
+                    "DetectedStress": false,
+                    "Phone": "ay",
+                    "ReferencePhone": "ay",
+                    "ReferenceLetter": "",
+                    "Stress": false,
+                    "MatchTag": 0
+                  },
+                  {
+                    "MemBeginTime": 650,
+                    "MemEndTime": 990,
+                    "PronAccuracy": 0.9928922653198242,
+                    "DetectedStress": false,
+                    "Phone": "t",
+                    "ReferencePhone": "t",
+                    "ReferenceLetter": "",
+                    "Stress": false,
+                    "MatchTag": 0
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "automaticPassDecision": null,
+        "timing": {
+          "audioMs": 1536,
+          "connectionSetupMs": 1469,
+          "afterRecordingMs": 573,
+          "totalMs": 3578
+        }
+      }
+    },
+    {
+      "id": "guy-right-as-right",
+      "expectedCorrect": true,
+      "status": "received",
+      "result": {
+        "results": [
+          {
+            "SuggestedScore": 0.9936431050300598,
+            "PronAccuracy": 0.9936431050300598,
+            "PronFluency": 0.8428975939750671,
+            "PronCompletion": 1,
+            "Words": [
+              {
+                "MemBeginTime": 300,
+                "MemEndTime": 990,
+                "PronAccuracy": 99.36431121826172,
+                "PronFluency": 0.8428975939750671,
+                "ReferenceWord": "",
+                "Word": "right",
+                "MatchTag": 0,
+                "PhoneInfos": [
+                  {
+                    "MemBeginTime": 300,
+                    "MemEndTime": 440,
+                    "PronAccuracy": 0.9922524690628052,
+                    "DetectedStress": false,
+                    "Phone": "r",
+                    "ReferencePhone": "r",
+                    "ReferenceLetter": "",
+                    "Stress": false,
+                    "MatchTag": 0
+                  },
+                  {
+                    "MemBeginTime": 440,
+                    "MemEndTime": 600,
+                    "PronAccuracy": 0.9951944947242737,
+                    "DetectedStress": false,
+                    "Phone": "ay",
+                    "ReferencePhone": "ay",
+                    "ReferenceLetter": "",
+                    "Stress": false,
+                    "MatchTag": 0
+                  },
+                  {
+                    "MemBeginTime": 600,
+                    "MemEndTime": 990,
+                    "PronAccuracy": 0.9934824705123901,
+                    "DetectedStress": false,
+                    "Phone": "t",
+                    "ReferencePhone": "t",
+                    "ReferenceLetter": "",
+                    "Stress": false,
+                    "MatchTag": 0
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "automaticPassDecision": null,
+        "timing": {
+          "audioMs": 1536,
+          "connectionSetupMs": 1500,
+          "afterRecordingMs": 604,
+          "totalMs": 3640
+        }
+      }
+    },
+    {
+      "id": "aria-sink-as-think",
+      "expectedCorrect": false,
+      "status": "received",
+      "result": {
+        "results": [
+          {
+            "SuggestedScore": 0.7673599123954773,
+            "PronAccuracy": 0.7673599123954773,
+            "PronFluency": 0.8744068145751953,
+            "PronCompletion": 1,
+            "Words": [
+              {
+                "MemBeginTime": 300,
+                "MemEndTime": 1060,
+                "PronAccuracy": 76.73599243164062,
+                "PronFluency": 0.8744068145751953,
+                "ReferenceWord": "",
+                "Word": "think",
+                "MatchTag": 0,
+                "PhoneInfos": [
+                  {
+                    "MemBeginTime": 300,
+                    "MemEndTime": 500,
+                    "PronAccuracy": 0.24748945236206055,
+                    "DetectedStress": false,
+                    "Phone": "th",
+                    "ReferencePhone": "th",
+                    "ReferenceLetter": "",
+                    "Stress": false,
+                    "MatchTag": 0
+                  },
+                  {
+                    "MemBeginTime": 500,
+                    "MemEndTime": 580,
+                    "PronAccuracy": 0.8370480537414551,
+                    "DetectedStress": false,
+                    "Phone": "ih",
+                    "ReferencePhone": "ih",
+                    "ReferenceLetter": "",
+                    "Stress": false,
+                    "MatchTag": 0
+                  },
+                  {
+                    "MemBeginTime": 580,
+                    "MemEndTime": 720,
+                    "PronAccuracy": 0.9922298192977905,
+                    "DetectedStress": false,
+                    "Phone": "ng",
+                    "ReferencePhone": "ng",
+                    "ReferenceLetter": "",
+                    "Stress": false,
+                    "MatchTag": 0
+                  },
+                  {
+                    "MemBeginTime": 720,
+                    "MemEndTime": 1060,
+                    "PronAccuracy": 0.9926721453666687,
+                    "DetectedStress": false,
+                    "Phone": "k",
+                    "ReferencePhone": "k",
+                    "ReferenceLetter": "",
+                    "Stress": false,
+                    "MatchTag": 0
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "automaticPassDecision": null,
+        "timing": {
+          "audioMs": 1608,
+          "connectionSetupMs": 1484,
+          "afterRecordingMs": 642,
+          "totalMs": 3734
+        }
+      }
+    },
+    {
+      "id": "guy-sink-as-think",
+      "expectedCorrect": false,
+      "status": "received",
+      "result": {
+        "results": [
+          {
+            "SuggestedScore": 0.8728445172309875,
+            "PronAccuracy": 0.9310341477394104,
+            "PronFluency": 0.8640462756156921,
+            "PronCompletion": 0.75,
+            "Words": [
+              {
+                "MemBeginTime": 270,
+                "MemEndTime": 1080,
+                "PronAccuracy": 93.1034164428711,
+                "PronFluency": 0.8640462756156921,
+                "ReferenceWord": "",
+                "Word": "think",
+                "MatchTag": 0,
+                "PhoneInfos": [
+                  {
+                    "MemBeginTime": 270,
+                    "MemEndTime": 510,
+                    "PronAccuracy": 0.9857558608055115,
+                    "DetectedStress": false,
+                    "Phone": "s",
+                    "ReferencePhone": "th",
+                    "ReferenceLetter": "",
+                    "Stress": false,
+                    "MatchTag": 3
+                  },
+                  {
+                    "MemBeginTime": 510,
+                    "MemEndTime": 650,
+                    "PronAccuracy": 0.992237389087677,
+                    "DetectedStress": false,
+                    "Phone": "ih",
+                    "ReferencePhone": "ih",
+                    "ReferenceLetter": "",
+                    "Stress": false,
+                    "MatchTag": 0
+                  },
+                  {
+                    "MemBeginTime": 650,
+                    "MemEndTime": 730,
+                    "PronAccuracy": 0.994378924369812,
+                    "DetectedStress": false,
+                    "Phone": "ng",
+                    "ReferencePhone": "ng",
+                    "ReferenceLetter": "",
+                    "Stress": false,
+                    "MatchTag": 0
+                  },
+                  {
+                    "MemBeginTime": 730,
+                    "MemEndTime": 1080,
+                    "PronAccuracy": 0.9926930069923401,
+                    "DetectedStress": false,
+                    "Phone": "k",
+                    "ReferencePhone": "k",
+                    "ReferenceLetter": "",
+                    "Stress": false,
+                    "MatchTag": 0
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "automaticPassDecision": null,
+        "timing": {
+          "audioMs": 1632,
+          "connectionSetupMs": 1500,
+          "afterRecordingMs": 696,
+          "totalMs": 3828
+        }
+      }
+    },
+    {
+      "id": "aria-sheep-as-ship",
+      "expectedCorrect": false,
+      "status": "received",
+      "result": {
+        "results": [
+          {
+            "SuggestedScore": 0.9013566970825195,
+            "PronAccuracy": 0.9013566970825195,
+            "PronFluency": 0.7716967463493347,
+            "PronCompletion": 1,
+            "Words": [
+              {
+                "MemBeginTime": 210,
+                "MemEndTime": 1080,
+                "PronAccuracy": 90.13566589355469,
+                "PronFluency": 0.7716967463493347,
+                "ReferenceWord": "",
+                "Word": "ship",
+                "MatchTag": 0,
+                "PhoneInfos": [
+                  {
+                    "MemBeginTime": 210,
+                    "MemEndTime": 480,
+                    "PronAccuracy": 0.9595150351524353,
+                    "DetectedStress": false,
+                    "Phone": "sh",
+                    "ReferencePhone": "sh",
+                    "ReferenceLetter": "",
+                    "Stress": false,
+                    "MatchTag": 0
+                  },
+                  {
+                    "MemBeginTime": 480,
+                    "MemEndTime": 700,
+                    "PronAccuracy": 0.77438884973526,
+                    "DetectedStress": false,
+                    "Phone": "ih",
+                    "ReferencePhone": "ih",
+                    "ReferenceLetter": "",
+                    "Stress": false,
+                    "MatchTag": 0
+                  },
+                  {
+                    "MemBeginTime": 700,
+                    "MemEndTime": 1080,
+                    "PronAccuracy": 0.9701663255691528,
+                    "DetectedStress": false,
+                    "Phone": "p",
+                    "ReferencePhone": "p",
+                    "ReferenceLetter": "",
+                    "Stress": false,
+                    "MatchTag": 0
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "automaticPassDecision": null,
+        "timing": {
+          "audioMs": 1632,
+          "connectionSetupMs": 1531,
+          "afterRecordingMs": 743,
+          "totalMs": 3906
+        }
+      }
+    },
+    {
+      "id": "guy-sheep-as-ship",
+      "expectedCorrect": false,
+      "status": "received",
+      "result": {
+        "results": [
+          {
+            "SuggestedScore": 0.8885719776153564,
+            "PronAccuracy": 0.8885719776153564,
+            "PronFluency": 0.7992139458656311,
+            "PronCompletion": 1,
+            "Words": [
+              {
+                "MemBeginTime": 180,
+                "MemEndTime": 980,
+                "PronAccuracy": 88.8572006225586,
+                "PronFluency": 0.7992139458656311,
+                "ReferenceWord": "",
+                "Word": "ship",
+                "MatchTag": 0,
+                "PhoneInfos": [
+                  {
+                    "MemBeginTime": 180,
+                    "MemEndTime": 470,
+                    "PronAccuracy": 0.9652252793312073,
+                    "DetectedStress": false,
+                    "Phone": "sh",
+                    "ReferencePhone": "sh",
+                    "ReferenceLetter": "",
+                    "Stress": false,
+                    "MatchTag": 0
+                  },
+                  {
+                    "MemBeginTime": 470,
+                    "MemEndTime": 660,
+                    "PronAccuracy": 0.7142848372459412,
+                    "DetectedStress": false,
+                    "Phone": "ih",
+                    "ReferencePhone": "ih",
+                    "ReferenceLetter": "",
+                    "Stress": false,
+                    "MatchTag": 0
+                  },
+                  {
+                    "MemBeginTime": 660,
+                    "MemEndTime": 980,
+                    "PronAccuracy": 0.9862058162689209,
+                    "DetectedStress": false,
+                    "Phone": "p",
+                    "ReferencePhone": "p",
+                    "ReferenceLetter": "",
+                    "Stress": false,
+                    "MatchTag": 0
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "automaticPassDecision": null,
+        "timing": {
+          "audioMs": 1512,
+          "connectionSetupMs": 1469,
+          "afterRecordingMs": 706,
+          "totalMs": 3687
+        }
+      }
+    },
+    {
+      "id": "aria-free-as-three",
+      "expectedCorrect": false,
+      "status": "received",
+      "result": {
+        "results": [
+          {
+            "SuggestedScore": 0.6633043885231018,
+            "PronAccuracy": 0.6633043885231018,
+            "PronFluency": 0.8763704299926758,
+            "PronCompletion": 1,
+            "Words": [
+              {
+                "MemBeginTime": 300,
+                "MemEndTime": 920,
+                "PronAccuracy": 66.33043670654297,
+                "PronFluency": 0.8763704299926758,
+                "ReferenceWord": "",
+                "Word": "three",
+                "MatchTag": 0,
+                "PhoneInfos": [
+                  {
+                    "MemBeginTime": 300,
+                    "MemEndTime": 460,
+                    "PronAccuracy": 0.4966040551662445,
+                    "DetectedStress": false,
+                    "Phone": "th",
+                    "ReferencePhone": "th",
+                    "ReferenceLetter": "",
+                    "Stress": false,
+                    "MatchTag": 0
+                  },
+                  {
+                    "MemBeginTime": 460,
+                    "MemEndTime": 520,
+                    "PronAccuracy": 0.49959564208984375,
+                    "DetectedStress": false,
+                    "Phone": "r",
+                    "ReferencePhone": "r",
+                    "ReferenceLetter": "",
+                    "Stress": false,
+                    "MatchTag": 0
+                  },
+                  {
+                    "MemBeginTime": 520,
+                    "MemEndTime": 920,
+                    "PronAccuracy": 0.9937135577201843,
+                    "DetectedStress": false,
+                    "Phone": "iy",
+                    "ReferencePhone": "iy",
+                    "ReferenceLetter": "",
+                    "Stress": false,
+                    "MatchTag": 0
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "automaticPassDecision": null,
+        "timing": {
+          "audioMs": 1512,
+          "connectionSetupMs": 1469,
+          "afterRecordingMs": 582,
+          "totalMs": 3563
+        }
+      }
+    },
+    {
+      "id": "guy-free-as-three",
+      "expectedCorrect": false,
+      "status": "received",
+      "result": {
+        "results": [
+          {
+            "SuggestedScore": 0.7913801074028015,
+            "PronAccuracy": 0.7913801074028015,
+            "PronFluency": 0.8474292755126953,
+            "PronCompletion": 1,
+            "Words": [
+              {
+                "MemBeginTime": 310,
+                "MemEndTime": 1010,
+                "PronAccuracy": 79.13800811767578,
+                "PronFluency": 0.8474292755126953,
+                "ReferenceWord": "",
+                "Word": "three",
+                "MatchTag": 0,
+                "PhoneInfos": [
+                  {
+                    "MemBeginTime": 310,
+                    "MemEndTime": 470,
+                    "PronAccuracy": 0.5081446170806885,
+                    "DetectedStress": false,
+                    "Phone": "th",
+                    "ReferencePhone": "th",
+                    "ReferenceLetter": "",
+                    "Stress": false,
+                    "MatchTag": 0
+                  },
+                  {
+                    "MemBeginTime": 470,
+                    "MemEndTime": 600,
+                    "PronAccuracy": 0.8720218539237976,
+                    "DetectedStress": false,
+                    "Phone": "r",
+                    "ReferencePhone": "r",
+                    "ReferenceLetter": "",
+                    "Stress": false,
+                    "MatchTag": 0
+                  },
+                  {
+                    "MemBeginTime": 600,
+                    "MemEndTime": 1010,
+                    "PronAccuracy": 0.9939737915992737,
+                    "DetectedStress": false,
+                    "Phone": "iy",
+                    "ReferencePhone": "iy",
+                    "ReferenceLetter": "",
+                    "Stress": false,
+                    "MatchTag": 0
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "automaticPassDecision": null,
+        "timing": {
+          "audioMs": 1608,
+          "connectionSetupMs": 1500,
+          "afterRecordingMs": 610,
+          "totalMs": 3718
+        }
+      }
+    },
+    {
+      "id": "aria-bed-as-bad",
+      "expectedCorrect": false,
+      "status": "received",
+      "result": {
+        "results": [
+          {
+            "SuggestedScore": 0.9524299502372742,
+            "PronAccuracy": 0.9524299502372742,
+            "PronFluency": 0.8425382971763611,
+            "PronCompletion": 1,
+            "Words": [
+              {
+                "MemBeginTime": 300,
+                "MemEndTime": 890,
+                "PronAccuracy": 95.24299621582031,
+                "PronFluency": 0.8425382971763611,
+                "ReferenceWord": "",
+                "Word": "bad",
+                "MatchTag": 0,
+                "PhoneInfos": [
+                  {
+                    "MemBeginTime": 300,
+                    "MemEndTime": 360,
+                    "PronAccuracy": 0.9639109373092651,
+                    "DetectedStress": false,
+                    "Phone": "b",
+                    "ReferencePhone": "b",
+                    "ReferenceLetter": "",
+                    "Stress": false,
+                    "MatchTag": 0
+                  },
+                  {
+                    "MemBeginTime": 360,
+                    "MemEndTime": 560,
+                    "PronAccuracy": 0.9291645884513855,
+                    "DetectedStress": false,
+                    "Phone": "ae",
+                    "ReferencePhone": "ae",
+                    "ReferenceLetter": "",
+                    "Stress": false,
+                    "MatchTag": 0
+                  },
+                  {
+                    "MemBeginTime": 560,
+                    "MemEndTime": 890,
+                    "PronAccuracy": 0.9642144441604614,
+                    "DetectedStress": false,
+                    "Phone": "d",
+                    "ReferencePhone": "d",
+                    "ReferenceLetter": "",
+                    "Stress": false,
+                    "MatchTag": 0
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "automaticPassDecision": null,
+        "timing": {
+          "audioMs": 1440,
+          "connectionSetupMs": 1484,
+          "afterRecordingMs": 607,
+          "totalMs": 3531
+        }
+      }
+    },
+    {
+      "id": "guy-bed-as-bad",
+      "expectedCorrect": false,
+      "status": "received",
+      "result": {
+        "results": [
+          {
+            "SuggestedScore": 0.9730808138847351,
+            "PronAccuracy": 0.9730808138847351,
+            "PronFluency": 0.8033067584037781,
+            "PronCompletion": 1,
+            "Words": [
+              {
+                "MemBeginTime": 270,
+                "MemEndTime": 930,
+                "PronAccuracy": 97.3080825805664,
+                "PronFluency": 0.8033067584037781,
+                "ReferenceWord": "",
+                "Word": "bad",
+                "MatchTag": 0,
+                "PhoneInfos": [
+                  {
+                    "MemBeginTime": 270,
+                    "MemEndTime": 410,
+                    "PronAccuracy": 0.9893271327018738,
+                    "DetectedStress": false,
+                    "Phone": "b",
+                    "ReferencePhone": "b",
+                    "ReferenceLetter": "",
+                    "Stress": false,
+                    "MatchTag": 0
+                  },
+                  {
+                    "MemBeginTime": 410,
+                    "MemEndTime": 590,
+                    "PronAccuracy": 0.9644531607627869,
+                    "DetectedStress": false,
+                    "Phone": "ae",
+                    "ReferencePhone": "ae",
+                    "ReferenceLetter": "",
+                    "Stress": false,
+                    "MatchTag": 0
+                  },
+                  {
+                    "MemBeginTime": 590,
+                    "MemEndTime": 930,
+                    "PronAccuracy": 0.9654622077941895,
+                    "DetectedStress": false,
+                    "Phone": "d",
+                    "ReferencePhone": "d",
+                    "ReferenceLetter": "",
+                    "Stress": false,
+                    "MatchTag": 0
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "automaticPassDecision": null,
+        "timing": {
+          "audioMs": 1464,
+          "connectionSetupMs": 1500,
+          "afterRecordingMs": 614,
+          "totalMs": 3578
+        }
+      }
+    },
+    {
+      "id": "aria-light-as-right",
+      "expectedCorrect": false,
+      "status": "received",
+      "result": {
+        "results": [
+          {
+            "SuggestedScore": 0.7850170731544495,
+            "PronAccuracy": 0.883144199848175,
+            "PronFluency": 0.8644609451293945,
+            "PronCompletion": 0.6666666865348816,
+            "Words": [
+              {
+                "MemBeginTime": 290,
+                "MemEndTime": 950,
+                "PronAccuracy": 88.31442260742188,
+                "PronFluency": 0.8644609451293945,
+                "ReferenceWord": "",
+                "Word": "right",
+                "MatchTag": 0,
+                "PhoneInfos": [
+                  {
+                    "MemBeginTime": 290,
+                    "MemEndTime": 450,
+                    "PronAccuracy": 0.9893812537193298,
+                    "DetectedStress": false,
+                    "Phone": "l",
+                    "ReferencePhone": "r",
+                    "ReferenceLetter": "",
+                    "Stress": false,
+                    "MatchTag": 3
+                  },
+                  {
+                    "MemBeginTime": 450,
+                    "MemEndTime": 670,
+                    "PronAccuracy": 0.9932172894477844,
+                    "DetectedStress": false,
+                    "Phone": "ay",
+                    "ReferencePhone": "ay",
+                    "ReferenceLetter": "",
+                    "Stress": false,
+                    "MatchTag": 0
+                  },
+                  {
+                    "MemBeginTime": 670,
+                    "MemEndTime": 950,
+                    "PronAccuracy": 0.993857204914093,
+                    "DetectedStress": false,
+                    "Phone": "t",
+                    "ReferencePhone": "t",
+                    "ReferenceLetter": "",
+                    "Stress": false,
+                    "MatchTag": 0
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "automaticPassDecision": null,
+        "timing": {
+          "audioMs": 1584,
+          "connectionSetupMs": 1500,
+          "afterRecordingMs": 635,
+          "totalMs": 3719
+        }
+      }
+    },
+    {
+      "id": "guy-light-as-right",
+      "expectedCorrect": false,
+      "status": "received",
+      "result": {
+        "results": [
+          {
+            "SuggestedScore": 0.7823106050491333,
+            "PronAccuracy": 0.8800994157791138,
+            "PronFluency": 0.8450830578804016,
+            "PronCompletion": 0.6666666865348816,
+            "Words": [
+              {
+                "MemBeginTime": 290,
+                "MemEndTime": 990,
+                "PronAccuracy": 88.00994110107422,
+                "PronFluency": 0.8450830578804016,
+                "ReferenceWord": "",
+                "Word": "right",
+                "MatchTag": 0,
+                "PhoneInfos": [
+                  {
+                    "MemBeginTime": 290,
+                    "MemEndTime": 450,
+                    "PronAccuracy": 0.9835171699523926,
+                    "DetectedStress": false,
+                    "Phone": "l",
+                    "ReferencePhone": "r",
+                    "ReferenceLetter": "",
+                    "Stress": false,
+                    "MatchTag": 3
+                  },
+                  {
+                    "MemBeginTime": 450,
+                    "MemEndTime": 630,
+                    "PronAccuracy": 0.9868202209472656,
+                    "DetectedStress": false,
+                    "Phone": "ay",
+                    "ReferencePhone": "ay",
+                    "ReferenceLetter": "",
+                    "Stress": false,
+                    "MatchTag": 0
+                  },
+                  {
+                    "MemBeginTime": 630,
+                    "MemEndTime": 990,
+                    "PronAccuracy": 0.9934035539627075,
+                    "DetectedStress": false,
+                    "Phone": "t",
+                    "ReferencePhone": "t",
+                    "ReferenceLetter": "",
+                    "Stress": false,
+                    "MatchTag": 0
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "automaticPassDecision": null,
+        "timing": {
+          "audioMs": 1536,
+          "connectionSetupMs": 1562,
+          "afterRecordingMs": 652,
+          "totalMs": 3750
+        }
+      }
+    }
+  ]
+}

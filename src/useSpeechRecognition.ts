@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { androidRecognitionConstructor, isAndroidApp } from './nativeAndroid';
+import { LocalSenseVoiceRecognition, senseVoiceSession } from './localSenseVoice';
 
 type ResultEvent = { results: ArrayLike<{ isFinal: boolean; 0: { transcript: string } }> };
 type Recognition = {
@@ -28,11 +29,13 @@ export function speechErrorMessage(code: string): string {
   }
 }
 
-/** Native recognition only. No app server, recording storage, automatic retries, or synthetic results. */
+/** Prefer the optional on-device desktop recognizer; keep native/browser fallback. */
 export function useSpeechRecognition(onFinal: (text: string, target: string) => void, beforeStart: () => void, isComplete: (text: string, target: string) => boolean) {
-  const [supported] = useState(() => window.isSecureContext && !!constructor());
+  const [supported, setSupported] = useState(() => window.isSecureContext && !!constructor());
+  const [sessionToken, setSessionToken] = useState<string | undefined>();
   const [local, setLocal] = useState(false);
   const [activeLocal, setActiveLocal] = useState(false);
+  const [activeSenseVoice, setActiveSenseVoice] = useState(false);
   const [phase, setPhase] = useState<Phase>('idle');
   const [target, setTarget] = useState('');
   const [interim, setInterim] = useState('');
@@ -60,6 +63,11 @@ export function useSpeechRecognition(onFinal: (text: string, target: string) => 
   useEffect(() => {
     let disposed = false;
     const Recognition = constructor();
+    void senseVoiceSession().then(token => {
+      if (disposed || !token) return;
+      setSessionToken(token);
+      setSupported(true);
+    });
     // Prefer an already-installed local English recognizer. Never silently download a language pack.
     if (Recognition?.available && 'processLocally' in new Recognition()) {
       void Recognition.available({ langs: ['en-US'], processLocally: true })
@@ -91,12 +99,13 @@ export function useSpeechRecognition(onFinal: (text: string, target: string) => 
     if (!supported) return;
     abort(); callbacks.current.beforeStart();
     const Recognition = constructor();
-    if (!Recognition) return;
-    const current = new Recognition();
+    if (!sessionToken && !Recognition) return;
+    const current: Recognition = sessionToken ? new LocalSenseVoiceRecognition(sessionToken) : new Recognition!();
     recognition.current = current;
     current.lang = 'en-US'; current.continuous = true; current.interimResults = true; current.maxAlternatives = 1;
-    if ('processLocally' in current) current.processLocally = local;
-    setActiveLocal(local);
+    if (!sessionToken && 'processLocally' in current) current.processLocally = local;
+    setActiveLocal(!!sessionToken || local);
+    setActiveSenseVoice(!!sessionToken);
     setTarget(targetId); setError(''); setInterim(''); setPhase('starting');
     let finalText = '';
     let failed = false;
@@ -105,7 +114,7 @@ export function useSpeechRecognition(onFinal: (text: string, target: string) => 
     current.onaudiostart = () => {
       if (!live() || stopping.current === current) return;
       setPhase('listening'); clearTimer();
-      limit.current = setTimeout(() => { if (live()) stop(); }, 40000);
+      limit.current = setTimeout(() => { if (live()) stop(); }, sessionToken ? 18000 : 40000);
     };
     current.onaudioend = () => {
       if (!live()) return;
@@ -128,6 +137,7 @@ export function useSpeechRecognition(onFinal: (text: string, target: string) => 
     };
     current.onerror = event => {
       if (!live()) return;
+      if (sessionToken && event.error === 'network') setSessionToken(undefined);
       failed = true; setError(speechErrorMessage(event.error));
       abort();
     };
@@ -142,5 +152,7 @@ export function useSpeechRecognition(onFinal: (text: string, target: string) => 
     catch { abort(); setError(speechErrorMessage('unknown')); }
   }
 
-  return { supported, local: phase === 'idle' ? local : activeLocal, phase, target, interim, error, start, stop, abort, busy: phase !== 'idle' };
+  return { supported, local: phase === 'idle' ? !!sessionToken || local : activeLocal,
+    senseVoice: phase === 'idle' ? !!sessionToken : activeSenseVoice,
+    phase, target, interim, error, start, stop, abort, busy: phase !== 'idle' };
 }

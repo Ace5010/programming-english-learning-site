@@ -55,10 +55,32 @@
 .daily-session-heading .progress-track { margin: 12px 0; height: 7px; }
 .daily-session-label { color: var(--muted); font-size: 15px; }
 .daily-study-card { padding: 30px 34px; }
-.daily-study-card > h2 { font-family: var(--display-font); font-size: 23px; margin: 0 0 12px; }
-.daily-study-explanation { white-space: pre-line; margin: 0 0 24px; color: var(--ink-soft); }
-.daily-phrases { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 32px; }
-.daily-phrase { display: flex; flex-direction: column; gap: 5px; width: 100%; padding: 20px 0; border-top: 1px solid var(--line); }
+.daily-session.is-studying .daily-session-top { margin-bottom: 8px; }
+.daily-session.is-studying .daily-session-heading { margin-bottom: 18px; }
+.daily-session-heading .daily-study-intro { margin: 0; color: var(--ink-soft); font-size: 17px; line-height: 1.75; }
+.daily-phrases { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.daily-study-columns, .daily-study-pair { display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); }
+.daily-study-columns { padding: 0 0 10px; color: var(--ink-soft); font-size: 16px; font-weight: 600; }
+.daily-study-columns > span { padding-inline: 20px; }
+.daily-study-pair { grid-column: 1 / -1; overflow: visible; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); }
+.daily-study-cell { min-width: 0; padding: 16px 20px; }
+.daily-study-cell + .daily-study-cell { border-left: 1px solid var(--line); }
+.daily-study-cell > h2 { display: none; margin: 0 0 8px; font-size: 16px; line-height: 1.5; color: var(--ink-soft); font-weight: 500; }
+:root[data-theme] .daily-study-pair .daily-phrase { border: 0; border-radius: 0; padding: 0; background: transparent; }
+.daily-study-expression { min-width: 0; }
+.daily-study-expression > .daily-phrase { height: 100%; }
+@media (max-width: 600px) {
+  .daily-study-columns { display: none; }
+  .daily-study-pair { grid-template-columns: minmax(0, 1fr); }
+  .daily-study-cell { padding: 16px; }
+  .daily-study-cell + .daily-study-cell { border-left: 0; border-top: 1px solid var(--line); }
+  .daily-study-cell > h2 { display: block; }
+  .daily-session-heading .daily-study-intro { font-size: 16px; }
+}
+.daily-phrase { display: flex; flex-direction: column; gap: 8px; min-width: 0; width: 100%; padding: 18px 20px; border: 1px solid var(--line); border-radius: 12px; }
+.daily-phrase > p { margin: 0; font-size: 16px; line-height: 1.7; color: var(--ink-soft); }
+.daily-phrase .daily-phrase-content { max-width: 100%; min-height: 44px; }
+.daily-phrase .daily-phrase-content strong { display: block; min-width: 0; }
 .daily-phrase-content { display: flex; flex: 0 1 auto; min-width: 0; padding: 0; border: 0; background: transparent; text-align: left; }
 .daily-inline-reading { display: flex; align-items: center; flex-wrap: wrap; gap: 4px 8px; min-width: 0; }
 .daily-phrase strong { font-family: var(--word-font); font-size: 23px; line-height: 1.45; font-weight: 500; display: flex; gap: 10px; align-items: baseline; overflow-wrap: anywhere; }
@@ -66,8 +88,7 @@
 .daily-phrase small { font: inherit; font-size: 14px; color: var(--muted); }
 .daily-phrase:hover strong, .daily-phrase.playing strong { color: var(--accent-deep); }
 .daily-phrase.playing .icon, .daily-audio.playing .icon { animation: audio-breathe .8s ease-in-out infinite alternate; }
-.daily-play-hint { font-size: 14px; color: var(--muted); margin-top: 20px; }
-.daily-session-actions { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 14px; margin-top: 24px; }
+.daily-session-actions { display: flex; justify-content: flex-end; align-items: center; flex-wrap: wrap; gap: 14px; margin-top: 24px; }
 .daily-session-actions p { font-size: 14px; color: var(--muted); margin: 0; }
 .daily-question { padding: 32px 36px; min-height: 340px; }
 .daily-question h2 { font-size: clamp(22px, 2vw, 28px); font-weight: 600; line-height: 1.5; margin: 0 0 26px; white-space: pre-line; }
@@ -154,6 +175,9 @@
 .daily-inline-reading > .daily-expression-content { flex: 0 1 auto; max-width: 100%; }
 .daily-expression-content strong { display: flex; align-items: baseline; gap: 10px; font-size: 22px; font-family: var(--word-font); font-weight: 500; overflow-wrap: anywhere; }
 .daily-expression-content span, .daily-expression-copy > span { color: var(--muted); font-size: 16px; }
+.daily-phrase > .daily-meaning, .daily-expression-copy > .daily-meaning { color: var(--ink); font: 700 26px/1.4 var(--sans); overflow-wrap: anywhere; }
+.daily-phrase-word > .daily-meaning { font-size: 30px; }
+.daily-phrase-example > .daily-meaning, .daily-phrase-example strong { font-size: 20px; font-weight: 500; line-height: 1.5; }
 .daily-expression-content:hover strong, .daily-expression-content.playing strong { color: var(--accent-deep); }
 .daily-expression-content.playing .icon { animation: audio-breathe .8s ease-in-out infinite alternate; }
 .daily-expression-state { display: flex; align-items: center; gap: 16px; color: var(--muted); font-size: 15px; white-space: nowrap; }
@@ -163,6 +187,12 @@
 .daily-content button:active:not(:disabled) { transform: translateY(1px); }
 .daily-content button:focus-visible, .daily-content summary:focus-visible, .daily-library-tools input:focus-visible, .daily-library-tools select:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
 @media (max-width: 600px) { .daily-library-tools { padding: 20px; } .daily-expression { padding: 20px; gap: 12px; align-items: flex-start; } .daily-expression-content strong { font-size: 20px; } .daily-expression-state { flex-direction: column-reverse; gap: 8px; } .daily-early-review > summary { padding: 20px; } }
+@media (max-width: 600px) {
+  .daily-phrase-word > .daily-meaning { font-size: 28px; }
+  .daily-expression { flex-wrap: wrap; }
+  .daily-expression-copy { flex-basis: 100%; gap: 9px; }
+  .daily-expression-state { flex: 1; flex-direction: row; justify-content: flex-end; }
+}
 .daily-enter { animation: daily-enter .23s var(--ease) both; }
 .speech-mode { display: inline-flex; flex-wrap: wrap; gap: 4px; padding: 4px; border: 1px solid var(--frame); border-radius: 12px; background: var(--surface-2); }
 .speech-mode button { padding: 9px 17px; min-height: 42px; border: 1px solid transparent; border-radius: 9px; background: transparent; font: inherit; }
@@ -171,13 +201,13 @@
 .speech-targets { display: grid; gap: 18px; }
 .speech-target { padding: 24px; border: 1px solid var(--frame); border-radius: var(--radius); background: var(--surface-2); }
 .speech-target.matched { border-color: var(--success); }
-.speech-reference { font-family: var(--word-font); font-size: clamp(24px, 2.5vw, 31px); line-height: 1.8; overflow-wrap: anywhere; }
+.speech-reference { margin-bottom: 18px; font-family: var(--word-font); font-size: 24px; line-height: 1.8; overflow-wrap: anywhere; }
 .speech-reference > .icon { color: var(--success); margin-left: 14px; }
 .speech-word { border-radius: 4px; padding: 2px 0; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
 .speech-word.matched { color: var(--success); background: var(--success-soft); }
 .speech-word.missing { text-decoration: underline dashed var(--error); text-underline-offset: 6px; }
 .speech-word.different { color: var(--error); background: var(--error-soft); text-decoration: underline; text-underline-offset: 6px; }
-.speech-translation { color: var(--muted); margin: 3px 0 20px; }
+.speech-translation { color: var(--ink); margin: 0 0 10px; font: 700 28px/1.4 var(--sans); overflow-wrap: anywhere; }
 .speech-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; }
 .speech-actions .daily-audio { padding: 10px 15px; min-height: 46px; font-size: 15px; }
 .speech-actions .daily-button.playing { color: var(--accent-deep); border-color: var(--accent); background: var(--accent-soft); }

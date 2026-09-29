@@ -1,0 +1,29 @@
+{
+  "results": [
+    {
+      "host": "eastasia.stt.speech.microsoft.com",
+      "interfaceIndex": 9,
+      "proxyUsed": false,
+      "audioUploaded": false,
+      "authenticated": false,
+      "statusLine": "HTTP/1.1 401 Unauthorized",
+      "tlsVerified": true,
+      "connectionElapsedMs": 563
+    },
+    {
+      "host": "southeastasia.stt.speech.microsoft.com",
+      "interfaceIndex": 9,
+      "proxyUsed": false,
+      "audioUploaded": false,
+      "authenticated": false,
+      "statusLine": "HTTP/1.1 401 Unauthorized",
+      "tlsVerified": true,
+      "connectionElapsedMs": 593
+    }
+  ],
+  "limitations": [
+    "Connectivity only, no actual pronunciation request",
+    "System DNS retained",
+    "This PC only; not other networks or phones"
+  ]
+}

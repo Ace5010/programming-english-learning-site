@@ -1,0 +1,100 @@
+{
+  "title": "编程英语学习网站 · CodeWords",
+  "url": "https://appassets.androidplatform.net/assets/web/index.html",
+  "text": "跟读示例\n自己表达\n\n使用手机系统语音服务，声音可能发送至该服务。识别文字随进度保存，不保存录音。\n\n听示范，点击麦克风，逐句读出下面的表达。说自己的姓名或内容时，选择“自己表达”。\n\n你好！\n\nHello!\n听示范\n慢速\n再读一次\n\n这句已识别完整。\n\n识别到：hello\n\n再见！\n\nGoodbye!\n听示范\n慢速\n读完了\n\n正在听，请开口读…\nwith it by\n\n再试一次：下面是识别结果与参考句的差异。\n\n识别到：with by\n\nGoodbye 被识别为 by\n多识别到 with\n\n核对的是识别文字，不是发音分数。若识别不准确，可以重读；持续不可用时可选择“自己表达”自查完成。",
+  "speech": [
+    {
+      "label": "开始跟读 Hello!",
+      "text": "再读一次",
+      "disabled": true
+    },
+    {
+      "label": "停止识别 Goodbye!",
+      "text": "读完了",
+      "disabled": false
+    }
+  ],
+  "progress": {
+    "version": 1,
+    "revision": 6,
+    "lessons": {},
+    "session": {
+      "id": "1790225080165-6ex20q4d",
+      "lessonId": "A1-01-01",
+      "mode": "lesson",
+      "stage": "exercise",
+      "startedAt": 1790225080165,
+      "queue": [
+        {
+          "exerciseId": "A1-01-01-e05",
+          "retry": false
+        }
+      ],
+      "index": 0,
+      "answers": [],
+      "draft": {
+        "choice": null,
+        "order": [],
+        "blanks": [],
+        "text": "",
+        "checks": [
+          false,
+          false
+        ],
+        "helped": false,
+        "revealed": false,
+        "speech": {
+          "mode": "read",
+          "transcripts": {
+            "hello": "hello",
+            "goodbye": "with by"
+          },
+          "revealed": []
+        }
+      },
+      "feedback": null,
+      "adaptive": {
+        "version": 1,
+        "round": 1,
+        "focusIds": [
+          "hello",
+          "goodbye"
+        ],
+        "newIds": [
+          "hello",
+          "goodbye"
+        ],
+        "sourceLessonId": "A1-01-01",
+        "seed": 1,
+        "budget": 1
+      }
+    },
+    "learning": {
+      "version": 1,
+      "turns": 0,
+      "rounds": 0,
+      "targets": {
+        "hello": {
+          "introducedAt": 1790225080165,
+          "confidence": 0.4,
+          "abilities": {},
+          "lastSeenTurn": 0,
+          "lastFailureTurn": 0,
+          "signatures": [],
+          "transfer": false,
+          "readyAt": 0
+        },
+        "goodbye": {
+          "introducedAt": 1790225080165,
+          "confidence": 0.4,
+          "abilities": {},
+          "lastSeenTurn": 0,
+          "lastFailureTurn": 0,
+          "signatures": [],
+          "transfer": false,
+          "readyAt": 0
+        }
+      }
+    }
+  }
+}

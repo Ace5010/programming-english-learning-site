@@ -24,6 +24,21 @@ test('repeated taps during slow loading and playback do not cancel or restart a 
   assert.equal(events.at(-1), 'word'); assert.equal(audio.paused, false);
   audio.onended(); player.play('repository', 1, 'word'); assert.equal(audio.plays, 2);
 });
+
+test('failure identifies the failed request for inline errors without reporting stale audio', t => {
+  const failures = [], elements = [];
+  const player = new AudioPlayback(() => {}, key => failures.push(key), undefined, url => {
+    const audio = { src: url, load() {}, pause() {}, removeAttribute() {}, play() { return Promise.resolve(); } };
+    elements.push(audio); return audio;
+  });
+  t.after(() => player.dispose());
+  player.play('first', 1, 'phonetic-ee-sound-normal');
+  const staleFailure = elements[0].onerror;
+  player.play('second', 1, 'phonetic-f-sound-normal');
+  staleFailure(); assert.deepEqual(failures, []);
+  elements[1].onerror(); assert.deepEqual(failures, ['phonetic-f-sound-normal']);
+  assert.equal(player.isBusy, false);
+});
 test('normal/slow restarts the same recording with pitch preserved and retains its cache', t => {
   const { player, elements } = setup(t);
   player.play('project', 1, 'normal'); elements[0].currentTime = .3;
