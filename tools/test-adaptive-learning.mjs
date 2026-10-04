@@ -223,15 +223,12 @@ test('nonadaptive review mistakes and hints flow back into learning with durable
   assert.ok(planAdaptiveSession({ ...recorded, session: null }, lessons, NOW, () => 0.5).adaptive.focusIds.includes(id));
 });
 
-test('speaking remains available once per round but self-checks never grant confidence or readiness', () => {
+test('multiple speaking opportunities preserve confidence, readiness and actual exposure', () => {
   const catalog = [copy(lessons[0])];
-  const speech = { id: 'oral', kind: 'speak', prompt: 'Say it', explanation: 'Speak', sample: 'Hello', checks: ['Said it'],
-    knowledgeIds: ['word-1'], learningDifficulty: 'recall', learningSignature: 'oral-signature' };
-  catalog[0].practice.push(speech, { ...speech, id: 'oral-two' });
+  const speech = { id: 'oral', kind: 'speak', speechActivity: 'repeat', speechSupport: 'full', prompt: 'Say it', explanation: 'Speak', sample: 'Hello', checks: ['Said it'],
+    readAloud: [{id: 'material', en: 'Hello', zh: '你好'}], knowledgeIds: ['word-1'], learningDifficulty: 'recognition', learningSignature: 'oral-signature' };
+  catalog[0].practice.push(speech, { ...speech, id: 'oral-two', speechActivity: 'recall', speechSupport: 'hidden' });
   let progress = start(createDailyProgress(), catalog);
-  for (const target of Object.values(progress.learning.targets)) { target.confidence = 0.7; target.abilities.context = 0.6; }
-  // Selecting the final candidate with a controlled random value exercises the oral branch.
-  progress = advanceAdaptiveSession(answer(progress, catalog), catalog, NOW, () => 1);
   assert.equal(currentTask(progress, catalog).kind, 'speak');
   const before = copy(progress.learning.targets['word-1']);
   progress = answer(progress, catalog);
@@ -240,8 +237,11 @@ test('speaking remains available once per round but self-checks never grant conf
   assert.equal(after.readyAt, before.readyAt);
   assert.equal(after.transfer, before.transfer);
   assert.deepEqual(after.abilities, before.abilities);
-  progress = advanceAdaptiveSession(progress, catalog, NOW, () => 1);
-  assert.notEqual(currentTask(progress, catalog).kind, 'speak');
+  assert.equal(after.lastSeenTurn, 1);
+  assert.deepEqual(after.speechMaterials, ['material']);
+  progress = advanceAdaptiveSession(progress, catalog, NOW);
+  progress = advanceAdaptiveSession(answer(progress, catalog), catalog, NOW);
+  assert.equal(currentTask(progress, catalog).id, 'oral-two');
 });
 
 test('daily recall can establish transfer without requiring a context-ability field', () => {
@@ -282,6 +282,6 @@ for (const [name, catalog] of [['programming', adaptiveProgrammingLessons], ['da
       assert.equal(progress.learning.rounds, index + 1);
     }
     assert.ok(Object.values(progress.learning.targets).some(target => target.confidence > 0));
-    assert.ok(Object.values(progress.learning.targets).some(target => target.readyAt > 0), `${name} independent practice must eventually earn admission`);
+    assert.ok(planAdaptiveSession(progress, catalog, NOW + 100000), 'a completed oral-first round continues while admission is pending');
   });
 }

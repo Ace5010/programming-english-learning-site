@@ -83,6 +83,13 @@
 .tutorial-breakdown > div { background: var(--surface-2); border-radius: 10px; padding: 16px; }
 .tutorial-breakdown strong { font-size: 22px; }
 .tutorial-breakdown p { margin: 8px 0 0; }
+.tutorial-sentence-parts { grid-template-columns: repeat(auto-fit, minmax(min(100%, 175px), 1fr)); margin-top: 20px; }
+.tutorial-sentence-parts strong { font-size: 18px; line-height: 1.65; }
+.tutorial-sentence-parts .foundation-english { font-size: 19px; }
+.tutorial-sound-parts { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 20px; }
+.tutorial-sound-parts .foundation-reading { padding: 12px 16px; border: 1px solid var(--line); background: var(--surface-2); border-radius: 10px; }
+.tutorial-accent { padding: 14px 18px; border-left: 3px solid var(--accent); background: var(--accent-soft); }
+.foundation-audio-error { padding: 16px; border: 2px solid var(--accent-deep); border-radius: 10px; }
 .tutorial-options, .tutorial-next { display: flex; flex-wrap: wrap; gap: 12px; }
 .tutorial-options button, .tutorial-next button, .tutorial-reference { border: 1px solid var(--line); background: var(--surface); color: var(--ink); border-radius: 10px; padding: 12px 16px; min-height: 48px; font-size: 18px; line-height: 1.6; text-align: left; }
 .tutorial-options button[aria-pressed=true] { border-color: var(--accent); background: var(--accent-soft); }

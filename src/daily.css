@@ -55,6 +55,7 @@
 .daily-session-heading .progress-track { margin: 12px 0; height: 7px; }
 .daily-session-label { color: var(--muted); font-size: 15px; }
 .daily-study-card { padding: 30px 34px; }
+.daily-study-card > .daily-study-scope-title { margin: 0 0 22px; font-size: 23px; line-height: 1.4; }
 .daily-session.is-studying .daily-session-top { margin-bottom: 8px; }
 .daily-session.is-studying .daily-session-heading { margin-bottom: 18px; }
 .daily-session-heading .daily-study-intro { margin: 0; color: var(--ink-soft); font-size: 17px; line-height: 1.75; }
@@ -69,6 +70,9 @@
 :root[data-theme] .daily-study-pair .daily-phrase { border: 0; border-radius: 0; padding: 0; background: transparent; }
 .daily-study-expression { min-width: 0; }
 .daily-study-expression > .daily-phrase { height: 100%; }
+.word-check-study .daily-study-expression { display: flex; flex-direction: column; gap: 14px; padding: 18px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); }
+:root[data-theme] .word-check-study .daily-study-expression > .daily-phrase { height: auto; padding: 0; border: 0; border-radius: 0; background: transparent; }
+.word-check-study .daily-sample { margin-top: auto; padding: 12px 14px; font-size: 16px; }
 @media (max-width: 600px) {
   .daily-study-columns { display: none; }
   .daily-study-pair { grid-template-columns: minmax(0, 1fr); }
@@ -139,6 +143,11 @@
 .daily-controls .primary { min-width: 150px; }
 .daily-controls.has-correct-feedback { background: var(--success-soft); border-color: var(--success); }
 .daily-controls.has-self-feedback { background: var(--accent-soft); border-color: var(--accent-line); }
+.daily-controls.has-skip-feedback { background: var(--accent-soft); border-color: var(--accent-line); }
+.speech-skip-feedback { flex: 1; min-width: 0; color: var(--ink); }
+.speech-skip-feedback h3 { margin: 0; font-size: 18px; line-height: 1.5; }
+.speech-skip-feedback p { margin: 6px 0 0; font-size: 16px; line-height: 1.5; }
+.speech-skip-feedback:focus-visible { outline: 2px solid var(--accent-line); outline-offset: 4px; border-radius: 6px; }
 .daily-controls .daily-feedback.compact { display: flex; align-items: center; flex-wrap: wrap; flex: 1; gap: 10px; min-width: 0; padding: 0; margin: 0; border: 0; background: transparent; }
 .daily-feedback.compact h3 { display: flex; align-items: center; gap: 9px; margin: 0; color: var(--success); font-size: 18px; line-height: 1.5; }
 .daily-feedback.compact.self h3 { color: var(--accent-deep); }

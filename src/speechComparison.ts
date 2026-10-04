@@ -172,3 +172,92 @@ export function compareSpeech(expectedText: string, transcript: string): SpeechC
     allMatched: targetWords.length > 0 && spokenWords.length > 0 && matchedCount === targetWords.length && extras.length === 0,
   }
 }
+
+export const MAX_SPEECH_ATTEMPTS = 3
+export type SpeechAssessment = 'exact' | 'context' | 'tolerated' | 'failed'
+
+// A deliberately broad spelling-to-sound approximation for interpreting ASR text
+// in a known read-aloud sentence, never a pronunciation score or literal equality.
+const soundGroups = [
+  ['i', 'eye'], ['to', 'too', 'two'], ['for', 'four'], ['see', 'sea'],
+  ['here', 'hear'], ['new', 'knew'], ['one', 'won'], ['our', 'hour'],
+]
+
+function soundKey(value: string): string {
+  return value.replace(/^wr/, 'r').replace(/^kn/, 'n').replace(/^wh/, 'w')
+    .replace(/tch|ch/g, 'C').replace(/sh/g, 'S').replace(/th/g, 'T')
+    .replace(/ph/g, 'f').replace(/tion|sion/g, 'Sn').replace(/dge/g, 'j')
+    .replace(/gh/g, '').replace(/qu|ck/g, 'k').replace(/c(?=[eiy])/g, 's').replace(/c/g, 'k')
+    .replace(/[aeiouy]/g, '').replace(/[bp]/g, 'p').replace(/[dt]/g, 't').replace(/z/g, 's')
+    .replace(/v/g, 'f').replace(/(.)\1+/g, '$1')
+}
+
+function soundsClose(expected: string, heard: string): boolean {
+  if (expected === heard) return true
+  if (!/^[a-z]+$/.test(expected) || !/^[a-z]+$/.test(heard)) return false
+  if (soundGroups.some(group => group.includes(expected) && group.includes(heard))) return true
+  // Do not infer negation from a similar-looking word.
+  if ([expected, heard].some(word => ['not', 'no', 'never', 'without'].includes(word))) return false
+  if (Math.min(expected.length, heard.length) / Math.max(expected.length, heard.length) < 0.6) return false
+  const left = soundKey(expected)
+  const right = soundKey(heard)
+  if (Math.min(left.length, right.length) < 2) return false
+  // Recognizers commonly add/omit a final plural or past-tense sound.
+  return left === right || left + 's' === right || right + 's' === left
+    || left + 't' === right || right + 't' === left
+}
+
+function fitsSpeechContext(expectedText: string, transcript: string): boolean {
+  const expectedWords = readWords(expectedText)
+  if (expectedWords.length < 2) return false
+  const expected = expand(expectedWords).map(part => part.value)
+  const heard = expand(readWords(transcript)).map(part => part.value)
+  if (!heard.length) return false
+  // Follow the original order. Every sound must be accounted for; context does not
+  // fill in unheard words or discard unrelated extras. Two-part spans handle ASR
+  // boundaries such as "re quest", "read me" and "poolrequest".
+  const width = heard.length + 1
+  const anchors = new Int32Array((expected.length + 1) * width).fill(-1)
+  anchors[0] = 0
+  for (let i = 0; i < expected.length; i++) {
+    for (let j = 0; j < heard.length; j++) {
+      const current = anchors[i * width + j]
+      if (current < 0) continue
+      for (const [takeExpected, takeHeard] of [[1, 1], [1, 2], [2, 1]]) {
+        if (i + takeExpected > expected.length || j + takeHeard > heard.length) continue
+        const left = expected.slice(i, i + takeExpected).join('')
+        const right = heard.slice(j, j + takeHeard).join('')
+        // A recognizer swapping two actual target words is an ordering difference,
+        // even when those words happen to sound alike (e.g. code / coat).
+        if (takeExpected === 1 && takeHeard === 1 && left !== right && expected.includes(right)) continue
+        if (!soundsClose(left, right)) continue
+        const exact = takeExpected === 1 && takeHeard === 1 && left === right ? 1 : 0
+        const next = (i + takeExpected) * width + j + takeHeard
+        anchors[next] = Math.max(anchors[next], current + exact)
+      }
+    }
+  }
+  const exactAnchors = anchors[expected.length * width + heard.length]
+  if (exactAnchors < 0) return false
+  // The exercise itself supplies strong context for this established technical
+  // phrase, including "pool requests" or a merged token with no literal anchor.
+  if (expected.join(' ') === 'pull request') return true
+  const technicalContext = expected.some((part, index) => part === 'pull' && expected[index + 1] === 'request')
+  // A larger utterance allows multiple near-sound differences, while at least
+  // half normally supplies literal context. A known technical phrase widens that
+  // window by one, but a sentence still needs two actual, ordered anchors.
+  return exactAnchors >= (technicalContext ? Math.max(2, Math.ceil(expected.length / 2) - 1)
+    : Math.max(1, Math.ceil(expected.length / 2)))
+}
+
+/** Course acceptance is more forgiving than the literal transcript alignment. */
+export function assessSpeech(expectedText: string, transcript: string) {
+  const comparison = compareSpeech(expectedText, transcript)
+  const differences = comparison.totalCount - comparison.matchedCount + comparison.extras.length
+  // Keep raw words and differences; this second pass only decides course acceptance.
+  const contextual = !comparison.allMatched && fitsSpeechContext(expectedText, transcript)
+  // A single word/short response cannot pass when its only meaningful word is missing.
+  const tolerated = comparison.totalCount >= 3 && comparison.matchedCount >= 2 && differences === 1
+  const assessment: SpeechAssessment = comparison.allMatched ? 'exact' : contextual ? 'context' : tolerated ? 'tolerated' : 'failed'
+  return { comparison, differences, assessment, accepted: assessment !== 'failed' }
+}

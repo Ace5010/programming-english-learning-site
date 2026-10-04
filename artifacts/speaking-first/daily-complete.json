@@ -1,0 +1,4817 @@
+{
+  "rounds": 148,
+  "activities": 2049,
+  "targets": {
+    "hello": {
+      "introducedAt": 1791000000000,
+      "confidence": 1,
+      "abilities": {
+        "writing": 0.9816000000000001,
+        "meaning": 0.7164,
+        "listening": 0.096
+      },
+      "lastSeenTurn": 2025,
+      "lastFailureTurn": 0,
+      "signatures": [
+        "sig-daily:hello:meaning-1n6yth5",
+        "sig-daily:hello:letters-i68w2f",
+        "sig-daily:hello:expression-xkkmxc",
+        "sig-daily:original:A1-01-01-e03-1z0ee2q",
+        "sig-daily:hello:write-85j8t",
+        "sig-daily:hello:listen-13v4njx",
+        "sig-daily:original:A1-01-01-e01-1ygf6os"
+      ],
+      "transfer": false,
+      "readyAt": 1791000057000,
+      "speechMaterials": [
+        "hello"
+      ],
+      "contexts": [
+        "phrase:hello"
+      ],
+      "independentRecallAt": 1791000565000,
+      "evidence": {
+        "recall": {
+          "attempts": 2,
+          "independent": 2,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 2000
+        },
+        "recognition": {
+          "attempts": 2,
+          "independent": 2,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 2000
+        },
+        "laterSession": {
+          "attempts": 1,
+          "independent": 1,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 1000
+        }
+      },
+      "lastSessionId": "1791008100000-adaptive-zoyuym",
+      "lastEvidenceAt": 1791001230000
+    },
+    "hi": {
+      "introducedAt": 1791000000000,
+      "confidence": 1,
+      "abilities": {
+        "listening": 0.1296,
+        "meaning": 0.5784,
+        "writing": 0.672
+      },
+      "lastSeenTurn": 2002,
+      "lastFailureTurn": 0,
+      "signatures": [
+        "sig-daily:original:A1-01-01-e04-1xmgdlv",
+        "sig-daily:hi:write-vanw8y",
+        "sig-daily:hi:meaning-txk7vi",
+        "sig-daily:hi:listen-1vux07s",
+        "sig-daily:hi:expression-1deq5oh"
+      ],
+      "transfer": false,
+      "readyAt": 1791000079000,
+      "speechMaterials": [
+        "hi"
+      ],
+      "contexts": [
+        "phrase:hi"
+      ],
+      "evidence": {
+        "recognition": {
+          "attempts": 4,
+          "independent": 4,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 4000
+        },
+        "recall": {
+          "attempts": 2,
+          "independent": 2,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 2000
+        },
+        "laterSession": {
+          "attempts": 2,
+          "independent": 2,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 2000
+        }
+      },
+      "lastSessionId": "1791010800000-adaptive-f3qlv9",
+      "lastEvidenceAt": 1791001645000,
+      "independentRecallAt": 1791000079000
+    },
+    "goodbye": {
+      "introducedAt": 1791000000000,
+      "confidence": 1,
+      "abilities": {
+        "meaning": 0.3456,
+        "writing": 0.9780000000000002,
+        "listening": 0.3072
+      },
+      "lastSeenTurn": 2049,
+      "lastFailureTurn": 0,
+      "signatures": [
+        "sig-daily:goodbye:write-1wrameq",
+        "sig-daily:goodbye:expression-1stu4b5",
+        "sig-daily:original:A1-01-01-e02-99xsl",
+        "sig-daily:pairs:audio:are-you-mia,goodbye,meet-mia,my-name-is-ben-1ba5r4c",
+        "sig-daily:original:A1-01-06-e04-1g2n1fm",
+        "sig-daily:goodbye:listen-1sw0y6g",
+        "sig-daily:goodbye:meaning-t54ab2",
+        "sig-daily:goodbye:letters-okc420"
+      ],
+      "transfer": false,
+      "readyAt": 1791000043000,
+      "contexts": [
+        "phrase:goodbye"
+      ],
+      "evidence": {
+        "recognition": {
+          "attempts": 7,
+          "independent": 7,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 7000
+        },
+        "recall": {
+          "attempts": 3,
+          "independent": 3,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 3000
+        },
+        "laterSession": {
+          "attempts": 2,
+          "independent": 2,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 2000
+        },
+        "newContext": {
+          "attempts": 1,
+          "independent": 1,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 1000
+        }
+      },
+      "lastSessionId": "1791011500000-adaptive-ce9y90",
+      "lastEvidenceAt": 1791001754000,
+      "speechMaterials": [
+        "goodbye"
+      ],
+      "independentRecallAt": 1791000462000
+    },
+    "bye": {
+      "introducedAt": 1791000000000,
+      "confidence": 1,
+      "abilities": {
+        "listening": 0.5088,
+        "meaning": 0.45599999999999996,
+        "writing": 0.336
+      },
+      "lastSeenTurn": 1830,
+      "lastFailureTurn": 0,
+      "signatures": [
+        "sig-daily:bye:expression-1gbc3e0",
+        "sig-daily:bye:meaning-1m86ikh",
+        "sig-daily:bye:write-gyro3p",
+        "sig-daily:pairs:text:bye,hi,i-am-ben,i-am-mia-1sf8pw3",
+        "sig-daily:original:A1-01-01-r01-14hv829",
+        "sig-daily:pairs:audio:bye,hi,i-am-ben,i-am-mia-11q0igu",
+        "sig-daily:bye:listen-1qbfyn9"
+      ],
+      "transfer": false,
+      "readyAt": 1791001088000,
+      "speechMaterials": [
+        "bye"
+      ],
+      "contexts": [
+        "phrase:bye"
+      ],
+      "evidence": {
+        "recognition": {
+          "attempts": 7,
+          "independent": 7,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 7000
+        },
+        "recall": {
+          "attempts": 1,
+          "independent": 1,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 1000
+        },
+        "newContext": {
+          "attempts": 3,
+          "independent": 3,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 3000
+        }
+      },
+      "lastSessionId": "1791007200000-adaptive-ivo9c2",
+      "lastEvidenceAt": 1791001088000,
+      "independentRecallAt": 1791000038000
+    },
+    "i-am-ben": {
+      "introducedAt": 1791000200000,
+      "confidence": 1,
+      "abilities": {
+        "meaning": 0.5004000000000001,
+        "listening": 0.66,
+        "writing": 1
+      },
+      "lastSeenTurn": 1888,
+      "lastFailureTurn": 0,
+      "signatures": [
+        "sig-daily:i-am-ben:meaning-y3vt4d",
+        "sig-daily:i-am-ben:order-mavzem",
+        "sig-daily:pairs:text:bye,hi,i-am-ben,i-am-mia-1sf8pw3",
+        "sig-daily:i-am-ben:listen-m5cjxd",
+        "sig-daily:i-am-ben:expression-op8xxg",
+        "sig-daily:original:A1-01-05-e04-19bzh2n",
+        "sig-daily:original:A1-01-02-e03-ypjclr",
+        "sig-daily:pairs:audio:bye,hi,i-am-ben,i-am-mia-11q0igu",
+        "sig-daily:i-am-ben:write-403zvl",
+        "sig-daily:i-am-ben:order-words-1028vry",
+        "sig-daily:i-am-ben:listen-gap-1pwjyco"
+      ],
+      "transfer": false,
+      "readyAt": 1791000111000,
+      "contexts": [
+        "phrase:i-am-ben"
+      ],
+      "evidence": {
+        "recognition": {
+          "attempts": 6,
+          "independent": 6,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 6000
+        },
+        "newContext": {
+          "attempts": 3,
+          "independent": 3,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 3000
+        },
+        "recall": {
+          "attempts": 3,
+          "independent": 3,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 3000
+        },
+        "laterSession": {
+          "attempts": 2,
+          "independent": 2,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 2000
+        }
+      },
+      "lastSessionId": "1791010700000-adaptive-5ccz8u",
+      "lastEvidenceAt": 1791001633000,
+      "speechMaterials": [
+        "i-am-ben"
+      ],
+      "independentRecallAt": 1791000439000
+    },
+    "i-am-mia": {
+      "introducedAt": 1791000300000,
+      "confidence": 1,
+      "abilities": {
+        "writing": 0.9456000000000001,
+        "listening": 0.486,
+        "meaning": 0.582
+      },
+      "lastSeenTurn": 2031,
+      "lastFailureTurn": 0,
+      "signatures": [
+        "sig-daily:original:A1-01-02-r01-1dddn8o",
+        "sig-daily:original:A1-01-02-e04-xvkjiu",
+        "sig-daily:pairs:text:bye,hi,i-am-ben,i-am-mia-1sf8pw3",
+        "sig-daily:i-am-mia:order-1yz3376",
+        "sig-daily:pairs:audio:bye,hi,i-am-ben,i-am-mia-11q0igu",
+        "sig-daily:i-am-mia:expression-3isrrc",
+        "sig-daily:i-am-mia:write-1u8y55x",
+        "sig-daily:i-am-mia:meaning-osus81",
+        "sig-daily:i-am-mia:listen-gap-m7x9p8"
+      ],
+      "transfer": false,
+      "readyAt": 1791001852000,
+      "speechMaterials": [
+        "i-am-mia"
+      ],
+      "contexts": [
+        "phrase:i-am-mia"
+      ],
+      "evidence": {
+        "recognition": {
+          "attempts": 5,
+          "independent": 5,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 5000
+        },
+        "newContext": {
+          "attempts": 3,
+          "independent": 3,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 3000
+        },
+        "recall": {
+          "attempts": 2,
+          "independent": 2,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 2000
+        },
+        "laterSession": {
+          "attempts": 2,
+          "independent": 2,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 2000
+        }
+      },
+      "lastSessionId": "1791014400000-adaptive-bbsyef",
+      "lastEvidenceAt": 1791002020000,
+      "independentRecallAt": 1791001852000
+    },
+    "im-ben": {
+      "introducedAt": 1791000400000,
+      "confidence": 1,
+      "abilities": {
+        "listening": 0.36,
+        "meaning": 0.3564,
+        "writing": 0.6924000000000001
+      },
+      "lastSeenTurn": 2009,
+      "lastFailureTurn": 0,
+      "signatures": [
+        "sig-daily:im-ben:listen-1mr05j",
+        "sig-daily:im-ben:listen-gap-15h6k3e",
+        "sig-daily:im-ben:write-dieprf",
+        "sig-daily:im-ben:order-1bvl4t0",
+        "sig-daily:im-ben:expression-1346ma6"
+      ],
+      "transfer": false,
+      "readyAt": 1791000124000,
+      "speechMaterials": [
+        "im-ben"
+      ],
+      "contexts": [
+        "phrase:im-ben"
+      ],
+      "evidence": {
+        "recognition": {
+          "attempts": 1,
+          "independent": 1,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 1000
+        },
+        "recall": {
+          "attempts": 1,
+          "independent": 1,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 1000
+        }
+      },
+      "lastSessionId": "1791010200000-adaptive-rkkw3w",
+      "lastEvidenceAt": 1791001557000,
+      "independentRecallAt": 1791000092000
+    },
+    "im-mia": {
+      "introducedAt": 1791000500000,
+      "confidence": 1,
+      "abilities": {
+        "meaning": 0.4044,
+        "listening": 0.8508,
+        "writing": 0.8100000000000002
+      },
+      "lastSeenTurn": 2017,
+      "lastFailureTurn": 0,
+      "signatures": [
+        "sig-daily:im-mia:meaning-1odk54n",
+        "sig-daily:im-mia:listen-gap-glybfq",
+        "sig-daily:im-mia:order-pfwoow",
+        "sig-daily:im-mia:listen-vbbcab",
+        "sig-daily:im-mia:write-6kiunr",
+        "sig-daily:im-mia:expression-1i5bnt6",
+        "sig-daily:original:A1-01-02-e01-z9ijzp"
+      ],
+      "transfer": false,
+      "readyAt": 1791000264000,
+      "contexts": [
+        "phrase:im-mia"
+      ],
+      "evidence": {
+        "recognition": {
+          "attempts": 7,
+          "independent": 7,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 7000
+        },
+        "recall": {
+          "attempts": 2,
+          "independent": 2,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 2000
+        },
+        "laterSession": {
+          "attempts": 2,
+          "independent": 2,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 2000
+        }
+      },
+      "lastSessionId": "1791012800000-adaptive-1w932d7",
+      "lastEvidenceAt": 1791001885000,
+      "speechMaterials": [
+        "im-mia"
+      ],
+      "independentRecallAt": 1791001454000
+    },
+    "whats-your-name": {
+      "introducedAt": 1791000600000,
+      "confidence": 1,
+      "abilities": {
+        "listening": 0.3936,
+        "writing": 1,
+        "meaning": 0.7164
+      },
+      "lastSeenTurn": 2039,
+      "lastFailureTurn": 0,
+      "signatures": [
+        "sig-daily:whats-your-name:write-1xkd022",
+        "sig-daily:original:A1-01-03-e01-183jp66",
+        "sig-daily:pairs:text:bye,my-name-is-ben,my-name-is-mia,whats-your-name-dtt275",
+        "sig-daily:whats-your-name:order-agyql5",
+        "sig-daily:original:A1-01-03-r01-1l87olr",
+        "sig-daily:original:A1-01-05-e02-18s09op",
+        "sig-daily:whats-your-name:listen-gap-1wr37yx",
+        "sig-daily:whats-your-name:listen-1yhc1zk",
+        "sig-daily:whats-your-name:expression-1t8gfrd"
+      ],
+      "transfer": false,
+      "readyAt": 1791000113000,
+      "speechMaterials": [
+        "whats-your-name"
+      ],
+      "contexts": [
+        "phrase:whats-your-name"
+      ],
+      "evidence": {
+        "recognition": {
+          "attempts": 3,
+          "independent": 3,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 3000
+        },
+        "recall": {
+          "attempts": 3,
+          "independent": 3,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 3000
+        },
+        "laterSession": {
+          "attempts": 3,
+          "independent": 3,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 3000
+        },
+        "newContext": {
+          "attempts": 1,
+          "independent": 1,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 1000
+        }
+      },
+      "lastSessionId": "1791012400000-adaptive-t7kjvk",
+      "lastEvidenceAt": 1791001848000,
+      "independentRecallAt": 1791000867000
+    },
+    "my-name-is-ben": {
+      "introducedAt": 1791000700000,
+      "confidence": 1,
+      "abilities": {
+        "writing": 1,
+        "listening": 0.7535999999999999,
+        "meaning": 0.582
+      },
+      "lastSeenTurn": 2035,
+      "lastFailureTurn": 0,
+      "signatures": [
+        "sig-daily:original:A1-01-05-r02-1a22vtw",
+        "sig-daily:my-name-is-ben:write-1tnrxgk",
+        "sig-daily:original:A1-01-03-r02-1li7aaq",
+        "sig-daily:my-name-is-ben:listen-gap-1qc19eb",
+        "sig-daily:pairs:audio:are-you-mia,goodbye,meet-mia,my-name-is-ben-1ba5r4c",
+        "sig-daily:pairs:text:bye,my-name-is-ben,my-name-is-mia,whats-your-name-dtt275",
+        "sig-daily:my-name-is-ben:expression-1hvvo3",
+        "sig-daily:my-name-is-ben:meaning-1pq9za4",
+        "sig-daily:my-name-is-ben:order-1gqpbkv",
+        "sig-daily:original:A1-01-06-e02-1eepf9s",
+        "sig-daily:my-name-is-ben:order-words-1mxz8ar",
+        "sig-daily:my-name-is-ben:listen-wqfse6"
+      ],
+      "transfer": false,
+      "readyAt": 1791000133000,
+      "speechMaterials": [
+        "my-name-is-ben"
+      ],
+      "contexts": [
+        "phrase:my-name-is-ben"
+      ],
+      "independentRecallAt": 1791000120000,
+      "evidence": {
+        "recall": {
+          "attempts": 2,
+          "independent": 2,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 2000
+        },
+        "laterSession": {
+          "attempts": 1,
+          "independent": 1,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 1000
+        },
+        "recognition": {
+          "attempts": 6,
+          "independent": 6,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 6000
+        },
+        "newContext": {
+          "attempts": 2,
+          "independent": 2,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 2000
+        }
+      },
+      "lastSessionId": "1791014600000-adaptive-uuk7n9",
+      "lastEvidenceAt": 1791002034000
+    },
+    "my-name-is-mia": {
+      "introducedAt": 1791000800000,
+      "confidence": 1,
+      "abilities": {
+        "meaning": 0.8532,
+        "listening": 0.4272,
+        "writing": 1
+      },
+      "lastSeenTurn": 2042,
+      "lastFailureTurn": 0,
+      "signatures": [
+        "sig-daily:original:A1-01-03-e04-19hhpn1",
+        "sig-daily:my-name-is-mia:order-words-tvp2mf",
+        "sig-daily:pairs:text:bye,my-name-is-ben,my-name-is-mia,whats-your-name-dtt275",
+        "sig-daily:my-name-is-mia:write-b8wprs",
+        "sig-daily:my-name-is-mia:listen-gap-1agxykn",
+        "sig-daily:my-name-is-mia:listen-12sf1oy",
+        "sig-daily:original:A1-01-05-e01-17y1gls",
+        "sig-daily:my-name-is-mia:order-blocks-1wlxolw",
+        "sig-daily:my-name-is-mia:expression-1ebzg7b"
+      ],
+      "transfer": false,
+      "readyAt": 1791000140000,
+      "speechMaterials": [
+        "my-name-is-mia"
+      ],
+      "contexts": [
+        "phrase:my-name-is-mia"
+      ],
+      "evidence": {
+        "recognition": {
+          "attempts": 5,
+          "independent": 5,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 5000
+        },
+        "recall": {
+          "attempts": 2,
+          "independent": 2,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 2000
+        },
+        "laterSession": {
+          "attempts": 2,
+          "independent": 2,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 2000
+        },
+        "newContext": {
+          "attempts": 1,
+          "independent": 1,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 1000
+        }
+      },
+      "lastSessionId": "1791014400000-adaptive-bbsyef",
+      "lastEvidenceAt": 1791002023000,
+      "independentRecallAt": 1791001043000
+    },
+    "are-you-mia": {
+      "introducedAt": 1791000900000,
+      "confidence": 1,
+      "abilities": {
+        "meaning": 0.6408,
+        "writing": 1,
+        "listening": 0.45239999999999997
+      },
+      "lastSeenTurn": 1978,
+      "lastFailureTurn": 0,
+      "signatures": [
+        "sig-daily:are-you-mia:meaning-1ma881d",
+        "sig-daily:are-you-mia:order-words-1bkkade",
+        "sig-daily:pairs:audio:are-you-ben,are-you-mia,no-im-ben,yes-i-am-18jz5lr",
+        "sig-daily:original:A1-01-06-e03-1eop0yr",
+        "sig-daily:are-you-mia:write-1c91yad",
+        "sig-daily:pairs:text:are-you-ben,are-you-mia,no-im-ben,yes-i-am-37h33i",
+        "sig-daily:are-you-mia:order-1blb4ua",
+        "sig-daily:are-you-mia:expression-4mgnq0",
+        "sig-daily:are-you-mia:listen-gap-gnza98"
+      ],
+      "transfer": false,
+      "readyAt": 1791000147000,
+      "speechMaterials": [
+        "are-you-mia"
+      ],
+      "contexts": [
+        "phrase:are-you-mia"
+      ],
+      "evidence": {
+        "recognition": {
+          "attempts": 3,
+          "independent": 3,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 3000
+        },
+        "recall": {
+          "attempts": 2,
+          "independent": 2,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 2000
+        },
+        "newContext": {
+          "attempts": 2,
+          "independent": 2,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 2000
+        },
+        "laterSession": {
+          "attempts": 1,
+          "independent": 1,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 1000
+        }
+      },
+      "lastSessionId": "1791013000000-adaptive-gqq9mx",
+      "lastEvidenceAt": 1791001902000,
+      "independentRecallAt": 1791000257000
+    },
+    "are-you-ben": {
+      "introducedAt": 1791001000000,
+      "confidence": 1,
+      "abilities": {
+        "listening": 0.8124,
+        "writing": 1,
+        "meaning": 0.192
+      },
+      "lastSeenTurn": 1944,
+      "lastFailureTurn": 0,
+      "signatures": [
+        "sig-daily:original:A1-01-04-e02-4r2vde",
+        "sig-daily:are-you-ben:meaning-1r82pdp",
+        "sig-daily:pairs:audio:are-you-ben,are-you-mia,no-im-ben,yes-i-am-18jz5lr",
+        "sig-daily:are-you-ben:order-words-1ow9n2",
+        "sig-daily:are-you-ben:order-fazg3y",
+        "sig-daily:are-you-ben:write-1edetht",
+        "sig-daily:pairs:text:are-you-ben,are-you-mia,no-im-ben,yes-i-am-37h33i",
+        "sig-daily:original:A1-01-04-r01-1yjrdku",
+        "sig-daily:are-you-ben:listen-gap-120dvco",
+        "sig-daily:are-you-ben:listen-171k5ox"
+      ],
+      "transfer": false,
+      "readyAt": 1791000192000,
+      "speechMaterials": [
+        "are-you-ben"
+      ],
+      "contexts": [
+        "phrase:are-you-ben"
+      ],
+      "evidence": {
+        "recall": {
+          "attempts": 3,
+          "independent": 3,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 3000
+        },
+        "laterSession": {
+          "attempts": 3,
+          "independent": 3,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 3000
+        },
+        "recognition": {
+          "attempts": 4,
+          "independent": 4,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 4000
+        },
+        "newContext": {
+          "attempts": 2,
+          "independent": 2,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 2000
+        }
+      },
+      "lastSessionId": "1791013400000-adaptive-1js8s4j",
+      "lastEvidenceAt": 1791001943000,
+      "independentRecallAt": 1791000836000
+    },
+    "yes-i-am": {
+      "introducedAt": 1791001100000,
+      "confidence": 1,
+      "abilities": {
+        "meaning": 0.5676,
+        "writing": 0.9060000000000001,
+        "listening": 0.582
+      },
+      "lastSeenTurn": 2040,
+      "lastFailureTurn": 0,
+      "signatures": [
+        "sig-daily:yes-i-am:write-18lucrb",
+        "sig-daily:pairs:audio:are-you-ben,are-you-mia,no-im-ben,yes-i-am-18jz5lr",
+        "sig-daily:yes-i-am:order-words-14ivti0",
+        "sig-daily:pairs:text:are-you-ben,are-you-mia,no-im-ben,yes-i-am-37h33i",
+        "sig-daily:yes-i-am:order-bqsg9s",
+        "sig-daily:yes-i-am:listen-gap-g3k952",
+        "sig-daily:yes-i-am:meaning-m23l93",
+        "sig-daily:yes-i-am:expression-23s7ca",
+        "sig-daily:yes-i-am:listen-1psyok3"
+      ],
+      "transfer": false,
+      "readyAt": 1791000180000,
+      "speechMaterials": [
+        "yes-i-am"
+      ],
+      "contexts": [
+        "phrase:yes-i-am"
+      ],
+      "evidence": {
+        "recognition": {
+          "attempts": 7,
+          "independent": 7,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 7000
+        },
+        "recall": {
+          "attempts": 2,
+          "independent": 2,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 2000
+        },
+        "laterSession": {
+          "attempts": 1,
+          "independent": 1,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 1000
+        },
+        "newContext": {
+          "attempts": 2,
+          "independent": 2,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 2000
+        }
+      },
+      "lastSessionId": "1791014600000-adaptive-uuk7n9",
+      "lastEvidenceAt": 1791002039000,
+      "independentRecallAt": 1791000168000
+    },
+    "no-im-ben": {
+      "introducedAt": 1791001200000,
+      "confidence": 1,
+      "abilities": {
+        "listening": 0.45239999999999997,
+        "writing": 0.9816000000000001,
+        "meaning": 0.6204000000000001
+      },
+      "lastSeenTurn": 2028,
+      "lastFailureTurn": 0,
+      "signatures": [
+        "sig-daily:no-im-ben:listen-1rw0ghp",
+        "sig-daily:no-im-ben:order-zsjofu",
+        "sig-daily:original:A1-01-04-e01-4h39of",
+        "sig-daily:no-im-ben:order-words-1daeb5m",
+        "sig-daily:no-im-ben:expression-13jl45s",
+        "sig-daily:no-im-ben:listen-gap-bgjkmc",
+        "sig-daily:no-im-ben:write-89f46l"
+      ],
+      "transfer": false,
+      "readyAt": 1791000203000,
+      "speechMaterials": [
+        "no-im-ben"
+      ],
+      "contexts": [
+        "phrase:no-im-ben"
+      ],
+      "evidence": {
+        "recognition": {
+          "attempts": 1,
+          "independent": 1,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 1000
+        },
+        "recall": {
+          "attempts": 2,
+          "independent": 2,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 2000
+        },
+        "laterSession": {
+          "attempts": 1,
+          "independent": 1,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 1000
+        }
+      },
+      "lastSessionId": "1791014000000-adaptive-17behvw",
+      "lastEvidenceAt": 1791001988000,
+      "independentRecallAt": 1791001988000
+    },
+    "no-im-mia": {
+      "introducedAt": 1791001300000,
+      "confidence": 1,
+      "abilities": {
+        "listening": 0.36,
+        "writing": 1,
+        "meaning": 0.624
+      },
+      "lastSeenTurn": 1909,
+      "lastFailureTurn": 0,
+      "signatures": [
+        "sig-daily:no-im-mia:listen-gap-1nj2uk0",
+        "sig-daily:no-im-mia:order-words-glaiee",
+        "sig-daily:no-im-mia:write-106aatl",
+        "sig-daily:no-im-mia:expression-6kzx2k",
+        "sig-daily:no-im-mia:meaning-1uy8vl1",
+        "sig-daily:no-im-mia:order-r2ehhi",
+        "sig-daily:original:A1-01-04-r02-1y9rrvv",
+        "sig-daily:no-im-mia:listen-trm8op"
+      ],
+      "transfer": false,
+      "readyAt": 1791000211000,
+      "speechMaterials": [
+        "no-im-mia"
+      ],
+      "contexts": [
+        "phrase:no-im-mia"
+      ],
+      "evidence": {
+        "recall": {
+          "attempts": 2,
+          "independent": 2,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 2000
+        },
+        "laterSession": {
+          "attempts": 2,
+          "independent": 2,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 2000
+        },
+        "recognition": {
+          "attempts": 2,
+          "independent": 2,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 2000
+        }
+      },
+      "lastSessionId": "1791013000000-adaptive-gqq9mx",
+      "lastEvidenceAt": 1791001908000,
+      "independentRecallAt": 1791000371000
+    },
+    "meet-mia": {
+      "introducedAt": 1791001400000,
+      "confidence": 1,
+      "abilities": {
+        "writing": 0.7656000000000001,
+        "meaning": 0.1296,
+        "listening": 0.8124
+      },
+      "lastSeenTurn": 2039,
+      "lastFailureTurn": 0,
+      "signatures": [
+        "sig-daily:meet-mia:order-blocks-1ux5xsq",
+        "sig-daily:pairs:audio:are-you-mia,goodbye,meet-mia,my-name-is-ben-1ba5r4c",
+        "sig-daily:meet-mia:listen-8wd5ug",
+        "sig-daily:meet-mia:listen-gap-e2d7o1",
+        "sig-daily:meet-mia:write-1gdzqf6",
+        "sig-daily:original:A1-01-06-e01-1f8o8cp",
+        "sig-daily:meet-mia:order-words-1fgjo71",
+        "sig-daily:meet-mia:meaning-szllcu"
+      ],
+      "transfer": false,
+      "readyAt": 1791000520000,
+      "contexts": [
+        "phrase:meet-mia"
+      ],
+      "evidence": {
+        "recognition": {
+          "attempts": 5,
+          "independent": 5,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 5000
+        },
+        "recall": {
+          "attempts": 2,
+          "independent": 2,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 2000
+        },
+        "laterSession": {
+          "attempts": 2,
+          "independent": 2,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 2000
+        },
+        "newContext": {
+          "attempts": 1,
+          "independent": 1,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 1000
+        }
+      },
+      "lastSessionId": "1791007300000-adaptive-sn1vyh",
+      "lastEvidenceAt": 1791001115000,
+      "speechMaterials": [
+        "whats-your-name"
+      ],
+      "independentRecallAt": 1791000581000
+    },
+    "meet-ben": {
+      "introducedAt": 1791001500000,
+      "confidence": 1,
+      "abilities": {
+        "meaning": 0.36,
+        "listening": 0.264,
+        "writing": 0.8352
+      },
+      "lastSeenTurn": 2004,
+      "lastFailureTurn": 0,
+      "signatures": [
+        "sig-daily:meet-ben:expression-1ojiiol",
+        "sig-daily:meet-ben:listen-gap-12iwuqd",
+        "sig-daily:meet-ben:meaning-1jntbuq",
+        "sig-daily:meet-ben:order-15jy1tx",
+        "sig-daily:meet-ben:write-4f03cm"
+      ],
+      "transfer": false,
+      "readyAt": 1791001434000,
+      "speechMaterials": [
+        "are-you-mia",
+        "meet-ben"
+      ],
+      "contexts": [
+        "phrase:meet-ben"
+      ],
+      "evidence": {
+        "recall": {
+          "attempts": 3,
+          "independent": 3,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 3000
+        },
+        "laterSession": {
+          "attempts": 3,
+          "independent": 3,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 3000
+        },
+        "recognition": {
+          "attempts": 1,
+          "independent": 1,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 1000
+        }
+      },
+      "lastSessionId": "1791013700000-adaptive-e19m0o",
+      "lastEvidenceAt": 1791001964000,
+      "independentRecallAt": 1791001964000
+    },
+    "from-china": {
+      "introducedAt": 1791001600000,
+      "confidence": 1,
+      "abilities": {
+        "listening": 0.5783999999999999,
+        "writing": 1,
+        "meaning": 0.72
+      },
+      "lastSeenTurn": 2007,
+      "lastFailureTurn": 0,
+      "signatures": [
+        "sig-daily:from-china:listen-467857",
+        "sig-daily:from-china:order-blocks-p58keh",
+        "sig-daily:from-china:expression-1agyn9e",
+        "sig-daily:from-china:write-1lnmeq7",
+        "sig-daily:pairs:text:daily-word-from,from-china,from-japan,from-the-us-njemsd",
+        "sig-daily:original:A1-02-01-e03-12ybwil",
+        "sig-daily:from-china:order-words-1lm91g0",
+        "sig-daily:pairs:text:from-china,i-am-chinese,origin-ben,where-are-you-from-1fxm7db",
+        "sig-daily:original:A1-02-01-e01-12ecp4n",
+        "sig-daily:from-china:listen-gap-1qkl7q6",
+        "sig-daily:pairs:audio:daily-word-from,from-china,from-japan,from-the-us-1q4ajk2"
+      ],
+      "transfer": false,
+      "readyAt": 1791000353000,
+      "speechMaterials": [
+        "from-china"
+      ],
+      "contexts": [
+        "phrase:from-china"
+      ],
+      "evidence": {
+        "recognition": {
+          "attempts": 6,
+          "independent": 6,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 6000
+        },
+        "newContext": {
+          "attempts": 4,
+          "independent": 4,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 4000
+        },
+        "recall": {
+          "attempts": 1,
+          "independent": 1,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 1000
+        },
+        "laterSession": {
+          "attempts": 1,
+          "independent": 1,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 1000
+        }
+      },
+      "lastSessionId": "1791013800000-adaptive-nsn8n3",
+      "lastEvidenceAt": 1791001975000,
+      "independentRecallAt": 1791000334000
+    },
+    "daily-word-from": {
+      "introducedAt": 1791001600000,
+      "confidence": 1,
+      "abilities": {
+        "meaning": 0.4272,
+        "spelling": 0.6000000000000001,
+        "listening": 1,
+        "context": 0.672
+      },
+      "lastSeenTurn": 2033,
+      "lastFailureTurn": 0,
+      "signatures": [
+        "sig-daily:daily-word-from:letters-qivac4",
+        "sig-daily:daily-word-from:write-1h12rq6",
+        "sig-daily-word-from:from-japan:recall-fh90ze",
+        "sig-daily:daily-word-from:listen-1b159lw",
+        "sig-daily-word-from:from-china:recall-jr1xdj",
+        "sig-daily:daily-word-from:meaning-1qx19oa",
+        "sig-daily:daily-word-from:expression-5naf31",
+        "sig-daily-word-from:he-is-from-china:hear-1dl7ppp",
+        "sig-daily-word-from:from-china:hear-pjzsim",
+        "sig-daily-word-from:from-japan:hear-6pkqdf"
+      ],
+      "transfer": true,
+      "readyAt": 1791000318000,
+      "speechMaterials": [
+        "from-china"
+      ],
+      "contexts": [
+        "phrase:daily-word-from",
+        "sentence:i am from china.",
+        "sentence:i am from japan.",
+        "sentence:he is from china."
+      ],
+      "evidence": {
+        "recognition": {
+          "attempts": 4,
+          "independent": 4,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 4000
+        },
+        "recall": {
+          "attempts": 7,
+          "independent": 7,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 7000
+        },
+        "laterSession": {
+          "attempts": 6,
+          "independent": 6,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 6000
+        },
+        "newContext": {
+          "attempts": 5,
+          "independent": 5,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 5000
+        }
+      },
+      "lastSessionId": "1791014500000-adaptive-l36l0u",
+      "lastEvidenceAt": 1791002028000,
+      "independentRecallAt": 1791002028000
+    },
+    "from-japan": {
+      "introducedAt": 1791001800000,
+      "confidence": 1,
+      "abilities": {
+        "writing": 1,
+        "meaning": 0.5820000000000001,
+        "listening": 0.5783999999999999
+      },
+      "lastSeenTurn": 1976,
+      "lastFailureTurn": 0,
+      "signatures": [
+        "sig-daily:from-japan:order-blocks-esu4gg",
+        "sig-daily:from-japan:meaning-1b5rz2k",
+        "sig-daily:pairs:text:daily-word-from,from-china,from-japan,from-the-us-njemsd",
+        "sig-daily:from-japan:write-16ejfuc",
+        "sig-daily:from-japan:order-14hc4gf",
+        "sig-daily:original:A1-02-01-r01-1o2ulna",
+        "sig-daily:original:A1-02-04-r01-m73z61",
+        "sig-daily:from-japan:order-words-n5yn6b",
+        "sig-daily:original:A1-02-01-e02-12ocatm",
+        "sig-daily:pairs:audio:daily-word-from,from-china,from-japan,from-the-us-1q4ajk2"
+      ],
+      "transfer": false,
+      "readyAt": 1791000631000,
+      "contexts": [
+        "phrase:from-japan"
+      ],
+      "evidence": {
+        "recognition": {
+          "attempts": 6,
+          "independent": 6,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 6000
+        },
+        "newContext": {
+          "attempts": 3,
+          "independent": 3,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 3000
+        },
+        "recall": {
+          "attempts": 2,
+          "independent": 2,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 2000
+        },
+        "laterSession": {
+          "attempts": 2,
+          "independent": 2,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 2000
+        }
+      },
+      "lastSessionId": "1791013800000-adaptive-nsn8n3",
+      "lastEvidenceAt": 1791001975000,
+      "speechMaterials": [
+        "from-japan"
+      ],
+      "independentRecallAt": 1791001127000
+    },
+    "from-the-us": {
+      "introducedAt": 1791001900000,
+      "confidence": 1,
+      "abilities": {
+        "listening": 0.5676,
+        "writing": 1,
+        "meaning": 0.36
+      },
+      "lastSeenTurn": 1980,
+      "lastFailureTurn": 0,
+      "signatures": [
+        "sig-daily:from-the-us:order-blocks-15r8q4g",
+        "sig-daily:from-the-us:listen-jnvnby",
+        "sig-daily:from-the-us:order-t3l7en",
+        "sig-daily:from-the-us:write-1b9wxs4",
+        "sig-daily:pairs:text:daily-word-from,from-china,from-japan,from-the-us-njemsd",
+        "sig-daily:from-the-us:order-words-8hsv1f",
+        "sig-daily:original:A1-02-01-r02-1nsuzyb",
+        "sig-daily:original:A1-02-01-e04-110eons",
+        "sig-daily:from-the-us:expression-5sk0oj",
+        "sig-daily:pairs:audio:daily-word-from,from-china,from-japan,from-the-us-1q4ajk2"
+      ],
+      "transfer": false,
+      "readyAt": 1791000357000,
+      "contexts": [
+        "phrase:from-the-us"
+      ],
+      "evidence": {
+        "recognition": {
+          "attempts": 6,
+          "independent": 6,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 6000
+        },
+        "newContext": {
+          "attempts": 3,
+          "independent": 3,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 3000
+        },
+        "recall": {
+          "attempts": 1,
+          "independent": 1,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 1000
+        },
+        "laterSession": {
+          "attempts": 1,
+          "independent": 1,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 1000
+        }
+      },
+      "lastSessionId": "1791013800000-adaptive-nsn8n3",
+      "lastEvidenceAt": 1791001975000,
+      "speechMaterials": [
+        "from-the-us"
+      ],
+      "independentRecallAt": 1791000357000
+    },
+    "where-are-you-from": {
+      "introducedAt": 1791002100000,
+      "confidence": 1,
+      "abilities": {
+        "writing": 1,
+        "listening": 0.3564,
+        "meaning": 0.9084000000000001
+      },
+      "lastSeenTurn": 1936,
+      "lastFailureTurn": 0,
+      "signatures": [
+        "sig-daily:where-are-you-from:order-blocks-cnwgmk",
+        "sig-daily:where-are-you-from:meaning-1souf54",
+        "sig-daily:original:A1-02-02-e05-7udbxa",
+        "sig-daily:pairs:text:are-you-from-china,are-you-from-japan,daily-word-from,where-are-you-from-v22fir",
+        "sig-daily:pairs:text:from-china,i-am-chinese,origin-ben,where-are-you-from-1fxm7db",
+        "sig-daily:where-are-you-from:order-words-6uvd5b",
+        "sig-daily:where-are-you-from:listen-gap-1k52qwf",
+        "sig-daily:where-are-you-from:write-1fkp85c",
+        "sig-daily:where-are-you-from:expression-1t4eacv",
+        "sig-daily:original:A1-02-02-e01-8ybqp6"
+      ],
+      "transfer": false,
+      "readyAt": 1791000691000,
+      "speechMaterials": [
+        "where-are-you-from"
+      ],
+      "contexts": [
+        "phrase:where-are-you-from"
+      ],
+      "evidence": {
+        "recognition": {
+          "attempts": 5,
+          "independent": 5,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 5000
+        },
+        "recall": {
+          "attempts": 4,
+          "independent": 4,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 4000
+        },
+        "laterSession": {
+          "attempts": 4,
+          "independent": 4,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 4000
+        },
+        "newContext": {
+          "attempts": 2,
+          "independent": 2,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 2000
+        }
+      },
+      "lastSessionId": "1791013300000-adaptive-1a0v5i5",
+      "lastEvidenceAt": 1791001935000,
+      "independentRecallAt": 1791001594000
+    },
+    "are-you-from-china": {
+      "introducedAt": 1791002200000,
+      "confidence": 1,
+      "abilities": {
+        "writing": 1,
+        "listening": 0.36,
+        "meaning": 0.4416
+      },
+      "lastSeenTurn": 1999,
+      "lastFailureTurn": 0,
+      "signatures": [
+        "sig-daily:are-you-from-china:order-blocks-1jksc3o",
+        "sig-daily:are-you-from-china:listen-1ezwesi",
+        "sig-daily:pairs:text:are-you-from-china,are-you-from-japan,daily-word-from,where-are-you-from-v22fir",
+        "sig-daily:are-you-from-china:write-ulqxoo",
+        "sig-daily:are-you-from-china:listen-gap-176hnxz",
+        "sig-daily:are-you-from-china:meaning-ypo4xs",
+        "sig-daily:are-you-from-china:order-words-1bl61av",
+        "sig-daily:original:A1-02-02-e04-84cxm9",
+        "sig-daily:are-you-from-china:expression-1fnuc3b"
+      ],
+      "transfer": false,
+      "readyAt": 1791000876000,
+      "contexts": [
+        "phrase:are-you-from-china"
+      ],
+      "evidence": {
+        "recognition": {
+          "attempts": 6,
+          "independent": 6,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 6000
+        },
+        "newContext": {
+          "attempts": 1,
+          "independent": 1,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 1000
+        },
+        "recall": {
+          "attempts": 1,
+          "independent": 1,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 1000
+        },
+        "laterSession": {
+          "attempts": 1,
+          "independent": 1,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 1000
+        }
+      },
+      "lastSessionId": "1791012900000-adaptive-6zcn0i",
+      "lastEvidenceAt": 1791001890000,
+      "speechMaterials": [
+        "are-you-from-china"
+      ],
+      "independentRecallAt": 1791000455000
+    },
+    "are-you-from-japan": {
+      "introducedAt": 1791002300000,
+      "confidence": 1,
+      "abilities": {
+        "listening": 0.624,
+        "writing": 0.648,
+        "meaning": 0.48960000000000004
+      },
+      "lastSeenTurn": 1871,
+      "lastFailureTurn": 0,
+      "signatures": [
+        "sig-daily:are-you-from-japan:listen-1wa0kjn",
+        "sig-daily:are-you-from-japan:order-blocks-48mlyp",
+        "sig-daily:are-you-from-japan:write-1a0h6vb",
+        "sig-daily:pairs:text:are-you-from-china,are-you-from-japan,daily-word-from,where-are-you-from-v22fir",
+        "sig-daily:are-you-from-japan:expression-g11pq2",
+        "sig-daily:are-you-from-japan:meaning-1v18i3r",
+        "sig-daily:original:A1-02-02-e02-8oc507",
+        "sig-daily:are-you-from-japan:listen-gap-rvmhi",
+        "sig-daily:are-you-from-japan:order-s4wog"
+      ],
+      "transfer": false,
+      "readyAt": 1791001522000,
+      "speechMaterials": [
+        "are-you-from-japan"
+      ],
+      "contexts": [
+        "phrase:are-you-from-japan"
+      ],
+      "evidence": {
+        "recognition": {
+          "attempts": 5,
+          "independent": 5,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 5000
+        },
+        "recall": {
+          "attempts": 1,
+          "independent": 1,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 1000
+        },
+        "laterSession": {
+          "attempts": 1,
+          "independent": 1,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 1000
+        },
+        "newContext": {
+          "attempts": 1,
+          "independent": 1,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 1000
+        }
+      },
+      "lastSessionId": "1791012700000-adaptive-1mhpfqs",
+      "lastEvidenceAt": 1791001870000,
+      "independentRecallAt": 1791000386000
+    },
+    "not-from-japan": {
+      "introducedAt": 1791002400000,
+      "confidence": 1,
+      "abilities": {
+        "writing": 1,
+        "listening": 0.7164,
+        "meaning": 0.3564
+      },
+      "lastSeenTurn": 1896,
+      "lastFailureTurn": 0,
+      "signatures": [
+        "sig-daily:original:A1-04-06-r01-sjdxf5",
+        "sig-daily:original:A1-02-03-e04-episii",
+        "sig-daily:not-from-japan:listen-gap-48ws5z",
+        "sig-daily:not-from-japan:order-1wub6dv",
+        "sig-daily:not-from-japan:expression-pzimvr",
+        "sig-daily:not-from-japan:write-5mk2w",
+        "sig-daily:original:A1-02-03-e01-dvjzfl",
+        "sig-daily:not-from-japan:order-words-24u08n",
+        "sig-daily:not-from-japan:listen-purrsy"
+      ],
+      "transfer": false,
+      "readyAt": 1791000597000,
+      "speechMaterials": [
+        "not-from-japan"
+      ],
+      "contexts": [
+        "phrase:not-from-japan"
+      ],
+      "evidence": {
+        "recall": {
+          "attempts": 1,
+          "independent": 1,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 1000
+        },
+        "laterSession": {
+          "attempts": 1,
+          "independent": 1,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 1000
+        },
+        "recognition": {
+          "attempts": 1,
+          "independent": 1,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 1000
+        }
+      },
+      "lastSessionId": "1791012900000-adaptive-6zcn0i",
+      "lastEvidenceAt": 1791001895000,
+      "independentRecallAt": 1791000597000
+    },
+    "not-from-china": {
+      "introducedAt": 1791002500000,
+      "confidence": 1,
+      "abilities": {
+        "writing": 1,
+        "meaning": 0.36,
+        "listening": 0.264
+      },
+      "lastSeenTurn": 1839,
+      "lastFailureTurn": 0,
+      "signatures": [
+        "sig-daily:not-from-china:meaning-18g7wkj",
+        "sig-daily:not-from-china:order-blocks-18ngeml",
+        "sig-daily:not-from-china:expression-10jbgpy",
+        "sig-daily:not-from-china:listen-gap-1cv8gxe",
+        "sig-daily:not-from-china:write-tedmv7",
+        "sig-daily:original:A1-02-03-r01-ghqumk",
+        "sig-daily:original:A1-02-03-e03-dbks1n",
+        "sig-daily:not-from-china:order-words-w81pjo"
+      ],
+      "transfer": false,
+      "readyAt": 1791000476000,
+      "contexts": [
+        "phrase:not-from-china"
+      ],
+      "evidence": {
+        "recognition": {
+          "attempts": 3,
+          "independent": 3,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 3000
+        },
+        "recall": {
+          "attempts": 1,
+          "independent": 1,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 1000
+        }
+      },
+      "lastSessionId": "1791012300000-adaptive-jg6x96",
+      "lastEvidenceAt": 1791001838000,
+      "speechMaterials": [
+        "not-from-china"
+      ],
+      "independentRecallAt": 1791000416000
+    },
+    "no-im-not": {
+      "introducedAt": 1791002600000,
+      "confidence": 1,
+      "abilities": {
+        "meaning": 0.7128000000000001,
+        "writing": 1,
+        "listening": 0.264
+      },
+      "lastSeenTurn": 1949,
+      "lastFailureTurn": 0,
+      "signatures": [
+        "sig-daily:no-im-not:listen-gap-vb1lyc",
+        "sig-daily:no-im-not:order-words-1v6kdoa",
+        "sig-daily:no-im-not:order-y4nj96",
+        "sig-daily:original:A1-02-03-e02-d1l6co",
+        "sig-daily:original:A1-02-03-e05-ezie7h",
+        "sig-daily:no-im-not:expression-ejnj0w",
+        "sig-daily:no-im-not:write-6liyzx"
+      ],
+      "transfer": false,
+      "readyAt": 1791000401000,
+      "speechMaterials": [
+        "no-im-not"
+      ],
+      "contexts": [
+        "phrase:no-im-not"
+      ],
+      "evidence": {
+        "recall": {
+          "attempts": 3,
+          "independent": 3,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 3000
+        },
+        "laterSession": {
+          "attempts": 2,
+          "independent": 2,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 2000
+        }
+      },
+      "lastSessionId": "1791013500000-adaptive-1tjmeqy",
+      "lastEvidenceAt": 1791001948000,
+      "independentRecallAt": 1791001948000
+    },
+    "i-am-chinese": {
+      "introducedAt": 1791002700000,
+      "confidence": 1,
+      "abilities": {
+        "meaning": 0.44160000000000005,
+        "listening": 0.36,
+        "writing": 1
+      },
+      "lastSeenTurn": 1872,
+      "lastFailureTurn": 0,
+      "signatures": [
+        "sig-daily:i-am-chinese:meaning-1h0btr3",
+        "sig-daily:i-am-chinese:listen-ewvjp7",
+        "sig-daily:i-am-chinese:expression-f0oblu",
+        "sig-daily:i-am-chinese:order-words-1pbadcg",
+        "sig-daily:i-am-chinese:listen-gap-v4aw2m",
+        "sig-daily:i-am-chinese:write-rgdqbz",
+        "sig-daily:pairs:text:i-am-american,i-am-chinese,i-am-japanese,no-im-not-1tkm071",
+        "sig-daily:original:A1-02-06-e04-15zj7d1",
+        "sig-daily:i-am-chinese:order-9zcqqg"
+      ],
+      "transfer": false,
+      "readyAt": 1791000550000,
+      "contexts": [
+        "phrase:i-am-chinese"
+      ],
+      "evidence": {
+        "recognition": {
+          "attempts": 4,
+          "independent": 4,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 4000
+        },
+        "recall": {
+          "attempts": 3,
+          "independent": 3,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 3000
+        },
+        "laterSession": {
+          "attempts": 3,
+          "independent": 3,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 3000
+        },
+        "newContext": {
+          "attempts": 2,
+          "independent": 2,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 2000
+        }
+      },
+      "lastSessionId": "1791012400000-adaptive-t7kjvk",
+      "lastEvidenceAt": 1791001840000,
+      "speechMaterials": [
+        "i-am-chinese"
+      ],
+      "independentRecallAt": 1791001491000
+    },
+    "i-am-japanese": {
+      "introducedAt": 1791002800000,
+      "confidence": 1,
+      "abilities": {
+        "meaning": 0.534,
+        "listening": 0.3936,
+        "writing": 1
+      },
+      "lastSeenTurn": 2023,
+      "lastFailureTurn": 0,
+      "signatures": [
+        "sig-daily:i-am-japanese:meaning-1j3ncyd",
+        "sig-daily:i-am-japanese:listen-1ye77k9",
+        "sig-daily:i-am-japanese:write-yaj0ih",
+        "sig-daily:i-am-japanese:order-words-iw46ye",
+        "sig-daily:original:A1-02-04-e03-xznpju",
+        "sig-daily:pairs:text:i-am-american,i-am-chinese,i-am-japanese,no-im-not-1tkm071",
+        "sig-daily:original:A1-02-04-r02-ld5634",
+        "sig-daily:i-am-japanese:listen-gap-10zi57k",
+        "sig-daily:i-am-japanese:expression-16hjli4"
+      ],
+      "transfer": false,
+      "readyAt": 1791000720000,
+      "contexts": [
+        "phrase:i-am-japanese"
+      ],
+      "evidence": {
+        "recognition": {
+          "attempts": 5,
+          "independent": 5,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 5000
+        },
+        "newContext": {
+          "attempts": 2,
+          "independent": 2,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 2000
+        },
+        "recall": {
+          "attempts": 2,
+          "independent": 2,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 2000
+        },
+        "laterSession": {
+          "attempts": 2,
+          "independent": 2,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 2000
+        }
+      },
+      "lastSessionId": "1791013000000-adaptive-gqq9mx",
+      "lastEvidenceAt": 1791001900000,
+      "speechMaterials": [
+        "i-am-japanese"
+      ],
+      "independentRecallAt": 1791001469000
+    },
+    "i-am-american": {
+      "introducedAt": 1791002900000,
+      "confidence": 1,
+      "abilities": {
+        "writing": 0.6924000000000001,
+        "meaning": 0.486,
+        "listening": 0.096
+      },
+      "lastSeenTurn": 1787,
+      "lastFailureTurn": 0,
+      "signatures": [
+        "sig-daily:original:A1-02-04-e05-wbq3e0",
+        "sig-daily:i-am-american:order-words-1jq3qm3",
+        "sig-daily:i-am-american:expression-1lp1k3v",
+        "sig-daily:pairs:text:i-am-american,i-am-chinese,i-am-japanese,no-im-not-1tkm071",
+        "sig-daily:i-am-american:listen-16va7d2"
+      ],
+      "transfer": false,
+      "readyAt": 1791000458000,
+      "speechMaterials": [
+        "i-am-american"
+      ],
+      "contexts": [
+        "phrase:i-am-american"
+      ],
+      "independentRecallAt": 1791000446000,
+      "evidence": {
+        "recall": {
+          "attempts": 1,
+          "independent": 1,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 1000
+        },
+        "recognition": {
+          "attempts": 3,
+          "independent": 3,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 3000
+        },
+        "newContext": {
+          "attempts": 2,
+          "independent": 2,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 2000
+        }
+      },
+      "lastSessionId": "1791008400000-adaptive-1sz3qtu",
+      "lastEvidenceAt": 1791001273000
+    },
+    "are-you-chinese": {
+      "introducedAt": 1791003100000,
+      "confidence": 1,
+      "abilities": {
+        "meaning": 0.2592,
+        "writing": 0.8640000000000001,
+        "listening": 0.1296
+      },
+      "lastSeenTurn": 2005,
+      "lastFailureTurn": 0,
+      "signatures": [
+        "sig-daily:are-you-chinese:write-btlt9b",
+        "sig-daily:pairs:text:are-you-chinese,are-you-japanese,no-im-chinese,no-im-japanese-1fztaus",
+        "sig-daily:are-you-chinese:order-words-9tj3c0",
+        "sig-daily:pairs:audio:are-you-chinese,are-you-japanese,no-im-chinese,no-im-japanese-8bvomz",
+        "sig-daily:are-you-chinese:meaning-90n4jz",
+        "sig-daily:original:A1-02-05-e03-1y5rc9l"
+      ],
+      "transfer": false,
+      "readyAt": 1791000534000,
+      "speechMaterials": [
+        "are-you-chinese"
+      ],
+      "contexts": [
+        "phrase:are-you-chinese"
+      ],
+      "evidence": {
+        "recognition": {
+          "attempts": 6,
+          "independent": 6,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 6000
+        },
+        "recall": {
+          "attempts": 1,
+          "independent": 1,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 1000
+        },
+        "laterSession": {
+          "attempts": 1,
+          "independent": 1,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 1000
+        },
+        "newContext": {
+          "attempts": 3,
+          "independent": 3,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 3000
+        }
+      },
+      "lastSessionId": "1791014200000-adaptive-1qu5r4p",
+      "lastEvidenceAt": 1791002004000,
+      "independentRecallAt": 1791000490000
+    },
+    "are-you-japanese": {
+      "introducedAt": 1791003200000,
+      "confidence": 1,
+      "abilities": {
+        "writing": 0.8640000000000001,
+        "listening": 0.7536,
+        "meaning": 0.5484
+      },
+      "lastSeenTurn": 1809,
+      "lastFailureTurn": 0,
+      "signatures": [
+        "sig-daily:are-you-japanese:order-1m51n1i",
+        "sig-daily:are-you-japanese:listen-1nsnc2h",
+        "sig-daily:are-you-japanese:write-1vxol61",
+        "sig-daily:pairs:text:are-you-chinese,are-you-japanese,no-im-chinese,no-im-japanese-1fztaus",
+        "sig-daily:are-you-japanese:meaning-1ulfy6d",
+        "sig-daily:pairs:audio:are-you-chinese,are-you-japanese,no-im-chinese,no-im-japanese-8bvomz",
+        "sig-daily:are-you-japanese:expression-1l8mdfw",
+        "sig-daily:original:A1-02-05-r01-q9ipd6",
+        "sig-daily:are-you-japanese:listen-gap-kq6a34",
+        "sig-daily:original:A1-02-05-e02-1xvrqkm"
+      ],
+      "transfer": false,
+      "readyAt": 1791000519000,
+      "speechMaterials": [
+        "are-you-japanese"
+      ],
+      "contexts": [
+        "phrase:are-you-japanese"
+      ],
+      "evidence": {
+        "recognition": {
+          "attempts": 5,
+          "independent": 5,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 5000
+        },
+        "newContext": {
+          "attempts": 3,
+          "independent": 3,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 3000
+        },
+        "recall": {
+          "attempts": 1,
+          "independent": 1,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 1000
+        }
+      },
+      "lastSessionId": "1791012000000-adaptive-1p763d1",
+      "lastEvidenceAt": 1791001808000,
+      "independentRecallAt": 1791000505000
+    },
+    "no-im-japanese": {
+      "introducedAt": 1791003300000,
+      "confidence": 1,
+      "abilities": {
+        "listening": 0.798,
+        "meaning": 0.624,
+        "writing": 0.9564000000000001
+      },
+      "lastSeenTurn": 1714,
+      "lastFailureTurn": 0,
+      "signatures": [
+        "sig-daily:no-im-japanese:listen-1yzgm91",
+        "sig-daily:pairs:text:are-you-chinese,are-you-japanese,no-im-chinese,no-im-japanese-1fztaus",
+        "sig-daily:no-im-japanese:listen-gap-1nk00os",
+        "sig-daily:no-im-japanese:write-1ewzq6d",
+        "sig-daily:no-im-japanese:expression-1sl13u0",
+        "sig-daily:no-im-japanese:order-1jn6vte",
+        "sig-daily:pairs:audio:are-you-chinese,are-you-japanese,no-im-chinese,no-im-japanese-8bvomz",
+        "sig-daily:original:A1-02-05-r02-pzj3o7",
+        "sig-daily:no-im-japanese:order-words-lzxd4i",
+        "sig-daily:original:A1-02-05-e01-1xls4vn"
+      ],
+      "transfer": false,
+      "readyAt": 1791000858000,
+      "contexts": [
+        "phrase:no-im-japanese"
+      ],
+      "evidence": {
+        "recognition": {
+          "attempts": 4,
+          "independent": 4,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 4000
+        },
+        "newContext": {
+          "attempts": 3,
+          "independent": 3,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 3000
+        },
+        "recall": {
+          "attempts": 1,
+          "independent": 1,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 1000
+        }
+      },
+      "lastSessionId": "1791009700000-adaptive-1dsssyy",
+      "lastEvidenceAt": 1791001472000,
+      "speechMaterials": [
+        "no-im-japanese"
+      ],
+      "independentRecallAt": 1791000535000
+    },
+    "no-im-chinese": {
+      "introducedAt": 1791003400000,
+      "confidence": 1,
+      "abilities": {
+        "writing": 0.9360000000000002,
+        "meaning": 0.6372,
+        "listening": 0.3564
+      },
+      "lastSeenTurn": 2015,
+      "lastFailureTurn": 0,
+      "signatures": [
+        "sig-daily:no-im-chinese:write-shofg3",
+        "sig-daily:no-im-chinese:meaning-1hqbr1v",
+        "sig-daily:no-im-chinese:order-nibhbw",
+        "sig-daily:original:A1-02-05-e04-1yfqxyk",
+        "sig-daily:no-im-chinese:expression-18rzkfq",
+        "sig-daily:no-im-chinese:listen-gap-1l1fcsi"
+      ],
+      "transfer": false,
+      "readyAt": 1791000643000,
+      "speechMaterials": [
+        "no-im-chinese"
+      ],
+      "contexts": [
+        "phrase:no-im-chinese"
+      ],
+      "independentRecallAt": 1791000669000,
+      "evidence": {
+        "recall": {
+          "attempts": 2,
+          "independent": 2,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 2000
+        },
+        "recognition": {
+          "attempts": 1,
+          "independent": 1,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 1000
+        },
+        "laterSession": {
+          "attempts": 1,
+          "independent": 1,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 1000
+        }
+      },
+      "lastSessionId": "1791010700000-adaptive-5ccz8u",
+      "lastEvidenceAt": 1791001626000
+    },
+    "origin-ben": {
+      "introducedAt": 1791003500000,
+      "confidence": 1,
+      "abilities": {
+        "listening": 0.7608000000000001,
+        "writing": 1,
+        "meaning": 0.5484
+      },
+      "lastSeenTurn": 2009,
+      "lastFailureTurn": 0,
+      "signatures": [
+        "sig-daily:origin-ben:listen-hxkvd3",
+        "sig-daily:origin-ben:order-blocks-5agqbp",
+        "sig-daily:pairs:text:from-china,i-am-chinese,origin-ben,where-are-you-from-1fxm7db",
+        "sig-daily:original:A1-02-06-r01-1qlwgiv",
+        "sig-daily:origin-ben:expression-zyv2j2",
+        "sig-daily:origin-ben:write-fa2rsb",
+        "sig-daily:origin-ben:order-1dnbefo",
+        "sig-daily:pairs:text:is-that-a-bag,origin-ben,what-is-this,yes-it-is-o2s11v",
+        "sig-daily:origin-ben:listen-gap-1a7m62"
+      ],
+      "transfer": false,
+      "readyAt": 1791000908000,
+      "contexts": [
+        "phrase:origin-ben"
+      ],
+      "evidence": {
+        "recognition": {
+          "attempts": 5,
+          "independent": 5,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 5000
+        },
+        "newContext": {
+          "attempts": 2,
+          "independent": 2,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 2000
+        },
+        "recall": {
+          "attempts": 4,
+          "independent": 4,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 4000
+        },
+        "laterSession": {
+          "attempts": 4,
+          "independent": 4,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 4000
+        }
+      },
+      "lastSessionId": "1791011300000-adaptive-1rwmqza",
+      "lastEvidenceAt": 1791001726000,
+      "speechMaterials": [
+        "im-ben"
+      ],
+      "independentRecallAt": 1791001340000
+    },
+    "origin-mia": {
+      "introducedAt": 1791003600000,
+      "confidence": 1,
+      "abilities": {
+        "writing": 0.6816,
+        "listening": 0.6576,
+        "meaning": 0.45239999999999997
+      },
+      "lastSeenTurn": 1880,
+      "lastFailureTurn": 0,
+      "signatures": [
+        "sig-daily:origin-mia:order-blocks-6we5a9",
+        "sig-daily:origin-mia:listen-56wi7n",
+        "sig-daily:origin-mia:listen-gap-qfjajq",
+        "sig-daily:origin-mia:write-1sczzef",
+        "sig-daily:origin-mia:meaning-145516f",
+        "sig-daily:original:A1-02-06-e01-14ll6w6",
+        "sig-daily:origin-mia:order-vi0aio",
+        "sig-daily:origin-mia:expression-noz05m"
+      ],
+      "transfer": false,
+      "readyAt": 1791001171000,
+      "contexts": [
+        "phrase:origin-mia"
+      ],
+      "evidence": {
+        "recognition": {
+          "attempts": 5,
+          "independent": 5,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 5000
+        },
+        "recall": {
+          "attempts": 1,
+          "independent": 1,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 1000
+        }
+      },
+      "lastSessionId": "1791011600000-adaptive-m5nkvf",
+      "lastEvidenceAt": 1791001757000,
+      "speechMaterials": [
+        "my-name-is-mia"
+      ],
+      "independentRecallAt": 1791000692000
+    },
+    "he-is-ben": {
+      "introducedAt": 1791003700000,
+      "confidence": 1,
+      "abilities": {
+        "meaning": 0.36,
+        "writing": 0.8244,
+        "listening": 0.36
+      },
+      "lastSeenTurn": 1955,
+      "lastFailureTurn": 0,
+      "signatures": [
+        "sig-daily:he-is-ben:expression-fhn9wu",
+        "sig-daily:he-is-ben:listen-gap-175nmca",
+        "sig-daily:he-is-ben:write-18erk0b",
+        "sig-daily:he-is-ben:meaning-1t8kse3",
+        "sig-daily:original:A1-03-01-e04-1egnm2d",
+        "sig-daily:he-is-ben:listen-ek4ftz",
+        "sig-daily:he-is-ben:order-words-11xe2m4"
+      ],
+      "transfer": false,
+      "readyAt": 1791001554000,
+      "speechMaterials": [
+        "he-is-ben"
+      ],
+      "contexts": [
+        "phrase:he-is-ben"
+      ],
+      "evidence": {
+        "recall": {
+          "attempts": 1,
+          "independent": 1,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 1000
+        },
+        "recognition": {
+          "attempts": 2,
+          "independent": 2,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 2000
+        }
+      },
+      "lastSessionId": "1791013600000-adaptive-49vzea",
+      "lastEvidenceAt": 1791001954000,
+      "independentRecallAt": 1791000628000
+    },
+    "she-is-mia": {
+      "introducedAt": 1791004100000,
+      "confidence": 1,
+      "abilities": {
+        "listening": 0.45239999999999997,
+        "writing": 1,
+        "meaning": 0.36
+      },
+      "lastSeenTurn": 1922,
+      "lastFailureTurn": 0,
+      "signatures": [
+        "sig-daily:she-is-mia:listen-1n6r57a",
+        "sig-daily:original:A1-03-01-r01-re7p2v",
+        "sig-daily:she-is-mia:expression-1tttpx7",
+        "sig-daily:she-is-mia:order-words-16ucp57",
+        "sig-daily:she-is-mia:listen-gap-9fkx23",
+        "sig-daily:original:A1-03-01-e03-1ciqe7k",
+        "sig-daily:she-is-mia:meaning-vn5i6s",
+        "sig-daily:she-is-mia:write-1gbghzg"
+      ],
+      "transfer": false,
+      "readyAt": 1791001882000,
+      "speechMaterials": [
+        "she-is-mia"
+      ],
+      "contexts": [
+        "phrase:she-is-mia"
+      ],
+      "evidence": {
+        "recognition": {
+          "attempts": 2,
+          "independent": 2,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 2000
+        },
+        "recall": {
+          "attempts": 1,
+          "independent": 1,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 1000
+        },
+        "laterSession": {
+          "attempts": 1,
+          "independent": 1,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 1000
+        }
+      },
+      "lastSessionId": "1791012800000-adaptive-1w932d7",
+      "lastEvidenceAt": 1791001882000,
+      "independentRecallAt": 1791001882000
+    },
+    "he-is-from-china": {
+      "introducedAt": 1791004200000,
+      "confidence": 1,
+      "abilities": {
+        "writing": 0.804,
+        "meaning": 0.36,
+        "listening": 0.6204000000000001
+      },
+      "lastSeenTurn": 2033,
+      "lastFailureTurn": 0,
+      "signatures": [
+        "sig-daily:he-is-from-china:order-vra0q9",
+        "sig-daily:he-is-from-china:meaning-15n9w2m",
+        "sig-daily:original:A1-03-01-r02-ro7aru",
+        "sig-daily:original:A1-03-01-e02-1cspzwj",
+        "sig-daily:he-is-from-china:write-18y4ywy",
+        "sig-daily:he-is-from-china:expression-l6o54x",
+        "sig-daily:he-is-from-china:listen-gap-1q6b2kx"
+      ],
+      "transfer": false,
+      "readyAt": 1791001601000,
+      "speechMaterials": [
+        "he-is-from-china"
+      ],
+      "contexts": [
+        "phrase:he-is-from-china"
+      ],
+      "evidence": {
+        "recognition": {
+          "attempts": 1,
+          "independent": 1,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 1000
+        },
+        "recall": {
+          "attempts": 2,
+          "independent": 2,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 2000
+        },
+        "laterSession": {
+          "attempts": 1,
+          "independent": 1,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 1000
+        }
+      },
+      "lastSessionId": "1791011400000-adaptive-2mwbml",
+      "lastEvidenceAt": 1791001735000,
+      "independentRecallAt": 1791001601000
+    },
+    "she-is-from-japan": {
+      "introducedAt": 1791004300000,
+      "confidence": 1,
+      "abilities": {
+        "writing": 0.9600000000000001,
+        "meaning": 0.264
+      },
+      "lastSeenTurn": 1478,
+      "lastFailureTurn": 0,
+      "signatures": [
+        "sig-daily:she-is-from-japan:order-blocks-shi6dc",
+        "sig-daily:she-is-from-japan:expression-x4uzub",
+        "sig-daily:she-is-from-japan:write-1ka9gg4",
+        "sig-daily:she-is-from-japan:order-words-1gyrzj7",
+        "sig-daily:she-is-from-japan:order-123xq2n"
+      ],
+      "transfer": false,
+      "readyAt": 1791000925000,
+      "speechMaterials": [
+        "she-is-from-japan"
+      ],
+      "contexts": [
+        "phrase:she-is-from-japan"
+      ],
+      "evidence": {
+        "recognition": {
+          "attempts": 1,
+          "independent": 1,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 1000
+        },
+        "recall": {
+          "attempts": 1,
+          "independent": 1,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 1000
+        },
+        "laterSession": {
+          "attempts": 1,
+          "independent": 1,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 1000
+        }
+      },
+      "lastSessionId": "1791009400000-adaptive-kinx3q",
+      "lastEvidenceAt": 1791001427000,
+      "independentRecallAt": 1791000740000
+    },
+    "i-am-a-student": {
+      "introducedAt": 1791004400000,
+      "confidence": 1,
+      "abilities": {
+        "writing": 1,
+        "meaning": 0.3564,
+        "listening": 0.3564
+      },
+      "lastSeenTurn": 2037,
+      "lastFailureTurn": 0,
+      "signatures": [
+        "sig-daily:i-am-a-student:order-blocks-41vinz",
+        "sig-daily:i-am-a-student:write-12f90qh",
+        "sig-daily:original:A1-03-02-e04-17hsvj0",
+        "sig-daily:i-am-a-student:order-yj3ahi",
+        "sig-daily:i-am-a-student:order-words-1kq2ic6",
+        "sig-daily:i-am-a-student:expression-1c7xgvw",
+        "sig-daily:i-am-a-student:listen-gap-tjvthc"
+      ],
+      "transfer": false,
+      "readyAt": 1791000922000,
+      "contexts": [
+        "phrase:i-am-a-student"
+      ],
+      "evidence": {
+        "recognition": {
+          "attempts": 1,
+          "independent": 1,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 1000
+        },
+        "recall": {
+          "attempts": 1,
+          "independent": 1,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 1000
+        },
+        "laterSession": {
+          "attempts": 1,
+          "independent": 1,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 1000
+        }
+      },
+      "lastSessionId": "1791014600000-adaptive-uuk7n9",
+      "lastEvidenceAt": 1791002036000,
+      "speechMaterials": [
+        "i-am-a-student"
+      ],
+      "independentRecallAt": 1791000717000
+    },
+    "daily-word-student": {
+      "introducedAt": 1791004400000,
+      "confidence": 1,
+      "abilities": {
+        "spelling": 0.6924000000000001,
+        "meaning": 0.3204,
+        "context": 1,
+        "listening": 0.43200000000000005
+      },
+      "lastSeenTurn": 2001,
+      "lastFailureTurn": 0,
+      "signatures": [
+        "sig-daily:daily-word-student:meaning-1mpmqk3",
+        "sig-daily-word-student:i-am-a-student:chunk-1kgm1p0",
+        "sig-daily:daily-word-student:write-79baer",
+        "sig-daily:daily-word-student:listen-hy7obj",
+        "sig-daily-word-student:i-am-a-student:hear-7enpqr",
+        "sig-daily-word-student:she-is-a-student:recall-10nz2bl",
+        "sig-daily:daily-word-student:letters-lsu1st",
+        "sig-daily-word-student:she-is-a-student:chunk-1x9tm3l",
+        "sig-daily:daily-word-student:expression-behy0m",
+        "sig-daily-word-student:i-am-a-student:recall-10e696y"
+      ],
+      "transfer": true,
+      "readyAt": 1791000820000,
+      "speechMaterials": [
+        "i-am-a-student"
+      ],
+      "contexts": [
+        "phrase:daily-word-student",
+        "chunk:a student",
+        "sentence:i am a student.",
+        "sentence:she is a student."
+      ],
+      "evidence": {
+        "recognition": {
+          "attempts": 2,
+          "independent": 2,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 2000
+        },
+        "recall": {
+          "attempts": 4,
+          "independent": 4,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 4000
+        },
+        "laterSession": {
+          "attempts": 3,
+          "independent": 3,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 3000
+        },
+        "newContext": {
+          "attempts": 2,
+          "independent": 2,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 2000
+        }
+      },
+      "lastSessionId": "1791010600000-adaptive-1um3eli",
+      "lastEvidenceAt": 1791001617000,
+      "independentRecallAt": 1791001617000
+    },
+    "i-am-a-teacher": {
+      "introducedAt": 1791004700000,
+      "confidence": 1,
+      "abilities": {
+        "listening": 0.096,
+        "meaning": 0.5448,
+        "writing": 1
+      },
+      "lastSeenTurn": 1959,
+      "lastFailureTurn": 0,
+      "signatures": [
+        "sig-daily:i-am-a-teacher:listen-1e85s72",
+        "sig-daily:i-am-a-teacher:meaning-17jkb4s",
+        "sig-daily:i-am-a-teacher:order-4xjntr",
+        "sig-daily:i-am-a-teacher:write-hum9pg",
+        "sig-daily:i-am-a-teacher:order-words-16whp37",
+        "sig-daily:original:A1-03-02-r01-rcmnju",
+        "sig-daily:i-am-a-teacher:expression-1l2czo3"
+      ],
+      "transfer": false,
+      "readyAt": 1791001130000,
+      "speechMaterials": [
+        "i-am-a-teacher"
+      ],
+      "contexts": [
+        "phrase:i-am-a-teacher"
+      ],
+      "evidence": {
+        "recognition": {
+          "attempts": 2,
+          "independent": 2,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 2000
+        },
+        "recall": {
+          "attempts": 2,
+          "independent": 2,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 2000
+        },
+        "laterSession": {
+          "attempts": 2,
+          "independent": 2,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 2000
+        }
+      },
+      "lastSessionId": "1791012700000-adaptive-1mhpfqs",
+      "lastEvidenceAt": 1791001878000,
+      "independentRecallAt": 1791001317000
+    },
+    "daily-word-teacher": {
+      "introducedAt": 1791004800000,
+      "confidence": 1,
+      "abilities": {
+        "meaning": 0.438,
+        "listening": 0.43200000000000005,
+        "context": 1,
+        "spelling": 0.7176000000000001
+      },
+      "lastSeenTurn": 2041,
+      "lastFailureTurn": 0,
+      "signatures": [
+        "sig-daily:daily-word-teacher:listen-1vxowxo",
+        "sig-daily-word-teacher:he-is-a-teacher:hear-1t37zaz",
+        "sig-daily-word-teacher:i-am-a-teacher:recall-9n7dok",
+        "sig-daily:daily-word-teacher:letters-1us0c64",
+        "sig-daily-word-teacher:he-is-a-teacher:chunk-9pj4h8",
+        "sig-daily:daily-word-teacher:expression-shebd1",
+        "sig-daily:daily-word-teacher:write-1n3v3ie",
+        "sig-daily:daily-word-teacher:meaning-1lw7d4i",
+        "sig-daily-word-teacher:he-is-a-teacher:recall-15gmyci"
+      ],
+      "transfer": true,
+      "readyAt": 1791001379000,
+      "contexts": [
+        "phrase:daily-word-teacher",
+        "sentence:he is a teacher.",
+        "sentence:i am a teacher.",
+        "chunk:a teacher"
+      ],
+      "evidence": {
+        "recognition": {
+          "attempts": 3,
+          "independent": 3,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 3000
+        },
+        "recall": {
+          "attempts": 6,
+          "independent": 6,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 6000
+        },
+        "laterSession": {
+          "attempts": 5,
+          "independent": 5,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 5000
+        },
+        "newContext": {
+          "attempts": 3,
+          "independent": 3,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 3000
+        }
+      },
+      "lastSessionId": "1791013900000-adaptive-xk0v9h",
+      "lastEvidenceAt": 1791001980000,
+      "speechMaterials": [
+        "i-am-a-teacher"
+      ],
+      "independentRecallAt": 1791001980000
+    },
+    "he-is-a-teacher": {
+      "introducedAt": 1791004900000,
+      "confidence": 1,
+      "abilities": {
+        "listening": 0.3456,
+        "writing": 1,
+        "meaning": 0.3564
+      },
+      "lastSeenTurn": 2041,
+      "lastFailureTurn": 0,
+      "signatures": [
+        "sig-daily:he-is-a-teacher:expression-1fduhtp",
+        "sig-daily:he-is-a-teacher:write-ufe0ji",
+        "sig-daily:he-is-a-teacher:order-8mu9pp",
+        "sig-daily:he-is-a-teacher:listen-ba0890",
+        "sig-daily:original:A1-03-06-e03-1ig5wp9",
+        "sig-daily:he-is-a-teacher:listen-gap-4sldy5",
+        "sig-daily:he-is-a-teacher:order-words-g39ek9"
+      ],
+      "transfer": false,
+      "readyAt": 1791000756000,
+      "speechMaterials": [
+        "he-is-a-teacher"
+      ],
+      "contexts": [
+        "phrase:he-is-a-teacher"
+      ],
+      "evidence": {
+        "recognition": {
+          "attempts": 2,
+          "independent": 2,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 2000
+        },
+        "recall": {
+          "attempts": 1,
+          "independent": 1,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 1000
+        }
+      },
+      "lastSessionId": "1791010200000-adaptive-rkkw3w",
+      "lastEvidenceAt": 1791001550000,
+      "independentRecallAt": 1791000756000
+    },
+    "she-is-a-student": {
+      "introducedAt": 1791005000000,
+      "confidence": 1,
+      "abilities": {
+        "listening": 0.6432,
+        "writing": 0.768,
+        "meaning": 0.096
+      },
+      "lastSeenTurn": 1974,
+      "lastFailureTurn": 0,
+      "signatures": [
+        "sig-daily:she-is-a-student:order-blocks-1w70cq8",
+        "sig-daily:she-is-a-student:listen-ooh29a",
+        "sig-daily:original:A1-03-02-e05-17rsh7z",
+        "sig-daily:she-is-a-student:write-uhf3h0",
+        "sig-daily:she-is-a-student:listen-gap-3a0xk3",
+        "sig-daily:original:A1-03-02-e01-16nu2g3",
+        "sig-daily:she-is-a-student:meaning-1rf83os"
+      ],
+      "transfer": false,
+      "readyAt": 1791000860000,
+      "contexts": [
+        "phrase:she-is-a-student"
+      ],
+      "evidence": {
+        "recognition": {
+          "attempts": 5,
+          "independent": 5,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 5000
+        },
+        "recall": {
+          "attempts": 2,
+          "independent": 2,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 2000
+        },
+        "laterSession": {
+          "attempts": 2,
+          "independent": 2,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 2000
+        }
+      },
+      "lastSessionId": "1791008800000-adaptive-wzi7ce",
+      "lastEvidenceAt": 1791001331000,
+      "speechMaterials": [
+        "she-is-a-student"
+      ],
+      "independentRecallAt": 1791000860000
+    },
+    "we-are-students": {
+      "introducedAt": 1791005100000,
+      "confidence": 1,
+      "abilities": {
+        "writing": 1,
+        "meaning": 0.456,
+        "listening": 0.36
+      },
+      "lastSeenTurn": 2011,
+      "lastFailureTurn": 0,
+      "signatures": [
+        "sig-daily:we-are-students:write-zxs5mb",
+        "sig-daily:original:A1-03-03-e03-qgnebu",
+        "sig-daily:we-are-students:meaning-19dfoj7",
+        "sig-daily:pairs:audio:they-are-students,they-are-teachers,we-are-students,we-are-teachers-14yxtaj",
+        "sig-daily:original:A1-03-06-r02-vlvtzn",
+        "sig-daily:we-are-students:listen-gap-1t9dgzm",
+        "sig-daily:we-are-students:order-words-xfz0lg",
+        "sig-daily:pairs:text:they-are-students,they-are-teachers,we-are-students,we-are-teachers-f8j2c",
+        "sig-daily:we-are-students:expression-fqr33q"
+      ],
+      "transfer": false,
+      "readyAt": 1791000823000,
+      "speechMaterials": [
+        "we-are-students"
+      ],
+      "contexts": [
+        "phrase:we-are-students"
+      ],
+      "independentRecallAt": 1791000788000,
+      "evidence": {
+        "recall": {
+          "attempts": 1,
+          "independent": 1,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 1000
+        },
+        "recognition": {
+          "attempts": 3,
+          "independent": 3,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 3000
+        },
+        "newContext": {
+          "attempts": 2,
+          "independent": 2,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 2000
+        }
+      },
+      "lastSessionId": "1791014300000-adaptive-1kfbs1",
+      "lastEvidenceAt": 1791002010000
+    },
+    "they-are-teachers": {
+      "introducedAt": 1791005200000,
+      "confidence": 1,
+      "abilities": {
+        "meaning": 0.7164,
+        "writing": 0.6000000000000001,
+        "listening": 0.72
+      },
+      "lastSeenTurn": 2019,
+      "lastFailureTurn": 0,
+      "signatures": [
+        "sig-daily:original:A1-03-06-e02-1i66b0a",
+        "sig-daily:they-are-teachers:write-1cqk0bm",
+        "sig-daily:they-are-teachers:listen-8pu06w",
+        "sig-daily:pairs:audio:they-are-students,they-are-teachers,we-are-students,we-are-teachers-14yxtaj",
+        "sig-daily:they-are-teachers:order-ml1ez5",
+        "sig-daily:they-are-teachers:listen-gap-myxn01",
+        "sig-daily:they-are-teachers:expression-1sgfof5",
+        "sig-daily:pairs:text:they-are-students,they-are-teachers,we-are-students,we-are-teachers-f8j2c",
+        "sig-daily:original:A1-03-03-e02-qqn00t"
+      ],
+      "transfer": false,
+      "readyAt": 1791000804000,
+      "speechMaterials": [
+        "they-are-teachers"
+      ],
+      "contexts": [
+        "phrase:they-are-teachers"
+      ],
+      "evidence": {
+        "recall": {
+          "attempts": 1,
+          "independent": 1,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 1000
+        },
+        "recognition": {
+          "attempts": 3,
+          "independent": 3,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 3000
+        },
+        "newContext": {
+          "attempts": 2,
+          "independent": 2,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 2000
+        }
+      },
+      "lastSessionId": "1791014400000-adaptive-bbsyef",
+      "lastEvidenceAt": 1791002018000,
+      "independentRecallAt": 1791000804000
+    },
+    "they-are-students": {
+      "introducedAt": 1791005300000,
+      "confidence": 1,
+      "abilities": {
+        "listening": 0.456,
+        "writing": 0.9564000000000001,
+        "meaning": 0.192
+      },
+      "lastSeenTurn": 1984,
+      "lastFailureTurn": 0,
+      "signatures": [
+        "sig-daily:they-are-students:listen-3shq0x",
+        "sig-daily:pairs:audio:they-are-students,they-are-teachers,we-are-students,we-are-teachers-14yxtaj",
+        "sig-daily:original:A1-03-03-e04-p2pduz",
+        "sig-daily:they-are-students:listen-gap-1j23s5k",
+        "sig-daily:they-are-students:write-1ed0um9",
+        "sig-daily:they-are-students:meaning-6qmdhp",
+        "sig-daily:they-are-students:order-words-b0ys5a",
+        "sig-daily:pairs:text:they-are-students,they-are-teachers,we-are-students,we-are-teachers-f8j2c"
+      ],
+      "transfer": false,
+      "readyAt": 1791001202000,
+      "speechMaterials": [
+        "they-are-students"
+      ],
+      "contexts": [
+        "phrase:they-are-students"
+      ],
+      "evidence": {
+        "recognition": {
+          "attempts": 4,
+          "independent": 4,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 4000
+        },
+        "newContext": {
+          "attempts": 2,
+          "independent": 2,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 2000
+        },
+        "recall": {
+          "attempts": 1,
+          "independent": 1,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 1000
+        },
+        "laterSession": {
+          "attempts": 1,
+          "independent": 1,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 1000
+        }
+      },
+      "lastSessionId": "1791013900000-adaptive-xk0v9h",
+      "lastEvidenceAt": 1791001983000,
+      "independentRecallAt": 1791001202000
+    },
+    "we-are-teachers": {
+      "introducedAt": 1791005400000,
+      "confidence": 1,
+      "abilities": {
+        "listening": 0.36,
+        "meaning": 0.4524,
+        "writing": 0.9564000000000001
+      },
+      "lastSeenTurn": 1957,
+      "lastFailureTurn": 0,
+      "signatures": [
+        "sig-daily:we-are-teachers:listen-ai0pum",
+        "sig-daily:we-are-teachers:order-words-4gpwyr",
+        "sig-daily:we-are-teachers:expression-115n1wz",
+        "sig-daily:we-are-teachers:meaning-jhltx8",
+        "sig-daily:we-are-teachers:order-1lgch4v",
+        "sig-daily:original:A1-03-03-e05-osps60",
+        "sig-daily:we-are-teachers:listen-gap-c25hrn"
+      ],
+      "transfer": false,
+      "readyAt": 1791001842000,
+      "speechMaterials": [
+        "we-are-teachers"
+      ],
+      "contexts": [
+        "phrase:we-are-teachers"
+      ],
+      "evidence": {
+        "recognition": {
+          "attempts": 2,
+          "independent": 2,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 2000
+        },
+        "recall": {
+          "attempts": 1,
+          "independent": 1,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 1000
+        },
+        "laterSession": {
+          "attempts": 1,
+          "independent": 1,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 1000
+        }
+      },
+      "lastSessionId": "1791013600000-adaptive-49vzea",
+      "lastEvidenceAt": 1791001956000,
+      "independentRecallAt": 1791001842000
+    },
+    "i-am-happy": {
+      "introducedAt": 1791005500000,
+      "confidence": 1,
+      "abilities": {
+        "meaning": 0.312,
+        "writing": 0.6000000000000001,
+        "listening": 0.45599999999999996
+      },
+      "lastSeenTurn": 1992,
+      "lastFailureTurn": 0,
+      "signatures": [
+        "sig-daily:i-am-happy:meaning-1pc8lxa",
+        "sig-daily:original:A1-03-04-e04-1tpvpvu",
+        "sig-daily:i-am-happy:listen-gap-jf7kfl",
+        "sig-daily:i-am-happy:write-1c34lk2",
+        "sig-daily:pairs:audio:he-is-tired,i-am-happy,i-am-tired,she-is-happy-855b0u",
+        "sig-daily:i-am-happy:expression-1owplup",
+        "sig-daily:i-am-happy:listen-1u3bym0"
+      ],
+      "transfer": false,
+      "readyAt": 1791000899000,
+      "contexts": [
+        "phrase:i-am-happy"
+      ],
+      "evidence": {
+        "recognition": {
+          "attempts": 3,
+          "independent": 3,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 3000
+        },
+        "recall": {
+          "attempts": 1,
+          "independent": 1,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 1000
+        },
+        "newContext": {
+          "attempts": 1,
+          "independent": 1,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 1000
+        }
+      },
+      "lastSessionId": "1791014000000-adaptive-17behvw",
+      "lastEvidenceAt": 1791001991000,
+      "speechMaterials": [
+        "i-am-happy"
+      ],
+      "independentRecallAt": 1791000899000
+    },
+    "i-am-tired": {
+      "introducedAt": 1791005600000,
+      "confidence": 1,
+      "abilities": {
+        "writing": 0.8640000000000001,
+        "meaning": 0.3564,
+        "listening": 0.456
+      },
+      "lastSeenTurn": 1998,
+      "lastFailureTurn": 0,
+      "signatures": [
+        "sig-daily:i-am-tired:write-78gygi",
+        "sig-daily:i-am-tired:listen-pfoyh4",
+        "sig-daily:pairs:audio:he-is-tired,i-am-happy,i-am-tired,she-is-happy-855b0u",
+        "sig-daily:i-am-tired:order-1ky3yip",
+        "sig-daily:i-am-tired:expression-14nzcgh",
+        "sig-daily:i-am-tired:order-words-1f5jdil",
+        "sig-daily:i-am-tired:listen-gap-5jck4h"
+      ],
+      "transfer": false,
+      "readyAt": 1791001015000,
+      "speechMaterials": [
+        "i-am-tired"
+      ],
+      "contexts": [
+        "phrase:i-am-tired"
+      ],
+      "independentRecallAt": 1791000845000,
+      "evidence": {
+        "recall": {
+          "attempts": 1,
+          "independent": 1,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 1000
+        },
+        "recognition": {
+          "attempts": 2,
+          "independent": 2,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 2000
+        },
+        "newContext": {
+          "attempts": 1,
+          "independent": 1,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 1000
+        }
+      },
+      "lastSessionId": "1791011900000-adaptive-1ffsgqm",
+      "lastEvidenceAt": 1791001792000
+    },
+    "she-is-happy": {
+      "introducedAt": 1791006000000,
+      "confidence": 1,
+      "abilities": {
+        "listening": 0.456,
+        "meaning": 0.36,
+        "writing": 1
+      },
+      "lastSeenTurn": 1963,
+      "lastFailureTurn": 0,
+      "signatures": [
+        "sig-daily:she-is-happy:listen-ywl5s3",
+        "sig-daily:she-is-happy:meaning-71gjzb",
+        "sig-daily:pairs:audio:he-is-tired,i-am-happy,i-am-tired,she-is-happy-855b0u",
+        "sig-daily:she-is-happy:write-16hrjif",
+        "sig-daily:she-is-happy:listen-gap-1o78t92",
+        "sig-daily:original:A1-03-04-e02-1s1y3q0",
+        "sig-daily:original:A1-03-04-r01-ntctgc",
+        "sig-daily:she-is-happy:order-1wajbao"
+      ],
+      "transfer": false,
+      "readyAt": 1791000960000,
+      "speechMaterials": [
+        "she-is-happy"
+      ],
+      "contexts": [
+        "phrase:she-is-happy"
+      ],
+      "evidence": {
+        "recognition": {
+          "attempts": 3,
+          "independent": 3,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 3000
+        },
+        "newContext": {
+          "attempts": 1,
+          "independent": 1,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 1000
+        },
+        "recall": {
+          "attempts": 3,
+          "independent": 3,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 3000
+        },
+        "laterSession": {
+          "attempts": 2,
+          "independent": 2,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 2000
+        }
+      },
+      "lastSessionId": "1791013700000-adaptive-e19m0o",
+      "lastEvidenceAt": 1791001962000,
+      "independentRecallAt": 1791001231000
+    },
+    "he-is-tired": {
+      "introducedAt": 1791006100000,
+      "confidence": 1,
+      "abilities": {
+        "writing": 1,
+        "meaning": 0.36,
+        "listening": 0.36
+      },
+      "lastSeenTurn": 1993,
+      "lastFailureTurn": 0,
+      "signatures": [
+        "sig-daily:he-is-tired:write-1nnhrag",
+        "sig-daily:he-is-tired:order-1y9s6dv",
+        "sig-daily:he-is-tired:expression-1ydzq1j",
+        "sig-daily:he-is-tired:meaning-1l1w0v4",
+        "sig-daily:he-is-tired:listen-gap-uw3pzr",
+        "sig-daily:he-is-tired:order-words-t047ef",
+        "sig-daily:he-is-tired:listen-337kjm"
+      ],
+      "transfer": false,
+      "readyAt": 1791001111000,
+      "speechMaterials": [
+        "he-is-tired"
+      ],
+      "contexts": [
+        "phrase:he-is-tired"
+      ],
+      "independentRecallAt": 1791000929000,
+      "evidence": {
+        "recall": {
+          "attempts": 1,
+          "independent": 1,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 1000
+        },
+        "recognition": {
+          "attempts": 2,
+          "independent": 2,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 2000
+        }
+      },
+      "lastSessionId": "1791012500000-adaptive-12yy6hz",
+      "lastEvidenceAt": 1791001858000
+    },
+    "they-are-happy": {
+      "introducedAt": 1791006200000,
+      "confidence": 1,
+      "abilities": {
+        "meaning": 0.6708000000000001,
+        "listening": 0.4272,
+        "writing": 0.9816000000000001
+      },
+      "lastSeenTurn": 1973,
+      "lastFailureTurn": 0,
+      "signatures": [
+        "sig-daily:original:A1-03-04-e03-1sbxpez",
+        "sig-daily:they-are-happy:order-1atd4oc",
+        "sig-daily:they-are-happy:meaning-1qjo8wz",
+        "sig-daily:they-are-happy:listen-t5bf73",
+        "sig-daily:they-are-happy:expression-1v0ovdy",
+        "sig-daily:they-are-happy:listen-gap-8bhtma",
+        "sig-daily:they-are-happy:write-1fw1qir"
+      ],
+      "transfer": false,
+      "readyAt": 1791000989000,
+      "speechMaterials": [
+        "they-are-happy"
+      ],
+      "contexts": [
+        "phrase:they-are-happy"
+      ],
+      "evidence": {
+        "recognition": {
+          "attempts": 5,
+          "independent": 5,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 5000
+        },
+        "recall": {
+          "attempts": 2,
+          "independent": 2,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 2000
+        },
+        "laterSession": {
+          "attempts": 2,
+          "independent": 2,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 2000
+        }
+      },
+      "lastSessionId": "1791013800000-adaptive-nsn8n3",
+      "lastEvidenceAt": 1791001972000,
+      "independentRecallAt": 1791001972000
+    },
+    "who-is-he": {
+      "introducedAt": 1791006300000,
+      "confidence": 1,
+      "abilities": {
+        "writing": 0.9564000000000001,
+        "listening": 0.096,
+        "meaning": 0.264
+      },
+      "lastSeenTurn": 1932,
+      "lastFailureTurn": 0,
+      "signatures": [
+        "sig-daily:who-is-he:listen-2jnyri",
+        "sig-daily:who-is-he:write-987c6c",
+        "sig-daily:who-is-he:order-words-v89j0j",
+        "sig-daily:who-is-he:expression-1jc86kz",
+        "sig-daily:who-is-he:order-1qrt067"
+      ],
+      "transfer": false,
+      "readyAt": 1791001056000,
+      "speechMaterials": [
+        "who-is-he"
+      ],
+      "contexts": [
+        "phrase:who-is-he"
+      ],
+      "evidence": {
+        "recognition": {
+          "attempts": 1,
+          "independent": 1,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 1000
+        },
+        "recall": {
+          "attempts": 1,
+          "independent": 1,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 1000
+        }
+      },
+      "lastSessionId": "1791009100000-adaptive-1q9n37l",
+      "lastEvidenceAt": 1791001382000,
+      "independentRecallAt": 1791001034000
+    },
+    "who-is-she": {
+      "introducedAt": 1791006400000,
+      "confidence": 1,
+      "abilities": {
+        "listening": 0.42119999999999996,
+        "writing": 0.8640000000000001,
+        "meaning": 0.264
+      },
+      "lastSeenTurn": 2013,
+      "lastFailureTurn": 0,
+      "signatures": [
+        "sig-daily:who-is-she:listen-a0p3vl",
+        "sig-daily:who-is-she:order-1f02kfy",
+        "sig-daily:who-is-she:expression-5f0vd0",
+        "sig-daily:who-is-she:order-words-6z647y",
+        "sig-daily:original:A1-03-05-r01-1n6awzn",
+        "sig-daily:who-is-she:listen-gap-16mbvs8"
+      ],
+      "transfer": false,
+      "readyAt": 1791001862000,
+      "contexts": [
+        "phrase:who-is-she"
+      ],
+      "evidence": {
+        "recognition": {
+          "attempts": 2,
+          "independent": 2,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 2000
+        },
+        "recall": {
+          "attempts": 1,
+          "independent": 1,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 1000
+        },
+        "laterSession": {
+          "attempts": 1,
+          "independent": 1,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 1000
+        }
+      },
+      "lastSessionId": "1791014300000-adaptive-1kfbs1",
+      "lastEvidenceAt": 1791002012000,
+      "speechMaterials": [
+        "who-is-she"
+      ],
+      "independentRecallAt": 1791001862000
+    },
+    "is-he-a-teacher": {
+      "introducedAt": 1791006500000,
+      "confidence": 1,
+      "abilities": {
+        "writing": 0.7632,
+        "meaning": 0.3936,
+        "listening": 0.264
+      },
+      "lastSeenTurn": 2048,
+      "lastFailureTurn": 0,
+      "signatures": [
+        "sig-daily:is-he-a-teacher:listen-gap-1t6g6hr",
+        "sig-daily:is-he-a-teacher:write-xd8iq8",
+        "sig-daily:is-he-a-teacher:order-words-t0093z",
+        "sig-daily:is-he-a-teacher:order-blocks-1vmzoik",
+        "sig-daily:is-he-a-teacher:meaning-w4gqc8",
+        "sig-daily:is-he-a-teacher:expression-103odr3"
+      ],
+      "transfer": false,
+      "readyAt": 1791001320000,
+      "speechMaterials": [
+        "is-he-a-teacher"
+      ],
+      "contexts": [
+        "phrase:is-he-a-teacher"
+      ],
+      "evidence": {
+        "recognition": {
+          "attempts": 5,
+          "independent": 5,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 5000
+        },
+        "recall": {
+          "attempts": 1,
+          "independent": 1,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 1000
+        }
+      },
+      "lastSessionId": "1791014700000-adaptive-14lxu9n",
+      "lastEvidenceAt": 1791002047000,
+      "independentRecallAt": 1791001081000
+    },
+    "is-she-a-student": {
+      "introducedAt": 1791006600000,
+      "confidence": 1,
+      "abilities": {
+        "listening": 0.624,
+        "writing": 0.8640000000000001,
+        "meaning": 0.36
+      },
+      "lastSeenTurn": 1945,
+      "lastFailureTurn": 0,
+      "signatures": [
+        "sig-daily:is-she-a-student:listen-gap-i1iynp",
+        "sig-daily:is-she-a-student:order-r75ig5",
+        "sig-daily:is-she-a-student:expression-9cqxrp",
+        "sig-daily:is-she-a-student:meaning-1ndnvvm",
+        "sig-daily:is-she-a-student:write-1oei9jq",
+        "sig-daily:original:A1-03-05-e02-7q7etj",
+        "sig-daily:is-she-a-student:order-words-1liwx2p",
+        "sig-daily:is-she-a-student:listen-7arrg"
+      ],
+      "transfer": false,
+      "readyAt": 1791001569000,
+      "speechMaterials": [
+        "is-she-a-student"
+      ],
+      "contexts": [
+        "phrase:is-she-a-student"
+      ],
+      "evidence": {
+        "recognition": {
+          "attempts": 2,
+          "independent": 2,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 2000
+        },
+        "recall": {
+          "attempts": 1,
+          "independent": 1,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 1000
+        },
+        "laterSession": {
+          "attempts": 1,
+          "independent": 1,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 1000
+        }
+      },
+      "lastSessionId": "1791013200000-adaptive-109hivq",
+      "lastEvidenceAt": 1791001928000,
+      "independentRecallAt": 1791001569000
+    },
+    "yes-he-is": {
+      "introducedAt": 1791006700000,
+      "confidence": 1,
+      "abilities": {
+        "listening": 0.36,
+        "meaning": 0.1296,
+        "writing": 0.8136000000000001
+      },
+      "lastSeenTurn": 1950,
+      "lastFailureTurn": 0,
+      "signatures": [
+        "sig-daily:yes-he-is:listen-14v6peh",
+        "sig-daily:yes-he-is:listen-gap-ko8uvk",
+        "sig-daily:yes-he-is:meaning-kk0ykl",
+        "sig-daily:yes-he-is:order-o37zty",
+        "sig-daily:yes-he-is:write-1a5tnxl",
+        "sig-daily:yes-he-is:order-words-1ubbwzq"
+      ],
+      "transfer": false,
+      "readyAt": 1791001531000,
+      "speechMaterials": [
+        "yes-he-is"
+      ],
+      "contexts": [
+        "phrase:yes-he-is"
+      ],
+      "evidence": {
+        "recognition": {
+          "attempts": 3,
+          "independent": 3,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 3000
+        },
+        "recall": {
+          "attempts": 2,
+          "independent": 2,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 2000
+        },
+        "laterSession": {
+          "attempts": 1,
+          "independent": 1,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 1000
+        }
+      },
+      "lastSessionId": "1791010600000-adaptive-1um3eli",
+      "lastEvidenceAt": 1791001608000,
+      "independentRecallAt": 1791001531000
+    },
+    "no-she-isnt": {
+      "introducedAt": 1791006900000,
+      "confidence": 1,
+      "abilities": {
+        "listening": 0.264,
+        "writing": 0.672,
+        "meaning": 0.264
+      },
+      "lastSeenTurn": 1650,
+      "lastFailureTurn": 0,
+      "signatures": [
+        "sig-daily:no-she-isnt:listen-gap-nehipn",
+        "sig-daily:no-she-isnt:write-kk22b0",
+        "sig-daily:no-she-isnt:expression-18ealnf",
+        "sig-daily:original:A1-03-05-e05-6w8lqm"
+      ],
+      "transfer": false,
+      "readyAt": 1791001649000,
+      "speechMaterials": [
+        "no-she-isnt"
+      ],
+      "contexts": [
+        "phrase:no-she-isnt"
+      ],
+      "evidence": {
+        "recall": {
+          "attempts": 2,
+          "independent": 2,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 2000
+        },
+        "laterSession": {
+          "attempts": 2,
+          "independent": 2,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 2000
+        }
+      },
+      "lastSessionId": "1791010800000-adaptive-f3qlv9",
+      "lastEvidenceAt": 1791001649000,
+      "independentRecallAt": 1791001649000
+    },
+    "ben-introduction": {
+      "introducedAt": 1791007200000,
+      "confidence": 1,
+      "abilities": {
+        "meaning": 0.486,
+        "writing": 0.7176,
+        "listening": 0.3564
+      },
+      "lastSeenTurn": 2047,
+      "lastFailureTurn": 0,
+      "signatures": [
+        "sig-daily:ben-introduction:write-1vo65s1",
+        "sig-daily:ben-introduction:meaning-x6et8t",
+        "sig-daily:ben-introduction:expression-1o436as",
+        "sig-daily:original:A1-03-06-r01-vvvfom",
+        "sig-daily:ben-introduction:order-exu3by"
+      ],
+      "transfer": false,
+      "readyAt": 1791002042000,
+      "speechMaterials": [
+        "he-is-a-teacher",
+        "ben-introduction"
+      ],
+      "contexts": [
+        "phrase:ben-introduction"
+      ],
+      "evidence": {
+        "recall": {
+          "attempts": 2,
+          "independent": 2,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 2000
+        },
+        "laterSession": {
+          "attempts": 2,
+          "independent": 2,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 2000
+        },
+        "recognition": {
+          "attempts": 2,
+          "independent": 2,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 2000
+        }
+      },
+      "lastSessionId": "1791014700000-adaptive-14lxu9n",
+      "lastEvidenceAt": 1791002042000,
+      "independentRecallAt": 1791001216000
+    },
+    "mia-introduction": {
+      "introducedAt": 1791007300000,
+      "confidence": 1,
+      "abilities": {
+        "listening": 0.306,
+        "meaning": 0.5448,
+        "writing": 0.336
+      },
+      "lastSeenTurn": 1974,
+      "lastFailureTurn": 0,
+      "signatures": [
+        "sig-daily:mia-introduction:listen-1g6c9yl",
+        "sig-daily:mia-introduction:write-1kx4hr1",
+        "sig-daily:mia-introduction:meaning-x2qya1",
+        "sig-daily:original:A1-03-06-e01-1hw6pbb",
+        "sig-daily:mia-introduction:expression-1k22334"
+      ],
+      "transfer": false,
+      "readyAt": 1791001967000,
+      "contexts": [
+        "phrase:mia-introduction"
+      ],
+      "evidence": {
+        "recognition": {
+          "attempts": 3,
+          "independent": 3,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 3000
+        },
+        "recall": {
+          "attempts": 1,
+          "independent": 1,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 1000
+        }
+      },
+      "lastSessionId": "1791013700000-adaptive-e19m0o",
+      "lastEvidenceAt": 1791001967000,
+      "speechMaterials": [
+        "she-is-a-student"
+      ],
+      "independentRecallAt": 1791001187000
+    },
+    "what-is-it": {
+      "introducedAt": 1791007400000,
+      "confidence": 1,
+      "abilities": {
+        "listening": 0.36,
+        "writing": 0.8640000000000001,
+        "meaning": 0.36
+      },
+      "lastSeenTurn": 1881,
+      "lastFailureTurn": 0,
+      "signatures": [
+        "sig-daily:what-is-it:listen-gap-xsn3c7",
+        "sig-daily:what-is-it:order-words-1e6zjb",
+        "sig-daily:original:A1-04-01-e05-4j6nat",
+        "sig-daily:what-is-it:order-qlbwo3",
+        "sig-daily:what-is-it:expression-1b3oazr",
+        "sig-daily:pairs:text:it-is-a-bag,it-is-a-book,it-is-a-pen,what-is-it-ozj5a8",
+        "sig-daily:pairs:audio:it-is-a-bag,it-is-a-book,it-is-a-pen,what-is-it-mnmpnz"
+      ],
+      "transfer": false,
+      "readyAt": 1791001151000,
+      "speechMaterials": [
+        "what-is-it"
+      ],
+      "contexts": [
+        "phrase:what-is-it"
+      ],
+      "evidence": {
+        "recall": {
+          "attempts": 1,
+          "independent": 1,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 1000
+        },
+        "laterSession": {
+          "attempts": 1,
+          "independent": 1,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 1000
+        },
+        "recognition": {
+          "attempts": 2,
+          "independent": 2,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 2000
+        },
+        "newContext": {
+          "attempts": 2,
+          "independent": 2,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 2000
+        }
+      },
+      "lastSessionId": "1791012800000-adaptive-1w932d7",
+      "lastEvidenceAt": 1791001880000,
+      "independentRecallAt": 1791001151000
+    },
+    "it-is-a-book": {
+      "introducedAt": 1791007600000,
+      "confidence": 1,
+      "abilities": {
+        "writing": 0.7296,
+        "listening": 0.45599999999999996,
+        "meaning": 0.6408
+      },
+      "lastSeenTurn": 1881,
+      "lastFailureTurn": 0,
+      "signatures": [
+        "sig-daily:it-is-a-book:listen-k8wmn9",
+        "sig-daily:it-is-a-book:order-blocks-1q102cb",
+        "sig-daily:it-is-a-book:write-1fo6p1h",
+        "sig-daily:it-is-a-book:meaning-18p49oh",
+        "sig-daily:it-is-a-book:order-words-tlqgtu",
+        "sig-daily:pairs:text:it-is-a-bag,it-is-a-book,it-is-a-pen,what-is-it-ozj5a8",
+        "sig-daily:original:A1-04-01-r02-fu54zx",
+        "sig-daily:it-is-a-book:expression-ytdew8",
+        "sig-daily:pairs:audio:it-is-a-bag,it-is-a-book,it-is-a-pen,what-is-it-mnmpnz"
+      ],
+      "transfer": false,
+      "readyAt": 1791001613000,
+      "speechMaterials": [
+        "it-is-a-book"
+      ],
+      "contexts": [
+        "phrase:it-is-a-book"
+      ],
+      "evidence": {
+        "recognition": {
+          "attempts": 6,
+          "independent": 6,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 6000
+        },
+        "recall": {
+          "attempts": 1,
+          "independent": 1,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 1000
+        },
+        "laterSession": {
+          "attempts": 1,
+          "independent": 1,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 1000
+        },
+        "newContext": {
+          "attempts": 2,
+          "independent": 2,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 2000
+        }
+      },
+      "lastSessionId": "1791012800000-adaptive-1w932d7",
+      "lastEvidenceAt": 1791001880000,
+      "independentRecallAt": 1791001195000
+    },
+    "it-is-a-pen": {
+      "introducedAt": 1791007700000,
+      "confidence": 1,
+      "abilities": {
+        "writing": 1,
+        "listening": 0.48960000000000004,
+        "meaning": 0.36
+      },
+      "lastSeenTurn": 2046,
+      "lastFailureTurn": 0,
+      "signatures": [
+        "sig-daily:it-is-a-pen:order-blocks-x4u263",
+        "sig-daily:it-is-a-pen:listen-1q3v1vp",
+        "sig-daily:original:A1-04-01-e04-4971lu",
+        "sig-daily:it-is-a-pen:listen-gap-1caxuho",
+        "sig-daily:pairs:text:it-is-a-bag,it-is-a-book,it-is-a-pen,what-is-it-ozj5a8",
+        "sig-daily:it-is-a-pen:expression-k6b4g8",
+        "sig-daily:pairs:audio:it-is-a-bag,it-is-a-book,it-is-a-pen,what-is-it-mnmpnz",
+        "sig-daily:it-is-a-pen:write-1r134v9",
+        "sig-daily:it-is-a-pen:order-904yia"
+      ],
+      "transfer": false,
+      "readyAt": 1791001690000,
+      "speechMaterials": [
+        "it-is-a-pen"
+      ],
+      "contexts": [
+        "phrase:it-is-a-pen"
+      ],
+      "evidence": {
+        "recognition": {
+          "attempts": 5,
+          "independent": 5,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 5000
+        },
+        "recall": {
+          "attempts": 2,
+          "independent": 2,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 2000
+        },
+        "laterSession": {
+          "attempts": 2,
+          "independent": 2,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 2000
+        },
+        "newContext": {
+          "attempts": 2,
+          "independent": 2,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 2000
+        }
+      },
+      "lastSessionId": "1791014500000-adaptive-l36l0u",
+      "lastEvidenceAt": 1791002026000,
+      "independentRecallAt": 1791001932000
+    },
+    "it-is-a-bag": {
+      "introducedAt": 1791007800000,
+      "confidence": 1,
+      "abilities": {
+        "listening": 0.4044,
+        "meaning": 0.264,
+        "writing": 0.8640000000000001
+      },
+      "lastSeenTurn": 1893,
+      "lastFailureTurn": 0,
+      "signatures": [
+        "sig-daily:it-is-a-bag:listen-1svauie",
+        "sig-daily:it-is-a-bag:expression-s3ajbv",
+        "sig-daily:it-is-a-bag:order-words-1q0vhd7",
+        "sig-daily:it-is-a-bag:order-1nxrmfb",
+        "sig-daily:it-is-a-bag:listen-gap-jhp5mj",
+        "sig-daily:it-is-a-bag:write-1bf3vxo"
+      ],
+      "transfer": false,
+      "readyAt": 1791001892000,
+      "contexts": [
+        "phrase:it-is-a-bag"
+      ],
+      "evidence": {
+        "recognition": {
+          "attempts": 1,
+          "independent": 1,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 1000
+        },
+        "recall": {
+          "attempts": 1,
+          "independent": 1,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 1000
+        },
+        "laterSession": {
+          "attempts": 1,
+          "independent": 1,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 1000
+        }
+      },
+      "lastSessionId": "1791012900000-adaptive-6zcn0i",
+      "lastEvidenceAt": 1791001892000,
+      "speechMaterials": [
+        "it-is-a-bag"
+      ],
+      "independentRecallAt": 1791001892000
+    },
+    "it-is-an-apple": {
+      "introducedAt": 1791007900000,
+      "confidence": 1,
+      "abilities": {
+        "meaning": 0.1152,
+        "listening": 0.36,
+        "writing": 0.6000000000000001
+      },
+      "lastSeenTurn": 2016,
+      "lastFailureTurn": 0,
+      "signatures": [
+        "sig-daily:it-is-an-apple:listen-gap-48o2c3",
+        "sig-daily:original:A1-04-02-e05-1wm1hx8",
+        "sig-daily:it-is-an-apple:listen-la2oou",
+        "sig-daily:original:A1-04-02-e03-1w22aja",
+        "sig-daily:it-is-an-apple:meaning-1qjx330"
+      ],
+      "transfer": false,
+      "readyAt": 1791001407000,
+      "contexts": [
+        "phrase:it-is-an-apple"
+      ],
+      "evidence": {
+        "recognition": {
+          "attempts": 4,
+          "independent": 4,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 4000
+        },
+        "recall": {
+          "attempts": 1,
+          "independent": 1,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 1000
+        },
+        "laterSession": {
+          "attempts": 1,
+          "independent": 1,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 1000
+        }
+      },
+      "lastSessionId": "1791014300000-adaptive-1kfbs1",
+      "lastEvidenceAt": 1791002015000,
+      "speechMaterials": [
+        "it-is-an-apple"
+      ],
+      "independentRecallAt": 1791001224000
+    },
+    "it-is-an-egg": {
+      "introducedAt": 1791008000000,
+      "confidence": 1,
+      "abilities": {
+        "meaning": 0.3564,
+        "writing": 0.8640000000000001,
+        "listening": 0.624
+      },
+      "lastSeenTurn": 2038,
+      "lastFailureTurn": 0,
+      "signatures": [
+        "sig-daily:it-is-an-egg:order-7efm3m",
+        "sig-daily:it-is-an-egg:listen-1ya98et",
+        "sig-daily:it-is-an-egg:expression-54h6uw",
+        "sig-daily:it-is-an-egg:listen-gap-o6pevg",
+        "sig-daily:it-is-an-egg:order-words-1uls5lu",
+        "sig-daily:original:A1-04-02-e02-1wc1w89",
+        "sig-daily:it-is-an-egg:write-kc55it"
+      ],
+      "transfer": false,
+      "readyAt": 1791001912000,
+      "speechMaterials": [
+        "it-is-an-egg"
+      ],
+      "contexts": [
+        "phrase:it-is-an-egg"
+      ],
+      "evidence": {
+        "recognition": {
+          "attempts": 1,
+          "independent": 1,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 1000
+        },
+        "recall": {
+          "attempts": 1,
+          "independent": 1,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 1000
+        },
+        "laterSession": {
+          "attempts": 1,
+          "independent": 1,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 1000
+        }
+      },
+      "lastSessionId": "1791013100000-adaptive-qi3w9c",
+      "lastEvidenceAt": 1791001912000,
+      "independentRecallAt": 1791001912000
+    },
+    "this-is-a-book": {
+      "introducedAt": 1791008200000,
+      "confidence": 1,
+      "abilities": {
+        "listening": 0.5448,
+        "writing": 0.8640000000000001,
+        "meaning": 0.264
+      },
+      "lastSeenTurn": 1960,
+      "lastFailureTurn": 0,
+      "signatures": [
+        "sig-daily:this-is-a-book:order-words-1yfgpbj",
+        "sig-daily:this-is-a-book:listen-gap-o0p2bz",
+        "sig-daily:pairs:audio:that-is-a-bag,that-is-a-book,this-is-a-book,this-is-a-pen-10ucpt0",
+        "sig-daily:this-is-a-book:write-28bmjk",
+        "sig-daily:original:A1-04-03-e01-y6497j",
+        "sig-daily:this-is-a-book:order-v0zlij"
+      ],
+      "transfer": false,
+      "readyAt": 1791001348000,
+      "speechMaterials": [
+        "this-is-a-book"
+      ],
+      "contexts": [
+        "phrase:this-is-a-book"
+      ],
+      "evidence": {
+        "recognition": {
+          "attempts": 1,
+          "independent": 1,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 1000
+        },
+        "newContext": {
+          "attempts": 1,
+          "independent": 1,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 1000
+        },
+        "recall": {
+          "attempts": 1,
+          "independent": 1,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 1000
+        },
+        "laterSession": {
+          "attempts": 1,
+          "independent": 1,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 1000
+        }
+      },
+      "lastSessionId": "1791013600000-adaptive-49vzea",
+      "lastEvidenceAt": 1791001959000,
+      "independentRecallAt": 1791001348000
+    },
+    "that-is-a-bag": {
+      "introducedAt": 1791008300000,
+      "confidence": 1,
+      "abilities": {
+        "meaning": 0.1152,
+        "writing": 0.6960000000000001,
+        "listening": 0.45239999999999997
+      },
+      "lastSeenTurn": 2045,
+      "lastFailureTurn": 0,
+      "signatures": [
+        "sig-daily:that-is-a-bag:order-blocks-1yxgwkc",
+        "sig-daily:that-is-a-bag:write-1uls3bk",
+        "sig-daily:pairs:audio:that-is-a-bag,that-is-a-book,this-is-a-book,this-is-a-pen-10ucpt0",
+        "sig-daily:that-is-a-bag:meaning-7x2h5k",
+        "sig-daily:that-is-a-bag:order-1ezl9h7",
+        "sig-daily:that-is-a-bag:listen-gap-1mx28db"
+      ],
+      "transfer": false,
+      "readyAt": 1791001825000,
+      "contexts": [
+        "phrase:that-is-a-bag"
+      ],
+      "evidence": {
+        "recognition": {
+          "attempts": 5,
+          "independent": 5,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 5000
+        },
+        "recall": {
+          "attempts": 1,
+          "independent": 1,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 1000
+        },
+        "newContext": {
+          "attempts": 1,
+          "independent": 1,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 1000
+        }
+      },
+      "lastSessionId": "1791014700000-adaptive-14lxu9n",
+      "lastEvidenceAt": 1791002044000,
+      "independentRecallAt": 1791001324000,
+      "speechMaterials": [
+        "that-is-a-bag"
+      ]
+    },
+    "this-is-a-pen": {
+      "introducedAt": 1791008500000,
+      "confidence": 1,
+      "abilities": {
+        "meaning": 0.312,
+        "writing": 0.6960000000000001,
+        "listening": 0.36
+      },
+      "lastSeenTurn": 1906,
+      "lastFailureTurn": 0,
+      "signatures": [
+        "sig-daily:this-is-a-pen:meaning-15k4r6m",
+        "sig-daily:this-is-a-pen:order-blocks-14ombyy",
+        "sig-daily:pairs:audio:that-is-a-bag,that-is-a-book,this-is-a-book,this-is-a-pen-10ucpt0",
+        "sig-daily:this-is-a-pen:expression-fmu4h",
+        "sig-daily:this-is-a-pen:write-h1rrgi",
+        "sig-daily:this-is-a-pen:listen-gap-15f9rkh",
+        "sig-daily:this-is-a-pen:order-words-iy7471"
+      ],
+      "transfer": false,
+      "readyAt": 1791001905000,
+      "contexts": [
+        "phrase:this-is-a-pen"
+      ],
+      "evidence": {
+        "recognition": {
+          "attempts": 3,
+          "independent": 3,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 3000
+        },
+        "newContext": {
+          "attempts": 1,
+          "independent": 1,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 1000
+        },
+        "recall": {
+          "attempts": 1,
+          "independent": 1,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 1000
+        }
+      },
+      "lastSessionId": "1791013000000-adaptive-gqq9mx",
+      "lastEvidenceAt": 1791001905000,
+      "speechMaterials": [
+        "this-is-a-pen"
+      ],
+      "independentRecallAt": 1791001386000
+    },
+    "that-is-a-book": {
+      "introducedAt": 1791008800000,
+      "confidence": 1,
+      "abilities": {
+        "writing": 1,
+        "listening": 0.3564,
+        "meaning": 0.264
+      },
+      "lastSeenTurn": 2036,
+      "lastFailureTurn": 0,
+      "signatures": [
+        "sig-daily:original:A1-04-03-e04-ws68qo",
+        "sig-daily:that-is-a-book:write-y3djy1",
+        "sig-daily:that-is-a-book:listen-gap-1egxygw",
+        "sig-daily:that-is-a-book:order-16h8r9y",
+        "sig-daily:that-is-a-book:expression-is5vjw",
+        "sig-daily:that-is-a-book:order-words-1l9ru3a"
+      ],
+      "transfer": false,
+      "readyAt": 1791001370000,
+      "speechMaterials": [
+        "that-is-a-book"
+      ],
+      "contexts": [
+        "phrase:that-is-a-book"
+      ],
+      "evidence": {
+        "recall": {
+          "attempts": 1,
+          "independent": 1,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 1000
+        }
+      },
+      "lastSessionId": "1791013800000-adaptive-nsn8n3",
+      "lastEvidenceAt": 1791001970000,
+      "independentRecallAt": 1791001370000
+    },
+    "they-are-books": {
+      "introducedAt": 1791008900000,
+      "confidence": 1,
+      "abilities": {
+        "listening": 0.16319999999999998,
+        "writing": 0.9360000000000002,
+        "meaning": 0.264
+      },
+      "lastSeenTurn": 1869,
+      "lastFailureTurn": 0,
+      "signatures": [
+        "sig-daily:they-are-books:write-1lw5g1b",
+        "sig-daily:they-are-books:order-1npsrw8",
+        "sig-daily:original:A1-04-04-r02-1fopcn6",
+        "sig-daily:they-are-books:expression-1t4inmq",
+        "sig-daily:they-are-books:listen-1bpe02j"
+      ],
+      "transfer": false,
+      "readyAt": 1791001562000,
+      "speechMaterials": [
+        "they-are-books"
+      ],
+      "contexts": [
+        "phrase:they-are-books"
+      ],
+      "evidence": {
+        "recognition": {
+          "attempts": 3,
+          "independent": 3,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 3000
+        },
+        "recall": {
+          "attempts": 2,
+          "independent": 2,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 2000
+        },
+        "laterSession": {
+          "attempts": 2,
+          "independent": 2,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 2000
+        }
+      },
+      "lastSessionId": "1791012600000-adaptive-1cqbt4e",
+      "lastEvidenceAt": 1791001868000,
+      "independentRecallAt": 1791001562000
+    },
+    "they-are-pens": {
+      "introducedAt": 1791009100000,
+      "confidence": 1,
+      "abilities": {
+        "listening": 0.36,
+        "meaning": 0.36,
+        "writing": 0.8640000000000001
+      },
+      "lastSeenTurn": 2032,
+      "lastFailureTurn": 0,
+      "signatures": [
+        "sig-daily:they-are-pens:listen-wc6z01",
+        "sig-daily:they-are-pens:expression-1ekpe7o",
+        "sig-daily:original:A1-04-04-e03-11q2k4o",
+        "sig-daily:they-are-pens:listen-gap-an2gk8",
+        "sig-daily:original:A1-04-04-r01-1fepqy7",
+        "sig-daily:they-are-pens:write-1isu5gx",
+        "sig-daily:they-are-pens:meaning-13ajyvx"
+      ],
+      "transfer": false,
+      "readyAt": 1791001922000,
+      "speechMaterials": [
+        "they-are-pens"
+      ],
+      "contexts": [
+        "phrase:they-are-pens"
+      ],
+      "evidence": {
+        "recognition": {
+          "attempts": 2,
+          "independent": 2,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 2000
+        },
+        "recall": {
+          "attempts": 1,
+          "independent": 1,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 1000
+        },
+        "laterSession": {
+          "attempts": 1,
+          "independent": 1,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 1000
+        }
+      },
+      "lastSessionId": "1791014500000-adaptive-l36l0u",
+      "lastEvidenceAt": 1791002031000,
+      "independentRecallAt": 1791001922000
+    },
+    "they-are-apples": {
+      "introducedAt": 1791009200000,
+      "confidence": 1,
+      "abilities": {
+        "writing": 0.936,
+        "listening": 0.3564
+      },
+      "lastSeenTurn": 1911,
+      "lastFailureTurn": 0,
+      "signatures": [
+        "sig-daily:they-are-apples:write-ozrtfc",
+        "sig-daily:original:A1-04-04-e05-13e06ai",
+        "sig-daily:original:A1-04-04-e02-12025tn",
+        "sig-daily:they-are-apples:order-dkaz2b"
+      ],
+      "transfer": false,
+      "readyAt": 1791001430000,
+      "speechMaterials": [
+        "they-are-apples"
+      ],
+      "contexts": [
+        "phrase:they-are-apples"
+      ],
+      "independentRecallAt": 1791001424000,
+      "evidence": {
+        "recall": {
+          "attempts": 2,
+          "independent": 2,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 2000
+        },
+        "laterSession": {
+          "attempts": 1,
+          "independent": 1,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 1000
+        }
+      },
+      "lastSessionId": "1791013100000-adaptive-qi3w9c",
+      "lastEvidenceAt": 1791001910000
+    },
+    "these-are-books": {
+      "introducedAt": 1791009300000,
+      "confidence": 1,
+      "abilities": {
+        "meaning": 0.45599999999999996,
+        "writing": 0.768,
+        "listening": 0.5484
+      },
+      "lastSeenTurn": 2012,
+      "lastFailureTurn": 0,
+      "signatures": [
+        "sig-daily:these-are-books:meaning-1s59jry",
+        "sig-daily:these-are-books:write-10oc0aq",
+        "sig-daily:these-are-books:expression-5anzy9",
+        "sig-daily:these-are-books:listen-1xfwnvc",
+        "sig-daily:these-are-books:order-words-bk2cl9",
+        "sig-daily:pairs:text:these-are-apples,these-are-books,those-are-books,those-are-pens-1fw5a3h",
+        "sig-daily:pairs:audio:these-are-apples,these-are-books,those-are-books,those-are-pens-gn95fq",
+        "sig-daily:these-are-books:listen-gap-bobcb5",
+        "sig-daily:original:A1-04-05-e05-m72ukp"
+      ],
+      "transfer": false,
+      "readyAt": 1791001872000,
+      "speechMaterials": [
+        "these-are-books"
+      ],
+      "contexts": [
+        "phrase:these-are-books"
+      ],
+      "evidence": {
+        "recognition": {
+          "attempts": 4,
+          "independent": 4,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 4000
+        },
+        "recall": {
+          "attempts": 2,
+          "independent": 2,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 2000
+        },
+        "laterSession": {
+          "attempts": 2,
+          "independent": 2,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 2000
+        },
+        "newContext": {
+          "attempts": 2,
+          "independent": 2,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 2000
+        }
+      },
+      "lastSessionId": "1791012700000-adaptive-1mhpfqs",
+      "lastEvidenceAt": 1791001872000,
+      "independentRecallAt": 1791001872000
+    },
+    "those-are-pens": {
+      "introducedAt": 1791009400000,
+      "confidence": 1,
+      "abilities": {
+        "writing": 0.6000000000000001,
+        "listening": 0.36,
+        "meaning": 0.192
+      },
+      "lastSeenTurn": 2044,
+      "lastFailureTurn": 0,
+      "signatures": [
+        "sig-daily:those-are-pens:write-1dnruns",
+        "sig-daily:original:A1-04-05-e02-mh2g9o",
+        "sig-daily:pairs:text:these-are-apples,these-are-books,those-are-books,those-are-pens-1fw5a3h",
+        "sig-daily:those-are-pens:order-xnt0lf",
+        "sig-daily:pairs:audio:these-are-apples,these-are-books,those-are-books,those-are-pens-gn95fq",
+        "sig-daily:those-are-pens:meaning-1twzea8"
+      ],
+      "transfer": false,
+      "readyAt": 1791001584000,
+      "speechMaterials": [
+        "those-are-pens"
+      ],
+      "contexts": [
+        "phrase:those-are-pens"
+      ],
+      "independentRecallAt": 1791001439000,
+      "evidence": {
+        "recall": {
+          "attempts": 1,
+          "independent": 1,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 1000
+        },
+        "recognition": {
+          "attempts": 3,
+          "independent": 3,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 3000
+        },
+        "newContext": {
+          "attempts": 2,
+          "independent": 2,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 2000
+        }
+      },
+      "lastSessionId": "1791013100000-adaptive-qi3w9c",
+      "lastEvidenceAt": 1791001915000
+    },
+    "these-are-apples": {
+      "introducedAt": 1791009500000,
+      "confidence": 1,
+      "abilities": {
+        "meaning": 0.40800000000000003,
+        "writing": 0.7176000000000001,
+        "listening": 0.36
+      },
+      "lastSeenTurn": 1997,
+      "lastFailureTurn": 0,
+      "signatures": [
+        "sig-daily:these-are-apples:meaning-15tslzf",
+        "sig-daily:original:A1-04-05-e03-mr21yn",
+        "sig-daily:these-are-apples:expression-qezttq",
+        "sig-daily:pairs:text:these-are-apples,these-are-books,those-are-books,those-are-pens-1fw5a3h",
+        "sig-daily:pairs:audio:these-are-apples,these-are-books,those-are-books,those-are-pens-gn95fq",
+        "sig-daily:these-are-apples:write-10y4p4r",
+        "sig-daily:these-are-apples:listen-gap-yfgm96"
+      ],
+      "transfer": false,
+      "readyAt": 1791001538000,
+      "contexts": [
+        "phrase:these-are-apples"
+      ],
+      "evidence": {
+        "recognition": {
+          "attempts": 3,
+          "independent": 3,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 3000
+        },
+        "recall": {
+          "attempts": 2,
+          "independent": 2,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 2000
+        },
+        "newContext": {
+          "attempts": 2,
+          "independent": 2,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 2000
+        }
+      },
+      "lastSessionId": "1791014100000-adaptive-1h2s4ib",
+      "lastEvidenceAt": 1791001996000,
+      "speechMaterials": [
+        "these-are-apples"
+      ],
+      "independentRecallAt": 1791001665000
+    },
+    "those-are-books": {
+      "introducedAt": 1791009600000,
+      "confidence": 1,
+      "abilities": {
+        "meaning": 0.438,
+        "listening": 0.096,
+        "writing": 0.8640000000000001
+      },
+      "lastSeenTurn": 1995,
+      "lastFailureTurn": 0,
+      "signatures": [
+        "sig-daily:those-are-books:listen-1uqdd2i",
+        "sig-daily:those-are-books:meaning-h4jphk",
+        "sig-daily:those-are-books:order-1edvgmj",
+        "sig-daily:those-are-books:order-words-71k92n",
+        "sig-daily:those-are-books:write-9b8rog",
+        "sig-daily:those-are-books:expression-1elv7kf"
+      ],
+      "transfer": false,
+      "readyAt": 1791001832000,
+      "contexts": [
+        "phrase:those-are-books"
+      ],
+      "evidence": {
+        "recognition": {
+          "attempts": 3,
+          "independent": 3,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 3000
+        },
+        "recall": {
+          "attempts": 1,
+          "independent": 1,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 1000
+        },
+        "laterSession": {
+          "attempts": 1,
+          "independent": 1,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 1000
+        }
+      },
+      "lastSessionId": "1791014100000-adaptive-1h2s4ib",
+      "lastEvidenceAt": 1791001994000,
+      "speechMaterials": [
+        "those-are-books"
+      ],
+      "independentRecallAt": 1791001832000
+    },
+    "what-is-this": {
+      "introducedAt": 1791009700000,
+      "confidence": 1,
+      "abilities": {
+        "listening": 0.1296,
+        "meaning": 0.48960000000000004,
+        "writing": 0.9360000000000002
+      },
+      "lastSeenTurn": 1813,
+      "lastFailureTurn": 0,
+      "signatures": [
+        "sig-daily:what-is-this:listen-49qzxt",
+        "sig-daily:pairs:text:is-that-a-bag,origin-ben,what-is-this,yes-it-is-o2s11v",
+        "sig-daily:what-is-this:meaning-kb7sbh",
+        "sig-daily:what-is-this:order-yycju6",
+        "sig-daily:original:A1-04-06-e04-m5dy6b",
+        "sig-daily:what-is-this:expression-13ls9o4",
+        "sig-daily:what-is-this:write-1r04jch"
+      ],
+      "transfer": false,
+      "readyAt": 1791001759000,
+      "speechMaterials": [
+        "what-is-this"
+      ],
+      "contexts": [
+        "phrase:what-is-this"
+      ],
+      "evidence": {
+        "recognition": {
+          "attempts": 5,
+          "independent": 5,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 5000
+        },
+        "newContext": {
+          "attempts": 1,
+          "independent": 1,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 1000
+        },
+        "recall": {
+          "attempts": 2,
+          "independent": 2,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 2000
+        },
+        "laterSession": {
+          "attempts": 2,
+          "independent": 2,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 2000
+        }
+      },
+      "lastSessionId": "1791012100000-adaptive-1yyjpzg",
+      "lastEvidenceAt": 1791001812000,
+      "independentRecallAt": 1791001812000
+    },
+    "is-that-a-bag": {
+      "introducedAt": 1791009800000,
+      "confidence": 1,
+      "abilities": {
+        "writing": 0.6816,
+        "listening": 0.1296,
+        "meaning": 0.456
+      },
+      "lastSeenTurn": 1947,
+      "lastFailureTurn": 0,
+      "signatures": [
+        "sig-daily:is-that-a-bag:order-blocks-15z7t46",
+        "sig-daily:pairs:text:is-that-a-bag,origin-ben,what-is-this,yes-it-is-o2s11v",
+        "sig-daily:is-that-a-bag:write-10kqm2m",
+        "sig-daily:is-that-a-bag:order-es6v8t",
+        "sig-daily:is-that-a-bag:meaning-1ok2kre",
+        "sig-daily:is-that-a-bag:expression-1jv4ud9",
+        "sig-daily:is-that-a-bag:listen-333c1w"
+      ],
+      "transfer": false,
+      "readyAt": 1791001745000,
+      "contexts": [
+        "phrase:is-that-a-bag"
+      ],
+      "evidence": {
+        "recognition": {
+          "attempts": 6,
+          "independent": 6,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 6000
+        },
+        "newContext": {
+          "attempts": 1,
+          "independent": 1,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 1000
+        },
+        "recall": {
+          "attempts": 1,
+          "independent": 1,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 1000
+        }
+      },
+      "lastSessionId": "1791013500000-adaptive-1tjmeqy",
+      "lastEvidenceAt": 1791001946000,
+      "speechMaterials": [
+        "is-that-a-bag"
+      ],
+      "independentRecallAt": 1791001681000
+    },
+    "yes-it-is": {
+      "introducedAt": 1791010200000,
+      "confidence": 1,
+      "abilities": {
+        "listening": 0.19679999999999997,
+        "writing": 0.732,
+        "meaning": 0.264
+      },
+      "lastSeenTurn": 2010,
+      "lastFailureTurn": 0,
+      "signatures": [
+        "sig-daily:yes-it-is:order-141kqbo",
+        "sig-daily:yes-it-is:expression-1api1oe",
+        "sig-daily:yes-it-is:write-b2cad7",
+        "sig-daily:yes-it-is:listen-3ia9ef",
+        "sig-daily:yes-it-is:order-words-a40zn0"
+      ],
+      "transfer": false,
+      "readyAt": 1791001855000,
+      "speechMaterials": [
+        "yes-it-is"
+      ],
+      "contexts": [
+        "phrase:yes-it-is"
+      ],
+      "evidence": {
+        "recognition": {
+          "attempts": 4,
+          "independent": 4,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 4000
+        },
+        "recall": {
+          "attempts": 1,
+          "independent": 1,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 1000
+        },
+        "laterSession": {
+          "attempts": 1,
+          "independent": 1,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 1000
+        }
+      },
+      "lastSessionId": "1791012500000-adaptive-12yy6hz",
+      "lastEvidenceAt": 1791001855000,
+      "independentRecallAt": 1791001742000
+    },
+    "no-it-isnt": {
+      "introducedAt": 1791011100000,
+      "confidence": 1,
+      "abilities": {
+        "writing": 0.6000000000000001,
+        "listening": 0.264,
+        "meaning": 0.36
+      },
+      "lastSeenTurn": 1939,
+      "lastFailureTurn": 0,
+      "signatures": [
+        "sig-daily:no-it-isnt:order-y4t17y",
+        "sig-daily:no-it-isnt:write-1q6l0q9",
+        "sig-daily:no-it-isnt:listen-gap-7tclg8",
+        "sig-daily:no-it-isnt:meaning-1y1qhi5",
+        "sig-daily:no-it-isnt:expression-9vh2pg"
+      ],
+      "transfer": false,
+      "readyAt": 1791001771000,
+      "speechMaterials": [
+        "no-it-isnt"
+      ],
+      "contexts": [
+        "phrase:no-it-isnt"
+      ],
+      "evidence": {
+        "recall": {
+          "attempts": 1,
+          "independent": 1,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 1000
+        },
+        "laterSession": {
+          "attempts": 1,
+          "independent": 1,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 1000
+        },
+        "recognition": {
+          "attempts": 1,
+          "independent": 1,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 1000
+        }
+      },
+      "lastSessionId": "1791013400000-adaptive-1js8s4j",
+      "lastEvidenceAt": 1791001938000,
+      "independentRecallAt": 1791001766000
+    },
+    "objects-together": {
+      "introducedAt": 1791011200000,
+      "confidence": 0.9600000000000001,
+      "abilities": {
+        "meaning": 0.264,
+        "writing": 0.6000000000000001,
+        "listening": 0.096
+      },
+      "lastSeenTurn": 2026,
+      "lastFailureTurn": 0,
+      "signatures": [
+        "sig-daily:objects-together:expression-1ozq0vf",
+        "sig-daily:objects-together:order-d9480n",
+        "sig-daily:objects-together:write-y224ik",
+        "sig-daily:objects-together:listen-8foofa"
+      ],
+      "transfer": false,
+      "readyAt": 1791001782000,
+      "speechMaterials": [
+        "that-is-a-bag"
+      ],
+      "contexts": [
+        "phrase:objects-together"
+      ],
+      "evidence": {
+        "recall": {
+          "attempts": 1,
+          "independent": 1,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 1000
+        },
+        "laterSession": {
+          "attempts": 1,
+          "independent": 1,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 1000
+        },
+        "recognition": {
+          "attempts": 1,
+          "independent": 1,
+          "assisted": 0,
+          "revealed": 0,
+          "elapsedMs": 1000
+        }
+      },
+      "lastSessionId": "1791012100000-adaptive-1yyjpzg",
+      "lastEvidenceAt": 1791001810000,
+      "independentRecallAt": 1791001782000
+    }
+  }
+}

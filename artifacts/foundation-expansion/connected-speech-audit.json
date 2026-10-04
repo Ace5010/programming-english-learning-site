@@ -1,0 +1,331 @@
+{
+  "recognizer": "Windows en-US offline constrained grammar, System.Speech",
+  "method": "Actual MP3 decoded to 16 kHz PCM; recognizer-selected pronunciation variants and RMS silence measurement",
+  "recordings": [
+    {
+      "voice": "aria",
+      "text": "I can swim.",
+      "fileSha256": "5a104d54f0765f325839f5a1e9421a8e26bded535b597cf78b942679f34bd121",
+      "recognizerConfidence": 0.9825142,
+      "recognizerWords": [
+        {
+          "text": "I",
+          "pronunciation": "a͡i",
+          "confidence": 0.9900272
+        },
+        {
+          "text": "can",
+          "pronunciation": "kən",
+          "confidence": 0.9661526
+        },
+        {
+          "text": "swim",
+          "pronunciation": "swɪm",
+          "confidence": 0.98680043
+        }
+      ]
+    },
+    {
+      "voice": "aria",
+      "text": "a cup of tea",
+      "fileSha256": "fdf14846fa9495d8161be5495c73c1a6dadd927ebe0d3b2cc9f5f3d8d3802db7",
+      "recognizerConfidence": 0.90619034,
+      "recognizerWords": [
+        {
+          "text": "a",
+          "pronunciation": "ʌ",
+          "confidence": 0.66831195
+        },
+        {
+          "text": "cup",
+          "pronunciation": "kʌp",
+          "confidence": 0.8153357
+        },
+        {
+          "text": "of",
+          "pronunciation": "əv",
+          "confidence": 0.9766312
+        },
+        {
+          "text": "tea",
+          "pronunciation": "ti",
+          "confidence": 0.9907287
+        }
+      ]
+    },
+    {
+      "voice": "aria",
+      "text": "Pick it up.",
+      "fileSha256": "8a2556c347a28de7a0c45bf21cd9f9cc3234a9656e17356e0e5c78abb92b97b1",
+      "recognizerConfidence": 0.83795387,
+      "recognizerWords": [
+        {
+          "text": "Pick",
+          "pronunciation": "pɪk",
+          "confidence": 0.89935046
+        },
+        {
+          "text": "it",
+          "pronunciation": "ɪt",
+          "confidence": 0.18828368
+        },
+        {
+          "text": "up",
+          "pronunciation": "ʌp",
+          "confidence": 0.9797669
+        }
+      ]
+    },
+    {
+      "voice": "aria",
+      "text": "Turn it on.",
+      "fileSha256": "6ad73d66e2d99a02cbf2ab8da420356cd270caec0d69df2b4d2d079dd6d186ec",
+      "recognizerConfidence": 0.9885897,
+      "recognizerWords": [
+        {
+          "text": "Turn",
+          "pronunciation": "tɜn",
+          "confidence": 0.99162495
+        },
+        {
+          "text": "it",
+          "pronunciation": "ɪt",
+          "confidence": 0.9644929
+        },
+        {
+          "text": "on",
+          "pronunciation": "ɔn",
+          "confidence": 0.99138004
+        }
+      ]
+    },
+    {
+      "voice": "aria",
+      "text": "can",
+      "fileSha256": "3610f074b5d93cbdf29503b3e5dbeb9f96890481d3e3b983ed3f296554756461",
+      "recognizerConfidence": 0.9902309,
+      "recognizerWords": [
+        {
+          "text": "can",
+          "pronunciation": "kæn",
+          "confidence": 0.990231
+        }
+      ]
+    },
+    {
+      "voice": "aria",
+      "text": "a",
+      "fileSha256": "ef914e3e3ae10b422ff7463ea73239af0be4a580a5b33f6fdb7250b48a7a55a3",
+      "recognizerConfidence": 0.98398346,
+      "recognizerWords": [
+        {
+          "text": "a",
+          "pronunciation": "e͡i",
+          "confidence": 0.9839834
+        }
+      ]
+    },
+    {
+      "voice": "aria",
+      "text": "of",
+      "fileSha256": "d914174159dc402e033b1933fe842c08ffc7521fbd291882bdcb2cdb8f74d418",
+      "recognizerConfidence": 0.9886209,
+      "recognizerWords": [
+        {
+          "text": "of",
+          "pronunciation": "ʌv",
+          "confidence": 0.9886209
+        }
+      ]
+    },
+    {
+      "voice": "guy",
+      "text": "I can swim.",
+      "fileSha256": "0eeb8d14e31a93419925c2dcb81847baa93b21f79ae4b3227809fc837bc976f2",
+      "recognizerConfidence": 0.8024324,
+      "recognizerWords": [
+        {
+          "text": "I",
+          "pronunciation": "a͡i",
+          "confidence": 0.987117
+        },
+        {
+          "text": "can",
+          "pronunciation": "kən",
+          "confidence": 0.0039665294
+        },
+        {
+          "text": "swim",
+          "pronunciation": "swɪm",
+          "confidence": 0.97764826
+        }
+      ]
+    },
+    {
+      "voice": "guy",
+      "text": "a cup of tea",
+      "fileSha256": "87c7665f0e63b3fa4487f21feb8d0437920b87a9436de373769be013945dd390",
+      "recognizerConfidence": 0.93787956,
+      "recognizerWords": [
+        {
+          "text": "a",
+          "pronunciation": "ʌ",
+          "confidence": 0.9894393
+        },
+        {
+          "text": "cup",
+          "pronunciation": "kʌp",
+          "confidence": 0.7754542
+        },
+        {
+          "text": "of",
+          "pronunciation": "əv",
+          "confidence": 0.94349813
+        },
+        {
+          "text": "tea",
+          "pronunciation": "ti",
+          "confidence": 0.9888627
+        }
+      ]
+    },
+    {
+      "voice": "guy",
+      "text": "Pick it up.",
+      "fileSha256": "5da6e0219060455a0bed8e17f8b95cf81b47ee120f186a7a4138f11e5546262b",
+      "recognizerConfidence": 0.961942,
+      "recognizerWords": [
+        {
+          "text": "Pick",
+          "pronunciation": "pɪk",
+          "confidence": 0.9581558
+        },
+        {
+          "text": "it",
+          "pronunciation": "ɪt",
+          "confidence": 0.88858056
+        },
+        {
+          "text": "up",
+          "pronunciation": "ʌp",
+          "confidence": 0.9852913
+        }
+      ]
+    },
+    {
+      "voice": "guy",
+      "text": "Turn it on.",
+      "fileSha256": "8b3583e45e9abc5dac258dd55da56336037e76c0450f850a776441caf8689860",
+      "recognizerConfidence": 0.9774998,
+      "recognizerWords": [
+        {
+          "text": "Turn",
+          "pronunciation": "tɜn",
+          "confidence": 0.98859656
+        },
+        {
+          "text": "it",
+          "pronunciation": "ɪt",
+          "confidence": 0.9798494
+        },
+        {
+          "text": "on",
+          "pronunciation": "ɔn",
+          "confidence": 0.9679972
+        }
+      ]
+    },
+    {
+      "voice": "guy",
+      "text": "can",
+      "fileSha256": "df305a18d898268317d8463614d4d356f340d108eb01351d6e6628ca70def68e",
+      "recognizerConfidence": 0.98840153,
+      "recognizerWords": [
+        {
+          "text": "can",
+          "pronunciation": "kæn",
+          "confidence": 0.98840153
+        }
+      ]
+    },
+    {
+      "voice": "guy",
+      "text": "a",
+      "fileSha256": "2fa74967e3ee0e71a1bc0badf6da57b61d318671d3ff6381de52de89fbf741e8",
+      "recognizerConfidence": 0.9393124,
+      "recognizerWords": [
+        {
+          "text": "a",
+          "pronunciation": "e͡i",
+          "confidence": 0.9393124
+        }
+      ]
+    },
+    {
+      "voice": "guy",
+      "text": "of",
+      "fileSha256": "8260ac9bca1d7d9ef3a381bce93b39be1f65b10419b0d61acda57f5715c4febb",
+      "recognizerConfidence": 0.989018,
+      "recognizerWords": [
+        {
+          "text": "of",
+          "pronunciation": "ʌv",
+          "confidence": 0.989018
+        }
+      ]
+    }
+  ],
+  "continuity": [
+    {
+      "voice": "aria",
+      "text": "I can swim.",
+      "longestInternalSilenceMs": 30,
+      "duration": 1.872
+    },
+    {
+      "voice": "aria",
+      "text": "a cup of tea",
+      "longestInternalSilenceMs": 50,
+      "duration": 1.968
+    },
+    {
+      "voice": "aria",
+      "text": "Pick it up.",
+      "longestInternalSilenceMs": 90,
+      "duration": 1.872
+    },
+    {
+      "voice": "aria",
+      "text": "Turn it on.",
+      "longestInternalSilenceMs": 0,
+      "duration": 1.872
+    },
+    {
+      "voice": "guy",
+      "text": "I can swim.",
+      "longestInternalSilenceMs": 10,
+      "duration": 1.872
+    },
+    {
+      "voice": "guy",
+      "text": "a cup of tea",
+      "longestInternalSilenceMs": 50,
+      "duration": 2.016
+    },
+    {
+      "voice": "guy",
+      "text": "Pick it up.",
+      "longestInternalSilenceMs": 70,
+      "duration": 1.872
+    },
+    {
+      "voice": "guy",
+      "text": "Turn it on.",
+      "longestInternalSilenceMs": 0,
+      "duration": 1.872
+    }
+  ],
+  "continuityThresholdMs": 100,
+  "continuityPassed": true,
+  "limitations": "Recognized pronunciation is an acoustic clue, not a phonetic transcription or professional review. Low word confidence (including Guy can) must not be used as proof. Silence measurements confirm no inserted long word gaps, not every coarticulation feature."
+}

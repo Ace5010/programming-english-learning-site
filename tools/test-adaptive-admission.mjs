@@ -45,9 +45,9 @@ function completeActualCourse() {
     const old = review;
     review = mergeProgrammingCourse(review, course, catalog, now);
     for (const [id, word] of Object.entries(review)) if (isReviewEligible(review, Number(id)) && !isReviewEligible(old, Number(id))) {
-      assert.ok(word.reviewReadyAt > NOW, `${id} requires actual later practice`);
-      assert.ok((tested.get(Number(id)) ?? 0) > 1, `${id} cannot enter review after its first answer`);
-      admissionAnswers[id] = tested.get(Number(id));
+      assert.ok(word.reviewReadyAt >= NOW, `${id} is available for point reading after teaching`);
+      assert.ok(course.learning.targets[`word-${id}`]?.introducedAt, `${id} must actually be introduced`);
+      admissionAnswers[id] = tested.get(Number(id)) ?? 0;
       for (const ability of reviewAbilities) {
         assert.equal(getSkill(review, Number(id), ability).dueAt, afterDays(word.reviewReadyAt, 1), `${id}:${ability} baseline starts at admission`);
         assert.equal(getSkill(review, Number(id), ability).intervalDays, 1);
@@ -74,16 +74,16 @@ function completeActualCourse() {
       assert.ok(Object.keys(review).length > 0);
       for (const id of session.adaptive.focusIds) {
         const wordId = Number(id.slice(5));
-        assert.equal(isReviewEligible(review, wordId), false, 'first teaching is pending');
-        assert.equal(review[wordId].reviewReadyAt, 0);
-        assert.equal(isWordDue(review, wordId, afterDays(now, 30)), false, 'time alone cannot admit a pending word');
+        assert.equal(isReviewEligible(review, wordId), true, 'taught words remain available for point reading');
+        assert.equal(course.learning.targets[id].readyAt, 0, 'teaching does not create mastery');
+        assert.equal(isWordDue(review, wordId, afterDays(now, 30)), true);
         for (const ability of reviewAbilities) assert.equal(getSkill(review, wordId, ability).attempts ?? 0, 0);
       }
       firstTeachingChecked = true;
     }
     let count = 0;
     while (course.session.stage !== 'summary') {
-      assert.ok(count++ < 20, 'every dynamically generated lesson remains bounded');
+      assert.ok(count++ < 10, 'every new-word check remains bounded');
       const resolved = resolveAdaptiveLesson(course.session, catalog);
       const task = resolved.exercises.find(item => item.id === course.session.queue[course.session.index].exerciseId);
       assert.ok(task);
@@ -93,14 +93,14 @@ function completeActualCourse() {
       now += 1000;
       course = submitDailyAnswer(course, resolved, {}, now);
       assert.equal(course.session.feedback.correct, true, task.id);
-      assert.equal(course.session.feedback.outcome, 'independent', task.id);
+      assert.equal(course.session.feedback.outcome, task.kind === 'speak' ? 'self' : 'independent', task.id);
       course = recordAdaptiveAnswer(course, catalog, now);
       submitted++;
       seenQuestions.add(task.id);
-      for (const wordId of task.wordIds) tested.set(wordId, (tested.get(wordId) ?? 0) + 1);
+      if (task.kind !== 'speak') for (const wordId of task.wordIds) tested.set(wordId, (tested.get(wordId) ?? 0) + 1);
       persistAndMerge();
       if (!firstAnswerChecked) {
-        assert.ok(Object.keys(review).every(id => !isReviewEligible(review, Number(id))));
+        assert.ok(Object.keys(review).every(id => isReviewEligible(review, Number(id))));
         assert.ok(Object.values(course.learning.targets).every(target => target.readyAt === 0));
         firstAnswerChecked = true;
       }
@@ -116,9 +116,9 @@ function completeActualCourse() {
   assert.equal(expectedIds.length, 63);
   for (const id of expectedIds) {
     assert.equal(isReviewEligible(review, id), true);
-    assert.ok(course.learning.targets[`word-${id}`].readyAt > 0);
-    assert.ok(course.learning.targets[`word-${id}`].transfer);
-    assert.ok(course.learning.targets[`word-${id}`].abilities.context >= 0.5);
+    assert.equal(course.learning.targets[`word-${id}`].readyAt, 0, 'a short check does not invent delayed mastery');
+    assert.ok(course.learning.targets[`word-${id}`].introducedAt > 0);
+    assert.ok((tested.get(id) ?? 0) > 0, 'each taught word was actually tested');
     assert.equal(isWordDue(review, id, review[id].reviewReadyAt), false);
     assert.equal(isWordDue(review, id, afterDays(review[id].reviewReadyAt, 1)), true);
   }
@@ -127,14 +127,15 @@ function completeActualCourse() {
   return clone(completedRun);
 }
 
-test('actual adaptive programming content completes teaching, delayed admission and replay-safe storage', t => {
+test('actual programming content completes new-word checks and preserves replay-safe course and review evidence', t => {
   const result = completeActualCourse();
   assert.ok(result.submitted > 63);
   assert.ok(result.questionCount > 63);
   assert.ok(result.rounds > 1);
   assert.equal(Object.keys(result.admissionAnswers).length, 63);
-  const counts = Object.values(result.admissionAnswers);
-  t.diagnostic(`Real-content run: ${result.rounds} generated lessons, ${result.submitted} checked answers, ${result.questionCount} distinct questions; admission after ${Math.min(...counts)}-${Math.max(...counts)} answers per target.`);
+  assert.equal(result.rounds, 11);
+  assert.equal(result.submitted, 106);
+  t.diagnostic(`Real-content run: ${result.rounds} lessons, ${result.submitted} checked answers, ${result.questionCount} distinct questions; all 63 taught words remain available for review.`);
 });
 
 test('historical self-confirmed words remain reviewable and prepareLearning skips their initial teaching', () => {
@@ -166,7 +167,7 @@ test('historical self-confirmed words remain reviewable and prepareLearning skip
   assert.equal(parseDailyProgress(JSON.stringify(begun), catalog).writable, true);
 });
 
-test('later word-review failures return the weak target to the next generated lesson only once', () => {
+test('later word-review failures remain in review and never return a taught word to new lessons', () => {
   const { course, review, now } = completeActualCourse();
   const id = catalog[0].wordIds[0];
   const at = afterDays(now, 2);
@@ -175,16 +176,13 @@ test('later word-review failures return the weak target to the next generated le
   assert.equal(getSkill(failed, id, 'spelling').needsPractice, true);
   const prepared = applyProgrammingReviewToLearning(course, failed);
   const target = prepared.learning.targets[`word-${id}`];
-  assert.ok(target.confidence < course.learning.targets[`word-${id}`].confidence);
-  assert.equal(target.abilities.spelling, 0.2);
-  assert.equal(target.transfer, false);
+  assert.deepEqual(target, course.learning.targets[`word-${id}`]);
   assert.equal(target.readyAt, course.learning.targets[`word-${id}`].readyAt, 'review admission is durable');
   assert.equal(isReviewEligible(failed, id), true);
   assert.deepEqual(applyProgrammingReviewToLearning(prepared, failed), prepared, 'same failure cannot repeatedly lower confidence');
   const session = planAdaptiveSession(prepared, catalog, at + 1000, () => 0.55);
-  assert.ok(session.adaptive.focusIds.includes(`word-${id}`));
-  assert.deepEqual(session.adaptive.newIds, [], 'finished scope needs weak-item teaching, not invented new content');
-  assert.equal(parseDailyProgress(JSON.stringify({ ...prepared, session }), catalog).writable, true);
+  assert.equal(session, null, 'a completed new-word scope does not reopen after a review failure');
+  assert.equal(parseDailyProgress(JSON.stringify(prepared), catalog).writable, true);
 
   const ordinary = updateReviewProgress(review, question, 'independent', at);
   assert.deepEqual(applyProgrammingReviewToLearning(course, ordinary), course, 'normal independent review does not create a weakness');

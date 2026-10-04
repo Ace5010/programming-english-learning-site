@@ -1,0 +1,1551 @@
+{
+  "baseURL": "http://127.0.0.1:5186/",
+  "results": [
+    {
+      "name": "layout-lagoon-1440",
+      "width": 1440,
+      "theme": "lagoon",
+      "evidence": {
+        "width": 1440,
+        "content": 1440,
+        "overflow": [],
+        "styles": {
+          "color": "rgb(37, 76, 85)",
+          "size": 28,
+          "accent": "#254c55"
+        },
+        "card": {
+          "x": 130,
+          "y": 426.71875,
+          "width": 440,
+          "height": 458.578125
+        },
+        "testEntry": {
+          "x": 130,
+          "y": 1953.640625,
+          "width": 900,
+          "height": 158.25
+        }
+      }
+    },
+    {
+      "name": "layout-lagoon-390",
+      "width": 390,
+      "theme": "lagoon",
+      "evidence": {
+        "width": 390,
+        "content": 390,
+        "overflow": [],
+        "styles": {
+          "color": "rgb(37, 76, 85)",
+          "size": 27,
+          "accent": "#254c55"
+        },
+        "card": {
+          "x": 14,
+          "y": 497.296875,
+          "width": 362,
+          "height": 450.578125
+        },
+        "testEntry": {
+          "x": 14,
+          "y": 3544.328125,
+          "width": 362,
+          "height": 248
+        }
+      }
+    },
+    {
+      "name": "layout-lagoon-320",
+      "width": 320,
+      "theme": "lagoon",
+      "evidence": {
+        "width": 320,
+        "content": 320,
+        "overflow": [],
+        "styles": {
+          "color": "rgb(37, 76, 85)",
+          "size": 27,
+          "accent": "#254c55"
+        },
+        "card": {
+          "x": 14,
+          "y": 554.046875,
+          "width": 292,
+          "height": 481.171875
+        },
+        "testEntry": {
+          "x": 14,
+          "y": 3905.21875,
+          "width": 292,
+          "height": 248
+        }
+      }
+    },
+    {
+      "name": "layout-pearl-1440",
+      "width": 1440,
+      "theme": "pearl",
+      "evidence": {
+        "width": 1440,
+        "content": 1440,
+        "overflow": [],
+        "styles": {
+          "color": "rgb(52, 66, 80)",
+          "size": 28,
+          "accent": "#344250"
+        },
+        "card": {
+          "x": 130,
+          "y": 426.71875,
+          "width": 440,
+          "height": 458.578125
+        },
+        "testEntry": {
+          "x": 130,
+          "y": 1953.640625,
+          "width": 900,
+          "height": 158.25
+        }
+      }
+    },
+    {
+      "name": "layout-pearl-390",
+      "width": 390,
+      "theme": "pearl",
+      "evidence": {
+        "width": 390,
+        "content": 390,
+        "overflow": [],
+        "styles": {
+          "color": "rgb(52, 66, 80)",
+          "size": 27,
+          "accent": "#344250"
+        },
+        "card": {
+          "x": 14,
+          "y": 497.296875,
+          "width": 362,
+          "height": 450.578125
+        },
+        "testEntry": {
+          "x": 14,
+          "y": 3544.328125,
+          "width": 362,
+          "height": 248
+        }
+      }
+    },
+    {
+      "name": "layout-pearl-320",
+      "width": 320,
+      "theme": "pearl",
+      "evidence": {
+        "width": 320,
+        "content": 320,
+        "overflow": [],
+        "styles": {
+          "color": "rgb(52, 66, 80)",
+          "size": 27,
+          "accent": "#344250"
+        },
+        "card": {
+          "x": 14,
+          "y": 554.046875,
+          "width": 292,
+          "height": 481.171875
+        },
+        "testEntry": {
+          "x": 14,
+          "y": 3905.21875,
+          "width": 292,
+          "height": 248
+        }
+      }
+    },
+    {
+      "name": "layout-sky-1440",
+      "width": 1440,
+      "theme": "sky",
+      "evidence": {
+        "width": 1440,
+        "content": 1440,
+        "overflow": [],
+        "styles": {
+          "color": "rgb(23, 67, 95)",
+          "size": 28,
+          "accent": "#17435f"
+        },
+        "card": {
+          "x": 130,
+          "y": 426.71875,
+          "width": 440,
+          "height": 458.578125
+        },
+        "testEntry": {
+          "x": 130,
+          "y": 1953.640625,
+          "width": 900,
+          "height": 158.25
+        }
+      }
+    },
+    {
+      "name": "layout-sky-390",
+      "width": 390,
+      "theme": "sky",
+      "evidence": {
+        "width": 390,
+        "content": 390,
+        "overflow": [],
+        "styles": {
+          "color": "rgb(23, 67, 95)",
+          "size": 27,
+          "accent": "#17435f"
+        },
+        "card": {
+          "x": 14,
+          "y": 497.296875,
+          "width": 362,
+          "height": 450.578125
+        },
+        "testEntry": {
+          "x": 14,
+          "y": 3544.328125,
+          "width": 362,
+          "height": 248
+        }
+      }
+    },
+    {
+      "name": "layout-sky-320",
+      "width": 320,
+      "theme": "sky",
+      "evidence": {
+        "width": 320,
+        "content": 320,
+        "overflow": [],
+        "styles": {
+          "color": "rgb(23, 67, 95)",
+          "size": 27,
+          "accent": "#17435f"
+        },
+        "card": {
+          "x": 14,
+          "y": 554.046875,
+          "width": 292,
+          "height": 481.171875
+        },
+        "testEntry": {
+          "x": 14,
+          "y": 3905.21875,
+          "width": 292,
+          "height": 248
+        }
+      }
+    },
+    {
+      "name": "layout-mint-1440",
+      "width": 1440,
+      "theme": "mint",
+      "evidence": {
+        "width": 1440,
+        "content": 1440,
+        "overflow": [],
+        "styles": {
+          "color": "rgb(35, 82, 64)",
+          "size": 28,
+          "accent": "#235240"
+        },
+        "card": {
+          "x": 130,
+          "y": 426.71875,
+          "width": 440,
+          "height": 458.578125
+        },
+        "testEntry": {
+          "x": 130,
+          "y": 1953.640625,
+          "width": 900,
+          "height": 158.25
+        }
+      }
+    },
+    {
+      "name": "layout-mint-390",
+      "width": 390,
+      "theme": "mint",
+      "evidence": {
+        "width": 390,
+        "content": 390,
+        "overflow": [],
+        "styles": {
+          "color": "rgb(35, 82, 64)",
+          "size": 27,
+          "accent": "#235240"
+        },
+        "card": {
+          "x": 14,
+          "y": 497.296875,
+          "width": 362,
+          "height": 450.578125
+        },
+        "testEntry": {
+          "x": 14,
+          "y": 3544.328125,
+          "width": 362,
+          "height": 248
+        }
+      }
+    },
+    {
+      "name": "layout-mint-320",
+      "width": 320,
+      "theme": "mint",
+      "evidence": {
+        "width": 320,
+        "content": 320,
+        "overflow": [],
+        "styles": {
+          "color": "rgb(35, 82, 64)",
+          "size": 27,
+          "accent": "#235240"
+        },
+        "card": {
+          "x": 14,
+          "y": 554.046875,
+          "width": 292,
+          "height": 481.171875
+        },
+        "testEntry": {
+          "x": 14,
+          "y": 3905.21875,
+          "width": 292,
+          "height": 248
+        }
+      }
+    },
+    {
+      "name": "flow-1440",
+      "width": 1440,
+      "theme": "lagoon",
+      "evidence": {
+        "first": [
+          "word-1",
+          "word-2801",
+          "word-3561",
+          "word-20",
+          "word-4",
+          "word-5"
+        ],
+        "next": [
+          "word-2",
+          "word-11",
+          "word-1880",
+          "word-1384",
+          "word-3",
+          "word-687"
+        ],
+        "observed": [
+          {
+            "id": "P1-01-01-p-2801-word",
+            "kind": "choice",
+            "targets": [
+              "word-2801"
+            ],
+            "wrong": false
+          },
+          {
+            "id": "P1-01-02-p-4-meaning",
+            "kind": "choice",
+            "targets": [
+              "word-4"
+            ],
+            "wrong": true
+          },
+          {
+            "id": "P1-01-01-r01",
+            "kind": "choice",
+            "targets": [
+              "word-20"
+            ],
+            "wrong": false
+          },
+          {
+            "id": "P1-01-01-p-3561-word",
+            "kind": "choice",
+            "targets": [
+              "word-3561"
+            ],
+            "wrong": false
+          },
+          {
+            "id": "P1-01-01-e01",
+            "kind": "choice",
+            "targets": [
+              "word-1"
+            ],
+            "wrong": false
+          },
+          {
+            "id": "P1-01-02-r01",
+            "kind": "choice",
+            "targets": [
+              "word-5"
+            ],
+            "wrong": false
+          },
+          {
+            "id": "P1-01-01-r02",
+            "kind": "choice",
+            "targets": [
+              "word-2801",
+              "word-3561"
+            ],
+            "wrong": false
+          },
+          {
+            "id": "P1-01-06-e01",
+            "kind": "choice",
+            "targets": [
+              "word-20",
+              "word-4"
+            ],
+            "wrong": false
+          },
+          {
+            "id": "P1-01-02-p-5-word",
+            "kind": "choice",
+            "targets": [
+              "word-5"
+            ],
+            "wrong": false
+          },
+          {
+            "id": "P1-01-02-p-4-translation",
+            "kind": "choice",
+            "targets": [
+              "word-4"
+            ],
+            "wrong": false
+          }
+        ],
+        "studyAudio": [
+          {
+            "src": "http://127.0.0.1:5186/audio/aria/word-1.mp3?v=repository",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/aria/word-1.mp3?v=repository",
+            "rate": 0.72,
+            "pitch": true
+          }
+        ],
+        "sceneQuestion": "P1-01-01-e02",
+        "audio": [
+          {
+            "src": "http://127.0.0.1:5186/audio/feedback/correct.mp3",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/feedback/correct.mp3",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/feedback/correct.mp3",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/feedback/correct.mp3",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/aria/example-4.mp3?v=Clone%20this%20project.",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/feedback/complete.mp3",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/aria/word-4.mp3?v=clone",
+            "rate": 0.72,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/aria/word-1.mp3",
+            "rate": 1,
+            "pitch": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "flow-390",
+      "width": 390,
+      "theme": "lagoon",
+      "evidence": {
+        "first": [
+          "word-1",
+          "word-2801",
+          "word-3561",
+          "word-20",
+          "word-4",
+          "word-5"
+        ],
+        "next": [
+          "word-2",
+          "word-11",
+          "word-1880",
+          "word-1384",
+          "word-3",
+          "word-687"
+        ],
+        "observed": [
+          {
+            "id": "P1-01-01-p-2801-word",
+            "kind": "choice",
+            "targets": [
+              "word-2801"
+            ],
+            "wrong": true
+          },
+          {
+            "id": "P1-01-02-p-4-meaning",
+            "kind": "choice",
+            "targets": [
+              "word-4"
+            ],
+            "wrong": true
+          },
+          {
+            "id": "P1-01-01-r01",
+            "kind": "choice",
+            "targets": [
+              "word-20"
+            ],
+            "wrong": true
+          },
+          {
+            "id": "P1-01-01-p-3561-word",
+            "kind": "choice",
+            "targets": [
+              "word-3561"
+            ],
+            "wrong": true
+          },
+          {
+            "id": "P1-01-01-e01",
+            "kind": "choice",
+            "targets": [
+              "word-1"
+            ],
+            "wrong": true
+          },
+          {
+            "id": "P1-01-02-r01",
+            "kind": "choice",
+            "targets": [
+              "word-5"
+            ],
+            "wrong": true
+          },
+          {
+            "id": "P1-01-01-e05",
+            "kind": "choice",
+            "targets": [
+              "word-1"
+            ],
+            "wrong": true
+          },
+          {
+            "id": "P1-01-02-p-5-cloze",
+            "kind": "choice",
+            "targets": [
+              "word-5"
+            ],
+            "wrong": true
+          },
+          {
+            "id": "P1-01-02-p-4-word",
+            "kind": "choice",
+            "targets": [
+              "word-4"
+            ],
+            "wrong": true
+          },
+          {
+            "id": "P1-01-02-p-5-meaning",
+            "kind": "choice",
+            "targets": [
+              "word-5"
+            ],
+            "wrong": true
+          }
+        ],
+        "studyAudio": [
+          {
+            "src": "http://127.0.0.1:5186/audio/aria/word-1.mp3?v=repository",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/aria/word-1.mp3?v=repository",
+            "rate": 0.72,
+            "pitch": true
+          }
+        ],
+        "sceneQuestion": "P1-01-01-e05",
+        "audio": [
+          {
+            "src": "http://127.0.0.1:5186/audio/aria/word-3561.mp3",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/aria/word-1.mp3",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/feedback/complete.mp3",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/aria/word-1.mp3?v=repository",
+            "rate": 0.72,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/aria/word-1.mp3",
+            "rate": 1,
+            "pitch": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "card-click-playback",
+      "width": 1440,
+      "theme": "lagoon",
+      "evidence": {
+        "clicks": [
+          {
+            "target": "word-1",
+            "voice": "aria",
+            "request": {
+              "src": "http://127.0.0.1:5186/audio/aria/word-1.mp3?v=repository",
+              "rate": 1,
+              "pitch": true
+            }
+          },
+          {
+            "target": "word-1",
+            "voice": "aria",
+            "request": {
+              "src": "http://127.0.0.1:5186/audio/aria/word-1.mp3?v=repository",
+              "rate": 1,
+              "pitch": true
+            }
+          },
+          {
+            "target": "word-1",
+            "voice": "aria",
+            "request": {
+              "src": "http://127.0.0.1:5186/audio/aria/word-1.mp3?v=repository",
+              "rate": 1,
+              "pitch": true
+            }
+          },
+          {
+            "target": "word-1",
+            "voice": "aria",
+            "request": {
+              "src": "http://127.0.0.1:5186/audio/aria/word-1.mp3?v=repository",
+              "rate": 1,
+              "pitch": true
+            }
+          },
+          {
+            "target": "word-1",
+            "voice": "aria",
+            "request": {
+              "src": "http://127.0.0.1:5186/audio/aria/word-1.mp3?v=repository",
+              "rate": 1,
+              "pitch": true
+            }
+          },
+          {
+            "target": "word-1",
+            "voice": "aria",
+            "request": {
+              "src": "http://127.0.0.1:5186/audio/aria/word-1.mp3?v=repository",
+              "rate": 1,
+              "pitch": true
+            }
+          },
+          {
+            "target": "word-1",
+            "voice": "aria",
+            "request": {
+              "src": "http://127.0.0.1:5186/audio/aria/word-1.mp3?v=repository",
+              "rate": 1,
+              "pitch": true
+            }
+          },
+          {
+            "target": "example-1",
+            "voice": "aria",
+            "request": {
+              "src": "http://127.0.0.1:5186/audio/aria/example-1.mp3?v=Open%20this%20repository.",
+              "rate": 1,
+              "pitch": true
+            }
+          },
+          {
+            "target": "example-1",
+            "voice": "aria",
+            "request": {
+              "src": "http://127.0.0.1:5186/audio/aria/example-1.mp3?v=Open%20this%20repository.",
+              "rate": 1,
+              "pitch": true
+            }
+          },
+          {
+            "target": "example-1",
+            "voice": "aria",
+            "request": {
+              "src": "http://127.0.0.1:5186/audio/aria/example-1.mp3?v=Open%20this%20repository.",
+              "rate": 1,
+              "pitch": true
+            }
+          },
+          {
+            "target": "word-1",
+            "voice": "aria",
+            "request": {
+              "src": "http://127.0.0.1:5186/audio/aria/word-1.mp3?v=repository",
+              "rate": 1,
+              "pitch": true
+            }
+          },
+          {
+            "target": "example-1",
+            "voice": "aria",
+            "request": {
+              "src": "http://127.0.0.1:5186/audio/aria/example-1.mp3?v=Open%20this%20repository.",
+              "rate": 1,
+              "pitch": true
+            }
+          },
+          {
+            "target": "word-2801",
+            "voice": "aria",
+            "request": {
+              "src": "http://127.0.0.1:5186/audio/aria/word-2801.mp3?v=project",
+              "rate": 1,
+              "pitch": true
+            }
+          },
+          {
+            "target": "example-2801",
+            "voice": "aria",
+            "request": {
+              "src": "http://127.0.0.1:5186/audio/aria/example-2801.mp3?v=Open%20this%20project.",
+              "rate": 1,
+              "pitch": true
+            }
+          },
+          {
+            "target": "word-3561",
+            "voice": "aria",
+            "request": {
+              "src": "http://127.0.0.1:5186/audio/aria/word-3561.mp3?v=code",
+              "rate": 1,
+              "pitch": true
+            }
+          },
+          {
+            "target": "example-3561",
+            "voice": "aria",
+            "request": {
+              "src": "http://127.0.0.1:5186/audio/aria/example-3561.mp3?v=Read%20this%20code.",
+              "rate": 1,
+              "pitch": true
+            }
+          },
+          {
+            "target": "word-20",
+            "voice": "aria",
+            "request": {
+              "src": "http://127.0.0.1:5186/audio/aria/word-20.mp3?v=readme",
+              "rate": 1,
+              "pitch": true
+            }
+          },
+          {
+            "target": "example-20",
+            "voice": "aria",
+            "request": {
+              "src": "http://127.0.0.1:5186/audio/aria/example-20.mp3?v=Read%20the%20README%20for%20help.",
+              "rate": 1,
+              "pitch": true
+            }
+          },
+          {
+            "target": "word-4",
+            "voice": "aria",
+            "request": {
+              "src": "http://127.0.0.1:5186/audio/aria/word-4.mp3?v=clone",
+              "rate": 1,
+              "pitch": true
+            }
+          },
+          {
+            "target": "example-4",
+            "voice": "aria",
+            "request": {
+              "src": "http://127.0.0.1:5186/audio/aria/example-4.mp3?v=Clone%20this%20project.",
+              "rate": 1,
+              "pitch": true
+            }
+          },
+          {
+            "target": "word-5",
+            "voice": "aria",
+            "request": {
+              "src": "http://127.0.0.1:5186/audio/aria/word-5.mp3?v=fork",
+              "rate": 1,
+              "pitch": true
+            }
+          },
+          {
+            "target": "example-5",
+            "voice": "aria",
+            "request": {
+              "src": "http://127.0.0.1:5186/audio/aria/example-5.mp3?v=Fork%20this%20project%20on%20GitHub.",
+              "rate": 1,
+              "pitch": true
+            }
+          },
+          {
+            "target": "word-1",
+            "voice": "guy",
+            "request": {
+              "src": "http://127.0.0.1:5186/audio/guy/word-1.mp3?v=repository",
+              "rate": 1,
+              "pitch": true
+            }
+          },
+          {
+            "target": "example-1",
+            "voice": "guy",
+            "request": {
+              "src": "http://127.0.0.1:5186/audio/guy/example-1.mp3?v=Open%20this%20repository.",
+              "rate": 1,
+              "pitch": true
+            }
+          },
+          {
+            "target": "word-1",
+            "voice": "guy",
+            "request": {
+              "src": "http://127.0.0.1:5186/audio/guy/word-1.mp3?v=repository",
+              "rate": 1,
+              "pitch": true
+            }
+          },
+          {
+            "target": "example-1",
+            "voice": "guy",
+            "request": {
+              "src": "http://127.0.0.1:5186/audio/guy/example-1.mp3?v=Open%20this%20repository.",
+              "rate": 1,
+              "pitch": true
+            }
+          },
+          {
+            "target": "word-2801",
+            "voice": "guy",
+            "request": {
+              "src": "http://127.0.0.1:5186/audio/guy/word-2801.mp3?v=project",
+              "rate": 1,
+              "pitch": true
+            }
+          },
+          {
+            "target": "example-2801",
+            "voice": "guy",
+            "request": {
+              "src": "http://127.0.0.1:5186/audio/guy/example-2801.mp3?v=Open%20this%20project.",
+              "rate": 1,
+              "pitch": true
+            }
+          },
+          {
+            "target": "word-3561",
+            "voice": "guy",
+            "request": {
+              "src": "http://127.0.0.1:5186/audio/guy/word-3561.mp3?v=code",
+              "rate": 1,
+              "pitch": true
+            }
+          },
+          {
+            "target": "example-3561",
+            "voice": "guy",
+            "request": {
+              "src": "http://127.0.0.1:5186/audio/guy/example-3561.mp3?v=Read%20this%20code.",
+              "rate": 1,
+              "pitch": true
+            }
+          },
+          {
+            "target": "word-20",
+            "voice": "guy",
+            "request": {
+              "src": "http://127.0.0.1:5186/audio/guy/word-20.mp3?v=readme",
+              "rate": 1,
+              "pitch": true
+            }
+          },
+          {
+            "target": "example-20",
+            "voice": "guy",
+            "request": {
+              "src": "http://127.0.0.1:5186/audio/guy/example-20.mp3?v=Read%20the%20README%20for%20help.",
+              "rate": 1,
+              "pitch": true
+            }
+          },
+          {
+            "target": "word-4",
+            "voice": "guy",
+            "request": {
+              "src": "http://127.0.0.1:5186/audio/guy/word-4.mp3?v=clone",
+              "rate": 1,
+              "pitch": true
+            }
+          },
+          {
+            "target": "example-4",
+            "voice": "guy",
+            "request": {
+              "src": "http://127.0.0.1:5186/audio/guy/example-4.mp3?v=Clone%20this%20project.",
+              "rate": 1,
+              "pitch": true
+            }
+          },
+          {
+            "target": "word-5",
+            "voice": "guy",
+            "request": {
+              "src": "http://127.0.0.1:5186/audio/guy/word-5.mp3?v=fork",
+              "rate": 1,
+              "pitch": true
+            }
+          },
+          {
+            "target": "example-5",
+            "voice": "guy",
+            "request": {
+              "src": "http://127.0.0.1:5186/audio/guy/example-5.mp3?v=Fork%20this%20project%20on%20GitHub.",
+              "rate": 1,
+              "pitch": true
+            }
+          }
+        ],
+        "slowReads": [
+          {
+            "target": "word-1",
+            "voice": "aria",
+            "kind": "word",
+            "src": "http://127.0.0.1:5186/audio/aria/word-1.mp3?v=repository",
+            "rate": 0.72,
+            "pitch": true
+          },
+          {
+            "target": "word-1",
+            "voice": "aria",
+            "kind": "example",
+            "src": "http://127.0.0.1:5186/audio/foundation/aria/f-ed077f3d8125d60d.mp3?v=1565adac203ca474",
+            "rate": 0.72,
+            "pitch": true
+          },
+          {
+            "target": "word-2801",
+            "voice": "aria",
+            "kind": "word",
+            "src": "http://127.0.0.1:5186/audio/aria/word-2801.mp3?v=project",
+            "rate": 0.72,
+            "pitch": true
+          },
+          {
+            "target": "word-2801",
+            "voice": "aria",
+            "kind": "example",
+            "src": "http://127.0.0.1:5186/audio/foundation/aria/f-ed077f3d8125d60d.mp3?v=1565adac203ca474",
+            "rate": 0.72,
+            "pitch": true
+          },
+          {
+            "target": "word-3561",
+            "voice": "aria",
+            "kind": "word",
+            "src": "http://127.0.0.1:5186/audio/aria/word-3561.mp3?v=code",
+            "rate": 0.72,
+            "pitch": true
+          },
+          {
+            "target": "word-3561",
+            "voice": "aria",
+            "kind": "example",
+            "src": "http://127.0.0.1:5186/audio/slow/aria/pack-23.mp3?v=fa278fa3c451af02",
+            "rate": 0.72,
+            "pitch": true
+          },
+          {
+            "target": "word-20",
+            "voice": "aria",
+            "kind": "word",
+            "src": "http://127.0.0.1:5186/audio/aria/word-20.mp3?v=readme",
+            "rate": 0.72,
+            "pitch": true
+          },
+          {
+            "target": "word-20",
+            "voice": "aria",
+            "kind": "example",
+            "src": "http://127.0.0.1:5186/audio/slow/aria/pack-23.mp3?v=fa278fa3c451af02",
+            "rate": 0.72,
+            "pitch": true
+          },
+          {
+            "target": "word-4",
+            "voice": "aria",
+            "kind": "word",
+            "src": "http://127.0.0.1:5186/audio/aria/word-4.mp3?v=clone",
+            "rate": 0.72,
+            "pitch": true
+          },
+          {
+            "target": "word-4",
+            "voice": "aria",
+            "kind": "example",
+            "src": "http://127.0.0.1:5186/audio/aria/word-4.mp3?v=fcf98973480bcf8e",
+            "rate": 0.72,
+            "pitch": true
+          },
+          {
+            "target": "word-5",
+            "voice": "aria",
+            "kind": "word",
+            "src": "http://127.0.0.1:5186/audio/aria/word-5.mp3?v=fork",
+            "rate": 0.72,
+            "pitch": true
+          },
+          {
+            "target": "word-5",
+            "voice": "aria",
+            "kind": "example",
+            "src": "http://127.0.0.1:5186/audio/aria/word-5.mp3?v=d1352d7d10b878f9",
+            "rate": 0.72,
+            "pitch": true
+          },
+          {
+            "target": "word-1",
+            "voice": "guy",
+            "kind": "word",
+            "src": "http://127.0.0.1:5186/audio/guy/word-1.mp3?v=repository",
+            "rate": 0.72,
+            "pitch": true
+          },
+          {
+            "target": "word-1",
+            "voice": "guy",
+            "kind": "example",
+            "src": "http://127.0.0.1:5186/audio/foundation/guy/f-ed077f3d8125d60d.mp3?v=3b2cf7816e99818a",
+            "rate": 0.72,
+            "pitch": true
+          },
+          {
+            "target": "word-2801",
+            "voice": "guy",
+            "kind": "word",
+            "src": "http://127.0.0.1:5186/audio/guy/word-2801.mp3?v=project",
+            "rate": 0.72,
+            "pitch": true
+          },
+          {
+            "target": "word-2801",
+            "voice": "guy",
+            "kind": "example",
+            "src": "http://127.0.0.1:5186/audio/foundation/guy/f-ed077f3d8125d60d.mp3?v=3b2cf7816e99818a",
+            "rate": 0.72,
+            "pitch": true
+          },
+          {
+            "target": "word-3561",
+            "voice": "guy",
+            "kind": "word",
+            "src": "http://127.0.0.1:5186/audio/guy/word-3561.mp3?v=code",
+            "rate": 0.72,
+            "pitch": true
+          },
+          {
+            "target": "word-3561",
+            "voice": "guy",
+            "kind": "example",
+            "src": "http://127.0.0.1:5186/audio/slow/guy/pack-23.mp3?v=f801175e18ca7d8c",
+            "rate": 0.72,
+            "pitch": true
+          },
+          {
+            "target": "word-20",
+            "voice": "guy",
+            "kind": "word",
+            "src": "http://127.0.0.1:5186/audio/guy/word-20.mp3?v=readme",
+            "rate": 0.72,
+            "pitch": true
+          },
+          {
+            "target": "word-20",
+            "voice": "guy",
+            "kind": "example",
+            "src": "http://127.0.0.1:5186/audio/slow/guy/pack-23.mp3?v=f801175e18ca7d8c",
+            "rate": 0.72,
+            "pitch": true
+          },
+          {
+            "target": "word-4",
+            "voice": "guy",
+            "kind": "word",
+            "src": "http://127.0.0.1:5186/audio/guy/word-4.mp3?v=clone",
+            "rate": 0.72,
+            "pitch": true
+          },
+          {
+            "target": "word-4",
+            "voice": "guy",
+            "kind": "example",
+            "src": "http://127.0.0.1:5186/audio/guy/word-4.mp3?v=67c2b29e61e173b2",
+            "rate": 0.72,
+            "pitch": true
+          },
+          {
+            "target": "word-5",
+            "voice": "guy",
+            "kind": "word",
+            "src": "http://127.0.0.1:5186/audio/guy/word-5.mp3?v=fork",
+            "rate": 0.72,
+            "pitch": true
+          },
+          {
+            "target": "word-5",
+            "voice": "guy",
+            "kind": "example",
+            "src": "http://127.0.0.1:5186/audio/guy/word-5.mp3?v=7428ea8f41b93990",
+            "rate": 0.72,
+            "pitch": true
+          }
+        ],
+        "audio": [
+          {
+            "src": "http://127.0.0.1:5186/audio/aria/word-1.mp3?v=repository",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/aria/word-1.mp3?v=repository",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/aria/word-1.mp3?v=repository",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/aria/word-1.mp3?v=repository",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/aria/word-1.mp3?v=repository",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/aria/word-1.mp3?v=repository",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/aria/word-1.mp3?v=repository",
+            "rate": 0.72,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/aria/word-1.mp3?v=repository",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/aria/example-1.mp3?v=Open%20this%20repository.",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/aria/example-1.mp3?v=Open%20this%20repository.",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/aria/example-1.mp3?v=Open%20this%20repository.",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/foundation/aria/f-ed077f3d8125d60d.mp3?v=1565adac203ca474",
+            "rate": 0.72,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/aria/word-1.mp3?v=repository",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/aria/word-1.mp3?v=repository",
+            "rate": 0.72,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/aria/example-1.mp3?v=Open%20this%20repository.",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/foundation/aria/f-ed077f3d8125d60d.mp3?v=1565adac203ca474",
+            "rate": 0.72,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/aria/word-2801.mp3?v=project",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/aria/word-2801.mp3?v=project",
+            "rate": 0.72,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/aria/example-2801.mp3?v=Open%20this%20project.",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/foundation/aria/f-ed077f3d8125d60d.mp3?v=1565adac203ca474",
+            "rate": 0.72,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/aria/word-3561.mp3?v=code",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/aria/word-3561.mp3?v=code",
+            "rate": 0.72,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/aria/example-3561.mp3?v=Read%20this%20code.",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/slow/aria/pack-23.mp3?v=fa278fa3c451af02",
+            "rate": 0.72,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/aria/word-20.mp3?v=readme",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/aria/word-20.mp3?v=readme",
+            "rate": 0.72,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/aria/example-20.mp3?v=Read%20the%20README%20for%20help.",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/slow/aria/pack-23.mp3?v=fa278fa3c451af02",
+            "rate": 0.72,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/aria/word-4.mp3?v=clone",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/aria/word-4.mp3?v=clone",
+            "rate": 0.72,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/aria/example-4.mp3?v=Clone%20this%20project.",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/aria/word-4.mp3?v=fcf98973480bcf8e",
+            "rate": 0.72,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/aria/word-5.mp3?v=fork",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/aria/word-5.mp3?v=fork",
+            "rate": 0.72,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/aria/example-5.mp3?v=Fork%20this%20project%20on%20GitHub.",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/aria/word-5.mp3?v=d1352d7d10b878f9",
+            "rate": 0.72,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/guy/word-1.mp3?v=repository",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/guy/example-1.mp3?v=Open%20this%20repository.",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/guy/word-1.mp3?v=repository",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/guy/word-1.mp3?v=repository",
+            "rate": 0.72,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/guy/example-1.mp3?v=Open%20this%20repository.",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/foundation/guy/f-ed077f3d8125d60d.mp3?v=3b2cf7816e99818a",
+            "rate": 0.72,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/guy/word-2801.mp3?v=project",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/guy/word-2801.mp3?v=project",
+            "rate": 0.72,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/guy/example-2801.mp3?v=Open%20this%20project.",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/foundation/guy/f-ed077f3d8125d60d.mp3?v=3b2cf7816e99818a",
+            "rate": 0.72,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/guy/word-3561.mp3?v=code",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/guy/word-3561.mp3?v=code",
+            "rate": 0.72,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/guy/example-3561.mp3?v=Read%20this%20code.",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/slow/guy/pack-23.mp3?v=f801175e18ca7d8c",
+            "rate": 0.72,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/guy/word-20.mp3?v=readme",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/guy/word-20.mp3?v=readme",
+            "rate": 0.72,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/guy/example-20.mp3?v=Read%20the%20README%20for%20help.",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/slow/guy/pack-23.mp3?v=f801175e18ca7d8c",
+            "rate": 0.72,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/guy/word-4.mp3?v=clone",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/guy/word-4.mp3?v=clone",
+            "rate": 0.72,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/guy/example-4.mp3?v=Clone%20this%20project.",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/guy/word-4.mp3?v=67c2b29e61e173b2",
+            "rate": 0.72,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/guy/word-5.mp3?v=fork",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/guy/word-5.mp3?v=fork",
+            "rate": 0.72,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/guy/example-5.mp3?v=Fork%20this%20project%20on%20GitHub.",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/guy/word-5.mp3?v=7428ea8f41b93990",
+            "rate": 0.72,
+            "pitch": true
+          }
+        ],
+        "isolatedProgress": true
+      }
+    },
+    {
+      "name": "saved-study-direct-test",
+      "width": 390,
+      "theme": "sky",
+      "evidence": {
+        "session": "1791115407327-adaptive-qa4qnf",
+        "targets": [
+          "word-1",
+          "word-2801",
+          "word-3561",
+          "word-20",
+          "word-4",
+          "word-5"
+        ]
+      }
+    },
+    {
+      "name": "saved-answer-home-and-resume",
+      "width": 390,
+      "theme": "lagoon",
+      "evidence": {
+        "task": "P1-01-02-p-4-word",
+        "draft": {
+          "choice": "repository",
+          "order": [],
+          "blanks": [],
+          "text": "",
+          "checks": [],
+          "helped": false,
+          "revealed": false
+        }
+      }
+    },
+    {
+      "name": "skip-and-undo-before-test",
+      "width": 320,
+      "theme": "mint",
+      "evidence": {
+        "first": [
+          "word-1",
+          "word-2801",
+          "word-3561",
+          "word-20",
+          "word-4",
+          "word-5"
+        ],
+        "next": [
+          "word-2",
+          "word-11",
+          "word-1880",
+          "word-1384",
+          "word-3",
+          "word-687"
+        ],
+        "restoredStudy": true
+      }
+    },
+    {
+      "name": "review-switch-keeps-draft-until-confirmed",
+      "width": 1440,
+      "theme": "lagoon",
+      "evidence": {
+        "review": "1791115414579-qoua3gp5",
+        "newSession": "1791115416034-adaptive-631v7n",
+        "newIds": [
+          "word-2",
+          "word-11",
+          "word-1880",
+          "word-1384",
+          "word-3",
+          "word-687"
+        ]
+      }
+    }
+  ],
+  "failures": []
+}

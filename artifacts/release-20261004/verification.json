@@ -1,0 +1,33 @@
+{
+  "date": "2026-10-04",
+  "branch": "main",
+  "authorization": "User requested commit and push of all completed changes.",
+  "scope": [
+    "Programming new-word lessons, direct checks, compact word cards and saved-session compatibility",
+    "Daily course scope, skip recovery, answer and speech-state fixes",
+    "Independent English foundation tutorials and their local audio",
+    "Local Qwen recognition integration and supported launcher",
+    "Associated tests, documentation and final verification reports"
+  ],
+  "checks": {
+    "typescript": "passed",
+    "nodeTestFiles": 35,
+    "nodeTests": 382,
+    "nodeFailures": 0,
+    "programmingBrowserScenarios": 19,
+    "mobileBrowserScenarios": 13,
+    "productionBuild": "passed",
+    "projectResourceVerification": "passed",
+    "stagedWhitespaceCheck": "passed"
+  },
+  "browserEvidence": [
+    "artifacts/programming-cards-compact-20261004/browser/report.json",
+    "artifacts/programming-cards-compact-20261004/mobile/browser-results.json"
+  ],
+  "boundaries": [
+    "Browser scenarios use isolated Chrome contexts; mobile viewports are emulation.",
+    "Existing completed feature checks retain their own dated reports and evidence boundaries.",
+    "Debug snapshots, intermediate outputs and most repeated screenshots remain local.",
+    "Runtime environments, model caches, signing files, credentials and generated dist are excluded by the existing ignore rules."
+  ]
+}

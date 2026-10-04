@@ -1,7 +1,10 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
-import { foundationTopics, foundationLessons, foundationPhrases, foundationAlphabet, FOUNDATION_KEY } from '../src/foundationCourse.ts';
+import { foundationTopics, foundationTutorialCatalog, foundationLessons, foundationPhrases, foundationAlphabet, FOUNDATION_KEY } from '../src/foundationCourse.ts';
+import { foundationTutorials, tutorialExamples } from '../src/foundationTutorials.ts';
+import { foundationDemoDefinitions, foundationDemoPath } from '../src/foundationDemos.ts';
+import { foundationAudioPath } from '../src/foundationAudio.ts';
 import { planAdaptiveSession, beginAdaptiveLearning, resolveAdaptiveLesson, advanceAdaptiveSession, recordAdaptiveAnswer } from '../src/adaptiveLearning.ts';
 import { createDailyProgress, parseDailyProgress, updateDailyDraft, submitDailyAnswer, markDailyHelp, dailyKnowledgeReviewable, persistDailyProgress } from '../src/dailyProgress.ts';
 import { emptySnapshot, assertSnapshot, mergeSnapshots } from '../src/syncProtocol.ts';
@@ -12,6 +15,47 @@ import { readingWords, readingKey } from '../src/readingText.ts';
 import { prepareFoundationLearning } from '../src/foundationProgress.ts';
 
 const tasks = foundationLessons.flatMap(item => item.exercises);
+test('four batches cover every requested goal without changing historical lessons', () => {
+  assert.deepEqual(Object.fromEntries(['A', 'B', 'C', 'D'].map(batch => [batch, foundationTutorials.filter(item => item.batch === batch).length])), { A: 4, B: 6, C: 5, D: 6 });
+  assert.equal(new Set(foundationTutorialCatalog.map(item => item.id)).size, foundationTutorialCatalog.length);
+  assert.equal(new Set(tutorialExamples.map(item => item.id)).size, tutorialExamples.length);
+  for (const tutorial of foundationTutorials) {
+    assert.ok(tutorial.question && tutorial.boundary && tutorial.takeaway);
+    assert.ok(tutorial.sections.length >= 2 && tutorial.sections.every(section => section.text.length));
+    assert.ok(tutorial.try.options.length === tutorial.try.explanation.length);
+    assert.ok(tutorial.related.every(id => id === 'foundation-noun-roles' || foundationTutorialCatalog.some(item => item.id === id && !item.hidden)));
+    assert.equal(foundationTutorialCatalog.filter(item => item.id === tutorial.id).length, 1);
+    if (!foundationTopics.some(item => item.id === tutorial.id)) assert.ok(!foundationLessons.some(item => item.id === tutorial.id));
+  }
+  assert.deepEqual(foundationTutorialCatalog.filter(item => item.hidden).map(item => item.id), foundationTopics.filter(item => item.hidden).map(item => item.id));
+  for (const phrase of tutorialExamples) {
+    if (phrase.parts) assert.equal(phrase.parts.map(([, text]) => text).join(' '), phrase.en.replace(/[.,!?]/g, ''), phrase.en);
+    if (phrase.demo) assert.ok(foundationDemoPath(phrase.demo));
+  }
+});
+test('all new word, phrase and sentence buttons have exact text recordings; IPA stays outside TTS', () => {
+  const texts = new Set(JSON.parse(readFileSync('src/foundationAudio.json', 'utf8')).map(item => item.text));
+  for (const phrase of tutorialExamples) {
+    assert.ok(texts.has(phrase.en), phrase.en);
+    for (const [, part] of phrase.parts ?? []) assert.ok(texts.has(part), part);
+    if (phrase.separate) for (const word of phrase.en.replace(/[.,!?]/g, '').split(/\s+/)) assert.ok(texts.has(word), word);
+  }
+  assert.ok(![...texts].some(text => /^\/[^/]+\/$/.test(text)));
+  assert.equal(foundationDemoDefinitions.length, 6);
+  assert.ok(foundationDemoDefinitions.filter(item => item.id.startsWith('focus-')).every(item => item.voice.includes('David') && item.text === 'I want tea.'));
+});
+test('present read pronunciation overrides are tutorial-scoped and preserve historical sound paths', () => {
+  const entries = JSON.parse(readFileSync('src/foundationAudio.json', 'utf8'));
+  for (const entry of entries.filter(item => item.ttsText)) {
+    assert.equal(entry.ttsText, entry.text.replace(/\bread\b/g, 'reed'));
+    assert.equal(entry.tutorialOnly, true);
+  }
+  for (const text of ['read', 'We read books.']) {
+    assert.match(foundationAudioPath(text, 'aria'), /\/f-[0-9a-f]+\.mp3/);
+    assert.match(foundationAudioPath(text, 'aria', true), /\/ft-[0-9a-f]+\.mp3/);
+    assert.notEqual(foundationAudioPath(text, 'aria'), foundationAudioPath(text, 'aria', true));
+  }
+});
 const orderAnswer = task => {
   const used = new Set();
   return task.answers[0].replace(/[.!?]$/, '').split(/\s+/).map(token => {

@@ -1,10 +1,10 @@
 import { useEffect, useRef, useState } from 'react';
 import { androidRecognitionConstructor, isAndroidApp } from './nativeAndroid';
-import { LocalSenseVoiceRecognition, senseVoiceSession } from './localSenseVoice';
+import { LocalQwenRecognition, qwenSession } from './localQwen';
 
 type ResultEvent = { results: ArrayLike<{ isFinal: boolean; 0: { transcript: string } }> };
 type Recognition = {
-  lang: string; continuous: boolean; interimResults: boolean; maxAlternatives: number; processLocally?: boolean;
+  lang: string; continuous: boolean; interimResults: boolean; maxAlternatives: number; processLocally?: boolean; processingTimeoutMs?: number;
   onstart: (() => void) | null; onaudiostart: (() => void) | null; onaudioend: (() => void) | null;
   onresult: ((event: ResultEvent) => void) | null; onerror: ((event: { error: string }) => void) | null; onend: (() => void) | null;
   start: () => void; stop: () => void; abort: () => void;
@@ -23,6 +23,7 @@ export function speechErrorMessage(code: string): string {
     case 'service-not-allowed': return isAndroidApp() ? '手机没有可用的英语语音识别服务。可在系统设置中安装或启用语音服务，也可使用“自己表达”继续练习。' : '浏览器没有允许语音识别服务。请检查浏览器设置，或使用“自己表达”继续练习。';
     case 'audio-capture': return '没有找到可用的麦克风。请检查设备连接和系统麦克风权限。';
     case 'network': return '语音识别服务连接失败。请检查网络后重试；这次没有判为读错。也可以切换到“自己表达”。';
+    case 'local-service': return '本机识别服务连接失败。请重新运行“启动英语学习”后重试；这次没有判为读错。';
     case 'no-speech': return '没有识别到声音。请靠近麦克风，点击麦克风再读一次。';
     case 'language-not-supported': return isAndroidApp() ? '手机语音服务尚不支持英语。请在系统语音设置中启用英语，也可使用“自己表达”继续练习。' : '当前浏览器的识别服务不支持英语。请换用支持英语识别的浏览器，或使用“自己表达”。';
     default: return '这次未能完成识别，请重试；没有判为读错。';
@@ -35,7 +36,7 @@ export function useSpeechRecognition(onFinal: (text: string, target: string) => 
   const [sessionToken, setSessionToken] = useState<string | undefined>();
   const [local, setLocal] = useState(false);
   const [activeLocal, setActiveLocal] = useState(false);
-  const [activeSenseVoice, setActiveSenseVoice] = useState(false);
+  const [activeQwen, setActiveQwen] = useState(false);
   const [phase, setPhase] = useState<Phase>('idle');
   const [target, setTarget] = useState('');
   const [interim, setInterim] = useState('');
@@ -63,11 +64,6 @@ export function useSpeechRecognition(onFinal: (text: string, target: string) => 
   useEffect(() => {
     let disposed = false;
     const Recognition = constructor();
-    void senseVoiceSession().then(token => {
-      if (disposed || !token) return;
-      setSessionToken(token);
-      setSupported(true);
-    });
     // Prefer an already-installed local English recognizer. Never silently download a language pack.
     if (Recognition?.available && 'processLocally' in new Recognition()) {
       void Recognition.available({ langs: ['en-US'], processLocally: true })
@@ -85,6 +81,23 @@ export function useSpeechRecognition(onFinal: (text: string, target: string) => 
     };
   }, []);
 
+  useEffect(() => {
+    if (sessionToken) return;
+    let disposed = false;
+    let retry: ReturnType<typeof setTimeout> | undefined;
+    const deadline = Date.now() + 60000;
+    // The launcher opens the page before loading the CPU model. Discover it
+    // when ready, and discover a new launch token after a service restart.
+    async function probe() {
+      const token = await qwenSession();
+      if (disposed) return;
+      if (token) { setSessionToken(token); setSupported(true); }
+      else if (Date.now() < deadline) retry = setTimeout(() => { void probe(); }, 2000);
+    }
+    void probe();
+    return () => { disposed = true; clearTimeout(retry); };
+  }, [sessionToken]);
+
   function stop() {
     const current = recognition.current;
     if (!current || stopping.current === current) return;
@@ -92,7 +105,7 @@ export function useSpeechRecognition(onFinal: (text: string, target: string) => 
     setPhase('processing'); clearTimer(); clearTimeout(limit.current);
     try { current.stop(); }
     catch { abort(); setError(speechErrorMessage('unknown')); return; }
-    timer.current = setTimeout(() => { if (recognition.current === current) { abort(); setError('识别服务没有及时返回结果，请重试。'); } }, 8000);
+    timer.current = setTimeout(() => { if (recognition.current === current) { abort(); setError('识别服务没有及时返回结果，请重试。'); } }, current.processingTimeoutMs ?? 8000);
   }
 
   function start(targetId: string) {
@@ -100,12 +113,12 @@ export function useSpeechRecognition(onFinal: (text: string, target: string) => 
     abort(); callbacks.current.beforeStart();
     const Recognition = constructor();
     if (!sessionToken && !Recognition) return;
-    const current: Recognition = sessionToken ? new LocalSenseVoiceRecognition(sessionToken) : new Recognition!();
+    const current: Recognition = sessionToken ? new LocalQwenRecognition(sessionToken) : new Recognition!();
     recognition.current = current;
     current.lang = 'en-US'; current.continuous = true; current.interimResults = true; current.maxAlternatives = 1;
     if (!sessionToken && 'processLocally' in current) current.processLocally = local;
     setActiveLocal(!!sessionToken || local);
-    setActiveSenseVoice(!!sessionToken);
+    setActiveQwen(!!sessionToken);
     setTarget(targetId); setError(''); setInterim(''); setPhase('starting');
     let finalText = '';
     let failed = false;
@@ -120,7 +133,7 @@ export function useSpeechRecognition(onFinal: (text: string, target: string) => 
       if (!live()) return;
       stopping.current = current;
       setPhase('processing'); clearTimer(); clearTimeout(limit.current);
-      timer.current = setTimeout(() => { if (live()) { abort(); setError('识别服务没有及时返回结果，请重试。'); } }, 8000);
+      timer.current = setTimeout(() => { if (live()) { abort(); setError('识别服务没有及时返回结果，请重试。'); } }, current.processingTimeoutMs ?? 8000);
     };
     current.onresult = event => {
       if (!live()) return;
@@ -138,7 +151,7 @@ export function useSpeechRecognition(onFinal: (text: string, target: string) => 
     current.onerror = event => {
       if (!live()) return;
       if (sessionToken && event.error === 'network') setSessionToken(undefined);
-      failed = true; setError(speechErrorMessage(event.error));
+      failed = true; setError(speechErrorMessage(sessionToken && event.error === 'network' ? 'local-service' : event.error));
       abort();
     };
     current.onend = () => {
@@ -153,6 +166,6 @@ export function useSpeechRecognition(onFinal: (text: string, target: string) => 
   }
 
   return { supported, local: phase === 'idle' ? !!sessionToken || local : activeLocal,
-    senseVoice: phase === 'idle' ? !!sessionToken : activeSenseVoice,
+    qwen: phase === 'idle' ? !!sessionToken : activeQwen,
     phase, target, interim, error, start, stop, abort, busy: phase !== 'idle' };
 }

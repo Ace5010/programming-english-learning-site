@@ -1,0 +1,49 @@
+{
+  "date": "2026-10-04",
+  "observedExistingTranscript": {
+    "expected": "Please check my pull request.",
+    "recognized": "please check my poll request",
+    "source": "Read from the current user Chrome page; no microphone action was taken."
+  },
+  "behavior": {
+    "sentenceTolerance": "One discrepancy in a sentence of at least three words and at least two matching targets.",
+    "pullRequestContext": [
+      "poll request",
+      "pool request"
+    ],
+    "maxAttempts": 3,
+    "exhausted": "Persist failed result and advance in one write.",
+    "emptyAndServiceErrorsConsumeAttempts": false,
+    "independentMasteryGain": false
+  },
+  "checks": {
+    "typescript": "passed",
+    "node": {
+      "passed": 188,
+      "failed": 0
+    },
+    "developmentTargeted": 8,
+    "productionTargeted": 8,
+    "speechLifecycle": 9,
+    "mobile": 13,
+    "wordLearningBrowser": 9,
+    "localSenseVoiceAdapter": "passed with fake audio and stubbed local API",
+    "build": "passed",
+    "projectIntegrity": "passed",
+    "diffWhitespace": "passed"
+  },
+  "evidence": {
+    "development": "browser/report.json",
+    "production": "production/report.json",
+    "lifecycle": "lifecycle/simulated-browser-results.json",
+    "mobile": "mobile/",
+    "wordLearning": "word-learning/"
+  },
+  "limitations": [
+    "New ASR event tests use simulated events.",
+    "Local SenseVoice model and human microphone accuracy were not retested.",
+    "Isolated sync validation is not live D1 acceptance.",
+    "No commit, push, branch creation, deployment or Android installation."
+  ],
+  "bundle": "dist/assets/index-Cktdx9-C.js"
+}

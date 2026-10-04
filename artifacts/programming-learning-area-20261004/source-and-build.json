@@ -1,0 +1,19 @@
+{
+  "checkedAt": "2026-10-04T11:49:02.586Z",
+  "origin": "http://127.0.0.1:5186/dist/",
+  "assets": [
+    "index-BMRXkNbO.js",
+    "index-C1OCj0pq.css"
+  ],
+  "servedBuildMatches": true,
+  "fingerprints": {
+    "src/CourseWordCards.tsx": "220357f6301ccd2ef40cd26b25e249906866616001e6aee03155b3b7ca6c6eb3",
+    "src/programmingStudy.ts": "6bd6a1faa8f96972aaf199bdbd7d980829248144856455b7f47f7f9a26e1d661",
+    "src/CourseOverview.tsx": "3b2a564ae850e6107acaf79485347802730b89655229afec60a9558b0f5d4e78",
+    "src/courseOverviewData.ts": "e41665f1a59786a75cd75fe71f70263cf9fe1847a6451879a45ce267978b4ec7",
+    "src/courseOverview.css": "d16bffb9ae70b05c95ee2ff0da6438f20abf054f46beebc1557d341fa3125fa5",
+    "src/DailyEnglish.tsx": "b6d8d78814b080c279aecbff3ea3b8aa9736dca97aa0efb66c5fdabfca612bf7",
+    "src/App.tsx": "4da62b1460bd21cfd6e616bdce42c3faac084d80abb4bf6dbd9207809bb4a1e1",
+    "src/adaptiveLearning.ts": "1926cc30a41ba796386ac1ff3b48b7e5d2fbf20b10a60e5372696df3430ba296"
+  }
+}

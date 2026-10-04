@@ -1,0 +1,13 @@
+[
+  {
+    "pid": 41752,
+    "port": 60792,
+    "passed": true,
+    "name": "cold concurrent startup and repeat reuse"
+  },
+  {
+    "port": 58304,
+    "passed": true,
+    "name": "identity and port conflict protection"
+  }
+]

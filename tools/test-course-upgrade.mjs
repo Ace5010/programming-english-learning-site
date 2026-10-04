@@ -2,8 +2,8 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { localAnswerCorrection } from '../src/answerCorrection.ts';
 import { createDailyProgress, createDailySession, beginDailyExercises, updateDailyDraft, checkDailyAttempt, markDailyHelp, updateDailyPairs, parseDailyProgress, dailyExerciseAbility, submitDailyAnswer } from '../src/dailyProgress.ts';
-import { recordAdaptiveAnswer, planAdaptiveSession, beginAdaptiveLearning, resolveAdaptiveLesson } from '../src/adaptiveLearning.ts';
-import { createPairState, selectPair, choosePair, pairOrder } from '../src/pairPractice.ts';
+import { recordAdaptiveAnswer, planAdaptiveSession, beginAdaptiveLearning, resolveAdaptiveLesson, advanceAdaptiveSession } from '../src/adaptiveLearning.ts';
+import { createPairState, selectPair, choosePair, pairOrder, pairsComplete } from '../src/pairPractice.ts';
 import { adaptiveDailyLessons } from '../src/dailyPractice.ts';
 import { adaptiveProgrammingLessons } from '../src/programmingPractice.ts';
 import { getSkill, updateReviewProgress } from '../src/review.ts';
@@ -92,7 +92,7 @@ test('adaptive correction lowers confidence only at the first error, including r
 });
 
 const pairs = ['one', 'two', 'three', 'four'].map(id => ({ id, en: id, zh: id + '的含义', audioId: id }));
-test('pair mistakes affect only that target, duplicate clicks are inert, forced last pair is unmeasured', () => {
+test('pair mistakes affect only that target and the last pair waits for an explicit choice without claiming recall', () => {
   let state = selectPair(createPairState(), 'one');
   const positions = pairOrder(pairs, 'seed');
   state = choosePair(pairs, state, 'two', now);
@@ -101,7 +101,11 @@ test('pair mistakes affect only that target, duplicate clicks are inert, forced 
   state = choosePair(pairs, state, 'one', now); assert.equal(state.matches.one, 'assisted');
   state = choosePair(pairs, selectPair(state, 'two'), 'two', now);
   state = choosePair(pairs, selectPair(state, 'three'), 'three', now);
+  assert.deepEqual(state.matches, { one: 'assisted', two: 'independent', three: 'independent' });
+  assert.equal(pairsComplete(pairs, state), false);
+  state = choosePair(pairs, selectPair(state, 'four'), 'four', now);
   assert.deepEqual(state.matches, { one: 'assisted', two: 'independent', three: 'independent', four: 'unmeasured' });
+  assert.equal(pairsComplete(pairs, state), true);
   assert.deepEqual(pairOrder(pairs, 'seed'), positions);
   let wrong = choosePair(pairs, selectPair(createPairState(), 'one'), 'two', now);
   wrong = choosePair(pairs, wrong, 'three', now);
@@ -116,6 +120,13 @@ test('pair course progress preserves mixed per-target evidence and last-pair non
   assert.deepEqual(Object.keys(progress.knowledge), ['one']);
   progress = updateDailyPairs(progress, lesson, 'one', now);
   for (const id of ['two', 'three']) { progress = edit(progress, { pairs: selectPair(progress.session.draft.pairs, id) }); progress = updateDailyPairs(progress, lesson, id, now); }
+  progress = check(progress, lesson);
+  assert.equal(progress.session.feedback, null);
+  assert.equal(progress.session.answers.length, 0);
+  progress = parseDailyProgress(JSON.stringify(progress), [lesson]).progress;
+  assert.equal(progress.session.draft.pairs.matches.four, undefined);
+  progress = edit(progress, { pairs: selectPair(progress.session.draft.pairs, 'four') });
+  progress = updateDailyPairs(progress, lesson, 'four', now);
   progress = check(progress, lesson);
   assert.equal(progress.knowledge.one.skills.listening.assistedAnswers, 1);
   assert.equal(progress.knowledge.two.skills.listening.independentAnswers, 1);
@@ -188,3 +199,53 @@ test('feedback waits for speech, replaces a pending cue, and navigation or mute 
   await new Promise(resolve => setTimeout(resolve, 70)); assert.equal(played.length, 1);
   assert.equal(audio.play('complete', '4'), false);
 });
+
+for (const [section, list] of [['daily', adaptiveDailyLessons], ['programming', adaptiveProgrammingLessons]]) {
+  for (const pairMode of ['text', 'audio']) test(`${section} ${pairMode} pairs: mixed results keep the assisted and final targets practising`, () => {
+    const lesson = list.find(item => item.practice.some(task => task.kind === 'match' && task.pairMode === pairMode));
+    const task = lesson.practice.find(item => item.kind === 'match' && item.pairMode === pairMode);
+    const ids = [...new Set(task.knowledgeIds)];
+    const progress = createDailyProgress();
+    progress.learning = { version: 1, turns: 6, rounds: 1, targets: Object.fromEntries(ids.map(id => [id, {
+      introducedAt: now, confidence: .5, abilities: {}, lastSeenTurn: 0, lastFailureTurn: 0, signatures: [], transfer: false, readyAt: 0 }])) };
+    progress.session = { ...createDailySession({ ...lesson, exercises: [task] }, 'lesson', now), stage: 'exercise',
+      adaptive: { version: 1, round: 1, focusIds: ids, newIds: [], sourceLessonId: lesson.id, seed: 1, budget: 8 } };
+    const pairIds = task.pairs.map(pair => pair.id);
+    const last = pairIds[pairIds.length - 1];
+    let current = progress;
+    // A is matched outright, B needs one correction first, and the final pair is left for last.
+    current = edit(current, { pairs: selectPair(current.session.draft.pairs, pairIds[0]) });
+    current = updateDailyPairs(current, lesson, pairIds[0], now);
+    current = edit(current, { pairs: selectPair(current.session.draft.pairs, pairIds[1]) });
+    current = updateDailyPairs(current, lesson, last, now);
+    current = edit(current, { pairs: selectPair(current.session.draft.pairs, pairIds[1]) });
+    current = updateDailyPairs(current, lesson, pairIds[1], now);
+    assert.equal(pairsComplete(task.pairs, current.session.draft.pairs), false, 'the final pair must still be outstanding');
+    assert.deepEqual(current.session.feedback, null, 'no feedback and no answer until the last pair is chosen by hand');
+    assert.equal(current.session.answers.length, 0);
+    for (const id of pairIds.slice(2)) { current = edit(current, { pairs: selectPair(current.session.draft.pairs, id) }); current = updateDailyPairs(current, lesson, id, now); }
+    const matches = current.session.draft.pairs.matches;
+    assert.equal(matches[pairIds[0]], 'independent');
+    assert.notEqual(matches[pairIds[1]], 'independent');
+    assert.equal(matches[last], 'unmeasured', 'the last pair is never claimed as recall');
+    current = submitDailyAnswer(current, lesson, {}, now);
+    assert.ok(current.session.feedback, 'feedback appears only once the final pair has been chosen');
+    const recorded = recordAdaptiveAnswer(current, list, now);
+    const targets = recorded.learning.targets;
+    assert.ok(targets[pairIds[0]].confidence > .5, 'the independent pair gains evidence');
+    assert.ok(targets[pairIds[1]].confidence < .5, 'the assisted pair is not masked by the independent one');
+    assert.equal(targets[last].confidence, .5, 'the final pair adds no evidence either way');
+    assert.deepEqual(targets[last].signatures, []);
+    assert.deepEqual(recordAdaptiveAnswer(recorded, list, now), recorded, 'the same answer cannot be counted twice');
+    // Dedup removes the whole group that contains A, so B and C must keep their own single-target questions.
+    const others = list.flatMap(item => [...item.exercises, ...item.rechecks, ...item.practice]);
+    for (const id of [pairIds[1], last]) assert.ok(others.some(candidate => (candidate.knowledgeIds ?? []).includes(id) && !(candidate.knowledgeIds ?? []).includes(pairIds[0])),
+      `${section} ${pairMode}: ${id} loses every practice option once the pair group is deduplicated`);
+    const finished = advanceAdaptiveSession(recorded, list, now + 1000);
+    assert.equal(parseDailyProgress(JSON.stringify(finished), list).writable, true);
+    const next = planAdaptiveSession(finished, list, now + 2000, () => .5);
+    assert.ok(next, 'the course must still be able to continue');
+    assert.ok(next.adaptive.focusIds.includes(pairIds[1]) || next.adaptive.focusIds.includes(last),
+      'the next round must still target what was not answered independently');
+  });
+}

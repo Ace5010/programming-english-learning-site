@@ -1,0 +1,393 @@
+{
+  "baseURL": "http://127.0.0.1:5186/dist/",
+  "results": [
+    {
+      "name": "layout-lagoon-1440",
+      "width": 1440,
+      "theme": "lagoon",
+      "evidence": {
+        "width": 1440,
+        "content": 1440,
+        "overflow": []
+      }
+    },
+    {
+      "name": "layout-lagoon-390",
+      "width": 390,
+      "theme": "lagoon",
+      "evidence": {
+        "width": 390,
+        "content": 390,
+        "overflow": []
+      }
+    },
+    {
+      "name": "layout-pearl-1440",
+      "width": 1440,
+      "theme": "pearl",
+      "evidence": {
+        "width": 1440,
+        "content": 1440,
+        "overflow": []
+      }
+    },
+    {
+      "name": "layout-pearl-390",
+      "width": 390,
+      "theme": "pearl",
+      "evidence": {
+        "width": 390,
+        "content": 390,
+        "overflow": []
+      }
+    },
+    {
+      "name": "layout-sky-1440",
+      "width": 1440,
+      "theme": "sky",
+      "evidence": {
+        "width": 1440,
+        "content": 1440,
+        "overflow": []
+      }
+    },
+    {
+      "name": "layout-sky-390",
+      "width": 390,
+      "theme": "sky",
+      "evidence": {
+        "width": 390,
+        "content": 390,
+        "overflow": []
+      }
+    },
+    {
+      "name": "layout-mint-1440",
+      "width": 1440,
+      "theme": "mint",
+      "evidence": {
+        "width": 1440,
+        "content": 1440,
+        "overflow": []
+      }
+    },
+    {
+      "name": "layout-mint-390",
+      "width": 390,
+      "theme": "mint",
+      "evidence": {
+        "width": 390,
+        "content": 390,
+        "overflow": []
+      }
+    },
+    {
+      "name": "flow-1440",
+      "width": 1440,
+      "theme": "lagoon",
+      "evidence": {
+        "first": [
+          "word-1",
+          "word-2801",
+          "word-3561",
+          "word-20",
+          "word-4",
+          "word-5"
+        ],
+        "next": [
+          "word-2",
+          "word-11",
+          "word-1880",
+          "word-1384",
+          "word-3",
+          "word-687"
+        ],
+        "observed": [
+          {
+            "id": "P1-01-01-p-2801-word",
+            "kind": "choice",
+            "targets": [
+              "word-2801"
+            ],
+            "wrong": false
+          },
+          {
+            "id": "P1-01-02-p-4-meaning",
+            "kind": "choice",
+            "targets": [
+              "word-4"
+            ],
+            "wrong": true
+          },
+          {
+            "id": "P1-01-01-r01",
+            "kind": "choice",
+            "targets": [
+              "word-20"
+            ],
+            "wrong": false
+          },
+          {
+            "id": "P1-01-01-p-3561-word",
+            "kind": "choice",
+            "targets": [
+              "word-3561"
+            ],
+            "wrong": false
+          },
+          {
+            "id": "P1-01-01-e01",
+            "kind": "choice",
+            "targets": [
+              "word-1"
+            ],
+            "wrong": false
+          },
+          {
+            "id": "P1-01-02-r01",
+            "kind": "choice",
+            "targets": [
+              "word-5"
+            ],
+            "wrong": false
+          },
+          {
+            "id": "P1-01-01-r02",
+            "kind": "choice",
+            "targets": [
+              "word-2801",
+              "word-3561"
+            ],
+            "wrong": false
+          },
+          {
+            "id": "P1-01-06-e01",
+            "kind": "choice",
+            "targets": [
+              "word-20",
+              "word-4"
+            ],
+            "wrong": false
+          },
+          {
+            "id": "P1-01-02-p-5-word",
+            "kind": "choice",
+            "targets": [
+              "word-5"
+            ],
+            "wrong": false
+          },
+          {
+            "id": "P1-01-02-p-4-translation",
+            "kind": "choice",
+            "targets": [
+              "word-4"
+            ],
+            "wrong": false
+          }
+        ],
+        "studyAudio": [
+          {
+            "src": "http://127.0.0.1:5186/dist/audio/aria/word-1.mp3?v=repository",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/dist/audio/aria/word-1.mp3?v=repository",
+            "rate": 0.72,
+            "pitch": true
+          }
+        ],
+        "sceneQuestion": "P1-01-01-e02",
+        "audio": [
+          {
+            "src": "http://127.0.0.1:5186/dist/audio/feedback/correct.mp3",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/dist/audio/feedback/correct.mp3",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/dist/audio/feedback/correct.mp3",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/dist/audio/aria/word-5.mp3",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/dist/audio/aria/example-4.mp3?v=Clone%20this%20project.",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/dist/audio/feedback/complete.mp3",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/dist/audio/aria/word-4.mp3?v=clone",
+            "rate": 0.72,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/dist/audio/aria/word-1.mp3",
+            "rate": 1,
+            "pitch": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "flow-390",
+      "width": 390,
+      "theme": "lagoon",
+      "evidence": {
+        "first": [
+          "word-1",
+          "word-2801",
+          "word-3561",
+          "word-20",
+          "word-4",
+          "word-5"
+        ],
+        "next": [
+          "word-2",
+          "word-11",
+          "word-1880",
+          "word-1384",
+          "word-3",
+          "word-687"
+        ],
+        "observed": [
+          {
+            "id": "P1-01-01-p-2801-word",
+            "kind": "choice",
+            "targets": [
+              "word-2801"
+            ],
+            "wrong": true
+          },
+          {
+            "id": "P1-01-02-p-4-meaning",
+            "kind": "choice",
+            "targets": [
+              "word-4"
+            ],
+            "wrong": true
+          },
+          {
+            "id": "P1-01-01-r01",
+            "kind": "choice",
+            "targets": [
+              "word-20"
+            ],
+            "wrong": true
+          },
+          {
+            "id": "P1-01-01-p-3561-word",
+            "kind": "choice",
+            "targets": [
+              "word-3561"
+            ],
+            "wrong": true
+          },
+          {
+            "id": "P1-01-01-e01",
+            "kind": "choice",
+            "targets": [
+              "word-1"
+            ],
+            "wrong": true
+          },
+          {
+            "id": "P1-01-02-r01",
+            "kind": "choice",
+            "targets": [
+              "word-5"
+            ],
+            "wrong": true
+          },
+          {
+            "id": "P1-01-01-e05",
+            "kind": "choice",
+            "targets": [
+              "word-1"
+            ],
+            "wrong": true
+          },
+          {
+            "id": "P1-01-02-p-5-cloze",
+            "kind": "choice",
+            "targets": [
+              "word-5"
+            ],
+            "wrong": true
+          },
+          {
+            "id": "P1-01-02-p-4-word",
+            "kind": "choice",
+            "targets": [
+              "word-4"
+            ],
+            "wrong": true
+          },
+          {
+            "id": "P1-01-02-p-5-meaning",
+            "kind": "choice",
+            "targets": [
+              "word-5"
+            ],
+            "wrong": true
+          }
+        ],
+        "studyAudio": [
+          {
+            "src": "http://127.0.0.1:5186/dist/audio/aria/word-1.mp3?v=repository",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/dist/audio/aria/word-1.mp3?v=repository",
+            "rate": 0.72,
+            "pitch": true
+          }
+        ],
+        "sceneQuestion": "P1-01-01-e05",
+        "audio": [
+          {
+            "src": "http://127.0.0.1:5186/dist/audio/aria/word-3561.mp3",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/dist/audio/aria/word-1.mp3",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/dist/audio/feedback/complete.mp3",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/dist/audio/aria/word-1.mp3?v=repository",
+            "rate": 0.72,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/dist/audio/aria/word-1.mp3",
+            "rate": 1,
+            "pitch": true
+          }
+        ]
+      }
+    }
+  ],
+  "failures": []
+}

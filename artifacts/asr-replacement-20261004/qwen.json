@@ -1,0 +1,1186 @@
+{
+  "status": "complete-public-screen-not-user-acceptance",
+  "model": "Qwen/Qwen3-ASR-1.7B",
+  "dtype": "float32",
+  "loadMs": 12805,
+  "planSha256": "ca56f483dd3ca05f91bd2bd3fe3eff04fd2da26608f2a966510d0d7168811e3e",
+  "containsUserRecording": false,
+  "referencePrompt": false,
+  "cloudCalls": 0,
+  "networkDisabled": true,
+  "pronunciationAssessment": false,
+  "cases": [
+    {
+      "id": "daily-aria-whats-your-name",
+      "group": "daily",
+      "file": "public/audio/daily/aria/whats-your-name.mp3",
+      "reference": "What's your name?",
+      "sha256": "3cf9d6bfdf346b15695cd8fa0b505977b0c9910cf57a46f3eb2edfe83581810c",
+      "durationSeconds": 1.776,
+      "result": {
+        "transcript": "What's your name?",
+        "normalized": "whats your name",
+        "modelMs": 2677,
+        "generatedTokens": 6,
+        "truncated": false,
+        "exact": true,
+        "wordErrors": 0,
+        "referenceWords": 4
+      }
+    },
+    {
+      "id": "daily-aria-my-name-is-ben",
+      "group": "daily",
+      "file": "public/audio/daily/aria/my-name-is-ben.mp3",
+      "reference": "My name is Ben.",
+      "sha256": "c4e8e47ec0dcfba452b10013d0cd8dec02a2108d95e91788507a4cb1e4d007b8",
+      "durationSeconds": 2.04,
+      "result": {
+        "transcript": "My name is Ben.",
+        "normalized": "my name is ben",
+        "modelMs": 2642,
+        "generatedTokens": 6,
+        "truncated": false,
+        "exact": true,
+        "wordErrors": 0,
+        "referenceWords": 4
+      }
+    },
+    {
+      "id": "daily-aria-my-name-is-mia",
+      "group": "daily",
+      "file": "public/audio/daily/aria/my-name-is-mia.mp3",
+      "reference": "My name is Mia.",
+      "sha256": "4986d5c96911104a894d821de0ecab65038dc0c401ecd18df0f02d29727f8609",
+      "durationSeconds": 2.064,
+      "result": {
+        "transcript": "My name is Mia.",
+        "normalized": "my name is mia",
+        "modelMs": 2826,
+        "generatedTokens": 6,
+        "truncated": false,
+        "exact": true,
+        "wordErrors": 0,
+        "referenceWords": 4
+      }
+    },
+    {
+      "id": "daily-aria-where-are-you-from",
+      "group": "daily",
+      "file": "public/audio/daily/aria/where-are-you-from.mp3",
+      "reference": "Where are you from?",
+      "sha256": "24bbc1e28a3c71e96cdd6f02e92348501de9e244d48da05c24e81b6d2949cc3e",
+      "durationSeconds": 1.968,
+      "result": {
+        "transcript": "Where are you from?",
+        "normalized": "where are you from",
+        "modelMs": 2722,
+        "generatedTokens": 6,
+        "truncated": false,
+        "exact": true,
+        "wordErrors": 0,
+        "referenceWords": 4
+      }
+    },
+    {
+      "id": "daily-aria-from-china",
+      "group": "daily",
+      "file": "public/audio/daily/aria/from-china.mp3",
+      "reference": "I am from China.",
+      "sha256": "763fc4f8e7fa9b1961751051a5659b10c904c0ddc1571f62a0fd07e810c8486a",
+      "durationSeconds": 2.04,
+      "result": {
+        "transcript": "I am from China.",
+        "normalized": "i am from china",
+        "modelMs": 2746,
+        "generatedTokens": 6,
+        "truncated": false,
+        "exact": true,
+        "wordErrors": 0,
+        "referenceWords": 4
+      }
+    },
+    {
+      "id": "daily-aria-are-you-from-china",
+      "group": "daily",
+      "file": "public/audio/daily/aria/are-you-from-china.mp3",
+      "reference": "Are you from China?",
+      "sha256": "4d6f472400688ea2343ec67a4e60885d30338cdd75ca0b3ed90d6f534a6f1279",
+      "durationSeconds": 1.992,
+      "result": {
+        "transcript": "Are you from China?",
+        "normalized": "are you from china",
+        "modelMs": 2656,
+        "generatedTokens": 6,
+        "truncated": false,
+        "exact": true,
+        "wordErrors": 0,
+        "referenceWords": 4
+      }
+    },
+    {
+      "id": "programming-aria-1",
+      "group": "programming",
+      "file": "public/audio/aria/example-1.mp3",
+      "reference": "Open this repository.",
+      "sha256": "b633909022eb17b3a1f50626af4c931cacac2660fe64a487ea3d061561586813",
+      "durationSeconds": 2.424,
+      "result": {
+        "transcript": "Open this repository.",
+        "normalized": "open this repository",
+        "modelMs": 2462,
+        "generatedTokens": 5,
+        "truncated": false,
+        "exact": true,
+        "wordErrors": 0,
+        "referenceWords": 3
+      }
+    },
+    {
+      "id": "programming-aria-7",
+      "group": "programming",
+      "file": "public/audio/aria/example-7.mp3",
+      "reference": "Please check my pull request.",
+      "sha256": "ad0f24f9857855504d0fe6ab40c08ae133af39c4d2632546138904f7e8f299d4",
+      "durationSeconds": 2.688,
+      "result": {
+        "transcript": "Please check my pull request.",
+        "normalized": "please check my pull request",
+        "modelMs": 3121,
+        "generatedTokens": 7,
+        "truncated": false,
+        "exact": true,
+        "wordErrors": 0,
+        "referenceWords": 5
+      }
+    },
+    {
+      "id": "programming-aria-11",
+      "group": "programming",
+      "file": "public/audio/aria/example-11.mp3",
+      "reference": "Use checkout to change branches.",
+      "sha256": "a840b48aab27036a25787a5c3717ffa390a10a9f84933b372244cf409e158e22",
+      "durationSeconds": 2.904,
+      "result": {
+        "transcript": "Use checkout to change branches.",
+        "normalized": "use checkout to change branches",
+        "modelMs": 3249,
+        "generatedTokens": 7,
+        "truncated": false,
+        "exact": true,
+        "wordErrors": 0,
+        "referenceWords": 5
+      }
+    },
+    {
+      "id": "programming-aria-3561",
+      "group": "programming",
+      "file": "public/audio/aria/example-3561.mp3",
+      "reference": "Read this code.",
+      "sha256": "c8b779345e5e4927ac7628ac2fd67bc3e8f97235e91309299bc4e25ff08c80a2",
+      "durationSeconds": 1.992,
+      "result": {
+        "transcript": "Read this code.",
+        "normalized": "read this code",
+        "modelMs": 2576,
+        "generatedTokens": 5,
+        "truncated": false,
+        "exact": true,
+        "wordErrors": 0,
+        "referenceWords": 3
+      }
+    },
+    {
+      "id": "programming-aria-3563",
+      "group": "programming",
+      "file": "public/audio/aria/example-3563.mp3",
+      "reference": "Check the source code.",
+      "sha256": "5fb76d0e9b4b017c86562b22ff833356ab275766e1be9f699f98f9d520cf1bad",
+      "durationSeconds": 2.112,
+      "result": {
+        "transcript": "Check the source code.",
+        "normalized": "check the source code",
+        "modelMs": 2772,
+        "generatedTokens": 6,
+        "truncated": false,
+        "exact": true,
+        "wordErrors": 0,
+        "referenceWords": 4
+      }
+    },
+    {
+      "id": "programming-aria-3564",
+      "group": "programming",
+      "file": "public/audio/aria/example-3564.mp3",
+      "reference": "Execute this command.",
+      "sha256": "dd216458b180dc1b55d412929ba785e4729191627923757b735a05fc4c651390",
+      "durationSeconds": 2.376,
+      "result": {
+        "transcript": "Execute this command.",
+        "normalized": "execute this command",
+        "modelMs": 2461,
+        "generatedTokens": 5,
+        "truncated": false,
+        "exact": true,
+        "wordErrors": 0,
+        "referenceWords": 3
+      }
+    },
+    {
+      "id": "word-aria-tree",
+      "group": "word",
+      "file": "public/audio/aria/word-2441.mp3",
+      "reference": "tree",
+      "sha256": "ad4d6b11952aa8011d0e3f5035a9030cc7f7128f16dd10e4955cc4f7eff8b7ff",
+      "durationSeconds": 1.488,
+      "result": {
+        "transcript": "Tree.",
+        "normalized": "tree",
+        "modelMs": 1624,
+        "generatedTokens": 3,
+        "truncated": false,
+        "exact": true,
+        "wordErrors": 0,
+        "referenceWords": 1
+      }
+    },
+    {
+      "id": "word-aria-three",
+      "group": "word",
+      "file": "public/audio/aria/word-2400.mp3",
+      "reference": "three",
+      "sha256": "dbd32db6d89af3f6ba5865985d6aea396c11469027890c3ff47f2df3858372f5",
+      "durationSeconds": 1.536,
+      "result": {
+        "transcript": "Three.",
+        "normalized": "three",
+        "modelMs": 1614,
+        "generatedTokens": 3,
+        "truncated": false,
+        "exact": true,
+        "wordErrors": 0,
+        "referenceWords": 1
+      }
+    },
+    {
+      "id": "word-aria-bed",
+      "group": "word",
+      "file": "public/audio/aria/word-1291.mp3",
+      "reference": "bed",
+      "sha256": "5e76c091ea05c53403fa281115e8a5bfe08a42b621f6a2893c88beb6b9f133cd",
+      "durationSeconds": 1.44,
+      "result": {
+        "transcript": "Bed.",
+        "normalized": "bed",
+        "modelMs": 1732,
+        "generatedTokens": 3,
+        "truncated": false,
+        "exact": true,
+        "wordErrors": 0,
+        "referenceWords": 1
+      }
+    },
+    {
+      "id": "word-aria-bad",
+      "group": "word",
+      "file": "public/audio/aria/word-2978.mp3",
+      "reference": "bad",
+      "sha256": "77e448d4d24a5eb7bce40296318a11d4582a63b0ad88ae2b826b9f74353f92af",
+      "durationSeconds": 1.512,
+      "result": {
+        "transcript": "Bad.",
+        "normalized": "bad",
+        "modelMs": 2092,
+        "generatedTokens": 3,
+        "truncated": false,
+        "exact": true,
+        "wordErrors": 0,
+        "referenceWords": 1
+      }
+    },
+    {
+      "id": "daily-guy-whats-your-name",
+      "group": "daily",
+      "file": "public/audio/daily/guy/whats-your-name.mp3",
+      "reference": "What's your name?",
+      "sha256": "b8d30c21f1986eb952e9a5e83bd955a8af2419e175c07542730b4a94c9f5cefc",
+      "durationSeconds": 1.824,
+      "result": {
+        "transcript": "What's your name?",
+        "normalized": "whats your name",
+        "modelMs": 4870,
+        "generatedTokens": 6,
+        "truncated": false,
+        "exact": true,
+        "wordErrors": 0,
+        "referenceWords": 4
+      }
+    },
+    {
+      "id": "daily-guy-my-name-is-ben",
+      "group": "daily",
+      "file": "public/audio/daily/guy/my-name-is-ben.mp3",
+      "reference": "My name is Ben.",
+      "sha256": "66395ab8551da9fe5e685c385ad5e53fa3e5810e3b5bda80f9ad4ac3df3e2d0e",
+      "durationSeconds": 1.92,
+      "result": {
+        "transcript": "My name is Ben.",
+        "normalized": "my name is ben",
+        "modelMs": 3792,
+        "generatedTokens": 6,
+        "truncated": false,
+        "exact": true,
+        "wordErrors": 0,
+        "referenceWords": 4
+      }
+    },
+    {
+      "id": "daily-guy-my-name-is-mia",
+      "group": "daily",
+      "file": "public/audio/daily/guy/my-name-is-mia.mp3",
+      "reference": "My name is Mia.",
+      "sha256": "5336bc8cfcdce0eba1b5be01c953f8a093192a99a4a1395e069b620386876fb4",
+      "durationSeconds": 2.016,
+      "result": {
+        "transcript": "My name is Mia.",
+        "normalized": "my name is mia",
+        "modelMs": 3703,
+        "generatedTokens": 6,
+        "truncated": false,
+        "exact": true,
+        "wordErrors": 0,
+        "referenceWords": 4
+      }
+    },
+    {
+      "id": "daily-guy-where-are-you-from",
+      "group": "daily",
+      "file": "public/audio/daily/guy/where-are-you-from.mp3",
+      "reference": "Where are you from?",
+      "sha256": "384a736954154c3b1ada292b1f3bd91172a8a6115479ae48b9c7006b9e086e49",
+      "durationSeconds": 1.992,
+      "result": {
+        "transcript": "Where are you from?",
+        "normalized": "where are you from",
+        "modelMs": 3968,
+        "generatedTokens": 6,
+        "truncated": false,
+        "exact": true,
+        "wordErrors": 0,
+        "referenceWords": 4
+      }
+    },
+    {
+      "id": "daily-guy-from-china",
+      "group": "daily",
+      "file": "public/audio/daily/guy/from-china.mp3",
+      "reference": "I am from China.",
+      "sha256": "ba955bd1843c85606f6402f7218f1d07caeafa5f23d7c163e3797d7c600020a1",
+      "durationSeconds": 2.112,
+      "result": {
+        "transcript": "I am from China.",
+        "normalized": "i am from china",
+        "modelMs": 3639,
+        "generatedTokens": 6,
+        "truncated": false,
+        "exact": true,
+        "wordErrors": 0,
+        "referenceWords": 4
+      }
+    },
+    {
+      "id": "daily-guy-are-you-from-china",
+      "group": "daily",
+      "file": "public/audio/daily/guy/are-you-from-china.mp3",
+      "reference": "Are you from China?",
+      "sha256": "e37be4aa8bef87f5636a9a5e624a40ccc1df93b28c4b74d55ced99cdc4f3588c",
+      "durationSeconds": 2.064,
+      "result": {
+        "transcript": "Are you from China?",
+        "normalized": "are you from china",
+        "modelMs": 4334,
+        "generatedTokens": 6,
+        "truncated": false,
+        "exact": true,
+        "wordErrors": 0,
+        "referenceWords": 4
+      }
+    },
+    {
+      "id": "programming-guy-1",
+      "group": "programming",
+      "file": "public/audio/guy/example-1.mp3",
+      "reference": "Open this repository.",
+      "sha256": "8d6bed47d54250e76920238c2ca96b306f688748b977e2fb369050d4072dcf4d",
+      "durationSeconds": 2.52,
+      "result": {
+        "transcript": "Open this repository.",
+        "normalized": "open this repository",
+        "modelMs": 2811,
+        "generatedTokens": 5,
+        "truncated": false,
+        "exact": true,
+        "wordErrors": 0,
+        "referenceWords": 3
+      }
+    },
+    {
+      "id": "programming-guy-7",
+      "group": "programming",
+      "file": "public/audio/guy/example-7.mp3",
+      "reference": "Please check my pull request.",
+      "sha256": "bad11af4f9d168c55cd6ba0c448dd2ff33e94e1ccf2bfd1cd73da9e421c9a509",
+      "durationSeconds": 2.616,
+      "result": {
+        "transcript": "Please check my pull request.",
+        "normalized": "please check my pull request",
+        "modelMs": 3697,
+        "generatedTokens": 7,
+        "truncated": false,
+        "exact": true,
+        "wordErrors": 0,
+        "referenceWords": 5
+      }
+    },
+    {
+      "id": "programming-guy-11",
+      "group": "programming",
+      "file": "public/audio/guy/example-11.mp3",
+      "reference": "Use checkout to change branches.",
+      "sha256": "89bb46f49dc34db57642c008fa2936acc09ed69c96ae9b7e059e80809d251a1c",
+      "durationSeconds": 2.832,
+      "result": {
+        "transcript": "Use checkout to change branches.",
+        "normalized": "use checkout to change branches",
+        "modelMs": 3471,
+        "generatedTokens": 7,
+        "truncated": false,
+        "exact": true,
+        "wordErrors": 0,
+        "referenceWords": 5
+      }
+    },
+    {
+      "id": "programming-guy-3561",
+      "group": "programming",
+      "file": "public/audio/guy/example-3561.mp3",
+      "reference": "Read this code.",
+      "sha256": "6ba8632f81bedf306537c2c29649014d21fdacae47bd68d4835df3b74639e6a5",
+      "durationSeconds": 2.016,
+      "result": {
+        "transcript": "Read this code.",
+        "normalized": "read this code",
+        "modelMs": 2719,
+        "generatedTokens": 5,
+        "truncated": false,
+        "exact": true,
+        "wordErrors": 0,
+        "referenceWords": 3
+      }
+    },
+    {
+      "id": "programming-guy-3563",
+      "group": "programming",
+      "file": "public/audio/guy/example-3563.mp3",
+      "reference": "Check the source code.",
+      "sha256": "bd00e8ffc51ead1b0915f946bf4795fc79aaa34d0b7507f59a47320bd0562377",
+      "durationSeconds": 2.16,
+      "result": {
+        "transcript": "Check the source code.",
+        "normalized": "check the source code",
+        "modelMs": 2877,
+        "generatedTokens": 6,
+        "truncated": false,
+        "exact": true,
+        "wordErrors": 0,
+        "referenceWords": 4
+      }
+    },
+    {
+      "id": "programming-guy-3564",
+      "group": "programming",
+      "file": "public/audio/guy/example-3564.mp3",
+      "reference": "Execute this command.",
+      "sha256": "8becf448ec8543f1ffce67162cf879c452ec02ae2dc1e0bb63e17dd7e90a40cc",
+      "durationSeconds": 2.496,
+      "result": {
+        "transcript": "Execute this command.",
+        "normalized": "execute this command",
+        "modelMs": 2547,
+        "generatedTokens": 5,
+        "truncated": false,
+        "exact": true,
+        "wordErrors": 0,
+        "referenceWords": 3
+      }
+    },
+    {
+      "id": "word-guy-tree",
+      "group": "word",
+      "file": "public/audio/guy/word-2441.mp3",
+      "reference": "tree",
+      "sha256": "e70cc46d76e6b4061c651feff9ca79b0186cd4afd9412c991ba90cf8eb43ea67",
+      "durationSeconds": 1.512,
+      "result": {
+        "transcript": "Tree.",
+        "normalized": "tree",
+        "modelMs": 1806,
+        "generatedTokens": 3,
+        "truncated": false,
+        "exact": true,
+        "wordErrors": 0,
+        "referenceWords": 1
+      }
+    },
+    {
+      "id": "word-guy-three",
+      "group": "word",
+      "file": "public/audio/guy/word-2400.mp3",
+      "reference": "three",
+      "sha256": "94ceb6bcde145714f09292b63ae0d6624a89be5cb173720ac695119dafe3a0c2",
+      "durationSeconds": 1.656,
+      "result": {
+        "transcript": "Three.",
+        "normalized": "three",
+        "modelMs": 1728,
+        "generatedTokens": 3,
+        "truncated": false,
+        "exact": true,
+        "wordErrors": 0,
+        "referenceWords": 1
+      }
+    },
+    {
+      "id": "word-guy-bed",
+      "group": "word",
+      "file": "public/audio/guy/word-1291.mp3",
+      "reference": "bed",
+      "sha256": "120e4f3456bb54835747cdae05588a31d61f32201d79d49be4e01c1f653ec7ce",
+      "durationSeconds": 1.464,
+      "result": {
+        "transcript": "Bed.",
+        "normalized": "bed",
+        "modelMs": 1565,
+        "generatedTokens": 3,
+        "truncated": false,
+        "exact": true,
+        "wordErrors": 0,
+        "referenceWords": 1
+      }
+    },
+    {
+      "id": "word-guy-bad",
+      "group": "word",
+      "file": "public/audio/guy/word-2978.mp3",
+      "reference": "bad",
+      "sha256": "07160402b698581188f51423fc62d77102d77c247bbea7481bf140293e5dbcde",
+      "durationSeconds": 1.512,
+      "result": {
+        "transcript": "Bad.",
+        "normalized": "bad",
+        "modelMs": 1521,
+        "generatedTokens": 3,
+        "truncated": false,
+        "exact": true,
+        "wordErrors": 0,
+        "referenceWords": 1
+      }
+    },
+    {
+      "id": "human-010300003",
+      "group": "human-new",
+      "file": ".runtime/pronunciation/speechocean/WAVE/SPEAKER1030/010300003.WAV",
+      "reference": "THE RESULT WAS AN UPSET",
+      "speaker": "1030",
+      "age": 27,
+      "expertAccuracy": 9,
+      "gitBlobSha1": "81172a5c07018cd8fba66acb61add56292af0479",
+      "download": "https://raw.githubusercontent.com/jimbozhang/speechocean762/613968e3b0b789fc33936fb5eba1973176ba7d11/WAVE/SPEAKER1030/010300003.WAV",
+      "sha256": "68af688e1565a42b21aaf18046290d6ae74848903c6b333c7c33831cbb9be9b2",
+      "durationSeconds": 3.133,
+      "result": {
+        "transcript": "The result was an upset.",
+        "normalized": "the result was an upset",
+        "modelMs": 3235,
+        "generatedTokens": 7,
+        "truncated": false,
+        "exact": true,
+        "wordErrors": 0,
+        "referenceWords": 5
+      }
+    },
+    {
+      "id": "human-010300105",
+      "group": "human-new",
+      "file": ".runtime/pronunciation/speechocean/WAVE/SPEAKER1030/010300105.WAV",
+      "reference": "THE PAPER PUBLISHED NO DETAILS AND THERE WAS NO ATTACK",
+      "speaker": "1030",
+      "age": 27,
+      "expertAccuracy": 8,
+      "gitBlobSha1": "bd56c3dec1cf7f0b9bf732877c48f9990b470a21",
+      "download": "https://raw.githubusercontent.com/jimbozhang/speechocean762/613968e3b0b789fc33936fb5eba1973176ba7d11/WAVE/SPEAKER1030/010300105.WAV",
+      "sha256": "960fa3794c325808c834aca2b59aa48cfe680d229d6ee85af371ddc6278b59b8",
+      "durationSeconds": 4.845,
+      "result": {
+        "transcript": "The paper published no details, and there was no attack.",
+        "normalized": "the paper published no details and there was no attack",
+        "modelMs": 5155,
+        "generatedTokens": 13,
+        "truncated": false,
+        "exact": true,
+        "wordErrors": 0,
+        "referenceWords": 10
+      }
+    },
+    {
+      "id": "human-010370025",
+      "group": "human-new",
+      "file": ".runtime/pronunciation/speechocean/WAVE/SPEAKER1037/010370025.WAV",
+      "reference": "THEN I WAS LOOKING TO DO SOMETHING BETTER",
+      "speaker": "1037",
+      "age": 35,
+      "expertAccuracy": 8,
+      "gitBlobSha1": "1339529e33a9025c37f72502f61790704fe79305",
+      "download": "https://raw.githubusercontent.com/jimbozhang/speechocean762/613968e3b0b789fc33936fb5eba1973176ba7d11/WAVE/SPEAKER1037/010370025.WAV",
+      "sha256": "6a9995dd7651e079ee09b04cf5c23933c142485b4863f11ff444f7b05ee4c470",
+      "durationSeconds": 2.926,
+      "result": {
+        "transcript": "That I was looking to do something better.",
+        "normalized": "that i was looking to do something better",
+        "modelMs": 3927,
+        "generatedTokens": 10,
+        "truncated": false,
+        "exact": false,
+        "wordErrors": 1,
+        "referenceWords": 8
+      }
+    },
+    {
+      "id": "human-010370099",
+      "group": "human-new",
+      "file": ".runtime/pronunciation/speechocean/WAVE/SPEAKER1037/010370099.WAV",
+      "reference": "I NOW KNOW THE ANSWERS TO THOSE QUESTIONS",
+      "speaker": "1037",
+      "age": 35,
+      "expertAccuracy": 9,
+      "gitBlobSha1": "4b08f8708137b0615125d66d157059140adf11d5",
+      "download": "https://raw.githubusercontent.com/jimbozhang/speechocean762/613968e3b0b789fc33936fb5eba1973176ba7d11/WAVE/SPEAKER1037/010370099.WAV",
+      "sha256": "3db11dea8a0229e5246091a79c07f687de0c4bed6eb6761f52ce98b4eee3b3e9",
+      "durationSeconds": 3.381,
+      "result": {
+        "transcript": "I now know the answers to those questions.",
+        "normalized": "i now know the answers to those questions",
+        "modelMs": 4135,
+        "generatedTokens": 10,
+        "truncated": false,
+        "exact": true,
+        "wordErrors": 0,
+        "referenceWords": 8
+      }
+    },
+    {
+      "id": "human-010390004",
+      "group": "human-new",
+      "file": ".runtime/pronunciation/speechocean/WAVE/SPEAKER1039/010390004.WAV",
+      "reference": "IT MAKES ME FEEL GOOD ABOUT THE WHOLE BUSINESS",
+      "speaker": "1039",
+      "age": 38,
+      "expertAccuracy": 9,
+      "gitBlobSha1": "3b3b9e0bace331971eca7c25795e93a632bf1b41",
+      "download": "https://raw.githubusercontent.com/jimbozhang/speechocean762/613968e3b0b789fc33936fb5eba1973176ba7d11/WAVE/SPEAKER1039/010390004.WAV",
+      "sha256": "6be4b6f2c0a7eb153bd4e7d3677a43c8351a86c3fcb8b14ba2d5ab347cc4d372",
+      "durationSeconds": 3.61,
+      "result": {
+        "transcript": "It makes me feel good about the whole business.",
+        "normalized": "it makes me feel good about the whole business",
+        "modelMs": 4796,
+        "generatedTokens": 11,
+        "truncated": false,
+        "exact": true,
+        "wordErrors": 0,
+        "referenceWords": 9
+      }
+    },
+    {
+      "id": "human-010390027",
+      "group": "human-new",
+      "file": ".runtime/pronunciation/speechocean/WAVE/SPEAKER1039/010390027.WAV",
+      "reference": "IT'S IN OUR INTEREST AND THE PUBLIC INTEREST",
+      "speaker": "1039",
+      "age": 38,
+      "expertAccuracy": 8,
+      "gitBlobSha1": "be805ae5f95640f9813a9046ff627ae302ac1dea",
+      "download": "https://raw.githubusercontent.com/jimbozhang/speechocean762/613968e3b0b789fc33936fb5eba1973176ba7d11/WAVE/SPEAKER1039/010390027.WAV",
+      "sha256": "a1f027118344f36b7642e8606621e00596b23913beecf7cf338903c85735e83a",
+      "durationSeconds": 3.39,
+      "result": {
+        "transcript": "It's in our interest and the public interest.",
+        "normalized": "its in our interest and the public interest",
+        "modelMs": 4402,
+        "generatedTokens": 11,
+        "truncated": false,
+        "exact": true,
+        "wordErrors": 0,
+        "referenceWords": 9
+      }
+    },
+    {
+      "id": "human-010990020",
+      "group": "human-new",
+      "file": ".runtime/pronunciation/speechocean/WAVE/SPEAKER1099/010990020.WAV",
+      "reference": "WELL I CAN ASSURE YOU IT IS NOT",
+      "speaker": "1099",
+      "age": 43,
+      "expertAccuracy": 9,
+      "gitBlobSha1": "ebc231a800449b614d7097017724af7732397439",
+      "download": "https://raw.githubusercontent.com/jimbozhang/speechocean762/613968e3b0b789fc33936fb5eba1973176ba7d11/WAVE/SPEAKER1099/010990020.WAV",
+      "sha256": "37354d1f49fff2ad5bd1d18ac9f8c68eade36424615bdd6897325e88d7460003",
+      "durationSeconds": 3.12,
+      "result": {
+        "transcript": "Well, I can assure you, it is not.",
+        "normalized": "well i can assure you it is not",
+        "modelMs": 4853,
+        "generatedTokens": 12,
+        "truncated": false,
+        "exact": true,
+        "wordErrors": 0,
+        "referenceWords": 8
+      }
+    },
+    {
+      "id": "human-010990048",
+      "group": "human-new",
+      "file": ".runtime/pronunciation/speechocean/WAVE/SPEAKER1099/010990048.WAV",
+      "reference": "I WAS THE ONLY ONE WHO COULD DO THAT",
+      "speaker": "1099",
+      "age": 43,
+      "expertAccuracy": 9,
+      "gitBlobSha1": "fb72f444232b90cd19b53dc10feab239c141895a",
+      "download": "https://raw.githubusercontent.com/jimbozhang/speechocean762/613968e3b0b789fc33936fb5eba1973176ba7d11/WAVE/SPEAKER1099/010990048.WAV",
+      "sha256": "be6639370c946dd9fa195df7d8dca0ecf2f674bb6b02a0de9f9d496da0728603",
+      "durationSeconds": 3.19,
+      "result": {
+        "transcript": "I was the only one who could do that.",
+        "normalized": "i was the only one who could do that",
+        "modelMs": 4303,
+        "generatedTokens": 11,
+        "truncated": false,
+        "exact": true,
+        "wordErrors": 0,
+        "referenceWords": 9
+      }
+    },
+    {
+      "id": "human-011090034",
+      "group": "human-new",
+      "file": ".runtime/pronunciation/speechocean/WAVE/SPEAKER1109/011090034.WAV",
+      "reference": "I KNOW HOW THEY LOOK",
+      "speaker": "1109",
+      "age": 30,
+      "expertAccuracy": 8,
+      "gitBlobSha1": "15f8094ba8eb8c770cb4eef16244f04e0bbad9f1",
+      "download": "https://raw.githubusercontent.com/jimbozhang/speechocean762/613968e3b0b789fc33936fb5eba1973176ba7d11/WAVE/SPEAKER1109/011090034.WAV",
+      "sha256": "a3c1c13f1f33a4f80d5d2124edaadcb898f2e32ce94afd32312f1e9c318fa471",
+      "durationSeconds": 3.21,
+      "result": {
+        "transcript": "I know how they look.",
+        "normalized": "i know how they look",
+        "modelMs": 3223,
+        "generatedTokens": 7,
+        "truncated": false,
+        "exact": true,
+        "wordErrors": 0,
+        "referenceWords": 5
+      }
+    },
+    {
+      "id": "human-011090089",
+      "group": "human-new",
+      "file": ".runtime/pronunciation/speechocean/WAVE/SPEAKER1109/011090089.WAV",
+      "reference": "DRINK A LOT OF WATER",
+      "speaker": "1109",
+      "age": 30,
+      "expertAccuracy": 8,
+      "gitBlobSha1": "eca602e94b63363e05f6a8a8e8053cfebaae3673",
+      "download": "https://raw.githubusercontent.com/jimbozhang/speechocean762/613968e3b0b789fc33936fb5eba1973176ba7d11/WAVE/SPEAKER1109/011090089.WAV",
+      "sha256": "c66a674075e23e80be7055461ac864512d14fae01ac4446d19ff7cb87d03542d",
+      "durationSeconds": 2.43,
+      "result": {
+        "transcript": "Drink a lot of water.",
+        "normalized": "drink a lot of water",
+        "modelMs": 3189,
+        "generatedTokens": 7,
+        "truncated": false,
+        "exact": true,
+        "wordErrors": 0,
+        "referenceWords": 5
+      }
+    },
+    {
+      "id": "human-011560005",
+      "group": "human-new",
+      "file": ".runtime/pronunciation/speechocean/WAVE/SPEAKER1156/011560005.WAV",
+      "reference": "I HAD TO DO IT FROM A FINANCIAL STANDPOINT",
+      "speaker": "1156",
+      "age": 33,
+      "expertAccuracy": 8,
+      "gitBlobSha1": "2ef9ed4fa77e8c57ca55e8781bce81a6367f1710",
+      "download": "https://raw.githubusercontent.com/jimbozhang/speechocean762/613968e3b0b789fc33936fb5eba1973176ba7d11/WAVE/SPEAKER1156/011560005.WAV",
+      "sha256": "a7724660b3cf76cafe939a5db641df809115f023eb29ab7e29b3e1102ac27cb5",
+      "durationSeconds": 4.756,
+      "result": {
+        "transcript": "I had to do it from a financial standpoint.",
+        "normalized": "i had to do it from a financial standpoint",
+        "modelMs": 4782,
+        "generatedTokens": 11,
+        "truncated": false,
+        "exact": true,
+        "wordErrors": 0,
+        "referenceWords": 9
+      }
+    },
+    {
+      "id": "human-011560058",
+      "group": "human-new",
+      "file": ".runtime/pronunciation/speechocean/WAVE/SPEAKER1156/011560058.WAV",
+      "reference": "IT IS DANGEROUS TO GO TO A DOCTOR",
+      "speaker": "1156",
+      "age": 33,
+      "expertAccuracy": 9,
+      "gitBlobSha1": "aad51c51fe3bc311b88fc2f3d455a955542ade45",
+      "download": "https://raw.githubusercontent.com/jimbozhang/speechocean762/613968e3b0b789fc33936fb5eba1973176ba7d11/WAVE/SPEAKER1156/011560058.WAV",
+      "sha256": "a5cbc0d7ab0d71d639e51693ebb81454ecc3e822679bfe48877c45c0338aec52",
+      "durationSeconds": 3.516,
+      "result": {
+        "transcript": "It is dangerous to go to a doctor.",
+        "normalized": "it is dangerous to go to a doctor",
+        "modelMs": 5081,
+        "generatedTokens": 10,
+        "truncated": false,
+        "exact": true,
+        "wordErrors": 0,
+        "referenceWords": 8
+      }
+    },
+    {
+      "id": "human-011810063",
+      "group": "human-new",
+      "file": ".runtime/pronunciation/speechocean/WAVE/SPEAKER1181/011810063.WAV",
+      "reference": "SHE COULD JUST GO ON AND ON",
+      "speaker": "1181",
+      "age": 23,
+      "expertAccuracy": 8,
+      "gitBlobSha1": "da990e9c799172d9b321be7fda3b7655edf4b550",
+      "download": "https://raw.githubusercontent.com/jimbozhang/speechocean762/613968e3b0b789fc33936fb5eba1973176ba7d11/WAVE/SPEAKER1181/011810063.WAV",
+      "sha256": "53238ff50059b6b7d6eef2868ecd58f551ee37ec62560c6902fcee13cd4ada31",
+      "durationSeconds": 3.17,
+      "result": {
+        "transcript": "She could just go on and on.",
+        "normalized": "she could just go on and on",
+        "modelMs": 4336,
+        "generatedTokens": 9,
+        "truncated": false,
+        "exact": true,
+        "wordErrors": 0,
+        "referenceWords": 7
+      }
+    },
+    {
+      "id": "human-011810133",
+      "group": "human-new",
+      "file": ".runtime/pronunciation/speechocean/WAVE/SPEAKER1181/011810133.WAV",
+      "reference": "I NEED TO PICK UP A DESK",
+      "speaker": "1181",
+      "age": 23,
+      "expertAccuracy": 8,
+      "gitBlobSha1": "84bb9bbe1c3f22a9f7025cbe4ddb3a6b2f5c8d9b",
+      "download": "https://raw.githubusercontent.com/jimbozhang/speechocean762/613968e3b0b789fc33936fb5eba1973176ba7d11/WAVE/SPEAKER1181/011810133.WAV",
+      "sha256": "fa1eaeb0f57de53460e4b5e552dd246035fd16f01617a5f4a7ae44ed6013cefd",
+      "durationSeconds": 2.42,
+      "result": {
+        "transcript": "I need to pick up a disc.",
+        "normalized": "i need to pick up a disc",
+        "modelMs": 4472,
+        "generatedTokens": 9,
+        "truncated": false,
+        "exact": false,
+        "wordErrors": 1,
+        "referenceWords": 7
+      }
+    },
+    {
+      "id": "human-011860264",
+      "group": "human-new",
+      "file": ".runtime/pronunciation/speechocean/WAVE/SPEAKER1186/011860264.WAV",
+      "reference": "EXCITED AND GOING TO BED",
+      "speaker": "1186",
+      "age": 23,
+      "expertAccuracy": 8,
+      "gitBlobSha1": "25dcf7f6836e37bd6546ed6428420f064a9bcfb9",
+      "download": "https://raw.githubusercontent.com/jimbozhang/speechocean762/613968e3b0b789fc33936fb5eba1973176ba7d11/WAVE/SPEAKER1186/011860264.WAV",
+      "sha256": "d4360d29519c7251a4c447290675171a7d5ffcf99833f7f0d3b7c80d4691cf6f",
+      "durationSeconds": 7.5,
+      "result": {
+        "transcript": "Excited, and going to bed.",
+        "normalized": "excited and going to bed",
+        "modelMs": 5070,
+        "generatedTokens": 9,
+        "truncated": false,
+        "exact": true,
+        "wordErrors": 0,
+        "referenceWords": 5
+      }
+    },
+    {
+      "id": "human-011860284",
+      "group": "human-new",
+      "file": ".runtime/pronunciation/speechocean/WAVE/SPEAKER1186/011860284.WAV",
+      "reference": "THAT'S SAY IT IS GOOD",
+      "speaker": "1186",
+      "age": 23,
+      "expertAccuracy": 8,
+      "gitBlobSha1": "f2fa899603e13b70829aef7bb51c18f2cc3b44a1",
+      "download": "https://raw.githubusercontent.com/jimbozhang/speechocean762/613968e3b0b789fc33936fb5eba1973176ba7d11/WAVE/SPEAKER1186/011860284.WAV",
+      "sha256": "acbfcd7698f944b9276c6ac056f6bc28b463bf474668d7eda824a3a75b1f3baf",
+      "durationSeconds": 3.75,
+      "result": {
+        "transcript": "That's say it is good.",
+        "normalized": "thats say it is good",
+        "modelMs": 4268,
+        "generatedTokens": 8,
+        "truncated": false,
+        "exact": true,
+        "wordErrors": 0,
+        "referenceWords": 5
+      }
+    },
+    {
+      "id": "human-012280033",
+      "group": "human-new",
+      "file": ".runtime/pronunciation/speechocean/WAVE/SPEAKER1228/012280033.WAV",
+      "reference": "IT WAS A NICE WAY TO END OUR HOME SEASON",
+      "speaker": "1228",
+      "age": 26,
+      "expertAccuracy": 8,
+      "gitBlobSha1": "84219d89f5d651e06185480a98046b93e72166a0",
+      "download": "https://raw.githubusercontent.com/jimbozhang/speechocean762/613968e3b0b789fc33936fb5eba1973176ba7d11/WAVE/SPEAKER1228/012280033.WAV",
+      "sha256": "ce3e43afe980a25ec8fa00882b1090176553607d983705c9dc15b7f45710831e",
+      "durationSeconds": 4.65,
+      "result": {
+        "transcript": "It was a nice way to end our home season.",
+        "normalized": "it was a nice way to end our home season",
+        "modelMs": 5826,
+        "generatedTokens": 12,
+        "truncated": false,
+        "exact": true,
+        "wordErrors": 0,
+        "referenceWords": 10
+      }
+    },
+    {
+      "id": "human-012280161",
+      "group": "human-new",
+      "file": ".runtime/pronunciation/speechocean/WAVE/SPEAKER1228/012280161.WAV",
+      "reference": "THERE IS JUST SO MUCH WORK TO DO",
+      "speaker": "1228",
+      "age": 26,
+      "expertAccuracy": 8,
+      "gitBlobSha1": "1c9bf2e3c4e7e5aa427da4ce739845b4fec32eae",
+      "download": "https://raw.githubusercontent.com/jimbozhang/speechocean762/613968e3b0b789fc33936fb5eba1973176ba7d11/WAVE/SPEAKER1228/012280161.WAV",
+      "sha256": "7a36324a8744b2a70a9a451b7dcdb728eafec4dd354d0da7535b66bc4978a873",
+      "durationSeconds": 3.4,
+      "result": {
+        "transcript": "There is just so much work to do.",
+        "normalized": "there is just so much work to do",
+        "modelMs": 5567,
+        "generatedTokens": 10,
+        "truncated": false,
+        "exact": true,
+        "wordErrors": 0,
+        "referenceWords": 8
+      }
+    },
+    {
+      "id": "human-012920007",
+      "group": "human-new",
+      "file": ".runtime/pronunciation/speechocean/WAVE/SPEAKER1292/012920007.WAV",
+      "reference": "I WOULD NOT MAKE SUCH COMMENTS",
+      "speaker": "1292",
+      "age": 37,
+      "expertAccuracy": 8,
+      "gitBlobSha1": "0d4c24baab6a43cad5033129bedb7eebf7a9aa83",
+      "download": "https://raw.githubusercontent.com/jimbozhang/speechocean762/613968e3b0b789fc33936fb5eba1973176ba7d11/WAVE/SPEAKER1292/012920007.WAV",
+      "sha256": "11e7ff468e40f7042ac0b9dfeacea3a4ad0460046a0cdfe4a4a02c86cb427427",
+      "durationSeconds": 3.63,
+      "result": {
+        "transcript": "I would not make such comments.",
+        "normalized": "i would not make such comments",
+        "modelMs": 4737,
+        "generatedTokens": 8,
+        "truncated": false,
+        "exact": true,
+        "wordErrors": 0,
+        "referenceWords": 6
+      }
+    },
+    {
+      "id": "human-012920054",
+      "group": "human-new",
+      "file": ".runtime/pronunciation/speechocean/WAVE/SPEAKER1292/012920054.WAV",
+      "reference": "IT NOT HARD TO FINE",
+      "speaker": "1292",
+      "age": 37,
+      "expertAccuracy": 9,
+      "gitBlobSha1": "adb5d2278d63e399164f8993a37ac1c1db2f36db",
+      "download": "https://raw.githubusercontent.com/jimbozhang/speechocean762/613968e3b0b789fc33936fb5eba1973176ba7d11/WAVE/SPEAKER1292/012920054.WAV",
+      "sha256": "a86ef98aaea6d16c8a58c633977434a83293c48fa61a83dd6b904b9e1f39f07a",
+      "durationSeconds": 2.5,
+      "result": {
+        "transcript": "It's not hard to find.",
+        "normalized": "its not hard to find",
+        "modelMs": 3947,
+        "generatedTokens": 8,
+        "truncated": false,
+        "exact": false,
+        "wordErrors": 2,
+        "referenceWords": 5
+      }
+    },
+    {
+      "id": "human-012930008",
+      "group": "human-new",
+      "file": ".runtime/pronunciation/speechocean/WAVE/SPEAKER1293/012930008.WAV",
+      "reference": "NO ONE WAS HURT IN THE EXPLOSION",
+      "speaker": "1293",
+      "age": 32,
+      "expertAccuracy": 8,
+      "gitBlobSha1": "02cd047339ee0cc75c2046d3f153154272783ac1",
+      "download": "https://raw.githubusercontent.com/jimbozhang/speechocean762/613968e3b0b789fc33936fb5eba1973176ba7d11/WAVE/SPEAKER1293/012930008.WAV",
+      "sha256": "bd56f2c36b55def9b3c8917c8a35822fe93cb70d1d88b4a57f3d7112691e331b",
+      "durationSeconds": 3.07,
+      "result": {
+        "transcript": "No one was hurt in the explosion.",
+        "normalized": "no one was hurt in the explosion",
+        "modelMs": 4015,
+        "generatedTokens": 9,
+        "truncated": false,
+        "exact": true,
+        "wordErrors": 0,
+        "referenceWords": 7
+      }
+    },
+    {
+      "id": "human-012930012",
+      "group": "human-new",
+      "file": ".runtime/pronunciation/speechocean/WAVE/SPEAKER1293/012930012.WAV",
+      "reference": "WHERE ARE THEY SUPPOSED TO TURN",
+      "speaker": "1293",
+      "age": 32,
+      "expertAccuracy": 8,
+      "gitBlobSha1": "97e1909de9097ea36664aa19b6a186ff8b411a7b",
+      "download": "https://raw.githubusercontent.com/jimbozhang/speechocean762/613968e3b0b789fc33936fb5eba1973176ba7d11/WAVE/SPEAKER1293/012930012.WAV",
+      "sha256": "ec6d885c94ea7f10f79273279c06fc13a77060ef808e468963a4959a1bdffa40",
+      "durationSeconds": 2.53,
+      "result": {
+        "transcript": "Where are they supposed to turn?",
+        "normalized": "where are they supposed to turn",
+        "modelMs": 4059,
+        "generatedTokens": 8,
+        "truncated": false,
+        "exact": true,
+        "wordErrors": 0,
+        "referenceWords": 6
+      }
+    },
+    {
+      "id": "human-013340007",
+      "group": "human-new",
+      "file": ".runtime/pronunciation/speechocean/WAVE/SPEAKER1334/013340007.WAV",
+      "reference": "I THINK HE CAN PROVE HIMSELF ON HIS OWN",
+      "speaker": "1334",
+      "age": 29,
+      "expertAccuracy": 8,
+      "gitBlobSha1": "abe0af872df8750ba058c86bf116ab36b44fd100",
+      "download": "https://raw.githubusercontent.com/jimbozhang/speechocean762/613968e3b0b789fc33936fb5eba1973176ba7d11/WAVE/SPEAKER1334/013340007.WAV",
+      "sha256": "dd1d8c7c84aa4b08b4487700c899b7a3f036c5e3f04f90d62becb8843ea4d7ad",
+      "durationSeconds": 3.274,
+      "result": {
+        "transcript": "I think he can prove himself on his own.",
+        "normalized": "i think he can prove himself on his own",
+        "modelMs": 4754,
+        "generatedTokens": 11,
+        "truncated": false,
+        "exact": true,
+        "wordErrors": 0,
+        "referenceWords": 9
+      }
+    },
+    {
+      "id": "human-013340034",
+      "group": "human-new",
+      "file": ".runtime/pronunciation/speechocean/WAVE/SPEAKER1334/013340034.WAV",
+      "reference": "SOMETHING IS OFF WITH THIS TEAM",
+      "speaker": "1334",
+      "age": 29,
+      "expertAccuracy": 8,
+      "gitBlobSha1": "151f3beb8833f591a7135bd44fd2787a58ef7aa3",
+      "download": "https://raw.githubusercontent.com/jimbozhang/speechocean762/613968e3b0b789fc33936fb5eba1973176ba7d11/WAVE/SPEAKER1334/013340034.WAV",
+      "sha256": "9dff18bdb807d2bcfb972180c57377639d8ebf82a801082ab08e16f47fd209be",
+      "durationSeconds": 2.51,
+      "result": {
+        "transcript": "Something is off with this team.",
+        "normalized": "something is off with this team",
+        "modelMs": 3883,
+        "generatedTokens": 8,
+        "truncated": false,
+        "exact": true,
+        "wordErrors": 0,
+        "referenceWords": 6
+      }
+    }
+  ],
+  "controls": {
+    "silence": {
+      "transcript": "",
+      "modelMs": 0,
+      "noSpeech": true
+    },
+    "noise": {
+      "transcript": "",
+      "modelMs": 0,
+      "noSpeech": true
+    },
+    "tone": {
+      "transcript": "",
+      "modelMs": 0,
+      "noSpeech": true
+    }
+  },
+  "normalization": "Case/punctuation; common contractions; cardinal digits 0-20",
+  "summary": {
+    "daily": {
+      "exact": 12,
+      "total": 12,
+      "wordErrorRate": 0.0,
+      "medianModelMs": 3232.5
+    },
+    "human-new": {
+      "exact": 21,
+      "total": 24,
+      "wordErrorRate": 0.023,
+      "medianModelMs": 4369.0
+    },
+    "programming": {
+      "exact": 12,
+      "total": 12,
+      "wordErrorRate": 0.0,
+      "medianModelMs": 2791.5
+    },
+    "word": {
+      "exact": 8,
+      "total": 8,
+      "wordErrorRate": 0.0,
+      "medianModelMs": 1676.0
+    }
+  }
+}

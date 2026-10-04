@@ -1,5 +1,6 @@
 import type { DailyPhrase, DailyUnit } from './dailyCourse';
 import type { LearningExercise, LearningLesson } from './learningTypes';
+import { foundationTutorials, type FoundationTutorial } from './foundationTutorials.ts';
 
 export const FOUNDATION_KEY = 'codewords-foundation-v1';
 export const foundationSources = {
@@ -413,6 +414,17 @@ const prerequisites: Record<string, string[]> = {
 };
 foundationTopics.forEach(item => { item.prerequisiteIds = (prerequisites[item.id.replace('foundation-', '')] ?? ['letter-sound']).map(id => `foundation-${id}`); });
 export const foundationPhrases = foundationTopics.flatMap(topic => topic.examples);
+// A separate reading catalog extends equivalent pages without changing old
+// lessons, exercise IDs, prerequisites, or progress parsing.
+export const foundationTutorialCatalog: (FoundationTopic & { tutorial?: FoundationTutorial })[] = foundationTopics.map(item => {
+  const tutorial = foundationTutorials.find(tutorial => tutorial.id === item.id);
+  return tutorial ? { ...item, group: tutorial.group, tutorial } : item;
+});
+for (const tutorial of foundationTutorials) if (!foundationTutorialCatalog.some(item => item.id === tutorial.id)) {
+  foundationTutorialCatalog.push({ id: tutorial.id, title: tutorial.title, group: tutorial.group, sound: tutorial.sound,
+    explanation: [tutorial.question, tutorial.takeaway], examples: tutorial.sections.flatMap(section => section.examples ?? []),
+    checks: [], prerequisiteIds: [], source: tutorial.sound ? 'sounds' : 'grammar', tutorial });
+}
 // Kept only for the existing audio manifest; no alphabet teaching UI uses this.
 export const foundationAlphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('').map(letter => ({ id: `foundation-letter-${letter.toLowerCase()}`, en: letter, zh: `${letter} / ${letter.toLowerCase()}` }));
 function arrangeTokens(tokens: string[], id: string) {

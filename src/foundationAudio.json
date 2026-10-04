@@ -68,6 +68,11 @@
     "text": "Do you like tea?"
   },
   {
+    "id": "f-73006da0a5a1e849",
+    "text": "Do you want tea or milk?",
+    "tutorialOnly": true
+  },
+  {
     "id": "f-c3c25857485f0135",
     "text": "Does"
   },
@@ -94,6 +99,21 @@
   {
     "id": "f-44bd7ae60f478fae",
     "text": "H"
+  },
+  {
+    "id": "f-30efdfb52ff67f80",
+    "text": "He",
+    "tutorialOnly": true
+  },
+  {
+    "id": "f-356357f217eba1cf",
+    "text": "He speaks slowly.",
+    "tutorialOnly": true
+  },
+  {
+    "id": "f-2adc4fa08ec950b4",
+    "text": "He speaks.",
+    "tutorialOnly": true
   },
   {
     "id": "f-b79cac926e0b2e34",
@@ -136,8 +156,38 @@
     "text": "I am reading."
   },
   {
+    "id": "f-28da92fe84684731",
+    "text": "I am tired",
+    "tutorialOnly": true
+  },
+  {
+    "id": "f-29584259efd8cf61",
+    "text": "I am tired, but I can work.",
+    "tutorialOnly": true
+  },
+  {
+    "id": "f-927e03c7b6d3a43e",
+    "text": "I am tired, so I stop.",
+    "tutorialOnly": true
+  },
+  {
+    "id": "f-f405fc9a481225d9",
+    "text": "I am tired.",
+    "tutorialOnly": true
+  },
+  {
     "id": "f-4dfec7b6fe858196",
     "text": "I can swim."
+  },
+  {
+    "id": "f-5a0ea773166c6bc6",
+    "text": "I can work",
+    "tutorialOnly": true
+  },
+  {
+    "id": "f-46c3f2dec7ce907f",
+    "text": "I can work.",
+    "tutorialOnly": true
   },
   {
     "id": "f-c89d9d9d883450cc",
@@ -168,6 +218,42 @@
     "text": "I like tea."
   },
   {
+    "id": "f-95cc28c599291613",
+    "text": "I often read.",
+    "tutorialOnly": true,
+    "ttsText": "I often reed."
+  },
+  {
+    "id": "f-57f9cfb9fe7b89b6",
+    "text": "I read a book at home every evening.",
+    "tutorialOnly": true,
+    "ttsText": "I reed a book at home every evening."
+  },
+  {
+    "id": "f-aa525736f453bcec",
+    "text": "I read a book at home.",
+    "tutorialOnly": true,
+    "ttsText": "I reed a book at home."
+  },
+  {
+    "id": "f-0c597dd7b7fe3aa8",
+    "text": "I read a book.",
+    "tutorialOnly": true,
+    "ttsText": "I reed a book."
+  },
+  {
+    "id": "f-510028d7febca562",
+    "text": "I read and I write.",
+    "tutorialOnly": true,
+    "ttsText": "I reed and I write."
+  },
+  {
+    "id": "f-5338cf0d60e93b1f",
+    "text": "I read.",
+    "tutorialOnly": true,
+    "ttsText": "I reed."
+  },
+  {
     "id": "f-4702e5a54e694a44",
     "text": "I run."
   },
@@ -184,6 +270,22 @@
     "text": "I sit."
   },
   {
+    "id": "f-a8cd4c202534d70f",
+    "text": "I sometimes read.",
+    "tutorialOnly": true,
+    "ttsText": "I sometimes reed."
+  },
+  {
+    "id": "f-9a1b4de9f73357c3",
+    "text": "I stop",
+    "tutorialOnly": true
+  },
+  {
+    "id": "f-46e5d42565bb70e5",
+    "text": "I stop because I am tired.",
+    "tutorialOnly": true
+  },
+  {
     "id": "f-42e98b9b684637d1",
     "text": "I stop to rest."
   },
@@ -194,6 +296,16 @@
   {
     "id": "f-c866e8387b312aa5",
     "text": "I walked yesterday."
+  },
+  {
+    "id": "f-7fde71fefcc2c0ee",
+    "text": "I want tea and milk.",
+    "tutorialOnly": true
+  },
+  {
+    "id": "f-d51c916629e8b747",
+    "text": "I want tea.",
+    "tutorialOnly": true
   },
   {
     "id": "f-64184c661e864e86",
@@ -304,12 +416,28 @@
     "text": "She does not like tea."
   },
   {
+    "id": "f-e573966447d1b021",
+    "text": "She is a teacher.",
+    "tutorialOnly": true
+  },
+  {
+    "id": "f-8d7a18db3debb2f5",
+    "text": "She is always happy.",
+    "tutorialOnly": true
+  },
+  {
     "id": "f-ff5baad1fc2ac4ff",
     "text": "She is reading."
   },
   {
     "id": "f-03f93ad329968052",
     "text": "She likes tea."
+  },
+  {
+    "id": "f-3ece2f869093f12d",
+    "text": "Sometimes I read.",
+    "tutorialOnly": true,
+    "ttsText": "Sometimes I reed."
   },
   {
     "id": "f-e632b7095b0bf32c",
@@ -328,8 +456,28 @@
     "text": "The book is red."
   },
   {
+    "id": "f-380a89509ccf06f6",
+    "text": "The bus moves slowly.",
+    "tutorialOnly": true
+  },
+  {
     "id": "f-2d635bb7f5467a38",
     "text": "The dog sees me."
+  },
+  {
+    "id": "f-95d80236cca3c7f3",
+    "text": "The girl in the room",
+    "tutorialOnly": true
+  },
+  {
+    "id": "f-492bc489e9d4c317",
+    "text": "The girl in the room likes this book.",
+    "tutorialOnly": true
+  },
+  {
+    "id": "f-cafa9a1d7db1c6c5",
+    "text": "The girl likes this book.",
+    "tutorialOnly": true
   },
   {
     "id": "f-e948d191e4036c7b",
@@ -492,6 +640,16 @@
     "text": "a red cup"
   },
   {
+    "id": "f-a6fb523d32b848ca",
+    "text": "a slow bus",
+    "tutorialOnly": true
+  },
+  {
+    "id": "f-82b99e63edf62f3f",
+    "text": "a teacher",
+    "tutorialOnly": true
+  },
+  {
     "id": "f-a4262e1c9bcbc172",
     "text": "about"
   },
@@ -502,6 +660,11 @@
   {
     "id": "f-180366dd3b2cc124",
     "text": "afraid"
+  },
+  {
+    "id": "f-9cdc6c47aa193ae7",
+    "text": "always",
+    "tutorialOnly": true
   },
   {
     "id": "f-ab6db599234d2636",
@@ -524,6 +687,11 @@
     "text": "at"
   },
   {
+    "id": "f-53d6cb30e7fc6f12",
+    "text": "at home",
+    "tutorialOnly": true
+  },
+  {
     "id": "f-64ee3287355f42ec",
     "text": "at two"
   },
@@ -542,6 +710,11 @@
   {
     "id": "f-46599c5bb5c33101",
     "text": "be"
+  },
+  {
+    "id": "f-a511aeeeb8a11993",
+    "text": "because",
+    "tutorialOnly": true
   },
   {
     "id": "f-c5052532c2206140",
@@ -592,6 +765,11 @@
     "text": "buses"
   },
   {
+    "id": "f-cdc29937887188ad",
+    "text": "but",
+    "tutorialOnly": true
+  },
+  {
     "id": "f-2e7d2c03a9507ae2",
     "text": "c"
   },
@@ -622,6 +800,11 @@
   {
     "id": "f-3d7eb3d3dab17ee5",
     "text": "chair"
+  },
+  {
+    "id": "f-d7cea7305a333d5c",
+    "text": "chip",
+    "tutorialOnly": true
   },
   {
     "id": "f-8218f3d6780abf45",
@@ -700,12 +883,22 @@
     "text": "enjoy"
   },
   {
+    "id": "f-8c0894407cd5bd1d",
+    "text": "every evening",
+    "tutorialOnly": true
+  },
+  {
     "id": "f-e29a7f31cac05abc",
     "text": "fan"
   },
   {
     "id": "f-fa95e5080882f52b",
     "text": "few"
+  },
+  {
+    "id": "f-c1f026582fe6e8cb",
+    "text": "food",
+    "tutorialOnly": true
   },
   {
     "id": "f-18679f10e5067880",
@@ -808,6 +1001,16 @@
     "text": "job"
   },
   {
+    "id": "f-cbc8a597a67c4654",
+    "text": "kit",
+    "tutorialOnly": true
+  },
+  {
+    "id": "f-8e8c7d42b456c9e4",
+    "text": "kite",
+    "tutorialOnly": true
+  },
+  {
     "id": "f-acac86c0e609ca90",
     "text": "l"
   },
@@ -832,6 +1035,11 @@
     "text": "little"
   },
   {
+    "id": "f-60be9861750facbf",
+    "text": "map",
+    "tutorialOnly": true
+  },
+  {
     "id": "f-2744ccd10c7533bd",
     "text": "me"
   },
@@ -852,6 +1060,11 @@
     "text": "n"
   },
   {
+    "id": "f-6497e4b3d7bed169",
+    "text": "never",
+    "tutorialOnly": true
+  },
+  {
     "id": "f-d59ce33d91a87db7",
     "text": "ng"
   },
@@ -866,6 +1079,11 @@
   {
     "id": "f-28391d3bc64ec15c",
     "text": "of"
+  },
+  {
+    "id": "f-93c68148f4acfe0d",
+    "text": "often",
+    "tutorialOnly": true
   },
   {
     "id": "f-b8d31e852725afb1",
@@ -902,6 +1120,16 @@
   {
     "id": "f-8ce33c6c86e991f7",
     "text": "pick"
+  },
+  {
+    "id": "f-64f46a7526a186d2",
+    "text": "pin",
+    "tutorialOnly": true
+  },
+  {
+    "id": "f-d292237213123931",
+    "text": "pine",
+    "tutorialOnly": true
   },
   {
     "id": "f-8000dce068b164c2",
@@ -952,6 +1180,16 @@
     "text": "s"
   },
   {
+    "id": "f-4a69f19c8c264850",
+    "text": "sea",
+    "tutorialOnly": true
+  },
+  {
+    "id": "f-aa9e9b5c907d50fe",
+    "text": "see",
+    "tutorialOnly": true
+  },
+  {
     "id": "f-2cda85e504e155f3",
     "text": "she"
   },
@@ -974,6 +1212,26 @@
   {
     "id": "f-584178e5e3517ddc",
     "text": "sit"
+  },
+  {
+    "id": "f-793080bb3a187fca",
+    "text": "slowly",
+    "tutorialOnly": true
+  },
+  {
+    "id": "f-a1d9890884c1b4b9",
+    "text": "so",
+    "tutorialOnly": true
+  },
+  {
+    "id": "f-28e5c066055aeb3d",
+    "text": "sometimes",
+    "tutorialOnly": true
+  },
+  {
+    "id": "f-d036316da91141d5",
+    "text": "speaks",
+    "tutorialOnly": true
   },
   {
     "id": "f-6c45cb72a36e63d5",
@@ -1014,6 +1272,16 @@
   {
     "id": "f-a9f74d1ec36ebdeb",
     "text": "tea"
+  },
+  {
+    "id": "f-404be89a5a4a087d",
+    "text": "tea and milk",
+    "tutorialOnly": true
+  },
+  {
+    "id": "f-bd24d92e21a91fa9",
+    "text": "tea or milk",
+    "tutorialOnly": true
   },
   {
     "id": "f-1057a9604e04b274",
@@ -1060,6 +1328,11 @@
     "text": "this"
   },
   {
+    "id": "f-e8f223a3abf78198",
+    "text": "this book",
+    "tutorialOnly": true
+  },
+  {
     "id": "f-c405760daf9bc32b",
     "text": "tired"
   },
@@ -1086,6 +1359,11 @@
   {
     "id": "f-75a288c0d6898c5f",
     "text": "up"
+  },
+  {
+    "id": "f-ceb1e2514a1f1b45",
+    "text": "usually",
+    "tutorialOnly": true
   },
   {
     "id": "f-4c94485e0c21ae6c",
@@ -1190,5 +1468,19 @@
   {
     "id": "f-4a70fe9aa6436e02",
     "text": "zip"
+  },
+  {
+    "id": "ft-a8baa1655315469f",
+    "text": "We read books.",
+    "ttsText": "We reed books.",
+    "tutorialOnly": true,
+    "tutorialOverride": true
+  },
+  {
+    "id": "ft-3316348dbadfb7b1",
+    "text": "read",
+    "ttsText": "reed",
+    "tutorialOnly": true,
+    "tutorialOverride": true
   }
 ]

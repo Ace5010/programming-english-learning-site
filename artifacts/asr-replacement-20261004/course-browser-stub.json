@@ -1,0 +1,15 @@
+[
+  {
+    "section": "daily",
+    "phrase": "goodbye",
+    "browserMediaRecorder": true,
+    "localApiStubbed": true,
+    "transcriptSaved": "goodbye",
+    "stopToUiMs": 9279,
+    "delayedStartupDiscovered": true,
+    "mobile390NoOverflow": true,
+    "refreshPreserved": true,
+    "noAutomaticMastery": true,
+    "errors": []
+  }
+]

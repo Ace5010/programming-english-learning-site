@@ -1,0 +1,45 @@
+{
+  "date": "2026-10-04",
+  "scope": "Show all daily course targets and existing usage notes before learning, with direct course skip and undo",
+  "branch": "main",
+  "rootCause": {
+    "evidence": "Original CourseOverview used targets.slice(0, 4); the actual daily planner can produce six targets including student and teacher",
+    "newBehavior": "The daily course card renders every actual target before its learning and skip actions"
+  },
+  "checks": {
+    "typescript": { "command": "npx tsc --noEmit", "exitCode": 0 },
+    "node": { "passed": 90, "failed": 0, "log": "logs/node-tests.txt" },
+    "build": { "exitCode": 0, "log": "logs/build.txt", "verifiedDeploymentFiles": 16115 },
+    "development": { "passed": 10, "report": "browser/report.json" },
+    "production": { "passed": 10, "report": "production/report.json", "url": "http://localhost:5186/dist/" },
+    "courseHomeRegression": { "passed": 12, "report": "home-regression/results.json" },
+    "courseSkipRegression": { "passed": 19, "report": "skip-regression/report.json" },
+    "mobile": { "passed": 13, "report": "mobile/browser-results.json" },
+    "wordLearning": { "passed": 9, "report": "word-browser/report.json" },
+    "diffWhitespace": { "command": "git diff --check", "exitCode": 0 }
+  },
+  "coverage": {
+    "existingDailyTargetsDisplayed": 86,
+    "allContentPreviewScopesInIsolatedSkipRun": 27,
+    "scopeCountIsNotAFixedCourseCount": true,
+    "sixTargetPreviewAndSkip": true,
+    "normalAndSlowLocalAudioPlayedToEnd": true,
+    "themes": ["lagoon", "pearl", "sky", "mint"],
+    "widths": [1440, 768, 390, 320],
+    "refreshUndoAndExistingDraftPreserved": true,
+    "unknownRecordsRemainReadonly": true,
+    "otherSectionsAndLegacyRecordsPreserved": true
+  },
+  "evidenceBoundaries": {
+    "profiles": "Disposable isolated Chrome contexts",
+    "userStorageTouched": false,
+    "masteryGrantedByPreviewOrSkip": false,
+    "newCourseContentOrAudio": false,
+    "adaptiveRulesOrStorageKeysChanged": false,
+    "liveD1Verified": false,
+    "androidDeviceVerified": false,
+    "published": false,
+    "committed": false,
+    "pushed": false
+  }
+}

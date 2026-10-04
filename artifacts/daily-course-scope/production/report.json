@@ -1,0 +1,603 @@
+{
+  "url": "http://localhost:5186/dist/",
+  "input": "isolated learning fixtures; real UI and local audio",
+  "scenarios": [
+    {
+      "name": "every-scope-1440",
+      "width": 1440,
+      "theme": "lagoon",
+      "passed": true,
+      "result": {
+        "scopes": 27,
+        "distinctTargets": 86,
+        "includesSixTargets": true,
+        "visited": [
+          {
+            "ids": [
+              "hello",
+              "hi",
+              "goodbye",
+              "bye"
+            ],
+            "source": "A1-01-01"
+          },
+          {
+            "ids": [
+              "i-am-ben",
+              "i-am-mia",
+              "im-ben",
+              "im-mia"
+            ],
+            "source": "A1-01-02"
+          },
+          {
+            "ids": [
+              "whats-your-name",
+              "my-name-is-ben",
+              "my-name-is-mia"
+            ],
+            "source": "A1-01-03"
+          },
+          {
+            "ids": [
+              "are-you-mia",
+              "are-you-ben",
+              "yes-i-am",
+              "no-im-ben"
+            ],
+            "source": "A1-01-04"
+          },
+          {
+            "ids": [
+              "no-im-mia"
+            ],
+            "source": "A1-01-04"
+          },
+          {
+            "ids": [
+              "meet-mia",
+              "meet-ben"
+            ],
+            "source": "A1-01-06"
+          },
+          {
+            "ids": [
+              "from-china",
+              "from-japan",
+              "from-the-us",
+              "daily-word-from"
+            ],
+            "source": "A1-02-01"
+          },
+          {
+            "ids": [
+              "where-are-you-from",
+              "are-you-from-china",
+              "are-you-from-japan"
+            ],
+            "source": "A1-02-02"
+          },
+          {
+            "ids": [
+              "not-from-japan",
+              "not-from-china",
+              "no-im-not"
+            ],
+            "source": "A1-02-03"
+          },
+          {
+            "ids": [
+              "i-am-chinese",
+              "i-am-japanese",
+              "i-am-american"
+            ],
+            "source": "A1-02-04"
+          },
+          {
+            "ids": [
+              "are-you-chinese",
+              "are-you-japanese",
+              "no-im-japanese",
+              "no-im-chinese"
+            ],
+            "source": "A1-02-05"
+          },
+          {
+            "ids": [
+              "origin-ben",
+              "origin-mia"
+            ],
+            "source": "A1-02-06"
+          },
+          {
+            "ids": [
+              "he-is-ben",
+              "she-is-mia",
+              "he-is-from-china",
+              "she-is-from-japan"
+            ],
+            "source": "A1-03-01"
+          },
+          {
+            "ids": [
+              "i-am-a-student",
+              "i-am-a-teacher",
+              "he-is-a-teacher",
+              "she-is-a-student",
+              "daily-word-student",
+              "daily-word-teacher"
+            ],
+            "source": "A1-03-02"
+          },
+          {
+            "ids": [
+              "we-are-students",
+              "they-are-teachers",
+              "they-are-students",
+              "we-are-teachers"
+            ],
+            "source": "A1-03-03"
+          },
+          {
+            "ids": [
+              "i-am-happy",
+              "i-am-tired",
+              "she-is-happy",
+              "he-is-tired"
+            ],
+            "source": "A1-03-04"
+          },
+          {
+            "ids": [
+              "they-are-happy"
+            ],
+            "source": "A1-03-04"
+          },
+          {
+            "ids": [
+              "who-is-he",
+              "who-is-she",
+              "is-he-a-teacher",
+              "is-she-a-student"
+            ],
+            "source": "A1-03-05"
+          },
+          {
+            "ids": [
+              "yes-he-is",
+              "no-she-isnt"
+            ],
+            "source": "A1-03-05"
+          },
+          {
+            "ids": [
+              "ben-introduction",
+              "mia-introduction"
+            ],
+            "source": "A1-03-06"
+          },
+          {
+            "ids": [
+              "what-is-it",
+              "it-is-a-book",
+              "it-is-a-pen",
+              "it-is-a-bag"
+            ],
+            "source": "A1-04-01"
+          },
+          {
+            "ids": [
+              "it-is-an-apple",
+              "it-is-an-egg"
+            ],
+            "source": "A1-04-02"
+          },
+          {
+            "ids": [
+              "this-is-a-book",
+              "that-is-a-bag",
+              "this-is-a-pen",
+              "that-is-a-book"
+            ],
+            "source": "A1-04-03"
+          },
+          {
+            "ids": [
+              "they-are-books",
+              "they-are-pens",
+              "they-are-apples"
+            ],
+            "source": "A1-04-04"
+          },
+          {
+            "ids": [
+              "these-are-books",
+              "those-are-pens",
+              "these-are-apples",
+              "those-are-books"
+            ],
+            "source": "A1-04-05"
+          },
+          {
+            "ids": [
+              "what-is-this",
+              "is-that-a-bag",
+              "yes-it-is",
+              "no-it-isnt"
+            ],
+            "source": "A1-04-06"
+          },
+          {
+            "ids": [
+              "objects-together"
+            ],
+            "source": "A1-04-06"
+          }
+        ]
+      }
+    },
+    {
+      "name": "every-scope-320",
+      "width": 320,
+      "theme": "mint",
+      "passed": true,
+      "result": {
+        "scopes": 27,
+        "distinctTargets": 86,
+        "includesSixTargets": true,
+        "visited": [
+          {
+            "ids": [
+              "hello",
+              "hi",
+              "goodbye",
+              "bye"
+            ],
+            "source": "A1-01-01"
+          },
+          {
+            "ids": [
+              "i-am-ben",
+              "i-am-mia",
+              "im-ben",
+              "im-mia"
+            ],
+            "source": "A1-01-02"
+          },
+          {
+            "ids": [
+              "whats-your-name",
+              "my-name-is-ben",
+              "my-name-is-mia"
+            ],
+            "source": "A1-01-03"
+          },
+          {
+            "ids": [
+              "are-you-mia",
+              "are-you-ben",
+              "yes-i-am",
+              "no-im-ben"
+            ],
+            "source": "A1-01-04"
+          },
+          {
+            "ids": [
+              "no-im-mia"
+            ],
+            "source": "A1-01-04"
+          },
+          {
+            "ids": [
+              "meet-mia",
+              "meet-ben"
+            ],
+            "source": "A1-01-06"
+          },
+          {
+            "ids": [
+              "from-china",
+              "from-japan",
+              "from-the-us",
+              "daily-word-from"
+            ],
+            "source": "A1-02-01"
+          },
+          {
+            "ids": [
+              "where-are-you-from",
+              "are-you-from-china",
+              "are-you-from-japan"
+            ],
+            "source": "A1-02-02"
+          },
+          {
+            "ids": [
+              "not-from-japan",
+              "not-from-china",
+              "no-im-not"
+            ],
+            "source": "A1-02-03"
+          },
+          {
+            "ids": [
+              "i-am-chinese",
+              "i-am-japanese",
+              "i-am-american"
+            ],
+            "source": "A1-02-04"
+          },
+          {
+            "ids": [
+              "are-you-chinese",
+              "are-you-japanese",
+              "no-im-japanese",
+              "no-im-chinese"
+            ],
+            "source": "A1-02-05"
+          },
+          {
+            "ids": [
+              "origin-ben",
+              "origin-mia"
+            ],
+            "source": "A1-02-06"
+          },
+          {
+            "ids": [
+              "he-is-ben",
+              "she-is-mia",
+              "he-is-from-china",
+              "she-is-from-japan"
+            ],
+            "source": "A1-03-01"
+          },
+          {
+            "ids": [
+              "i-am-a-student",
+              "i-am-a-teacher",
+              "he-is-a-teacher",
+              "she-is-a-student",
+              "daily-word-student",
+              "daily-word-teacher"
+            ],
+            "source": "A1-03-02"
+          },
+          {
+            "ids": [
+              "we-are-students",
+              "they-are-teachers",
+              "they-are-students",
+              "we-are-teachers"
+            ],
+            "source": "A1-03-03"
+          },
+          {
+            "ids": [
+              "i-am-happy",
+              "i-am-tired",
+              "she-is-happy",
+              "he-is-tired"
+            ],
+            "source": "A1-03-04"
+          },
+          {
+            "ids": [
+              "they-are-happy"
+            ],
+            "source": "A1-03-04"
+          },
+          {
+            "ids": [
+              "who-is-he",
+              "who-is-she",
+              "is-he-a-teacher",
+              "is-she-a-student"
+            ],
+            "source": "A1-03-05"
+          },
+          {
+            "ids": [
+              "yes-he-is",
+              "no-she-isnt"
+            ],
+            "source": "A1-03-05"
+          },
+          {
+            "ids": [
+              "ben-introduction",
+              "mia-introduction"
+            ],
+            "source": "A1-03-06"
+          },
+          {
+            "ids": [
+              "what-is-it",
+              "it-is-a-book",
+              "it-is-a-pen",
+              "it-is-a-bag"
+            ],
+            "source": "A1-04-01"
+          },
+          {
+            "ids": [
+              "it-is-an-apple",
+              "it-is-an-egg"
+            ],
+            "source": "A1-04-02"
+          },
+          {
+            "ids": [
+              "this-is-a-book",
+              "that-is-a-bag",
+              "this-is-a-pen",
+              "that-is-a-book"
+            ],
+            "source": "A1-04-03"
+          },
+          {
+            "ids": [
+              "they-are-books",
+              "they-are-pens",
+              "they-are-apples"
+            ],
+            "source": "A1-04-04"
+          },
+          {
+            "ids": [
+              "these-are-books",
+              "those-are-pens",
+              "these-are-apples",
+              "those-are-books"
+            ],
+            "source": "A1-04-05"
+          },
+          {
+            "ids": [
+              "what-is-this",
+              "is-that-a-bag",
+              "yes-it-is",
+              "no-it-isnt"
+            ],
+            "source": "A1-04-06"
+          },
+          {
+            "ids": [
+              "objects-together"
+            ],
+            "source": "A1-04-06"
+          }
+        ]
+      }
+    },
+    {
+      "name": "six-targets-lagoon-1440",
+      "width": 1440,
+      "theme": "lagoon",
+      "passed": true,
+      "result": {
+        "targets": [
+          "i-am-a-student",
+          "i-am-a-teacher",
+          "he-is-a-teacher",
+          "she-is-a-student",
+          "daily-word-student",
+          "daily-word-teacher"
+        ],
+        "skippedAllSix": true,
+        "undoRestoredScope": true
+      }
+    },
+    {
+      "name": "six-targets-pearl-320",
+      "width": 320,
+      "theme": "pearl",
+      "passed": true,
+      "result": {
+        "targets": [
+          "i-am-a-student",
+          "i-am-a-teacher",
+          "he-is-a-teacher",
+          "she-is-a-student",
+          "daily-word-student",
+          "daily-word-teacher"
+        ],
+        "skippedAllSix": true,
+        "undoRestoredScope": true
+      }
+    },
+    {
+      "name": "six-targets-sky-390",
+      "width": 390,
+      "theme": "sky",
+      "passed": true,
+      "result": {
+        "targets": [
+          "i-am-a-student",
+          "i-am-a-teacher",
+          "he-is-a-teacher",
+          "she-is-a-student",
+          "daily-word-student",
+          "daily-word-teacher"
+        ],
+        "skippedAllSix": true,
+        "undoRestoredScope": true
+      }
+    },
+    {
+      "name": "six-targets-mint-768",
+      "width": 768,
+      "theme": "mint",
+      "passed": true,
+      "result": {
+        "targets": [
+          "i-am-a-student",
+          "i-am-a-teacher",
+          "he-is-a-teacher",
+          "she-is-a-student",
+          "daily-word-student",
+          "daily-word-teacher"
+        ],
+        "skippedAllSix": true,
+        "undoRestoredScope": true
+      }
+    },
+    {
+      "name": "mixed-complete-scope",
+      "width": 390,
+      "theme": "lagoon",
+      "passed": true,
+      "result": {
+        "newCount": 3,
+        "oldCount": 1,
+        "ids": [
+          "hello",
+          "i-am-ben",
+          "i-am-mia",
+          "im-ben"
+        ]
+      }
+    },
+    {
+      "name": "weak-complete-scope",
+      "width": 390,
+      "theme": "lagoon",
+      "passed": true,
+      "result": {
+        "newCount": 0,
+        "oldCount": 4,
+        "ids": [
+          "hello",
+          "hi",
+          "goodbye",
+          "bye"
+        ]
+      }
+    },
+    {
+      "name": "resumed-exercise-retains-draft",
+      "width": 390,
+      "theme": "mint",
+      "passed": true
+    },
+    {
+      "name": "unknown-record-stays-readonly",
+      "width": 320,
+      "theme": "pearl",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "audio": [
+    {
+      "src": "http://localhost:5186/dist/audio/daily/aria/daily-word-student.mp3?v=student",
+      "rate": 1,
+      "pitch": true
+    },
+    {
+      "src": "http://localhost:5186/dist/audio/daily/aria/daily-word-student.mp3?v=student",
+      "rate": 0.72,
+      "pitch": true
+    }
+  ]
+}

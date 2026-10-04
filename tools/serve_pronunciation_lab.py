@@ -8,6 +8,7 @@ from pathlib import Path
 import secrets
 import threading
 import time
+from urllib.parse import quote, unquote
 
 from local_pronunciation import LocalAssessment, AssessmentInputError, ROOT, VERSION
 
@@ -27,6 +28,11 @@ TRIAL_WORDS = {
     'Bed': ('床', 'public/audio/aria/word-1291.mp3'),
     'Right': ('正确的；右边', 'public/audio/aria/word-2160.mp3'),
     'Light': ('光；灯', 'public/audio/aria/word-1852.mp3'),
+    "What's your name?": ('你叫什么名字？', 'public/audio/daily/aria/whats-your-name.mp3'),
+    'My name is Ben.': ('我的名字是 Ben。', 'public/audio/daily/aria/my-name-is-ben.mp3'),
+    'Where are you from?': ('你来自哪里？', 'public/audio/daily/aria/where-are-you-from.mp3'),
+    'Please check my pull request.': ('请检查我的合并请求。', 'public/audio/aria/example-7.mp3'),
+    'Use checkout to change branches.': ('使用 checkout 切换分支。', 'public/audio/aria/example-11.mp3'),
 }
 
 COURSE_ORIGINS = frozenset({
@@ -38,7 +44,8 @@ COURSE_ORIGINS = frozenset({
 
 def main():
     parser=argparse.ArgumentParser();parser.add_argument('--port',type=int,default=18765)
-    parser.add_argument('--engine',choices=['openpronounce','crottc','sensevoice'],default='openpronounce');args=parser.parse_args()
+    parser.add_argument('--engine',choices=['openpronounce','crottc','sensevoice','qwen'],default='openpronounce');args=parser.parse_args()
+    is_asr = args.engine in ('sensevoice', 'qwen')
     origin=f'http://127.0.0.1:{args.port}'
     token=secrets.token_urlsafe(32)
     lock=threading.Lock()
@@ -50,8 +57,11 @@ def main():
     elif args.engine == 'sensevoice':
         from sensevoice_recognition import SenseVoiceRecognition, VERSION as SENSEVOICE_VERSION
         engine_class, engine_version = SenseVoiceRecognition, SENSEVOICE_VERSION
+    elif args.engine == 'qwen':
+        from qwen_recognition import QwenRecognition, VERSION as QWEN_VERSION
+        engine_class, engine_version = QwenRecognition, QWEN_VERSION
     engine=engine_class()
-    if args.engine!='sensevoice':
+    if not is_asr:
         engine.assess((ROOT/'public/audio/daily/aria/goodbye.mp3').read_bytes(),'Goodbye')
     for _, file in TRIAL_WORDS.values():
         if not (ROOT/file).is_file():
@@ -84,32 +94,33 @@ def main():
             if self.path=='/health':return self.reply(200,{'ready':True,'engine':engine_version,'localOnly':True,
                 'busy':lock.locked(),'experimental':True,'rawAudioSaved':False,
                 'processingSeconds':round(time.monotonic()-activity['since'],1) if activity['since'] else 0})
-            if self.path=='/api/course-session' and args.engine=='sensevoice':
+            if self.path=='/api/course-session' and is_asr:
                 if self.headers.get('Origin') not in COURSE_ORIGINS:return self.reply(403,{'error':'origin'})
                 return self.reply(200,{'ready':True,'engine':engine_version,'token':token,'rawAudioSaved':False})
             if self.path.startswith('/audio/'):
-                word=self.path.removeprefix('/audio/').removesuffix('.mp3')
-                if self.path!=f'/audio/{word}.mp3' or word not in TRIAL_WORDS:
+                word=unquote(self.path.removeprefix('/audio/').removesuffix('.mp3'))
+                if self.path!=f'/audio/{quote(word, safe="")}.mp3' or word not in TRIAL_WORDS:
                     return self.reply(404,{'error':'not-found'})
                 return self.reply(200,(ROOT/TRIAL_WORDS[word][1]).read_bytes(),'audio/mpeg')
             if self.path!='/':return self.reply(404,{'error':'not-found'})
             page=Path(__file__).with_name('pronunciation_lab.html').read_text(encoding='utf-8').replace('__TOKEN__',token)
             page=page.replace('__SCOPE_NOTE__',
-                '只显示识别出的单词，不判断发音是否合格，也不指出错音。' if args.engine=='sensevoice'
+                '当前候选为 Qwen3-ASR；可试读单词和课程短句，识别文字不代表发音评分。' if args.engine=='qwen'
+                else '只显示识别出的单词，不判断发音是否合格，也不指出错音。' if args.engine=='sensevoice'
                 else '当前只测试单词；整句评测尚未通过验证。' if args.engine=='crottc' else '')
             page=page.replace('__ENGINE__',engine_version)
-            page=page.replace('__PAGE_TITLE__','本机单词试读' if args.engine=='sensevoice' else '本机发音验证')
+            page=page.replace('__PAGE_TITLE__','本机跟读试用' if args.engine=='qwen' else '本机单词试读' if args.engine=='sensevoice' else '本机发音验证')
             page=page.replace('__PRIVACY_NOTE__',
-                '录音只在这台电脑处理，不保存，不调用云端；结果不计入课程。' if args.engine=='sensevoice'
+                '录音只在这台电脑处理，不保存，不调用云端；结果不计入课程。' if is_asr
                 else '声音只在这台电脑处理，不调用云端，不保存录音。这是接入课程前的测试，结果不会改动学习进度。')
-            page=page.replace('__WORD_DATA__',json.dumps({word:{'meaning':meaning,'audio':f'/audio/{word}.mp3'}
+            page=page.replace('__WORD_DATA__',json.dumps({word:{'meaning':meaning,'audio':f'/audio/{quote(word, safe="")}.mp3'}
                 for word,(meaning,_) in TRIAL_WORDS.items()},ensure_ascii=False))
             self.reply(200,page,'text/html; charset=utf-8')
 
         def do_POST(self):
             if self.path not in ('/api/assess','/api/course-transcribe'):return self.reply(404,{'error':'not-found'})
             course=self.path=='/api/course-transcribe'
-            if course and args.engine!='sensevoice':return self.reply(404,{'error':'not-found'})
+            if course and not is_asr:return self.reply(404,{'error':'not-found'})
             allowed=self.headers.get('Origin') in COURSE_ORIGINS if course else self.headers.get('Origin')==origin
             if self.headers.get('Host')!=f'127.0.0.1:{args.port}' or not allowed or not hmac.compare_digest(self.headers.get('X-Local-Token',''),token):
                 return self.reply(403,{'error':'request-not-authorized'})
@@ -128,7 +139,7 @@ def main():
             finally:activity['since']=None;lock.release()
 
         def do_OPTIONS(self):
-            if self.path not in ('/api/course-session','/api/course-transcribe') or args.engine!='sensevoice':return self.reply(404,{'error':'not-found'})
+            if self.path not in ('/api/course-session','/api/course-transcribe') or not is_asr:return self.reply(404,{'error':'not-found'})
             if self.headers.get('Host')!=f'127.0.0.1:{args.port}' or self.headers.get('Origin') not in COURSE_ORIGINS:
                 return self.reply(403,{'error':'origin'})
             self.reply(204,b'')

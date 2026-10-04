@@ -69,3 +69,5 @@ node tools/test-android-web-bundle.mjs
 ## 英语基础扩展（2026-09-25）
 
 新增独立同步键 `codewords-foundation-v1`。旧快照读取时补为空，新版服务拒绝省略此字段的旧客户端写入，防止基础记录丢失。发布时需同步更新网页、Function 和使用同步的安卓包。本轮仅完成本地隔离验证，未更新线上服务；详见 [英语基础](FOUNDATION_ENGLISH.md)。
+
+2026-10-03 当前课程收尾：最终本地构建与最新课程测试夹具通过真实 D1 双浏览器链路 7 项；报告位于 `artifacts/course-closeout/sync-live-final/live-results.json`。两端资源均为本次构建，真实请求使用线上接口，APK origin 仍由浏览器模拟；没有发布前端，也没有使用用户真实同步码。安卓实体跨设备验收仍保留，详见 [当前收尾记录](COURSE_CLOSEOUT.md)。

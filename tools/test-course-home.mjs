@@ -21,8 +21,14 @@ for (const [name, lessons] of [['daily', adaptiveDailyLessons], ['programming', 
     }
     assert.deepEqual(progress, original);
     if (kind === 'fresh') assert.equal(first.oldCount, 0);
-    if (kind === 'mixed') assert.ok(first.oldCount && first.newCount);
-    if (kind === 'weak') assert.equal(first.newCount, 0);
+    if (name === 'programming') {
+      assert.equal(first.oldCount, 0, 'new-word lessons must exclude weak historical words');
+      assert.equal(first.newCount, 6);
+      assert.ok(first.targets.every(target => !progress.learning?.targets[target.id]));
+    } else {
+      if (kind === 'mixed') assert.ok(first.oldCount && first.newCount);
+      if (kind === 'weak') assert.equal(first.newCount, 0);
+    }
   });
   for (const kind of ['saved', 'legacy']) test(`${name}: ${kind} session wins over next scope without changing queue or draft`, () => {
     const progress = courseFixture(lessons, kind), original = structuredClone(progress);

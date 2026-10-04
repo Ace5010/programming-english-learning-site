@@ -1,0 +1,60 @@
+{
+  "verifiedAt": "2026-10-03T02:11:06.337986+00:00",
+  "feature": "Course focus skip, immediate undo, target restore and self-declared familiarity",
+  "nodeFinalRegression": {
+    "passed": 177,
+    "failed": 0,
+    "includesSkipTests": 13
+  },
+  "earlierRealContentAdmission": {
+    "passed": 4,
+    "generatedLessons": 126,
+    "checkedAnswers": 1429,
+    "distinctQuestions": 935
+  },
+  "typecheck": "passed",
+  "build": "passed",
+  "verify": "passed",
+  "finalBundle": "dist/assets/index-DobdTwoA.js",
+  "browserEvidence": {
+    "skip_ui": {
+      "report": "artifacts/course-skip/report.json",
+      "scenarios": 18,
+      "baseURL": "http://localhost:5186/"
+    },
+    "skip_production": {
+      "report": "artifacts/course-skip/production/report.json",
+      "scenarios": 18,
+      "baseURL": "http://localhost:5186/dist/"
+    },
+    "final_narrow_and_errors": {
+      "report": "artifacts/course-skip/final-narrow-and-errors/report.json",
+      "scenarios": 3,
+      "baseURL": "http://localhost:5186/dist/"
+    },
+    "adaptive_regression": {
+      "report": "artifacts/course-skip/adaptive-regression/browser-results.json",
+      "scenarios": 20,
+      "baseURL": "http://localhost:5186/"
+    },
+    "mobile_regression": {
+      "report": "artifacts/course-skip/mobile-regression/browser-results.json",
+      "scenarios": 13,
+      "baseURL": "http://localhost:5186/"
+    }
+  },
+  "sourceHashes": {
+    "src/DailyEnglish.tsx": "997ece50cf5a69d226c3013900f2116f3738d469864abc07a4468ae3c7d23ec0",
+    "src/adaptiveLearning.ts": "7875c19d263b7b8f8c05d828f96ff78194aa2907652d5c62a657971a6f67c75d",
+    "src/dailyProgress.ts": "55e2e7bf087de12fca6453dae990d267af6a0ddde130796023db8006a8f4936a",
+    "src/learningTypes.ts": "fbec28ca0d099d0b3edad27865588e6b8eafeb99dcd1df01033dad493d99a2c6",
+    "src/programmingReview.ts": "059b58a7c071084815477b4f6f6cf69448be819d645c906f402bdb3bfeec02d2",
+    "src/coursePractice.css": "373f07312cadcd15cf35240ccc1da582d7df7ccfb743c9f952bab668a1b3f6c6"
+  },
+  "boundaries": {
+    "published": false,
+    "realAndroidDeviceTested": false,
+    "microphoneTested": false,
+    "newFeatureSync": "Two isolated clients with actual snapshot validation and SQLite test backend"
+  }
+}

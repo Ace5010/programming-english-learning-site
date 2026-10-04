@@ -1,0 +1,44 @@
+[
+  {
+    "section": "daily",
+    "phrase": "goodbye",
+    "browserMediaRecorder": true,
+    "localApiStubbed": false,
+    "transcriptSaved": "Goodbye.",
+    "modelAndDecodeMs": 2679,
+    "stopToUiMs": 2747,
+    "delayedStartupDiscovered": false,
+    "mobile390NoOverflow": true,
+    "refreshPreserved": true,
+    "noAutomaticMastery": true,
+    "errors": []
+  },
+  {
+    "section": "daily",
+    "phrase": "whats-your-name",
+    "browserMediaRecorder": true,
+    "localApiStubbed": false,
+    "transcriptSaved": "What's your name?",
+    "modelAndDecodeMs": 3395,
+    "stopToUiMs": 3472,
+    "delayedStartupDiscovered": false,
+    "mobile390NoOverflow": true,
+    "refreshPreserved": true,
+    "noAutomaticMastery": true,
+    "errors": []
+  },
+  {
+    "section": "programming",
+    "phrase": "example-7",
+    "browserMediaRecorder": true,
+    "localApiStubbed": false,
+    "transcriptSaved": "Please check my pull request.",
+    "modelAndDecodeMs": 3472,
+    "stopToUiMs": 3588,
+    "delayedStartupDiscovered": false,
+    "mobile390NoOverflow": true,
+    "refreshPreserved": true,
+    "noAutomaticMastery": true,
+    "errors": []
+  }
+]

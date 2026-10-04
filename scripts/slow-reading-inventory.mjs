@@ -4,7 +4,10 @@ import { pathToFileURL } from 'node:url';
 import { vocabulary } from '../src/vocabulary.ts';
 import { dailyPhrases } from '../src/dailyCourse.ts';
 import reading from '../src/readingAudio.json' with { type: 'json' };
-import foundation from '../src/foundationAudio.json' with { type: 'json' };
+import foundationEntries from '../src/foundationAudio.json' with { type: 'json' };
+// Reading-only tutorials play continuous slow clips and their own word buttons.
+// Their additions must not replace existing course pronunciation sources.
+const foundation = foundationEntries.filter(item => !item.tutorialOnly);
 import { slowReadingUnits } from '../src/slowReadingText.ts';
 import { contextualReadings } from '../src/slowPronunciations.ts';
 

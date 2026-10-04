@@ -83,7 +83,8 @@ function extendOriginal(task: DailyExercise, taught: DailyPhrase[]): AdaptiveDai
   const literalListening = task.kind === 'listen' && phrase && task.answers?.includes(phrase.en);
   const learningDifficulty = task.kind === 'write' || task.kind === 'speak' ? 'recall'
     : literalListening ? 'recognition' : 'context';
-  return { ...task, knowledgeIds, learningDifficulty, learningSignature: `daily:original:${task.id}`, learningContext: `phrase:${knowledgeIds.join(',')}` };
+  return { ...task, knowledgeIds, learningDifficulty, learningSignature: `daily:original:${task.id}`, learningContext: `phrase:${knowledgeIds.join(',')}`,
+    ...(task.kind === 'speak' ? { speechExposureIds: [...new Set((task.readAloud ?? []).flatMap(phrase => [phrase.id, ...wordsForPhrase(phrase.id).map(word => word.id)]))] } : {}) };
 }
 
 type PracticeDraft = Omit<LearningExercise, 'id' | 'knowledgeIds' | 'learningDifficulty' | 'learningSignature'>;
@@ -183,6 +184,49 @@ function pairVariants(lesson: DailyLesson, taught: DailyPhrase[]): AdaptiveDaily
 }
 
 const introduced = new Map<string, DailyPhrase>();
+const oralQuestions: Record<string, string> = {
+  hello: 'hello', hi: 'hello', goodbye: 'goodbye', bye: 'goodbye',
+  'i-am-ben': 'whats-your-name', 'im-ben': 'whats-your-name', 'my-name-is-ben': 'whats-your-name',
+  'i-am-mia': 'whats-your-name', 'im-mia': 'whats-your-name', 'my-name-is-mia': 'whats-your-name',
+  'from-china': 'where-are-you-from', 'from-japan': 'where-are-you-from', 'from-the-us': 'where-are-you-from',
+  'yes-i-am': 'are-you-ben', 'no-im-ben': 'are-you-mia', 'no-im-mia': 'are-you-ben',
+  'he-is-ben': 'who-is-he', 'she-is-mia': 'who-is-she', 'yes-he-is': 'is-he-a-teacher', 'no-she-isnt': 'is-she-a-student',
+  'it-is-a-book': 'what-is-it', 'it-is-a-pen': 'what-is-it', 'it-is-a-bag': 'what-is-it',
+  'it-is-an-apple': 'what-is-it', 'it-is-an-egg': 'what-is-it', 'this-is-a-book': 'what-is-this',
+  'this-is-a-pen': 'what-is-this', 'yes-it-is': 'is-that-a-bag', 'no-it-isnt': 'is-that-a-bag',
+};
+const oralGlosses: Record<string, string> = {
+  i: '我', am: '是', is: '是', are: '是', he: '他', she: '她', we: '我们', they: '他们／它们',
+  you: '你', my: '我的', your: '你的', name: '名字', from: '来自', a: '一名／一个', an: '一个', the: '这个／该',
+  student: '学生', students: '学生（复数）', teacher: '老师', teachers: '老师（复数）', china: '中国', japan: '日本', us: '美国',
+  chinese: '中国人', japanese: '日本人', american: '美国人', happy: '高兴的', tired: '累的', not: '不', no: '不／不是', yes: '是的',
+  this: '这个', that: '那个', these: '这些', those: '那些', it: '它', book: '书', books: '书（复数）',
+  pen: '笔', pens: '笔（复数）', bag: '包', apple: '苹果', apples: '苹果（复数）', egg: '鸡蛋',
+  hello: '你好', hi: '嗨', goodbye: '再见', bye: '再见', where: '哪里', who: '谁', what: '什么', ben: '人名 Ben', mia: '人名 Mia',
+};
+function oralVariants(lesson: DailyLesson, target: DailyPhrase): AdaptiveDailyExercise[] {
+  let phrase = target.id.startsWith('daily-word-') ? byId.get(dailyWordTargets.find(word => word.id === target.id)!.contexts[0])! : target;
+  // Ordinary activities contain one short utterance, never an entire dialogue.
+  if ((phrase.en.match(/[.!?]/g) ?? []).length > 1) {
+    const parts = (phrase.en.match(/[^.!?]+[.!?]/g) ?? []).map(text => text.trim()).reverse();
+    const short = parts.map(en => dailyPhrases.find(item => item.en === en)).find(Boolean);
+    if (!short) return [];
+    phrase = short;
+  }
+  const question = byId.get(oralQuestions[phrase.id]);
+  return (['repeat', 'recall', ...(question && !target.id.startsWith('daily-word-') ? ['answer'] : [])] as ('repeat' | 'recall' | 'answer')[]).map(activity => ({
+    id: `${lesson.id}-p-${target.id}-oral-${activity}`, kind: 'speak', ability: 'speaking',
+    speechActivity: activity, speechSupport: activity === 'repeat' ? 'full' : activity === 'recall' ? 'partial' : 'hidden',
+    knowledgeIds: [target.id], readAloud: [phrase], sample: phrase.en, checks: ['我已核对表达的意思，姓名或来源可以使用自己的内容。'],
+    speechExposureIds: [phrase.id, ...wordsForPhrase(phrase.id).map(word => word.id)],
+    ...(activity === 'answer' ? { speechQuestion: question, prerequisiteIds: [question!.id], answers: [phrase.en] } : {}),
+    supportWords: [...new Set(phrase.en.match(/[A-Za-z]+/g) ?? [])].flatMap(en => oralGlosses[en.toLowerCase()] ? [{ en, zh: oralGlosses[en.toLowerCase()] }] : []),
+    prompt: activity === 'repeat' ? '听示范，试着读出这句表达。' : activity === 'recall' ? '根据中文和部分英文提示，说出这句表达。' : '听问题，简短回答。姓名和来源可以换成自己的内容。',
+    explanation: `${phrase.en} 表示“${phrase.zh}”。${phrase.note ?? ''}`,
+    learningDifficulty: activity === 'repeat' ? 'recognition' : 'recall', learningSignature: `daily:${target.id}:${phrase.id}:oral:${activity}`,
+    learningContext: `phrase:${phrase.id}`,
+  }));
+}
 export const adaptiveDailyUnits: AdaptiveDailyUnit[] = dailyUnits.map(unit => ({
   ...unit,
   lessons: unit.lessons.map(lesson => {
@@ -197,6 +241,7 @@ export const adaptiveDailyUnits: AdaptiveDailyUnit[] = dailyUnits.map(unit => ({
       learningTargets: [...lesson.phrases.map(phrase => phrase.id), ...focusWords.map(word => word.id)], learningGoal: 'communication',
       // A candidate pool, never a fixed per-phrase repetition quota or checklist.
       practice: [...exercises, ...rechecks, ...[...lesson.phrases, ...focusWords].flatMap(phrase => variants(lesson, phrase, taught)),
+        ...[...lesson.phrases, ...focusWords].flatMap(phrase => oralVariants(lesson, phrase)),
         ...lesson.phrases.flatMap(phrase => wordsForPhrase(phrase.id).flatMap(word => {
           const match = new RegExp(`\\b${word.en}\\b`, 'i').exec(phrase.en);
           if (!match) return [];

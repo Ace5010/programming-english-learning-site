@@ -2,6 +2,7 @@ import { programmingUnits, type ProgrammingAbility, type ProgrammingExercise, ty
 import { vocabulary, type VocabularyItem } from './vocabulary.ts'
 import type { LearningExercise, LearningLesson } from './learningTypes.ts'
 import { sentenceVariants } from './courseVariants.ts'
+import { programmingExerciseSupport } from './programmingSupport.ts'
 
 export type ProgrammingLearningDifficulty = 'recognition' | 'context' | 'recall'
 export type AdaptiveProgrammingExercise = ProgrammingExercise & LearningExercise & {
@@ -37,6 +38,11 @@ const similarGroups = [
   ['package', 'dependency', 'module'],
 ]
 const meaning = (item: VocabularyItem) => contextualMeanings[item.word] ?? item.meaning.split(/[；;]/)[0].trim()
+export function programmingTargetMeaning(id: string): string | undefined {
+  if (!/^word-\d+$/.test(id)) return undefined;
+  const word = byId.get(Number(id.slice(5)));
+  return word ? meaning(word) : undefined;
+}
 const normalize = (value: string) => value.toLocaleLowerCase('en').replace(/[\s\p{P}\p{S}]/gu, '')
 const similar = (left: VocabularyItem, right: VocabularyItem) =>
   similarGroups.some(group => group.includes(left.word) && group.includes(right.word)) || normalize(meaning(left)) === normalize(meaning(right))
@@ -64,7 +70,7 @@ function alternatives(item: VocabularyItem, taught: VocabularyItem[], seed: stri
   throw new Error(`Not enough distinct taught alternatives for programming word ${item.word}`)
 }
 
-type PracticeDraft = Pick<ProgrammingExercise, 'kind' | 'prompt' | 'explanation'> & Partial<Pick<ProgrammingExercise, 'audioId' | 'options' | 'answers' | 'parts' | 'blanks'>>
+type PracticeDraft = Pick<ProgrammingExercise, 'kind' | 'prompt' | 'explanation'> & Partial<ProgrammingExercise>
 
 function candidate(
   lessonId: string, item: VocabularyItem, variant: string, ability: ProgrammingAbility,
@@ -102,6 +108,17 @@ function practiceForWord(lessonId: string, item: VocabularyItem, taught: Vocabul
   const sentenceExplanation = `${item.example} 表示“${item.exampleZh}”；${item.word} 在这里表示“${ownMeaning}”。`
 
   return [
+    ...(['repeat', 'recall', 'answer'] as const).map(activity => {
+      const phrase = activity === 'answer' ? { id: `word-${item.id}`, en: item.word, zh: ownMeaning }
+        : { id: `example-${item.id}`, en: item.example, zh: item.exampleZh };
+      return candidate(lessonId, item, `oral-${activity}`, 'speaking', activity === 'repeat' ? 'recognition' : 'recall', {
+        kind: 'speak', speechActivity: activity, speechSupport: activity === 'repeat' ? 'full' : 'hidden',
+        readAloud: [phrase], sample: phrase.en, checks: ['我已核对表达的意思。'],
+        ...(activity === 'answer' ? { speechQuestion: { id: `example-${item.id}`, en: item.example, zh: item.exampleZh }, answers: [item.word] } : {}),
+        prompt: activity === 'repeat' ? '听示范，读出这句短说明。' : activity === 'recall' ? '根据中文提示，试着说出刚练过的短说明。' : '听这句短说明，说出其中的本课术语。',
+        explanation: sentenceExplanation,
+      });
+    }),
     candidate(lessonId, item, 'free-gap', 'context', 'recall', {
       kind: 'fill', prompt: `根据中文补上重点词：\n${item.exampleZh}`,
       parts: [before, after], blanks: [[missingWord]], explanation: sentenceExplanation,
@@ -174,7 +191,12 @@ function authoredMetadata(exercise: ProgrammingExercise): AdaptiveProgrammingExe
   return { ...exercise,
     learningDifficulty: exercise.ability === 'context' ? 'context' : exercise.ability === 'spelling' ? 'recall' : 'recognition',
     learningSignature: `authored:${exercise.id}`,
+    // Authored exercises keep their lesson-level phrase identity. Reusing the
+    // per-word `word:<id>` context here collapses them into the same intra-round
+    // dedup key as the generated meaning/word/listen/match variants for that
+    // word, so one answer suppressed the others and admission stalled.
     learningContext: sentence ? `sentence:${sentence.toLowerCase()}` : `phrase:${exercise.knowledgeIds.join(',')}`,
+    ...programmingExerciseSupport(exercise),
   }
 }
 
@@ -188,9 +210,9 @@ export const adaptiveProgrammingUnits: AdaptiveProgrammingUnit[] = programmingUn
       return item
     })
     return {
-      ...lesson, learningTargets: lesson.wordIds.map(id => `word-${id}`), learningGoal: 'reading',
+      ...lesson, learningTargets: lesson.wordIds.map(id => `word-${id}`), learningGoal: 'reading', courseMode: 'word-check',
       exercises: lesson.exercises.map(authoredMetadata), rechecks: lesson.rechecks.map(authoredMetadata),
-      practice: lesson.wordIds.flatMap(id => practiceForWord(lesson.id, byId.get(id)!, taught)),
+      practice: lesson.wordIds.flatMap(id => practiceForWord(lesson.id, byId.get(id)!, taught)).map(task => ({ ...task, ...programmingExerciseSupport(task) })),
     }
   }),
 }))

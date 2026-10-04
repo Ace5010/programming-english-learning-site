@@ -1,4 +1,4 @@
-import { compareSpeech } from './speechComparison.ts';
+import { assessSpeech, MAX_SPEECH_ATTEMPTS, type SpeechAssessment } from './speechComparison.ts';
 import { writtenAnswersMatch } from './writtenAnswer.ts';
 import { answerFingerprint, prepareAnswerCorrection, type AnswerCorrection } from './answerCorrection.ts';
 import type { AdaptivePlan, LearningState } from './learningTypes';
@@ -18,8 +18,14 @@ export interface DailyExerciseSpec {
   pairMode?: 'text' | 'audio';
   audioPrompt?: boolean;
   speechSupport?: 'full' | 'partial' | 'hidden';
+  speechActivity?: 'repeat' | 'recall' | 'answer';
+  speechQuestion?: { id: string; en: string; zh: string };
+  /** Material contact only: update already-introduced targets, never enroll helpers. */
+  speechExposureIds?: string[];
   /** Previously introduced targets needed to understand distractors. */
   prerequisiteIds?: string[];
+  /** Meanings of supporting words, excluding the targets this question assesses. */
+  supportWords?: { en: string; zh: string }[];
   prompt: string;
   explanation: string;
   audioId?: string;
@@ -33,7 +39,7 @@ export interface DailyExerciseSpec {
   /** Stable knowledge targets, when an exercise covers more than its audio phrase. */
   knowledgeIds?: string[];
   /** Adapted curricula may distinguish targets that share the same UI kind. */
-  ability?: 'meaning' | 'listening' | 'spelling' | 'context';
+  ability?: 'meaning' | 'listening' | 'spelling' | 'context' | 'speaking';
   learningDifficulty?: 'recognition' | 'context' | 'recall';
   learningSignature?: string;
   /** Actual sentence context, independent of question format. */
@@ -97,7 +103,10 @@ export interface DailyDraft {
   learningObserved?: string[];
   pairs?: PairState;
   /** Optional extension: old drafts remain valid. Audio is never stored here. */
-  speech?: { mode: 'read' | 'self'; transcripts: Record<string, string>; revealed?: string[] };
+  speech?: { mode: 'read' | 'self'; transcripts: Record<string, string>; revealed?: string[];
+    sources?: Record<string, 'recognition' | 'edited' | 'typed'>; heard?: string[];
+    /** Completed, nonempty recognition attempts per sentence; survives refresh. */
+    attempts?: Record<string, number> };
 }
 export interface DailyQueueEntry {
   exerciseId: string;
@@ -113,6 +122,16 @@ export interface DailyAnswer {
   at: number;
   corrected?: boolean;
   targets?: Record<string, PairOutcome>;
+  speech?: SpeechCompletion;
+}
+export interface SpeechCompletion {
+  activity: 'repeat' | 'recall' | 'answer';
+  mode: 'read' | 'self';
+  support: 'full' | 'partial' | 'hidden';
+  source: 'recognition' | 'edited' | 'typed' | 'unknown' | 'skipped';
+  usedReference: boolean;
+  assessment?: SpeechAssessment;
+  attempts?: Record<string, number>;
 }
 export interface DailyFeedback {
   correct: boolean;
@@ -135,6 +154,12 @@ export interface DailySession {
   focused?: boolean;
   /** A targeted course round; uses the same adaptive evidence and storage. */
   wordPractice?: boolean;
+  /**
+   * Questions set aside because a newer scope rule excludes them. The original
+   * question and whatever the learner had typed are kept here; nothing else in
+   * the record changes, so older records stay valid.
+   */
+  replaced?: { exerciseId: string; draft: DailyDraft; at: number }[];
   adaptive?: AdaptivePlan;
 }
 export interface DailyProgress {
@@ -146,6 +171,8 @@ export interface DailyProgress {
   knowledge?: Record<string, DailyKnowledgeProgress>;
   favorites?: string[];
   learning?: LearningState;
+  /** One reversible skip; no answered session or external storage is rolled back. */
+  skipUndo?: { session: DailySession; learning?: LearningState; nextSessionId: string | null };
 }
 export interface DailyParseResult {
   progress: DailyProgress;
@@ -261,7 +288,7 @@ export function createDailyReviewSession(
     return ability === 'speaking' ? 5 : 4;
   };
   let exercises = [...new Map([...lesson.exercises, ...(lesson.practice ?? [])].map(exercise => [exercise.id, exercise])).values()].filter(exercise => (focus === 'auto' || dailyExerciseAbility(exercise) === focus)
-    && (exercise.prerequisiteIds ?? []).every(id => !!progress.knowledge?.[id] || !!progress.learning?.targets[id]?.introducedAt)
+    && (exercise.prerequisiteIds ?? []).every(id => !!progress.knowledge?.[id] || !!progress.learning?.targets[id]?.introducedAt || !!progress.learning?.selfKnown?.[id])
     && (!progress.learning || dailyExerciseKnowledgeIds(lesson, exercise).every(id => dailyKnowledgeReviewable(progress, id))));
   exercises = [...exercises].sort((a, b) => priority(a) - priority(b));
   if (focus === 'auto') {
@@ -294,6 +321,7 @@ export function createDailyDraft(exercise?: DailyExerciseSpec): DailyDraft {
     helped: false,
     revealed: false,
     ...(exercise?.kind === 'match' ? { pairs: createPairState() } : {}),
+    ...(exercise?.speechActivity ? { speech: { mode: exercise.speechActivity === 'answer' ? 'self' as const : 'read' as const, transcripts: {}, sources: {}, heard: [] } } : {}),
   };
 }
 
@@ -336,6 +364,25 @@ function matches(value: string, alternatives: string[]): boolean {
 
 export interface DailyAnswerCheck { complete: boolean; correct: boolean; expected: string[] }
 
+export function speechRetriesExhausted(exercise: DailyExerciseSpec, draft: DailyDraft): boolean {
+  return exercise.kind === 'speak' && draft.speech?.mode === 'read' && !!exercise.readAloud?.some(target =>
+    draft.speech!.sources?.[target.id] === 'recognition'
+    && (draft.speech!.attempts?.[target.id] ?? 0) >= MAX_SPEECH_ATTEMPTS
+    && !assessSpeech(target.en, draft.speech!.transcripts[target.id] ?? '').accepted);
+}
+
+/** Only final nonempty ASR results consume an attempt, never edits or service errors. */
+export function recordSpeechTranscript(draft: DailyDraft, target: string, transcript: string): Partial<DailyDraft> {
+  if (!/[\p{L}\p{N}]/u.test(transcript)) return {};
+  const previous = draft.speech;
+  const speech = { ...previous, mode: target === 'self' ? 'self' as const : 'read' as const,
+    transcripts: { ...previous?.transcripts, ...(target === 'self' ? {} : { [target]: transcript }) },
+    sources: { ...previous?.sources, [target]: 'recognition' as const } };
+  if (target === 'self') return { text: transcript, speech };
+  return { speech: { ...speech, attempts: { ...previous?.attempts,
+    [target]: Math.min(MAX_SPEECH_ATTEMPTS, (previous?.attempts?.[target] ?? 0) + 1) } } };
+}
+
 export function checkDailyAnswer(exercise: DailyExerciseSpec, draft: DailyDraft): DailyAnswerCheck {
   const expected = exercise.answers?.length ? exercise.answers : exercise.sample ? [exercise.sample] : [];
   if (exercise.kind === 'match') {
@@ -345,8 +392,8 @@ export function checkDailyAnswer(exercise: DailyExerciseSpec, draft: DailyDraft)
   if (exercise.kind === 'speak') {
     if (draft.speech?.mode === 'read') {
       const targets = exercise.readAloud ?? [];
-      const complete = targets.length > 0 && targets.every(target => compareSpeech(target.en, draft.speech!.transcripts[target.id] ?? '').allMatched);
-      return { complete, correct: complete, expected: targets.map(target => target.en) };
+      const correct = targets.length > 0 && targets.every(target => assessSpeech(target.en, draft.speech!.transcripts[target.id] ?? '').accepted);
+      return { complete: correct || speechRetriesExhausted(exercise, draft), correct, expected: targets.map(target => target.en) };
     }
     // Self assessment says only that the learner has performed and checked the task.
     const complete = !!draft.text.trim() && (exercise.checks?.length ?? 0) > 0 && draft.checks.length === exercise.checks!.length && draft.checks.every(Boolean);
@@ -504,10 +551,26 @@ export function checkDailyAttempt(progress: DailyProgress, lesson: DailyLessonSp
   return submitDailyAnswer(progress, lesson, {}, now);
 }
 
+export function speechCompletion(exercise: DailyExerciseSpec, draft: DailyDraft): SpeechCompletion {
+  const mode = draft.speech?.mode ?? (draft.text || draft.checks.some(Boolean) ? 'self' : 'read');
+  const support = exercise.speechSupport ?? 'full';
+  const ids = mode === 'self' ? ['self'] : (exercise.readAloud ?? []).map(item => item.id);
+  const sources = ids.map(id => draft.speech?.sources?.[id] ?? 'unknown');
+  const source = sources.includes('typed') ? 'typed' : sources.includes('edited') ? 'edited'
+    : sources.length && sources.every(value => value === 'recognition') ? 'recognition' : 'unknown';
+  const assessments = mode === 'read' ? (exercise.readAloud ?? []).map(target => assessSpeech(target.en, draft.speech?.transcripts[target.id] ?? '').assessment) : [];
+  const assessment = assessments.length ? assessments.includes('failed') ? 'failed' : assessments.includes('tolerated') ? 'tolerated'
+    : assessments.includes('context') ? 'context' : 'exact' : undefined;
+  return { activity: exercise.speechActivity ?? (mode === 'read' ? 'repeat' : 'answer'), mode, support, source,
+    ...(assessment ? { assessment } : {}), ...(draft.speech?.attempts ? { attempts: { ...draft.speech.attempts } } : {}),
+    usedReference: support === 'full' && exercise.speechActivity !== 'answer' || !!draft.helped || !!draft.speech?.revealed?.length
+      || !!draft.speech?.heard?.some(id => exercise.readAloud?.some(item => item.id === id)) };
+}
+
 export function submitDailyAnswer(
   progress: DailyProgress,
   lesson: DailyLessonSpec,
-  options: { helped?: boolean; reveal?: boolean; self?: boolean } = {},
+  options: { helped?: boolean; reveal?: boolean; self?: boolean; skipSpeech?: boolean } = {},
   now = Date.now(),
 ): DailyProgress {
   const session = progress.session;
@@ -515,6 +578,16 @@ export function submitDailyAnswer(
   const entry = session.queue[session.index];
   const exercise = entry && findDailyExercise(lesson, entry.exerciseId);
   if (!exercise) return progress;
+  const exhausted = speechRetriesExhausted(exercise, session.draft);
+  if ((options.skipSpeech || exhausted) && exercise.kind === 'speak') {
+    const speech = { ...speechCompletion(exercise, session.draft), source: 'skipped' as const };
+    if (!exhausted) delete speech.assessment;
+    return { ...progress, session: { ...session,
+      answers: [...session.answers, { exerciseId: exercise.id, retry: entry.retry, ability: 'speaking', outcome: 'self', correct: false, at: now, speech }],
+      feedback: { correct: false, outcome: 'self', expected: [], explanation: exhausted
+        ? '已尝试 3 次，先跳过这题。本题记为未通过，点“继续”进入下一题。'
+        : '已跳过这次口语活动，可以继续。没有登记答错、开口成功或已会。' } } };
+  }
   const checked = checkDailyAnswer(exercise, session.draft);
   if (!checked.complete && !options.reveal && !session.draft.revealed) return progress;
   // Only genuine speaking tasks use self evidence. A caller cannot bypass a written answer.
@@ -566,6 +639,7 @@ export function submitDailyAnswer(
     if (variant) queue.push({ exerciseId: variant.id, retry: true, retryOf: exercise.id });
   }
   const answer: DailyAnswer = { exerciseId: exercise.id, retry: entry.retry, ability, outcome, correct: checked.correct, at: now,
+    ...(exercise.kind === 'speak' ? { speech: speechCompletion(exercise, session.draft) } : {}),
     ...(session.draft.correction && checked.correct ? { corrected: true } : {}),
     ...(exercise.kind === 'match' ? { targets: { ...session.draft.pairs?.matches } } : {}) };
   let knowledge = recordKnowledge(progress, lesson, exercise, outcome, now, true, answer.targets);
@@ -577,7 +651,7 @@ export function submitDailyAnswer(
     ...progress,
     knowledge,
     lessons: { ...progress.lessons, [lesson.id]: record },
-    session: { ...session, queue, answers: [...session.answers, answer], feedback: { correct: checked.correct, outcome, expected: checked.expected, explanation: exercise.kind === 'speak' && session.draft.speech?.mode === 'read' ? '识别文字已与这组参考表达对应。跟读记录不代表系统已确认发音质量或自由表达能力。' : exercise.explanation } },
+    session: { ...session, queue, answers: [...session.answers, answer], feedback: { correct: checked.correct, outcome, expected: checked.expected, explanation: exercise.kind === 'speak' ? answer.speech?.source === 'recognition' ? '已完成本次口语活动。识别文字与自查记录不代表发音质量或独立掌握。' : '已通过替代或自查路径完成。没有登记为未经修改的语音识别成功。' : exercise.explanation } },
   };
 }
 
@@ -605,7 +679,7 @@ export function summarizeDailySession(session: DailySession): Record<DailyOutcom
     independent: session.answers.filter(answer => answer.outcome === 'independent').length,
     assisted: session.answers.filter(answer => answer.outcome === 'assisted').length,
     revealed: session.answers.filter(answer => answer.outcome === 'revealed').length,
-    self: session.answers.filter(answer => answer.outcome === 'self').length,
+    self: session.answers.filter(answer => answer.outcome === 'self' && answer.speech?.source !== 'skipped').length,
     needsReview: session.answers.filter(answer => answer.outcome === 'assisted' || answer.outcome === 'revealed').length,
   };
 }
@@ -673,6 +747,19 @@ function validKnowledge(value: unknown): value is DailyKnowledgeProgress {
     || value.lessonIds.length > 10000 || !value.lessonIds.every(id) || new Set(value.lessonIds).size !== value.lessonIds.length || !object(value.skills)) return false;
   return validRecord({ completedAt: 0, lastPracticedAt: 0, skills: value.skills, errors: {} });
 }
+function validSpeechCompletion(value: unknown): boolean {
+  return object(value) && ['repeat', 'recall', 'answer'].includes(String(value.activity))
+    && ['read', 'self'].includes(String(value.mode)) && ['full', 'partial', 'hidden'].includes(String(value.support))
+    && ['recognition', 'edited', 'typed', 'unknown', 'skipped'].includes(String(value.source)) && typeof value.usedReference === 'boolean'
+    && (value.assessment === undefined || ['exact', 'context', 'tolerated', 'failed'].includes(String(value.assessment)))
+    && (value.attempts === undefined || validSpeechAttempts(value.attempts));
+}
+
+function validSpeechAttempts(value: unknown): boolean {
+  return object(value) && Object.keys(value).length <= 100
+    && Object.entries(value).every(([key, attempts]) => id(key) && count(attempts) && attempts <= MAX_SPEECH_ATTEMPTS);
+}
+
 function validDraft(value: unknown): value is DailyDraft {
   return object(value) && (value.choice === null || text(value.choice)) && Array.isArray(value.order) && value.order.length <= 100 && value.order.every(count)
     && new Set(value.order).size === value.order.length
@@ -686,6 +773,9 @@ function validDraft(value: unknown): value is DailyDraft {
     && (value.speech === undefined || object(value.speech) && ['read', 'self'].includes(String(value.speech.mode))
       && object(value.speech.transcripts) && Object.keys(value.speech.transcripts).length <= 100
       && Object.entries(value.speech.transcripts).every(([key, transcript]) => id(key) && text(transcript))
+      && (value.speech.sources === undefined || object(value.speech.sources) && Object.entries(value.speech.sources).every(([key, source]) => id(key) && ['recognition', 'edited', 'typed'].includes(String(source))))
+      && (value.speech.attempts === undefined || validSpeechAttempts(value.speech.attempts))
+      && (value.speech.heard === undefined || Array.isArray(value.speech.heard) && value.speech.heard.length <= 100 && value.speech.heard.every(id))
       && (value.speech.revealed === undefined || Array.isArray(value.speech.revealed) && value.speech.revealed.every(id)));
 }
 
@@ -696,7 +786,9 @@ function validCorrection(value: unknown): value is AnswerCorrection {
 }
 function validLearning(value: unknown): boolean {
   if (!object(value) || value.version !== 1 || !count(value.turns) || !count(value.rounds) || !object(value.targets)
-    || Object.keys(value.targets).length > 50000 || value.lastAnswer !== undefined && !text(value.lastAnswer)) return false;
+    || Object.keys(value.targets).length > 50000 || value.lastAnswer !== undefined && !text(value.lastAnswer)
+    || value.selfKnown !== undefined && (!object(value.selfKnown) || Object.keys(value.selfKnown).length > 50000
+      || !Object.entries(value.selfKnown).every(([key, at]) => id(key) && number(at) && at > 0))) return false;
   const score = (value: unknown) => typeof value === 'number' && Number.isFinite(value) && value >= 0 && value <= 1;
   return Object.entries(value.targets).every(([key, target]) => id(key) && object(target)
     && number(target.introducedAt) && score(target.confidence) && object(target.abilities)
@@ -708,6 +800,7 @@ function validLearning(value: unknown): boolean {
     && (target.lastEvidenceAt === undefined || number(target.lastEvidenceAt))
     && (target.lastErrorAbility === undefined || ['spelling', 'context'].includes(String(target.lastErrorAbility)))
     && (target.lastSessionId === undefined || id(target.lastSessionId))
+    && (target.speechMaterials === undefined || Array.isArray(target.speechMaterials) && target.speechMaterials.length <= 100 && target.speechMaterials.every(id))
     && (target.evidence === undefined || object(target.evidence) && Object.entries(target.evidence).every(([key, item]) =>
       ['recognition', 'recall', 'newContext', 'laterSession'].includes(key) && object(item)
       && ['attempts', 'independent', 'assisted', 'revealed', 'elapsedMs'].every(key => count(item[key]))
@@ -719,6 +812,7 @@ function validAdaptive(value: unknown): boolean {
   const focusIds = value.focusIds;
   return object(value) && value.version === 1 && count(value.round) && id(value.sourceLessonId)
     && count(value.seed) && count(value.budget) && value.budget >= 1 && value.budget <= 20
+    && (value.courseMode === undefined || value.courseMode === 'word-check')
     && Array.isArray(value.focusIds) && value.focusIds.length > 0 && value.focusIds.length <= 20 && value.focusIds.every(id)
     && new Set(value.focusIds).size === value.focusIds.length
     && Array.isArray(value.newIds) && value.newIds.every(key => focusIds.includes(key))
@@ -730,13 +824,16 @@ function validSession(value: unknown, lessons?: DailyLessonSpec[]): value is Dai
     || !Array.isArray(value.queue) || value.queue.length > MAX_QUEUE || !Array.isArray(value.answers) || !validDraft(value.draft)
     || value.focused !== undefined && (value.focused !== true || value.mode !== 'review')
     || value.wordPractice !== undefined && (value.wordPractice !== true || !value.adaptive || value.mode !== 'lesson')
+    || value.replaced !== undefined && (!Array.isArray(value.replaced) || value.replaced.length > 10
+      || !value.replaced.every(entry => object(entry) && id(entry.exerciseId) && number(entry.at) && validDraft(entry.draft)))
     || value.adaptive !== undefined && (!validAdaptive(value.adaptive) || value.mode !== 'lesson')) return false;
   const queue = value.queue;
   if (!queue.every(entry => object(entry) && id(entry.exerciseId) && typeof entry.retry === 'boolean' && (entry.retryOf === undefined || id(entry.retryOf)))) return false;
   if (new Set(queue.map(entry => entry.exerciseId)).size !== queue.length || queue.filter(entry => entry.retry).length > 5) return false;
   if (value.index > queue.length || value.answers.length > queue.length) return false;
   if (!value.answers.every((answer, index) => object(answer) && answer.exerciseId === queue[index]?.exerciseId && answer.retry === queue[index]?.retry
-    && abilities.includes(answer.ability as DailyAbility) && outcomes.includes(answer.outcome as DailyOutcome) && typeof answer.correct === 'boolean' && number(answer.at))) return false;
+    && abilities.includes(answer.ability as DailyAbility) && outcomes.includes(answer.outcome as DailyOutcome) && typeof answer.correct === 'boolean' && number(answer.at)
+    && (answer.speech === undefined || answer.ability === 'speaking' && validSpeechCompletion(answer.speech)))) return false;
   if (value.feedback !== null && (!object(value.feedback) || typeof value.feedback.correct !== 'boolean' || !outcomes.includes(value.feedback.outcome as DailyOutcome)
     || !Array.isArray(value.feedback.expected) || !value.feedback.expected.every(text) || !text(value.feedback.explanation))) return false;
   if (value.stage === 'study' && (value.mode !== 'lesson' || value.index !== 0 || value.answers.length !== 0 || value.feedback !== null)) return false;
@@ -796,6 +893,12 @@ export function parseDailyProgress(raw: string | null, lessons?: DailyLessonSpec
       || value.knowledge !== undefined && (!object(value.knowledge) || Object.keys(value.knowledge).length > 50000 || !Object.entries(value.knowledge).every(([key, item]) => id(key) && validKnowledge(item)))
       || value.favorites !== undefined && (!Array.isArray(value.favorites) || value.favorites.length > 10000 || !value.favorites.every(id) || new Set(value.favorites).size !== value.favorites.length)
       || value.learning !== undefined && !validLearning(value.learning)
+      || value.skipUndo !== undefined && (!object(value.skipUndo)
+        || !validSession(value.skipUndo.session, lessons) || value.skipUndo.session.stage !== 'study'
+        || !value.skipUndo.session.adaptive || value.skipUndo.session.mode !== 'lesson'
+        || value.skipUndo.session.answers.length !== 0 || value.skipUndo.session.index !== 0 || value.skipUndo.session.feedback !== null
+        || value.skipUndo.learning !== undefined && !validLearning(value.skipUndo.learning)
+        || value.skipUndo.nextSessionId !== null && !id(value.skipUndo.nextSessionId))
       || value.session !== null && !validSession(value.session, lessons)) return fail('日常英语记录不完整或课程已变化，原始记录已保留，本页暂不保存。');
     return { progress: value as unknown as DailyProgress, writable: true, warning: '', raw };
   } catch {

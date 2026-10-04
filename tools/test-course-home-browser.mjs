@@ -6,14 +6,16 @@ import { adaptiveProgrammingLessons } from '../src/programmingPractice.ts';
 import { DAILY_KEY, parseDailyProgress } from '../src/dailyProgress.ts';
 import { PROGRAMMING_COURSE_KEY } from '../src/programmingProgress.ts';
 import { courseOverview } from '../src/courseOverviewData.ts';
-import { resolveAdaptiveLesson } from '../src/adaptiveLearning.ts';
+import { resolveAdaptiveLesson, reconcileSavedQuestion } from '../src/adaptiveLearning.ts';
+import { applyProgrammingReviewToLearning } from '../src/programmingReview.ts';
+import { parseReviewProgress } from '../src/review.ts';
 import { courseFixture } from './helpers/course-home-fixture.mjs';
 
 const require = createRequire(import.meta.url);
 const { chromium } = require(process.env.CODEWORDS_PLAYWRIGHT || 'C:/Users/shenwuqiang/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
 const baseURL = process.env.CODEWORDS_TEST_URL || 'http://localhost:5186/';
 assert.match(baseURL, /^https?:\/\/(localhost|127\.0\.0\.1)(:|\/)/);
-const output = 'artifacts/palette-rollout/course-home';
+const output = process.env.CODEWORDS_ARTIFACT_DIR || 'artifacts/palette-rollout/course-home';
 await mkdir(output, { recursive: true });
 const browser = await chromium.launch({ channel: 'chrome', headless: true });
 const results = [], errors = [];
@@ -22,7 +24,7 @@ const snapshot = page => page.evaluate(keys => Object.fromEntries(keys.map(key =
 try {
   for (const [section, key, lessons] of [['daily', DAILY_KEY, adaptiveDailyLessons], ['programming', PROGRAMMING_COURSE_KEY, adaptiveProgrammingLessons]]) {
     for (const kind of ['fresh', 'mixed', 'weak', 'saved', 'legacy', 'review']) {
-      const progress = courseFixture(lessons, kind), overview = courseOverview(progress, lessons);
+      const progress = courseFixture(lessons, kind);
       assert.equal(parseDailyProgress(JSON.stringify(progress), lessons).writable, true);
       const context = await browser.newContext({ viewport: { width: 1440, height: 1100 }, reducedMotion: 'reduce' });
       const page = await context.newPage(); page.setDefaultTimeout(10000);
@@ -41,13 +43,18 @@ try {
       await goHome();
       const baseline = await snapshot(page);
       const stored = () => page.evaluate(key => JSON.parse(localStorage.getItem(key)), key);
+      const restored = reconcileSavedQuestion(parseDailyProgress(baseline[key], lessons).progress, lessons);
+      const prepared = section === 'programming' ? applyProgrammingReviewToLearning(restored, parseReviewProgress(baseline['codewords-review-v1'])) : restored;
+      const current = courseOverview(prepared, lessons);
+      const replacingReview = section === 'programming' && prepared.session?.mode === 'review' && prepared.session.stage !== 'summary';
+      const overview = current ?? (replacingReview ? courseOverview({ ...prepared, session: null }, lessons) : null);
       if (!overview) {
         await main.getByRole('heading', { name: '下一轮待安排' }).waitFor();
         assert.equal(await main.locator('.course-current').count(), 0);
       } else {
-        const heading = main.locator('.course-current h3');
+        const heading = main.locator(overview.wordCheck ? '.course-word-lesson-title' : '.course-current-copy > h3');
         assert.equal(await heading.textContent(), `第 ${overview.round} 节 · ${overview.title}`);
-        assert.deepEqual(await main.locator('[data-target-id]').evaluateAll(nodes => nodes.map(node => node.dataset.targetId)), overview.targets.slice(0, 4).map(item => item.id));
+        assert.deepEqual(await main.locator('[data-target-id]').evaluateAll(nodes => nodes.map(node => node.dataset.targetId)), (section === 'daily' || overview.wordCheck ? overview.targets : overview.targets.slice(0, 4)).map(item => item.id));
         assert.equal(await main.locator('.course-arrangement,.course-goal').count(), 0);
         const themes = ['fresh', 'saved'].includes(kind) ? ['lagoon', 'pearl', 'sky', 'mint'] : ['lagoon'];
         for (const theme of themes) {
@@ -60,6 +67,10 @@ try {
             if (width === 1440) {
               const left = await main.locator('.course-home-main').boundingBox(), right = await main.locator('.daily-rail').boundingBox();
               assert.ok(left.width > right.width * 1.5 && right.x > left.x + left.width);
+              if (overview.wordCheck) {
+                assert.ok(Math.abs(right.y - left.y) < 2 && left.width <= 940, 'learning keeps a quiet progress rail');
+                assert.ok(Math.abs(left.x - (1440 - right.x - right.width)) < 2, 'the content group is centered with outer whitespace');
+              }
             }
             if (kind === 'fresh' && [1440, 390].includes(width)) await page.screenshot({ path: `${output}/${section}-${theme}-${width}.png`, fullPage: true });
           }
@@ -68,26 +79,45 @@ try {
         assert.deepEqual(await snapshot(page), baseline, `${section}/${kind}: refresh changed progress`);
         assert.equal(await heading.textContent(), `第 ${overview.round} 节 · ${overview.title}`);
         await main.locator('.course-start button').click();
+        if (replacingReview) {
+          assert.deepEqual(await snapshot(page), baseline, 'requesting a new test must preserve the review until confirmed');
+          await main.locator('.daily-notice').getByRole('button', { name: /^开始“/ }).click();
+        }
         await main.locator('.daily-session').waitFor();
         const started = await stored();
-        if (overview.resume) assert.deepEqual(started, JSON.parse(baseline[key]), `${section}/${kind}: resume overwrote session`);
+        if (overview.resume && !(overview.wordCheck && restored.session.stage === 'study')) assert.deepEqual(started, JSON.parse(baseline[key]), `${section}/${kind}: resume overwrote session`);
         else {
           assert.deepEqual(started.session.adaptive.focusIds, overview.targets.map(item => item.id));
           assert.equal(started.session.answers.length, 0);
-          assert.deepEqual(started.learning, progress.learning);
-          assert.deepEqual(await main.locator('.daily-phrase-content strong').allTextContents(), resolveAdaptiveLesson(started.session, lessons).phrases.map(phrase => phrase.en));
+          if (overview.wordCheck) {
+            assert.equal(started.session.stage, 'exercise');
+            assert.equal(await main.locator('.course-word-grid').count(), 0);
+            assert.ok(overview.targets.every(target => started.learning.targets[target.id]?.introducedAt > 0));
+            if (overview.resume) assert.equal(started.session.id, restored.session.id, 'saved study starts its existing queue');
+          } else {
+            assert.deepEqual(started.learning, progress.learning);
+            assert.deepEqual(await main.locator('.daily-phrase-content strong').allTextContents(), resolveAdaptiveLesson(started.session, lessons).phrases.map(phrase => phrase.en));
+          }
         }
+        let savedDraft;
         if (kind === 'saved') {
           const input = main.locator('.daily-fill input, .daily-write').first();
-          assert.equal(await input.inputValue(), 'unfinished answer');
-          await input.fill('kept after reload');
+          if (await input.count()) {
+            assert.equal(await input.inputValue(), 'unfinished answer');
+            await input.fill('kept after reload');
+          } else {
+            assert.ok(restored.session.replaced?.some(item => item.draft.text === 'unfinished answer'), 'an obsolete input must be archived');
+            await main.locator('.daily-option').first().click();
+            assert.ok((await stored()).session.replaced?.some(item => item.draft.text === 'unfinished answer'));
+          }
+          savedDraft = (await stored()).session.draft;
         }
         const activeSnapshot = await snapshot(page);
         await page.locator('.theme-picker select').selectOption('pearl');
         await page.reload();
         await main.locator('.daily-session').waitFor();
         assert.deepEqual(await snapshot(page), activeSnapshot, `${section}/${kind}: resumed refresh changed queue/draft`);
-        if (kind === 'saved') assert.equal(await main.locator('.daily-fill input, .daily-write').first().inputValue(), 'kept after reload');
+        if (kind === 'saved') assert.deepEqual((await stored()).session.draft, savedDraft);
         const after = await snapshot(page);
         for (const otherKey of keys.filter(other => other !== key && !(section === 'programming' && other === 'codewords-review-v1'))) assert.equal(after[otherKey], baseline[otherKey], `${section}: changed ${otherKey}`);
       }

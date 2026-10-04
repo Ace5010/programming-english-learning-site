@@ -1,0 +1,21 @@
+{
+  "actualUserMicrophone": false,
+  "publicAudioViaRealMediaRecorder": true,
+  "localApiStubbed": false,
+  "model": "qwen3-asr-trial-v1",
+  "transcript": "What's your name?",
+  "elapsedMs": 3240,
+  "courseProgressWritten": false,
+  "rawAudioSaved": false,
+  "cloudCalls": 0,
+  "responsiveWidths": [
+    320,
+    390,
+    1280
+  ],
+  "referenceDidNotOverrideSpokenWord": true,
+  "silenceRejected": true,
+  "invalidAudioRejected": true,
+  "authorizationChecked": true,
+  "errors": []
+}

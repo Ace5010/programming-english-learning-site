@@ -83,7 +83,7 @@ try {
     await mic(page, 'goodbye').click(); await page.evaluate(() => window.__emitSpeech('Goodbye'));
     await page.locator('[data-phrase-id="goodbye"].matched').waitFor();
     await page.locator('.daily-controls .primary').click();
-    await page.getByRole('heading', { name: '这组表达已完成跟读' }).waitFor();
+    await page.getByRole('heading', { name: '已完成跟读' }).waitFor();
     const saved = await record(page);
     assert.equal(saved.session.feedback.outcome, 'self');
     assert.equal(saved.lessons[lesson.id].skills.speaking.independentAnswers, 0);
@@ -109,9 +109,9 @@ try {
   await scenario('theme preserves listening; mode, section and page exit abort and ignore late events', async page => {
     await mic(page).click();
     await page.evaluate(() => { window.__late = window.__speechCalls.at(-1).onresult; });
-    await page.locator('.theme-picker select').selectOption('graffiti');
+    await page.locator('.theme-picker select').selectOption('mint');
     assert.equal(await page.evaluate(() => !!window.__speechCalls.at(-1).aborted), false);
-    await page.getByRole('button', { name: '自己表达', exact: true }).click();
+    await page.getByRole('button', { name: '自己表达', exact: true }).click(); await page.locator('.speech-edit summary').click();
     assert.equal(await page.evaluate(() => window.__speechCalls.at(-1).aborted), true);
     await page.evaluate(() => window.__late({ results: [{ isFinal: true, 0: { transcript: 'hello' } }] }));
     assert.deepEqual((await record(page)).session.draft.speech.transcripts, {});
@@ -124,7 +124,7 @@ try {
     assert.equal(await page.evaluate(() => window.__speechCalls.at(-1).aborted), true);
   });
   await scenario('free expression is editable and a different name is not marked wrong', async page => {
-    await page.getByRole('button', { name: '自己表达', exact: true }).click();
+    await page.getByRole('button', { name: '自己表达', exact: true }).click(); await page.locator('.speech-edit summary').click();
     await mic(page, 'self').click(); await page.evaluate(() => window.__emitSpeech('Hi. My name is Alex. Bye.'));
     await page.getByLabel('我说的内容（识别有误可修改）').waitFor();
     assert.equal(await page.locator('textarea').inputValue(), 'Hi. My name is Alex. Bye.');
@@ -137,7 +137,7 @@ try {
   await scenario('unsupported browser keeps an explicit self-expression path', async page => {
     assert.equal(await mic(page).isDisabled(), true);
     await page.getByText('当前浏览器不支持语音识别', { exact: false }).waitFor();
-    await page.getByRole('button', { name: '自己表达', exact: true }).click();
+    await page.getByRole('button', { name: '自己表达', exact: true }).click(); await page.locator('.speech-edit summary').click();
     assert.equal(await page.locator('textarea').isEditable(), true);
   }, { unsupported: true });
   await scenario('late local availability does not relabel an active remote recognition', async page => {

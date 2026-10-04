@@ -4,7 +4,7 @@ const SERVICE = 'http://127.0.0.1:18768';
 type ResultEvent = { results: ArrayLike<{ isFinal: boolean; 0: { transcript: string } }> };
 type Session = { ready: boolean; engine: string; token: string };
 
-export async function senseVoiceSession(): Promise<string | undefined> {
+export async function qwenSession(): Promise<string | undefined> {
   if (!window.isSecureContext || !navigator.mediaDevices?.getUserMedia || typeof MediaRecorder === 'undefined') return;
   if (window.location.origin === 'https://appassets.androidplatform.net') return;
   const controller = new AbortController();
@@ -13,14 +13,15 @@ export async function senseVoiceSession(): Promise<string | undefined> {
     const response = await fetch(`${SERVICE}/api/course-session`, { cache: 'no-store', signal: controller.signal });
     if (!response.ok) return;
     const session = await response.json() as Session;
-    if (session.ready && session.engine === 'sensevoice-asr-trial-v1' && typeof session.token === 'string') return session.token;
+    if (session.ready && session.engine === 'qwen3-asr-trial-v1' && typeof session.token === 'string') return session.token;
   } catch { /* The browser's existing speech service remains available. */ }
   finally { clearTimeout(timeout); }
 }
 
-export class LocalSenseVoiceRecognition {
+export class LocalQwenRecognition {
   lang = 'en-US'; continuous = false; interimResults = false; maxAlternatives = 1;
   processLocally = true;
+  readonly processingTimeoutMs = 30000;
   onstart: (() => void) | null = null;
   onaudiostart: (() => void) | null = null;
   onaudioend: (() => void) | null = null;

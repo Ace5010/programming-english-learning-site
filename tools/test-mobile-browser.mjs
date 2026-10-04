@@ -2,11 +2,14 @@ import assert from 'node:assert/strict';
 import { createRequire } from 'node:module';
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
+import { validateEarnedFixtures } from './helpers/earned-fixtures.mjs';
 import { vocabulary } from '../src/vocabulary.ts';
 import { adaptiveDailyLessons } from '../src/dailyPractice.ts';
 import { adaptiveProgrammingLessons } from '../src/programmingPractice.ts';
-import { DAILY_KEY, createDailyProgress, createDailySession, parseDailyProgress } from '../src/dailyProgress.ts';
-import { PROGRAMMING_COURSE_KEY } from '../src/programmingProgress.ts';
+import { DAILY_KEY, createDailyProgress, createDailySession, parseDailyProgress, updateDailyDraft, submitDailyAnswer } from '../src/dailyProgress.ts';
+import { PROGRAMMING_COURSE_KEY, mergeProgrammingCourse } from '../src/programmingProgress.ts';
+import { planAdaptiveSession, beginAdaptiveLearning, resolveAdaptiveLesson, recordAdaptiveAnswer, advanceAdaptiveSession, hasAdaptiveContent } from '../src/adaptiveLearning.ts';
+import { correctDraft } from './helpers/course-answer.mjs';
 import { REVIEW_KEY } from '../src/review.ts';
 const require = createRequire(import.meta.url);
 const { chromium } = require(process.env.CODEWORDS_PLAYWRIGHT || 'C:/Users/shenwuqiang/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
@@ -14,24 +17,52 @@ const baseURL = process.env.CODEWORDS_TEST_URL || 'http://localhost:5186/';
 assert.match(baseURL, /^https?:\/\/(localhost|127\.0\.0\.1)(:|\/)/);
 const output = path.resolve(process.env.CODEWORDS_ARTIFACT_DIR || 'artifacts/mobile-audit');
 await mkdir(output, { recursive: true });
-const earned = JSON.parse(await readFile('artifacts/adaptive-course/earned-fixtures.json', 'utf8'));
+const earned = validateEarnedFixtures(JSON.parse(await readFile(process.env.CODEWORDS_EARNED_FIXTURES || 'artifacts/adaptive-course/earned-fixtures.json', 'utf8')));
 const seed = { [DAILY_KEY]: earned.daily.course, [PROGRAMMING_COURSE_KEY]: earned.programming.course, [REVIEW_KEY]: earned.programming.review, 'codewords-favorites': '[1,2,3561]' };
 const configs = { daily: { key: DAILY_KEY, lessons: adaptiveDailyLessons }, programming: { key: PROGRAMMING_COURSE_KEY, lessons: adaptiveProgrammingLessons } };
 const results = [], failures = [], findings = [], errors = [];
 const browser = await chromium.launch({ channel: 'chrome', headless: true });
+// Earn the complete current programming scope through actual grading. The older
+// fixture covers only twelve words, so it cannot support order/write review.
+let taughtProgramming = createDailyProgress(), taughtWords = {}, taughtRounds = 0;
+const taughtAt = Date.now() - 86400000;
+while (hasAdaptiveContent(taughtProgramming, adaptiveProgrammingLessons)) {
+  assert.ok(++taughtRounds <= 12);
+  taughtProgramming.session = planAdaptiveSession(taughtProgramming, adaptiveProgrammingLessons, taughtAt, () => .37);
+  taughtProgramming = beginAdaptiveLearning(taughtProgramming, adaptiveProgrammingLessons, taughtAt);
+  while (taughtProgramming.session.stage === 'exercise') {
+    const lesson = resolveAdaptiveLesson(taughtProgramming.session, adaptiveProgrammingLessons);
+    const task = lesson.exercises.find(task => task.id === taughtProgramming.session.queue[taughtProgramming.session.index].exerciseId);
+    taughtProgramming.session = updateDailyDraft(taughtProgramming.session, correctDraft(task));
+    taughtProgramming = recordAdaptiveAnswer(submitDailyAnswer(taughtProgramming, lesson, {}, taughtAt), adaptiveProgrammingLessons, taughtAt);
+    taughtWords = mergeProgrammingCourse(taughtWords, taughtProgramming, adaptiveProgrammingLessons, taughtAt);
+    taughtProgramming = advanceAdaptiveSession(taughtProgramming, adaptiveProgrammingLessons, taughtAt);
+  }
+}
+const programmingCourse = JSON.stringify(taughtProgramming);
+const programmingWords = JSON.stringify({ version: 1, words: taughtWords });
+await writeFile(path.join(output, 'programming-review-fixture.json'), JSON.stringify({ course: programmingCourse, review: programmingWords, rounds: taughtRounds, note: 'Actual rule simulation, not a user record or proof of mastery.' }, null, 2));
 function fixture(section, kind) {
   const { key, lessons } = configs[section];
   const lesson = lessons.find(lesson => lesson.exercises.some(task => task.kind === kind));
   if (!lesson) return;
   const task = lesson.exercises.find(task => task.kind === kind), now = Date.now(), ids = task.knowledgeIds;
-  const progress = createDailyProgress();
-  progress.learning = { version: 1, turns: 0, rounds: 0, targets: Object.fromEntries(ids.map(id => [id, { introducedAt: now, confidence: 0, abilities: {}, lastSeenTurn: 0, lastFailureTurn: 0, signatures: [], transfer: false, readyAt: 0 }])) };
-  progress.session = { ...createDailySession({ ...lesson, exercises: [task] }, 'lesson', now), stage: 'exercise', adaptive: { version: 1, round: 1, focusIds: ids, newIds: ids, sourceLessonId: lesson.id, seed: 1, budget: 8 } };
+  // A real session can only be saved once the words its text needs are already
+  // taught, so the fixture introduces them too; otherwise the resume scope check
+  // would treat this synthetic record as a legacy out-of-scope question.
+  const known = [...new Set([...ids, ...(task.prerequisiteIds ?? [])])];
+  const retainedReview = section === 'programming';
+  const progress = retainedReview ? parseDailyProgress(programmingCourse, lessons).progress : createDailyProgress();
+  if (!retainedReview) progress.learning = { version: 1, turns: 0, rounds: 0, targets: Object.fromEntries(known.map(id => [id, { introducedAt: now, confidence: 0, abilities: {}, lastSeenTurn: 0, lastFailureTurn: 0, signatures: [], transfer: false, readyAt: 0 }])) };
+  progress.session = { ...createDailySession({ ...lesson, exercises: [task] }, retainedReview ? 'review' : 'lesson', now), stage: 'exercise',
+    ...(section === 'programming' ? { focused: true } : { adaptive: { version: 1, round: 1, focusIds: ids, newIds: ids, sourceLessonId: lesson.id, seed: 1, budget: 8 } }) };
   assert.equal(parseDailyProgress(JSON.stringify(progress), lessons).writable, true);
-  return { state: { [key]: JSON.stringify(progress), 'codewords-section': section }, task };
+  return { state: { [key]: JSON.stringify(progress), ...(retainedReview ? { [REVIEW_KEY]: programmingWords } : {}), 'codewords-section': section }, task, retainedReview };
 }
 async function open(state = seed, width = 360, height = 780) {
   const context = await browser.newContext({ viewport: { width, height }, isMobile: true, hasTouch: true, deviceScaleFactor: 1, reducedMotion: 'reduce' });
+  // Layout and keyboard emulation do not exercise a microphone or local ASR.
+  await context.route('http://127.0.0.1:18768/**', route => route.fulfill({ status: 200, contentType: 'application/json', body: JSON.stringify({ ready: false }) }));
   const page = await context.newPage(); page.setDefaultTimeout(6000);
   page.on('pageerror', error => errors.push(error.message));
   page.on('console', event => { if (event.type() === 'error' && !event.location().url.endsWith('/favicon.ico')) errors.push(event.text()); });
@@ -113,16 +144,20 @@ try {
   });
   for (const section of ['programming', 'daily']) for (const kind of ['choice', 'listen', 'order', 'fill', 'write', 'speak']) {
     const current = fixture(section, kind); if (!current) continue;
-    await scenario(`${section} ${kind} at narrow and keyboard-height viewports`, async () => {
+    await scenario(`${section}${section === 'programming' ? current.retainedReview ? ' review' : ' legacy' : ''} ${kind} at narrow and keyboard-height viewports`, async () => {
       const { page, context } = await open(current.state, 320, 640);
       try {
+        if (current.retainedReview) {
+          await go(page, '复习');
+          await page.locator('#programming-content').getByRole('button', { name: '继续', exact: true }).click();
+        }
         const root = page.locator(`#${section}-content`), question = root.locator('.daily-question');
         await question.waitFor();
         for (const theme of ['lagoon', 'pearl', 'sky', 'mint']) {
           await page.getByLabel('界面配色', { exact: true }).selectOption(theme);
           await check(page, `${section}/${kind}/${theme}`);
         }
-        if (kind === 'speak') await root.getByRole('button', { name: '自己表达', exact: true }).click();
+        if (kind === 'speak') { await root.getByRole('button', { name: '自己表达', exact: true }).click(); await root.locator('.speech-edit summary').click(); }
         const input = question.locator('input, textarea').first();
         if (await input.count()) {
           await input.fill('test');

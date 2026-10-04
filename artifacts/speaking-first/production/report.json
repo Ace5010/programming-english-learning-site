@@ -1,0 +1,743 @@
+{
+  "url": "http://localhost:5186/dist/",
+  "recognition": "Simulated browser events, not a real ASR service or human microphone.",
+  "sections": [
+    {
+      "section": "daily",
+      "events": [
+        {
+          "round": 1,
+          "id": "A1-01-01-p-bye-oral-repeat",
+          "activity": "speaking",
+          "oralMode": "repeat",
+          "result": {
+            "activity": "repeat",
+            "mode": "read",
+            "support": "full",
+            "source": "recognition",
+            "usedReference": true
+          }
+        },
+        {
+          "round": 1,
+          "id": "A1-01-01-p-hello-meaning",
+          "activity": "understanding"
+        },
+        {
+          "round": 1,
+          "id": "A1-01-01-p-hi-oral-repeat",
+          "activity": "speaking",
+          "oralMode": "repeat",
+          "result": {
+            "activity": "repeat",
+            "mode": "read",
+            "support": "full",
+            "source": "edited",
+            "usedReference": true
+          }
+        },
+        {
+          "round": 1,
+          "id": "A1-01-01-p-bye-write",
+          "activity": "input"
+        },
+        {
+          "round": 1,
+          "id": "A1-01-06-p-goodbye-oral-repeat",
+          "activity": "speaking",
+          "oralMode": "repeat",
+          "result": {
+            "activity": "repeat",
+            "mode": "self",
+            "support": "full",
+            "source": "typed",
+            "usedReference": true
+          }
+        },
+        {
+          "round": 1,
+          "id": "A1-01-01-p-hi-oral-recall",
+          "activity": "speaking",
+          "oralMode": "recall",
+          "result": {
+            "activity": "recall",
+            "mode": "read",
+            "support": "partial",
+            "source": "recognition",
+            "usedReference": false
+          }
+        },
+        {
+          "round": 1,
+          "id": "A1-01-01-r01",
+          "activity": "understanding"
+        },
+        {
+          "round": 1,
+          "id": "A1-01-01-p-bye-oral-answer",
+          "activity": "speaking",
+          "oralMode": "answer",
+          "result": {
+            "activity": "answer",
+            "mode": "self",
+            "support": "hidden",
+            "source": "recognition",
+            "usedReference": true
+          }
+        },
+        {
+          "round": 1,
+          "id": "A1-01-01-p-hello-oral-repeat",
+          "activity": "speaking",
+          "oralMode": "repeat",
+          "result": {
+            "activity": "repeat",
+            "mode": "read",
+            "support": "full",
+            "source": "recognition",
+            "usedReference": true
+          }
+        },
+        {
+          "round": 1,
+          "id": "A1-01-01-p-hi-expression",
+          "activity": "understanding"
+        },
+        {
+          "round": 1,
+          "id": "A1-01-06-e04",
+          "activity": "input"
+        },
+        {
+          "round": 1,
+          "id": "A1-01-01-p-hello-oral-answer",
+          "activity": "speaking",
+          "oralMode": "answer",
+          "result": {
+            "activity": "answer",
+            "mode": "self",
+            "support": "hidden",
+            "source": "recognition",
+            "usedReference": true
+          }
+        },
+        {
+          "round": 2,
+          "id": "A1-01-05-p-i-am-ben-oral-repeat",
+          "activity": "speaking",
+          "oralMode": "repeat",
+          "result": {
+            "activity": "repeat",
+            "mode": "read",
+            "support": "full",
+            "source": "skipped",
+            "usedReference": true
+          }
+        },
+        {
+          "round": 2,
+          "id": "A1-01-01-p-hi-listen",
+          "activity": "understanding"
+        },
+        {
+          "round": 2,
+          "id": "A1-01-01-p-hello-oral-repeat",
+          "activity": "speaking",
+          "oralMode": "repeat",
+          "result": {
+            "activity": "repeat",
+            "mode": "read",
+            "support": "full",
+            "source": "recognition",
+            "usedReference": true
+          }
+        },
+        {
+          "round": 2,
+          "id": "A1-01-02-p-i-am-ben-listen-gap",
+          "activity": "input"
+        },
+        {
+          "round": 2,
+          "id": "A1-01-06-p-goodbye-oral-repeat",
+          "activity": "speaking",
+          "oralMode": "repeat",
+          "result": {
+            "activity": "repeat",
+            "mode": "read",
+            "support": "full",
+            "source": "recognition",
+            "usedReference": true
+          }
+        },
+        {
+          "round": 2,
+          "id": "A1-01-01-p-hi-oral-answer",
+          "activity": "speaking",
+          "oralMode": "answer",
+          "result": {
+            "activity": "answer",
+            "mode": "self",
+            "support": "hidden",
+            "source": "recognition",
+            "usedReference": false
+          }
+        },
+        {
+          "round": 2,
+          "id": "A1-01-01-p-bye-expression",
+          "activity": "understanding"
+        },
+        {
+          "round": 2,
+          "id": "A1-01-06-p-goodbye-oral-recall",
+          "activity": "speaking",
+          "oralMode": "recall",
+          "result": {
+            "activity": "recall",
+            "mode": "read",
+            "support": "partial",
+            "source": "recognition",
+            "usedReference": false
+          }
+        },
+        {
+          "round": 2,
+          "id": "A1-01-01-p-hello-oral-recall",
+          "activity": "speaking",
+          "oralMode": "recall",
+          "result": {
+            "activity": "recall",
+            "mode": "read",
+            "support": "partial",
+            "source": "recognition",
+            "usedReference": false
+          }
+        },
+        {
+          "round": 2,
+          "id": "A1-01-05-p-i-am-ben-expression",
+          "activity": "understanding"
+        },
+        {
+          "round": 2,
+          "id": "A1-01-01-p-goodbye-write",
+          "activity": "input"
+        },
+        {
+          "round": 2,
+          "id": "A1-01-01-p-hi-oral-repeat",
+          "activity": "speaking",
+          "oralMode": "repeat",
+          "result": {
+            "activity": "repeat",
+            "mode": "read",
+            "support": "full",
+            "source": "recognition",
+            "usedReference": true
+          }
+        },
+        {
+          "round": 2,
+          "id": "A1-01-01-p-hello-oral-answer",
+          "activity": "speaking",
+          "oralMode": "answer",
+          "result": {
+            "activity": "answer",
+            "mode": "self",
+            "support": "hidden",
+            "source": "recognition",
+            "usedReference": true
+          }
+        },
+        {
+          "round": 2,
+          "id": "A1-01-01-e01",
+          "activity": "understanding"
+        },
+        {
+          "round": 2,
+          "id": "A1-01-06-p-goodbye-oral-answer",
+          "activity": "speaking",
+          "oralMode": "answer",
+          "result": {
+            "activity": "answer",
+            "mode": "self",
+            "support": "hidden",
+            "source": "recognition",
+            "usedReference": true
+          }
+        }
+      ],
+      "manual": 1,
+      "skipped": 1,
+      "edited": 1,
+      "modeSwitch": {
+        "id": "A1-01-01-p-bye-oral-answer",
+        "round": 0
+      },
+      "simulatedRecognition": 14,
+      "audio": [
+        {
+          "src": "http://localhost:5186/dist/audio/feedback/correct.mp3",
+          "rate": 1
+        },
+        {
+          "src": "http://localhost:5186/dist/audio/feedback/correct.mp3",
+          "rate": 1
+        },
+        {
+          "src": "http://localhost:5186/dist/audio/daily/aria/goodbye.mp3?v=Goodbye!",
+          "rate": 1
+        },
+        {
+          "src": "http://localhost:5186/dist/audio/daily/aria/hi.mp3?v=Hi!",
+          "rate": 1
+        },
+        {
+          "src": "http://localhost:5186/dist/audio/feedback/correct.mp3",
+          "rate": 1
+        },
+        {
+          "src": "http://localhost:5186/dist/audio/daily/aria/hello.mp3?v=Hello!",
+          "rate": 1
+        },
+        {
+          "src": "http://localhost:5186/dist/audio/feedback/complete.mp3",
+          "rate": 1
+        },
+        {
+          "src": "http://localhost:5186/dist/audio/daily/aria/hi.mp3?v=Hi!",
+          "rate": 1
+        },
+        {
+          "src": "http://localhost:5186/dist/audio/feedback/correct.mp3",
+          "rate": 1
+        },
+        {
+          "src": "http://localhost:5186/dist/audio/daily/aria/hello.mp3?v=Hello!",
+          "rate": 1
+        },
+        {
+          "src": "http://localhost:5186/dist/audio/aria/word-1349.mp3",
+          "rate": 1
+        },
+        {
+          "src": "http://localhost:5186/dist/audio/daily/aria/i-am-ben.mp3?v=I%20am%20Ben.",
+          "rate": 1
+        },
+        {
+          "src": "http://localhost:5186/dist/audio/feedback/correct.mp3",
+          "rate": 1
+        },
+        {
+          "src": "http://localhost:5186/dist/audio/daily/aria/hello.mp3?v=Hello!",
+          "rate": 1
+        },
+        {
+          "src": "http://localhost:5186/dist/audio/aria/word-3023.mp3",
+          "rate": 1
+        },
+        {
+          "src": "http://localhost:5186/dist/audio/daily/aria/goodbye.mp3?v=Goodbye!",
+          "rate": 1
+        },
+        {
+          "src": "http://localhost:5186/dist/audio/feedback/complete.mp3",
+          "rate": 1
+        }
+      ]
+    },
+    {
+      "section": "programming",
+      "events": [
+        {
+          "round": 1,
+          "id": "P1-01-06-p-1-oral-repeat",
+          "activity": "speaking",
+          "oralMode": "repeat",
+          "result": {
+            "activity": "repeat",
+            "mode": "read",
+            "support": "full",
+            "source": "recognition",
+            "usedReference": true
+          }
+        },
+        {
+          "round": 1,
+          "id": "P1-01-01-p-2801-word",
+          "activity": "understanding"
+        },
+        {
+          "round": 1,
+          "id": "P1-01-01-p-1-oral-answer",
+          "activity": "speaking",
+          "oralMode": "answer",
+          "result": {
+            "activity": "answer",
+            "mode": "self",
+            "support": "hidden",
+            "source": "recognition",
+            "usedReference": true
+          }
+        },
+        {
+          "round": 1,
+          "id": "P1-01-01-p-2801-free-gap",
+          "activity": "input"
+        },
+        {
+          "round": 1,
+          "id": "P1-01-01-p-20-order-blocks",
+          "activity": "understanding"
+        },
+        {
+          "round": 1,
+          "id": "P1-01-01-p-3561-oral-answer",
+          "activity": "speaking",
+          "oralMode": "answer",
+          "result": {
+            "activity": "answer",
+            "mode": "self",
+            "support": "hidden",
+            "source": "typed",
+            "usedReference": false
+          }
+        },
+        {
+          "round": 1,
+          "id": "P1-01-01-p-1-oral-recall",
+          "activity": "speaking",
+          "oralMode": "recall",
+          "result": {
+            "activity": "recall",
+            "mode": "read",
+            "support": "hidden",
+            "source": "recognition",
+            "usedReference": false
+          }
+        },
+        {
+          "round": 1,
+          "id": "P1-01-01-p-20-meaning",
+          "activity": "understanding"
+        },
+        {
+          "round": 1,
+          "id": "P1-01-01-p-2801-oral-repeat",
+          "activity": "speaking",
+          "oralMode": "repeat",
+          "result": {
+            "activity": "repeat",
+            "mode": "read",
+            "support": "full",
+            "source": "edited",
+            "usedReference": true
+          }
+        },
+        {
+          "round": 1,
+          "id": "P1-01-01-p-3561-word",
+          "activity": "understanding"
+        },
+        {
+          "round": 1,
+          "id": "P1-01-06-p-1-free-gap",
+          "activity": "input"
+        },
+        {
+          "round": 1,
+          "id": "P1-01-01-p-20-oral-repeat",
+          "activity": "speaking",
+          "oralMode": "repeat",
+          "result": {
+            "activity": "repeat",
+            "mode": "read",
+            "support": "full",
+            "source": "recognition",
+            "usedReference": true
+          }
+        },
+        {
+          "round": 2,
+          "id": "P1-01-01-p-3561-oral-repeat",
+          "activity": "speaking",
+          "oralMode": "repeat",
+          "result": {
+            "activity": "repeat",
+            "mode": "read",
+            "support": "full",
+            "source": "skipped",
+            "usedReference": true
+          }
+        },
+        {
+          "round": 2,
+          "id": "P1-01-01-p-1-word",
+          "activity": "understanding"
+        },
+        {
+          "round": 2,
+          "id": "P1-01-01-p-1-oral-recall",
+          "activity": "speaking",
+          "oralMode": "recall",
+          "result": {
+            "activity": "recall",
+            "mode": "read",
+            "support": "hidden",
+            "source": "recognition",
+            "usedReference": false
+          }
+        },
+        {
+          "round": 2,
+          "id": "P1-01-01-p-2801-listen-gap",
+          "activity": "input"
+        },
+        {
+          "round": 2,
+          "id": "P1-01-01-p-3561-match-audio",
+          "activity": "understanding"
+        },
+        {
+          "round": 2,
+          "id": "P1-01-06-p-20-oral-repeat",
+          "activity": "speaking",
+          "oralMode": "repeat",
+          "result": {
+            "activity": "repeat",
+            "mode": "read",
+            "support": "full",
+            "source": "recognition",
+            "usedReference": true
+          }
+        },
+        {
+          "round": 2,
+          "id": "P1-01-01-p-2801-oral-repeat",
+          "activity": "speaking",
+          "oralMode": "repeat",
+          "result": {
+            "activity": "repeat",
+            "mode": "read",
+            "support": "full",
+            "source": "recognition",
+            "usedReference": true
+          }
+        },
+        {
+          "round": 2,
+          "id": "P1-01-01-e05",
+          "activity": "understanding"
+        },
+        {
+          "round": 2,
+          "id": "P1-01-01-p-2801-oral-recall",
+          "activity": "speaking",
+          "oralMode": "recall",
+          "result": {
+            "activity": "recall",
+            "mode": "read",
+            "support": "hidden",
+            "source": "recognition",
+            "usedReference": false
+          }
+        },
+        {
+          "round": 2,
+          "id": "P1-01-01-p-20-cloze",
+          "activity": "understanding"
+        },
+        {
+          "round": 2,
+          "id": "P1-01-01-p-3561-listen-gap",
+          "activity": "input"
+        },
+        {
+          "round": 2,
+          "id": "P1-01-01-p-1-oral-answer",
+          "activity": "speaking",
+          "oralMode": "answer",
+          "result": {
+            "activity": "answer",
+            "mode": "self",
+            "support": "hidden",
+            "source": "recognition",
+            "usedReference": false
+          }
+        },
+        {
+          "round": 2,
+          "id": "P1-01-01-e04",
+          "activity": "understanding"
+        },
+        {
+          "round": 2,
+          "id": "P1-01-01-p-1-oral-repeat",
+          "activity": "speaking",
+          "oralMode": "repeat",
+          "result": {
+            "activity": "repeat",
+            "mode": "read",
+            "support": "full",
+            "source": "recognition",
+            "usedReference": true
+          }
+        },
+        {
+          "round": 2,
+          "id": "P1-01-06-p-20-oral-answer",
+          "activity": "speaking",
+          "oralMode": "answer",
+          "result": {
+            "activity": "answer",
+            "mode": "self",
+            "support": "hidden",
+            "source": "recognition",
+            "usedReference": false
+          }
+        },
+        {
+          "round": 2,
+          "id": "P1-01-01-p-3561-sentence",
+          "activity": "understanding"
+        }
+      ],
+      "manual": 1,
+      "skipped": 1,
+      "edited": 1,
+      "modeSwitch": {
+        "id": "P1-01-01-p-1-oral-answer",
+        "round": 0
+      },
+      "simulatedRecognition": 12,
+      "audio": [
+        {
+          "src": "http://localhost:5186/dist/audio/aria/word-2801.mp3",
+          "rate": 1
+        },
+        {
+          "src": "http://localhost:5186/dist/audio/aria/example-1.mp3?v=Open%20this%20repository.",
+          "rate": 1
+        },
+        {
+          "src": "http://localhost:5186/dist/audio/feedback/correct.mp3",
+          "rate": 1
+        },
+        {
+          "src": "http://localhost:5186/dist/audio/aria/word-2892.mp3",
+          "rate": 1
+        },
+        {
+          "src": "http://localhost:5186/dist/audio/aria/word-20.mp3",
+          "rate": 1
+        },
+        {
+          "src": "http://localhost:5186/dist/audio/aria/word-1723.mp3",
+          "rate": 1
+        },
+        {
+          "src": "http://localhost:5186/dist/audio/feedback/correct.mp3",
+          "rate": 1
+        },
+        {
+          "src": "http://localhost:5186/dist/audio/feedback/correct.mp3",
+          "rate": 1
+        },
+        {
+          "src": "http://localhost:5186/dist/audio/feedback/complete.mp3",
+          "rate": 1
+        },
+        {
+          "src": "http://localhost:5186/dist/audio/aria/word-1.mp3",
+          "rate": 1
+        },
+        {
+          "src": "http://localhost:5186/dist/audio/feedback/correct.mp3",
+          "rate": 1
+        },
+        {
+          "src": "http://localhost:5186/dist/audio/aria/word-3561.mp3?v=code",
+          "rate": 1
+        },
+        {
+          "src": "http://localhost:5186/dist/audio/aria/word-1.mp3?v=repository",
+          "rate": 1
+        },
+        {
+          "src": "http://localhost:5186/dist/audio/aria/word-20.mp3?v=readme",
+          "rate": 1
+        },
+        {
+          "src": "http://localhost:5186/dist/audio/feedback/correct.mp3",
+          "rate": 1
+        },
+        {
+          "src": "http://localhost:5186/dist/audio/aria/word-20.mp3",
+          "rate": 1
+        },
+        {
+          "src": "http://localhost:5186/dist/audio/feedback/correct.mp3",
+          "rate": 1
+        },
+        {
+          "src": "http://localhost:5186/dist/audio/aria/example-1.mp3?v=Open%20this%20repository.",
+          "rate": 1
+        },
+        {
+          "src": "http://localhost:5186/dist/audio/feedback/correct.mp3",
+          "rate": 1
+        },
+        {
+          "src": "http://localhost:5186/dist/audio/aria/example-20.mp3?v=Read%20the%20README%20for%20help.",
+          "rate": 1
+        },
+        {
+          "src": "http://localhost:5186/dist/audio/feedback/correct.mp3",
+          "rate": 1
+        },
+        {
+          "src": "http://localhost:5186/dist/audio/feedback/complete.mp3",
+          "rate": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "unintroducedHelper": {
+    "sentence": "Use checkout to change branches.",
+    "formalTargets": [
+      "word-11"
+    ],
+    "support": [
+      {
+        "en": "Use",
+        "zh": "使用"
+      },
+      {
+        "en": "checkout",
+        "zh": "切换分支或版本"
+      },
+      {
+        "en": "to",
+        "zh": "到／向（也用于动词前）"
+      },
+      {
+        "en": "change",
+        "zh": "更改；修改；改变；交换"
+      },
+      {
+        "en": "branches",
+        "zh": "分支"
+      }
+    ],
+    "result": {
+      "activity": "repeat",
+      "mode": "read",
+      "support": "full",
+      "source": "recognition",
+      "usedReference": true
+    }
+  }
+}

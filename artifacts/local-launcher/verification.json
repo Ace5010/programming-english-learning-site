@@ -1,0 +1,39 @@
+{
+  "date": "2026-10-04",
+  "desktop": "C:\\Users\\shenwuqiang\\Desktop\\英语学习（本地）.lnk",
+  "rootEntry": "D:\\coding项目\\交互式英语学习网站\\启动英语学习.cmd",
+  "script": "D:\\coding项目\\交互式英语学习网站\\scripts\\Open-LocalSite.ps1",
+  "url": "http://localhost:5186/",
+  "defaultPid": 16264,
+  "sourceSHA256": "46503db752edc39a7fa26dc1827ff4fd9f9ac5f3e1fdb6eda515f55af5b92180",
+  "checks": [
+    "PowerShell syntax",
+    "isolated real Vite cold startup",
+    "concurrent startup",
+    "repeat reuses same PID",
+    "local audio available",
+    "foreign lookalike site rejected",
+    "conflicting process preserved",
+    "default website PID preserved",
+    "default CheckOnly",
+    "production build",
+    "resource integrity"
+  ],
+  "browser": {
+    "url": "http://localhost:5186/",
+    "existingSessionDisplayed": true,
+    "tool": "computer-use browser API",
+    "learningActions": 0,
+    "browser": "Chrome",
+    "title": "编程英语学习网站 · CodeWords"
+  },
+  "shortcut": {
+    "target": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+    "arguments": "-NoProfile -ExecutionPolicy Bypass -WindowStyle Hidden -File \"D:\\coding项目\\交互式英语学习网站\\scripts\\Open-LocalSite.ps1\"",
+    "directory": "D:\\coding项目\\交互式英语学习网站",
+    "created": true
+  },
+  "limitation": "Direct shortcut execution was rejected by exec tool policy before it ran. Automatic end-to-end shortcut-to-Chrome acceptance remains incomplete; Chrome page verified separately.",
+  "committed": false,
+  "published": false
+}

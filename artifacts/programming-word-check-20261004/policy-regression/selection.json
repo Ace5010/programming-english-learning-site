@@ -1,0 +1,2286 @@
+[
+  {
+    "section": "daily",
+    "seed": 0.01,
+    "rounds": [
+      {
+        "round": 1,
+        "distribution": {
+          "speaking": 7,
+          "understanding": 3,
+          "input": 2
+        },
+        "focus": [
+          "hello",
+          "hi",
+          "goodbye",
+          "bye"
+        ],
+        "admitted": 0
+      },
+      {
+        "round": 2,
+        "distribution": {
+          "speaking": 9,
+          "understanding": 4,
+          "input": 2
+        },
+        "focus": [
+          "hi",
+          "bye",
+          "goodbye",
+          "i-am-ben"
+        ],
+        "admitted": 0
+      },
+      {
+        "round": 3,
+        "distribution": {
+          "speaking": 8,
+          "understanding": 4,
+          "input": 2
+        },
+        "focus": [
+          "hi",
+          "bye",
+          "hello",
+          "i-am-mia"
+        ],
+        "admitted": 1
+      },
+      {
+        "round": 4,
+        "distribution": {
+          "speaking": 9,
+          "understanding": 4,
+          "input": 2
+        },
+        "focus": [
+          "hi",
+          "bye",
+          "i-am-mia",
+          "im-ben"
+        ],
+        "admitted": 1
+      },
+      {
+        "round": 5,
+        "distribution": {
+          "speaking": 9,
+          "understanding": 4,
+          "input": 2
+        },
+        "focus": [
+          "bye",
+          "im-ben",
+          "i-am-mia",
+          "im-mia"
+        ],
+        "admitted": 1
+      },
+      {
+        "round": 6,
+        "distribution": {
+          "speaking": 8,
+          "understanding": 3,
+          "input": 2
+        },
+        "focus": [
+          "i-am-mia",
+          "im-mia",
+          "hi",
+          "whats-your-name"
+        ],
+        "admitted": 2
+      },
+      {
+        "round": 7,
+        "distribution": {
+          "speaking": 8,
+          "understanding": 3,
+          "input": 2
+        },
+        "focus": [
+          "i-am-mia",
+          "im-mia",
+          "im-ben",
+          "my-name-is-ben"
+        ],
+        "admitted": 4
+      },
+      {
+        "round": 8,
+        "distribution": {
+          "speaking": 8,
+          "understanding": 4,
+          "input": 2
+        },
+        "focus": [
+          "my-name-is-ben",
+          "i-am-mia",
+          "bye",
+          "my-name-is-mia"
+        ],
+        "admitted": 5
+      },
+      {
+        "round": 9,
+        "distribution": {
+          "speaking": 9,
+          "understanding": 4,
+          "input": 2
+        },
+        "focus": [
+          "my-name-is-mia",
+          "my-name-is-ben",
+          "i-am-mia",
+          "are-you-mia"
+        ],
+        "admitted": 5
+      },
+      {
+        "round": 10,
+        "distribution": {
+          "speaking": 8,
+          "understanding": 4,
+          "input": 2
+        },
+        "focus": [
+          "my-name-is-mia",
+          "are-you-mia",
+          "i-am-mia",
+          "are-you-ben"
+        ],
+        "admitted": 7
+      },
+      {
+        "round": 11,
+        "distribution": {
+          "speaking": 8,
+          "understanding": 4,
+          "input": 2
+        },
+        "focus": [
+          "my-name-is-mia",
+          "are-you-ben",
+          "are-you-mia",
+          "yes-i-am"
+        ],
+        "admitted": 8
+      },
+      {
+        "round": 12,
+        "distribution": {
+          "speaking": 9,
+          "understanding": 4,
+          "input": 2
+        },
+        "focus": [
+          "yes-i-am",
+          "my-name-is-mia",
+          "are-you-ben",
+          "no-im-ben"
+        ],
+        "admitted": 8
+      }
+    ]
+  },
+  {
+    "section": "daily",
+    "seed": 0.19,
+    "rounds": [
+      {
+        "round": 1,
+        "distribution": {
+          "speaking": 7,
+          "understanding": 3,
+          "input": 2
+        },
+        "focus": [
+          "hello",
+          "hi",
+          "goodbye",
+          "bye"
+        ],
+        "admitted": 0
+      },
+      {
+        "round": 2,
+        "distribution": {
+          "speaking": 9,
+          "understanding": 4,
+          "input": 2
+        },
+        "focus": [
+          "bye",
+          "hi",
+          "goodbye",
+          "i-am-ben"
+        ],
+        "admitted": 0
+      },
+      {
+        "round": 3,
+        "distribution": {
+          "speaking": 10,
+          "understanding": 4,
+          "input": 2
+        },
+        "focus": [
+          "hi",
+          "bye",
+          "goodbye",
+          "i-am-ben"
+        ],
+        "admitted": 0
+      },
+      {
+        "round": 4,
+        "distribution": {
+          "speaking": 8,
+          "understanding": 4,
+          "input": 2
+        },
+        "focus": [
+          "hi",
+          "bye",
+          "goodbye",
+          "i-am-mia"
+        ],
+        "admitted": 1
+      },
+      {
+        "round": 5,
+        "distribution": {
+          "speaking": 9,
+          "understanding": 4,
+          "input": 2
+        },
+        "focus": [
+          "i-am-mia",
+          "hi",
+          "bye",
+          "im-ben"
+        ],
+        "admitted": 1
+      },
+      {
+        "round": 6,
+        "distribution": {
+          "speaking": 8,
+          "understanding": 4,
+          "input": 2
+        },
+        "focus": [
+          "im-ben",
+          "hi",
+          "i-am-mia",
+          "im-mia"
+        ],
+        "admitted": 1
+      },
+      {
+        "round": 7,
+        "distribution": {
+          "speaking": 8,
+          "understanding": 4,
+          "input": 2
+        },
+        "focus": [
+          "im-ben",
+          "hi",
+          "im-mia",
+          "whats-your-name"
+        ],
+        "admitted": 1
+      },
+      {
+        "round": 8,
+        "distribution": {
+          "speaking": 8,
+          "understanding": 4,
+          "input": 2
+        },
+        "focus": [
+          "im-ben",
+          "whats-your-name",
+          "hi",
+          "my-name-is-ben"
+        ],
+        "admitted": 1
+      },
+      {
+        "round": 9,
+        "distribution": {
+          "speaking": 9,
+          "understanding": 4,
+          "input": 2
+        },
+        "focus": [
+          "im-ben",
+          "my-name-is-ben",
+          "whats-your-name",
+          "my-name-is-mia"
+        ],
+        "admitted": 1
+      },
+      {
+        "round": 10,
+        "distribution": {
+          "speaking": 8,
+          "understanding": 4,
+          "input": 2
+        },
+        "focus": [
+          "my-name-is-mia",
+          "whats-your-name",
+          "im-ben",
+          "are-you-mia"
+        ],
+        "admitted": 2
+      },
+      {
+        "round": 11,
+        "distribution": {
+          "speaking": 8,
+          "understanding": 4,
+          "input": 2
+        },
+        "focus": [
+          "are-you-mia",
+          "my-name-is-mia",
+          "whats-your-name",
+          "are-you-ben"
+        ],
+        "admitted": 4
+      },
+      {
+        "round": 12,
+        "distribution": {
+          "speaking": 8,
+          "understanding": 4,
+          "input": 2
+        },
+        "focus": [
+          "are-you-ben",
+          "are-you-mia",
+          "my-name-is-mia",
+          "yes-i-am"
+        ],
+        "admitted": 4
+      }
+    ]
+  },
+  {
+    "section": "daily",
+    "seed": 0.37,
+    "rounds": [
+      {
+        "round": 1,
+        "distribution": {
+          "speaking": 7,
+          "understanding": 3,
+          "input": 2
+        },
+        "focus": [
+          "hello",
+          "hi",
+          "goodbye",
+          "bye"
+        ],
+        "admitted": 0
+      },
+      {
+        "round": 2,
+        "distribution": {
+          "speaking": 9,
+          "understanding": 4,
+          "input": 2
+        },
+        "focus": [
+          "hello",
+          "goodbye",
+          "hi",
+          "i-am-ben"
+        ],
+        "admitted": 0
+      },
+      {
+        "round": 3,
+        "distribution": {
+          "speaking": 9,
+          "understanding": 4,
+          "input": 2
+        },
+        "focus": [
+          "hello",
+          "goodbye",
+          "hi",
+          "i-am-mia"
+        ],
+        "admitted": 0
+      },
+      {
+        "round": 4,
+        "distribution": {
+          "speaking": 8,
+          "understanding": 4,
+          "input": 2
+        },
+        "focus": [
+          "goodbye",
+          "hi",
+          "i-am-mia",
+          "im-ben"
+        ],
+        "admitted": 1
+      },
+      {
+        "round": 5,
+        "distribution": {
+          "speaking": 8,
+          "understanding": 3,
+          "input": 2
+        },
+        "focus": [
+          "im-ben",
+          "goodbye",
+          "i-am-ben",
+          "im-mia"
+        ],
+        "admitted": 2
+      },
+      {
+        "round": 6,
+        "distribution": {
+          "speaking": 8,
+          "understanding": 3,
+          "input": 2
+        },
+        "focus": [
+          "im-mia",
+          "im-ben",
+          "bye",
+          "whats-your-name"
+        ],
+        "admitted": 3
+      },
+      {
+        "round": 7,
+        "distribution": {
+          "speaking": 8,
+          "understanding": 3,
+          "input": 2
+        },
+        "focus": [
+          "whats-your-name",
+          "im-mia",
+          "hi",
+          "my-name-is-ben"
+        ],
+        "admitted": 3
+      },
+      {
+        "round": 8,
+        "distribution": {
+          "speaking": 8,
+          "understanding": 4,
+          "input": 2
+        },
+        "focus": [
+          "whats-your-name",
+          "my-name-is-ben",
+          "hi",
+          "my-name-is-mia"
+        ],
+        "admitted": 3
+      },
+      {
+        "round": 9,
+        "distribution": {
+          "speaking": 8,
+          "understanding": 4,
+          "input": 2
+        },
+        "focus": [
+          "whats-your-name",
+          "my-name-is-mia",
+          "my-name-is-ben",
+          "are-you-mia"
+        ],
+        "admitted": 3
+      },
+      {
+        "round": 10,
+        "distribution": {
+          "speaking": 8,
+          "understanding": 3,
+          "input": 2
+        },
+        "focus": [
+          "my-name-is-mia",
+          "are-you-mia",
+          "whats-your-name",
+          "are-you-ben"
+        ],
+        "admitted": 4
+      },
+      {
+        "round": 11,
+        "distribution": {
+          "speaking": 8,
+          "understanding": 3,
+          "input": 2
+        },
+        "focus": [
+          "are-you-ben",
+          "hi",
+          "my-name-is-mia",
+          "yes-i-am"
+        ],
+        "admitted": 6
+      },
+      {
+        "round": 12,
+        "distribution": {
+          "speaking": 8,
+          "understanding": 3,
+          "input": 2
+        },
+        "focus": [
+          "yes-i-am",
+          "are-you-ben",
+          "hi",
+          "no-im-ben"
+        ],
+        "admitted": 8
+      }
+    ]
+  },
+  {
+    "section": "daily",
+    "seed": 0.51,
+    "rounds": [
+      {
+        "round": 1,
+        "distribution": {
+          "speaking": 7,
+          "understanding": 3,
+          "input": 2
+        },
+        "focus": [
+          "hello",
+          "hi",
+          "goodbye",
+          "bye"
+        ],
+        "admitted": 0
+      },
+      {
+        "round": 2,
+        "distribution": {
+          "speaking": 10,
+          "understanding": 4,
+          "input": 2
+        },
+        "focus": [
+          "hello",
+          "goodbye",
+          "hi",
+          "bye"
+        ],
+        "admitted": 0
+      },
+      {
+        "round": 3,
+        "distribution": {
+          "speaking": 8,
+          "understanding": 4,
+          "input": 2
+        },
+        "focus": [
+          "hello",
+          "goodbye",
+          "hi",
+          "i-am-ben"
+        ],
+        "admitted": 0
+      },
+      {
+        "round": 4,
+        "distribution": {
+          "speaking": 8,
+          "understanding": 3,
+          "input": 2
+        },
+        "focus": [
+          "i-am-ben",
+          "goodbye",
+          "bye",
+          "i-am-mia"
+        ],
+        "admitted": 1
+      },
+      {
+        "round": 5,
+        "distribution": {
+          "speaking": 8,
+          "understanding": 3,
+          "input": 2
+        },
+        "focus": [
+          "i-am-mia",
+          "bye",
+          "i-am-ben",
+          "im-ben"
+        ],
+        "admitted": 2
+      },
+      {
+        "round": 6,
+        "distribution": {
+          "speaking": 8,
+          "understanding": 4,
+          "input": 2
+        },
+        "focus": [
+          "im-ben",
+          "i-am-mia",
+          "hi",
+          "im-mia"
+        ],
+        "admitted": 3
+      },
+      {
+        "round": 7,
+        "distribution": {
+          "speaking": 8,
+          "understanding": 4,
+          "input": 2
+        },
+        "focus": [
+          "im-ben",
+          "im-mia",
+          "bye",
+          "whats-your-name"
+        ],
+        "admitted": 3
+      },
+      {
+        "round": 8,
+        "distribution": {
+          "speaking": 9,
+          "understanding": 4,
+          "input": 2
+        },
+        "focus": [
+          "whats-your-name",
+          "im-ben",
+          "im-mia",
+          "my-name-is-ben"
+        ],
+        "admitted": 4
+      },
+      {
+        "round": 9,
+        "distribution": {
+          "speaking": 8,
+          "understanding": 4,
+          "input": 2
+        },
+        "focus": [
+          "whats-your-name",
+          "my-name-is-ben",
+          "im-mia",
+          "my-name-is-mia"
+        ],
+        "admitted": 5
+      },
+      {
+        "round": 10,
+        "distribution": {
+          "speaking": 8,
+          "understanding": 3,
+          "input": 2
+        },
+        "focus": [
+          "my-name-is-mia",
+          "whats-your-name",
+          "im-mia",
+          "are-you-mia"
+        ],
+        "admitted": 5
+      },
+      {
+        "round": 11,
+        "distribution": {
+          "speaking": 8,
+          "understanding": 4,
+          "input": 2
+        },
+        "focus": [
+          "are-you-mia",
+          "my-name-is-mia",
+          "i-am-mia",
+          "are-you-ben"
+        ],
+        "admitted": 6
+      },
+      {
+        "round": 12,
+        "distribution": {
+          "speaking": 9,
+          "understanding": 4,
+          "input": 2
+        },
+        "focus": [
+          "are-you-mia",
+          "my-name-is-mia",
+          "are-you-ben",
+          "yes-i-am"
+        ],
+        "admitted": 7
+      }
+    ]
+  },
+  {
+    "section": "daily",
+    "seed": 0.79,
+    "rounds": [
+      {
+        "round": 1,
+        "distribution": {
+          "speaking": 7,
+          "understanding": 3,
+          "input": 2
+        },
+        "focus": [
+          "hello",
+          "hi",
+          "goodbye",
+          "bye"
+        ],
+        "admitted": 0
+      },
+      {
+        "round": 2,
+        "distribution": {
+          "speaking": 9,
+          "understanding": 4,
+          "input": 2
+        },
+        "focus": [
+          "hi",
+          "bye",
+          "hello",
+          "i-am-ben"
+        ],
+        "admitted": 0
+      },
+      {
+        "round": 3,
+        "distribution": {
+          "speaking": 9,
+          "understanding": 4,
+          "input": 2
+        },
+        "focus": [
+          "hi",
+          "bye",
+          "hello",
+          "i-am-mia"
+        ],
+        "admitted": 1
+      },
+      {
+        "round": 4,
+        "distribution": {
+          "speaking": 10,
+          "understanding": 4,
+          "input": 2
+        },
+        "focus": [
+          "hi",
+          "bye",
+          "hello",
+          "i-am-mia"
+        ],
+        "admitted": 2
+      },
+      {
+        "round": 5,
+        "distribution": {
+          "speaking": 8,
+          "understanding": 4,
+          "input": 2
+        },
+        "focus": [
+          "hi",
+          "hello",
+          "i-am-mia",
+          "im-ben"
+        ],
+        "admitted": 2
+      },
+      {
+        "round": 6,
+        "distribution": {
+          "speaking": 9,
+          "understanding": 4,
+          "input": 2
+        },
+        "focus": [
+          "im-ben",
+          "hi",
+          "hello",
+          "im-mia"
+        ],
+        "admitted": 2
+      },
+      {
+        "round": 7,
+        "distribution": {
+          "speaking": 8,
+          "understanding": 4,
+          "input": 2
+        },
+        "focus": [
+          "im-ben",
+          "hi",
+          "hello",
+          "whats-your-name"
+        ],
+        "admitted": 2
+      },
+      {
+        "round": 8,
+        "distribution": {
+          "speaking": 9,
+          "understanding": 4,
+          "input": 2
+        },
+        "focus": [
+          "hi",
+          "im-ben",
+          "whats-your-name",
+          "my-name-is-ben"
+        ],
+        "admitted": 2
+      },
+      {
+        "round": 9,
+        "distribution": {
+          "speaking": 8,
+          "understanding": 4,
+          "input": 2
+        },
+        "focus": [
+          "hi",
+          "whats-your-name",
+          "im-ben",
+          "my-name-is-mia"
+        ],
+        "admitted": 2
+      },
+      {
+        "round": 10,
+        "distribution": {
+          "speaking": 8,
+          "understanding": 3,
+          "input": 2
+        },
+        "focus": [
+          "whats-your-name",
+          "hi",
+          "hello",
+          "are-you-mia"
+        ],
+        "admitted": 3
+      },
+      {
+        "round": 11,
+        "distribution": {
+          "speaking": 7,
+          "understanding": 3,
+          "input": 2
+        },
+        "focus": [
+          "are-you-mia",
+          "hi",
+          "im-ben",
+          "are-you-ben"
+        ],
+        "admitted": 5
+      },
+      {
+        "round": 12,
+        "distribution": {
+          "speaking": 8,
+          "understanding": 3,
+          "input": 2
+        },
+        "focus": [
+          "are-you-ben",
+          "hi",
+          "my-name-is-ben",
+          "yes-i-am"
+        ],
+        "admitted": 6
+      }
+    ]
+  },
+  {
+    "section": "daily",
+    "seed": 0.99,
+    "rounds": [
+      {
+        "round": 1,
+        "distribution": {
+          "speaking": 7,
+          "understanding": 3,
+          "input": 2
+        },
+        "focus": [
+          "hello",
+          "hi",
+          "goodbye",
+          "bye"
+        ],
+        "admitted": 0
+      },
+      {
+        "round": 2,
+        "distribution": {
+          "speaking": 9,
+          "understanding": 4,
+          "input": 2
+        },
+        "focus": [
+          "hi",
+          "hello",
+          "bye",
+          "i-am-ben"
+        ],
+        "admitted": 1
+      },
+      {
+        "round": 3,
+        "distribution": {
+          "speaking": 9,
+          "understanding": 4,
+          "input": 2
+        },
+        "focus": [
+          "hi",
+          "bye",
+          "hello",
+          "i-am-mia"
+        ],
+        "admitted": 2
+      },
+      {
+        "round": 4,
+        "distribution": {
+          "speaking": 10,
+          "understanding": 4,
+          "input": 2
+        },
+        "focus": [
+          "hi",
+          "i-am-mia",
+          "bye",
+          "hello"
+        ],
+        "admitted": 2
+      },
+      {
+        "round": 5,
+        "distribution": {
+          "speaking": 8,
+          "understanding": 3,
+          "input": 2
+        },
+        "focus": [
+          "hi",
+          "bye",
+          "hello",
+          "im-ben"
+        ],
+        "admitted": 2
+      },
+      {
+        "round": 6,
+        "distribution": {
+          "speaking": 8,
+          "understanding": 4,
+          "input": 2
+        },
+        "focus": [
+          "im-ben",
+          "hi",
+          "i-am-mia",
+          "im-mia"
+        ],
+        "admitted": 2
+      },
+      {
+        "round": 7,
+        "distribution": {
+          "speaking": 8,
+          "understanding": 4,
+          "input": 2
+        },
+        "focus": [
+          "im-ben",
+          "im-mia",
+          "hi",
+          "whats-your-name"
+        ],
+        "admitted": 3
+      },
+      {
+        "round": 8,
+        "distribution": {
+          "speaking": 8,
+          "understanding": 4,
+          "input": 2
+        },
+        "focus": [
+          "im-ben",
+          "im-mia",
+          "whats-your-name",
+          "my-name-is-ben"
+        ],
+        "admitted": 3
+      },
+      {
+        "round": 9,
+        "distribution": {
+          "speaking": 8,
+          "understanding": 4,
+          "input": 2
+        },
+        "focus": [
+          "im-ben",
+          "im-mia",
+          "my-name-is-ben",
+          "my-name-is-mia"
+        ],
+        "admitted": 4
+      },
+      {
+        "round": 10,
+        "distribution": {
+          "speaking": 9,
+          "understanding": 4,
+          "input": 2
+        },
+        "focus": [
+          "im-ben",
+          "im-mia",
+          "my-name-is-mia",
+          "are-you-mia"
+        ],
+        "admitted": 5
+      },
+      {
+        "round": 11,
+        "distribution": {
+          "speaking": 8,
+          "understanding": 3,
+          "input": 2
+        },
+        "focus": [
+          "im-mia",
+          "im-ben",
+          "my-name-is-mia",
+          "are-you-ben"
+        ],
+        "admitted": 6
+      },
+      {
+        "round": 12,
+        "distribution": {
+          "speaking": 8,
+          "understanding": 4,
+          "input": 2
+        },
+        "focus": [
+          "are-you-ben",
+          "im-mia",
+          "are-you-mia",
+          "yes-i-am"
+        ],
+        "admitted": 7
+      }
+    ]
+  },
+  {
+    "section": "daily",
+    "totals": {
+      "speaking": 596,
+      "understanding": 266,
+      "input": 144
+    },
+    "shares": {
+      "speaking": 0.5924453280318092,
+      "understanding": 0.2644135188866799,
+      "input": 0.14314115308151093
+    },
+    "maximumInput": 1
+  },
+  {
+    "section": "programming",
+    "seed": 0.01,
+    "rounds": [
+      {
+        "round": 1,
+        "distribution": {
+          "speaking": 0,
+          "understanding": 9,
+          "input": 1
+        },
+        "focus": [
+          "word-1",
+          "word-2801",
+          "word-3561",
+          "word-20",
+          "word-4",
+          "word-5"
+        ],
+        "admitted": 0
+      },
+      {
+        "round": 2,
+        "distribution": {
+          "speaking": 0,
+          "understanding": 9,
+          "input": 1
+        },
+        "focus": [
+          "word-2",
+          "word-11",
+          "word-1880",
+          "word-1384",
+          "word-3",
+          "word-687"
+        ],
+        "admitted": 0
+      },
+      {
+        "round": 3,
+        "distribution": {
+          "speaking": 0,
+          "understanding": 9,
+          "input": 1
+        },
+        "focus": [
+          "word-12",
+          "word-13",
+          "word-14",
+          "word-15",
+          "word-21",
+          "word-22"
+        ],
+        "admitted": 0
+      },
+      {
+        "round": 4,
+        "distribution": {
+          "speaking": 0,
+          "understanding": 9,
+          "input": 1
+        },
+        "focus": [
+          "word-23",
+          "word-24",
+          "word-25",
+          "word-26",
+          "word-30",
+          "word-32"
+        ],
+        "admitted": 0
+      },
+      {
+        "round": 5,
+        "distribution": {
+          "speaking": 0,
+          "understanding": 9,
+          "input": 1
+        },
+        "focus": [
+          "word-31",
+          "word-29",
+          "word-27",
+          "word-28",
+          "word-40",
+          "word-34"
+        ],
+        "admitted": 0
+      },
+      {
+        "round": 6,
+        "distribution": {
+          "speaking": 0,
+          "understanding": 9,
+          "input": 1
+        },
+        "focus": [
+          "word-33",
+          "word-39",
+          "word-49",
+          "word-50",
+          "word-47",
+          "word-48"
+        ],
+        "admitted": 0
+      },
+      {
+        "round": 7,
+        "distribution": {
+          "speaking": 0,
+          "understanding": 9,
+          "input": 1
+        },
+        "focus": [
+          "word-46",
+          "word-45",
+          "word-54",
+          "word-43",
+          "word-44",
+          "word-51"
+        ],
+        "admitted": 0
+      },
+      {
+        "round": 8,
+        "distribution": {
+          "speaking": 0,
+          "understanding": 9,
+          "input": 1
+        },
+        "focus": [
+          "word-52",
+          "word-53",
+          "word-55",
+          "word-57",
+          "word-56",
+          "word-64"
+        ],
+        "admitted": 0
+      },
+      {
+        "round": 9,
+        "distribution": {
+          "speaking": 0,
+          "understanding": 9,
+          "input": 1
+        },
+        "focus": [
+          "word-59",
+          "word-69",
+          "word-70",
+          "word-73",
+          "word-72",
+          "word-1594"
+        ],
+        "admitted": 0
+      },
+      {
+        "round": 10,
+        "distribution": {
+          "speaking": 0,
+          "understanding": 9,
+          "input": 1
+        },
+        "focus": [
+          "word-2019",
+          "word-71",
+          "word-3562",
+          "word-1627",
+          "word-8",
+          "word-65"
+        ],
+        "admitted": 0
+      },
+      {
+        "round": 11,
+        "distribution": {
+          "speaking": 0,
+          "understanding": 5,
+          "input": 1
+        },
+        "focus": [
+          "word-7",
+          "word-42",
+          "word-75"
+        ],
+        "admitted": 0
+      }
+    ]
+  },
+  {
+    "section": "programming",
+    "seed": 0.19,
+    "rounds": [
+      {
+        "round": 1,
+        "distribution": {
+          "speaking": 0,
+          "understanding": 10,
+          "input": 0
+        },
+        "focus": [
+          "word-1",
+          "word-2801",
+          "word-3561",
+          "word-20",
+          "word-4",
+          "word-5"
+        ],
+        "admitted": 0
+      },
+      {
+        "round": 2,
+        "distribution": {
+          "speaking": 0,
+          "understanding": 10,
+          "input": 0
+        },
+        "focus": [
+          "word-2",
+          "word-11",
+          "word-1880",
+          "word-1384",
+          "word-3",
+          "word-687"
+        ],
+        "admitted": 0
+      },
+      {
+        "round": 3,
+        "distribution": {
+          "speaking": 0,
+          "understanding": 10,
+          "input": 0
+        },
+        "focus": [
+          "word-12",
+          "word-13",
+          "word-14",
+          "word-15",
+          "word-21",
+          "word-22"
+        ],
+        "admitted": 0
+      },
+      {
+        "round": 4,
+        "distribution": {
+          "speaking": 0,
+          "understanding": 10,
+          "input": 0
+        },
+        "focus": [
+          "word-23",
+          "word-24",
+          "word-25",
+          "word-26",
+          "word-30",
+          "word-32"
+        ],
+        "admitted": 0
+      },
+      {
+        "round": 5,
+        "distribution": {
+          "speaking": 0,
+          "understanding": 10,
+          "input": 0
+        },
+        "focus": [
+          "word-31",
+          "word-29",
+          "word-27",
+          "word-28",
+          "word-40",
+          "word-34"
+        ],
+        "admitted": 0
+      },
+      {
+        "round": 6,
+        "distribution": {
+          "speaking": 0,
+          "understanding": 10,
+          "input": 0
+        },
+        "focus": [
+          "word-33",
+          "word-39",
+          "word-49",
+          "word-50",
+          "word-47",
+          "word-48"
+        ],
+        "admitted": 0
+      },
+      {
+        "round": 7,
+        "distribution": {
+          "speaking": 0,
+          "understanding": 10,
+          "input": 0
+        },
+        "focus": [
+          "word-46",
+          "word-45",
+          "word-54",
+          "word-43",
+          "word-44",
+          "word-51"
+        ],
+        "admitted": 0
+      },
+      {
+        "round": 8,
+        "distribution": {
+          "speaking": 0,
+          "understanding": 10,
+          "input": 0
+        },
+        "focus": [
+          "word-52",
+          "word-53",
+          "word-55",
+          "word-57",
+          "word-56",
+          "word-64"
+        ],
+        "admitted": 0
+      },
+      {
+        "round": 9,
+        "distribution": {
+          "speaking": 0,
+          "understanding": 10,
+          "input": 0
+        },
+        "focus": [
+          "word-59",
+          "word-69",
+          "word-70",
+          "word-73",
+          "word-72",
+          "word-1594"
+        ],
+        "admitted": 0
+      },
+      {
+        "round": 10,
+        "distribution": {
+          "speaking": 0,
+          "understanding": 10,
+          "input": 0
+        },
+        "focus": [
+          "word-2019",
+          "word-71",
+          "word-3562",
+          "word-1627",
+          "word-8",
+          "word-65"
+        ],
+        "admitted": 0
+      },
+      {
+        "round": 11,
+        "distribution": {
+          "speaking": 0,
+          "understanding": 6,
+          "input": 0
+        },
+        "focus": [
+          "word-7",
+          "word-42",
+          "word-75"
+        ],
+        "admitted": 0
+      }
+    ]
+  },
+  {
+    "section": "programming",
+    "seed": 0.37,
+    "rounds": [
+      {
+        "round": 1,
+        "distribution": {
+          "speaking": 0,
+          "understanding": 9,
+          "input": 1
+        },
+        "focus": [
+          "word-1",
+          "word-2801",
+          "word-3561",
+          "word-20",
+          "word-4",
+          "word-5"
+        ],
+        "admitted": 0
+      },
+      {
+        "round": 2,
+        "distribution": {
+          "speaking": 0,
+          "understanding": 10,
+          "input": 0
+        },
+        "focus": [
+          "word-2",
+          "word-11",
+          "word-1880",
+          "word-1384",
+          "word-3",
+          "word-687"
+        ],
+        "admitted": 0
+      },
+      {
+        "round": 3,
+        "distribution": {
+          "speaking": 0,
+          "understanding": 9,
+          "input": 1
+        },
+        "focus": [
+          "word-12",
+          "word-13",
+          "word-14",
+          "word-15",
+          "word-21",
+          "word-22"
+        ],
+        "admitted": 0
+      },
+      {
+        "round": 4,
+        "distribution": {
+          "speaking": 0,
+          "understanding": 10,
+          "input": 0
+        },
+        "focus": [
+          "word-23",
+          "word-24",
+          "word-25",
+          "word-26",
+          "word-30",
+          "word-32"
+        ],
+        "admitted": 0
+      },
+      {
+        "round": 5,
+        "distribution": {
+          "speaking": 0,
+          "understanding": 10,
+          "input": 0
+        },
+        "focus": [
+          "word-31",
+          "word-29",
+          "word-27",
+          "word-28",
+          "word-40",
+          "word-34"
+        ],
+        "admitted": 0
+      },
+      {
+        "round": 6,
+        "distribution": {
+          "speaking": 0,
+          "understanding": 9,
+          "input": 1
+        },
+        "focus": [
+          "word-33",
+          "word-39",
+          "word-49",
+          "word-50",
+          "word-47",
+          "word-48"
+        ],
+        "admitted": 0
+      },
+      {
+        "round": 7,
+        "distribution": {
+          "speaking": 0,
+          "understanding": 9,
+          "input": 1
+        },
+        "focus": [
+          "word-46",
+          "word-45",
+          "word-54",
+          "word-43",
+          "word-44",
+          "word-51"
+        ],
+        "admitted": 0
+      },
+      {
+        "round": 8,
+        "distribution": {
+          "speaking": 0,
+          "understanding": 10,
+          "input": 0
+        },
+        "focus": [
+          "word-52",
+          "word-53",
+          "word-55",
+          "word-57",
+          "word-56",
+          "word-64"
+        ],
+        "admitted": 0
+      },
+      {
+        "round": 9,
+        "distribution": {
+          "speaking": 0,
+          "understanding": 9,
+          "input": 1
+        },
+        "focus": [
+          "word-59",
+          "word-69",
+          "word-70",
+          "word-73",
+          "word-72",
+          "word-1594"
+        ],
+        "admitted": 0
+      },
+      {
+        "round": 10,
+        "distribution": {
+          "speaking": 0,
+          "understanding": 10,
+          "input": 0
+        },
+        "focus": [
+          "word-2019",
+          "word-71",
+          "word-3562",
+          "word-1627",
+          "word-8",
+          "word-65"
+        ],
+        "admitted": 0
+      },
+      {
+        "round": 11,
+        "distribution": {
+          "speaking": 0,
+          "understanding": 6,
+          "input": 0
+        },
+        "focus": [
+          "word-7",
+          "word-42",
+          "word-75"
+        ],
+        "admitted": 0
+      }
+    ]
+  },
+  {
+    "section": "programming",
+    "seed": 0.51,
+    "rounds": [
+      {
+        "round": 1,
+        "distribution": {
+          "speaking": 0,
+          "understanding": 10,
+          "input": 0
+        },
+        "focus": [
+          "word-1",
+          "word-2801",
+          "word-3561",
+          "word-20",
+          "word-4",
+          "word-5"
+        ],
+        "admitted": 0
+      },
+      {
+        "round": 2,
+        "distribution": {
+          "speaking": 0,
+          "understanding": 10,
+          "input": 0
+        },
+        "focus": [
+          "word-2",
+          "word-11",
+          "word-1880",
+          "word-1384",
+          "word-3",
+          "word-687"
+        ],
+        "admitted": 0
+      },
+      {
+        "round": 3,
+        "distribution": {
+          "speaking": 0,
+          "understanding": 9,
+          "input": 1
+        },
+        "focus": [
+          "word-12",
+          "word-13",
+          "word-14",
+          "word-15",
+          "word-21",
+          "word-22"
+        ],
+        "admitted": 0
+      },
+      {
+        "round": 4,
+        "distribution": {
+          "speaking": 0,
+          "understanding": 10,
+          "input": 0
+        },
+        "focus": [
+          "word-23",
+          "word-24",
+          "word-25",
+          "word-26",
+          "word-30",
+          "word-32"
+        ],
+        "admitted": 0
+      },
+      {
+        "round": 5,
+        "distribution": {
+          "speaking": 0,
+          "understanding": 10,
+          "input": 0
+        },
+        "focus": [
+          "word-31",
+          "word-29",
+          "word-27",
+          "word-28",
+          "word-40",
+          "word-34"
+        ],
+        "admitted": 0
+      },
+      {
+        "round": 6,
+        "distribution": {
+          "speaking": 0,
+          "understanding": 9,
+          "input": 1
+        },
+        "focus": [
+          "word-33",
+          "word-39",
+          "word-49",
+          "word-50",
+          "word-47",
+          "word-48"
+        ],
+        "admitted": 0
+      },
+      {
+        "round": 7,
+        "distribution": {
+          "speaking": 0,
+          "understanding": 10,
+          "input": 0
+        },
+        "focus": [
+          "word-46",
+          "word-45",
+          "word-54",
+          "word-43",
+          "word-44",
+          "word-51"
+        ],
+        "admitted": 0
+      },
+      {
+        "round": 8,
+        "distribution": {
+          "speaking": 0,
+          "understanding": 10,
+          "input": 0
+        },
+        "focus": [
+          "word-52",
+          "word-53",
+          "word-55",
+          "word-57",
+          "word-56",
+          "word-64"
+        ],
+        "admitted": 0
+      },
+      {
+        "round": 9,
+        "distribution": {
+          "speaking": 0,
+          "understanding": 9,
+          "input": 1
+        },
+        "focus": [
+          "word-59",
+          "word-69",
+          "word-70",
+          "word-73",
+          "word-72",
+          "word-1594"
+        ],
+        "admitted": 0
+      },
+      {
+        "round": 10,
+        "distribution": {
+          "speaking": 0,
+          "understanding": 10,
+          "input": 0
+        },
+        "focus": [
+          "word-2019",
+          "word-71",
+          "word-3562",
+          "word-1627",
+          "word-8",
+          "word-65"
+        ],
+        "admitted": 0
+      },
+      {
+        "round": 11,
+        "distribution": {
+          "speaking": 0,
+          "understanding": 6,
+          "input": 0
+        },
+        "focus": [
+          "word-7",
+          "word-42",
+          "word-75"
+        ],
+        "admitted": 0
+      }
+    ]
+  },
+  {
+    "section": "programming",
+    "seed": 0.79,
+    "rounds": [
+      {
+        "round": 1,
+        "distribution": {
+          "speaking": 0,
+          "understanding": 10,
+          "input": 0
+        },
+        "focus": [
+          "word-1",
+          "word-2801",
+          "word-3561",
+          "word-20",
+          "word-4",
+          "word-5"
+        ],
+        "admitted": 0
+      },
+      {
+        "round": 2,
+        "distribution": {
+          "speaking": 0,
+          "understanding": 10,
+          "input": 0
+        },
+        "focus": [
+          "word-2",
+          "word-11",
+          "word-1880",
+          "word-1384",
+          "word-3",
+          "word-687"
+        ],
+        "admitted": 0
+      },
+      {
+        "round": 3,
+        "distribution": {
+          "speaking": 0,
+          "understanding": 10,
+          "input": 0
+        },
+        "focus": [
+          "word-12",
+          "word-13",
+          "word-14",
+          "word-15",
+          "word-21",
+          "word-22"
+        ],
+        "admitted": 0
+      },
+      {
+        "round": 4,
+        "distribution": {
+          "speaking": 0,
+          "understanding": 9,
+          "input": 1
+        },
+        "focus": [
+          "word-23",
+          "word-24",
+          "word-25",
+          "word-26",
+          "word-30",
+          "word-32"
+        ],
+        "admitted": 0
+      },
+      {
+        "round": 5,
+        "distribution": {
+          "speaking": 0,
+          "understanding": 9,
+          "input": 1
+        },
+        "focus": [
+          "word-31",
+          "word-29",
+          "word-27",
+          "word-28",
+          "word-40",
+          "word-34"
+        ],
+        "admitted": 0
+      },
+      {
+        "round": 6,
+        "distribution": {
+          "speaking": 0,
+          "understanding": 10,
+          "input": 0
+        },
+        "focus": [
+          "word-33",
+          "word-39",
+          "word-49",
+          "word-50",
+          "word-47",
+          "word-48"
+        ],
+        "admitted": 0
+      },
+      {
+        "round": 7,
+        "distribution": {
+          "speaking": 0,
+          "understanding": 10,
+          "input": 0
+        },
+        "focus": [
+          "word-46",
+          "word-45",
+          "word-54",
+          "word-43",
+          "word-44",
+          "word-51"
+        ],
+        "admitted": 0
+      },
+      {
+        "round": 8,
+        "distribution": {
+          "speaking": 0,
+          "understanding": 10,
+          "input": 0
+        },
+        "focus": [
+          "word-52",
+          "word-53",
+          "word-55",
+          "word-57",
+          "word-56",
+          "word-64"
+        ],
+        "admitted": 0
+      },
+      {
+        "round": 9,
+        "distribution": {
+          "speaking": 0,
+          "understanding": 10,
+          "input": 0
+        },
+        "focus": [
+          "word-59",
+          "word-69",
+          "word-70",
+          "word-73",
+          "word-72",
+          "word-1594"
+        ],
+        "admitted": 0
+      },
+      {
+        "round": 10,
+        "distribution": {
+          "speaking": 0,
+          "understanding": 10,
+          "input": 0
+        },
+        "focus": [
+          "word-2019",
+          "word-71",
+          "word-3562",
+          "word-1627",
+          "word-8",
+          "word-65"
+        ],
+        "admitted": 0
+      },
+      {
+        "round": 11,
+        "distribution": {
+          "speaking": 0,
+          "understanding": 6,
+          "input": 0
+        },
+        "focus": [
+          "word-7",
+          "word-42",
+          "word-75"
+        ],
+        "admitted": 0
+      }
+    ]
+  },
+  {
+    "section": "programming",
+    "seed": 0.99,
+    "rounds": [
+      {
+        "round": 1,
+        "distribution": {
+          "speaking": 0,
+          "understanding": 10,
+          "input": 0
+        },
+        "focus": [
+          "word-1",
+          "word-2801",
+          "word-3561",
+          "word-20",
+          "word-4",
+          "word-5"
+        ],
+        "admitted": 0
+      },
+      {
+        "round": 2,
+        "distribution": {
+          "speaking": 0,
+          "understanding": 10,
+          "input": 0
+        },
+        "focus": [
+          "word-2",
+          "word-11",
+          "word-1880",
+          "word-1384",
+          "word-3",
+          "word-687"
+        ],
+        "admitted": 0
+      },
+      {
+        "round": 3,
+        "distribution": {
+          "speaking": 0,
+          "understanding": 10,
+          "input": 0
+        },
+        "focus": [
+          "word-12",
+          "word-13",
+          "word-14",
+          "word-15",
+          "word-21",
+          "word-22"
+        ],
+        "admitted": 0
+      },
+      {
+        "round": 4,
+        "distribution": {
+          "speaking": 0,
+          "understanding": 9,
+          "input": 1
+        },
+        "focus": [
+          "word-23",
+          "word-24",
+          "word-25",
+          "word-26",
+          "word-30",
+          "word-32"
+        ],
+        "admitted": 0
+      },
+      {
+        "round": 5,
+        "distribution": {
+          "speaking": 0,
+          "understanding": 10,
+          "input": 0
+        },
+        "focus": [
+          "word-31",
+          "word-29",
+          "word-27",
+          "word-28",
+          "word-40",
+          "word-34"
+        ],
+        "admitted": 0
+      },
+      {
+        "round": 6,
+        "distribution": {
+          "speaking": 0,
+          "understanding": 10,
+          "input": 0
+        },
+        "focus": [
+          "word-33",
+          "word-39",
+          "word-49",
+          "word-50",
+          "word-47",
+          "word-48"
+        ],
+        "admitted": 0
+      },
+      {
+        "round": 7,
+        "distribution": {
+          "speaking": 0,
+          "understanding": 10,
+          "input": 0
+        },
+        "focus": [
+          "word-46",
+          "word-45",
+          "word-54",
+          "word-43",
+          "word-44",
+          "word-51"
+        ],
+        "admitted": 0
+      },
+      {
+        "round": 8,
+        "distribution": {
+          "speaking": 0,
+          "understanding": 10,
+          "input": 0
+        },
+        "focus": [
+          "word-52",
+          "word-53",
+          "word-55",
+          "word-57",
+          "word-56",
+          "word-64"
+        ],
+        "admitted": 0
+      },
+      {
+        "round": 9,
+        "distribution": {
+          "speaking": 0,
+          "understanding": 10,
+          "input": 0
+        },
+        "focus": [
+          "word-59",
+          "word-69",
+          "word-70",
+          "word-73",
+          "word-72",
+          "word-1594"
+        ],
+        "admitted": 0
+      },
+      {
+        "round": 10,
+        "distribution": {
+          "speaking": 0,
+          "understanding": 10,
+          "input": 0
+        },
+        "focus": [
+          "word-2019",
+          "word-71",
+          "word-3562",
+          "word-1627",
+          "word-8",
+          "word-65"
+        ],
+        "admitted": 0
+      },
+      {
+        "round": 11,
+        "distribution": {
+          "speaking": 0,
+          "understanding": 6,
+          "input": 0
+        },
+        "focus": [
+          "word-7",
+          "word-42",
+          "word-75"
+        ],
+        "admitted": 0
+      }
+    ]
+  },
+  {
+    "section": "programming",
+    "totals": {
+      "speaking": 0,
+      "understanding": 614,
+      "input": 22
+    },
+    "shares": {
+      "speaking": 0,
+      "understanding": 0.9654088050314465,
+      "input": 0.03459119496855346
+    },
+    "maximumInput": 1
+  }
+]

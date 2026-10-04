@@ -9,7 +9,7 @@ import { writtenAnswersMatch } from '../src/writtenAnswer.ts';
 const phrases = new Map(dailyPhrases.map(phrase => [phrase.id, phrase]));
 const originals = new Map(dailyLessons.flatMap(lesson => [...lesson.exercises, ...lesson.rechecks]).map(task => [task.id, task]));
 const plain = task => {
-  const { knowledgeIds, learningDifficulty, learningSignature, learningContext, ...original } = task;
+  const { knowledgeIds, learningDifficulty, learningSignature, learningContext, speechExposureIds, ...original } = task;
   return original;
 };
 const generated = lesson => lesson.practice.filter(task => !originals.has(task.id));

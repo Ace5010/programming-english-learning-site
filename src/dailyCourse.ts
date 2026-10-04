@@ -9,6 +9,10 @@ export type DailyExercise = {
   pairMode?: 'text' | 'audio'
   audioPrompt?: boolean
   speechSupport?: 'full' | 'partial' | 'hidden'
+  speechActivity?: 'repeat' | 'recall' | 'answer'
+  speechQuestion?: DailyPhrase
+  supportWords?: { en: string; zh: string }[]
+  speechExposureIds?: string[]
   prerequisiteIds?: string[]
   prompt: string
   explanation: string

@@ -5,8 +5,8 @@ import { enrollWord, parseReviewProgress, serializeReviewProgress, updateReviewP
 export const PROGRAMMING_COURSE_KEY = 'codewords-programming-course-v1';
 const validIds = new Set(vocabulary.map(word => word.id));
 type Storage = Pick<globalThis.Storage, 'getItem' | 'setItem'>;
-type MappedLesson = DailyLessonSpec & { wordIds: number[]; exercises: MappedExercise[]; rechecks: MappedExercise[]; practice?: MappedExercise[] };
-type MappedExercise = DailyLessonSpec['exercises'][number] & { wordIds: number[]; ability: Ability };
+type MappedLesson = DailyLessonSpec & { wordIds: number[]; exercises: MappedExercise[]; rechecks: MappedExercise[]; practice?: MappedExercise[]; courseMode?: 'word-check' };
+type MappedExercise = DailyLessonSpec['exercises'][number] & { wordIds: number[]; ability: Ability | 'speaking' };
 
 /** Reading never changes the historical self-confirmed set. Enrollment is additive. */
 export function initializeProgrammingReview(storage: Storage, now = Date.now()): ReviewProgress {
@@ -28,12 +28,15 @@ export function initializeProgrammingReview(storage: Storage, now = Date.now()):
 /** Replay saved course evidence safely after reload; teaching never counts as an answer. */
 export function mergeProgrammingCourse(progress: ReviewProgress, course: DailyProgress, lessons: MappedLesson[], now = Date.now()): ReviewProgress {
   let next = progress;
+  const wordCheck = lessons[0]?.courseMode === 'word-check';
   const register = (wordId: number, at: number) => {
     next = enrollWord(next, wordId, 'course', at);
     const target = course.learning?.targets[`word-${wordId}`];
     if (!course.learning || next[wordId].source === 'legacy') return;
     const previousReady = next[wordId].reviewReadyAt;
-    const readyAt = target?.readyAt ?? previousReady ?? 0;
+    // Availability for revisiting a taught word is not a claim of mastery.
+    const readyAt = wordCheck ? previousReady || target?.readyAt || target?.introducedAt || at
+      : target?.readyAt ?? previousReady ?? 0;
     if (previousReady === readyAt) return;
     let word = { ...next[wordId], reviewReadyAt: readyAt };
     if (readyAt > 0 && !previousReady) {
@@ -62,7 +65,7 @@ export function mergeProgrammingCourse(progress: ReviewProgress, course: DailyPr
   for (let index = 0; index < session.answers.length; index++) {
     const answer = session.answers[index];
     const exercise = exercises.find(item => item.id === answer.exerciseId);
-    if (!exercise || answer.outcome === 'self') continue;
+    if (!exercise || exercise.ability === 'speaking' || answer.outcome === 'self') continue;
     const receipt = `${session.id}:${answer.exerciseId}:${answer.at}`;
     for (const wordId of exercise.wordIds) {
       const outcome = answer.targets ? answer.targets[`word-${wordId}`] : answer.outcome;
@@ -87,7 +90,7 @@ export function mergeProgrammingCourse(progress: ReviewProgress, course: DailyPr
     // Recovery may happen days later. Keep the saved event date instead of
     // making a failed synchronization look like a new difficulty today.
     const hintAt = entry && course.lessons[lesson.id]?.errors[entry.retryOf ?? entry.exerciseId]?.lastAt;
-    if (exercise) for (const wordId of exercise.wordIds) {
+    if (exercise && exercise.ability !== 'speaking') for (const wordId of exercise.wordIds) {
       if (session.draft.pairs && !session.draft.pairs.mistakes[`word-${wordId}`]) continue;
       const receipt = `${session.id}:${exercise.id}:hint`;
       if (next[wordId]?.courseReceipts?.includes(receipt)) continue;

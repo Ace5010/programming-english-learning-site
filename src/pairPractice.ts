@@ -11,12 +11,9 @@ export interface PairState {
 export const createPairState = (): PairState => ({ selected: null, matches: {}, mistakes: {}, observedAt: {}, message: '' });
 export const pairsComplete = (items: PairItem[], state?: PairState) => items.length >= 2 && items.every(item => !!state?.matches[item.id]);
 
-function finishPair(items: PairItem[], state: PairState, id: string, outcome: PairOutcome): PairState {
+function finishPair(state: PairState, id: string, outcome: PairOutcome): PairState {
   const { wrong: _wrong, ...previous } = state;
   const next = { ...previous, selected: null, matches: { ...state.matches, [id]: outcome } };
-  const remaining = items.filter(item => !next.matches[item.id]);
-  // The final forced association is exposure, not independently tested knowledge.
-  if (remaining.length === 1) next.matches[remaining[0].id] = 'unmeasured';
   return next;
 }
 export function selectPair(state: PairState, selected: string): PairState {
@@ -26,16 +23,21 @@ export function selectPair(state: PairState, selected: string): PairState {
 export function choosePair(items: PairItem[], state: PairState, rightId: string, now = Date.now()): PairState {
   const left = items.find(item => item.id === state.selected);
   if (!left || state.matches[left.id] || state.matches[rightId] || state.wrong === rightId || !items.some(item => item.id === rightId)) return state;
-  if (left.id === rightId) return finishPair(items, { ...state, message: `${left.en} — ${left.zh}` }, left.id, state.mistakes[left.id] ? 'assisted' : 'independent');
+  if (left.id === rightId) {
+    // Keep the final pair interactive, without claiming recall from one remaining answer.
+    const outcome = items.filter(item => !state.matches[item.id]).length === 1 ? 'unmeasured'
+      : state.mistakes[left.id] ? 'assisted' : 'independent';
+    return finishPair({ ...state, message: `${left.en} — ${left.zh}` }, left.id, outcome);
+  }
   const mistakes = (state.mistakes[left.id] ?? 0) + 1;
   const next = { ...state, mistakes: { ...state.mistakes, [left.id]: mistakes }, observedAt: { ...state.observedAt, [left.id]: state.observedAt[left.id] ?? now }, wrong: rightId };
-  if (mistakes >= 2 || items.filter(item => !state.matches[item.id]).length <= 2) return finishPair(items, { ...next, message: `${left.en} 对应“${left.zh}”，后面会再练。` }, left.id, 'revealed');
+  if (mistakes >= 2 || items.filter(item => !state.matches[item.id]).length <= 2) return finishPair({ ...next, message: `${left.en} 对应“${left.zh}”，后面会再练。` }, left.id, 'revealed');
   return { ...next, message: '这两个选项不对应，再选择一次。' };
 }
 export function revealPair(items: PairItem[], state: PairState, now = Date.now()): PairState {
   const target = items.find(item => item.id === state.selected && !state.matches[item.id]) ?? items.find(item => !state.matches[item.id]);
   if (!target) return state;
-  return finishPair(items, { ...state, message: `${target.en} 对应“${target.zh}”。`, mistakes: { ...state.mistakes, [target.id]: Math.max(1, state.mistakes[target.id] ?? 0) }, observedAt: { ...state.observedAt, [target.id]: state.observedAt[target.id] ?? now } }, target.id, 'revealed');
+  return finishPair({ ...state, message: `${target.en} 对应“${target.zh}”。`, mistakes: { ...state.mistakes, [target.id]: Math.max(1, state.mistakes[target.id] ?? 0) }, observedAt: { ...state.observedAt, [target.id]: state.observedAt[target.id] ?? now } }, target.id, 'revealed');
 }
 export function pairOrder(items: PairItem[], seed: string): PairItem[] {
   const rank = (id: string) => { let value = 2166136261; for (const c of seed + id) value = Math.imul(value ^ c.charCodeAt(0), 16777619); return value >>> 0; };

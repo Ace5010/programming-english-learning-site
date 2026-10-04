@@ -27,10 +27,16 @@ export function courseOverview(progress: DailyProgress, lessons: LearningLesson[
       : oldCount === 0 ? '本轮先学习新内容，再根据作答情况逐步巩固。'
         : `本轮学习 ${newCount} 条新内容，同时穿插巩固 ${oldCount} 条还不熟悉的内容。`;
   const reading = source.learningGoal === 'reading';
+  const wordCheck = source.courseMode === 'word-check';
   const shortMeaning = (text: string) => text.split(/[；;]/)[0].replace(/[。！!？?]$/, '');
   const meanings = [...new Set(targets.map(item => shortMeaning(item.zh)))].slice(0, 3);
   return {
-    source, targets, newCount, oldCount, arrangement, reading, resume: !!saved,
+    source, targets, newCount, oldCount, arrangement, reading, wordCheck, budget: scope?.budget, resume: !!saved,
+    testStarted: wordCheck && !!saved && saved.stage !== 'study',
+    studyPhrases: wordCheck ? targets.flatMap(target => {
+      const example = phrases.find(phrase => phrase.id === target.id.replace(/^word-/, 'example-'));
+      return example ? [target, example] : [target];
+    }) : targets,
     round: scope?.round ?? (progress.learning?.rounds ?? lessons.filter(item => progress.lessons[item.id]?.completedAt).length) + 1,
     title: sources.map(item => item.title).join('、'),
     goal: meanings.length ? `${reading ? '读懂' : '辨认'}“${meanings.join('”“')}”${targets.length > meanings.length ? '等' : '对应的'}${reading ? '词语，理解它们在短句中的意思。' : '英语表达，理解它们的用法。'}` : source.goal,

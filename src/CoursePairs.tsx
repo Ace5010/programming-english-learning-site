@@ -19,7 +19,7 @@ export default function CoursePairs({ id, items, mode, state = createPairState()
             aria-label={label} onClick={() => { if (!disabled && !matched) onSelect(item.id); play(phrase, false); }}>
             <Icon name={matched ? 'check' : 'sound'} />{mode === 'audio' && !matched ? <span className="pair-audio-bars" aria-hidden="true">▂▅▃▆▃▅▂</span> : <span lang="en">{item.en}</span>}
           </button><button type="button" className="daily-inline-slow" aria-label={`慢速 ${label}`} aria-pressed={speaking === `daily-${item.audioId}-slow`} onClick={() => { if (!disabled && !matched) onSelect(item.id); play(phrase, true); }}>慢速</button>
-          {matched && <span className="pair-result">{matched === 'unmeasured' || matched === 'revealed' ? '已展示' : matched === 'assisted' ? '修改正确' : '已配对'}</span>}
+          {matched && <span className="pair-result">{matched === 'revealed' ? '已展示' : matched === 'assisted' ? '修改正确' : '已配对'}</span>}
         </div>;
       })}</div>
       <div className="course-pair-column" role="group" aria-label="中文含义">{right.map(item => <button type="button" key={item.id}

@@ -1,0 +1,198 @@
+{
+  "results": [
+    "study-lagoon",
+    "study-pearl",
+    "study-sky",
+    "study-mint",
+    "local-correction-reload-isolation",
+    "summary-practice-reload",
+    "first-letter-help-evidence",
+    "library-single-word-practice",
+    "all-six-pilot-recordings-play-to-end-at-normal-and-slow-speed"
+  ],
+  "errors": [],
+  "audio": [
+    {
+      "type": "playing",
+      "src": "http://127.0.0.1:5186/audio/daily/aria/daily-word-student.mp3?v=student",
+      "rate": 1,
+      "pitch": true,
+      "duration": 2.088
+    },
+    {
+      "type": "playing",
+      "src": "http://127.0.0.1:5186/audio/daily/aria/daily-word-student.mp3?v=student",
+      "rate": 0.72,
+      "pitch": true,
+      "duration": 2.088
+    },
+    {
+      "type": "playing",
+      "src": "http://127.0.0.1:5186/audio/daily/aria/daily-word-from.mp3?v=from",
+      "rate": 1,
+      "pitch": true,
+      "duration": 2.088
+    },
+    {
+      "type": "ended",
+      "src": "http://127.0.0.1:5186/audio/daily/aria/daily-word-from.mp3?v=from",
+      "rate": 1,
+      "pitch": true,
+      "duration": 2.088
+    },
+    {
+      "type": "playing",
+      "src": "http://127.0.0.1:5186/audio/daily/aria/daily-word-from.mp3?v=from",
+      "rate": 0.72,
+      "pitch": true,
+      "duration": 2.088
+    },
+    {
+      "type": "ended",
+      "src": "http://127.0.0.1:5186/audio/daily/aria/daily-word-from.mp3?v=from",
+      "rate": 0.72,
+      "pitch": true,
+      "duration": 2.088
+    },
+    {
+      "type": "playing",
+      "src": "http://127.0.0.1:5186/audio/daily/aria/daily-word-student.mp3?v=student",
+      "rate": 1,
+      "pitch": true,
+      "duration": 2.088
+    },
+    {
+      "type": "ended",
+      "src": "http://127.0.0.1:5186/audio/daily/aria/daily-word-student.mp3?v=student",
+      "rate": 1,
+      "pitch": true,
+      "duration": 2.088
+    },
+    {
+      "type": "playing",
+      "src": "http://127.0.0.1:5186/audio/daily/aria/daily-word-student.mp3?v=student",
+      "rate": 0.72,
+      "pitch": true,
+      "duration": 2.088
+    },
+    {
+      "type": "ended",
+      "src": "http://127.0.0.1:5186/audio/daily/aria/daily-word-student.mp3?v=student",
+      "rate": 0.72,
+      "pitch": true,
+      "duration": 2.088
+    },
+    {
+      "type": "playing",
+      "src": "http://127.0.0.1:5186/audio/daily/aria/daily-word-teacher.mp3?v=teacher",
+      "rate": 1,
+      "pitch": true,
+      "duration": 2.088
+    },
+    {
+      "type": "ended",
+      "src": "http://127.0.0.1:5186/audio/daily/aria/daily-word-teacher.mp3?v=teacher",
+      "rate": 1,
+      "pitch": true,
+      "duration": 2.088
+    },
+    {
+      "type": "playing",
+      "src": "http://127.0.0.1:5186/audio/daily/aria/daily-word-teacher.mp3?v=teacher",
+      "rate": 0.72,
+      "pitch": true,
+      "duration": 2.088
+    },
+    {
+      "type": "ended",
+      "src": "http://127.0.0.1:5186/audio/daily/aria/daily-word-teacher.mp3?v=teacher",
+      "rate": 0.72,
+      "pitch": true,
+      "duration": 2.088
+    },
+    {
+      "type": "playing",
+      "src": "http://127.0.0.1:5186/audio/daily/guy/daily-word-from.mp3?v=from",
+      "rate": 1,
+      "pitch": true,
+      "duration": 2.088
+    },
+    {
+      "type": "ended",
+      "src": "http://127.0.0.1:5186/audio/daily/guy/daily-word-from.mp3?v=from",
+      "rate": 1,
+      "pitch": true,
+      "duration": 2.088
+    },
+    {
+      "type": "playing",
+      "src": "http://127.0.0.1:5186/audio/daily/guy/daily-word-from.mp3?v=from",
+      "rate": 0.72,
+      "pitch": true,
+      "duration": 2.088
+    },
+    {
+      "type": "ended",
+      "src": "http://127.0.0.1:5186/audio/daily/guy/daily-word-from.mp3?v=from",
+      "rate": 0.72,
+      "pitch": true,
+      "duration": 2.088
+    },
+    {
+      "type": "playing",
+      "src": "http://127.0.0.1:5186/audio/daily/guy/daily-word-student.mp3?v=student",
+      "rate": 1,
+      "pitch": true,
+      "duration": 2.088
+    },
+    {
+      "type": "ended",
+      "src": "http://127.0.0.1:5186/audio/daily/guy/daily-word-student.mp3?v=student",
+      "rate": 1,
+      "pitch": true,
+      "duration": 2.088
+    },
+    {
+      "type": "playing",
+      "src": "http://127.0.0.1:5186/audio/daily/guy/daily-word-student.mp3?v=student",
+      "rate": 0.72,
+      "pitch": true,
+      "duration": 2.088
+    },
+    {
+      "type": "ended",
+      "src": "http://127.0.0.1:5186/audio/daily/guy/daily-word-student.mp3?v=student",
+      "rate": 0.72,
+      "pitch": true,
+      "duration": 2.088
+    },
+    {
+      "type": "playing",
+      "src": "http://127.0.0.1:5186/audio/daily/guy/daily-word-teacher.mp3?v=teacher",
+      "rate": 1,
+      "pitch": true,
+      "duration": 2.088
+    },
+    {
+      "type": "ended",
+      "src": "http://127.0.0.1:5186/audio/daily/guy/daily-word-teacher.mp3?v=teacher",
+      "rate": 1,
+      "pitch": true,
+      "duration": 2.088
+    },
+    {
+      "type": "playing",
+      "src": "http://127.0.0.1:5186/audio/daily/guy/daily-word-teacher.mp3?v=teacher",
+      "rate": 0.72,
+      "pitch": true,
+      "duration": 2.088
+    },
+    {
+      "type": "ended",
+      "src": "http://127.0.0.1:5186/audio/daily/guy/daily-word-teacher.mp3?v=teacher",
+      "rate": 0.72,
+      "pitch": true,
+      "duration": 2.088
+    }
+  ]
+}

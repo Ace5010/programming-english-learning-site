@@ -15,7 +15,10 @@ VAD = VadOptions(threshold=.5, min_speech_duration_ms=100,
 
 
 class SenseVoiceRecognition:
+    reference_pattern = r"[A-Za-z]{2,40}"
+
     def __init__(self):
+        self.version = VERSION
         os.environ.update(HF_HUB_OFFLINE='1', TRANSFORMERS_OFFLINE='1')
         self.run, _, _ = load()
         # Warm both models before advertising the server as ready.
@@ -23,10 +26,10 @@ class SenseVoiceRecognition:
 
     def assess(self, data, reference):
         start = time.perf_counter()
-        if not isinstance(reference, str) or not re.fullmatch(r"[A-Za-z]{2,40}", reference):
+        if not isinstance(reference, str) or not re.fullmatch(self.reference_pattern, reference):
             raise AssessmentInputError('invalid-reference')
         audio = decode(data)
-        common = {'version': VERSION, 'experimental': True, 'reference': reference,
+        common = {'version': self.version, 'experimental': True, 'reference': reference,
                   'pronunciationGraded': False, 'rawAudioSaved': False, 'cloudCalls': 0}
         if not get_speech_timestamps(audio, VAD):
             return {**common, 'status': 'no-speech', 'transcript': '', 'matched': None,
@@ -42,7 +45,7 @@ class SenseVoiceRecognition:
         """Course transcription never receives an expected answer or awards credit."""
         start = time.perf_counter()
         audio = decode(data)
-        common = {'version': VERSION, 'pronunciationGraded': False,
+        common = {'version': self.version, 'pronunciationGraded': False,
                   'rawAudioSaved': False, 'cloudCalls': 0}
         if not get_speech_timestamps(audio, VAD):
             return {**common, 'status': 'no-speech', 'transcript': '',

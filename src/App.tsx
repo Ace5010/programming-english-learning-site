@@ -16,6 +16,7 @@ import { slowReadingQueue } from './slowReading';
 import DailyEnglish from './DailyEnglish';
 import FoundationEnglish, { FoundationHelp, foundationTrack } from './FoundationEnglish';
 import { foundationAudioPath } from './foundationAudio';
+import { foundationDemoPath, foundationDemoKey } from './foundationDemos';
 import { phonemeAudioPath, phonemeAudioKey, type PhonemeAudioKind } from './phonemeInventory';
 import ReviewVocabulary from './ReviewVocabulary';
 import VocabularyRow from './VocabularyRow';
@@ -23,7 +24,8 @@ import SpeechControls, { playbackRates, type PlaybackSpeed } from './SpeechContr
 import { dailyPhrases, type DailyPhrase } from './dailyCourse';
 import type { DailyProgress } from './dailyProgress';
 import { programmingPhrases } from './programmingCourse';
-import { adaptiveProgrammingUnits as programmingUnits, adaptiveProgrammingLessons as programmingLessons } from './programmingPractice';
+import { adaptiveProgrammingUnits as programmingUnits, adaptiveProgrammingLessons as programmingLessons, programmingTargetMeaning } from './programmingPractice';
+import { programmingStudyInfo } from './programmingStudy';
 import { initializeProgrammingReview, persistProgrammingCourseEvidence, PROGRAMMING_COURSE_KEY } from './programmingProgress';
 import { programmingReview, applyProgrammingReviewToLearning } from './programmingReview';
 import { REVIEW_KEY, getSkill, isWordDue, isReviewEligible, parseReviewProgress, reviewAbilities, type ReviewProgress } from './review';
@@ -70,10 +72,12 @@ export default function Home() {
   const [showVoice, setShowVoice] = useState(false);
   const [speaking, setSpeaking] = useState('');
   const [phonemeError, setPhonemeError] = useState('');
+  const [foundationError, setFoundationError] = useState('');
   const [voice, setVoice] = useState<'aria' | 'guy'>(() => { try { return localStorage.getItem('codewords-voice') === 'guy' ? 'guy' : 'aria'; } catch { return 'aria'; } });
   const [playbackSpeed, setPlaybackSpeed] = useState<PlaybackSpeed>(() => { try { return localStorage.getItem('codewords-playback-speed') === 'slow' ? 'slow' : 'normal'; } catch { return 'normal'; } });
   const [player] = useState(() => new AudioPlayback(setSpeaking, key => {
     if (key?.startsWith('phonetic-')) setPhonemeError('这次本地录音未能播放，请重试。');
+    else if (key?.startsWith('foundation-demo-') || key?.startsWith('daily-foundation-tutorial-')) setFoundationError('这次本地录音未能播放。');
     else window.alert('这次读音未能播放，请再点一次。');
   }, startNativeAudio, undefined, busy => blockSyncApply('audio-playback', busy), startNativeQueue));
   const [feedbackEnabled, setFeedbackEnabled] = useState(() => { try { return localStorage.getItem(FEEDBACK_SOUND_KEY) !== 'off'; } catch { return true; } });
@@ -94,7 +98,7 @@ export default function Home() {
   const view = section === 'foundation' ? foundationView : section === 'daily' ? dailyView : programmingView;
   useLayoutEffect(() => { document.documentElement.dataset.theme = theme; }, [theme]);
   const { replay } = useThemeMotion({ theme, selection: `${section}-${view}`, navRef, contentRef, headingRef });
-  const stopAudio = useCallback(() => { player.stop(); feedbackPlayer.stop(); }, [player, feedbackPlayer]);
+  const stopAudio = useCallback(() => { player.stop(); feedbackPlayer.stop(); setFoundationError(''); }, [player, feedbackPlayer]);
   const rememberSpeed = useCallback((next: PlaybackSpeed) => {
     setPlaybackSpeed(next);
     try { localStorage.setItem('codewords-playback-speed', next); }
@@ -159,7 +163,8 @@ export default function Home() {
     }
   }, []);
   const curriculum = useMemo(() => ({ key: PROGRAMMING_COURSE_KEY, label: '编程英语', units: programmingUnits, phrases: programmingPhrases,
-    description: '根据学习表现安排新内容，并穿插需要巩固的词。', onProgress: syncProgramming, review: programmingReview(reviewProgress),
+    description: '先点读学习 6 个新词，准备好后完成 10 题检验。', targetMeaning: programmingTargetMeaning, studyInfo: programmingStudyInfo,
+    onProgress: syncProgramming, review: programmingReview(reviewProgress),
     prepareLearning: (progress: DailyProgress) => applyProgrammingReviewToLearning(progress, reviewProgress) }), [syncProgramming, reviewProgress]);
   const reviewPool = useMemo(() => vocabulary.filter(item => isReviewEligible(reviewProgress, item.id)), [reviewProgress]);
   const duePool = reviewPool.filter(item => isWordDue(reviewProgress, item.id));
@@ -247,10 +252,19 @@ export default function Home() {
   const playExample = (item: VocabularyItem, slow = playbackSpeed === 'slow', key = `example-${item.id}`) => playAudio(`example-${item.id}.mp3?v=${encodeURIComponent(item.example)}`, slow, key, false, item.example);
   const playDaily = (phrase: DailyPhrase, slow = playbackSpeed === 'slow') => playAudio(`${phrase.id}.mp3?v=${encodeURIComponent(phrase.en)}`, slow, `daily-${phrase.id}-${slow ? 'slow' : 'normal'}`, true, phrase.en);
   const playFoundation = (phrase: DailyPhrase, slow = false) => {
-    const path = foundationAudioPath(phrase.en, voice);
+    const path = foundationAudioPath(phrase.en, voice, phrase.id.startsWith('foundation-tutorial-'));
     if (!path) return;
-    feedbackPlayer.stop(); rememberSpeed(slow ? 'slow' : 'normal');
-    playTextAudio(phrase.en, new URL(path, document.baseURI).href, slow, `daily-${phrase.id}-${slow ? 'slow' : 'normal'}`);
+    feedbackPlayer.stop(); setFoundationError(''); rememberSpeed(slow ? 'slow' : 'normal');
+    const url = new URL(path, document.baseURI).href;
+    const key = `daily-${phrase.id}-${slow ? 'slow' : 'normal'}`;
+    // The new listening tutorials need a continuous slow sentence as well as
+    // separate word buttons. Keep the existing samples' word-by-word behavior.
+    if (phrase.id.startsWith('foundation-tutorial-')) player.play(url, slow ? .72 : 1, key);
+    else playTextAudio(phrase.en, url, slow, key);
+  };
+  const playFoundationDemo = (id: string, slow = false) => {
+    feedbackPlayer.stop(); setFoundationError('');
+    player.play(new URL(foundationDemoPath(id), document.baseURI).href, slow ? .72 : 1, foundationDemoKey(id, slow));
   };
   const playPhoneme = (id: string, kind: PhonemeAudioKind, slow = false) => {
     feedbackPlayer.stop(); setPhonemeError('');
@@ -320,7 +334,7 @@ export default function Home() {
     </main>
     {dailyVisited && <DailyEnglish foundationHelp={foundationHelp} key={`daily-${syncRevision}`} active={section === 'daily'} view={dailyView} navigation={navigation} voice={voice} speed={playbackSpeed} onSpeedChange={changeSpeed} speaking={speaking} play={playDaily} playFeedback={playFeedback} preload={preloadDaily} stopAudio={stopAudio} openVoice={() => setShowVoice(true)} openLibrary={() => changeView('library')} contentRef={section === 'daily' ? contentRef : undefined} headingRef={section === 'daily' ? headingRef : undefined} />}
     {section === 'foundation' && foundationReturn && <div className="content foundation-return"><button className="daily-button" onClick={() => { changeSection(foundationReturn); setFoundationReturn(null); }}>返回{foundationReturn === 'daily' ? '日常英语' : '编程英语'}</button></div>}
-    {foundationVisited && <FoundationEnglish openTopic={openFoundation} request={foundationRequest} active={section === 'foundation'} view={foundationView} speaking={speaking} play={playFoundation} playPhoneme={playPhoneme} phonemeError={phonemeError} stopAudio={stopAudio} openVoice={() => setShowVoice(true)} contentRef={section === 'foundation' ? contentRef : undefined} headingRef={section === 'foundation' ? headingRef : undefined} />}
+    {foundationVisited && <FoundationEnglish openTopic={openFoundation} request={foundationRequest} active={section === 'foundation'} view={foundationView} speaking={speaking} play={playFoundation} playDemo={playFoundationDemo} foundationError={foundationError} playPhoneme={playPhoneme} phonemeError={phonemeError} stopAudio={stopAudio} openVoice={() => setShowVoice(true)} contentRef={section === 'foundation' ? contentRef : undefined} headingRef={section === 'foundation' ? headingRef : undefined} />}
       {showVoice && <div className="modal-layer" role="dialog" aria-modal="true" aria-labelledby="voice-heading">
         <button className="backdrop" onClick={() => setShowVoice(false)} aria-label="关闭" tabIndex={-1} />
         <section ref={voiceDialog} className="modal voice-modal">

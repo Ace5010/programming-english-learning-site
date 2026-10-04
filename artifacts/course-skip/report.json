@@ -1,0 +1,263 @@
+{
+  "baseURL": "http://localhost:5186/",
+  "results": [
+    "daily-1440-lagoon",
+    "daily-1440-pearl",
+    "daily-1440-sky",
+    "daily-1440-mint",
+    "daily-320-lagoon",
+    "daily-320-pearl",
+    "daily-320-sky",
+    "daily-320-mint",
+    "programming-1440-lagoon",
+    "programming-1440-pearl",
+    "programming-1440-sky",
+    "programming-1440-mint",
+    "programming-320-lagoon",
+    "programming-320-pearl",
+    "programming-320-sky",
+    "programming-320-mint",
+    "daily-all-skipped-restore",
+    "programming-all-skipped-restore"
+  ],
+  "failures": [],
+  "errors": [],
+  "findings": [
+    {
+      "name": "daily-1440-lagoon-study",
+      "viewport": 1440,
+      "documentWidth": 1440,
+      "overflow": []
+    },
+    {
+      "name": "daily-1440-lagoon-skipped",
+      "viewport": 1440,
+      "documentWidth": 1440,
+      "overflow": []
+    },
+    {
+      "name": "daily-1440-pearl-study",
+      "viewport": 1440,
+      "documentWidth": 1440,
+      "overflow": []
+    },
+    {
+      "name": "daily-1440-pearl-skipped",
+      "viewport": 1440,
+      "documentWidth": 1440,
+      "overflow": []
+    },
+    {
+      "name": "daily-1440-sky-study",
+      "viewport": 1440,
+      "documentWidth": 1440,
+      "overflow": []
+    },
+    {
+      "name": "daily-1440-sky-skipped",
+      "viewport": 1440,
+      "documentWidth": 1440,
+      "overflow": []
+    },
+    {
+      "name": "daily-1440-mint-study",
+      "viewport": 1440,
+      "documentWidth": 1440,
+      "overflow": []
+    },
+    {
+      "name": "daily-1440-mint-skipped",
+      "viewport": 1440,
+      "documentWidth": 1440,
+      "overflow": []
+    },
+    {
+      "name": "daily-320-lagoon-study",
+      "viewport": 320,
+      "documentWidth": 320,
+      "overflow": []
+    },
+    {
+      "name": "daily-320-lagoon-skipped",
+      "viewport": 320,
+      "documentWidth": 320,
+      "overflow": []
+    },
+    {
+      "name": "daily-320-pearl-study",
+      "viewport": 320,
+      "documentWidth": 320,
+      "overflow": []
+    },
+    {
+      "name": "daily-320-pearl-skipped",
+      "viewport": 320,
+      "documentWidth": 320,
+      "overflow": []
+    },
+    {
+      "name": "daily-320-sky-study",
+      "viewport": 320,
+      "documentWidth": 320,
+      "overflow": []
+    },
+    {
+      "name": "daily-320-sky-skipped",
+      "viewport": 320,
+      "documentWidth": 320,
+      "overflow": []
+    },
+    {
+      "name": "daily-320-mint-study",
+      "viewport": 320,
+      "documentWidth": 320,
+      "overflow": []
+    },
+    {
+      "name": "daily-320-mint-skipped",
+      "viewport": 320,
+      "documentWidth": 320,
+      "overflow": []
+    },
+    {
+      "name": "programming-1440-lagoon-study",
+      "viewport": 1440,
+      "documentWidth": 1440,
+      "overflow": []
+    },
+    {
+      "name": "programming-1440-lagoon-skipped",
+      "viewport": 1440,
+      "documentWidth": 1440,
+      "overflow": []
+    },
+    {
+      "name": "programming-1440-pearl-study",
+      "viewport": 1440,
+      "documentWidth": 1440,
+      "overflow": []
+    },
+    {
+      "name": "programming-1440-pearl-skipped",
+      "viewport": 1440,
+      "documentWidth": 1440,
+      "overflow": []
+    },
+    {
+      "name": "programming-1440-sky-study",
+      "viewport": 1440,
+      "documentWidth": 1440,
+      "overflow": []
+    },
+    {
+      "name": "programming-1440-sky-skipped",
+      "viewport": 1440,
+      "documentWidth": 1440,
+      "overflow": []
+    },
+    {
+      "name": "programming-1440-mint-study",
+      "viewport": 1440,
+      "documentWidth": 1440,
+      "overflow": []
+    },
+    {
+      "name": "programming-1440-mint-skipped",
+      "viewport": 1440,
+      "documentWidth": 1440,
+      "overflow": []
+    },
+    {
+      "name": "programming-320-lagoon-study",
+      "viewport": 320,
+      "documentWidth": 320,
+      "overflow": []
+    },
+    {
+      "name": "programming-320-lagoon-skipped",
+      "viewport": 320,
+      "documentWidth": 320,
+      "overflow": []
+    },
+    {
+      "name": "programming-320-pearl-study",
+      "viewport": 320,
+      "documentWidth": 320,
+      "overflow": []
+    },
+    {
+      "name": "programming-320-pearl-skipped",
+      "viewport": 320,
+      "documentWidth": 320,
+      "overflow": []
+    },
+    {
+      "name": "programming-320-sky-study",
+      "viewport": 320,
+      "documentWidth": 320,
+      "overflow": []
+    },
+    {
+      "name": "programming-320-sky-skipped",
+      "viewport": 320,
+      "documentWidth": 320,
+      "overflow": []
+    },
+    {
+      "name": "programming-320-mint-study",
+      "viewport": 320,
+      "documentWidth": 320,
+      "overflow": []
+    },
+    {
+      "name": "programming-320-mint-skipped",
+      "viewport": 320,
+      "documentWidth": 320,
+      "overflow": []
+    },
+    {
+      "name": "daily-all-skipped-restore",
+      "viewport": 390,
+      "documentWidth": 390,
+      "overflow": []
+    },
+    {
+      "name": "programming-all-skipped-restore",
+      "viewport": 390,
+      "documentWidth": 390,
+      "overflow": []
+    }
+  ],
+  "audio": [
+    {
+      "section": "daily",
+      "events": [
+        {
+          "src": "http://localhost:5186/audio/daily/aria/hello.mp3?v=Hello!",
+          "rate": 1,
+          "pitch": true
+        },
+        {
+          "src": "http://localhost:5186/audio/daily/aria/hello.mp3?v=Hello!",
+          "rate": 0.72,
+          "pitch": true
+        }
+      ]
+    },
+    {
+      "section": "programming",
+      "events": [
+        {
+          "src": "http://localhost:5186/audio/aria/word-1.mp3?v=repository",
+          "rate": 1,
+          "pitch": true
+        },
+        {
+          "src": "http://localhost:5186/audio/aria/word-1.mp3?v=repository",
+          "rate": 0.72,
+          "pitch": true
+        }
+      ]
+    }
+  ]
+}

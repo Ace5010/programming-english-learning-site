@@ -1,5 +1,76 @@
 # 英语基础教程
 
+## 当前实现：2026-10-03 四组补充
+
+依据《英语基础分区补充与完善方案》在当前 `main` 工作目录实施。以下为实际页面内容；下方 2026-09-27 内容是早期实现记录，不是当前扩写数量。
+
+保留「基础概念与语法」「音标与发音」两个一级入口。发音首页仍是完整传统英式 44 音表，新增教程位于其下方的「进一步学习」。原 56 个可见主题与两篇样章继续可访问；本轮扩写 10 个等价主题，新增 11 个主题，形成 21 篇覆盖 A/B/C/D 的完整讲解，当前目录共 68 篇（包括独立名词角色样章）。每篇有具体疑问、中文解释、少量例词／例句、误用边界、可跳过互动及相关教程。词形与简单构词 E 组仅保留后续计划，本轮没有实施。
+
+| 批次／目标 | 实际页面 ID | 处理与教学内容 |
+| --- | --- | --- |
+| A1 动作句 | `foundation-word-order` | 扩写：从 I read. 到 I read a book.，区分谁、动作、整个对象词组，保留原喝水与读书例句 |
+| A2 be 句 | `foundation-be` | 扩写：动作／状态／身份对照，解释表语，保留 am/is/are 对应 |
+| A3 短句扩展 | `foundation-sentence-expand` | 新增：逐步加入对象、在家、每天晚上，五组完整拆解与整句点读 |
+| A4 修饰与完整词组 | `foundation-position` | 扩写：保留前置颜色／后置位置，对照 The girl in the room likes this book. 与短句核心 |
+| B0 音标入口 | `foundation-letter-sound` | 扩写：区分拼写、字母名称、音标和词中声音 |
+| B1 声音合成 | `foundation-blending` | 新增：map／ship 的单音分解、减少停顿与连续整词对照，固定英式 |
+| B2 字母组合 | `foundation-letter-combinations` | 新增：sh/ch/th，ship/chip、thin/this，同口音词对及例外边界 |
+| B3 词尾 e | `foundation-final-e` | 新增：pin/pine、kit/kite，have 反例；有中文、音标、完整词音频 |
+| B4 对应规律 | `foundation-spelling-correspondence` | 新增：see/sea、book/food，不把音质区别简化成拖长 |
+| B5 查证读音 | `foundation-dictionary` | 扩写：试读→音标→录音→修正→连回整词；保留原词性与语境查阅，通过互链衔接拼读 |
+| C1 方式副词 | `foundation-manner-adverbs` | 新增：He speaks slowly. 与 slow bus 对照，解释描述动作／描述事物 |
+| C2 频率副词 | `foundation-frequency-adverbs` | 新增：always/usually/often/sometimes/never，主要动作前／be 后，承认 sometimes 的多个自然位置 |
+| C3 并列与选择 | `foundation-and-or` | 新增：词组到完整句，菜单场景中的 and/or，不绝对化二选一 |
+| C4 转折 | `foundation-but` | 新增：累了但还能工作，先分别读懂两部分，再看预期改变 |
+| C5 因果 | `foundation-cause-result` | 新增：because 后接原因、so 引出本例结果，两句相同信息的重新组织 |
+| D1 音节／词重音 | `foundation-syllables` | 扩写：teacher/about 的声音分组、重音标记与完整词录音 |
+| D2 句子重点 | `foundation-sentence-stress` | 新增：相同 I want tea. 在“谁”和“什么”两种语境下的声音对比 |
+| D3 弱读 | `foundation-weak` | 扩写：I can swim.、a cup of tea，自然语流／独立单词实际对照，不把弱读等同删除 |
+| D4 连读 | `foundation-linking` | 扩写：Pick it up.、Turn it on. 的自然整句／逐词对照，标记不改变拼写 |
+| D5 停顿／语调 | `foundation-intonation` | 扩写：自然问答，以及连续回答／Yes 后明确停顿的同声线对比 |
+| D6 词尾 | `foundation-endings` | 扩写：cats/dogs/buses、walked/played/wanted，前一声音、清浊与多出音节的联系 |
+
+### 内容、声音与兼容落点
+
+`src/foundationTutorials.ts` 保存正文、分块、示范引用和可选互动。`foundationSamples.ts` 将其纳入基础专用音频流程；`foundationCourse.ts` 仅导出独立的 `foundationTutorialCatalog` 合并同 ID 页面，没有改变原 `foundationTopics`、`foundationLessons`、题目、前置关系或历史会话。新例句使用独立稳定 ID，不进入旧题池。`FoundationEnglish.tsx` 复用现有文章呈现、目录、上下篇与互链；新教程不调用自适应编排，不读写学习证据。
+
+基础专用双声线从 298 个文本／596 个 MP3 增至 **352 个不同文本、354 个录音版本／708 个 MP3**，本轮补充 54 个文本、2 个历史文本的教程专用版本，共 112 个录音。原 596 段录音和清单记录逐项保持不变；生成器按文本与哈希增量处理，4 个新录音复用了其他目录中完全相同的对应声线文件。新教程专用文本标记 `tutorialOnly`，不加入主课程的逐词慢读清单，不替换其既有声音源。
+
+本轮现在时 read 例句使用明确的合成发音覆盖：清单的 `ttsText` 以同音拼写 reed 控制 /riːd/（参照 [Cambridge 发音](https://dictionary.cambridge.org/us/pronunciation/english/reed)），页面仍显示 read。原 read 单词和 We read books. 录音保留，另有 `ft-*` 教程版本；只有新教程点读选择它们。其余新短句更新本轮刚生成的录音。清单分别保存显示英文、实际合成文本及哈希，URL 同步更新版本，不向 TTS 发送 IPA，也不改写历史声音。字符与声学距离的诊断只能提示歧义，不能代替逐音真人审校。
+
+`src/foundationDemos.ts` 另登记 **6 段固定示范**：Cambridge UK 的 map/ship 整词，以及美式 David 的两个句子重点、两个停顿版本。map/ship 与原音标表的本地英式 /m æ p ʃ ɪ/ 单音衔接；其他拼写词对统一使用美式 Aria/Guy。页面就地说明口音和固定声线，未无标记混合英美元音；IPA 不送进 TTS。
+
+重点／停顿对比用本机 SAPI 控制整句合成，保留相同英文和同一美式声线，示范用于放大差异。自然整句仍有原 Aria/Guy 对照。`demo-manifest.json` 保存原站地址或合成定义、声线、文本、大小及哈希；`foundationDemoVersions.json` 为播放 URL 提供文件版本，避免更新示范后听到旧缓存。
+
+新教程每条正常点读 1 倍，就地慢速 0.72 倍、保持音高。整句慢速保持一个连续录音，逐词区另提供独立单词；两者不互相冒充。原样章与其他分区的逐词慢读保持原行为。单音、整词、整句和固定示范共用原 `AudioPlayback`；换章／分区或播放另一段停止旧音，新材料失败在文章内提示重试。
+
+维护命令：
+
+```powershell
+node scripts/foundation-audio-inventory.mjs
+.venv\Scripts\python.exe tools/generate_foundation_audio.py --workers 6
+scripts\generate-foundation-demos.ps1
+```
+
+固定示范可以通过 `-Ids @('focus-i','focus-tea')` 只更新对应文件。SAPI 临时 WAV 和编码临时文件放在系统临时目录，完成后才替换公开 MP3，避免 Windows 文件占用令 Vite 监听器退出。没有新增语音付费服务、运行时密钥或全局环境依赖。
+
+### 本轮验收记录
+
+证据目录为 `artifacts/foundation-expansion/`，使用隔离浏览器数据。检查对应本轮最终源码，具体结果在浏览器和声音审计报告中记录。
+
+- `npx tsc --noEmit` 通过；`node --test tools/test-foundation.mjs` 14 项通过；`python tools/verify_foundation_audio.py` 完整解码 714 个文件，失败 0；`npm run build` 与 `npm run verify` 通过。
+- `node tools/test-foundation-browser.mjs` 最终 26 个场景全部通过，失败 0、页面异常 0。覆盖全部 21 篇的新交互，四套配色与 1440/390/320px，正常／慢速、两声线、真实英式单音、固定示范、断网本地播放、失败重试与换章停止；原两篇样章、所有可见主题、课程返回及损坏历史原文保留继续回归。早前脚本使用旧导航名称导致的失败报告保留在 `browser-navigation-test-failure.json`，改用当前“课程”名称后完整重跑通过。
+- `tools/audit-foundation-demos.py` 对实际重点／停顿 MP3 测量音高分布及内部停顿，确认存在声音差异，不能仅以加粗文字或播放事件代替。执行使用已有带 NumPy 的 `.runtime/slow-audio-venv/Scripts/python.exe`。
+- `connected-speech-audit.json` 另记录两声线弱读／连读示范的实际录音核对：Windows 英语离线识别器选出的句中 can 为 /kən/，独立 can 为 /kæn/，句中 of 为 /əv/；整句内部最长静音 0–90ms，没有逐词分解中的长间隔。识别器的词典发音选择和静音测量只提供自动核对线索，不是逐音转写；Guy 句中 can 的词级置信度很低，不能用它单独证明该音准确。
+- `node tools/test-phonemic-chart-browser.mjs` 15 个场景通过；`node tools/test-mobile-browser.mjs` 13 个场景通过。前者包含完整音标表与本地点读回归，后者检查原两区手机布局、键盘与答题控件。
+- `history-preservation.json` 记录原主题、旧课程与例词完全一致，596 段原录音无改写。起点已有改动的 822 个文件逐一 SHA-256 核对未变；无新分支、提交、推送或发布。
+
+生产 `dist` 中 714 段基础录音与 `public` 逐项 SHA-256 一致。`acceptance.json` 保存最终源码、清单和浏览器报告的哈希，以及本轮检查汇总；没有把中间失败报告当成最终结果。
+
+专业真人发音审校与 Android 真机听感未进行；声学对比和浏览器播放不等于发音能力认证。旧 BBC 外部视频仍是可选补充，先前未取得播放证据，本轮没有把它变成新教程的必要步骤。E 组词形与简单构词留待后续明确授权。
+
+## 早期实现与验收记录（2026-09-27）
+
 2026-09-27：英语基础为独立教学区，不套用编程／日常英语的动态练习流程。语法保留目录与样章；按用户本轮确认，发音入口改为完整可点读的英式音标表，原教程作为下方可展开的补充。
 
 ## 交互音标表

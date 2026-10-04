@@ -1,0 +1,2426 @@
+[
+  {
+    "round": 1,
+    "plan": {
+      "version": 1,
+      "round": 1,
+      "focusIds": [
+        "hello",
+        "hi",
+        "goodbye",
+        "bye"
+      ],
+      "newIds": [
+        "hello",
+        "hi",
+        "goodbye",
+        "bye"
+      ],
+      "sourceLessonId": "A1-01-01",
+      "budget": 12,
+      "seed": 1422306624
+    },
+    "answers": 12,
+    "readyIds": [],
+    "targets": {
+      "hello": {
+        "introducedAt": 1791021125209,
+        "confidence": 0.228,
+        "abilities": {
+          "writing": 0.132,
+          "meaning": 0.096
+        },
+        "lastSeenTurn": 12,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-daily:hello:letters-i68w2f",
+          "sig-daily:hello:meaning-1n6yth5"
+        ],
+        "transfer": false,
+        "readyAt": 0,
+        "speechMaterials": [
+          "hello"
+        ],
+        "contexts": [
+          "phrase:hello"
+        ],
+        "evidence": {
+          "recognition": {
+            "attempts": 1,
+            "independent": 1,
+            "assisted": 0,
+            "revealed": 0,
+            "elapsedMs": 66
+          }
+        },
+        "lastSessionId": "1791021125156-adaptive-631v7n",
+        "lastEvidenceAt": 1791021126014
+      },
+      "hi": {
+        "introducedAt": 1791021125209,
+        "confidence": 0.264,
+        "abilities": {
+          "meaning": 0.264
+        },
+        "lastSeenTurn": 10,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-daily:hi:expression-1deq5oh"
+        ],
+        "transfer": false,
+        "readyAt": 0,
+        "speechMaterials": [
+          "hi"
+        ],
+        "contexts": [
+          "phrase:hi"
+        ],
+        "evidence": {},
+        "lastSessionId": "1791021125156-adaptive-631v7n",
+        "lastEvidenceAt": 1791021126437
+      },
+      "goodbye": {
+        "introducedAt": 1791021125209,
+        "confidence": 0,
+        "abilities": {},
+        "lastSeenTurn": 9,
+        "lastFailureTurn": 0,
+        "signatures": [],
+        "transfer": false,
+        "readyAt": 0,
+        "speechMaterials": [
+          "goodbye"
+        ]
+      },
+      "bye": {
+        "introducedAt": 1791021125209,
+        "confidence": 0.384,
+        "abilities": {
+          "listening": 0.048,
+          "writing": 0.336
+        },
+        "lastSeenTurn": 11,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-daily:bye:listen-1qbfyn9",
+          "sig-daily:bye:write-gyro3p"
+        ],
+        "transfer": false,
+        "readyAt": 0,
+        "contexts": [
+          "phrase:bye"
+        ],
+        "evidence": {
+          "recognition": {
+            "attempts": 1,
+            "independent": 1,
+            "assisted": 0,
+            "revealed": 0,
+            "elapsedMs": 72
+          },
+          "recall": {
+            "attempts": 1,
+            "independent": 1,
+            "assisted": 0,
+            "revealed": 0,
+            "elapsedMs": 61
+          }
+        },
+        "lastSessionId": "1791021125156-adaptive-631v7n",
+        "lastEvidenceAt": 1791021126498,
+        "speechMaterials": [
+          "bye"
+        ],
+        "independentRecallAt": 1791021126498
+      }
+    },
+    "sequence": [
+      {
+        "id": "A1-01-01-p-hi-oral-repeat",
+        "kind": "speak",
+        "knowledgeIds": [
+          "hi"
+        ],
+        "signature": "daily:hi:hi:oral:repeat",
+        "outcome": "self",
+        "turn": 1
+      },
+      {
+        "id": "A1-01-01-p-bye-listen",
+        "kind": "listen",
+        "knowledgeIds": [
+          "bye"
+        ],
+        "signature": "daily:bye:listen",
+        "outcome": "independent",
+        "turn": 2
+      },
+      {
+        "id": "A1-01-01-p-hello-oral-repeat",
+        "kind": "speak",
+        "knowledgeIds": [
+          "hello"
+        ],
+        "signature": "daily:hello:hello:oral:repeat",
+        "outcome": "self",
+        "turn": 3
+      },
+      {
+        "id": "A1-01-01-p-hello-letters",
+        "kind": "fill",
+        "knowledgeIds": [
+          "hello"
+        ],
+        "signature": "daily:hello:letters",
+        "outcome": "independent",
+        "turn": 4
+      },
+      {
+        "id": "A1-01-01-p-hi-oral-recall",
+        "kind": "speak",
+        "knowledgeIds": [
+          "hi"
+        ],
+        "signature": "daily:hi:hi:oral:recall",
+        "outcome": "self",
+        "turn": 5
+      },
+      {
+        "id": "A1-01-01-p-goodbye-oral-answer",
+        "kind": "speak",
+        "knowledgeIds": [
+          "goodbye"
+        ],
+        "signature": "daily:goodbye:goodbye:oral:answer",
+        "outcome": "self",
+        "turn": 6
+      },
+      {
+        "id": "A1-01-01-p-hello-meaning",
+        "kind": "choice",
+        "knowledgeIds": [
+          "hello"
+        ],
+        "signature": "daily:hello:meaning",
+        "outcome": "independent",
+        "turn": 7
+      },
+      {
+        "id": "A1-01-01-p-bye-oral-answer",
+        "kind": "speak",
+        "knowledgeIds": [
+          "bye"
+        ],
+        "signature": "daily:bye:bye:oral:answer",
+        "outcome": "self",
+        "turn": 8
+      },
+      {
+        "id": "A1-01-06-p-goodbye-oral-repeat",
+        "kind": "speak",
+        "knowledgeIds": [
+          "goodbye"
+        ],
+        "signature": "daily:goodbye:goodbye:oral:repeat",
+        "outcome": "self",
+        "turn": 9
+      },
+      {
+        "id": "A1-01-01-p-hi-expression",
+        "kind": "choice",
+        "knowledgeIds": [
+          "hi"
+        ],
+        "signature": "daily:hi:expression",
+        "outcome": "independent",
+        "turn": 10
+      },
+      {
+        "id": "A1-01-01-p-bye-write",
+        "kind": "write",
+        "knowledgeIds": [
+          "bye"
+        ],
+        "signature": "daily:bye:write",
+        "outcome": "independent",
+        "turn": 11
+      },
+      {
+        "id": "A1-01-01-p-hello-oral-answer",
+        "kind": "speak",
+        "knowledgeIds": [
+          "hello"
+        ],
+        "signature": "daily:hello:hello:oral:answer",
+        "outcome": "self",
+        "turn": 12
+      }
+    ]
+  },
+  {
+    "round": 2,
+    "plan": {
+      "version": 1,
+      "round": 2,
+      "focusIds": [
+        "goodbye",
+        "hello",
+        "hi",
+        "bye"
+      ],
+      "newIds": [],
+      "sourceLessonId": "A1-01-01",
+      "budget": 16,
+      "seed": 1422306624
+    },
+    "answers": 16,
+    "readyIds": [],
+    "targets": {
+      "hello": {
+        "introducedAt": 1791021125209,
+        "confidence": 0.492,
+        "abilities": {
+          "writing": 0.132,
+          "meaning": 0.36
+        },
+        "lastSeenTurn": 28,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-daily:hello:letters-i68w2f",
+          "sig-daily:hello:meaning-1n6yth5",
+          "sig-daily:hello:expression-xkkmxc"
+        ],
+        "transfer": false,
+        "readyAt": 0,
+        "speechMaterials": [
+          "hello"
+        ],
+        "contexts": [
+          "phrase:hello"
+        ],
+        "evidence": {
+          "recognition": {
+            "attempts": 1,
+            "independent": 1,
+            "assisted": 0,
+            "revealed": 0,
+            "elapsedMs": 66
+          }
+        },
+        "lastSessionId": "1791021127888-adaptive-631v7n",
+        "lastEvidenceAt": 1791021129048
+      },
+      "hi": {
+        "introducedAt": 1791021125209,
+        "confidence": 0.6000000000000001,
+        "abilities": {
+          "meaning": 0.264,
+          "writing": 0.336
+        },
+        "lastSeenTurn": 21,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-daily:hi:expression-1deq5oh",
+          "sig-daily:hi:write-vanw8y"
+        ],
+        "transfer": false,
+        "readyAt": 0,
+        "speechMaterials": [
+          "hi"
+        ],
+        "contexts": [
+          "phrase:hi"
+        ],
+        "evidence": {
+          "recall": {
+            "attempts": 1,
+            "independent": 1,
+            "assisted": 0,
+            "revealed": 0,
+            "elapsedMs": 56
+          },
+          "laterSession": {
+            "attempts": 1,
+            "independent": 1,
+            "assisted": 0,
+            "revealed": 0,
+            "elapsedMs": 56
+          }
+        },
+        "lastSessionId": "1791021127888-adaptive-631v7n",
+        "lastEvidenceAt": 1791021128304,
+        "independentRecallAt": 1791021128304
+      },
+      "goodbye": {
+        "introducedAt": 1791021125209,
+        "confidence": 0.516,
+        "abilities": {
+          "meaning": 0.132,
+          "listening": 0.048,
+          "writing": 0.336
+        },
+        "lastSeenTurn": 27,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-daily:goodbye:expression-1stu4b5",
+          "sig-daily:original:A1-01-01-e02-99xsl",
+          "sig-daily:original:A1-01-06-e04-1g2n1fm"
+        ],
+        "transfer": false,
+        "readyAt": 0,
+        "speechMaterials": [
+          "goodbye"
+        ],
+        "contexts": [
+          "phrase:goodbye"
+        ],
+        "evidence": {
+          "recognition": {
+            "attempts": 1,
+            "independent": 1,
+            "assisted": 0,
+            "revealed": 0,
+            "elapsedMs": 72
+          },
+          "recall": {
+            "attempts": 1,
+            "independent": 1,
+            "assisted": 0,
+            "revealed": 0,
+            "elapsedMs": 67
+          }
+        },
+        "lastSessionId": "1791021127888-adaptive-631v7n",
+        "lastEvidenceAt": 1791021129115,
+        "independentRecallAt": 1791021129115
+      },
+      "bye": {
+        "introducedAt": 1791021125209,
+        "confidence": 0.516,
+        "abilities": {
+          "listening": 0.048,
+          "writing": 0.336,
+          "meaning": 0.132
+        },
+        "lastSeenTurn": 26,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-daily:bye:listen-1qbfyn9",
+          "sig-daily:bye:write-gyro3p",
+          "sig-daily:bye:expression-1gbc3e0"
+        ],
+        "transfer": false,
+        "readyAt": 0,
+        "contexts": [
+          "phrase:bye"
+        ],
+        "evidence": {
+          "recognition": {
+            "attempts": 1,
+            "independent": 1,
+            "assisted": 0,
+            "revealed": 0,
+            "elapsedMs": 72
+          },
+          "recall": {
+            "attempts": 1,
+            "independent": 1,
+            "assisted": 0,
+            "revealed": 0,
+            "elapsedMs": 61
+          }
+        },
+        "lastSessionId": "1791021127888-adaptive-631v7n",
+        "lastEvidenceAt": 1791021129431,
+        "speechMaterials": [
+          "bye"
+        ],
+        "independentRecallAt": 1791021126498
+      }
+    },
+    "sequence": [
+      {
+        "id": "A1-01-01-p-goodbye-oral-repeat",
+        "kind": "speak",
+        "knowledgeIds": [
+          "goodbye"
+        ],
+        "signature": "daily:goodbye:goodbye:oral:repeat",
+        "outcome": "self",
+        "turn": 13
+      },
+      {
+        "id": "A1-01-01-p-goodbye-expression",
+        "kind": "choice",
+        "knowledgeIds": [
+          "goodbye"
+        ],
+        "signature": "daily:goodbye:expression",
+        "outcome": "independent",
+        "turn": 14
+      },
+      {
+        "id": "A1-01-01-p-hello-oral-answer",
+        "kind": "speak",
+        "knowledgeIds": [
+          "hello"
+        ],
+        "signature": "daily:hello:hello:oral:answer",
+        "outcome": "self",
+        "turn": 15
+      },
+      {
+        "id": "A1-01-01-p-hi-write",
+        "kind": "write",
+        "knowledgeIds": [
+          "hi"
+        ],
+        "signature": "daily:hi:write",
+        "outcome": "independent",
+        "turn": 16
+      },
+      {
+        "id": "A1-01-01-p-hi-oral-answer",
+        "kind": "speak",
+        "knowledgeIds": [
+          "hi"
+        ],
+        "signature": "daily:hi:hi:oral:answer",
+        "outcome": "self",
+        "turn": 17
+      },
+      {
+        "id": "A1-01-01-p-goodbye-oral-answer",
+        "kind": "speak",
+        "knowledgeIds": [
+          "goodbye"
+        ],
+        "signature": "daily:goodbye:goodbye:oral:answer",
+        "outcome": "self",
+        "turn": 18
+      },
+      {
+        "id": "A1-01-01-e02",
+        "kind": "listen",
+        "knowledgeIds": [
+          "goodbye"
+        ],
+        "signature": "daily:original:A1-01-01-e02",
+        "outcome": "independent",
+        "turn": 19
+      },
+      {
+        "id": "A1-01-01-p-bye-oral-answer",
+        "kind": "speak",
+        "knowledgeIds": [
+          "bye"
+        ],
+        "signature": "daily:bye:bye:oral:answer",
+        "outcome": "self",
+        "turn": 20
+      },
+      {
+        "id": "A1-01-01-p-hi-oral-recall",
+        "kind": "speak",
+        "knowledgeIds": [
+          "hi"
+        ],
+        "signature": "daily:hi:hi:oral:recall",
+        "outcome": "self",
+        "turn": 21
+      },
+      {
+        "id": "A1-01-01-p-hello-expression",
+        "kind": "choice",
+        "knowledgeIds": [
+          "hello"
+        ],
+        "signature": "daily:hello:expression",
+        "outcome": "independent",
+        "turn": 22
+      },
+      {
+        "id": "A1-01-06-e04",
+        "kind": "write",
+        "knowledgeIds": [
+          "goodbye"
+        ],
+        "signature": "daily:original:A1-01-06-e04",
+        "outcome": "independent",
+        "turn": 23
+      },
+      {
+        "id": "A1-01-01-p-bye-oral-repeat",
+        "kind": "speak",
+        "knowledgeIds": [
+          "bye"
+        ],
+        "signature": "daily:bye:bye:oral:repeat",
+        "outcome": "self",
+        "turn": 24
+      },
+      {
+        "id": "A1-01-01-p-bye-oral-recall",
+        "kind": "speak",
+        "knowledgeIds": [
+          "bye"
+        ],
+        "signature": "daily:bye:bye:oral:recall",
+        "outcome": "self",
+        "turn": 25
+      },
+      {
+        "id": "A1-01-01-p-bye-expression",
+        "kind": "choice",
+        "knowledgeIds": [
+          "bye"
+        ],
+        "signature": "daily:bye:expression",
+        "outcome": "independent",
+        "turn": 26
+      },
+      {
+        "id": "A1-01-06-p-goodbye-oral-recall",
+        "kind": "speak",
+        "knowledgeIds": [
+          "goodbye"
+        ],
+        "signature": "daily:goodbye:goodbye:oral:recall",
+        "outcome": "self",
+        "turn": 27
+      },
+      {
+        "id": "A1-01-01-p-hello-oral-repeat",
+        "kind": "speak",
+        "knowledgeIds": [
+          "hello"
+        ],
+        "signature": "daily:hello:hello:oral:repeat",
+        "outcome": "self",
+        "turn": 28
+      }
+    ]
+  },
+  {
+    "round": 3,
+    "plan": {
+      "version": 1,
+      "round": 3,
+      "focusIds": [
+        "hello",
+        "bye",
+        "goodbye",
+        "i-am-ben"
+      ],
+      "newIds": [
+        "i-am-ben"
+      ],
+      "sourceLessonId": "A1-01-02",
+      "budget": 12,
+      "seed": 1422306624
+    },
+    "answers": 12,
+    "readyIds": [],
+    "targets": {
+      "hello": {
+        "introducedAt": 1791021125209,
+        "confidence": 0.8280000000000001,
+        "abilities": {
+          "writing": 0.468,
+          "meaning": 0.36
+        },
+        "lastSeenTurn": 39,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-daily:hello:letters-i68w2f",
+          "sig-daily:hello:meaning-1n6yth5",
+          "sig-daily:hello:expression-xkkmxc",
+          "sig-daily:hello:write-85j8t"
+        ],
+        "transfer": false,
+        "readyAt": 0,
+        "speechMaterials": [
+          "hello"
+        ],
+        "contexts": [
+          "phrase:hello"
+        ],
+        "evidence": {
+          "recognition": {
+            "attempts": 1,
+            "independent": 1,
+            "assisted": 0,
+            "revealed": 0,
+            "elapsedMs": 66
+          },
+          "recall": {
+            "attempts": 1,
+            "independent": 1,
+            "assisted": 0,
+            "revealed": 0,
+            "elapsedMs": 84
+          },
+          "laterSession": {
+            "attempts": 1,
+            "independent": 1,
+            "assisted": 0,
+            "revealed": 0,
+            "elapsedMs": 84
+          }
+        },
+        "lastSessionId": "1791021130987-adaptive-631v7n",
+        "lastEvidenceAt": 1791021132176,
+        "independentRecallAt": 1791021132176
+      },
+      "hi": {
+        "introducedAt": 1791021125209,
+        "confidence": 0.6000000000000001,
+        "abilities": {
+          "meaning": 0.264,
+          "writing": 0.336
+        },
+        "lastSeenTurn": 40,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-daily:hi:expression-1deq5oh",
+          "sig-daily:hi:write-vanw8y"
+        ],
+        "transfer": false,
+        "readyAt": 0,
+        "speechMaterials": [
+          "hi"
+        ],
+        "contexts": [
+          "phrase:hi"
+        ],
+        "evidence": {
+          "recall": {
+            "attempts": 1,
+            "independent": 1,
+            "assisted": 0,
+            "revealed": 0,
+            "elapsedMs": 56
+          },
+          "laterSession": {
+            "attempts": 1,
+            "independent": 1,
+            "assisted": 0,
+            "revealed": 0,
+            "elapsedMs": 56
+          }
+        },
+        "lastSessionId": "1791021127888-adaptive-631v7n",
+        "lastEvidenceAt": 1791021128304,
+        "independentRecallAt": 1791021128304
+      },
+      "goodbye": {
+        "introducedAt": 1791021125209,
+        "confidence": 0.516,
+        "abilities": {
+          "meaning": 0.132,
+          "listening": 0.048,
+          "writing": 0.336
+        },
+        "lastSeenTurn": 37,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-daily:goodbye:expression-1stu4b5",
+          "sig-daily:original:A1-01-01-e02-99xsl",
+          "sig-daily:original:A1-01-06-e04-1g2n1fm"
+        ],
+        "transfer": false,
+        "readyAt": 0,
+        "speechMaterials": [
+          "goodbye"
+        ],
+        "contexts": [
+          "phrase:goodbye"
+        ],
+        "evidence": {
+          "recognition": {
+            "attempts": 1,
+            "independent": 1,
+            "assisted": 0,
+            "revealed": 0,
+            "elapsedMs": 72
+          },
+          "recall": {
+            "attempts": 1,
+            "independent": 1,
+            "assisted": 0,
+            "revealed": 0,
+            "elapsedMs": 67
+          }
+        },
+        "lastSessionId": "1791021127888-adaptive-631v7n",
+        "lastEvidenceAt": 1791021129115,
+        "independentRecallAt": 1791021129115
+      },
+      "bye": {
+        "introducedAt": 1791021125209,
+        "confidence": 0.9936,
+        "abilities": {
+          "listening": 0.312,
+          "writing": 0.4536,
+          "meaning": 0.228
+        },
+        "lastSeenTurn": 38,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-daily:bye:listen-1qbfyn9",
+          "sig-daily:bye:expression-1gbc3e0",
+          "sig-daily:bye:write-gyro3p",
+          "sig-daily:original:A1-01-01-r01-14hv829",
+          "sig-daily:bye:meaning-1m86ikh"
+        ],
+        "transfer": false,
+        "readyAt": 0,
+        "contexts": [
+          "phrase:bye"
+        ],
+        "evidence": {
+          "recognition": {
+            "attempts": 2,
+            "independent": 2,
+            "assisted": 0,
+            "revealed": 0,
+            "elapsedMs": 160
+          },
+          "recall": {
+            "attempts": 2,
+            "independent": 2,
+            "assisted": 0,
+            "revealed": 0,
+            "elapsedMs": 123
+          },
+          "laterSession": {
+            "attempts": 1,
+            "independent": 1,
+            "assisted": 0,
+            "revealed": 0,
+            "elapsedMs": 62
+          }
+        },
+        "lastSessionId": "1791021130987-adaptive-631v7n",
+        "lastEvidenceAt": 1791021132092,
+        "speechMaterials": [
+          "bye"
+        ],
+        "independentRecallAt": 1791021131421
+      },
+      "i-am-ben": {
+        "introducedAt": 1791021131033,
+        "confidence": 0.048,
+        "abilities": {
+          "meaning": 0.048
+        },
+        "lastSeenTurn": 36,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-daily:i-am-ben:meaning-y3vt4d"
+        ],
+        "transfer": false,
+        "readyAt": 0,
+        "speechMaterials": [
+          "i-am-ben"
+        ],
+        "contexts": [
+          "phrase:i-am-ben"
+        ],
+        "evidence": {
+          "recognition": {
+            "attempts": 1,
+            "independent": 1,
+            "assisted": 0,
+            "revealed": 0,
+            "elapsedMs": 84
+          }
+        },
+        "lastSessionId": "1791021130987-adaptive-631v7n",
+        "lastEvidenceAt": 1791021131243
+      }
+    },
+    "sequence": [
+      {
+        "id": "A1-01-02-p-i-am-ben-oral-repeat",
+        "kind": "speak",
+        "knowledgeIds": [
+          "i-am-ben"
+        ],
+        "signature": "daily:i-am-ben:i-am-ben:oral:repeat",
+        "outcome": "self",
+        "turn": 29
+      },
+      {
+        "id": "A1-01-02-p-i-am-ben-meaning",
+        "kind": "choice",
+        "knowledgeIds": [
+          "i-am-ben"
+        ],
+        "signature": "daily:i-am-ben:meaning",
+        "outcome": "independent",
+        "turn": 30
+      },
+      {
+        "id": "A1-01-01-p-hello-oral-answer",
+        "kind": "speak",
+        "knowledgeIds": [
+          "hello"
+        ],
+        "signature": "daily:hello:hello:oral:answer",
+        "outcome": "self",
+        "turn": 31
+      },
+      {
+        "id": "A1-01-01-p-bye-write",
+        "kind": "write",
+        "knowledgeIds": [
+          "bye"
+        ],
+        "signature": "daily:bye:write",
+        "outcome": "independent",
+        "turn": 32
+      },
+      {
+        "id": "A1-01-01-p-hi-oral-answer",
+        "kind": "speak",
+        "knowledgeIds": [
+          "hi"
+        ],
+        "signature": "daily:hi:hi:oral:answer",
+        "outcome": "self",
+        "turn": 33
+      },
+      {
+        "id": "A1-01-01-p-goodbye-oral-answer",
+        "kind": "speak",
+        "knowledgeIds": [
+          "goodbye"
+        ],
+        "signature": "daily:goodbye:goodbye:oral:answer",
+        "outcome": "self",
+        "turn": 34
+      },
+      {
+        "id": "A1-01-01-r01",
+        "kind": "listen",
+        "knowledgeIds": [
+          "bye"
+        ],
+        "signature": "daily:original:A1-01-01-r01",
+        "outcome": "independent",
+        "turn": 35
+      },
+      {
+        "id": "A1-01-05-p-i-am-ben-oral-recall",
+        "kind": "speak",
+        "knowledgeIds": [
+          "i-am-ben"
+        ],
+        "signature": "daily:i-am-ben:i-am-ben:oral:recall",
+        "outcome": "self",
+        "turn": 36
+      },
+      {
+        "id": "A1-01-01-p-goodbye-oral-recall",
+        "kind": "speak",
+        "knowledgeIds": [
+          "goodbye"
+        ],
+        "signature": "daily:goodbye:goodbye:oral:recall",
+        "outcome": "self",
+        "turn": 37
+      },
+      {
+        "id": "A1-01-01-p-bye-meaning",
+        "kind": "choice",
+        "knowledgeIds": [
+          "bye"
+        ],
+        "signature": "daily:bye:meaning",
+        "outcome": "independent",
+        "turn": 38
+      },
+      {
+        "id": "A1-01-01-p-hello-write",
+        "kind": "write",
+        "knowledgeIds": [
+          "hello"
+        ],
+        "signature": "daily:hello:write",
+        "outcome": "independent",
+        "turn": 39
+      },
+      {
+        "id": "A1-01-01-p-hi-oral-recall",
+        "kind": "speak",
+        "knowledgeIds": [
+          "hi"
+        ],
+        "signature": "daily:hi:hi:oral:recall",
+        "outcome": "self",
+        "turn": 40
+      }
+    ]
+  },
+  {
+    "round": 4,
+    "plan": {
+      "version": 1,
+      "round": 4,
+      "focusIds": [
+        "i-am-ben",
+        "goodbye",
+        "hi",
+        "i-am-mia"
+      ],
+      "newIds": [
+        "i-am-mia"
+      ],
+      "sourceLessonId": "A1-01-02",
+      "budget": 13,
+      "seed": 1422306624
+    },
+    "answers": 13,
+    "readyIds": [
+      "goodbye"
+    ],
+    "targets": {
+      "hello": {
+        "introducedAt": 1791021125209,
+        "confidence": 0.8280000000000001,
+        "abilities": {
+          "writing": 0.468,
+          "meaning": 0.36
+        },
+        "lastSeenTurn": 39,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-daily:hello:letters-i68w2f",
+          "sig-daily:hello:meaning-1n6yth5",
+          "sig-daily:hello:expression-xkkmxc",
+          "sig-daily:hello:write-85j8t"
+        ],
+        "transfer": false,
+        "readyAt": 0,
+        "speechMaterials": [
+          "hello"
+        ],
+        "contexts": [
+          "phrase:hello"
+        ],
+        "evidence": {
+          "recognition": {
+            "attempts": 1,
+            "independent": 1,
+            "assisted": 0,
+            "revealed": 0,
+            "elapsedMs": 66
+          },
+          "recall": {
+            "attempts": 1,
+            "independent": 1,
+            "assisted": 0,
+            "revealed": 0,
+            "elapsedMs": 84
+          },
+          "laterSession": {
+            "attempts": 1,
+            "independent": 1,
+            "assisted": 0,
+            "revealed": 0,
+            "elapsedMs": 84
+          }
+        },
+        "lastSessionId": "1791021130987-adaptive-631v7n",
+        "lastEvidenceAt": 1791021132176,
+        "independentRecallAt": 1791021132176
+      },
+      "hi": {
+        "introducedAt": 1791021125209,
+        "confidence": 0.6960000000000001,
+        "abilities": {
+          "meaning": 0.36,
+          "writing": 0.336
+        },
+        "lastSeenTurn": 52,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-daily:hi:expression-1deq5oh",
+          "sig-daily:hi:write-vanw8y",
+          "sig-daily:hi:meaning-txk7vi"
+        ],
+        "transfer": false,
+        "readyAt": 0,
+        "speechMaterials": [
+          "hi"
+        ],
+        "contexts": [
+          "phrase:hi"
+        ],
+        "evidence": {
+          "recall": {
+            "attempts": 1,
+            "independent": 1,
+            "assisted": 0,
+            "revealed": 0,
+            "elapsedMs": 56
+          },
+          "laterSession": {
+            "attempts": 1,
+            "independent": 1,
+            "assisted": 0,
+            "revealed": 0,
+            "elapsedMs": 56
+          },
+          "recognition": {
+            "attempts": 1,
+            "independent": 1,
+            "assisted": 0,
+            "revealed": 0,
+            "elapsedMs": 93
+          }
+        },
+        "lastSessionId": "1791021133644-adaptive-631v7n",
+        "lastEvidenceAt": 1791021134504,
+        "independentRecallAt": 1791021128304
+      },
+      "goodbye": {
+        "introducedAt": 1791021125209,
+        "confidence": 0.8520000000000001,
+        "abilities": {
+          "meaning": 0.132,
+          "listening": 0.048,
+          "writing": 0.672
+        },
+        "lastSeenTurn": 51,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-daily:goodbye:expression-1stu4b5",
+          "sig-daily:original:A1-01-01-e02-99xsl",
+          "sig-daily:original:A1-01-06-e04-1g2n1fm",
+          "sig-daily:goodbye:write-1wrameq"
+        ],
+        "transfer": false,
+        "readyAt": 1791021135004,
+        "speechMaterials": [
+          "goodbye"
+        ],
+        "contexts": [
+          "phrase:goodbye"
+        ],
+        "evidence": {
+          "recognition": {
+            "attempts": 1,
+            "independent": 1,
+            "assisted": 0,
+            "revealed": 0,
+            "elapsedMs": 72
+          },
+          "recall": {
+            "attempts": 2,
+            "independent": 2,
+            "assisted": 0,
+            "revealed": 0,
+            "elapsedMs": 173
+          },
+          "laterSession": {
+            "attempts": 1,
+            "independent": 1,
+            "assisted": 0,
+            "revealed": 0,
+            "elapsedMs": 106
+          }
+        },
+        "lastSessionId": "1791021133644-adaptive-631v7n",
+        "lastEvidenceAt": 1791021135004,
+        "independentRecallAt": 1791021135004
+      },
+      "bye": {
+        "introducedAt": 1791021125209,
+        "confidence": 0.9936,
+        "abilities": {
+          "listening": 0.312,
+          "writing": 0.4536,
+          "meaning": 0.228
+        },
+        "lastSeenTurn": 38,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-daily:bye:listen-1qbfyn9",
+          "sig-daily:bye:expression-1gbc3e0",
+          "sig-daily:bye:write-gyro3p",
+          "sig-daily:original:A1-01-01-r01-14hv829",
+          "sig-daily:bye:meaning-1m86ikh"
+        ],
+        "transfer": false,
+        "readyAt": 0,
+        "contexts": [
+          "phrase:bye"
+        ],
+        "evidence": {
+          "recognition": {
+            "attempts": 2,
+            "independent": 2,
+            "assisted": 0,
+            "revealed": 0,
+            "elapsedMs": 160
+          },
+          "recall": {
+            "attempts": 2,
+            "independent": 2,
+            "assisted": 0,
+            "revealed": 0,
+            "elapsedMs": 123
+          },
+          "laterSession": {
+            "attempts": 1,
+            "independent": 1,
+            "assisted": 0,
+            "revealed": 0,
+            "elapsedMs": 62
+          }
+        },
+        "lastSessionId": "1791021130987-adaptive-631v7n",
+        "lastEvidenceAt": 1791021132092,
+        "speechMaterials": [
+          "bye"
+        ],
+        "independentRecallAt": 1791021131421
+      },
+      "i-am-ben": {
+        "introducedAt": 1791021131033,
+        "confidence": 0.1776,
+        "abilities": {
+          "meaning": 0.0816,
+          "listening": 0.096
+        },
+        "lastSeenTurn": 53,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-daily:i-am-ben:listen-m5cjxd",
+          "sig-daily:i-am-ben:meaning-y3vt4d"
+        ],
+        "transfer": false,
+        "readyAt": 0,
+        "speechMaterials": [
+          "i-am-ben"
+        ],
+        "contexts": [
+          "phrase:i-am-ben"
+        ],
+        "evidence": {
+          "recognition": {
+            "attempts": 3,
+            "independent": 3,
+            "assisted": 0,
+            "revealed": 0,
+            "elapsedMs": 273
+          }
+        },
+        "lastSessionId": "1791021133644-adaptive-631v7n",
+        "lastEvidenceAt": 1791021134898
+      },
+      "i-am-mia": {
+        "introducedAt": 1791021133690,
+        "confidence": 0.336,
+        "abilities": {
+          "writing": 0.336
+        },
+        "lastSeenTurn": 49,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-daily:i-am-mia:write-1u8y55x"
+        ],
+        "transfer": false,
+        "readyAt": 0,
+        "speechMaterials": [
+          "i-am-mia"
+        ],
+        "contexts": [
+          "phrase:i-am-mia"
+        ],
+        "independentRecallAt": 1791021134126,
+        "evidence": {
+          "recall": {
+            "attempts": 1,
+            "independent": 1,
+            "assisted": 0,
+            "revealed": 0,
+            "elapsedMs": 72
+          }
+        },
+        "lastSessionId": "1791021133644-adaptive-631v7n",
+        "lastEvidenceAt": 1791021134126
+      }
+    },
+    "sequence": [
+      {
+        "id": "A1-01-02-p-i-am-mia-oral-repeat",
+        "kind": "speak",
+        "knowledgeIds": [
+          "i-am-mia"
+        ],
+        "signature": "daily:i-am-mia:i-am-mia:oral:repeat",
+        "outcome": "self",
+        "turn": 41
+      },
+      {
+        "id": "A1-01-05-p-i-am-ben-listen",
+        "kind": "listen",
+        "knowledgeIds": [
+          "i-am-ben"
+        ],
+        "signature": "daily:i-am-ben:listen",
+        "outcome": "independent",
+        "turn": 42
+      },
+      {
+        "id": "A1-01-01-p-hi-oral-recall",
+        "kind": "speak",
+        "knowledgeIds": [
+          "hi"
+        ],
+        "signature": "daily:hi:hi:oral:recall",
+        "outcome": "self",
+        "turn": 43
+      },
+      {
+        "id": "A1-01-02-p-i-am-mia-write",
+        "kind": "write",
+        "knowledgeIds": [
+          "i-am-mia"
+        ],
+        "signature": "daily:i-am-mia:write",
+        "outcome": "independent",
+        "turn": 44
+      },
+      {
+        "id": "A1-01-01-p-goodbye-oral-repeat",
+        "kind": "speak",
+        "knowledgeIds": [
+          "goodbye"
+        ],
+        "signature": "daily:goodbye:goodbye:oral:repeat",
+        "outcome": "self",
+        "turn": 45
+      },
+      {
+        "id": "A1-01-02-p-i-am-ben-oral-repeat",
+        "kind": "speak",
+        "knowledgeIds": [
+          "i-am-ben"
+        ],
+        "signature": "daily:i-am-ben:i-am-ben:oral:repeat",
+        "outcome": "self",
+        "turn": 46
+      },
+      {
+        "id": "A1-01-01-p-hi-meaning",
+        "kind": "choice",
+        "knowledgeIds": [
+          "hi"
+        ],
+        "signature": "daily:hi:meaning",
+        "outcome": "independent",
+        "turn": 47
+      },
+      {
+        "id": "A1-01-06-p-goodbye-oral-recall",
+        "kind": "speak",
+        "knowledgeIds": [
+          "goodbye"
+        ],
+        "signature": "daily:goodbye:goodbye:oral:recall",
+        "outcome": "self",
+        "turn": 48
+      },
+      {
+        "id": "A1-01-02-p-i-am-mia-oral-recall",
+        "kind": "speak",
+        "knowledgeIds": [
+          "i-am-mia"
+        ],
+        "signature": "daily:i-am-mia:i-am-mia:oral:recall",
+        "outcome": "self",
+        "turn": 49
+      },
+      {
+        "id": "A1-01-05-p-i-am-ben-meaning",
+        "kind": "choice",
+        "knowledgeIds": [
+          "i-am-ben"
+        ],
+        "signature": "daily:i-am-ben:meaning",
+        "outcome": "independent",
+        "turn": 50
+      },
+      {
+        "id": "A1-01-01-p-goodbye-write",
+        "kind": "write",
+        "knowledgeIds": [
+          "goodbye"
+        ],
+        "signature": "daily:goodbye:write",
+        "outcome": "independent",
+        "turn": 51
+      },
+      {
+        "id": "A1-01-01-p-hi-oral-repeat",
+        "kind": "speak",
+        "knowledgeIds": [
+          "hi"
+        ],
+        "signature": "daily:hi:hi:oral:repeat",
+        "outcome": "self",
+        "turn": 52
+      },
+      {
+        "id": "A1-01-05-p-i-am-ben-oral-recall",
+        "kind": "speak",
+        "knowledgeIds": [
+          "i-am-ben"
+        ],
+        "signature": "daily:i-am-ben:i-am-ben:oral:recall",
+        "outcome": "self",
+        "turn": 53
+      }
+    ]
+  },
+  {
+    "round": 5,
+    "plan": {
+      "version": 1,
+      "round": 5,
+      "focusIds": [
+        "i-am-ben",
+        "i-am-mia",
+        "hi",
+        "im-ben"
+      ],
+      "newIds": [
+        "im-ben"
+      ],
+      "sourceLessonId": "A1-01-02",
+      "budget": 14,
+      "seed": 1422306624
+    },
+    "answers": 14,
+    "readyIds": [
+      "goodbye"
+    ],
+    "targets": {
+      "hello": {
+        "introducedAt": 1791021125209,
+        "confidence": 0.8280000000000001,
+        "abilities": {
+          "writing": 0.468,
+          "meaning": 0.36
+        },
+        "lastSeenTurn": 39,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-daily:hello:letters-i68w2f",
+          "sig-daily:hello:meaning-1n6yth5",
+          "sig-daily:hello:expression-xkkmxc",
+          "sig-daily:hello:write-85j8t"
+        ],
+        "transfer": false,
+        "readyAt": 0,
+        "speechMaterials": [
+          "hello"
+        ],
+        "contexts": [
+          "phrase:hello"
+        ],
+        "evidence": {
+          "recognition": {
+            "attempts": 1,
+            "independent": 1,
+            "assisted": 0,
+            "revealed": 0,
+            "elapsedMs": 66
+          },
+          "recall": {
+            "attempts": 1,
+            "independent": 1,
+            "assisted": 0,
+            "revealed": 0,
+            "elapsedMs": 84
+          },
+          "laterSession": {
+            "attempts": 1,
+            "independent": 1,
+            "assisted": 0,
+            "revealed": 0,
+            "elapsedMs": 84
+          }
+        },
+        "lastSessionId": "1791021130987-adaptive-631v7n",
+        "lastEvidenceAt": 1791021132176,
+        "independentRecallAt": 1791021132176
+      },
+      "hi": {
+        "introducedAt": 1791021125209,
+        "confidence": 0.6960000000000001,
+        "abilities": {
+          "meaning": 0.36,
+          "writing": 0.336
+        },
+        "lastSeenTurn": 65,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-daily:hi:expression-1deq5oh",
+          "sig-daily:hi:write-vanw8y",
+          "sig-daily:hi:meaning-txk7vi"
+        ],
+        "transfer": false,
+        "readyAt": 0,
+        "speechMaterials": [
+          "hi"
+        ],
+        "contexts": [
+          "phrase:hi"
+        ],
+        "evidence": {
+          "recall": {
+            "attempts": 1,
+            "independent": 1,
+            "assisted": 0,
+            "revealed": 0,
+            "elapsedMs": 56
+          },
+          "laterSession": {
+            "attempts": 1,
+            "independent": 1,
+            "assisted": 0,
+            "revealed": 0,
+            "elapsedMs": 56
+          },
+          "recognition": {
+            "attempts": 1,
+            "independent": 1,
+            "assisted": 0,
+            "revealed": 0,
+            "elapsedMs": 93
+          }
+        },
+        "lastSessionId": "1791021133644-adaptive-631v7n",
+        "lastEvidenceAt": 1791021134504,
+        "independentRecallAt": 1791021128304
+      },
+      "goodbye": {
+        "introducedAt": 1791021125209,
+        "confidence": 0.8520000000000001,
+        "abilities": {
+          "meaning": 0.132,
+          "listening": 0.048,
+          "writing": 0.672
+        },
+        "lastSeenTurn": 66,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-daily:goodbye:expression-1stu4b5",
+          "sig-daily:original:A1-01-01-e02-99xsl",
+          "sig-daily:original:A1-01-06-e04-1g2n1fm",
+          "sig-daily:goodbye:write-1wrameq"
+        ],
+        "transfer": false,
+        "readyAt": 1791021135004,
+        "speechMaterials": [
+          "goodbye"
+        ],
+        "contexts": [
+          "phrase:goodbye"
+        ],
+        "evidence": {
+          "recognition": {
+            "attempts": 1,
+            "independent": 1,
+            "assisted": 0,
+            "revealed": 0,
+            "elapsedMs": 72
+          },
+          "recall": {
+            "attempts": 2,
+            "independent": 2,
+            "assisted": 0,
+            "revealed": 0,
+            "elapsedMs": 173
+          },
+          "laterSession": {
+            "attempts": 1,
+            "independent": 1,
+            "assisted": 0,
+            "revealed": 0,
+            "elapsedMs": 106
+          }
+        },
+        "lastSessionId": "1791021133644-adaptive-631v7n",
+        "lastEvidenceAt": 1791021135004,
+        "independentRecallAt": 1791021135004
+      },
+      "bye": {
+        "introducedAt": 1791021125209,
+        "confidence": 1,
+        "abilities": {
+          "listening": 0.40800000000000003,
+          "writing": 0.4536,
+          "meaning": 0.2616
+        },
+        "lastSeenTurn": 63,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-daily:bye:listen-1qbfyn9",
+          "sig-daily:bye:expression-1gbc3e0",
+          "sig-daily:bye:write-gyro3p",
+          "sig-daily:original:A1-01-01-r01-14hv829",
+          "sig-daily:bye:meaning-1m86ikh",
+          "sig-daily:pairs:audio:bye,hi,i-am-ben,i-am-mia-11q0igu"
+        ],
+        "transfer": false,
+        "readyAt": 0,
+        "contexts": [
+          "phrase:bye"
+        ],
+        "evidence": {
+          "recognition": {
+            "attempts": 4,
+            "independent": 4,
+            "assisted": 0,
+            "revealed": 0,
+            "elapsedMs": 528
+          },
+          "recall": {
+            "attempts": 2,
+            "independent": 2,
+            "assisted": 0,
+            "revealed": 0,
+            "elapsedMs": 123
+          },
+          "laterSession": {
+            "attempts": 1,
+            "independent": 1,
+            "assisted": 0,
+            "revealed": 0,
+            "elapsedMs": 62
+          },
+          "newContext": {
+            "attempts": 1,
+            "independent": 1,
+            "assisted": 0,
+            "revealed": 0,
+            "elapsedMs": 307
+          }
+        },
+        "lastSessionId": "1791021136616-adaptive-631v7n",
+        "lastEvidenceAt": 1791021138000,
+        "speechMaterials": [
+          "bye"
+        ],
+        "independentRecallAt": 1791021131421
+      },
+      "i-am-ben": {
+        "introducedAt": 1791021131033,
+        "confidence": 0.5376000000000001,
+        "abilities": {
+          "meaning": 0.0816,
+          "listening": 0.192,
+          "writing": 0.264
+        },
+        "lastSeenTurn": 67,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-daily:i-am-ben:listen-m5cjxd",
+          "sig-daily:i-am-ben:meaning-y3vt4d",
+          "sig-daily:pairs:audio:bye,hi,i-am-ben,i-am-mia-11q0igu",
+          "sig-daily:i-am-ben:order-mavzem"
+        ],
+        "transfer": false,
+        "readyAt": 0,
+        "speechMaterials": [
+          "i-am-ben"
+        ],
+        "contexts": [
+          "phrase:i-am-ben"
+        ],
+        "evidence": {
+          "recognition": {
+            "attempts": 4,
+            "independent": 4,
+            "assisted": 0,
+            "revealed": 0,
+            "elapsedMs": 580
+          },
+          "newContext": {
+            "attempts": 1,
+            "independent": 1,
+            "assisted": 0,
+            "revealed": 0,
+            "elapsedMs": 307
+          }
+        },
+        "lastSessionId": "1791021136616-adaptive-631v7n",
+        "lastEvidenceAt": 1791021138510
+      },
+      "i-am-mia": {
+        "introducedAt": 1791021133690,
+        "confidence": 0.6480000000000001,
+        "abilities": {
+          "writing": 0.336,
+          "meaning": 0.264,
+          "listening": 0.048
+        },
+        "lastSeenTurn": 63,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-daily:i-am-mia:write-1u8y55x",
+          "sig-daily:i-am-mia:expression-3isrrc",
+          "sig-daily:pairs:audio:bye,hi,i-am-ben,i-am-mia-11q0igu"
+        ],
+        "transfer": false,
+        "readyAt": 0,
+        "speechMaterials": [
+          "i-am-mia"
+        ],
+        "contexts": [
+          "phrase:i-am-mia"
+        ],
+        "independentRecallAt": 1791021134126,
+        "evidence": {
+          "recall": {
+            "attempts": 1,
+            "independent": 1,
+            "assisted": 0,
+            "revealed": 0,
+            "elapsedMs": 72
+          },
+          "recognition": {
+            "attempts": 1,
+            "independent": 1,
+            "assisted": 0,
+            "revealed": 0,
+            "elapsedMs": 307
+          },
+          "newContext": {
+            "attempts": 1,
+            "independent": 1,
+            "assisted": 0,
+            "revealed": 0,
+            "elapsedMs": 307
+          }
+        },
+        "lastSessionId": "1791021136616-adaptive-631v7n",
+        "lastEvidenceAt": 1791021138000
+      },
+      "im-ben": {
+        "introducedAt": 1791021136660,
+        "confidence": 0.6000000000000001,
+        "abilities": {
+          "writing": 0.336,
+          "listening": 0.264
+        },
+        "lastSeenTurn": 64,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-daily:im-ben:write-dieprf",
+          "sig-daily:im-ben:listen-gap-15h6k3e"
+        ],
+        "transfer": false,
+        "readyAt": 0,
+        "speechMaterials": [
+          "im-ben"
+        ],
+        "contexts": [
+          "phrase:im-ben"
+        ],
+        "independentRecallAt": 1791021137082,
+        "evidence": {
+          "recall": {
+            "attempts": 1,
+            "independent": 1,
+            "assisted": 0,
+            "revealed": 0,
+            "elapsedMs": 65
+          }
+        },
+        "lastSessionId": "1791021136616-adaptive-631v7n",
+        "lastEvidenceAt": 1791021138070
+      }
+    },
+    "sequence": [
+      {
+        "id": "A1-01-02-p-im-ben-oral-repeat",
+        "kind": "speak",
+        "knowledgeIds": [
+          "im-ben"
+        ],
+        "signature": "daily:im-ben:im-ben:oral:repeat",
+        "outcome": "self",
+        "turn": 54
+      },
+      {
+        "id": "A1-01-02-p-i-am-mia-expression",
+        "kind": "choice",
+        "knowledgeIds": [
+          "i-am-mia"
+        ],
+        "signature": "daily:i-am-mia:expression",
+        "outcome": "independent",
+        "turn": 55
+      },
+      {
+        "id": "A1-01-01-p-hi-oral-repeat",
+        "kind": "speak",
+        "knowledgeIds": [
+          "hi"
+        ],
+        "signature": "daily:hi:hi:oral:repeat",
+        "outcome": "self",
+        "turn": 56
+      },
+      {
+        "id": "A1-01-02-p-im-ben-write",
+        "kind": "write",
+        "knowledgeIds": [
+          "im-ben"
+        ],
+        "signature": "daily:im-ben:write",
+        "outcome": "independent",
+        "turn": 57
+      },
+      {
+        "id": "A1-01-01-p-hi-oral-recall",
+        "kind": "speak",
+        "knowledgeIds": [
+          "hi"
+        ],
+        "signature": "daily:hi:hi:oral:recall",
+        "outcome": "self",
+        "turn": 58
+      },
+      {
+        "id": "A1-01-02-p-i-am-ben-oral-recall",
+        "kind": "speak",
+        "knowledgeIds": [
+          "i-am-ben"
+        ],
+        "signature": "daily:i-am-ben:i-am-ben:oral:recall",
+        "outcome": "self",
+        "turn": 59
+      },
+      {
+        "id": "A1-01-01-p-bye-meaning",
+        "kind": "choice",
+        "knowledgeIds": [
+          "bye"
+        ],
+        "signature": "daily:bye:meaning",
+        "outcome": "independent",
+        "turn": 60
+      },
+      {
+        "id": "A1-01-02-p-im-ben-oral-recall",
+        "kind": "speak",
+        "knowledgeIds": [
+          "im-ben"
+        ],
+        "signature": "daily:im-ben:im-ben:oral:recall",
+        "outcome": "self",
+        "turn": 61
+      },
+      {
+        "id": "A1-01-02-p-i-am-mia-oral-recall",
+        "kind": "speak",
+        "knowledgeIds": [
+          "i-am-mia"
+        ],
+        "signature": "daily:i-am-mia:i-am-mia:oral:recall",
+        "outcome": "self",
+        "turn": 62
+      },
+      {
+        "id": "A1-01-02-p-match-audio",
+        "kind": "match",
+        "knowledgeIds": [
+          "i-am-ben",
+          "i-am-mia",
+          "bye",
+          "hi"
+        ],
+        "signature": "daily:pairs:audio:bye,hi,i-am-ben,i-am-mia",
+        "outcome": "independent",
+        "turn": 63
+      },
+      {
+        "id": "A1-01-02-p-im-ben-listen-gap",
+        "kind": "fill",
+        "knowledgeIds": [
+          "im-ben"
+        ],
+        "signature": "daily:im-ben:listen-gap",
+        "outcome": "independent",
+        "turn": 64
+      },
+      {
+        "id": "A1-01-01-p-hi-oral-answer",
+        "kind": "speak",
+        "knowledgeIds": [
+          "hi"
+        ],
+        "signature": "daily:hi:hi:oral:answer",
+        "outcome": "self",
+        "turn": 65
+      },
+      {
+        "id": "A1-01-06-p-goodbye-oral-recall",
+        "kind": "speak",
+        "knowledgeIds": [
+          "goodbye"
+        ],
+        "signature": "daily:goodbye:goodbye:oral:recall",
+        "outcome": "self",
+        "turn": 66
+      },
+      {
+        "id": "A1-01-05-p-i-am-ben-order",
+        "kind": "order",
+        "knowledgeIds": [
+          "i-am-ben"
+        ],
+        "signature": "daily:i-am-ben:order",
+        "outcome": "independent",
+        "turn": 67
+      }
+    ]
+  },
+  {
+    "round": 6,
+    "plan": {
+      "version": 1,
+      "round": 6,
+      "focusIds": [
+        "i-am-ben",
+        "im-ben",
+        "i-am-mia",
+        "im-mia"
+      ],
+      "newIds": [
+        "im-mia"
+      ],
+      "sourceLessonId": "A1-01-02",
+      "budget": 12,
+      "seed": 1422306624
+    },
+    "answers": 12,
+    "readyIds": [
+      "goodbye",
+      "i-am-ben",
+      "i-am-mia"
+    ],
+    "targets": {
+      "hello": {
+        "introducedAt": 1791021125209,
+        "confidence": 0.8280000000000001,
+        "abilities": {
+          "writing": 0.468,
+          "meaning": 0.36
+        },
+        "lastSeenTurn": 39,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-daily:hello:letters-i68w2f",
+          "sig-daily:hello:meaning-1n6yth5",
+          "sig-daily:hello:expression-xkkmxc",
+          "sig-daily:hello:write-85j8t"
+        ],
+        "transfer": false,
+        "readyAt": 0,
+        "speechMaterials": [
+          "hello"
+        ],
+        "contexts": [
+          "phrase:hello"
+        ],
+        "evidence": {
+          "recognition": {
+            "attempts": 1,
+            "independent": 1,
+            "assisted": 0,
+            "revealed": 0,
+            "elapsedMs": 66
+          },
+          "recall": {
+            "attempts": 1,
+            "independent": 1,
+            "assisted": 0,
+            "revealed": 0,
+            "elapsedMs": 84
+          },
+          "laterSession": {
+            "attempts": 1,
+            "independent": 1,
+            "assisted": 0,
+            "revealed": 0,
+            "elapsedMs": 84
+          }
+        },
+        "lastSessionId": "1791021130987-adaptive-631v7n",
+        "lastEvidenceAt": 1791021132176,
+        "independentRecallAt": 1791021132176
+      },
+      "hi": {
+        "introducedAt": 1791021125209,
+        "confidence": 0.6960000000000001,
+        "abilities": {
+          "meaning": 0.36,
+          "writing": 0.336
+        },
+        "lastSeenTurn": 70,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-daily:hi:expression-1deq5oh",
+          "sig-daily:hi:write-vanw8y",
+          "sig-daily:hi:meaning-txk7vi"
+        ],
+        "transfer": false,
+        "readyAt": 0,
+        "speechMaterials": [
+          "hi"
+        ],
+        "contexts": [
+          "phrase:hi"
+        ],
+        "evidence": {
+          "recall": {
+            "attempts": 1,
+            "independent": 1,
+            "assisted": 0,
+            "revealed": 0,
+            "elapsedMs": 56
+          },
+          "laterSession": {
+            "attempts": 1,
+            "independent": 1,
+            "assisted": 0,
+            "revealed": 0,
+            "elapsedMs": 56
+          },
+          "recognition": {
+            "attempts": 1,
+            "independent": 1,
+            "assisted": 0,
+            "revealed": 0,
+            "elapsedMs": 93
+          }
+        },
+        "lastSessionId": "1791021133644-adaptive-631v7n",
+        "lastEvidenceAt": 1791021134504,
+        "independentRecallAt": 1791021128304
+      },
+      "goodbye": {
+        "introducedAt": 1791021125209,
+        "confidence": 0.8520000000000001,
+        "abilities": {
+          "meaning": 0.132,
+          "listening": 0.048,
+          "writing": 0.672
+        },
+        "lastSeenTurn": 79,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-daily:goodbye:expression-1stu4b5",
+          "sig-daily:original:A1-01-01-e02-99xsl",
+          "sig-daily:original:A1-01-06-e04-1g2n1fm",
+          "sig-daily:goodbye:write-1wrameq"
+        ],
+        "transfer": false,
+        "readyAt": 1791021135004,
+        "speechMaterials": [
+          "goodbye"
+        ],
+        "contexts": [
+          "phrase:goodbye"
+        ],
+        "evidence": {
+          "recognition": {
+            "attempts": 1,
+            "independent": 1,
+            "assisted": 0,
+            "revealed": 0,
+            "elapsedMs": 72
+          },
+          "recall": {
+            "attempts": 2,
+            "independent": 2,
+            "assisted": 0,
+            "revealed": 0,
+            "elapsedMs": 173
+          },
+          "laterSession": {
+            "attempts": 1,
+            "independent": 1,
+            "assisted": 0,
+            "revealed": 0,
+            "elapsedMs": 106
+          }
+        },
+        "lastSessionId": "1791021133644-adaptive-631v7n",
+        "lastEvidenceAt": 1791021135004,
+        "independentRecallAt": 1791021135004
+      },
+      "bye": {
+        "introducedAt": 1791021125209,
+        "confidence": 1,
+        "abilities": {
+          "listening": 0.40800000000000003,
+          "writing": 0.4536,
+          "meaning": 0.2616
+        },
+        "lastSeenTurn": 63,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-daily:bye:listen-1qbfyn9",
+          "sig-daily:bye:expression-1gbc3e0",
+          "sig-daily:bye:write-gyro3p",
+          "sig-daily:original:A1-01-01-r01-14hv829",
+          "sig-daily:bye:meaning-1m86ikh",
+          "sig-daily:pairs:audio:bye,hi,i-am-ben,i-am-mia-11q0igu"
+        ],
+        "transfer": false,
+        "readyAt": 0,
+        "contexts": [
+          "phrase:bye"
+        ],
+        "evidence": {
+          "recognition": {
+            "attempts": 4,
+            "independent": 4,
+            "assisted": 0,
+            "revealed": 0,
+            "elapsedMs": 528
+          },
+          "recall": {
+            "attempts": 2,
+            "independent": 2,
+            "assisted": 0,
+            "revealed": 0,
+            "elapsedMs": 123
+          },
+          "laterSession": {
+            "attempts": 1,
+            "independent": 1,
+            "assisted": 0,
+            "revealed": 0,
+            "elapsedMs": 62
+          },
+          "newContext": {
+            "attempts": 1,
+            "independent": 1,
+            "assisted": 0,
+            "revealed": 0,
+            "elapsedMs": 307
+          }
+        },
+        "lastSessionId": "1791021136616-adaptive-631v7n",
+        "lastEvidenceAt": 1791021138000,
+        "speechMaterials": [
+          "bye"
+        ],
+        "independentRecallAt": 1791021131421
+      },
+      "i-am-ben": {
+        "introducedAt": 1791021131033,
+        "confidence": 0.8736000000000002,
+        "abilities": {
+          "meaning": 0.0816,
+          "listening": 0.192,
+          "writing": 0.6000000000000001
+        },
+        "lastSeenTurn": 76,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-daily:i-am-ben:listen-m5cjxd",
+          "sig-daily:i-am-ben:meaning-y3vt4d",
+          "sig-daily:pairs:audio:bye,hi,i-am-ben,i-am-mia-11q0igu",
+          "sig-daily:i-am-ben:order-mavzem",
+          "sig-daily:original:A1-01-05-e04-19bzh2n"
+        ],
+        "transfer": false,
+        "readyAt": 1791021140293,
+        "speechMaterials": [
+          "i-am-ben"
+        ],
+        "contexts": [
+          "phrase:i-am-ben"
+        ],
+        "evidence": {
+          "recognition": {
+            "attempts": 4,
+            "independent": 4,
+            "assisted": 0,
+            "revealed": 0,
+            "elapsedMs": 580
+          },
+          "newContext": {
+            "attempts": 1,
+            "independent": 1,
+            "assisted": 0,
+            "revealed": 0,
+            "elapsedMs": 307
+          },
+          "recall": {
+            "attempts": 1,
+            "independent": 1,
+            "assisted": 0,
+            "revealed": 0,
+            "elapsedMs": 56
+          },
+          "laterSession": {
+            "attempts": 1,
+            "independent": 1,
+            "assisted": 0,
+            "revealed": 0,
+            "elapsedMs": 56
+          }
+        },
+        "lastSessionId": "1791021139854-adaptive-631v7n",
+        "lastEvidenceAt": 1791021140293,
+        "independentRecallAt": 1791021140293
+      },
+      "i-am-mia": {
+        "introducedAt": 1791021133690,
+        "confidence": 1,
+        "abilities": {
+          "writing": 0.6000000000000001,
+          "meaning": 0.264,
+          "listening": 0.312
+        },
+        "lastSeenTurn": 78,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-daily:i-am-mia:write-1u8y55x",
+          "sig-daily:i-am-mia:expression-3isrrc",
+          "sig-daily:pairs:audio:bye,hi,i-am-ben,i-am-mia-11q0igu",
+          "sig-daily:original:A1-01-02-r01-1dddn8o",
+          "sig-daily:i-am-mia:listen-gap-m7x9p8"
+        ],
+        "transfer": false,
+        "readyAt": 1791021140660,
+        "speechMaterials": [
+          "i-am-mia"
+        ],
+        "contexts": [
+          "phrase:i-am-mia"
+        ],
+        "independentRecallAt": 1791021134126,
+        "evidence": {
+          "recall": {
+            "attempts": 1,
+            "independent": 1,
+            "assisted": 0,
+            "revealed": 0,
+            "elapsedMs": 72
+          },
+          "recognition": {
+            "attempts": 1,
+            "independent": 1,
+            "assisted": 0,
+            "revealed": 0,
+            "elapsedMs": 307
+          },
+          "newContext": {
+            "attempts": 1,
+            "independent": 1,
+            "assisted": 0,
+            "revealed": 0,
+            "elapsedMs": 307
+          }
+        },
+        "lastSessionId": "1791021139854-adaptive-631v7n",
+        "lastEvidenceAt": 1791021141232
+      },
+      "im-ben": {
+        "introducedAt": 1791021136660,
+        "confidence": 0.8640000000000001,
+        "abilities": {
+          "writing": 0.336,
+          "listening": 0.264,
+          "meaning": 0.264
+        },
+        "lastSeenTurn": 73,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-daily:im-ben:write-dieprf",
+          "sig-daily:im-ben:listen-gap-15h6k3e",
+          "sig-daily:im-ben:expression-1346ma6"
+        ],
+        "transfer": false,
+        "readyAt": 0,
+        "speechMaterials": [
+          "im-ben"
+        ],
+        "contexts": [
+          "phrase:im-ben"
+        ],
+        "independentRecallAt": 1791021137082,
+        "evidence": {
+          "recall": {
+            "attempts": 1,
+            "independent": 1,
+            "assisted": 0,
+            "revealed": 0,
+            "elapsedMs": 65
+          }
+        },
+        "lastSessionId": "1791021139854-adaptive-631v7n",
+        "lastEvidenceAt": 1791021140104
+      },
+      "im-mia": {
+        "introducedAt": 1791021139894,
+        "confidence": 0.132,
+        "abilities": {
+          "writing": 0.132
+        },
+        "lastSeenTurn": 77,
+        "lastFailureTurn": 0,
+        "signatures": [
+          "sig-daily:im-mia:order-pfwoow"
+        ],
+        "transfer": false,
+        "readyAt": 0,
+        "speechMaterials": [
+          "im-mia"
+        ],
+        "contexts": [
+          "phrase:im-mia"
+        ],
+        "evidence": {},
+        "lastSessionId": "1791021139854-adaptive-631v7n",
+        "lastEvidenceAt": 1791021141155
+      }
+    },
+    "sequence": [
+      {
+        "id": "A1-01-02-p-im-mia-oral-repeat",
+        "kind": "speak",
+        "knowledgeIds": [
+          "im-mia"
+        ],
+        "signature": "daily:im-mia:im-mia:oral:repeat",
+        "outcome": "self",
+        "turn": 68
+      },
+      {
+        "id": "A1-01-02-p-im-ben-expression",
+        "kind": "choice",
+        "knowledgeIds": [
+          "im-ben"
+        ],
+        "signature": "daily:im-ben:expression",
+        "outcome": "independent",
+        "turn": 69
+      },
+      {
+        "id": "A1-01-01-p-hi-oral-answer",
+        "kind": "speak",
+        "knowledgeIds": [
+          "hi"
+        ],
+        "signature": "daily:hi:hi:oral:answer",
+        "outcome": "self",
+        "turn": 70
+      },
+      {
+        "id": "A1-01-05-e04",
+        "kind": "write",
+        "knowledgeIds": [
+          "i-am-ben"
+        ],
+        "signature": "daily:original:A1-01-05-e04",
+        "outcome": "independent",
+        "turn": 71
+      },
+      {
+        "id": "A1-01-01-p-goodbye-oral-answer",
+        "kind": "speak",
+        "knowledgeIds": [
+          "goodbye"
+        ],
+        "signature": "daily:goodbye:goodbye:oral:answer",
+        "outcome": "self",
+        "turn": 72
+      },
+      {
+        "id": "A1-01-02-p-im-ben-oral-recall",
+        "kind": "speak",
+        "knowledgeIds": [
+          "im-ben"
+        ],
+        "signature": "daily:im-ben:im-ben:oral:recall",
+        "outcome": "self",
+        "turn": 73
+      },
+      {
+        "id": "A1-01-02-r01",
+        "kind": "order",
+        "knowledgeIds": [
+          "i-am-mia"
+        ],
+        "signature": "daily:original:A1-01-02-r01",
+        "outcome": "independent",
+        "turn": 74
+      },
+      {
+        "id": "A1-01-05-e05-partial",
+        "kind": "speak",
+        "knowledgeIds": [
+          "im-mia"
+        ],
+        "signature": "daily:original:A1-01-05-e05:partial",
+        "outcome": "self",
+        "turn": 75
+      },
+      {
+        "id": "A1-01-05-p-i-am-ben-oral-recall",
+        "kind": "speak",
+        "knowledgeIds": [
+          "i-am-ben"
+        ],
+        "signature": "daily:i-am-ben:i-am-ben:oral:recall",
+        "outcome": "self",
+        "turn": 76
+      },
+      {
+        "id": "A1-01-02-p-im-mia-order",
+        "kind": "order",
+        "knowledgeIds": [
+          "im-mia"
+        ],
+        "signature": "daily:im-mia:order",
+        "outcome": "independent",
+        "turn": 77
+      },
+      {
+        "id": "A1-01-02-p-i-am-mia-listen-gap",
+        "kind": "fill",
+        "knowledgeIds": [
+          "i-am-mia"
+        ],
+        "signature": "daily:i-am-mia:listen-gap",
+        "outcome": "independent",
+        "turn": 78
+      },
+      {
+        "id": "A1-01-01-p-goodbye-oral-recall",
+        "kind": "speak",
+        "knowledgeIds": [
+          "goodbye"
+        ],
+        "signature": "daily:goodbye:goodbye:oral:recall",
+        "outcome": "self",
+        "turn": 79
+      }
+    ]
+  }
+]

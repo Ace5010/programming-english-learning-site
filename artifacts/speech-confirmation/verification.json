@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-04",
+  "behavior": "Show a persistent skip confirmation on the current question after three failed recognized attempts; advance only on Continue. Manual skips also show a confirmation.",
+  "checks": {
+    "node": 88,
+    "typescript": "passed",
+    "build": "passed",
+    "mobile": 13,
+    "recognitionLifecycle": 9,
+    "development": {
+      "scenarios": 10,
+      "evidence": "browser-final/report.json"
+    },
+    "production": {
+      "scenarios": 10,
+      "evidence": "production/report.json"
+    }
+  },
+  "recognizerChanges": "No model, decoder or audio-preprocessing changes. Previous change was text comparison and tolerance only.",
+  "voiceEvidence": "ASR events in UI tests are simulated. No human-microphone accuracy claim.",
+  "screenshots": [
+    "production/programming-skip-notice.png",
+    "production/programming-skip-confirmation.png"
+  ]
+}

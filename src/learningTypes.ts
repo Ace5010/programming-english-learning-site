@@ -16,6 +16,8 @@ export interface LearningTarget {
   lastEvidenceAt?: number;
   lastErrorAbility?: 'spelling' | 'context';
   lastSessionId?: string;
+  /** Actual supported oral exposure; never confidence or recall evidence. */
+  speechMaterials?: string[];
   evidence?: Partial<Record<'recognition' | 'recall' | 'newContext' | 'laterSession', { attempts: number; independent: number; assisted: number; revealed: number; elapsedMs: number }>>;
 }
 export interface LearningState {
@@ -23,6 +25,8 @@ export interface LearningState {
   turns: number;
   rounds: number;
   targets: Record<string, LearningTarget>;
+  /** User-declared familiarity, separate from taught targets and tested evidence. */
+  selfKnown?: Record<string, number>;
   lastAnswer?: string;
 }
 export interface AdaptivePlan {
@@ -33,6 +37,8 @@ export interface AdaptivePlan {
   sourceLessonId: string;
   seed: number;
   budget: number;
+  /** New-word study followed by a bounded check, separate from adaptive remediation. */
+  courseMode?: 'word-check';
 }
 export type LearningExercise = DailyExerciseSpec & {
   learningDifficulty?: 'recognition' | 'context' | 'recall';
@@ -45,6 +51,7 @@ export type LearningLesson = DailyLesson & DailyLessonSpec & {
   /** Optional prerequisite concepts and a smaller focus for absolute beginners. */
   prerequisiteIds?: string[];
   focusLimit?: number;
+  courseMode?: 'word-check';
   /** Retained for lookup and old sessions, excluded from new adaptive rounds. */
   referenceOnly?: boolean;
 };

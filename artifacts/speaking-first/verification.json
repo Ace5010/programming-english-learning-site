@@ -1,0 +1,110 @@
+{
+  "date": "2026-10-03",
+  "branch": "main",
+  "revision": "049f28e5e1ec33f0b43d070ec4f20d04e09b53a0",
+  "sourceSha256": {
+    "src/adaptiveLearning.ts": "f4aa4ca5ed9d2e196312ab29bb5b1717ed9d1a6edd91e2003c3934c982fa757c",
+    "src/dailyPractice.ts": "a20e01ba6afec7c281cddb780aeb317d9d0ce05d58b8be82506415601bc91f9c",
+    "src/programmingPractice.ts": "4f2bcca8374e4325eeeed3647215783994abee6b9c0ae4dbe4d7ae4c21b31030",
+    "src/dailyProgress.ts": "7798bbc6ce04e924b82d0efefdfdf38501a0e0c903a7f49d87c980afcd02f034",
+    "src/DailySpeaking.tsx": "246aa7ee3e9e9471d05b4a5b14597725b4c04ef823b2948dcde267042777dc89",
+    "src/DailyEnglish.tsx": "0ebd9e089aee56b74bc76e65936d7a5aa0f8eb05f47412b29a7b5a2da027faf3",
+    "src/learningTypes.ts": "33b15c6f6c052593f7df84b1afa64c7f83de418b6fb86aa4bc23b124b8aa124e",
+    "src/dailyCourse.ts": "93ccc1b4dab06b75e243a73b59427b3937a7f9ad960a40cb6a3f88b26d6e357e",
+    "src/programmingCourse.ts": "c2e45b66738f42e1482028c5832babccb37c1fd4dc905974d1ca0d38201680c2",
+    "src/programmingProgress.ts": "eb281d134a9e85b2167fcff5e7cb61c055388a8749479f2d0c8db72f24ab2688",
+    "src/programmingReview.ts": "67146e8e947914684abe7a4fbafd63cce43b0fc5fae534d3e39a272509c04751",
+    "src/programmingSupport.ts": "8a8fdab6b2afbd189e6ce05451c8dffdc377fbec9855f01109b17c6be3fb15dd"
+  },
+  "unitTests": {
+    "combination": 181,
+    "totalUnique": 181,
+    "speakingFirst": 12,
+    "passed": true
+  },
+  "typecheck": "npx tsc --noEmit passed",
+  "build": "npm run build passed",
+  "integrity": "npm run verify passed",
+  "browser": {
+    "adaptive": 20,
+    "upgrade": 17,
+    "mobile": 13,
+    "wordLearning": 9,
+    "courseSkip": 19,
+    "speechLifecycle": 9,
+    "speakingFirst": "two rounds per section on dev and production; helper words isolated; mode support preserved; unknown legacy provenance identified",
+    "native": "real Chrome ASR, injected existing MP3 audio track; no human microphone"
+  },
+  "reports": [
+    "selection.json",
+    "daily-complete.json",
+    "production/report.json",
+    "adaptive-browser-final/browser-results.json",
+    "native-speech/native-ui-results.json"
+  ],
+  "audioChanges": 0,
+  "published": false,
+  "limitations": [
+    "No human microphone or real learning outcome assessment",
+    "No Android device acceptance, production publish or real D1 revalidation"
+  ],
+  "logs": [
+    "build",
+    "word-browser",
+    "adaptive-browser",
+    "upgrade-browser",
+    "production",
+    "regression",
+    "speech-lifecycle",
+    "verify",
+    "development",
+    "mobile-browser",
+    "skip-browser",
+    "native-speech"
+  ],
+  "verifiedAt": "2026-10-03T10:02:10.7723135Z",
+  "buildAsset": "index-BGgLyyMF.js",
+  "distributions": [
+    {
+      "section": "daily",
+      "totals": {
+        "speaking": 596,
+        "understanding": 266,
+        "input": 144
+      },
+      "shares": {
+        "speaking": 0.5924453280318092,
+        "understanding": 0.2644135188866799,
+        "input": 0.14314115308151093
+      },
+      "maximumInput": 1
+    },
+    {
+      "section": "programming",
+      "totals": {
+        "speaking": 472,
+        "understanding": 342,
+        "input": 141
+      },
+      "shares": {
+        "speaking": 0.4942408376963351,
+        "understanding": 0.3581151832460733,
+        "input": 0.14764397905759163
+      },
+      "maximumInput": 1
+    }
+  ],
+  "completeCourse": {
+    "programming": {
+      "objectiveChecksPerTarget": "3-8",
+      "targets": 63,
+      "rounds": 68,
+      "activities": 929
+    },
+    "daily": {
+      "targets": 86,
+      "rounds": 148,
+      "activities": 2049
+    }
+  }
+}

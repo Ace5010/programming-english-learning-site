@@ -1,0 +1,179 @@
+{
+  "url": "http://localhost:5186/",
+  "input": "simulated final/interim/error recognition events",
+  "scenarios": [
+    {
+      "section": "programming",
+      "name": "single-word-passes",
+      "width": 1440,
+      "passed": true,
+      "result": {
+        "activity": "repeat",
+        "mode": "read",
+        "support": "full",
+        "source": "recognition",
+        "assessment": "context",
+        "attempts": {
+          "example-7": 1
+        },
+        "usedReference": true
+      }
+    },
+    {
+      "section": "programming",
+      "name": "multiple-context-differences",
+      "width": 390,
+      "passed": true,
+      "result": {
+        "expected": "Please check my pull request.",
+        "transcript": "please cheque my pool requests",
+        "speech": {
+          "activity": "repeat",
+          "mode": "read",
+          "support": "full",
+          "source": "recognition",
+          "assessment": "context",
+          "attempts": {
+            "example-7": 3
+          },
+          "usedReference": true
+        }
+      }
+    },
+    {
+      "section": "programming",
+      "name": "context-word-boundaries",
+      "width": 1440,
+      "passed": true,
+      "result": {
+        "expected": "Please check my pull request.",
+        "transcript": "please check my pool re quest"
+      }
+    },
+    {
+      "section": "programming",
+      "name": "third-failure-confirmation",
+      "width": 390,
+      "passed": true,
+      "result": {
+        "exerciseId": "P1-04-04-p-7-oral-repeat",
+        "retry": false,
+        "ability": "speaking",
+        "outcome": "self",
+        "correct": false,
+        "at": 1791086862165,
+        "speech": {
+          "activity": "repeat",
+          "mode": "read",
+          "support": "full",
+          "source": "skipped",
+          "assessment": "failed",
+          "attempts": {
+            "example-7": 3
+          },
+          "usedReference": true
+        }
+      }
+    },
+    {
+      "section": "programming",
+      "name": "third-attempt-success",
+      "width": 1440,
+      "passed": true
+    },
+    {
+      "section": "programming",
+      "name": "manual-skip-confirmation",
+      "width": 390,
+      "passed": true
+    },
+    {
+      "section": "programming",
+      "name": "service-errors-do-not-count",
+      "width": 1440,
+      "passed": true
+    },
+    {
+      "section": "daily",
+      "name": "single-word-passes",
+      "width": 390,
+      "passed": true,
+      "result": {
+        "activity": "repeat",
+        "mode": "read",
+        "support": "full",
+        "source": "recognition",
+        "assessment": "tolerated",
+        "attempts": {
+          "my-name-is-ben": 1
+        },
+        "usedReference": true
+      }
+    },
+    {
+      "section": "daily",
+      "name": "multiple-context-differences",
+      "width": 1440,
+      "passed": true,
+      "result": {
+        "expected": "I am from China.",
+        "transcript": "eye am form China",
+        "speech": {
+          "activity": "repeat",
+          "mode": "read",
+          "support": "full",
+          "source": "recognition",
+          "assessment": "context",
+          "attempts": {
+            "from-china": 3
+          },
+          "usedReference": true
+        }
+      }
+    },
+    {
+      "section": "daily",
+      "name": "third-failure-confirmation",
+      "width": 1440,
+      "passed": true,
+      "result": {
+        "exerciseId": "A1-01-03-p-my-name-is-ben-oral-repeat",
+        "retry": false,
+        "ability": "speaking",
+        "outcome": "self",
+        "correct": false,
+        "at": 1791086876841,
+        "speech": {
+          "activity": "repeat",
+          "mode": "read",
+          "support": "full",
+          "source": "skipped",
+          "assessment": "failed",
+          "attempts": {
+            "my-name-is-ben": 3
+          },
+          "usedReference": true
+        }
+      }
+    },
+    {
+      "section": "daily",
+      "name": "third-attempt-success",
+      "width": 1440,
+      "passed": true
+    },
+    {
+      "section": "daily",
+      "name": "manual-skip-confirmation",
+      "width": 390,
+      "passed": true
+    },
+    {
+      "section": "daily",
+      "name": "service-errors-do-not-count",
+      "width": 1440,
+      "passed": true
+    }
+  ],
+  "errors": []
+}

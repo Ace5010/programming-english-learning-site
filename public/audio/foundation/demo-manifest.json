@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "entries": {
+    "ready-flow": {
+      "fileSha256": "77a7ce8bb3fbd88e19ca37eefb7498b445c8c8eba1d877e7448d7e74b5889301",
+      "generatedAt": "2026-10-03T05:47:14.5158754Z",
+      "purpose": "Controlled contrast, not a phoneme recording",
+      "voice": "Microsoft David Desktop - English (United States)",
+      "xml": "Yes I am ready.",
+      "bytes": 12815,
+      "text": "Yes, I am ready.",
+      "definitionSha256": "37becc42490991e073ddd432f22b090294e47915b7cf4823ac1e74ccd87eda5e"
+    },
+    "focus-i": {
+      "bytes": 9706,
+      "voice": "Microsoft David Desktop - English (United States)",
+      "generatedAt": "2026-10-03T05:56:42.6845561Z",
+      "purpose": "Controlled contrast, not a phoneme recording",
+      "text": "I want tea.",
+      "xml": "<pitch absmiddle=\"-3\"><pitch absmiddle=\"10\"><rate speed=\"-2\"><emph>I</emph></rate></pitch> want tea.</pitch>",
+      "fileSha256": "d31b2d31df8cd8aaae2b98327e425be0cbbd9d247584fbec84ef90b8645f6b70",
+      "definitionSha256": "acebcd9408de1357c4117d99b91c84f0106ae0fd9faf4af3c279e8d272d88b00"
+    },
+    "focus-tea": {
+      "bytes": 11245,
+      "voice": "Microsoft David Desktop - English (United States)",
+      "generatedAt": "2026-10-03T05:56:42.7598003Z",
+      "purpose": "Controlled contrast, not a phoneme recording",
+      "text": "I want tea.",
+      "xml": "<pitch absmiddle=\"-3\">I want <pitch absmiddle=\"10\"><rate speed=\"-2\"><emph>tea</emph></rate></pitch>.</pitch>",
+      "fileSha256": "4b4fc46333fb4670144447eb59f5312a01b28965c735dc2976f5289dbf45c77f",
+      "definitionSha256": "9b0ce3004e73983d43d01b27c99a1d56264b29dd703a53b17b116d4a53b59290"
+    },
+    "uk-map": {
+      "fileSha256": "509df5ff399cb059515d60a218c43917ae35c3aa919e3eaa0a2cfcf3c57993a2",
+      "sourceAudio": "https://dictionary.cambridge.org/media/english/uk_pron/u/ukm/ukman/ukmanuf009.mp3",
+      "voice": "Cambridge UK",
+      "generatedAt": "2026-10-03T05:47:13.209227Z",
+      "bytes": 5805,
+      "sourcePage": "https://dictionary.cambridge.org/dictionary/english/map",
+      "text": "map",
+      "definitionSha256": "55d94c8fe278e18275808adbd56745b55e0ac92f798bc0f8d342e6aa967b6ecd"
+    },
+    "ready-pause": {
+      "fileSha256": "44eb24549d8a61b86ff03fd9696b31feb750f70edff1f53147046ce7e7394e06",
+      "generatedAt": "2026-10-03T05:47:14.5680698Z",
+      "purpose": "Controlled contrast, not a phoneme recording",
+      "voice": "Microsoft David Desktop - English (United States)",
+      "xml": "Yes<silence msec=\"400\"/> I am ready.",
+      "bytes": 15106,
+      "text": "Yes, I am ready.",
+      "definitionSha256": "4ae10897561c05caaaa79d6a513a66d2e3496f7d73ec5df7fd60ced1df8d1a13"
+    },
+    "uk-ship": {
+      "fileSha256": "f28d5d2fc69bd3da42e9c60fc163c8f99ea3cc617a60d41bb2015e699d284ae3",
+      "sourceAudio": "https://dictionary.cambridge.org/media/english/uk_pron/u/uks/ukshi/ukshine014.mp3",
+      "voice": "Cambridge UK",
+      "generatedAt": "2026-10-03T05:47:14.2805607Z",
+      "bytes": 4461,
+      "sourcePage": "https://dictionary.cambridge.org/dictionary/english/ship",
+      "text": "ship",
+      "definitionSha256": "76955536fbd140848f5eb0e3fe0dd8866ef80cc1124357beb8308ec34ebe48f0"
+    }
+  }
+}

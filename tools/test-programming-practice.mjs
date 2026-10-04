@@ -18,7 +18,7 @@ test('adaptive candidates preserve existing teaching and stable historical exerc
     const original = programmingLessons[index];
     assert.equal(lesson.id, original.id);
     for (const key of ['exercises', 'rechecks']) {
-      assert.deepEqual(lesson[key].map(({ learningDifficulty, learningSignature, learningContext, ...task }) => task), original[key]);
+      assert.deepEqual(lesson[key].map(({ learningDifficulty, learningSignature, learningContext, prerequisiteIds, supportWords, ...task }) => task), original[key]);
       for (const task of lesson[key]) {
         assert.ok(['recognition', 'context', 'recall'].includes(task.learningDifficulty));
         assert.equal(task.learningSignature, `authored:${task.id}`);

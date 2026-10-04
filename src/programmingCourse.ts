@@ -2,7 +2,7 @@ import type { DailyExercise, DailyLesson, DailyPhrase, DailyUnit } from './daily
 import { vocabulary } from './vocabulary.ts'
 
 /** Course progress is separate; these IDs always refer to the existing vocabulary. */
-export type ProgrammingAbility = 'meaning' | 'listening' | 'spelling' | 'context'
+export type ProgrammingAbility = 'meaning' | 'listening' | 'spelling' | 'context' | 'speaking'
 export type ProgrammingExercise = DailyExercise & { wordIds: number[]; ability: ProgrammingAbility; knowledgeIds: string[] }
 export type ProgrammingLesson = Omit<DailyLesson, 'exercises' | 'rechecks'> & {
   wordIds: number[]

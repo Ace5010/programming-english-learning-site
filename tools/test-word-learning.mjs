@@ -77,7 +77,7 @@ test('isolated word typo is penalized and counted once, not twice by sentence di
 test('programming context variants share actual sentence identity; unsupported spelling remains separate', () => {
   const tasks = adaptiveProgrammingLessons[0].practice.filter(task => task.knowledgeIds[0] === 'word-1');
   assert.equal(tasks.find(task => task.id.endsWith('-sentence')).learningContext, tasks.find(task => task.id.endsWith('-translation')).learningContext);
-  assert.ok(tasks.find(task => task.id.endsWith('-recall')).recallSupport);
+  assert.ok(tasks.find(task => task.kind === 'fill' && task.id.endsWith('-recall')).recallSupport);
   assert.ok(tasks.find(task => task.id.endsWith('-free-gap')));
 });
 test('focused practice is bounded, stays in taught targets, restores exact question and saves in existing key', () => {

@@ -1,0 +1,65 @@
+{
+  "results": [
+    {
+      "section": "daily",
+      "kind": "fresh",
+      "passed": true
+    },
+    {
+      "section": "daily",
+      "kind": "mixed",
+      "passed": true
+    },
+    {
+      "section": "daily",
+      "kind": "weak",
+      "passed": true
+    },
+    {
+      "section": "daily",
+      "kind": "saved",
+      "passed": true
+    },
+    {
+      "section": "daily",
+      "kind": "legacy",
+      "passed": true
+    },
+    {
+      "section": "daily",
+      "kind": "review",
+      "passed": true
+    },
+    {
+      "section": "programming",
+      "kind": "fresh",
+      "passed": true
+    },
+    {
+      "section": "programming",
+      "kind": "mixed",
+      "passed": true
+    },
+    {
+      "section": "programming",
+      "kind": "weak",
+      "passed": true
+    },
+    {
+      "section": "programming",
+      "kind": "saved",
+      "passed": true
+    },
+    {
+      "section": "programming",
+      "kind": "legacy",
+      "passed": true
+    },
+    {
+      "section": "programming",
+      "kind": "review",
+      "passed": true
+    }
+  ],
+  "errors": []
+}

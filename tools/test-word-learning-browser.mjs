@@ -39,7 +39,7 @@ async function open(progress, width = 390, theme = 'lagoon') {
     window.audioEvents = [];
     const play = HTMLMediaElement.prototype.play;
     HTMLMediaElement.prototype.play = function(...args) {
-      this.addEventListener('playing', () => window.audioEvents.push({ src: this.src, rate: this.playbackRate, pitch: this.preservesPitch }), { once: true });
+      for (const type of ['playing', 'ended']) this.addEventListener(type, () => window.audioEvents.push({ type, src: this.src, rate: this.playbackRate, pitch: this.preservesPitch, duration: this.duration }), { once: true });
       return play.apply(this, args);
     };
   }, { progress, theme });
@@ -117,6 +117,30 @@ try {
     await main.locator('.daily-question').waitFor();
     assert.deepEqual((await saved(page)).session.adaptive.focusIds, ['daily-word-student']);
     await context.close(); results.push('library-single-word-practice');
+  }
+  {
+    const { page, main, context } = await open(fixture('summary'));
+    await page.getByRole('navigation', { name: '学习导航' }).getByRole('button', { name: '词汇库', exact: true }).click();
+    const before = await saved(page);
+    for (const voice of ['aria', 'guy']) {
+      await main.getByRole('button', { name: '语音设置', exact: true }).click();
+      await page.getByLabel('点读声音', { exact: true }).selectOption(voice);
+      await page.getByRole('button', { name: '关闭语音设置', exact: true }).click();
+      for (const word of ['from', 'student', 'teacher']) {
+        await main.getByRole('searchbox').fill(word);
+        const row = main.locator('.daily-expression').filter({ has: page.getByRole('button', { name: `朗读 ${word}`, exact: true }) });
+        for (const rate of [1, .72]) {
+          const start = await page.evaluate(() => window.audioEvents.length);
+          await row.getByRole('button', { name: rate === 1 ? `朗读 ${word}` : `慢速朗读 ${word}`, exact: true }).click();
+          await page.waitForFunction(({ start, voice, word, rate }) => window.audioEvents.slice(start).some(event =>
+            event.type === 'ended' && event.src.includes(`/audio/daily/${voice}/daily-word-${word}.mp3`)
+            && event.rate === rate && event.pitch && event.duration > 0), { start, voice, word, rate });
+        }
+      }
+    }
+    assert.deepEqual(await saved(page), before, 'Normal/slow playback adds no learning evidence');
+    audio.push(...await page.evaluate(() => window.audioEvents));
+    await context.close(); results.push('all-six-pilot-recordings-play-to-end-at-normal-and-slow-speed');
   }
   assert.deepEqual(errors, []);
 } finally {

@@ -34,7 +34,10 @@ async def generate(workers):
         (OUTPUT / folder).mkdir(exist_ok=True)
         for entry in entries:
             relative = f'{folder}/{entry["id"]}.mp3'
-            if not entry_matches(manifest['entries'].get(relative), OUTPUT / relative, {'id': entry['id'], 'en': entry['text']}, voice):
+            record = manifest['entries'].get(relative)
+            spoken = entry.get('ttsText', entry['text'])
+            comparable = dict(record, text=record.get('spoken', record['text'])) if record else None
+            if not entry_matches(comparable, OUTPUT / relative, {'id': entry['id'], 'en': spoken}, voice):
                 queue.put_nowait((relative, voice, entry))
     total, completed, reused = queue.qsize(), 0, 0
     print(f'Foundation: {len(entries)} texts; {total} pending recordings.', flush=True)
@@ -47,14 +50,17 @@ async def generate(workers):
             for attempt in range(3):
                 temporary = temporary_mp3(target.parent, target.stem)
                 try:
-                    source = reusable.get((voice, entry['text']))
+                    spoken = entry.get('ttsText', entry['text'])
+                    source = reusable.get((voice, spoken))
                     if source:
                         shutil.copyfile(source, temporary)
                     else:
-                        await asyncio.wait_for(edge_tts.Communicate(entry['text'], voice, rate=RATE).save(str(temporary)), timeout=45)
+                        await asyncio.wait_for(edge_tts.Communicate(spoken, voice, rate=RATE).save(str(temporary)), timeout=45)
                     metadata = await asyncio.to_thread(inspect_audio, temporary, commands)
                     metadata.update(id=entry['id'], text=entry['text'], voice=voice, rate=RATE,
-                        synthesisSha256=synthesis_hash(voice, entry['text']), generatedAt=datetime.now(timezone.utc).isoformat(timespec='seconds'))
+                        synthesisSha256=synthesis_hash(voice, spoken), generatedAt=datetime.now(timezone.utc).isoformat(timespec='seconds'))
+                    if 'ttsText' in entry:
+                        metadata['spoken'] = spoken
                     temporary.replace(target)
                     manifest['entries'][relative] = metadata
                     atomic_json(manifest_path, manifest)

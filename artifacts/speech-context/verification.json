@@ -1,0 +1,33 @@
+{
+  "date": "2026-10-04",
+  "scope": "Broader context acceptance for multiple near-sound ASR differences and split/merged words in existing course speech",
+  "branch": "main",
+  "contextExamples": [
+    { "expected": "Please check my pull request.", "transcript": "please cheque my pool requests", "assessment": "context" },
+    { "expected": "Please check my pull request.", "transcript": "please check my pool re quest", "assessment": "context" },
+    { "expected": "I am from China.", "transcript": "eye am form China", "assessment": "context" }
+  ],
+  "checks": {
+    "node": { "passed": 92, "failed": 0, "log": "logs/node-tests.txt" },
+    "typescript": { "command": "npx tsc --noEmit", "exitCode": 0 },
+    "build": { "exitCode": 0, "log": "logs/build.txt", "verifiedDeploymentFiles": 16115 },
+    "resources": { "command": "npm run verify", "exitCode": 0, "log": "logs/verify.txt" },
+    "development": { "passed": 13, "report": "browser/report.json", "url": "http://localhost:5186/" },
+    "production": { "passed": 13, "report": "production/report.json", "url": "http://localhost:5186/dist/" },
+    "mobile": { "passed": 13, "report": "mobile/browser-results.json" },
+    "recognitionLifecycle": { "passed": 9, "report": "lifecycle/simulated-browser-results.json" },
+    "diffWhitespace": { "command": "git diff --check", "exitCode": 0 }
+  },
+  "environmentRecovery": "The first lifecycle test invocation lacked CODEWORDS_PLAYWRIGHT. It was rerun successfully with the existing bundled runtime path; no package installation.",
+  "evidenceBoundaries": {
+    "recognitionInput": "Simulated final/interim/error events in isolated browser contexts",
+    "rawTranscriptPreserved": true,
+    "thirdFailedAttempt": "Current question remains visible with skip notice until learner clicks Continue",
+    "mastery": "Speech acceptance remains self evidence and grants no independent mastery or long-term admission",
+    "modelOrDecoderOrAudioPreprocessingChanged": false,
+    "humanMicrophoneVerified": false,
+    "liveD1Verified": false,
+    "published": false,
+    "committed": false
+  }
+}

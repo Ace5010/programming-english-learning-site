@@ -1,0 +1,466 @@
+{
+  "status": "prepared",
+  "containsUserRecording": false,
+  "referencePrompt": false,
+  "source": "https://github.com/jimbozhang/speechocean762",
+  "revision": "613968e3b0b789fc33936fb5eba1973176ba7d11",
+  "selection": "Sorted test IDs; age >=18; accuracy >=8; all phone scores >=1; max 2 per speaker; excludes every speaker used in previous 24-case screen",
+  "cases": [
+    {
+      "id": "daily-aria-whats-your-name",
+      "group": "daily",
+      "file": "public/audio/daily/aria/whats-your-name.mp3",
+      "reference": "What's your name?"
+    },
+    {
+      "id": "daily-aria-my-name-is-ben",
+      "group": "daily",
+      "file": "public/audio/daily/aria/my-name-is-ben.mp3",
+      "reference": "My name is Ben."
+    },
+    {
+      "id": "daily-aria-my-name-is-mia",
+      "group": "daily",
+      "file": "public/audio/daily/aria/my-name-is-mia.mp3",
+      "reference": "My name is Mia."
+    },
+    {
+      "id": "daily-aria-where-are-you-from",
+      "group": "daily",
+      "file": "public/audio/daily/aria/where-are-you-from.mp3",
+      "reference": "Where are you from?"
+    },
+    {
+      "id": "daily-aria-from-china",
+      "group": "daily",
+      "file": "public/audio/daily/aria/from-china.mp3",
+      "reference": "I am from China."
+    },
+    {
+      "id": "daily-aria-are-you-from-china",
+      "group": "daily",
+      "file": "public/audio/daily/aria/are-you-from-china.mp3",
+      "reference": "Are you from China?"
+    },
+    {
+      "id": "programming-aria-1",
+      "group": "programming",
+      "file": "public/audio/aria/example-1.mp3",
+      "reference": "Open this repository."
+    },
+    {
+      "id": "programming-aria-7",
+      "group": "programming",
+      "file": "public/audio/aria/example-7.mp3",
+      "reference": "Please check my pull request."
+    },
+    {
+      "id": "programming-aria-11",
+      "group": "programming",
+      "file": "public/audio/aria/example-11.mp3",
+      "reference": "Use checkout to change branches."
+    },
+    {
+      "id": "programming-aria-3561",
+      "group": "programming",
+      "file": "public/audio/aria/example-3561.mp3",
+      "reference": "Read this code."
+    },
+    {
+      "id": "programming-aria-3563",
+      "group": "programming",
+      "file": "public/audio/aria/example-3563.mp3",
+      "reference": "Check the source code."
+    },
+    {
+      "id": "programming-aria-3564",
+      "group": "programming",
+      "file": "public/audio/aria/example-3564.mp3",
+      "reference": "Execute this command."
+    },
+    {
+      "id": "word-aria-tree",
+      "group": "word",
+      "file": "public/audio/aria/word-2441.mp3",
+      "reference": "tree"
+    },
+    {
+      "id": "word-aria-three",
+      "group": "word",
+      "file": "public/audio/aria/word-2400.mp3",
+      "reference": "three"
+    },
+    {
+      "id": "word-aria-bed",
+      "group": "word",
+      "file": "public/audio/aria/word-1291.mp3",
+      "reference": "bed"
+    },
+    {
+      "id": "word-aria-bad",
+      "group": "word",
+      "file": "public/audio/aria/word-2978.mp3",
+      "reference": "bad"
+    },
+    {
+      "id": "daily-guy-whats-your-name",
+      "group": "daily",
+      "file": "public/audio/daily/guy/whats-your-name.mp3",
+      "reference": "What's your name?"
+    },
+    {
+      "id": "daily-guy-my-name-is-ben",
+      "group": "daily",
+      "file": "public/audio/daily/guy/my-name-is-ben.mp3",
+      "reference": "My name is Ben."
+    },
+    {
+      "id": "daily-guy-my-name-is-mia",
+      "group": "daily",
+      "file": "public/audio/daily/guy/my-name-is-mia.mp3",
+      "reference": "My name is Mia."
+    },
+    {
+      "id": "daily-guy-where-are-you-from",
+      "group": "daily",
+      "file": "public/audio/daily/guy/where-are-you-from.mp3",
+      "reference": "Where are you from?"
+    },
+    {
+      "id": "daily-guy-from-china",
+      "group": "daily",
+      "file": "public/audio/daily/guy/from-china.mp3",
+      "reference": "I am from China."
+    },
+    {
+      "id": "daily-guy-are-you-from-china",
+      "group": "daily",
+      "file": "public/audio/daily/guy/are-you-from-china.mp3",
+      "reference": "Are you from China?"
+    },
+    {
+      "id": "programming-guy-1",
+      "group": "programming",
+      "file": "public/audio/guy/example-1.mp3",
+      "reference": "Open this repository."
+    },
+    {
+      "id": "programming-guy-7",
+      "group": "programming",
+      "file": "public/audio/guy/example-7.mp3",
+      "reference": "Please check my pull request."
+    },
+    {
+      "id": "programming-guy-11",
+      "group": "programming",
+      "file": "public/audio/guy/example-11.mp3",
+      "reference": "Use checkout to change branches."
+    },
+    {
+      "id": "programming-guy-3561",
+      "group": "programming",
+      "file": "public/audio/guy/example-3561.mp3",
+      "reference": "Read this code."
+    },
+    {
+      "id": "programming-guy-3563",
+      "group": "programming",
+      "file": "public/audio/guy/example-3563.mp3",
+      "reference": "Check the source code."
+    },
+    {
+      "id": "programming-guy-3564",
+      "group": "programming",
+      "file": "public/audio/guy/example-3564.mp3",
+      "reference": "Execute this command."
+    },
+    {
+      "id": "word-guy-tree",
+      "group": "word",
+      "file": "public/audio/guy/word-2441.mp3",
+      "reference": "tree"
+    },
+    {
+      "id": "word-guy-three",
+      "group": "word",
+      "file": "public/audio/guy/word-2400.mp3",
+      "reference": "three"
+    },
+    {
+      "id": "word-guy-bed",
+      "group": "word",
+      "file": "public/audio/guy/word-1291.mp3",
+      "reference": "bed"
+    },
+    {
+      "id": "word-guy-bad",
+      "group": "word",
+      "file": "public/audio/guy/word-2978.mp3",
+      "reference": "bad"
+    },
+    {
+      "id": "human-010300003",
+      "group": "human-new",
+      "file": ".runtime/pronunciation/speechocean/WAVE/SPEAKER1030/010300003.WAV",
+      "reference": "THE RESULT WAS AN UPSET",
+      "speaker": "1030",
+      "age": 27,
+      "expertAccuracy": 9,
+      "gitBlobSha1": "81172a5c07018cd8fba66acb61add56292af0479",
+      "download": "https://raw.githubusercontent.com/jimbozhang/speechocean762/613968e3b0b789fc33936fb5eba1973176ba7d11/WAVE/SPEAKER1030/010300003.WAV"
+    },
+    {
+      "id": "human-010300105",
+      "group": "human-new",
+      "file": ".runtime/pronunciation/speechocean/WAVE/SPEAKER1030/010300105.WAV",
+      "reference": "THE PAPER PUBLISHED NO DETAILS AND THERE WAS NO ATTACK",
+      "speaker": "1030",
+      "age": 27,
+      "expertAccuracy": 8,
+      "gitBlobSha1": "bd56c3dec1cf7f0b9bf732877c48f9990b470a21",
+      "download": "https://raw.githubusercontent.com/jimbozhang/speechocean762/613968e3b0b789fc33936fb5eba1973176ba7d11/WAVE/SPEAKER1030/010300105.WAV"
+    },
+    {
+      "id": "human-010370025",
+      "group": "human-new",
+      "file": ".runtime/pronunciation/speechocean/WAVE/SPEAKER1037/010370025.WAV",
+      "reference": "THEN I WAS LOOKING TO DO SOMETHING BETTER",
+      "speaker": "1037",
+      "age": 35,
+      "expertAccuracy": 8,
+      "gitBlobSha1": "1339529e33a9025c37f72502f61790704fe79305",
+      "download": "https://raw.githubusercontent.com/jimbozhang/speechocean762/613968e3b0b789fc33936fb5eba1973176ba7d11/WAVE/SPEAKER1037/010370025.WAV"
+    },
+    {
+      "id": "human-010370099",
+      "group": "human-new",
+      "file": ".runtime/pronunciation/speechocean/WAVE/SPEAKER1037/010370099.WAV",
+      "reference": "I NOW KNOW THE ANSWERS TO THOSE QUESTIONS",
+      "speaker": "1037",
+      "age": 35,
+      "expertAccuracy": 9,
+      "gitBlobSha1": "4b08f8708137b0615125d66d157059140adf11d5",
+      "download": "https://raw.githubusercontent.com/jimbozhang/speechocean762/613968e3b0b789fc33936fb5eba1973176ba7d11/WAVE/SPEAKER1037/010370099.WAV"
+    },
+    {
+      "id": "human-010390004",
+      "group": "human-new",
+      "file": ".runtime/pronunciation/speechocean/WAVE/SPEAKER1039/010390004.WAV",
+      "reference": "IT MAKES ME FEEL GOOD ABOUT THE WHOLE BUSINESS",
+      "speaker": "1039",
+      "age": 38,
+      "expertAccuracy": 9,
+      "gitBlobSha1": "3b3b9e0bace331971eca7c25795e93a632bf1b41",
+      "download": "https://raw.githubusercontent.com/jimbozhang/speechocean762/613968e3b0b789fc33936fb5eba1973176ba7d11/WAVE/SPEAKER1039/010390004.WAV"
+    },
+    {
+      "id": "human-010390027",
+      "group": "human-new",
+      "file": ".runtime/pronunciation/speechocean/WAVE/SPEAKER1039/010390027.WAV",
+      "reference": "IT'S IN OUR INTEREST AND THE PUBLIC INTEREST",
+      "speaker": "1039",
+      "age": 38,
+      "expertAccuracy": 8,
+      "gitBlobSha1": "be805ae5f95640f9813a9046ff627ae302ac1dea",
+      "download": "https://raw.githubusercontent.com/jimbozhang/speechocean762/613968e3b0b789fc33936fb5eba1973176ba7d11/WAVE/SPEAKER1039/010390027.WAV"
+    },
+    {
+      "id": "human-010990020",
+      "group": "human-new",
+      "file": ".runtime/pronunciation/speechocean/WAVE/SPEAKER1099/010990020.WAV",
+      "reference": "WELL I CAN ASSURE YOU IT IS NOT",
+      "speaker": "1099",
+      "age": 43,
+      "expertAccuracy": 9,
+      "gitBlobSha1": "ebc231a800449b614d7097017724af7732397439",
+      "download": "https://raw.githubusercontent.com/jimbozhang/speechocean762/613968e3b0b789fc33936fb5eba1973176ba7d11/WAVE/SPEAKER1099/010990020.WAV"
+    },
+    {
+      "id": "human-010990048",
+      "group": "human-new",
+      "file": ".runtime/pronunciation/speechocean/WAVE/SPEAKER1099/010990048.WAV",
+      "reference": "I WAS THE ONLY ONE WHO COULD DO THAT",
+      "speaker": "1099",
+      "age": 43,
+      "expertAccuracy": 9,
+      "gitBlobSha1": "fb72f444232b90cd19b53dc10feab239c141895a",
+      "download": "https://raw.githubusercontent.com/jimbozhang/speechocean762/613968e3b0b789fc33936fb5eba1973176ba7d11/WAVE/SPEAKER1099/010990048.WAV"
+    },
+    {
+      "id": "human-011090034",
+      "group": "human-new",
+      "file": ".runtime/pronunciation/speechocean/WAVE/SPEAKER1109/011090034.WAV",
+      "reference": "I KNOW HOW THEY LOOK",
+      "speaker": "1109",
+      "age": 30,
+      "expertAccuracy": 8,
+      "gitBlobSha1": "15f8094ba8eb8c770cb4eef16244f04e0bbad9f1",
+      "download": "https://raw.githubusercontent.com/jimbozhang/speechocean762/613968e3b0b789fc33936fb5eba1973176ba7d11/WAVE/SPEAKER1109/011090034.WAV"
+    },
+    {
+      "id": "human-011090089",
+      "group": "human-new",
+      "file": ".runtime/pronunciation/speechocean/WAVE/SPEAKER1109/011090089.WAV",
+      "reference": "DRINK A LOT OF WATER",
+      "speaker": "1109",
+      "age": 30,
+      "expertAccuracy": 8,
+      "gitBlobSha1": "eca602e94b63363e05f6a8a8e8053cfebaae3673",
+      "download": "https://raw.githubusercontent.com/jimbozhang/speechocean762/613968e3b0b789fc33936fb5eba1973176ba7d11/WAVE/SPEAKER1109/011090089.WAV"
+    },
+    {
+      "id": "human-011560005",
+      "group": "human-new",
+      "file": ".runtime/pronunciation/speechocean/WAVE/SPEAKER1156/011560005.WAV",
+      "reference": "I HAD TO DO IT FROM A FINANCIAL STANDPOINT",
+      "speaker": "1156",
+      "age": 33,
+      "expertAccuracy": 8,
+      "gitBlobSha1": "2ef9ed4fa77e8c57ca55e8781bce81a6367f1710",
+      "download": "https://raw.githubusercontent.com/jimbozhang/speechocean762/613968e3b0b789fc33936fb5eba1973176ba7d11/WAVE/SPEAKER1156/011560005.WAV"
+    },
+    {
+      "id": "human-011560058",
+      "group": "human-new",
+      "file": ".runtime/pronunciation/speechocean/WAVE/SPEAKER1156/011560058.WAV",
+      "reference": "IT IS DANGEROUS TO GO TO A DOCTOR",
+      "speaker": "1156",
+      "age": 33,
+      "expertAccuracy": 9,
+      "gitBlobSha1": "aad51c51fe3bc311b88fc2f3d455a955542ade45",
+      "download": "https://raw.githubusercontent.com/jimbozhang/speechocean762/613968e3b0b789fc33936fb5eba1973176ba7d11/WAVE/SPEAKER1156/011560058.WAV"
+    },
+    {
+      "id": "human-011810063",
+      "group": "human-new",
+      "file": ".runtime/pronunciation/speechocean/WAVE/SPEAKER1181/011810063.WAV",
+      "reference": "SHE COULD JUST GO ON AND ON",
+      "speaker": "1181",
+      "age": 23,
+      "expertAccuracy": 8,
+      "gitBlobSha1": "da990e9c799172d9b321be7fda3b7655edf4b550",
+      "download": "https://raw.githubusercontent.com/jimbozhang/speechocean762/613968e3b0b789fc33936fb5eba1973176ba7d11/WAVE/SPEAKER1181/011810063.WAV"
+    },
+    {
+      "id": "human-011810133",
+      "group": "human-new",
+      "file": ".runtime/pronunciation/speechocean/WAVE/SPEAKER1181/011810133.WAV",
+      "reference": "I NEED TO PICK UP A DESK",
+      "speaker": "1181",
+      "age": 23,
+      "expertAccuracy": 8,
+      "gitBlobSha1": "84bb9bbe1c3f22a9f7025cbe4ddb3a6b2f5c8d9b",
+      "download": "https://raw.githubusercontent.com/jimbozhang/speechocean762/613968e3b0b789fc33936fb5eba1973176ba7d11/WAVE/SPEAKER1181/011810133.WAV"
+    },
+    {
+      "id": "human-011860264",
+      "group": "human-new",
+      "file": ".runtime/pronunciation/speechocean/WAVE/SPEAKER1186/011860264.WAV",
+      "reference": "EXCITED AND GOING TO BED",
+      "speaker": "1186",
+      "age": 23,
+      "expertAccuracy": 8,
+      "gitBlobSha1": "25dcf7f6836e37bd6546ed6428420f064a9bcfb9",
+      "download": "https://raw.githubusercontent.com/jimbozhang/speechocean762/613968e3b0b789fc33936fb5eba1973176ba7d11/WAVE/SPEAKER1186/011860264.WAV"
+    },
+    {
+      "id": "human-011860284",
+      "group": "human-new",
+      "file": ".runtime/pronunciation/speechocean/WAVE/SPEAKER1186/011860284.WAV",
+      "reference": "THAT'S SAY IT IS GOOD",
+      "speaker": "1186",
+      "age": 23,
+      "expertAccuracy": 8,
+      "gitBlobSha1": "f2fa899603e13b70829aef7bb51c18f2cc3b44a1",
+      "download": "https://raw.githubusercontent.com/jimbozhang/speechocean762/613968e3b0b789fc33936fb5eba1973176ba7d11/WAVE/SPEAKER1186/011860284.WAV"
+    },
+    {
+      "id": "human-012280033",
+      "group": "human-new",
+      "file": ".runtime/pronunciation/speechocean/WAVE/SPEAKER1228/012280033.WAV",
+      "reference": "IT WAS A NICE WAY TO END OUR HOME SEASON",
+      "speaker": "1228",
+      "age": 26,
+      "expertAccuracy": 8,
+      "gitBlobSha1": "84219d89f5d651e06185480a98046b93e72166a0",
+      "download": "https://raw.githubusercontent.com/jimbozhang/speechocean762/613968e3b0b789fc33936fb5eba1973176ba7d11/WAVE/SPEAKER1228/012280033.WAV"
+    },
+    {
+      "id": "human-012280161",
+      "group": "human-new",
+      "file": ".runtime/pronunciation/speechocean/WAVE/SPEAKER1228/012280161.WAV",
+      "reference": "THERE IS JUST SO MUCH WORK TO DO",
+      "speaker": "1228",
+      "age": 26,
+      "expertAccuracy": 8,
+      "gitBlobSha1": "1c9bf2e3c4e7e5aa427da4ce739845b4fec32eae",
+      "download": "https://raw.githubusercontent.com/jimbozhang/speechocean762/613968e3b0b789fc33936fb5eba1973176ba7d11/WAVE/SPEAKER1228/012280161.WAV"
+    },
+    {
+      "id": "human-012920007",
+      "group": "human-new",
+      "file": ".runtime/pronunciation/speechocean/WAVE/SPEAKER1292/012920007.WAV",
+      "reference": "I WOULD NOT MAKE SUCH COMMENTS",
+      "speaker": "1292",
+      "age": 37,
+      "expertAccuracy": 8,
+      "gitBlobSha1": "0d4c24baab6a43cad5033129bedb7eebf7a9aa83",
+      "download": "https://raw.githubusercontent.com/jimbozhang/speechocean762/613968e3b0b789fc33936fb5eba1973176ba7d11/WAVE/SPEAKER1292/012920007.WAV"
+    },
+    {
+      "id": "human-012920054",
+      "group": "human-new",
+      "file": ".runtime/pronunciation/speechocean/WAVE/SPEAKER1292/012920054.WAV",
+      "reference": "IT NOT HARD TO FINE",
+      "speaker": "1292",
+      "age": 37,
+      "expertAccuracy": 9,
+      "gitBlobSha1": "adb5d2278d63e399164f8993a37ac1c1db2f36db",
+      "download": "https://raw.githubusercontent.com/jimbozhang/speechocean762/613968e3b0b789fc33936fb5eba1973176ba7d11/WAVE/SPEAKER1292/012920054.WAV"
+    },
+    {
+      "id": "human-012930008",
+      "group": "human-new",
+      "file": ".runtime/pronunciation/speechocean/WAVE/SPEAKER1293/012930008.WAV",
+      "reference": "NO ONE WAS HURT IN THE EXPLOSION",
+      "speaker": "1293",
+      "age": 32,
+      "expertAccuracy": 8,
+      "gitBlobSha1": "02cd047339ee0cc75c2046d3f153154272783ac1",
+      "download": "https://raw.githubusercontent.com/jimbozhang/speechocean762/613968e3b0b789fc33936fb5eba1973176ba7d11/WAVE/SPEAKER1293/012930008.WAV"
+    },
+    {
+      "id": "human-012930012",
+      "group": "human-new",
+      "file": ".runtime/pronunciation/speechocean/WAVE/SPEAKER1293/012930012.WAV",
+      "reference": "WHERE ARE THEY SUPPOSED TO TURN",
+      "speaker": "1293",
+      "age": 32,
+      "expertAccuracy": 8,
+      "gitBlobSha1": "97e1909de9097ea36664aa19b6a186ff8b411a7b",
+      "download": "https://raw.githubusercontent.com/jimbozhang/speechocean762/613968e3b0b789fc33936fb5eba1973176ba7d11/WAVE/SPEAKER1293/012930012.WAV"
+    },
+    {
+      "id": "human-013340007",
+      "group": "human-new",
+      "file": ".runtime/pronunciation/speechocean/WAVE/SPEAKER1334/013340007.WAV",
+      "reference": "I THINK HE CAN PROVE HIMSELF ON HIS OWN",
+      "speaker": "1334",
+      "age": 29,
+      "expertAccuracy": 8,
+      "gitBlobSha1": "abe0af872df8750ba058c86bf116ab36b44fd100",
+      "download": "https://raw.githubusercontent.com/jimbozhang/speechocean762/613968e3b0b789fc33936fb5eba1973176ba7d11/WAVE/SPEAKER1334/013340007.WAV"
+    },
+    {
+      "id": "human-013340034",
+      "group": "human-new",
+      "file": ".runtime/pronunciation/speechocean/WAVE/SPEAKER1334/013340034.WAV",
+      "reference": "SOMETHING IS OFF WITH THIS TEAM",
+      "speaker": "1334",
+      "age": 29,
+      "expertAccuracy": 8,
+      "gitBlobSha1": "151f3beb8833f591a7135bd44fd2787a58ef7aa3",
+      "download": "https://raw.githubusercontent.com/jimbozhang/speechocean762/613968e3b0b789fc33936fb5eba1973176ba7d11/WAVE/SPEAKER1334/013340034.WAV"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+[
+  {
+    "path": "src/courseOverview.css",
+    "sha256": "11f7861faccb427707c3682880364b0d838c66cad6425172968c347f40338c09",
+    "bytes": 11988
+  },
+  {
+    "path": "tools/test-course-home-browser.mjs",
+    "sha256": "66449de4b2be4a1b9b13a87bf2617140eda4c17138c69677c05b43668547f64e",
+    "bytes": 9472
+  },
+  {
+    "path": "tools/test-programming-word-check-browser.mjs",
+    "sha256": "83fbe025e452c319882ae01cfd2a24816096131c28745d8d8299cf7ce468d4a3",
+    "bytes": 27712
+  },
+  {
+    "path": "docs/PROGRAMMING_ENGLISH.md",
+    "sha256": "e5837c5514d715648ea8b929b485a542dbb9437e5ff2060fa94212873da0a477",
+    "bytes": 6903
+  },
+  {
+    "path": "AGENTS.md",
+    "sha256": "50e2f6227755ab9a1bd17341222e5e1cd617ad0781dc4abf84ae01bc7657082f",
+    "bytes": 17320
+  },
+  {
+    "path": "dist/index.html",
+    "sha256": "9ea6e34c8e02b3ae634b50e994eb4954d9534a4297f91575de588c7ca1ef09ef",
+    "bytes": 765
+  },
+  {
+    "path": "dist/assets/index-CzaARNnP.css",
+    "sha256": "deb58152e67268c3a6b6025bd682908efef5e912a0562ff328a6a512b95a4900",
+    "bytes": 158246
+  },
+  {
+    "path": "dist/assets/index-aNHr2d91.js",
+    "sha256": "3d3f8af733d622711f11d3bd6905a697a45aaf798ed8509bda276cdb452ce8fc",
+    "bytes": 2900410
+  }
+]

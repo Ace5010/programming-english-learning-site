@@ -1,0 +1,207 @@
+{
+  "baseURL": "http://localhost:5186/dist/",
+  "production": true,
+  "scenarios": [
+    {
+      "name": "programming: production smoke starts, saves and plans next dynamic round",
+      "durationMs": 5027,
+      "evidence": {
+        "scripts": [
+          "",
+          "http://localhost:5186/@vite/client",
+          "http://localhost:5186/dist/assets/index-B3eH5B9m.js"
+        ],
+        "firstRoundAnswers": 12,
+        "firstPlan": {
+          "version": 1,
+          "round": 1,
+          "focusIds": [
+            "word-1",
+            "word-2801",
+            "word-3561",
+            "word-20"
+          ],
+          "newIds": [
+            "word-1",
+            "word-2801",
+            "word-3561",
+            "word-20"
+          ],
+          "sourceLessonId": "P1-01-01",
+          "budget": 12,
+          "seed": 1422306624
+        },
+        "nextPlan": {
+          "version": 1,
+          "round": 2,
+          "focusIds": [
+            "word-3561",
+            "word-2801",
+            "word-1",
+            "word-4"
+          ],
+          "newIds": [
+            "word-4"
+          ],
+          "sourceLessonId": "P1-01-02",
+          "budget": 14,
+          "seed": 1422306624
+        }
+      }
+    },
+    {
+      "name": "daily: production smoke starts, saves and plans next dynamic round",
+      "durationMs": 4021,
+      "evidence": {
+        "scripts": [
+          "",
+          "http://localhost:5186/@vite/client",
+          "http://localhost:5186/dist/assets/index-B3eH5B9m.js"
+        ],
+        "firstRoundAnswers": 12,
+        "firstPlan": {
+          "version": 1,
+          "round": 1,
+          "focusIds": [
+            "hello",
+            "hi",
+            "goodbye",
+            "bye"
+          ],
+          "newIds": [
+            "hello",
+            "hi",
+            "goodbye",
+            "bye"
+          ],
+          "sourceLessonId": "A1-01-01",
+          "budget": 12,
+          "seed": 1422306624
+        },
+        "nextPlan": {
+          "version": 1,
+          "round": 2,
+          "focusIds": [
+            "goodbye",
+            "hi",
+            "bye",
+            "i-am-ben"
+          ],
+          "newIds": [
+            "i-am-ben"
+          ],
+          "sourceLessonId": "A1-01-02",
+          "budget": 12,
+          "seed": 1422306624
+        }
+      }
+    },
+    {
+      "name": "programming: confirm switching unfinished review to adaptive course",
+      "durationMs": 2564,
+      "evidence": {
+        "scripts": [
+          "",
+          "http://localhost:5186/@vite/client",
+          "http://localhost:5186/dist/assets/index-B3eH5B9m.js"
+        ],
+        "reviewSessionId": "1790991167359-330q7hj7",
+        "courseSessionId": "1790991167795-adaptive-1d6gdea",
+        "plan": {
+          "version": 1,
+          "round": 7,
+          "focusIds": [
+            "word-11",
+            "word-1880",
+            "word-3561",
+            "word-1384"
+          ],
+          "newIds": [
+            "word-1384"
+          ],
+          "sourceLessonId": "P1-01-04",
+          "budget": 13,
+          "seed": 193998416
+        }
+      }
+    },
+    {
+      "name": "daily: confirm switching unfinished review to adaptive course",
+      "durationMs": 2682,
+      "evidence": {
+        "scripts": [
+          "",
+          "http://localhost:5186/@vite/client",
+          "http://localhost:5186/dist/assets/index-B3eH5B9m.js"
+        ],
+        "reviewSessionId": "1790991170197-330q7hj7",
+        "courseSessionId": "1790991170425-adaptive-1d6gdea",
+        "plan": {
+          "version": 1,
+          "round": 7,
+          "focusIds": [
+            "my-name-is-ben",
+            "whats-your-name",
+            "i-am-ben",
+            "my-name-is-mia"
+          ],
+          "newIds": [
+            "my-name-is-mia"
+          ],
+          "sourceLessonId": "A1-01-03",
+          "budget": 12,
+          "seed": 193998416
+        }
+      }
+    },
+    {
+      "name": "real Aria and Guy word, example and daily phrase playback",
+      "durationMs": 1854,
+      "evidence": [
+        {
+          "type": "playing",
+          "src": "http://localhost:5186/dist/audio/aria/word-3561.mp3",
+          "rate": 1,
+          "duration": 1.872
+        },
+        {
+          "type": "playing",
+          "src": "http://localhost:5186/dist/audio/aria/example-3561.mp3?v=Read%20this%20code.",
+          "rate": 1,
+          "duration": 1.992
+        },
+        {
+          "type": "playing",
+          "src": "http://localhost:5186/dist/audio/daily/aria/hello.mp3?v=Hello!",
+          "rate": 1,
+          "duration": 1.56
+        },
+        {
+          "type": "playing",
+          "src": "http://localhost:5186/dist/audio/guy/word-3561.mp3",
+          "rate": 1,
+          "duration": 1.872
+        },
+        {
+          "type": "playing",
+          "src": "http://localhost:5186/dist/audio/guy/example-3561.mp3?v=Read%20this%20code.",
+          "rate": 1,
+          "duration": 2.016
+        },
+        {
+          "type": "playing",
+          "src": "http://localhost:5186/dist/audio/daily/guy/hello.mp3?v=Hello!",
+          "rate": 1,
+          "duration": 1.536
+        }
+      ]
+    }
+  ],
+  "failures": [],
+  "browserErrors": [],
+  "requestFailures": [],
+  "objectiveAnswers": 32,
+  "selfChecks": 0,
+  "microphoneTested": false,
+  "testedAt": "2026-10-03T01:32:53.372Z"
+}

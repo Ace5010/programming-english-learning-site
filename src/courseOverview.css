@@ -1,5 +1,17 @@
 .daily-layout.course-home { grid-template-columns: minmax(0, 1fr) minmax(260px, .36fr); gap: 28px; }
 .course-home-main { display: grid; gap: 24px; min-width: 0; }
+.course-communication .course-current-body { grid-template-columns: minmax(0, 1.35fr) minmax(150px, .65fr); }
+.course-communication .course-current-copy { order: -1; }
+.course-communication .course-illustration { align-self: start; min-height: 0; height: 240px; }
+.course-daily-scope { margin: 4px 0 22px; }
+.course-daily-scope h4 { margin: 0 0 18px; font-size: 21px; line-height: 1.5; }
+.course-daily-scope .course-examples { grid-template-columns: minmax(0, 1fr); gap: 18px; }
+.course-current .course-daily-scope .course-example-meaning { font-size: 23px; color: var(--ink); }
+.course-current .course-daily-scope .daily-phrase-content { font-size: 18px; }
+.course-daily-scope .course-scope-note { margin: 6px 0 0; font-size: 16px; color: var(--ink-soft); }
+.course-communication .course-overview-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; border-top: 1px solid var(--line); padding-top: 20px; }
+.course-communication .course-start { margin: 0; padding: 0; border: 0; }
+.course-communication .course-overview-actions > .daily-button { min-height: 48px; }
 .course-current, .course-details { padding: 26px; }
 .course-home h2 { margin: 0 0 22px; font-family: var(--display-font); font-size: 23px; line-height: 1.4; }
 .course-current-body { display: grid; grid-template-columns: minmax(170px, .75fr) minmax(0, 1.35fr); gap: 28px; align-items: stretch; }
@@ -47,9 +59,77 @@
 @media (max-width: 540px) {
   .course-current, .course-details, .course-home .daily-note { padding: 20px; }
   .course-current-body { grid-template-columns: minmax(0, 1fr); }
+  .course-communication .course-current-body { grid-template-columns: minmax(0, 1fr); }
+  .course-communication .course-illustration { height: 160px; }
+  .course-communication .course-overview-actions > .daily-button, .course-communication .course-start { width: 100%; }
   .course-illustration { min-height: 0; height: 160px; }
   .course-illustration svg { width: 175px; }
   .course-current-copy h3 { font-size: 22px; }
   .course-examples { grid-template-columns: minmax(0, 1fr); }
   .course-start .daily-button { width: 100%; }
+}
+
+/* The programming cards are the learning area; the check starts below them. */
+.daily-layout.course-home.word-check-home { grid-template-columns: minmax(0, 900px) 240px; gap: 40px; justify-content: center; }
+:root[data-theme] .daily-panel.course-word-learning { padding: 0; border: 0; background: transparent; box-shadow: none; }
+.course-word-learning-heading { margin-bottom: 24px; padding: 24px; border: 1px solid var(--accent-line); border-left: 4px solid var(--accent); border-radius: 14px; background: var(--palette-card); }
+.course-word-learning-heading .course-word-lesson-title { margin: 0 0 12px; font-size: 18px; font-weight: 600; line-height: 1.5; }
+:root[data-theme] .course-word-learning-heading h2 { margin: 0 0 10px; font-size: 28px; font-weight: 750; line-height: 1.4; color: var(--accent-deep); }
+.course-word-learning-heading p { margin: 0; font-size: 17px; color: var(--ink-soft); }
+.course-word-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.course-word-card { display: flex; flex-direction: column; min-width: 0; padding: 18px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); cursor: pointer; }
+.course-word-card:is(:hover, .word-playing, .example-playing) { border-color: var(--accent); }
+.course-word-card:is(.word-playing, .example-playing) { box-shadow: 0 0 0 2px var(--accent-line); }
+.course-word-main, .course-word-example-content { display: flex; flex-direction: column; width: 100%; gap: 4px; border: 0; padding: 0; text-align: left; background: transparent; color: var(--ink); }
+.course-word-meaning { font-size: 24px; line-height: 1.5; font-weight: 750; overflow-wrap: anywhere; }
+.course-word-english { display: flex; align-items: center; gap: 12px; color: var(--accent-deep); }
+.course-word-english strong { font-family: var(--word-font); font-size: 24px; font-weight: 600; line-height: 1.5; overflow-wrap: anywhere; min-width: 0; }
+.course-word-english .icon, .course-word-example-english .icon { flex-shrink: 0; width: 20px; height: 20px; color: var(--accent); }
+.course-word-pronunciation { display: flex; align-items: center; flex-wrap: wrap; gap: 8px 12px; margin: 4px 0 12px; }
+.course-word-phonetic { font-size: 17px; line-height: 1.5; overflow-wrap: anywhere; color: var(--ink-soft); }
+.course-word-card .daily-inline-slow { min-height: 44px; padding: 6px 12px; font-size: 16px; color: var(--accent-deep); border-color: var(--accent-line); background: var(--accent-soft); }
+.course-word-status { font-size: 16px; line-height: 1.5; color: var(--accent-deep); }
+.course-word-example { margin-top: auto; padding: 12px; border: 0; border-radius: 10px; background: var(--accent-soft); }
+.course-word-example-meaning { font-size: 18px; font-weight: 650; line-height: 1.6; overflow-wrap: anywhere; }
+.course-word-example-english { display: inline; font-family: var(--word-font); font-size: 18px; line-height: 1.7; overflow-wrap: anywhere; }
+.course-word-example-english .icon { display: inline-block; margin-left: 8px; vertical-align: middle; }
+.course-word-example-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; margin-top: 8px; }
+.course-word-card .playing .icon { animation: audio-breathe .8s ease-in-out infinite alternate; }
+:root[data-theme] :is(.course-word-main, .course-word-example-content):hover:not(:disabled) { translate: 0; }
+.course-word-main:focus-visible, .course-word-example-content:focus-visible { outline: 3px solid var(--accent); outline-offset: 5px; border-radius: 4px; }
+.course-word-test-entry { display: flex; align-items: center; flex-wrap: wrap; gap: 20px; margin-top: 30px; padding-top: 26px; border-top: 1px solid var(--accent-line); }
+.course-word-test-entry > div:first-child { flex: 1 1 300px; }
+.course-word-test-entry strong { font-size: 21px; font-weight: 650; line-height: 1.5; }
+.course-word-test-entry p { margin: 6px 0 0; font-size: 17px; color: var(--ink-soft); }
+.course-word-test-entry .course-start { margin: 0; padding: 0; border: 0; }
+.course-word-test-entry .daily-button.primary { min-height: 52px; font-size: 18px; }
+.course-word-test-entry .course-word-skip { flex-basis: 100%; width: fit-content; justify-content: flex-start; padding-inline: 0; font-size: 16px; color: var(--ink-soft); }
+.word-check-home .daily-rail { display: block; }
+.word-check-home .daily-note { display: block; padding: 22px; }
+.word-check-home .daily-note > h2 { margin: 0 0 18px; }
+.word-check-home .daily-total { margin: 0 0 20px; }
+.word-check-home .daily-total strong { font-size: 30px; }
+.word-check-home .daily-note > .daily-button { width: 100%; margin: 0; }
+:root[data-theme] .word-check-home .daily-note { box-shadow: none; }
+.word-check-home .course-skipped { display: block; margin-top: 18px; }
+@media (max-width: 1100px) {
+  .daily-layout.course-home.word-check-home { grid-template-columns: minmax(0, 1fr); max-width: 900px; margin-inline: auto; gap: 28px; }
+  .word-check-home .daily-note { display: flex; align-items: center; flex-wrap: wrap; gap: 18px 28px; }
+  .word-check-home .daily-note > h2, .word-check-home .daily-total { margin: 0; }
+  .word-check-home .daily-note > .daily-button { width: auto; margin-left: auto; }
+  .word-check-home .course-skipped { display: block; }
+}
+@media (max-width: 720px) {
+  .course-word-grid { grid-template-columns: minmax(0, 1fr); gap: 14px; }
+  .course-word-learning-heading { padding: 22px; }
+  :root[data-theme] .course-word-learning-heading h2 { font-size: 27px; }
+}
+@media (max-width: 540px) {
+  .course-word-learning-heading { padding: 20px 18px; }
+  .course-word-card { padding: 16px; }
+  .course-word-meaning, .course-word-english strong { font-size: 24px; }
+  .course-word-test-entry { gap: 16px; }
+  .course-word-test-entry .course-start, .course-word-test-entry > div:first-child { flex-basis: 100%; }
+  .word-check-home .daily-note { padding: 20px; gap: 12px 20px; }
+  .word-check-home .daily-note > .daily-button { margin: 0; }
 }

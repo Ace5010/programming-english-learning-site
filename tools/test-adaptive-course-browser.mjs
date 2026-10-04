@@ -4,12 +4,15 @@ import assert from 'node:assert/strict';
 import { createRequire } from 'node:module';
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
+import { pairOrder } from '../src/pairPractice.ts';
+import { saveEarnedFixtures, validateEarnedFixtures } from './helpers/earned-fixtures.mjs';
+import { correctDraft } from './helpers/course-answer.mjs';
 import { adaptiveDailyLessons, adaptiveDailyUnits } from '../src/dailyPractice.ts';
 import { adaptiveProgrammingLessons, adaptiveProgrammingUnits } from '../src/programmingPractice.ts';
 import { dailyLessons } from '../src/dailyCourse.ts';
 import { programmingLessons } from '../src/programmingCourse.ts';
 import { vocabulary } from '../src/vocabulary.ts';
-import { DAILY_KEY, parseDailyProgress, createDailyProgress, createDailySession, beginDailyExercises, learnDailyLesson, dailyExerciseKnowledgeIds } from '../src/dailyProgress.ts';
+import { DAILY_KEY, parseDailyProgress, createDailyProgress, createDailySession, beginDailyExercises, learnDailyLesson, dailyExerciseKnowledgeIds, dueDailyLessons } from '../src/dailyProgress.ts';
 import { PROGRAMMING_COURSE_KEY } from '../src/programmingProgress.ts';
 import { REVIEW_KEY, parseReviewProgress, isReviewEligible } from '../src/review.ts';
 
@@ -17,7 +20,7 @@ const require = createRequire(import.meta.url);
 const { chromium } = require(process.env.CODEWORDS_PLAYWRIGHT || 'C:/Users/shenwuqiang/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
 const baseURL = process.env.CODEWORDS_TEST_URL || 'http://localhost:5186/';
 assert.match(baseURL, /^https?:\/\/(localhost|127\.0\.0\.1)(:|\/)/);
-const output = path.resolve('artifacts/adaptive-course');
+const output = path.resolve(process.env.CODEWORDS_ARTIFACT_DIR || 'artifacts/adaptive-course');
 await mkdir(output, { recursive: true });
 const response = await fetch(baseURL, { signal: AbortSignal.timeout(10000) });
 assert.equal(response.ok, true);
@@ -28,16 +31,17 @@ if (production) {
   assert.doesNotMatch(html, /src\/main\.tsx/, 'The application must load the built bundle');
 }
 const only = process.env.CODEWORDS_SCENARIO;
+const results = [], failures = [], browserErrors = [], requestFailures = [];
+const earned = only ? JSON.parse(await readFile(process.env.CODEWORDS_EARNED_FIXTURES || path.join(output, 'earned-fixtures.json'), 'utf8').catch(() => '{}')) : {};
+if (only && /earned review|confirm switching|spoken expression/.test(only)) validateEarnedFixtures(earned);
 const browser = await chromium.launch({ channel: 'chrome', headless: true });
-const results = [], failures = [], browserErrors = [];
-const earned = only ? JSON.parse(await readFile(path.join(output, 'earned-fixtures.json'), 'utf8').catch(() => '{}')) : {};
 let objectiveAnswers = 0, selfChecks = 0;
 const configs = {
   programming: { label: '编程英语', key: PROGRAMMING_COURSE_KEY, root: '#programming-content', lessons: adaptiveProgrammingLessons, units: adaptiveProgrammingUnits, oldLessons: programmingLessons },
   daily: { label: '日常英语', key: DAILY_KEY, root: '#daily-content', lessons: adaptiveDailyLessons, units: adaptiveDailyUnits, oldLessons: dailyLessons },
 };
 for (const config of Object.values(configs)) config.exercises = new Map(config.lessons.flatMap(lesson => [...lesson.exercises, ...lesson.rechecks, ...lesson.practice].map(task => [task.id, { task, lesson }])));
-const themes = ['minimal', 'sketch', 'print', 'graffiti'];
+const themes = ['lagoon', 'pearl', 'sky', 'mint'];
 const raw = (page, key) => page.evaluate(key => localStorage.getItem(key), key);
 const read = async (page, key) => JSON.parse(await raw(page, key));
 const root = env => env.page.locator(env.config.root);
@@ -47,11 +51,14 @@ async function navigate(page, name) { await page.getByRole('navigation', { name:
 async function open({ section = 'programming', seed = {}, width = 1440, rng = 314159, now } = {}) {
   const context = await browser.newContext({ viewport: { width, height: width < 600 ? 844 : 1000 }, reducedMotion: 'reduce' });
   const page = await context.newPage();
+  // These scenarios use speaking self-checks, never a microphone or ASR service.
+  await context.route('http://127.0.0.1:18768/**', route => route.fulfill({ status: 200, contentType: 'application/json', body: JSON.stringify({ ready: false }) }));
   if (now) await page.clock.setFixedTime(new Date(now));
   page.setDefaultTimeout(10000);
   const localErrors = [];
   page.on('pageerror', error => localErrors.push(error.message));
-  page.on('console', event => { if (event.type() === 'error' && !event.location().url.endsWith('favicon.ico')) localErrors.push(event.text()); });
+  page.on('console', event => { if (event.type() === 'error' && !event.location().url.endsWith('favicon.ico')) localErrors.push(`${event.text()} (${event.location().url})`); });
+  page.on('requestfailed', request => requestFailures.push({ section, error: request.failure()?.errorText, url: request.url() }));
   await page.addInitScript(({ section, seed, rng }) => {
     if (!sessionStorage.getItem('adaptive-course-qa')) {
       localStorage.setItem('codewords-section', section);
@@ -102,13 +109,13 @@ async function scenario(name, options, test) {
 }
 async function saveReport() {
   const suffix = only ? `-${only.replace(/[^a-z0-9]+/gi, '-').slice(0, 100)}` : '';
-  const report = { baseURL, production, scenarios: results, failures, browserErrors, objectiveAnswers, selfChecks, microphoneTested: false, testedAt: new Date().toISOString() };
+  const report = { baseURL, production, scenarios: results, failures, browserErrors, requestFailures, objectiveAnswers, selfChecks, microphoneTested: false, testedAt: new Date().toISOString() };
   await writeFile(path.join(output, `browser-results${production ? '-production' : ''}${suffix}.json`), JSON.stringify(report, null, 2));
-  await writeFile(path.join(output, 'earned-fixtures.json'), JSON.stringify(earned));
 }
 async function currentOnly(env) {
-  await root(env).locator('.daily-lesson-row').waitFor();
-  assert.equal(await root(env).locator('.daily-lesson-row').count(), 1);
+  // The merged course home shows exactly one current lesson card, never a fixed list of 24.
+  await root(env).locator('.course-current').waitFor();
+  assert.equal(await root(env).locator('.course-current').count(), 1);
   const text = await root(env).innerText();
   assert.doesNotMatch(text, /(?:共|\/|总计|总共)\s*24\s*(?:课|节)|24\s*(?:课|节)/);
   const headings = await root(env).locator('h2,h3').allTextContents();
@@ -116,11 +123,11 @@ async function currentOnly(env) {
 }
 async function startRound(env) {
   await currentOnly(env);
-  await root(env).locator('.daily-lesson-row').getByRole('button').click();
+  await root(env).locator('.course-current').getByRole('button', { name: '开始学习', exact: true }).click();
   await root(env).locator('.daily-study-card').waitFor();
   const state = await progress(env);
   assert.ok(state.session.adaptive);
-  assert.match(await root(env).locator('.daily-session-heading h1').innerText(), /^第\s*\d+\s*节$/);
+  assert.match(await root(env).locator('.daily-session-heading h1').innerText(), /^第\s*\d+\s*节\s*·\s*\S/);
   await root(env).getByRole('button', { name: '开始练习', exact: true }).click();
   await root(env).locator('.daily-question').waitFor();
   return state.session.adaptive;
@@ -132,23 +139,25 @@ function currentTask(env, state) {
   return entry;
 }
 function orderIndexes(task) {
-  // Blocks can be whole sentences or commands and may repeat: do not split the answer into words.
-  function match(rest, remaining, result) {
-    if (!rest) return remaining.length ? null : result;
-    for (const index of remaining) if (rest === task.options[index] || rest.startsWith(`${task.options[index]} `)) {
-      const found = match(rest.slice(task.options[index].length).trimStart(), remaining.filter(other => other !== index), [...result, index]);
-      if (found) return found;
-    }
-    return null;
-  }
-  const answer = match(task.answers[0], task.options.map((_, index) => index), []);
-  assert.ok(answer, `Cannot assemble ${task.id}`);
-  return answer;
+  return correctDraft(task).order;
 }
 async function fillAnswer(env, task, wrong = false) {
   const form = root(env).locator(`.daily-question[data-exercise-id="${task.id}"]`);
   await form.waitFor();
-  if (task.kind === 'choice' || task.kind === 'listen') {
+  if (task.kind === 'match') {
+    const left = pairOrder(task.pairs, `${task.id}:left`);
+    for (const item of task.pairs) {
+      if ((await progress(env)).session.draft.pairs?.matches[item.id]) continue;
+      await form.locator('.course-pair-row > .course-pair-card').nth(left.findIndex(value => value.id === item.id)).click();
+      const right = form.getByRole('group', { name: '中文含义', exact: true });
+      if (wrong) {
+        const matches = (await progress(env)).session.draft.pairs.matches;
+        const other = task.pairs.find(value => value.id !== item.id && !(value.id in matches));
+        if (other) await right.getByRole('button', { name: other.zh, exact: true }).click();
+      }
+      if (!(await progress(env)).session.draft.pairs.matches[item.id]) await right.getByRole('button', { name: item.zh, exact: true }).click();
+    }
+  } else if (task.kind === 'choice' || task.kind === 'listen') {
     const value = wrong ? task.options.find(option => !task.answers.includes(option)) : task.answers[0];
     assert.notEqual(value, undefined, task.id);
     await form.getByRole('button', { name: value, exact: true }).click();
@@ -156,9 +165,9 @@ async function fillAnswer(env, task, wrong = false) {
     for (let index = 0; index < task.blanks.length; index++) await form.getByLabel(`第 ${index + 1} 个空`, { exact: true }).fill(wrong ? 'zz' : task.blanks[index][0]);
   } else if (task.kind === 'order') {
     const indexes = orderIndexes(task);
-    for (const index of wrong ? indexes.slice().reverse() : indexes) await form.locator('[aria-label="可选词块"] button').nth(index).click();
+    for (const index of wrong ? indexes.slice().reverse() : indexes) await form.locator('[aria-label="可选词块"] > .reading-token > .daily-token').nth(index).click();
   } else {
-    if (task.kind === 'speak') await form.getByRole('button', { name: '自己表达', exact: true }).click();
+    if (task.kind === 'speak') { await form.getByRole('button', { name: '自己表达', exact: true }).click(); await form.locator('.speech-edit summary').click(); }
     await form.locator('textarea').fill(wrong ? 'zz' : task.kind === 'speak' ? task.sample : task.answers[0]);
     if (task.kind === 'speak') for (const checkbox of await form.locator('input[type=checkbox]').all()) await checkbox.check();
   }
@@ -170,11 +179,23 @@ async function answer(env, { weak = false, sequence = [] } = {}) {
   const wrong = weak && task.kind !== 'speak' && !helped;
   if (helped) await root(env).getByRole('button', { name: '提示', exact: true }).click();
   await fillAnswer(env, task, wrong);
-  await root(env).locator('.daily-controls .primary').click();
+  if (task.kind !== 'match') await root(env).locator('.daily-controls .primary').click();
+  if (wrong && await root(env).locator('.answer-correction').isVisible()) {
+    // The first error now offers a local retry. End this weak attempt explicitly;
+    // the first error and revealed outcome must both remain saved.
+    await root(env).getByRole('button', { name: '暂时不会', exact: true }).click();
+  }
   await root(env).locator('.daily-feedback').waitFor();
   const checked = await progress(env);
-  assert.equal(checked.session.feedback.correct, !wrong, task.id);
-  assert.equal(checked.session.feedback.outcome, task.kind === 'speak' ? 'self' : helped ? 'assisted' : wrong ? 'revealed' : 'independent', task.id);
+  if (task.kind === 'match') {
+    const outcomes = Object.values(checked.session.answers.at(-1).targets);
+    assert.equal(checked.session.feedback.correct, !outcomes.includes('revealed'), task.id);
+    assert.equal(outcomes.filter(value => value === 'unmeasured').length, 1, 'Final pair carries no recall evidence');
+    if (weak) assert.ok(outcomes.some(value => value === 'assisted' || value === 'revealed'), 'Weak pair practice records actual help or errors');
+  } else {
+    assert.equal(checked.session.feedback.correct, !wrong, task.id);
+    assert.equal(checked.session.feedback.outcome, task.kind === 'speak' ? 'self' : helped ? 'assisted' : wrong ? 'revealed' : 'independent', task.id);
+  }
   if (task.kind === 'speak') {
     selfChecks++;
     for (const id of ids) assert.equal(checked.learning.targets[id].confidence, before.learning.targets[id].confidence, 'Self check adds no automatic confidence');
@@ -204,13 +225,20 @@ async function assertNoReview(env) {
     assert.equal(Object.keys(review).filter(id => isReviewEligible(review, Number(id))).length, 0);
   }
   await navigate(env.page, '复习');
-  await root(env).getByRole('heading', { name: '先学习当前课程', exact: true }).waitFor();
+  if (env.section === 'programming') await root(env).getByRole('button', { name: '去学习当前课程', exact: true }).waitFor();
+  else {
+    await root(env).getByRole('heading', { name: '暂无可复习的词汇', exact: true }).waitFor();
+    assert.equal(await root(env).locator('.expression-review').getByRole('button', { name: '开始练习', exact: true }).isDisabled(), true);
+  }
   assert.equal(await root(env).locator('.daily-early-review').count(), 0);
-  if (env.section === 'programming') assert.equal(await env.page.getByRole('button', { name: '提前巩固已学词', exact: true }).isDisabled(), true);
+  if (env.section === 'programming') assert.equal(await env.page.getByRole('button', { name: '练习已学词', exact: true }).isDisabled(), true);
   await navigate(env.page, '课程');
 }
 async function resume(env) {
-  if (!await root(env).locator('.daily-question').isVisible()) await root(env).locator('.daily-resume').getByRole('button', { name: '继续', exact: true }).click();
+  if (!await root(env).locator('.daily-question').isVisible()) {
+    if (await root(env).locator('.course-current').isVisible()) await root(env).locator('.course-current').getByRole('button', { name: '继续学习', exact: true }).click();
+    else await root(env).locator('.daily-resume').getByRole('button', { name: '继续', exact: true }).click();
+  }
   await root(env).locator('.daily-question').waitFor();
 }
 async function preserveDraft(env) {
@@ -221,13 +249,13 @@ async function preserveDraft(env) {
   await env.page.reload(); await root(env).locator('.daily-question').waitFor();
   assert.deepEqual((await progress(env)).session, session, 'Reload preserves queue, options selection and full draft');
   assert.deepEqual(await root(env).locator('.daily-option,[aria-label="可选词块"] button').allTextContents(), options);
-  await env.page.getByLabel('界面风格', { exact: true }).selectOption('sketch');
+  await env.page.getByLabel('界面配色', { exact: true }).selectOption('pearl');
   await env.page.getByRole('button', { name: env.section === 'daily' ? '编程英语' : '日常英语', exact: true }).click();
   await env.page.getByRole('button', { name: env.config.label, exact: true }).click();
   await resume(env);
   assert.deepEqual((await progress(env)).session, session, 'Theme and section switches preserve current draft');
   // Complete the already-filled draft, avoiding duplicate order-block selections.
-  await root(env).locator('.daily-controls .primary').click();
+  if (!session.feedback) await root(env).locator('.daily-controls .primary').click();
   await root(env).locator('.daily-feedback').waitFor();
   assert.equal((await progress(env)).session.feedback.correct, true);
   if (task.kind === 'speak') selfChecks++; else objectiveAnswers++;
@@ -278,8 +306,12 @@ try {
       assert.ok(readyIds(state).length > 0, 'Sustained independent performance eventually qualifies for review');
       earned[section] = { course: await raw(env.page, env.config.key), review: await raw(env.page, REVIEW_KEY) };
       await navigate(env.page, '复习');
-      await root(env).locator('.daily-early-review').waitFor();
-      if (section === 'programming') assert.equal(await env.page.getByRole('button', { name: '提前巩固已学词', exact: true }).isEnabled(), true);
+      if (section === 'daily') await root(env).locator('.expression-review .daily-expression').first().waitFor();
+      else {
+        await root(env).locator('.review-scenarios > summary').click();
+        await root(env).locator('.daily-early-review').waitFor();
+      }
+      if (section === 'programming') assert.equal(await env.page.getByRole('button', { name: '练习已学词', exact: true }).isEnabled(), true);
     } else await assertNoReview(env);
     await writeFile(path.join(output, `${section}-${behavior}-rounds.json`), JSON.stringify(rounds, null, 2));
     return { rounds: rounds.length, firstAdmissionRound, objectiveAnswers: sequence.filter(event => event.outcome !== 'self').length, readyCount: readyIds(state).length, plans: rounds.map(item => ({ new: item.plan.newIds.length, focus: item.plan.focusIds, answers: item.answers })) };
@@ -366,9 +398,15 @@ try {
     if (earned[section]) await scenario(`${section}: earned review offers early practice and due practice`, { section, now: Date.now() + 8 * 86400000, seed: { [config.key]: earned[section].course, ...(earned[section].review ? { [REVIEW_KEY]: earned[section].review } : {}) } }, async env => {
       await navigate(env.page, '复习');
       const ready = new Set(readyIds(await progress(env)));
-      const scheduled = root(env).locator('.daily-panel > .daily-lessons .daily-lesson-row');
-      assert.ok(await scheduled.count() > 0, 'Admitted targets become due after time passes');
-      await scheduled.first().getByRole('button', { name: '开始复习', exact: true }).click();
+      if (section === 'programming') {
+        await root(env).locator('.review-scenarios > summary').click();
+        const scheduled = root(env).locator('.review-scenario-content > .daily-lessons .daily-lesson-row');
+        assert.ok(await scheduled.count() > 0, 'Admitted targets become due after time passes');
+        await scheduled.first().getByRole('button', { name: '开始复习', exact: true }).click();
+      } else {
+        assert.ok(dueDailyLessons(await progress(env), config.lessons, Date.now() + 8 * 86400000).length > 0, 'Earned daily practice is actually due');
+        await root(env).locator('.expression-review').getByRole('button', { name: '开始练习', exact: true }).click();
+      }
       await root(env).locator('.daily-question').waitFor();
       const session = (await progress(env)).session;
       assert.equal(session.mode, 'review');
@@ -378,24 +416,33 @@ try {
       }
       return { ready: [...ready], dueQueue: session.queue.map(entry => entry.exerciseId) };
     });
-    if (earned[section]) await scenario(`${section}: confirm switching unfinished review to adaptive course`, { section, seed: { [config.key]: earned[section].course, ...(earned[section].review ? { [REVIEW_KEY]: earned[section].review } : {}) } }, async env => {
+    if (earned[section]) await scenario(`${section}: confirm switching unfinished review to adaptive course`, { section, width: 390, seed: { [config.key]: earned[section].course, ...(earned[section].review ? { [REVIEW_KEY]: earned[section].review } : {}) } }, async env => {
       const scripts = await env.page.evaluate(() => [...document.scripts].map(script => script.src));
       if (production) {
         assert.ok(scripts.some(url => /\/assets\/index-[^/]+\.js/.test(url)));
         assert.ok(!scripts.some(url => /src\/main\.tsx/.test(url)));
       }
       await navigate(env.page, '复习');
-      await root(env).locator('.daily-early-review summary').click();
-      await root(env).locator('.daily-early-review .daily-lesson-row').first().getByRole('button', { name: '开始练习', exact: true }).click();
+      if (section === 'programming') {
+        await root(env).locator('.review-scenarios > summary').click();
+        await root(env).locator('.daily-early-review summary').click();
+        await root(env).locator('.daily-early-review .daily-lesson-row').first().getByRole('button', { name: '开始练习', exact: true }).click();
+      } else await root(env).locator('.expression-review .daily-expression').first().getByRole('button', { name: '练习相关词汇', exact: true }).click();
       await root(env).locator('.daily-question').waitFor();
       await answer(env);
       const reviewed = await progress(env);
       assert.equal(reviewed.session.mode, 'review');
       assert.equal(reviewed.session.stage, 'exercise', 'A real review must remain unfinished for the replacement boundary');
+      await root(env).locator('.daily-session-top').getByRole('button', { name: /^〈 返回/ }).click();
       await navigate(env.page, '课程');
-      await root(env).locator('.daily-lesson-row').getByRole('button').click();
+      await root(env).getByRole('button', { name: '开始新的一课', exact: true }).click();
       await root(env).locator('.daily-notice[role="status"]').waitFor();
-      assert.equal((await progress(env)).session.id, reviewed.session.id, 'The pending confirmation preserves the review session');
+      assert.deepEqual(await progress(env), reviewed, 'The pending confirmation preserves all review evidence and the current draft');
+      await noOverflow(env.page);
+      await env.page.screenshot({ path: path.join(output, `${section}-switch-pending-390.png`), fullPage: true });
+      await root(env).getByRole('button', { name: '保留原来的练习', exact: true }).click();
+      assert.deepEqual(await progress(env), reviewed, 'Cancelling the switch changes no learning record');
+      await root(env).getByRole('button', { name: '开始新的一课', exact: true }).click();
       await root(env).locator('.daily-notice[role="status"]').getByRole('button', { name: /^开始“/ }).click();
       await root(env).locator('.daily-study-card').waitFor();
       const switched = await progress(env);
@@ -415,12 +462,13 @@ try {
 
   if (earned.daily) await scenario('daily: spoken expression self check cannot increase mastery', { section: 'daily', seed: { [DAILY_KEY]: earned.daily.course } }, async env => {
     const before = await progress(env), ready = new Set(readyIds(before));
-    const lesson = env.config.lessons.find(lesson => lesson.exercises.some(task => task.kind === 'speak' && dailyExerciseKnowledgeIds(lesson, task).every(id => ready.has(id))));
+    const lesson = env.config.lessons.find(lesson => [...lesson.exercises, ...lesson.practice].some(task => task.kind === 'speak' && dailyExerciseKnowledgeIds(lesson, task).every(id => ready.has(id))));
     assert.ok(lesson, 'Earned independent practice has admitted all targets for a spoken review');
     await navigate(env.page, '复习');
     await root(env).getByLabel('复习内容', { exact: true }).selectOption('speaking');
-    await root(env).locator('.daily-early-review summary').click();
-    await root(env).locator('.daily-early-review .daily-lesson-row').filter({ hasText: lesson.title }).getByRole('button', { name: '开始练习', exact: true }).click();
+    const target = lesson.phrases.find(phrase => ready.has(phrase.id));
+    assert.ok(target);
+    await root(env).locator('.expression-review .daily-expression').filter({ has: env.page.getByRole('button', { name: `朗读 ${target.en}`, exact: true }) }).getByRole('button', { name: '练习相关词汇', exact: true }).click();
     await root(env).locator('.daily-question[data-kind="speak"]').waitFor();
     await answer(env);
     const after = await progress(env);
@@ -462,7 +510,7 @@ try {
     await startRound(env);
     const session = (await progress(env)).session;
     for (const theme of themes) {
-      await env.page.getByLabel('界面风格', { exact: true }).selectOption(theme);
+      await env.page.getByLabel('界面配色', { exact: true }).selectOption(theme);
       assert.deepEqual((await progress(env)).session, session);
       await noOverflow(env.page);
       await env.page.screenshot({ path: path.join(output, `${section}-exercise-${theme}-${width}.png`) });
@@ -475,4 +523,5 @@ try {
 } finally { await saveReport(); await browser.close(); }
 assert.deepEqual(failures, [], `${failures.length} browser scenarios failed`);
 assert.deepEqual(browserErrors, []);
+await saveEarnedFixtures(path.join(output, 'earned-fixtures.json'), earned, { complete: !only, failed: failures.length > 0 });
 console.log(`PASS ${results.length} adaptive browser scenarios, ${objectiveAnswers} objective answers and ${selfChecks} self checks. Microphone not tested.`);

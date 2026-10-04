@@ -1,0 +1,30 @@
+{
+  "clips": {
+    "focus-i": {
+      "duration": 1.654,
+      "longestInternalSilenceMs": 50,
+      "prefixPitchHz": 106.0,
+      "suffixPitchHz": 76.9
+    },
+    "focus-tea": {
+      "duration": 2.089,
+      "longestInternalSilenceMs": 50,
+      "prefixPitchHz": 85.1,
+      "suffixPitchHz": 81.6
+    },
+    "ready-flow": {
+      "duration": 1.819,
+      "longestInternalSilenceMs": 0,
+      "prefixPitchHz": 101.0,
+      "suffixPitchHz": 88.7
+    },
+    "ready-pause": {
+      "duration": 2.324,
+      "longestInternalSilenceMs": 450,
+      "prefixPitchHz": 101.0,
+      "suffixPitchHz": 89.9
+    }
+  },
+  "passed": true,
+  "scope": "Measured actual pitch distribution and internal pause contrast. This does not replace human pronunciation review."
+}

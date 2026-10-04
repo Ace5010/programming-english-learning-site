@@ -1,23 +1,32 @@
 <!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>__PAGE_TITLE__</title>
 <style>audio{width:100%;margin:12px 0}meter{max-width:55%}body{font:18px/1.65 system-ui;margin:0;background:#f4f5f3;color:#172821}main{max-width:680px;margin:40px auto;padding:28px;background:white;border-radius:20px}h1{font-size:28px}select,button{font:inherit;padding:12px 20px;border-radius:12px;border:1px solid #bcc8c0;margin:8px 10px 8px 0}button{background:#185b40;color:white}button:disabled{opacity:.5}#meaning{font-size:32px;font-weight:700;color:#172821;margin:20px 0 2px}#reading{display:flex;align-items:center;flex-wrap:wrap;gap:10px}#reference{font-size:36px;font-weight:650;background:transparent;border:0;color:#172821;padding:0;margin:0;text-align:left}#slow{margin:0}#status{min-height:32px}li{margin:12px 0}p{margin:16px 0}.note{color:#43564c}@media(max-width:720px){main{margin:12px;padding:22px}}</style>
 <main><h1>__PAGE_TITLE__</h1><p class="note">__PRIVACY_NOTE__ __SCOPE_NOTE__</p>
+<style>select{display:block;box-sizing:border-box;width:100%;max-width:100%;margin-right:0}</style>
 <label>选择熟悉的词 <select id="target"><optgroup label="常见词"><option>Hello</option><option selected>Goodbye</option><option>Three</option><option>Yes</option><option>No</option></optgroup><optgroup label="其他词，先听再决定是否试读"><option>Think</option><option>Sink</option><option>Ship</option><option>Sheep</option><option>Tree</option><option>Free</option><option>Bad</option><option>Bed</option><option>Right</option><option>Light</option></optgroup></select></label>
-<p id="meaning">再见</p><div id="reading"><button id="reference" type="button" aria-label="正常播放 Goodbye">Goodbye</button><button id="slow" type="button">慢速</button></div><p class="note">点击英文听读音；不会读的词可以跳过。</p><audio id="sample" preload="none" hidden></audio><button id="record">开始录音</button><button id="cancel" disabled>取消</button><p id="status" role="status">准备好后点击开始，读完后点击结束。</p><p><label>麦克风音量 <meter id="level" min="0" max="1" value="0" aria-label="麦克风音量"></meter></label></p><audio id="playback" controls hidden aria-label="回听本次录音"></audio><section id="result" aria-live="polite"></section></main>
+<p id="meaning">再见</p><div id="reading"><button id="reference" type="button" aria-label="正常播放 Goodbye">Goodbye</button><button id="slow" type="button">慢速</button></div><p id="reading-help" class="note">点击英文听读音；不会读的词可以跳过。</p><audio id="sample" preload="none" hidden></audio><button id="record">开始录音</button><button id="cancel" disabled>取消</button><p id="status" role="status">准备好后点击开始，读完后点击结束。</p><p><label>麦克风音量 <meter id="level" min="0" max="1" value="0" aria-label="麦克风音量"></meter></label></p><audio id="playback" controls hidden aria-label="回听本次录音"></audio><section id="result" aria-live="polite"></section></main>
 <script>
 const token='__TOKEN__',engine='__ENGINE__',wordInfo=__WORD_DATA__,target=document.querySelector('#target'),record=document.querySelector('#record'),cancel=document.querySelector('#cancel'),status=document.querySelector('#status'),result=document.querySelector('#result');
+const transcription=engine==='sensevoice-asr-trial-v1'||engine==='qwen3-asr-trial-v1';
 let recorder,stream,timer,stageTimer,request,revision=0,phase='idle',audioContext,meterTimer,playbackUrl;
+if(engine==='qwen3-asr-trial-v1'){
+ const group=document.createElement('optgroup');group.label='课程短句';
+ for(const phrase of Object.keys(wordInfo).filter(word=>word.includes(' '))){const option=document.createElement('option');option.value=option.textContent=phrase;group.append(option)}
+ target.append(group);target.closest('label').firstChild.textContent='选择熟悉的词或句子 ';
+ target.value="What's your name?";
+ document.querySelector('#reading-help').textContent='点击英文听示范；也可以直接读刚才识别失败的句子，核对下面的转写。';
+}
 const playback=document.querySelector('#playback'),sample=document.querySelector('#sample'),meaning=document.querySelector('#meaning'),referenceButton=document.querySelector('#reference'),slowButton=document.querySelector('#slow'),level=document.querySelector('#level');
 function selectWord(){const word=target.value;sample.pause();sample.removeAttribute('src');sample.load();meaning.textContent=wordInfo[word].meaning;referenceButton.textContent=word;referenceButton.setAttribute('aria-label','正常播放 '+word);}
 function playWord(rate){if(phase!=='idle')return;sample.pause();sample.src=wordInfo[target.value].audio;sample.currentTime=0;sample.playbackRate=rate;sample.preservesPitch=true;void sample.play().catch(()=>{status.textContent='示范读音未能播放，请重试。'});}
 referenceButton.onclick=()=>playWord(1);slowButton.onclick=()=>playWord(.72);
-const failures={'busy':'上一段录音仍在本机处理中，请稍等再试。','request-not-authorized':'测试服务已更新，请刷新页面后重新录音。','invalid-audio':'录音数据无法解码，请重新录音。','invalid-duration':'录音太短或太长，请读一次后点击结束。','audio-too-large':'录音过大，请缩短录音后再试。','unable-to-assess':'本机模型处理失败，本次不判对错。','empty-audio':'没有收到录音数据，请检查麦克风后再试。'};
+const failures={'busy':'上一段录音仍在本机处理中，请稍等再试。','request-not-authorized':'测试服务已更新，请刷新页面后重新录音。','invalid-audio':'录音数据无法解码，请重新录音。','invalid-duration':'录音太短或太长，请读一次后点击结束。','audio-too-large':'录音过大，请缩短录音后再试。','unable-to-assess':'本机模型处理失败，本次不判对错。','empty-audio':'没有收到录音数据，请检查麦克风后再试。','transcript-too-long':'识别结果过长，未采用。请读一句后结束录音。'};
 const text=(tag,value)=>{const element=document.createElement(tag);element.textContent=value;return element};
 const reasons={'single-word-only':'当前版本只验证单词；整句暂不判对错。','no-speech':'录音音量很低，未获得足够语音证据。','dictionary-missing':'本机发音词典暂不支持这段内容。','asr-low-confidence':'语音识别本身把握不足，暂不能据此判断发音。','phoneme-evidence-conflict':'已识别出目标词，但音素模型的证据不一致。','words-differ-phoneme-uncertain':'识别到的词与目标不同，但具体错音证据不足。'};
 function showResult(data){
- if(engine==='sensevoice-asr-trial-v1'){
+ if(engine==='sensevoice-asr-trial-v1'||engine==='qwen3-asr-trial-v1'){
   const heading=data.status==='no-speech'?'未检测到语音':data.transcript?'识别到：'+data.transcript:'未识别到单词';
   result.replaceChildren(text('h2',heading));
-  if(data.status==='recognized')result.append(text('p',data.matched?'识别文字与目标词一致。还不能据此判断发音是否合格。':'识别文字与目标词不同。请先回听录音；这不代表你发音读错。'));
+  if(data.status==='recognized')result.append(text('p',engine==='qwen3-asr-trial-v1'?'请回听录音并核对转写。还不能据此判断发音是否合格。':data.matched?'识别文字与参考文本一致。还不能据此判断发音是否合格。':'识别文字与参考文本不同。请先回听录音；这不代表你发音读错。'));
   else result.append(text('p','请检查麦克风后再读一次；这次不判断发音。'));
   result.tabIndex=-1;result.focus({preventScroll:true});result.scrollIntoView({block:'start'});return;
  }
@@ -46,21 +55,21 @@ record.onclick=async()=>{
   clearTimeout(timer);stream=acquired;let chunks=[],recordingTimer;const activeRecorder=new MediaRecorder(acquired);recorder=activeRecorder;activeRecorder.ondataavailable=e=>{if(current===revision&&e.data.size)chunks.push(e.data)};
   try{audioContext=new AudioContext();audioContext.resume().catch(()=>{});const analyser=audioContext.createAnalyser();analyser.fftSize=1024;audioContext.createMediaStreamSource(acquired).connect(analyser);const values=new Float32Array(analyser.fftSize);meterTimer=setInterval(()=>{analyser.getFloatTimeDomainData(values);level.value=Math.min(1,Math.sqrt(values.reduce((sum,v)=>sum+v*v,0)/values.length)*6)},100)}catch{}
   activeRecorder.onstop=async()=>{
-   clearTimeout(recordingTimer);acquired.getTracks().forEach(track=>track.stop());if(current!==revision)return;if(stream===acquired)stream=null;cleanup();phase='processing';record.disabled=true;record.textContent='正在评测';let waited=0;status.textContent='录音已结束，正在本机评测…';stageTimer=setInterval(()=>{if(current===revision)status.textContent=`正在本机评测，已等待 ${++waited} 秒。处理期间不用重新录音。`},1000);
+   clearTimeout(recordingTimer);acquired.getTracks().forEach(track=>track.stop());if(current!==revision)return;if(stream===acquired)stream=null;cleanup();phase='processing';record.disabled=true;record.textContent=transcription?'正在识别':'正在评测';let waited=0;status.textContent=transcription?'录音已结束，正在本机识别…':'录音已结束，正在本机评测…';stageTimer=setInterval(()=>{if(current===revision)status.textContent=`正在本机${transcription?'识别':'评测'}，已等待 ${++waited} 秒。处理期间不用重新录音。`},1000);
    try{
     const blob=new Blob(chunks,{type:activeRecorder.mimeType});chunks=[];if(!blob.size)throw Error('empty-audio');
     playbackUrl=URL.createObjectURL(blob);playback.src=playbackUrl;playback.hidden=false;
     const bytes=new Uint8Array(await blob.arrayBuffer());let binary='';for(let offset=0;offset<bytes.length;offset+=8192)binary+=String.fromCharCode(...bytes.subarray(offset,offset+8192));
     request=new AbortController();
-    timer=setTimeout(()=>{if(current===revision){abort();status.textContent='本机评测超时，本次不判对错。稍后可重新录音。';}},15000);
+    timer=setTimeout(()=>{if(current===revision){abort();status.textContent=`本机${transcription?'识别':'评测'}超时，本次不判对错。稍后可重新录音。`;}},engine==='qwen3-asr-trial-v1'?30000:15000);
     const response=await fetch('/api/assess',{method:'POST',headers:{'Content-Type':'application/json','X-Local-Token':token},body:JSON.stringify({reference,audio:btoa(binary)}),signal:request.signal});
     const data=await response.json();if(current!==revision)return;if(!response.ok)throw Error(data.error);
     showResult(data);
     status.textContent='本次核对完成。'+(data.elapsedMs?`耗时 ${(data.elapsedMs/1000).toFixed(1)} 秒。`:'');
-   }catch(error){if(current===revision)status.textContent=error.name==='AbortError'?'已取消。':failures[error.message]||'未能连接本机评测服务，本次不判对错。';}
+   }catch(error){if(current===revision)status.textContent=error.name==='AbortError'?'已取消。':failures[error.message]||`未能连接本机${transcription?'识别':'评测'}服务，本次不判对错。`;}
    finally{if(current===revision){clearTimeout(timer);clearInterval(stageTimer);idle();}}
   };
-  activeRecorder.start();phase='recording';record.disabled=false;record.textContent='结束录音';status.textContent='正在听，请读出上面的词。';let recorded=0;stageTimer=setInterval(()=>{if(current===revision)status.textContent=`正在录音 ${++recorded} 秒，请读一次，读完点击「结束录音」。18 秒后自动结束。`},1000);recordingTimer=setTimeout(()=>{if(activeRecorder.state==='recording')activeRecorder.stop()},18000);timer=recordingTimer;
+  activeRecorder.start();phase='recording';record.disabled=false;record.textContent='结束录音';status.textContent=engine==='qwen3-asr-trial-v1'?'正在听，请读出上面的词或句子。':'正在听，请读出上面的词。';let recorded=0;stageTimer=setInterval(()=>{if(current===revision)status.textContent=`正在录音 ${++recorded} 秒，请读一次，读完点击「结束录音」。18 秒后自动结束。`},1000);recordingTimer=setTimeout(()=>{if(activeRecorder.state==='recording')activeRecorder.stop()},18000);timer=recordingTimer;
  }catch(error){if(current===revision){cleanup();idle();status.textContent='麦克风未能启动，请检查浏览器麦克风权限。';}}
 };
 addEventListener('pagehide',abort);

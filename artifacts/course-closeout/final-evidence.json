@@ -1,0 +1,58 @@
+{
+  "sourceHashes": {
+    "src/DailyEnglish.tsx": "383d3e179ebb2186c51595a64092e16a97851581e9e2f629e4dcf28b9904dab4",
+    "src/programmingSupport.ts": "77bbd30f4e75503f4a38e7f61cd5e254bdcde1b89416f3d21f645eaf86abc499",
+    "tools/test-adaptive-course-browser.mjs": "e80cced152bd873d91f10f3e41a6c96d0ea42aeca7de2d9727d6ed2e1aeabc99",
+    "tools/test-mobile-browser.mjs": "e946efda2dc9ad157204bd6c68fa8ffaa3281dd1685511530e8926f97ebf69ad",
+    "tools/test-sync-browser.mjs": "8cfc73877754e117b28d5699dae3cf6058fc031f19e5490fbb0c3d4d65d664aa",
+    "tools/test-word-learning-browser.mjs": "e363f9fe0d160f022ba3f27673873bbc160209faef04c96f232488b0a95167e4",
+    "tools/helpers/earned-fixtures.mjs": "3242d67993ae3e4a4b2593b3fc9ea8dce894619900a5cfec95e3301cde7ee8b2",
+    "tools/test-earned-fixtures.mjs": "97f873ae81563886b82c57c489a7a2260c5aef1513bebaa3d5195562241ef0a0",
+    "docs/COURSE_CLOSEOUT.md": "e93920f9ca86c08e16f39bea42dc0da9d7793d4c23906ba0766f67bad1521c87"
+  },
+  "verifiedBrowserReports": [
+    {
+      "path": "artifacts/course-closeout/adaptive-complete/browser-results.json",
+      "sha256": "7615e0f771ab97cf51577cc2330f46d7fe9465954511f63d028042727030efd8",
+      "scenarios": 20
+    },
+    {
+      "path": "artifacts/course-closeout/production/browser-results-production-production-smoke-confirm-switching-real-Aria.json",
+      "sha256": "47701d991c9adee1ef1b6066bede974d17cdeec74f497860d73825e539d81439",
+      "scenarios": 5
+    },
+    {
+      "path": "artifacts/course-closeout/switch-mobile/browser-results-production-confirm-switching.json",
+      "sha256": "d57295fd3333678a0e0c2f672afb41df100f20e15876850838955ac9b43f0cbe",
+      "scenarios": 2
+    },
+    {
+      "path": "artifacts/course-closeout/mobile-final/browser-results.json",
+      "sha256": "5c42de1b780f7f9130e02993c15d00b23c1e5ad8b30dcf1f717eb843084ff2f4",
+      "scenarios": 13
+    },
+    {
+      "path": "artifacts/course-closeout/upgrade/browser-results.json",
+      "sha256": "ec22821f9192dd056bb500c92204b499904cdc6a9754dcf369d1200622eba8b8",
+      "scenarios": 17
+    },
+    {
+      "path": "artifacts/course-closeout/word-final/report.json",
+      "sha256": "4657339b03bfe5c20a924e522081a333f4f1235676e2b457bb2f739473698afb",
+      "scenarios": 9
+    },
+    {
+      "path": "artifacts/course-closeout/sync-local/results.json",
+      "sha256": "71dcfc3263bd822f8f6a6bb1cb93fbad35218c5afb9b1c2571ea4e8adffc1ec2",
+      "scenarios": 8
+    },
+    {
+      "path": "artifacts/course-closeout/sync-live-final/live-results.json",
+      "sha256": "d5000f2e798db437077c0373fb1619952cc3f04828826e2efea8e84f77c147b4",
+      "scenarios": 7
+    }
+  ],
+  "bundle": "dist/assets/index-B3eH5B9m.js",
+  "physicalDeviceTested": false,
+  "userMicrophoneTested": false
+}

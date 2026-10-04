@@ -38,7 +38,7 @@ async function open(section, state, width = 390, session = {}) {
   page.on('response', response => { if (response.status() >= 400 && /\.mp3/.test(response.url())) errors.push(`${response.status()}: ${response.url()}`); });
   await page.addInitScript(({ state, section, session }) => {
     if (!sessionStorage.getItem('upgrade-test')) {
-      localStorage.setItem('codewords-section', section); localStorage.setItem('codewords-theme', 'minimal');
+      localStorage.setItem('codewords-section', section); localStorage.setItem('codewords-theme', 'lagoon');
       Object.entries(state).forEach(([key, value]) => localStorage.setItem(key, value));
       Object.entries(session).forEach(([key, value]) => sessionStorage.setItem(key, value));
       sessionStorage.setItem('upgrade-test', '1');
@@ -94,11 +94,11 @@ for (const section of ['daily', 'programming']) {
     assert.equal((await saved(env)).session.answers.length, 0); assert.ok(await main.getByRole('button', { name: '再检查', exact: true }).isDisabled());
     assert.equal(await main.locator('.daily-feedback').count(), 0);
     const draft = (await saved(env)).session.draft;
-    for (const theme of ['minimal', 'sketch', 'print', 'graffiti']) {
-      await page.getByLabel('界面风格', { exact: true }).selectOption(theme);
+    for (const theme of ['lagoon', 'pearl', 'sky', 'mint']) {
+      await page.getByLabel('界面配色', { exact: true }).selectOption(theme);
       assert.deepEqual((await saved(env)).session.draft, draft); await layout(env, `${section}-correction-${theme}`, true);
     }
-    await main.getByRole('button', { name: /返回课程/ }).click(); await main.getByRole('button', { name: '继续', exact: true }).click();
+    await main.getByRole('button', { name: /返回课程/ }).click(); await main.getByRole('button', { name: '继续学习', exact: true }).click();
     await page.reload(); await main.locator('.answer-correction').waitFor(); assert.deepEqual((await saved(env)).session.draft, draft);
     await page.evaluate(() => new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve))));
     assert.equal(await main.locator('.answer-correction').evaluate(element => element === document.activeElement), true, 'Restored correction retains focus instead of the first input or tile');
@@ -143,12 +143,18 @@ for (const section of ['daily', 'programming']) {
     assert.equal(await right(task.pairs[1]).isDisabled(), true);
     await page.reload(); await main.locator('.pair-note').waitFor();
     assert.deepEqual(await main.locator('.course-pair-row > .course-pair-card').allTextContents(), before);
-    for (const theme of ['minimal', 'sketch', 'print', 'graffiti']) {
-      await page.getByLabel('界面风格', { exact: true }).selectOption(theme); await layout(env, `${section}-${mode}-pairs-${theme}`, true);
+    for (const theme of ['lagoon', 'pearl', 'sky', 'mint']) {
+      await page.getByLabel('界面配色', { exact: true }).selectOption(theme); await layout(env, `${section}-${mode}-pairs-${theme}`, true);
     }
     await right(first).click();
     for (const item of task.pairs.slice(1)) {
       if ((await saved(env)).session.draft.pairs.matches[item.id]) continue;
+      if (item === task.pairs.at(-1)) {
+        assert.equal(await main.locator('.daily-feedback').count(), 0, 'The final pair must remain interactive');
+        assert.equal((await saved(env)).session.answers.length, 0);
+        assert.equal((await saved(env)).session.draft.pairs.matches[item.id], undefined);
+        await page.reload(); await main.locator('.course-pairs').waitFor();
+      }
       await chooseLeft(item); await right(item).click();
     }
     await main.locator('.daily-feedback').waitFor();
@@ -158,6 +164,27 @@ for (const section of ['daily', 'programming']) {
     await layout(env, `${section}-${mode}-pairs-complete`, true);
   });
 }
+
+await scenario('programming-supporting-words', async open => {
+  const { task, state } = fixture('programming', task => task.id.endsWith('-20-sentence'));
+  const env = await open('programming', state, 320), { page, main } = env;
+  const glosses = main.getByLabel('句中词语的含义', { exact: true });
+  await glosses.waitFor();
+  const text = await glosses.innerText();
+  for (const word of task.supportWords) { assert.ok(text.includes(word.en)); assert.ok(text.includes(word.zh)); }
+  assert.ok(!text.toLowerCase().includes('readme'), 'Glosses must not reveal the assessed target');
+  assert.equal((await saved(env)).session.draft.helped, false, 'Supporting vocabulary is teaching, not target-answer help');
+  await page.reload(); await glosses.waitFor();
+  assert.equal((await saved(env)).session.queue[0].exerciseId, task.id);
+  for (const theme of ['lagoon', 'pearl', 'sky', 'mint']) {
+    await page.getByLabel('界面配色', { exact: true }).selectOption(theme);
+    await layout(env, `programming-supporting-words-${theme}`, true);
+  }
+  const choice = main.getByRole('group', { name: '答案选项', exact: true }).getByRole('button', { name: task.answers[0], exact: true });
+  await choice.click(); await main.getByRole('button', { name: '检查', exact: true }).click();
+  await main.locator('.daily-feedback').waitFor();
+  assert.equal((await saved(env)).session.answers[0].outcome, 'independent');
+});
 
 await scenario('daily-writing-ime-and-one-retry', async open => {
   const { task, state } = fixture('daily', task => task.kind === 'write' && task.answers[0].split(' ').length === 4);
@@ -180,7 +207,7 @@ for (const support of ['partial', 'hidden']) await scenario(`speech-${support}`,
   await page.reload(); await main.locator('.speech-reference').first().waitFor();
   assert.ok((await main.locator('.speech-reference').first().innerText()).includes(task.readAloud[0].en));
   const before = (await saved(env)).learning.targets;
-  await main.getByRole('button', { name: '自己表达', exact: true }).click(); await main.locator('textarea').fill('My own words.');
+  await main.getByRole('button', { name: '自己表达', exact: true }).click(); await main.locator('.speech-edit summary').click(); await main.locator('textarea').fill('My own words.');
   for (const box of await main.locator('.daily-checks input').all()) await box.check();
   await main.getByRole('button', { name: '完成自查', exact: true }).click(); await main.locator('.daily-feedback').waitFor();
   const progress = await saved(env); assert.equal(progress.session.answers[0].outcome, 'self');
@@ -249,7 +276,7 @@ for (const section of ['daily', 'programming']) await scenario(`${section}-real-
         await main.getByRole('group', { name: '中文含义', exact: true }).getByRole('button', { name: item.zh, exact: true }).click();
       }
     } else {
-      await main.getByRole('button', { name: '自己表达', exact: true }).click(); await main.locator('textarea').fill(answer.text);
+      await main.getByRole('button', { name: '自己表达', exact: true }).click(); await main.locator('.speech-edit summary').click(); await main.locator('textarea').fill(answer.text);
       for (const input of await main.locator('.daily-checks input').all()) await input.check();
     }
     if (task.kind !== 'match') await main.locator('.daily-controls .primary').click();

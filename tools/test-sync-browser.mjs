@@ -11,9 +11,10 @@ const require = createRequire(import.meta.url);
 const { chromium } = require(process.env.CODEWORDS_PLAYWRIGHT || 'C:/Users/shenwuqiang/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
 const webOrigin = 'https://programming-english-learning-site.pages.dev', phoneOrigin = 'https://appassets.androidplatform.net';
 const live = process.env.CODEWORDS_LIVE_SYNC === '1', dist = path.resolve('dist'), output = path.resolve(process.env.CODEWORDS_ARTIFACT_DIR || 'artifacts/sync-audit');
+const localBundle = process.env.CODEWORDS_LIVE_LOCAL_BUNDLE === '1';
 await mkdir(output, { recursive: true });
 const server = syncServer(), errors = [], results = [];
-const earned = JSON.parse(await readFile('artifacts/adaptive-course/earned-fixtures.json', 'utf8'));
+const earned = JSON.parse(await readFile(process.env.CODEWORDS_EARNED_FIXTURES || 'artifacts/adaptive-course/earned-fixtures.json', 'utf8'));
 const browser = await chromium.launch({ channel: 'chrome', headless: true });
 const contexts = [];
 async function device(phone, seed = {}) {
@@ -28,7 +29,7 @@ async function device(phone, seed = {}) {
       const response = await server.fetch(request.url(), { method: request.method(), headers: await request.allHeaders(), body: request.postData() || undefined });
       return route.fulfill({ status: response.status, headers: Object.fromEntries(response.headers), body: await response.text() });
     }
-    if (!phone && live) return route.continue();
+    if (!phone && live && !localBundle) return route.continue();
     const prefix = phone ? '/assets/web/' : '/';
     assert.equal(url.origin, phone ? phoneOrigin : webOrigin); assert.ok(url.pathname.startsWith(prefix));
     const relative = decodeURIComponent(url.pathname.slice(prefix.length)) || 'index.html', file = path.resolve(dist, relative);
@@ -68,8 +69,8 @@ try {
   const phone = await device(true);
   for (const size of [{ width: 320, height: 640 }, { width: 360, height: 780 }, { width: 412, height: 915 }, { width: 844, height: 390 }]) {
     await phone.page.setViewportSize(size);
-    for (const theme of ['minimal', 'sketch', 'print', 'graffiti']) {
-      await phone.page.getByLabel('界面风格', { exact: true }).selectOption(theme); await openSync(phone.page);
+    for (const theme of ['lagoon', 'pearl', 'sky', 'mint']) {
+      await phone.page.getByLabel('界面配色', { exact: true }).selectOption(theme); await openSync(phone.page);
       const bounds = await phone.page.evaluate(() => ({ width: innerWidth, dialogWidth: document.querySelector('.sync-dialog').getBoundingClientRect().width, headingHeight: document.querySelector('#sync-heading').getBoundingClientRect().height, document: document.documentElement.scrollWidth, outside: [...document.querySelectorAll('.sync-dialog button, .sync-dialog textarea')].filter(item => { const box = item.getBoundingClientRect(); return box.width && (box.left < 0 || box.right > innerWidth); }).length }));
       assert.equal(bounds.outside, 0); assert.ok(bounds.document <= bounds.width); assert.ok(bounds.dialogWidth >= Math.min(bounds.width - 40, 500), 'dialog must use available width'); assert.ok(bounds.headingHeight < 65, 'heading must not collapse into vertical text');
       if (!live && (size.width === 320 || size.width === 844)) await phone.page.screenshot({ path: path.join(output, `sync-${theme}-${size.width}.png`) });
@@ -77,7 +78,7 @@ try {
     }
   }
   results.push('sync dialog fits 320/360/412/844px and all four themes');
-  await phone.page.setViewportSize({ width: 360, height: 780 }); await phone.page.getByLabel('界面风格', { exact: true }).selectOption('minimal');
+  await phone.page.setViewportSize({ width: 360, height: 780 }); await phone.page.getByLabel('界面配色', { exact: true }).selectOption('lagoon');
   await openSync(web.page); await web.page.getByRole('button', { name: '开启同步', exact: true }).click(); await web.page.locator('.sync-status.sync-synced').waitFor();
   await web.page.getByRole('button', { name: '显示同步码' }).click(); const code = await web.page.getByRole('textbox', { name: '本机同步码' }).inputValue();
   assert.match(code, /^[a-f0-9]{64}$/); await web.page.getByRole('button', { name: '隐藏同步码' }).click();
@@ -116,6 +117,6 @@ try {
   assert.equal(await phone.page.evaluate(() => localStorage.getItem('codewords-sync-v1')), null);
   results.push('disconnect preserves local learning data');
   assert.deepEqual(errors, []);
-  await writeFile(path.join(output, live ? 'live-results.json' : 'results.json'), JSON.stringify({ live, at: new Date().toISOString(), results, pageErrors: errors }, null, 2));
+  await writeFile(path.join(output, live ? 'live-results.json' : 'results.json'), JSON.stringify({ live, localBundle, at: new Date().toISOString(), results, pageErrors: errors }, null, 2));
   console.log(`PASS ${results.length} ${live ? 'live D1' : 'isolated SQLite'} browser scenarios.`);
 } finally { await Promise.all(contexts.map(context => context.close())); await browser.close(); }

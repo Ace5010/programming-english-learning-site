@@ -96,15 +96,15 @@ try {
     const completedDraft = (await saved(page)).session.draft;
     for (const width of [1440, 1920, 390]) {
       await page.setViewportSize({ width, height: width === 390 ? 844 : width === 1920 ? 1080 : 1000 });
-      for (const theme of ['minimal', 'sketch', 'print', 'graffiti']) {
-        await page.getByLabel('界面风格', { exact: true }).selectOption(theme);
+      for (const theme of ['lagoon', 'pearl', 'sky', 'mint']) {
+        await page.getByLabel('界面配色', { exact: true }).selectOption(theme);
         assert.deepEqual((await saved(page)).session.draft, completedDraft, `${theme}: draft preserved`);
         assert.equal(await page.locator('.speech-target.matched').count(), 2);
         await screenshot(page, `read-${theme}-${width}.png`);
       }
     }
     await page.setViewportSize({ width: 1440, height: 1000 });
-    await page.getByLabel('界面风格', { exact: true }).selectOption('minimal');
+    await page.getByLabel('界面配色', { exact: true }).selectOption('lagoon');
     await page.getByRole('button', { name: '完成跟读', exact: true }).click();
     await page.locator('.daily-feedback').waitFor();
     assert.equal((await saved(page)).session.feedback.outcome, 'self');

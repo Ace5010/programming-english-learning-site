@@ -1,7 +1,9 @@
 import { useEffect, useState, type RefObject } from 'react';
 import ReadAloudText, { useReading } from './ReadAloud';
-import { foundationTopics, foundationSources, type FoundationTopic } from './foundationCourse';
+import { foundationTopics, foundationTutorialCatalog, foundationSources, type FoundationTopic } from './foundationCourse';
 import { grammarSampleId, grammarSampleTitle, grammarContrastPhrases } from './foundationSamples';
+import type { FoundationTutorial, TutorialExample } from './foundationTutorials';
+import { foundationDemoKey } from './foundationDemos';
 import type { DailyPhrase } from './dailyCourse';
 import './foundation.css';
 import { sentenceGuide } from './sentenceGuide';
@@ -9,7 +11,7 @@ import { readingPlaybackKey } from './readingAudio';
 import PhonemicChart, { type PhonemicAudioProps } from './PhonemicChart.tsx';
 
 type AudioProps = { play: (phrase: DailyPhrase, slow?: boolean) => void; speaking: string };
-export const foundationTopicLabel = (id: string) => id === grammarSampleId ? grammarSampleTitle : foundationTopics.find(item => item.id === id)?.title ?? '基础知识';
+export const foundationTopicLabel = (id: string) => id === grammarSampleId ? grammarSampleTitle : foundationTutorialCatalog.find(item => item.id === id)?.title ?? '基础知识';
 const glossary: Record<string, string> = {
   名词: '给人、东西、地点或概念命名的一类词。', 动词: '表示动作、状态或关系的一类词。', 形容词: '描述人或事物的性质、样子或状态的一类词。',
   代词: '用来指代人或东西的词，例如 I（我）。', 主语: '这句话主要说的是谁或什么，是句中的角色。', 谓语: '句子里说明主语的动作、状态等的部分，这里先从动词理解。',
@@ -28,7 +30,7 @@ function Text({ value }: { value: string }) {
 }
 function Reading({ phrase, play, speaking }: { phrase: DailyPhrase } & AudioProps) {
   const { preload } = useReading();
-  useEffect(() => { preload?.(phrase.en); }, [preload, phrase.en]);
+  useEffect(() => { if (!phrase.id.startsWith('foundation-tutorial-')) preload?.(phrase.en); }, [preload, phrase.en, phrase.id]);
   return <div className="foundation-reading"><button type="button" className="foundation-english" lang="en" aria-label={`朗读 ${phrase.en}`} aria-pressed={speaking === `daily-${phrase.id}-normal`} onClick={() => play(phrase, false)}>{phrase.en}</button>
     <button type="button" className="daily-inline-slow" aria-label={`慢速朗读 ${phrase.en}`} aria-pressed={speaking === `daily-${phrase.id}-slow`} onClick={() => play(phrase, true)}>慢速</button></div>;
 }
@@ -62,17 +64,57 @@ export function FoundationCard({ topic, ...audio }: { topic: FoundationTopic } &
     <details className="foundation-source"><summary>参考资料</summary><p>中文讲解和练习为本站编写；知识范围参考 <a href={foundationSources[topic.source].url} target="_blank" rel="noreferrer">{foundationSources[topic.source].name}</a>。</p></details>
   </article>;
 }
-export const foundationTrack = (id: string) => foundationTopics.find(topic => topic.id === id)?.sound ? 'library' : 'course';
+export const foundationTrack = (id: string) => foundationTutorialCatalog.find(topic => topic.id === id)?.sound ? 'library' : 'course';
 const sampleTitles: Record<string, string> = { [grammarSampleId]: grammarSampleTitle, 'foundation-sound-friction': '/f/ 和 /v/：嘴形相同，声音哪里不同' };
 const titleOf = (topic: FoundationTopic) => sampleTitles[topic.id] ?? topic.title;
 
-function TryIt({ prompt, options, explanation }: { prompt: string; options: string[]; explanation: string[] }) {
+function TryIt({ prompt, options, explanation, reveal = explanation[0] }: { prompt: string; options: string[]; explanation: string[]; reveal?: string }) {
   const [choice, setChoice] = useState<number>();
   return <section className="tutorial-try" aria-label="试着理解"><h3>试着理解</h3><p>{prompt}</p>
     <div className="tutorial-options">{options.map((option, index) => <button type="button" key={option} aria-pressed={choice === index} onClick={() => setChoice(index)}>{option}</button>)}</div>
     {choice !== undefined && <p role="status">{explanation[choice]}</p>}
-    <details><summary>直接看解释</summary><p>{explanation[0]}</p></details>
+    <details><summary>直接看解释</summary><p>{reveal}</p></details>
   </section>;
+}
+type DemoAudioProps = { playDemo: (id: string, slow?: boolean) => void; foundationError: string };
+function DemoReading({ id, label, speaking, playDemo }: { id: string; label: string } & Pick<AudioProps, 'speaking'> & Pick<DemoAudioProps, 'playDemo'>) {
+  return <div className="foundation-reading" data-demo={id}>
+    <button type="button" className="foundation-english" aria-label={`朗读 ${label}`} aria-pressed={speaking === foundationDemoKey(id)} onClick={() => playDemo(id, false)}>{label}</button>
+    <button type="button" className="daily-inline-slow" aria-label={`慢速朗读 ${label}`} aria-pressed={speaking === foundationDemoKey(id, true)} onClick={() => playDemo(id, true)}>慢速</button>
+  </div>;
+}
+function TutorialExampleCard({ phrase, ...audio }: { phrase: TutorialExample } & AudioProps & DemoAudioProps) {
+  return <div className="foundation-example" data-example={phrase.id}>
+    <strong className="foundation-meaning" lang="zh-CN">{phrase.zh}</strong>
+    {phrase.demo ? <DemoReading id={phrase.demo} label={phrase.en} {...audio} /> : <Reading phrase={phrase} {...audio} />}
+    {phrase.ipa && <div className="foundation-ipa" aria-label="本例音标">{phrase.ipa}</div>}
+    {phrase.note && <p>{phrase.note}</p>}
+    {phrase.parts && <div className="tutorial-breakdown tutorial-sentence-parts">{phrase.parts.map(([zh, en], index) => <div key={index}>
+      <strong>{zh}</strong><Reading phrase={{ id: `foundation-tutorial-part-${phrase.id}-${index}`, en, zh }} {...audio} />
+    </div>)}</div>}
+    {phrase.separate && <details className="foundation-separate"><summary>逐词听，再听自然整句</summary>
+      <div className="foundation-word-list">{phrase.en.replace(/[.,!?]/g, '').split(/\s+/).map((word, index) => <Reading key={index} phrase={{ id: `foundation-tutorial-word-${phrase.id}-${index}`, en: word, zh: word }} {...audio} />)}</div>
+      <p>这些按钮分别播放完整的单词录音。自然整句在上方；整句慢速只降低速度，保留声音连接，不等于逐词示范。</p>
+    </details>}
+  </div>;
+}
+function ExpandedTutorial({ tutorial, choose, ...audio }: { tutorial: FoundationTutorial; choose: (id: string) => void } & AudioProps & DemoAudioProps) {
+  return <article className="foundation-card tutorial-article" data-topic={tutorial.id} data-batch={tutorial.batch}>
+    <h2>{tutorial.title}</h2><p className="tutorial-lead">{tutorial.question}</p>
+    {tutorial.sound && <p className="tutorial-accent">{tutorial.accent ?? '本篇完整词句统一使用本站美式 Aria／Guy 录音；上方音标表使用英式示范。'}</p>}
+    {audio.foundationError && <p className="foundation-audio-error" role="alert">{audio.foundationError} 请重新点读当前内容。</p>}
+    {tutorial.sections.map((section, index) => <section key={index}><h3>{section.title}</h3>
+      {section.text.map((text, index) => <p key={index}>{text}</p>)}
+      {section.examples && <div className="foundation-examples">{section.examples.map(phrase => <TutorialExampleCard key={phrase.id} phrase={phrase} {...audio} />)}</div>}
+      {section.sounds && <div className="tutorial-sound-parts" aria-label="分解声音">{section.sounds.map(([label, id]) => <DemoReading key={id} id={`sound:${id}`} label={label} {...audio} />)}</div>}
+    </section>)}
+    <section><h3>容易误用的地方</h3><p>{tutorial.boundary}</p></section>
+    <TryIt {...tutorial.try} />
+    <section><h3>带走一个判断方法</h3><p>{tutorial.takeaway}</p>
+      <div className="tutorial-options" aria-label="相关教程">{tutorial.related.map(id => <button key={id} type="button" onClick={() => choose(id)}>{foundationTopicLabel(id)}</button>)}</div>
+    </section>
+    <details className="foundation-source"><summary>参考资料</summary><p>中文讲解、分块和互动由本站编写；<a href={tutorial.source} target="_blank" rel="noreferrer">查看本篇知识核对来源</a>。</p></details>
+  </article>;
 }
 function GrammarSample(audio: AudioProps) {
   const examples = foundationTopics.find(topic => topic.id === 'foundation-word-order')!.examples;
@@ -122,15 +164,18 @@ function SoundSample({ active, stopAudio, ...audio }: AudioProps & { active: boo
   </article>;
 }
 
-type Props = AudioProps & PhonemicAudioProps & { active: boolean; view: 'course' | 'review' | 'library' | 'favorites'; request?: { id: string; revision: number }; openTopic: (id: string) => void; stopAudio: () => void; openVoice: () => void; contentRef?: RefObject<HTMLElement | null>; headingRef?: RefObject<HTMLElement | null> };
+type Props = AudioProps & DemoAudioProps & PhonemicAudioProps & { active: boolean; view: 'course' | 'review' | 'library' | 'favorites'; request?: { id: string; revision: number }; openTopic: (id: string) => void; stopAudio: () => void; openVoice: () => void; contentRef?: RefObject<HTMLElement | null>; headingRef?: RefObject<HTMLElement | null> };
 export default function FoundationEnglish({ request, openTopic, active, view, stopAudio, openVoice, contentRef, headingRef, playPhoneme, phonemeError, ...audio }: Props) {
   const sounds = view === 'library';
-  const catalog = [...foundationTopics];
+  const catalog = [...foundationTutorialCatalog];
   const grammarIndex = catalog.findIndex(topic => topic.id === 'foundation-word-order');
   catalog.splice(grammarIndex, 0, { ...catalog[grammarIndex], id: grammarSampleId, title: grammarSampleTitle, examples: grammarContrastPhrases });
   const topics = catalog.filter(topic => !topic.hidden && topic.sound === sounds).sort((a, b) => {
-    const rank = (topic: FoundationTopic) => topic.id === 'foundation-letter-sound' ? 0 : topic.id.startsWith('foundation-sound-') ? 1 : 2;
-    return sounds ? rank(a) - rank(b) : 0;
+    const order = sounds
+      ? ['letter-sound', 'blending', 'letter-combinations', 'final-e', 'spelling-correspondence', ...catalog.filter(topic => topic.id.startsWith('foundation-sound-')).map(topic => topic.id.slice(11)), 'syllables', 'sentence-stress', 'weak', 'linking', 'intonation', 'endings']
+      : ['word-concepts', 'nouns', 'verbs', 'adjectives', 'pronouns', 'noun-roles', 'word-order', 'be', 'sentence-expand', 'position', 'writing-conventions', 'roles', 'articles', 'plural', 'countable', 'the', 'place', 'possessive', 'there', 'manner-adverbs', 'frequency-adverbs', 'and-or', 'but', 'cause-result'];
+    const rank = (topic: FoundationTopic) => { const index = order.indexOf(topic.id.slice(11)); return index < 0 ? order.length : index; };
+    return rank(a) - rank(b);
   });
   const [selected, setSelected] = useState(request?.id ?? grammarSampleId);
   const [query, setQuery] = useState('');
@@ -141,20 +186,20 @@ export default function FoundationEnglish({ request, openTopic, active, view, st
   const choose = (id: string) => { stopAudio(); setSelected(id); if (sounds) setTutorialOpen(true); openTopic(id); requestAnimationFrame(() => document.getElementById('tutorial-reading')?.focus()); };
   const filtered = topics.filter(topic => `${titleOf(topic)} ${topic.group}`.toLowerCase().includes(query.trim().toLowerCase()));
   const tutorial = <div className="tutorial-layout"><aside className="tutorial-directory" aria-label="教程目录"><h2>推荐阅读顺序</h2>
-      <p>{sounds ? '音标入门 → 单个声音与对比 → 重音 → 连读与语调' : '单词与词组 → 词性与句中角色 → 基本句型 → 小词与词形 → 提问、否定与时间表达'}</p>
+      <p>{sounds ? '声音合成 → 拼读与拼写 → 易混音 → 重音、弱读与连读 → 常见词尾' : '词与句中角色 → 句子拆解与扩展 → 小词 → 副词与连接词 → 提问、否定与时间表达'}</p>
       <label>查找主题<input type="search" value={query} onChange={event => setQuery(event.target.value)} /></label>
       <ol>{filtered.map(topic => <li key={topic.id}><button type="button" aria-current={current.id === topic.id ? 'page' : undefined} onClick={() => choose(topic.id)}>{titleOf(topic)}{sampleTitles[topic.id] && <span>样章</span>}</button></li>)}</ol>
       {!filtered.length && <p>没有找到这个主题，试试其他关键词。</p>}
     </aside><div className="tutorial-reading" id="tutorial-reading" tabIndex={-1}>
-      <div key={current.id}>{current.id === grammarSampleId ? <GrammarSample {...audio} /> : current.id === 'foundation-sound-friction' ? <SoundSample {...audio} active={active && sounds && tutorialOpen} stopAudio={stopAudio} /> : <FoundationCard topic={current} {...audio} />}</div>
+      <div key={current.id}>{current.id === grammarSampleId ? <GrammarSample {...audio} /> : current.id === 'foundation-sound-friction' ? <SoundSample {...audio} active={active && sounds && tutorialOpen} stopAudio={stopAudio} /> : current.tutorial ? <ExpandedTutorial tutorial={current.tutorial} choose={choose} {...audio} /> : <FoundationCard topic={current} {...audio} />}</div>
       <nav className="tutorial-next" aria-label="章节翻页">{index > 0 && <button type="button" onClick={() => choose(topics[index - 1].id)}>上一篇：{titleOf(topics[index - 1])}</button>}{index < topics.length - 1 && <button type="button" onClick={() => choose(topics[index + 1].id)}>接下来：{titleOf(topics[index + 1])}</button>}</nav>
     </div></div>;
   return <main hidden={!active} ref={contentRef} className="content foundation-tutorial" id="foundation-content">
     <header className="page-heading" ref={headingRef}><div><h1>{sounds ? '音标与发音' : '基础概念与语法'}</h1><p>{sounds ? '先听一个声音，再看怎样发音。全部音标都可以直接点读。' : '可以按推荐顺序阅读，也可以直接选一个想弄懂的主题。'}</p></div>{!sounds && <button className="daily-button" onClick={openVoice}>选择声音</button>}</header>
     {sounds ? <>
       <PhonemicChart speaking={audio.speaking} phonemeError={phonemeError} playPhoneme={(id, kind, slow) => { setTutorialOpen(false); playPhoneme(id, kind, slow); }} openTutorial={choose} />
-      <details className="phonemic-tutorials" open={tutorialOpen} onToggle={event => { const next = event.currentTarget.open; if (next !== tutorialOpen) { stopAudio(); setTutorialOpen(next); } }}><summary>进一步学习：发音动作、重音与连读</summary>
-        <div className="phonemic-tutorial-note"><p>以下教程例词沿用本站美式录音；上方音标表统一使用英式示范。</p><button className="daily-button" onClick={openVoice}>选择声音</button></div>
+      <details className="phonemic-tutorials" open={tutorialOpen} onToggle={event => { const next = event.currentTarget.open; if (next !== tutorialOpen) { stopAudio(); setTutorialOpen(next); } }}><summary>进一步学习：拼读、拼写与整句听读</summary>
+        <div className="phonemic-tutorial-note"><p>各篇注明示范口音；声音合成篇采用英式，其余词句沿用美式录音。</p><button className="daily-button" onClick={openVoice}>选择声音</button></div>
         {tutorial}
       </details>
     </> : tutorial}
