@@ -1,0 +1,242 @@
+{
+  "baseURL": "http://127.0.0.1:5186/",
+  "bundles": [],
+  "results": [
+    {
+      "name": "programming-desktop-answer-cue-after-reading",
+      "passed": true
+    },
+    {
+      "name": "programming-answer-and-complete",
+      "passed": false
+    },
+    {
+      "name": "programming-listening-options-and-help",
+      "passed": false
+    },
+    {
+      "name": "programming-order-tiles-and-replay",
+      "passed": false
+    },
+    {
+      "name": "daily-desktop-answer-cue-after-reading",
+      "passed": true
+    },
+    {
+      "name": "daily-answer-and-complete",
+      "passed": true
+    },
+    {
+      "name": "daily-listening-options-and-help",
+      "passed": true
+    },
+    {
+      "name": "daily-order-tiles-and-replay",
+      "passed": true
+    },
+    {
+      "name": "word-reading-minimal",
+      "passed": false
+    },
+    {
+      "name": "word-reading-sketch",
+      "passed": false
+    },
+    {
+      "name": "word-reading-print",
+      "passed": false
+    },
+    {
+      "name": "word-reading-graffiti",
+      "passed": false
+    },
+    {
+      "name": "additional-voice-and-mute",
+      "passed": false
+    },
+    {
+      "name": "fill-does-not-pronounce-hidden-answer",
+      "passed": false
+    },
+    {
+      "name": "wrong-answer-and-self-check-stay-silent",
+      "passed": false
+    },
+    {
+      "name": "pronunciation-takes-over-feedback",
+      "passed": true
+    }
+  ],
+  "failures": [
+    {
+      "name": "programming-answer-and-complete",
+      "error": "page.waitForFunction: Timeout 12000ms exceeded.\n    at played (D:\\vibe项目\\Interactive learning\\tools\\test-reading-feedback-browser.mjs:71:18)\n    at async file:///D:/vibe%E9%A1%B9%E7%9B%AE/Interactive%20learning/tools/test-reading-feedback-browser.mjs:107:5\n    at async scenario (D:\\vibe项目\\Interactive learning\\tools\\test-reading-feedback-browser.mjs:85:9)\n    at async file:///D:/vibe%E9%A1%B9%E7%9B%AE/Interactive%20learning/tools/test-reading-feedback-browser.mjs:99:3"
+    },
+    {
+      "name": "programming-listening-options-and-help",
+      "error": "locator.click: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#programming-content').locator('.daily-option').filter({ hasText: 'code' })\u001b[22m\n\n    at D:\\vibe项目\\Interactive learning\\tools\\test-reading-feedback-browser.mjs:118:87\n    at played (D:\\vibe项目\\Interactive learning\\tools\\test-reading-feedback-browser.mjs:70:47)\n    at async file:///D:/vibe%E9%A1%B9%E7%9B%AE/Interactive%20learning/tools/test-reading-feedback-browser.mjs:118:5\n    at async scenario (D:\\vibe项目\\Interactive learning\\tools\\test-reading-feedback-browser.mjs:85:9)\n    at async file:///D:/vibe%E9%A1%B9%E7%9B%AE/Interactive%20learning/tools/test-reading-feedback-browser.mjs:113:3"
+    },
+    {
+      "name": "programming-order-tiles-and-replay",
+      "error": "locator.click: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#programming-content').locator('[aria-label=\"可选词块\"] .daily-token').first().locator('[data-reading-word]').first()\u001b[22m\n\n    at D:\\vibe项目\\Interactive learning\\tools\\test-reading-feedback-browser.mjs:141:125\n    at played (D:\\vibe项目\\Interactive learning\\tools\\test-reading-feedback-browser.mjs:70:47)\n    at async file:///D:/vibe%E9%A1%B9%E7%9B%AE/Interactive%20learning/tools/test-reading-feedback-browser.mjs:141:5\n    at async scenario (D:\\vibe项目\\Interactive learning\\tools\\test-reading-feedback-browser.mjs:85:9)\n    at async file:///D:/vibe%E9%A1%B9%E7%9B%AE/Interactive%20learning/tools/test-reading-feedback-browser.mjs:135:3"
+    },
+    {
+      "name": "word-reading-minimal",
+      "error": "locator.click: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#programming-content').getByRole('button', { name: '开始学习', exact: true })\u001b[22m\n\n    at D:\\vibe项目\\Interactive learning\\tools\\test-reading-feedback-browser.mjs:153:67\n    at async scenario (D:\\vibe项目\\Interactive learning\\tools\\test-reading-feedback-browser.mjs:85:9)\n    at async file:///D:/vibe%E9%A1%B9%E7%9B%AE/Interactive%20learning/tools/test-reading-feedback-browser.mjs:151:3"
+    },
+    {
+      "name": "word-reading-sketch",
+      "error": "locator.click: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#programming-content').getByRole('button', { name: '开始学习', exact: true })\u001b[22m\n\n    at D:\\vibe项目\\Interactive learning\\tools\\test-reading-feedback-browser.mjs:153:67\n    at async scenario (D:\\vibe项目\\Interactive learning\\tools\\test-reading-feedback-browser.mjs:85:9)\n    at async file:///D:/vibe%E9%A1%B9%E7%9B%AE/Interactive%20learning/tools/test-reading-feedback-browser.mjs:151:3"
+    },
+    {
+      "name": "word-reading-print",
+      "error": "locator.click: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#programming-content').getByRole('button', { name: '开始学习', exact: true })\u001b[22m\n\n    at D:\\vibe项目\\Interactive learning\\tools\\test-reading-feedback-browser.mjs:153:67\n    at async scenario (D:\\vibe项目\\Interactive learning\\tools\\test-reading-feedback-browser.mjs:85:9)\n    at async file:///D:/vibe%E9%A1%B9%E7%9B%AE/Interactive%20learning/tools/test-reading-feedback-browser.mjs:151:3"
+    },
+    {
+      "name": "word-reading-graffiti",
+      "error": "locator.click: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#programming-content').getByRole('button', { name: '开始学习', exact: true })\u001b[22m\n\n    at D:\\vibe项目\\Interactive learning\\tools\\test-reading-feedback-browser.mjs:153:67\n    at async scenario (D:\\vibe项目\\Interactive learning\\tools\\test-reading-feedback-browser.mjs:85:9)\n    at async file:///D:/vibe%E9%A1%B9%E7%9B%AE/Interactive%20learning/tools/test-reading-feedback-browser.mjs:151:3"
+    },
+    {
+      "name": "additional-voice-and-mute",
+      "error": "locator.waitFor: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#programming-content').locator('.daily-summary') to be visible\u001b[22m\n\n    at D:\\vibe项目\\Interactive learning\\tools\\test-reading-feedback-browser.mjs:191:46\n    at async scenario (D:\\vibe项目\\Interactive learning\\tools\\test-reading-feedback-browser.mjs:85:9)\n    at async file:///D:/vibe%E9%A1%B9%E7%9B%AE/Interactive%20learning/tools/test-reading-feedback-browser.mjs:172:1"
+    },
+    {
+      "name": "fill-does-not-pronounce-hidden-answer",
+      "error": "locator.textContent: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#programming-content').locator('.daily-fill .reading-word').first()\u001b[22m\n\n    at D:\\vibe项目\\Interactive learning\\tools\\test-reading-feedback-browser.mjs:200:27\n    at async scenario (D:\\vibe项目\\Interactive learning\\tools\\test-reading-feedback-browser.mjs:85:9)\n    at async file:///D:/vibe%E9%A1%B9%E7%9B%AE/Interactive%20learning/tools/test-reading-feedback-browser.mjs:195:1"
+    },
+    {
+      "name": "wrong-answer-and-self-check-stay-silent",
+      "error": "locator.fill: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#daily-content').locator('textarea')\u001b[22m\n\u001b[2m    - locator resolved to <textarea rows=\"3\" autocomplete=\"off\" spellcheck=\"false\" class=\"daily-write\" id=\"daily-written-answer\"></textarea>\u001b[22m\n\u001b[2m    - fill(\"Hello. My name is Ben.\")\u001b[22m\n\u001b[2m  - attempting fill action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and editable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying fill action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and editable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying fill action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    23 × waiting for element to be visible, enabled and editable\u001b[22m\n\u001b[2m       - element is not visible\u001b[22m\n\u001b[2m     - retrying fill action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\n    at D:\\vibe项目\\Interactive learning\\tools\\test-reading-feedback-browser.mjs:224:39\n    at async scenario (D:\\vibe项目\\Interactive learning\\tools\\test-reading-feedback-browser.mjs:85:9)\n    at async file:///D:/vibe%E9%A1%B9%E7%9B%AE/Interactive%20learning/tools/test-reading-feedback-browser.mjs:208:1"
+    }
+  ],
+  "playback": [
+    {
+      "type": "playing",
+      "src": "http://127.0.0.1:5186/audio/feedback/correct.mp3",
+      "rate": 1,
+      "duration": 0.36,
+      "preservesPitch": true,
+      "active": 1
+    },
+    {
+      "type": "playing",
+      "src": "http://127.0.0.1:5186/audio/feedback/correct.mp3",
+      "rate": 1,
+      "duration": 0.36,
+      "preservesPitch": true,
+      "active": 1
+    },
+    {
+      "type": "playing",
+      "src": "http://127.0.0.1:5186/audio/aria/word-3023.mp3",
+      "rate": 1,
+      "duration": 1.608,
+      "preservesPitch": true,
+      "active": 1
+    },
+    {
+      "type": "playing",
+      "src": "http://127.0.0.1:5186/audio/feedback/correct.mp3",
+      "rate": 1,
+      "duration": 0.36,
+      "preservesPitch": true,
+      "active": 1
+    },
+    {
+      "type": "playing",
+      "src": "http://127.0.0.1:5186/audio/aria/word-3023.mp3",
+      "rate": 1,
+      "duration": 1.608,
+      "preservesPitch": true,
+      "active": 1
+    },
+    {
+      "type": "playing",
+      "src": "http://127.0.0.1:5186/audio/feedback/correct.mp3",
+      "rate": 1,
+      "duration": 0.36,
+      "preservesPitch": true,
+      "active": 1
+    },
+    {
+      "type": "playing",
+      "src": "http://127.0.0.1:5186/audio/feedback/complete.mp3",
+      "rate": 1,
+      "duration": 1.1,
+      "preservesPitch": true,
+      "active": 1
+    },
+    {
+      "type": "playing",
+      "src": "http://127.0.0.1:5186/audio/daily/aria/hi.mp3?v=Hi!",
+      "rate": 1,
+      "duration": 1.536,
+      "preservesPitch": true,
+      "active": 1
+    },
+    {
+      "type": "playing",
+      "src": "http://127.0.0.1:5186/audio/daily/aria/hi.mp3?v=Hi!",
+      "rate": 0.72,
+      "duration": 1.536,
+      "preservesPitch": true,
+      "active": 1
+    },
+    {
+      "type": "playing",
+      "src": "http://127.0.0.1:5186/audio/reading/aria/read-6700869c8ff7480e.mp3?v=Ben",
+      "rate": 1,
+      "duration": 1.872,
+      "preservesPitch": true,
+      "active": 1
+    },
+    {
+      "type": "playing",
+      "src": "http://127.0.0.1:5186/audio/reading/aria/read-6700869c8ff7480e.mp3?v=Ben",
+      "rate": 0.72,
+      "duration": 1.872,
+      "preservesPitch": true,
+      "active": 1
+    },
+    {
+      "type": "playing",
+      "src": "http://127.0.0.1:5186/audio/reading/aria/read-aaa9402664f1a41f.mp3?v=h",
+      "rate": 1,
+      "duration": 1.872,
+      "preservesPitch": true,
+      "active": 1
+    },
+    {
+      "type": "playing",
+      "src": "http://127.0.0.1:5186/audio/reading/guy/read-aaa9402664f1a41f.mp3?v=h",
+      "rate": 1,
+      "duration": 1.872,
+      "preservesPitch": true,
+      "active": 1
+    },
+    {
+      "type": "playing",
+      "src": "http://127.0.0.1:5186/audio/aria/word-1.mp3",
+      "rate": 1,
+      "duration": 1.992,
+      "preservesPitch": true,
+      "active": 1
+    },
+    {
+      "type": "playing",
+      "src": "http://127.0.0.1:5186/audio/feedback/correct.mp3",
+      "rate": 1,
+      "duration": 0.36,
+      "preservesPitch": true,
+      "active": 1
+    },
+    {
+      "type": "playing",
+      "src": "http://127.0.0.1:5186/audio/aria/word-1.mp3",
+      "rate": 1,
+      "duration": 1.992,
+      "preservesPitch": true,
+      "active": 1
+    }
+  ]
+}

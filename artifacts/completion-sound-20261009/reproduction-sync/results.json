@@ -1,0 +1,83 @@
+{
+  "baseURL": "http://127.0.0.1:5186/",
+  "results": [
+    {
+      "name": "programming-1440-restored",
+      "passed": false,
+      "error": "AssertionError [ERR_ASSERTION]: remote progress must wait until the completion cue ends\n\nfalse !== true\n\n    at file:///D:/vibe%E9%A1%B9%E7%9B%AE/Interactive%20learning/tools/test-completion-sound-browser.mjs:108:16",
+      "completionRequests": 0,
+      "events": [
+        {
+          "type": "play-request",
+          "src": "http://127.0.0.1:5186/audio/feedback/complete.mp3",
+          "time": 1426,
+          "stack": "Error\n    at Audio.audio.<computed> [as play] (<anonymous>:16:120)\n    at AudioPlayback.playWeb (http://127.0.0.1:5186/src/audioPlayback.ts:262:15)\n    at AudioPlayback.play (http://127.0.0.1:5186/src/audioPlayback.ts:209:48)\n    at FeedbackAudio.flush (http://127.0.0.1:5186/src/feedbackAudio.ts?t=1791519147819:71:15)\n    at FeedbackAudio.play (http://127.0.0.1:5186/src/feedbackAudio.ts?t=1791519147819:53:8)\n    at http://127.0.0.1:5186/src/App.tsx?t=1791519147819:131:18\n    at checkOrContinue (http://127.0.0.1:5186/src/DailyEnglish.tsx?t=1791348895069:358:94)\n    at executeDispatch (http://127.0.0.1:5186/node_modules/.vite/deps/react-dom_client.js?v=87c7d28d:9141:5)\n    at runWithFiberInDEV (http://127.0.0.1:5186/node_modules/.vite/deps/react-dom_client.js?v=87c7d28d:851:66)\n    at processDispatchQueue (http://127.0.0.1:5186/node_modules/.vite/deps/react-dom_client.js?v=87c7d28d:9167:27)"
+        },
+        {
+          "type": "waiting",
+          "src": "http://127.0.0.1:5186/audio/feedback/complete.mp3",
+          "position": 0,
+          "time": 1444.5999999642372
+        },
+        {
+          "type": "playing",
+          "src": "http://127.0.0.1:5186/audio/feedback/complete.mp3",
+          "position": 0,
+          "time": 1539.3999999761581
+        },
+        {
+          "type": "pause-request",
+          "src": "http://127.0.0.1:5186/audio/feedback/complete.mp3",
+          "time": 1542.300000011921,
+          "stack": "Error\n    at Audio.audio.<computed> [as pause] (<anonymous>:16:120)\n    at AudioPlayback.stop (http://127.0.0.1:5186/src/audioPlayback.ts:304:19)\n    at FeedbackAudio.stop (http://127.0.0.1:5186/src/feedbackAudio.ts?t=1791519147819:90:15)\n    at http://127.0.0.1:5186/src/App.tsx?t=1791519147819:152:18\n    at apply (http://127.0.0.1:5186/src/App.tsx?t=1791519147819:250:4)\n    at eval (eval at evaluate (:311:30), <anonymous>:4:40)\n    at async <anonymous>:337:30"
+        },
+        {
+          "type": "pause",
+          "src": "http://127.0.0.1:5186/audio/feedback/complete.mp3",
+          "position": 0,
+          "time": 1542.8999999761581
+        }
+      ],
+      "errors": []
+    },
+    {
+      "name": "daily-1440-restored",
+      "passed": false,
+      "error": "AssertionError [ERR_ASSERTION]: remote progress must wait until the completion cue ends\n\nfalse !== true\n\n    at file:///D:/vibe%E9%A1%B9%E7%9B%AE/Interactive%20learning/tools/test-completion-sound-browser.mjs:108:16",
+      "completionRequests": 0,
+      "events": [
+        {
+          "type": "play-request",
+          "src": "http://127.0.0.1:5186/audio/feedback/complete.mp3",
+          "time": 1161.800000011921,
+          "stack": "Error\n    at Audio.audio.<computed> [as play] (<anonymous>:16:120)\n    at AudioPlayback.playWeb (http://127.0.0.1:5186/src/audioPlayback.ts:262:15)\n    at AudioPlayback.play (http://127.0.0.1:5186/src/audioPlayback.ts:209:48)\n    at FeedbackAudio.flush (http://127.0.0.1:5186/src/feedbackAudio.ts?t=1791519147819:71:15)\n    at FeedbackAudio.play (http://127.0.0.1:5186/src/feedbackAudio.ts?t=1791519147819:53:8)\n    at http://127.0.0.1:5186/src/App.tsx?t=1791519147819:131:18\n    at checkOrContinue (http://127.0.0.1:5186/src/DailyEnglish.tsx?t=1791348895069:358:94)\n    at executeDispatch (http://127.0.0.1:5186/node_modules/.vite/deps/react-dom_client.js?v=87c7d28d:9141:5)\n    at runWithFiberInDEV (http://127.0.0.1:5186/node_modules/.vite/deps/react-dom_client.js?v=87c7d28d:851:66)\n    at processDispatchQueue (http://127.0.0.1:5186/node_modules/.vite/deps/react-dom_client.js?v=87c7d28d:9167:27)"
+        },
+        {
+          "type": "waiting",
+          "src": "http://127.0.0.1:5186/audio/feedback/complete.mp3",
+          "position": 0,
+          "time": 1175.800000011921
+        },
+        {
+          "type": "playing",
+          "src": "http://127.0.0.1:5186/audio/feedback/complete.mp3",
+          "position": 0,
+          "time": 1180.1000000238419
+        },
+        {
+          "type": "pause-request",
+          "src": "http://127.0.0.1:5186/audio/feedback/complete.mp3",
+          "time": 1193.800000011921,
+          "stack": "Error\n    at Audio.audio.<computed> [as pause] (<anonymous>:16:120)\n    at AudioPlayback.stop (http://127.0.0.1:5186/src/audioPlayback.ts:304:19)\n    at FeedbackAudio.stop (http://127.0.0.1:5186/src/feedbackAudio.ts?t=1791519147819:90:15)\n    at http://127.0.0.1:5186/src/App.tsx?t=1791519147819:152:18\n    at apply (http://127.0.0.1:5186/src/App.tsx?t=1791519147819:250:4)\n    at eval (eval at evaluate (:311:30), <anonymous>:4:40)\n    at async <anonymous>:337:30"
+        },
+        {
+          "type": "pause",
+          "src": "http://127.0.0.1:5186/audio/feedback/complete.mp3",
+          "position": 0.003525,
+          "time": 1194.2000000476837
+        }
+      ],
+      "errors": []
+    }
+  ]
+}

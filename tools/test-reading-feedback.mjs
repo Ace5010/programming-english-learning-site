@@ -60,3 +60,78 @@ test('feedback is once per action, ignores muted actions, and completes at norma
   assert.equal(feedback.play('correct', 'round-2:1'), false, 'enabling does not replay an old muted result');
   assert.equal(stoppedSpeech, 2);
 });
+
+function failingFeedback(t) {
+  t.mock.timers.enable({ apis: ['setTimeout'] });
+  const items = [], busy = [];
+  const feedback = new FeedbackAudio(() => {}, path => path, src => {
+    const audio = { src, paused: true, currentTime: 0, plays: 0,
+      load() {}, removeAttribute() {}, pause() { this.paused = true; this.onpause?.(); },
+      play() { this.plays++; this.paused = false; return Promise.resolve(); } };
+    items.push(audio); return audio;
+  }, () => false, value => busy.push(value));
+  t.after(() => feedback.dispose());
+  return { feedback, items, busy };
+}
+
+test('a failed completion sound retries once and duplicate completion actions stay silent', t => {
+  const { feedback, items } = failingFeedback(t);
+  feedback.play('complete', 'round-1');
+  items[0].onerror();
+  t.mock.timers.tick(200);
+  assert.equal(items.length, 2, 'recover a transient MP3 failure');
+  assert.equal(items[1].src, 'audio/feedback/complete.mp3');
+  assert.equal(items[1].playbackRate, 1);
+  items[1].onerror();
+  t.mock.timers.tick(200);
+  assert.equal(items.length, 2, 'do not loop when audio remains unavailable');
+  assert.equal(feedback.play('complete', 'round-1'), false);
+});
+
+test('navigation, muting and a new action cancel a pending completion retry', t => {
+  const { feedback, items } = failingFeedback(t);
+  feedback.play('complete', 'round-1'); items.at(-1).onerror(); feedback.stop();
+  t.mock.timers.tick(200); assert.equal(items.length, 1);
+  feedback.play('complete', 'round-2'); items.at(-1).onerror(); feedback.enabled = false;
+  t.mock.timers.tick(200); assert.equal(items.length, 2);
+  feedback.enabled = true;
+  feedback.play('complete', 'round-3'); items.at(-1).onerror();
+  feedback.play('correct', 'round-4:1');
+  t.mock.timers.tick(200); assert.equal(items.length, 4);
+  assert.equal(items.at(-1).src, 'audio/feedback/correct.mp3');
+});
+
+test('failed answer cues are not replayed as delayed answers', t => {
+  const { feedback, items } = failingFeedback(t);
+  feedback.play('correct', 'round-1:1'); items[0].onerror();
+  t.mock.timers.tick(200); assert.equal(items.length, 1);
+  assert.equal(feedback.play('correct', 'round-1:1'), false);
+  feedback.play('complete', 'round-1');
+  assert.equal(items.length, 2);
+});
+
+test('completion playback and its pending retry block sync until playback ends or is cancelled', t => {
+  const { feedback, items, busy } = failingFeedback(t);
+  feedback.play('complete', 'round-1');
+  assert.equal(busy.at(-1), true);
+  items[0].onerror();
+  assert.equal(busy.at(-1), true, 'the retry delay still protects the cue');
+  t.mock.timers.tick(200);
+  assert.equal(busy.at(-1), true);
+  items[1].onended();
+  assert.equal(busy.at(-1), false, 'sync resumes after a real playback end');
+  feedback.play('complete', 'round-2'); items.at(-1).onerror(); feedback.stop();
+  assert.equal(busy.at(-1), false, 'navigation releases the pending retry');
+  t.mock.timers.tick(200); assert.equal(busy.at(-1), false);
+});
+
+test('an expired cue waiting for pronunciation releases sync without late playback', t => {
+  t.mock.timers.enable({ apis: ['setTimeout', 'Date'], now: 1000 });
+  const busy = [];
+  const feedback = new FeedbackAudio(() => {}, path => path, () => { throw new Error('an expired cue must stay silent'); }, () => true, value => busy.push(value));
+  t.after(() => feedback.dispose());
+  feedback.play('complete', 'round-1');
+  assert.equal(busy.at(-1), true);
+  t.mock.timers.tick(10040);
+  assert.equal(busy.at(-1), false, 'a stalled pronunciation must not leave sync blocked');
+});

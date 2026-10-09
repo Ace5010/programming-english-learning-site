@@ -1,0 +1,473 @@
+{
+  "baseURL": "http://127.0.0.1:5186/",
+  "results": [
+    {
+      "name": "programming-1440-restored",
+      "passed": false,
+      "error": "page.waitForFunction: Timeout 5000ms exceeded.\n    at D:\\vibe项目\\Interactive learning\\tools\\test-completion-sound-browser.mjs:97:18",
+      "completionRequests": 2,
+      "events": [
+        {
+          "type": "error",
+          "src": "http://127.0.0.1:5186/audio/feedback/complete.mp3",
+          "position": 0,
+          "time": 1239
+        },
+        {
+          "type": "play-request",
+          "src": "http://127.0.0.1:5186/audio/feedback/complete.mp3",
+          "time": 1275.800000011921,
+          "stack": "Error\n    at Audio.audio.<computed> [as play] (<anonymous>:16:120)\n    at AudioPlayback.playWeb (http://127.0.0.1:5186/src/audioPlayback.ts:262:15)\n    at AudioPlayback.play (http://127.0.0.1:5186/src/audioPlayback.ts:209:48)\n    at FeedbackAudio.flush (http://127.0.0.1:5186/src/feedbackAudio.ts:66:15)\n    at FeedbackAudio.play (http://127.0.0.1:5186/src/feedbackAudio.ts:49:8)\n    at http://127.0.0.1:5186/src/App.tsx?t=1791348895069:131:18\n    at checkOrContinue (http://127.0.0.1:5186/src/DailyEnglish.tsx?t=1791348895069:358:94)\n    at executeDispatch (http://127.0.0.1:5186/node_modules/.vite/deps/react-dom_client.js?v=87c7d28d:9141:5)\n    at runWithFiberInDEV (http://127.0.0.1:5186/node_modules/.vite/deps/react-dom_client.js?v=87c7d28d:851:66)\n    at processDispatchQueue (http://127.0.0.1:5186/node_modules/.vite/deps/react-dom_client.js?v=87c7d28d:9167:27)"
+        },
+        {
+          "type": "waiting",
+          "src": "http://127.0.0.1:5186/audio/feedback/complete.mp3",
+          "position": 0,
+          "time": 1298.4000000357628
+        },
+        {
+          "type": "error",
+          "src": "http://127.0.0.1:5186/audio/feedback/complete.mp3",
+          "position": 0,
+          "time": 1304
+        },
+        {
+          "type": "pause-request",
+          "src": "http://127.0.0.1:5186/audio/feedback/complete.mp3",
+          "time": 1304.1000000238419,
+          "stack": "Error\n    at Audio.audio.<computed> [as pause] (<anonymous>:16:120)\n    at AudioPlayback.stop (http://127.0.0.1:5186/src/audioPlayback.ts:304:19)\n    at AudioPlayback.fail (http://127.0.0.1:5186/src/audioPlayback.ts:277:8)\n    at audio.onerror (http://127.0.0.1:5186/src/audioPlayback.ts:253:31)"
+        },
+        {
+          "type": "pause",
+          "src": "http://127.0.0.1:5186/audio/feedback/complete.mp3",
+          "position": 0,
+          "time": 1304.2000000476837
+        }
+      ],
+      "errors": []
+    },
+    {
+      "name": "programming-1440-rapid-check",
+      "passed": false,
+      "error": "page.waitForFunction: Timeout 5000ms exceeded.\n    at D:\\vibe项目\\Interactive learning\\tools\\test-completion-sound-browser.mjs:97:18",
+      "completionRequests": 2,
+      "events": [
+        {
+          "type": "error",
+          "src": "http://127.0.0.1:5186/audio/feedback/complete.mp3",
+          "position": 0,
+          "time": 1151.4000000357628
+        },
+        {
+          "type": "play-request",
+          "src": "http://127.0.0.1:5186/audio/feedback/correct.mp3",
+          "time": 1178.2000000476837,
+          "stack": "Error\n    at Audio.audio.<computed> [as play] (<anonymous>:16:120)\n    at AudioPlayback.playWeb (http://127.0.0.1:5186/src/audioPlayback.ts:262:15)\n    at AudioPlayback.play (http://127.0.0.1:5186/src/audioPlayback.ts:209:48)\n    at FeedbackAudio.flush (http://127.0.0.1:5186/src/feedbackAudio.ts:66:15)\n    at FeedbackAudio.play (http://127.0.0.1:5186/src/feedbackAudio.ts:49:8)\n    at http://127.0.0.1:5186/src/App.tsx?t=1791348895069:131:18\n    at checkOrContinue (http://127.0.0.1:5186/src/DailyEnglish.tsx?t=1791348895069:374:4)\n    at executeDispatch (http://127.0.0.1:5186/node_modules/.vite/deps/react-dom_client.js?v=87c7d28d:9141:5)\n    at runWithFiberInDEV (http://127.0.0.1:5186/node_modules/.vite/deps/react-dom_client.js?v=87c7d28d:851:66)\n    at processDispatchQueue (http://127.0.0.1:5186/node_modules/.vite/deps/react-dom_client.js?v=87c7d28d:9167:27)"
+        },
+        {
+          "type": "waiting",
+          "src": "http://127.0.0.1:5186/audio/feedback/correct.mp3",
+          "position": 0,
+          "time": 1225.9000000357628
+        },
+        {
+          "type": "pause-request",
+          "src": "http://127.0.0.1:5186/audio/feedback/correct.mp3",
+          "time": 1246.2000000476837,
+          "stack": "Error\n    at Audio.audio.<computed> [as pause] (<anonymous>:16:120)\n    at AudioPlayback.stop (http://127.0.0.1:5186/src/audioPlayback.ts:304:19)\n    at FeedbackAudio.stop (http://127.0.0.1:5186/src/feedbackAudio.ts:71:15)\n    at http://127.0.0.1:5186/src/App.tsx?t=1791348895069:152:18\n    at checkOrContinue (http://127.0.0.1:5186/src/DailyEnglish.tsx?t=1791348895069:356:4)\n    at executeDispatch (http://127.0.0.1:5186/node_modules/.vite/deps/react-dom_client.js?v=87c7d28d:9141:5)\n    at runWithFiberInDEV (http://127.0.0.1:5186/node_modules/.vite/deps/react-dom_client.js?v=87c7d28d:851:66)\n    at processDispatchQueue (http://127.0.0.1:5186/node_modules/.vite/deps/react-dom_client.js?v=87c7d28d:9167:27)\n    at http://127.0.0.1:5186/node_modules/.vite/deps/react-dom_client.js?v=87c7d28d:9454:5\n    at batchedUpdates$1 (http://127.0.0.1:5186/node_modules/.vite/deps/react-dom_client.js?v=87c7d28d:2044:12)"
+        },
+        {
+          "type": "play-request",
+          "src": "http://127.0.0.1:5186/audio/feedback/complete.mp3",
+          "time": 1248.2000000476837,
+          "stack": "Error\n    at Audio.audio.<computed> [as play] (<anonymous>:16:120)\n    at AudioPlayback.playWeb (http://127.0.0.1:5186/src/audioPlayback.ts:262:15)\n    at AudioPlayback.play (http://127.0.0.1:5186/src/audioPlayback.ts:209:48)\n    at FeedbackAudio.flush (http://127.0.0.1:5186/src/feedbackAudio.ts:66:15)\n    at FeedbackAudio.play (http://127.0.0.1:5186/src/feedbackAudio.ts:49:8)\n    at http://127.0.0.1:5186/src/App.tsx?t=1791348895069:131:18\n    at checkOrContinue (http://127.0.0.1:5186/src/DailyEnglish.tsx?t=1791348895069:358:94)\n    at executeDispatch (http://127.0.0.1:5186/node_modules/.vite/deps/react-dom_client.js?v=87c7d28d:9141:5)\n    at runWithFiberInDEV (http://127.0.0.1:5186/node_modules/.vite/deps/react-dom_client.js?v=87c7d28d:851:66)\n    at processDispatchQueue (http://127.0.0.1:5186/node_modules/.vite/deps/react-dom_client.js?v=87c7d28d:9167:27)"
+        },
+        {
+          "type": "pause",
+          "src": "http://127.0.0.1:5186/audio/feedback/correct.mp3",
+          "position": 0,
+          "time": 1263.1000000238419
+        },
+        {
+          "type": "waiting",
+          "src": "http://127.0.0.1:5186/audio/feedback/complete.mp3",
+          "position": 0,
+          "time": 1263.6000000238419
+        },
+        {
+          "type": "error",
+          "src": "http://127.0.0.1:5186/audio/feedback/complete.mp3",
+          "position": 0,
+          "time": 1267.9000000357628
+        },
+        {
+          "type": "pause-request",
+          "src": "http://127.0.0.1:5186/audio/feedback/complete.mp3",
+          "time": 1267.9000000357628,
+          "stack": "Error\n    at Audio.audio.<computed> [as pause] (<anonymous>:16:120)\n    at AudioPlayback.stop (http://127.0.0.1:5186/src/audioPlayback.ts:304:19)\n    at AudioPlayback.fail (http://127.0.0.1:5186/src/audioPlayback.ts:277:8)\n    at audio.onerror (http://127.0.0.1:5186/src/audioPlayback.ts:253:31)"
+        },
+        {
+          "type": "pause",
+          "src": "http://127.0.0.1:5186/audio/feedback/complete.mp3",
+          "position": 0,
+          "time": 1267.9000000357628
+        }
+      ],
+      "errors": []
+    },
+    {
+      "name": "programming-390-restored",
+      "passed": false,
+      "error": "page.waitForFunction: Timeout 5000ms exceeded.\n    at D:\\vibe项目\\Interactive learning\\tools\\test-completion-sound-browser.mjs:97:18",
+      "completionRequests": 2,
+      "events": [
+        {
+          "type": "error",
+          "src": "http://127.0.0.1:5186/audio/feedback/complete.mp3",
+          "position": 0,
+          "time": 1115.9000000357628
+        },
+        {
+          "type": "play-request",
+          "src": "http://127.0.0.1:5186/audio/feedback/complete.mp3",
+          "time": 1131.800000011921,
+          "stack": "Error\n    at Audio.audio.<computed> [as play] (<anonymous>:16:120)\n    at AudioPlayback.playWeb (http://127.0.0.1:5186/src/audioPlayback.ts:262:15)\n    at AudioPlayback.play (http://127.0.0.1:5186/src/audioPlayback.ts:209:48)\n    at FeedbackAudio.flush (http://127.0.0.1:5186/src/feedbackAudio.ts:66:15)\n    at FeedbackAudio.play (http://127.0.0.1:5186/src/feedbackAudio.ts:49:8)\n    at http://127.0.0.1:5186/src/App.tsx?t=1791348895069:131:18\n    at checkOrContinue (http://127.0.0.1:5186/src/DailyEnglish.tsx?t=1791348895069:358:94)\n    at executeDispatch (http://127.0.0.1:5186/node_modules/.vite/deps/react-dom_client.js?v=87c7d28d:9141:5)\n    at runWithFiberInDEV (http://127.0.0.1:5186/node_modules/.vite/deps/react-dom_client.js?v=87c7d28d:851:66)\n    at processDispatchQueue (http://127.0.0.1:5186/node_modules/.vite/deps/react-dom_client.js?v=87c7d28d:9167:27)"
+        },
+        {
+          "type": "waiting",
+          "src": "http://127.0.0.1:5186/audio/feedback/complete.mp3",
+          "position": 0,
+          "time": 1180.4000000357628
+        },
+        {
+          "type": "error",
+          "src": "http://127.0.0.1:5186/audio/feedback/complete.mp3",
+          "position": 0,
+          "time": 1185.300000011921
+        },
+        {
+          "type": "pause-request",
+          "src": "http://127.0.0.1:5186/audio/feedback/complete.mp3",
+          "time": 1185.4000000357628,
+          "stack": "Error\n    at Audio.audio.<computed> [as pause] (<anonymous>:16:120)\n    at AudioPlayback.stop (http://127.0.0.1:5186/src/audioPlayback.ts:304:19)\n    at AudioPlayback.fail (http://127.0.0.1:5186/src/audioPlayback.ts:277:8)\n    at audio.onerror (http://127.0.0.1:5186/src/audioPlayback.ts:253:31)"
+        },
+        {
+          "type": "pause",
+          "src": "http://127.0.0.1:5186/audio/feedback/complete.mp3",
+          "position": 0,
+          "time": 1185.5
+        }
+      ],
+      "errors": []
+    },
+    {
+      "name": "programming-390-rapid-check",
+      "passed": false,
+      "error": "page.waitForFunction: Timeout 5000ms exceeded.\n    at D:\\vibe项目\\Interactive learning\\tools\\test-completion-sound-browser.mjs:97:18",
+      "completionRequests": 2,
+      "events": [
+        {
+          "type": "error",
+          "src": "http://127.0.0.1:5186/audio/feedback/complete.mp3",
+          "position": 0,
+          "time": 1299.699999988079
+        },
+        {
+          "type": "play-request",
+          "src": "http://127.0.0.1:5186/audio/feedback/correct.mp3",
+          "time": 1317.300000011921,
+          "stack": "Error\n    at Audio.audio.<computed> [as play] (<anonymous>:16:120)\n    at AudioPlayback.playWeb (http://127.0.0.1:5186/src/audioPlayback.ts:262:15)\n    at AudioPlayback.play (http://127.0.0.1:5186/src/audioPlayback.ts:209:48)\n    at FeedbackAudio.flush (http://127.0.0.1:5186/src/feedbackAudio.ts:66:15)\n    at FeedbackAudio.play (http://127.0.0.1:5186/src/feedbackAudio.ts:49:8)\n    at http://127.0.0.1:5186/src/App.tsx?t=1791348895069:131:18\n    at checkOrContinue (http://127.0.0.1:5186/src/DailyEnglish.tsx?t=1791348895069:374:4)\n    at executeDispatch (http://127.0.0.1:5186/node_modules/.vite/deps/react-dom_client.js?v=87c7d28d:9141:5)\n    at runWithFiberInDEV (http://127.0.0.1:5186/node_modules/.vite/deps/react-dom_client.js?v=87c7d28d:851:66)\n    at processDispatchQueue (http://127.0.0.1:5186/node_modules/.vite/deps/react-dom_client.js?v=87c7d28d:9167:27)"
+        },
+        {
+          "type": "waiting",
+          "src": "http://127.0.0.1:5186/audio/feedback/correct.mp3",
+          "position": 0,
+          "time": 1332.199999988079
+        },
+        {
+          "type": "pause-request",
+          "src": "http://127.0.0.1:5186/audio/feedback/correct.mp3",
+          "time": 1352,
+          "stack": "Error\n    at Audio.audio.<computed> [as pause] (<anonymous>:16:120)\n    at AudioPlayback.stop (http://127.0.0.1:5186/src/audioPlayback.ts:304:19)\n    at FeedbackAudio.stop (http://127.0.0.1:5186/src/feedbackAudio.ts:71:15)\n    at http://127.0.0.1:5186/src/App.tsx?t=1791348895069:152:18\n    at checkOrContinue (http://127.0.0.1:5186/src/DailyEnglish.tsx?t=1791348895069:356:4)\n    at executeDispatch (http://127.0.0.1:5186/node_modules/.vite/deps/react-dom_client.js?v=87c7d28d:9141:5)\n    at runWithFiberInDEV (http://127.0.0.1:5186/node_modules/.vite/deps/react-dom_client.js?v=87c7d28d:851:66)\n    at processDispatchQueue (http://127.0.0.1:5186/node_modules/.vite/deps/react-dom_client.js?v=87c7d28d:9167:27)\n    at http://127.0.0.1:5186/node_modules/.vite/deps/react-dom_client.js?v=87c7d28d:9454:5\n    at batchedUpdates$1 (http://127.0.0.1:5186/node_modules/.vite/deps/react-dom_client.js?v=87c7d28d:2044:12)"
+        },
+        {
+          "type": "play-request",
+          "src": "http://127.0.0.1:5186/audio/feedback/complete.mp3",
+          "time": 1353.5,
+          "stack": "Error\n    at Audio.audio.<computed> [as play] (<anonymous>:16:120)\n    at AudioPlayback.playWeb (http://127.0.0.1:5186/src/audioPlayback.ts:262:15)\n    at AudioPlayback.play (http://127.0.0.1:5186/src/audioPlayback.ts:209:48)\n    at FeedbackAudio.flush (http://127.0.0.1:5186/src/feedbackAudio.ts:66:15)\n    at FeedbackAudio.play (http://127.0.0.1:5186/src/feedbackAudio.ts:49:8)\n    at http://127.0.0.1:5186/src/App.tsx?t=1791348895069:131:18\n    at checkOrContinue (http://127.0.0.1:5186/src/DailyEnglish.tsx?t=1791348895069:358:94)\n    at executeDispatch (http://127.0.0.1:5186/node_modules/.vite/deps/react-dom_client.js?v=87c7d28d:9141:5)\n    at runWithFiberInDEV (http://127.0.0.1:5186/node_modules/.vite/deps/react-dom_client.js?v=87c7d28d:851:66)\n    at processDispatchQueue (http://127.0.0.1:5186/node_modules/.vite/deps/react-dom_client.js?v=87c7d28d:9167:27)"
+        },
+        {
+          "type": "pause",
+          "src": "http://127.0.0.1:5186/audio/feedback/correct.mp3",
+          "position": 0,
+          "time": 1369.6000000238419
+        },
+        {
+          "type": "waiting",
+          "src": "http://127.0.0.1:5186/audio/feedback/complete.mp3",
+          "position": 0,
+          "time": 1370.199999988079
+        },
+        {
+          "type": "error",
+          "src": "http://127.0.0.1:5186/audio/feedback/complete.mp3",
+          "position": 0,
+          "time": 1374.1000000238419
+        },
+        {
+          "type": "pause-request",
+          "src": "http://127.0.0.1:5186/audio/feedback/complete.mp3",
+          "time": 1374.1000000238419,
+          "stack": "Error\n    at Audio.audio.<computed> [as pause] (<anonymous>:16:120)\n    at AudioPlayback.stop (http://127.0.0.1:5186/src/audioPlayback.ts:304:19)\n    at AudioPlayback.fail (http://127.0.0.1:5186/src/audioPlayback.ts:277:8)\n    at audio.onerror (http://127.0.0.1:5186/src/audioPlayback.ts:253:31)"
+        },
+        {
+          "type": "pause",
+          "src": "http://127.0.0.1:5186/audio/feedback/complete.mp3",
+          "position": 0,
+          "time": 1374.1000000238419
+        }
+      ],
+      "errors": []
+    },
+    {
+      "name": "daily-1440-restored",
+      "passed": false,
+      "error": "page.waitForFunction: Timeout 5000ms exceeded.\n    at D:\\vibe项目\\Interactive learning\\tools\\test-completion-sound-browser.mjs:97:18",
+      "completionRequests": 2,
+      "events": [
+        {
+          "type": "error",
+          "src": "http://127.0.0.1:5186/audio/feedback/complete.mp3",
+          "position": 0,
+          "time": 1084.9000000357628
+        },
+        {
+          "type": "play-request",
+          "src": "http://127.0.0.1:5186/audio/feedback/complete.mp3",
+          "time": 1101.2000000476837,
+          "stack": "Error\n    at Audio.audio.<computed> [as play] (<anonymous>:16:120)\n    at AudioPlayback.playWeb (http://127.0.0.1:5186/src/audioPlayback.ts:262:15)\n    at AudioPlayback.play (http://127.0.0.1:5186/src/audioPlayback.ts:209:48)\n    at FeedbackAudio.flush (http://127.0.0.1:5186/src/feedbackAudio.ts:66:15)\n    at FeedbackAudio.play (http://127.0.0.1:5186/src/feedbackAudio.ts:49:8)\n    at http://127.0.0.1:5186/src/App.tsx?t=1791348895069:131:18\n    at checkOrContinue (http://127.0.0.1:5186/src/DailyEnglish.tsx?t=1791348895069:358:94)\n    at executeDispatch (http://127.0.0.1:5186/node_modules/.vite/deps/react-dom_client.js?v=87c7d28d:9141:5)\n    at runWithFiberInDEV (http://127.0.0.1:5186/node_modules/.vite/deps/react-dom_client.js?v=87c7d28d:851:66)\n    at processDispatchQueue (http://127.0.0.1:5186/node_modules/.vite/deps/react-dom_client.js?v=87c7d28d:9167:27)"
+        },
+        {
+          "type": "waiting",
+          "src": "http://127.0.0.1:5186/audio/feedback/complete.mp3",
+          "position": 0,
+          "time": 1119
+        },
+        {
+          "type": "error",
+          "src": "http://127.0.0.1:5186/audio/feedback/complete.mp3",
+          "position": 0,
+          "time": 1124
+        },
+        {
+          "type": "pause-request",
+          "src": "http://127.0.0.1:5186/audio/feedback/complete.mp3",
+          "time": 1124,
+          "stack": "Error\n    at Audio.audio.<computed> [as pause] (<anonymous>:16:120)\n    at AudioPlayback.stop (http://127.0.0.1:5186/src/audioPlayback.ts:304:19)\n    at AudioPlayback.fail (http://127.0.0.1:5186/src/audioPlayback.ts:277:8)\n    at audio.onerror (http://127.0.0.1:5186/src/audioPlayback.ts:253:31)"
+        },
+        {
+          "type": "pause",
+          "src": "http://127.0.0.1:5186/audio/feedback/complete.mp3",
+          "position": 0,
+          "time": 1124.2000000476837
+        }
+      ],
+      "errors": []
+    },
+    {
+      "name": "daily-1440-rapid-check",
+      "passed": false,
+      "error": "page.waitForFunction: Timeout 5000ms exceeded.\n    at D:\\vibe项目\\Interactive learning\\tools\\test-completion-sound-browser.mjs:97:18",
+      "completionRequests": 2,
+      "events": [
+        {
+          "type": "error",
+          "src": "http://127.0.0.1:5186/audio/feedback/complete.mp3",
+          "position": 0,
+          "time": 1041.0999999642372
+        },
+        {
+          "type": "play-request",
+          "src": "http://127.0.0.1:5186/audio/feedback/correct.mp3",
+          "time": 1064,
+          "stack": "Error\n    at Audio.audio.<computed> [as play] (<anonymous>:16:120)\n    at AudioPlayback.playWeb (http://127.0.0.1:5186/src/audioPlayback.ts:262:15)\n    at AudioPlayback.play (http://127.0.0.1:5186/src/audioPlayback.ts:209:48)\n    at FeedbackAudio.flush (http://127.0.0.1:5186/src/feedbackAudio.ts:66:15)\n    at FeedbackAudio.play (http://127.0.0.1:5186/src/feedbackAudio.ts:49:8)\n    at http://127.0.0.1:5186/src/App.tsx?t=1791348895069:131:18\n    at checkOrContinue (http://127.0.0.1:5186/src/DailyEnglish.tsx?t=1791348895069:374:4)\n    at executeDispatch (http://127.0.0.1:5186/node_modules/.vite/deps/react-dom_client.js?v=87c7d28d:9141:5)\n    at runWithFiberInDEV (http://127.0.0.1:5186/node_modules/.vite/deps/react-dom_client.js?v=87c7d28d:851:66)\n    at processDispatchQueue (http://127.0.0.1:5186/node_modules/.vite/deps/react-dom_client.js?v=87c7d28d:9167:27)"
+        },
+        {
+          "type": "waiting",
+          "src": "http://127.0.0.1:5186/audio/feedback/correct.mp3",
+          "position": 0.019816,
+          "time": 1077.800000011921
+        },
+        {
+          "type": "playing",
+          "src": "http://127.0.0.1:5186/audio/feedback/correct.mp3",
+          "position": 0.024264,
+          "time": 1082.199999988079
+        },
+        {
+          "type": "pause-request",
+          "src": "http://127.0.0.1:5186/audio/feedback/correct.mp3",
+          "time": 1098.5,
+          "stack": "Error\n    at Audio.audio.<computed> [as pause] (<anonymous>:16:120)\n    at AudioPlayback.stop (http://127.0.0.1:5186/src/audioPlayback.ts:304:19)\n    at FeedbackAudio.stop (http://127.0.0.1:5186/src/feedbackAudio.ts:71:15)\n    at http://127.0.0.1:5186/src/App.tsx?t=1791348895069:152:18\n    at checkOrContinue (http://127.0.0.1:5186/src/DailyEnglish.tsx?t=1791348895069:356:4)\n    at executeDispatch (http://127.0.0.1:5186/node_modules/.vite/deps/react-dom_client.js?v=87c7d28d:9141:5)\n    at runWithFiberInDEV (http://127.0.0.1:5186/node_modules/.vite/deps/react-dom_client.js?v=87c7d28d:851:66)\n    at processDispatchQueue (http://127.0.0.1:5186/node_modules/.vite/deps/react-dom_client.js?v=87c7d28d:9167:27)\n    at http://127.0.0.1:5186/node_modules/.vite/deps/react-dom_client.js?v=87c7d28d:9454:5\n    at batchedUpdates$1 (http://127.0.0.1:5186/node_modules/.vite/deps/react-dom_client.js?v=87c7d28d:2044:12)"
+        },
+        {
+          "type": "play-request",
+          "src": "http://127.0.0.1:5186/audio/feedback/complete.mp3",
+          "time": 1099.699999988079,
+          "stack": "Error\n    at Audio.audio.<computed> [as play] (<anonymous>:16:120)\n    at AudioPlayback.playWeb (http://127.0.0.1:5186/src/audioPlayback.ts:262:15)\n    at AudioPlayback.play (http://127.0.0.1:5186/src/audioPlayback.ts:209:48)\n    at FeedbackAudio.flush (http://127.0.0.1:5186/src/feedbackAudio.ts:66:15)\n    at FeedbackAudio.play (http://127.0.0.1:5186/src/feedbackAudio.ts:49:8)\n    at http://127.0.0.1:5186/src/App.tsx?t=1791348895069:131:18\n    at checkOrContinue (http://127.0.0.1:5186/src/DailyEnglish.tsx?t=1791348895069:358:94)\n    at executeDispatch (http://127.0.0.1:5186/node_modules/.vite/deps/react-dom_client.js?v=87c7d28d:9141:5)\n    at runWithFiberInDEV (http://127.0.0.1:5186/node_modules/.vite/deps/react-dom_client.js?v=87c7d28d:851:66)\n    at processDispatchQueue (http://127.0.0.1:5186/node_modules/.vite/deps/react-dom_client.js?v=87c7d28d:9167:27)"
+        },
+        {
+          "type": "pause",
+          "src": "http://127.0.0.1:5186/audio/feedback/correct.mp3",
+          "position": 0.024264,
+          "time": 1111.699999988079
+        },
+        {
+          "type": "waiting",
+          "src": "http://127.0.0.1:5186/audio/feedback/complete.mp3",
+          "position": 0,
+          "time": 1112.0999999642372
+        },
+        {
+          "type": "error",
+          "src": "http://127.0.0.1:5186/audio/feedback/complete.mp3",
+          "position": 0,
+          "time": 1116.5
+        },
+        {
+          "type": "pause-request",
+          "src": "http://127.0.0.1:5186/audio/feedback/complete.mp3",
+          "time": 1116.5,
+          "stack": "Error\n    at Audio.audio.<computed> [as pause] (<anonymous>:16:120)\n    at AudioPlayback.stop (http://127.0.0.1:5186/src/audioPlayback.ts:304:19)\n    at AudioPlayback.fail (http://127.0.0.1:5186/src/audioPlayback.ts:277:8)\n    at audio.onerror (http://127.0.0.1:5186/src/audioPlayback.ts:253:31)"
+        },
+        {
+          "type": "pause",
+          "src": "http://127.0.0.1:5186/audio/feedback/complete.mp3",
+          "position": 0,
+          "time": 1116.699999988079
+        }
+      ],
+      "errors": []
+    },
+    {
+      "name": "daily-390-restored",
+      "passed": false,
+      "error": "page.waitForFunction: Timeout 5000ms exceeded.\n    at D:\\vibe项目\\Interactive learning\\tools\\test-completion-sound-browser.mjs:97:18",
+      "completionRequests": 2,
+      "events": [
+        {
+          "type": "error",
+          "src": "http://127.0.0.1:5186/audio/feedback/complete.mp3",
+          "position": 0,
+          "time": 1113.3999999761581
+        },
+        {
+          "type": "play-request",
+          "src": "http://127.0.0.1:5186/audio/feedback/complete.mp3",
+          "time": 1135.8999999761581,
+          "stack": "Error\n    at Audio.audio.<computed> [as play] (<anonymous>:16:120)\n    at AudioPlayback.playWeb (http://127.0.0.1:5186/src/audioPlayback.ts:262:15)\n    at AudioPlayback.play (http://127.0.0.1:5186/src/audioPlayback.ts:209:48)\n    at FeedbackAudio.flush (http://127.0.0.1:5186/src/feedbackAudio.ts:66:15)\n    at FeedbackAudio.play (http://127.0.0.1:5186/src/feedbackAudio.ts:49:8)\n    at http://127.0.0.1:5186/src/App.tsx?t=1791348895069:131:18\n    at checkOrContinue (http://127.0.0.1:5186/src/DailyEnglish.tsx?t=1791348895069:358:94)\n    at executeDispatch (http://127.0.0.1:5186/node_modules/.vite/deps/react-dom_client.js?v=87c7d28d:9141:5)\n    at runWithFiberInDEV (http://127.0.0.1:5186/node_modules/.vite/deps/react-dom_client.js?v=87c7d28d:851:66)\n    at processDispatchQueue (http://127.0.0.1:5186/node_modules/.vite/deps/react-dom_client.js?v=87c7d28d:9167:27)"
+        },
+        {
+          "type": "waiting",
+          "src": "http://127.0.0.1:5186/audio/feedback/complete.mp3",
+          "position": 0,
+          "time": 1150.800000011921
+        },
+        {
+          "type": "error",
+          "src": "http://127.0.0.1:5186/audio/feedback/complete.mp3",
+          "position": 0,
+          "time": 1156.6000000238419
+        },
+        {
+          "type": "pause-request",
+          "src": "http://127.0.0.1:5186/audio/feedback/complete.mp3",
+          "time": 1156.699999988079,
+          "stack": "Error\n    at Audio.audio.<computed> [as pause] (<anonymous>:16:120)\n    at AudioPlayback.stop (http://127.0.0.1:5186/src/audioPlayback.ts:304:19)\n    at AudioPlayback.fail (http://127.0.0.1:5186/src/audioPlayback.ts:277:8)\n    at audio.onerror (http://127.0.0.1:5186/src/audioPlayback.ts:253:31)"
+        },
+        {
+          "type": "pause",
+          "src": "http://127.0.0.1:5186/audio/feedback/complete.mp3",
+          "position": 0,
+          "time": 1156.800000011921
+        }
+      ],
+      "errors": []
+    },
+    {
+      "name": "daily-390-rapid-check",
+      "passed": false,
+      "error": "page.waitForFunction: Timeout 5000ms exceeded.\n    at D:\\vibe项目\\Interactive learning\\tools\\test-completion-sound-browser.mjs:97:18",
+      "completionRequests": 2,
+      "events": [
+        {
+          "type": "error",
+          "src": "http://127.0.0.1:5186/audio/feedback/complete.mp3",
+          "position": 0,
+          "time": 1124.7000000476837
+        },
+        {
+          "type": "play-request",
+          "src": "http://127.0.0.1:5186/audio/feedback/correct.mp3",
+          "time": 1151.5,
+          "stack": "Error\n    at Audio.audio.<computed> [as play] (<anonymous>:16:120)\n    at AudioPlayback.playWeb (http://127.0.0.1:5186/src/audioPlayback.ts:262:15)\n    at AudioPlayback.play (http://127.0.0.1:5186/src/audioPlayback.ts:209:48)\n    at FeedbackAudio.flush (http://127.0.0.1:5186/src/feedbackAudio.ts:66:15)\n    at FeedbackAudio.play (http://127.0.0.1:5186/src/feedbackAudio.ts:49:8)\n    at http://127.0.0.1:5186/src/App.tsx?t=1791348895069:131:18\n    at checkOrContinue (http://127.0.0.1:5186/src/DailyEnglish.tsx?t=1791348895069:374:4)\n    at executeDispatch (http://127.0.0.1:5186/node_modules/.vite/deps/react-dom_client.js?v=87c7d28d:9141:5)\n    at runWithFiberInDEV (http://127.0.0.1:5186/node_modules/.vite/deps/react-dom_client.js?v=87c7d28d:851:66)\n    at processDispatchQueue (http://127.0.0.1:5186/node_modules/.vite/deps/react-dom_client.js?v=87c7d28d:9167:27)"
+        },
+        {
+          "type": "waiting",
+          "src": "http://127.0.0.1:5186/audio/feedback/correct.mp3",
+          "position": 0,
+          "time": 1166.4000000357628
+        },
+        {
+          "type": "playing",
+          "src": "http://127.0.0.1:5186/audio/feedback/correct.mp3",
+          "position": 0,
+          "time": 1171.5
+        },
+        {
+          "type": "pause-request",
+          "src": "http://127.0.0.1:5186/audio/feedback/correct.mp3",
+          "time": 1190.9000000357628,
+          "stack": "Error\n    at Audio.audio.<computed> [as pause] (<anonymous>:16:120)\n    at AudioPlayback.stop (http://127.0.0.1:5186/src/audioPlayback.ts:304:19)\n    at FeedbackAudio.stop (http://127.0.0.1:5186/src/feedbackAudio.ts:71:15)\n    at http://127.0.0.1:5186/src/App.tsx?t=1791348895069:152:18\n    at checkOrContinue (http://127.0.0.1:5186/src/DailyEnglish.tsx?t=1791348895069:356:4)\n    at executeDispatch (http://127.0.0.1:5186/node_modules/.vite/deps/react-dom_client.js?v=87c7d28d:9141:5)\n    at runWithFiberInDEV (http://127.0.0.1:5186/node_modules/.vite/deps/react-dom_client.js?v=87c7d28d:851:66)\n    at processDispatchQueue (http://127.0.0.1:5186/node_modules/.vite/deps/react-dom_client.js?v=87c7d28d:9167:27)\n    at http://127.0.0.1:5186/node_modules/.vite/deps/react-dom_client.js?v=87c7d28d:9454:5\n    at batchedUpdates$1 (http://127.0.0.1:5186/node_modules/.vite/deps/react-dom_client.js?v=87c7d28d:2044:12)"
+        },
+        {
+          "type": "play-request",
+          "src": "http://127.0.0.1:5186/audio/feedback/complete.mp3",
+          "time": 1192.5,
+          "stack": "Error\n    at Audio.audio.<computed> [as play] (<anonymous>:16:120)\n    at AudioPlayback.playWeb (http://127.0.0.1:5186/src/audioPlayback.ts:262:15)\n    at AudioPlayback.play (http://127.0.0.1:5186/src/audioPlayback.ts:209:48)\n    at FeedbackAudio.flush (http://127.0.0.1:5186/src/feedbackAudio.ts:66:15)\n    at FeedbackAudio.play (http://127.0.0.1:5186/src/feedbackAudio.ts:49:8)\n    at http://127.0.0.1:5186/src/App.tsx?t=1791348895069:131:18\n    at checkOrContinue (http://127.0.0.1:5186/src/DailyEnglish.tsx?t=1791348895069:358:94)\n    at executeDispatch (http://127.0.0.1:5186/node_modules/.vite/deps/react-dom_client.js?v=87c7d28d:9141:5)\n    at runWithFiberInDEV (http://127.0.0.1:5186/node_modules/.vite/deps/react-dom_client.js?v=87c7d28d:851:66)\n    at processDispatchQueue (http://127.0.0.1:5186/node_modules/.vite/deps/react-dom_client.js?v=87c7d28d:9167:27)"
+        },
+        {
+          "type": "pause",
+          "src": "http://127.0.0.1:5186/audio/feedback/correct.mp3",
+          "position": 0.002919,
+          "time": 1211.6000000238419
+        },
+        {
+          "type": "waiting",
+          "src": "http://127.0.0.1:5186/audio/feedback/complete.mp3",
+          "position": 0,
+          "time": 1212.300000011921
+        },
+        {
+          "type": "error",
+          "src": "http://127.0.0.1:5186/audio/feedback/complete.mp3",
+          "position": 0,
+          "time": 1219
+        },
+        {
+          "type": "pause-request",
+          "src": "http://127.0.0.1:5186/audio/feedback/complete.mp3",
+          "time": 1219,
+          "stack": "Error\n    at Audio.audio.<computed> [as pause] (<anonymous>:16:120)\n    at AudioPlayback.stop (http://127.0.0.1:5186/src/audioPlayback.ts:304:19)\n    at AudioPlayback.fail (http://127.0.0.1:5186/src/audioPlayback.ts:277:8)\n    at audio.onerror (http://127.0.0.1:5186/src/audioPlayback.ts:253:31)"
+        },
+        {
+          "type": "pause",
+          "src": "http://127.0.0.1:5186/audio/feedback/complete.mp3",
+          "position": 0,
+          "time": 1219.2000000476837
+        }
+      ],
+      "errors": []
+    }
+  ]
+}

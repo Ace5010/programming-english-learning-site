@@ -1,0 +1,1117 @@
+{
+  "baseURL": "http://127.0.0.1:5186/dist/",
+  "results": [
+    {
+      "name": "programming-1440-restored",
+      "passed": true,
+      "completionRequests": 4,
+      "events": [
+        {
+          "type": "error",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/complete.mp3",
+          "position": 0,
+          "time": 1257.6000000238419
+        },
+        {
+          "type": "play-request",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/complete.mp3",
+          "time": 1318.6000000238419,
+          "stack": "Error\n    at Audio.audio.<computed> [as play] (<anonymous>:16:120)\n    at $.playWeb (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54008:25)\n    at $.play (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:53986:40)\n    at no.flush (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54082:79)\n    at no.play (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54068:26)\n    at http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:149551:5\n    at gt (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:146267:80)\n    at _d (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:6219:7)\n    at http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:6463:4\n    at K (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:1517:11)"
+        },
+        {
+          "type": "waiting",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/complete.mp3",
+          "position": 0,
+          "time": 1333.5
+        },
+        {
+          "type": "error",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/complete.mp3",
+          "position": 0,
+          "time": 1337.300000011921
+        },
+        {
+          "type": "pause-request",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/complete.mp3",
+          "time": 1337.4000000357628,
+          "stack": "Error\n    at Audio.audio.<computed> [as pause] (<anonymous>:16:120)\n    at $.stop (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54034:296)\n    at $.fail (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54020:57)\n    at t.onerror (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54006:31)"
+        },
+        {
+          "type": "pause",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/complete.mp3",
+          "position": 0,
+          "time": 1337.6000000238419
+        },
+        {
+          "type": "play-request",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/complete.mp3",
+          "time": 1458.6000000238419,
+          "stack": "Error\n    at Audio.audio.<computed> [as play] (<anonymous>:16:120)\n    at $.playWeb (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54008:25)\n    at $.play (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:53986:40)\n    at no.flush (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54082:79)\n    at http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54090:56"
+        },
+        {
+          "type": "waiting",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/complete.mp3",
+          "position": 0,
+          "time": 1459.1000000238419
+        },
+        {
+          "type": "playing",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/complete.mp3",
+          "position": 0,
+          "time": 1467.800000011921
+        },
+        {
+          "type": "pause",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/complete.mp3",
+          "position": 1.1,
+          "time": 2598.800000011921
+        },
+        {
+          "type": "pause-request",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/complete.mp3",
+          "time": 2598.900000035763,
+          "stack": "Error\n    at Audio.audio.<computed> [as pause] (<anonymous>:16:120)\n    at $.stop (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54034:296)\n    at t.onpause (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54005:45)"
+        },
+        {
+          "type": "ended",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/complete.mp3",
+          "position": 1.1,
+          "time": 2599
+        }
+      ]
+    },
+    {
+      "name": "programming-1440-rapid-check",
+      "passed": true,
+      "completionRequests": 4,
+      "events": [
+        {
+          "type": "error",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/complete.mp3",
+          "position": 0,
+          "time": 967.1000000238419
+        },
+        {
+          "type": "play-request",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/correct.mp3",
+          "time": 984.6999999880791,
+          "stack": "Error\n    at Audio.audio.<computed> [as play] (<anonymous>:16:120)\n    at $.playWeb (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54008:25)\n    at $.play (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:53986:40)\n    at no.flush (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54082:79)\n    at no.play (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54068:26)\n    at http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:149551:5\n    at gt (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:146278:117)\n    at _d (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:6219:7)\n    at http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:6463:4\n    at K (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:1517:11)"
+        },
+        {
+          "type": "waiting",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/correct.mp3",
+          "position": 0,
+          "time": 995.5
+        },
+        {
+          "type": "pause-request",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/correct.mp3",
+          "time": 1012.8000000119209,
+          "stack": "Error\n    at Audio.audio.<computed> [as pause] (<anonymous>:16:120)\n    at $.stop (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54034:296)\n    at no.stop (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54093:90)\n    at http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:149563:16\n    at gt (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:146265:4)\n    at _d (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:6219:7)\n    at http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:6463:4\n    at K (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:1517:11)\n    at Cd (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:6287:3)\n    at up (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:7705:20)"
+        },
+        {
+          "type": "play-request",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/complete.mp3",
+          "time": 1014.5,
+          "stack": "Error\n    at Audio.audio.<computed> [as play] (<anonymous>:16:120)\n    at $.playWeb (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54008:25)\n    at $.play (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:53986:40)\n    at no.flush (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54082:79)\n    at no.play (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54068:26)\n    at http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:149551:5\n    at gt (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:146267:80)\n    at _d (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:6219:7)\n    at http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:6463:4\n    at K (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:1517:11)"
+        },
+        {
+          "type": "pause",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/correct.mp3",
+          "position": 0,
+          "time": 1023.1000000238419
+        },
+        {
+          "type": "waiting",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/complete.mp3",
+          "position": 0,
+          "time": 1023.6000000238419
+        },
+        {
+          "type": "error",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/complete.mp3",
+          "position": 0,
+          "time": 1025.6000000238419
+        },
+        {
+          "type": "pause-request",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/complete.mp3",
+          "time": 1025.6000000238419,
+          "stack": "Error\n    at Audio.audio.<computed> [as pause] (<anonymous>:16:120)\n    at $.stop (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54034:296)\n    at $.fail (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54020:57)\n    at t.onerror (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54006:31)"
+        },
+        {
+          "type": "pause",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/complete.mp3",
+          "position": 0,
+          "time": 1025.800000011921
+        },
+        {
+          "type": "play-request",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/complete.mp3",
+          "time": 1149.5,
+          "stack": "Error\n    at Audio.audio.<computed> [as play] (<anonymous>:16:120)\n    at $.playWeb (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54008:25)\n    at $.play (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:53986:40)\n    at no.flush (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54082:79)\n    at http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54090:56"
+        },
+        {
+          "type": "waiting",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/complete.mp3",
+          "position": 0,
+          "time": 1149.800000011921
+        },
+        {
+          "type": "playing",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/complete.mp3",
+          "position": 0,
+          "time": 1159.800000011921
+        },
+        {
+          "type": "pause",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/complete.mp3",
+          "position": 1.1,
+          "time": 2306.699999988079
+        },
+        {
+          "type": "pause-request",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/complete.mp3",
+          "time": 2306.699999988079,
+          "stack": "Error\n    at Audio.audio.<computed> [as pause] (<anonymous>:16:120)\n    at $.stop (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54034:296)\n    at t.onpause (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54005:45)"
+        },
+        {
+          "type": "ended",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/complete.mp3",
+          "position": 1.1,
+          "time": 2306.800000011921
+        },
+        {
+          "type": "pause-request",
+          "src": "http://127.0.0.1:5186/dist/audio/aria/word-1.mp3?v=repository",
+          "time": 2346.699999988079,
+          "stack": "Error\n    at Audio.audio.<computed> [as pause] (<anonymous>:16:120)\n    at $.element (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:53955:58)\n    at $.preloadQueue (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:53872:70)\n    at http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:149595:12\n    at http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:149602:15\n    at http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:146351:3\n    at Mc (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:4577:11)\n    at vl (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:5311:33)\n    at _l (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:5303:62)\n    at vl (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:5343:13)"
+        },
+        {
+          "type": "pause-request",
+          "src": "http://127.0.0.1:5186/dist/audio/aria/example-1.mp3?v=Open%20this%20repository.",
+          "time": 2347.399999976158,
+          "stack": "Error\n    at Audio.audio.<computed> [as pause] (<anonymous>:16:120)\n    at $.element (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:53955:58)\n    at $.preloadQueue (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:53872:70)\n    at http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:149595:12\n    at http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:149602:15\n    at http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:146351:3\n    at Mc (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:4577:11)\n    at vl (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:5311:33)\n    at _l (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:5303:62)\n    at vl (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:5343:13)"
+        },
+        {
+          "type": "pause-request",
+          "src": "http://127.0.0.1:5186/dist/audio/aria/word-2801.mp3?v=project",
+          "time": 2347.600000023842,
+          "stack": "Error\n    at Audio.audio.<computed> [as pause] (<anonymous>:16:120)\n    at $.element (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:53955:58)\n    at $.preloadQueue (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:53872:70)\n    at http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:149595:12\n    at http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:149602:15\n    at http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:146351:3\n    at Mc (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:4577:11)\n    at vl (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:5311:33)\n    at _l (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:5303:62)\n    at vl (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:5343:13)"
+        },
+        {
+          "type": "pause-request",
+          "src": "http://127.0.0.1:5186/dist/audio/aria/example-2801.mp3?v=Open%20this%20project.",
+          "time": 2347.699999988079,
+          "stack": "Error\n    at Audio.audio.<computed> [as pause] (<anonymous>:16:120)\n    at $.element (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:53955:58)\n    at $.preloadQueue (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:53872:70)\n    at http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:149595:12\n    at http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:149602:15\n    at http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:146351:3\n    at Mc (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:4577:11)\n    at vl (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:5311:33)\n    at _l (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:5303:62)\n    at vl (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:5343:13)"
+        },
+        {
+          "type": "pause-request",
+          "src": "http://127.0.0.1:5186/dist/audio/aria/word-3561.mp3?v=code",
+          "time": 2347.800000011921,
+          "stack": "Error\n    at Audio.audio.<computed> [as pause] (<anonymous>:16:120)\n    at $.element (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:53955:58)\n    at $.preloadQueue (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:53872:70)\n    at http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:149595:12\n    at http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:149602:15\n    at http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:146351:3\n    at Mc (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:4577:11)\n    at vl (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:5311:33)\n    at _l (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:5303:62)\n    at vl (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:5343:13)"
+        },
+        {
+          "type": "play-request",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/correct.mp3",
+          "time": 2418.100000023842,
+          "stack": "Error\n    at Audio.audio.<computed> [as play] (<anonymous>:16:120)\n    at $.playWeb (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54008:25)\n    at $.play (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:53986:40)\n    at no.flush (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54082:79)\n    at no.play (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54068:26)\n    at http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:149551:5\n    at gt (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:146278:117)\n    at _d (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:6219:7)\n    at http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:6463:4\n    at K (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:1517:11)"
+        },
+        {
+          "type": "waiting",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/correct.mp3",
+          "position": 0,
+          "time": 2423.600000023842
+        },
+        {
+          "type": "pause-request",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/correct.mp3",
+          "time": 2441,
+          "stack": "Error\n    at Audio.audio.<computed> [as pause] (<anonymous>:16:120)\n    at $.stop (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54034:296)\n    at no.stop (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54093:90)\n    at http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:149563:16\n    at gt (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:146265:4)\n    at _d (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:6219:7)\n    at http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:6463:4\n    at K (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:1517:11)\n    at Cd (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:6287:3)\n    at up (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:7705:20)"
+        },
+        {
+          "type": "pause",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/correct.mp3",
+          "position": 0,
+          "time": 2448.699999988079
+        },
+        {
+          "type": "play-request",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/correct.mp3",
+          "time": 2482,
+          "stack": "Error\n    at Audio.audio.<computed> [as play] (<anonymous>:16:120)\n    at $.playWeb (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54008:25)\n    at $.play (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:53986:40)\n    at no.flush (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54082:79)\n    at no.play (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54068:26)\n    at http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:149551:5\n    at gt (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:146278:117)\n    at _d (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:6219:7)\n    at http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:6463:4\n    at K (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:1517:11)"
+        },
+        {
+          "type": "waiting",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/correct.mp3",
+          "position": 0,
+          "time": 2487.300000011921
+        },
+        {
+          "type": "pause-request",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/correct.mp3",
+          "time": 2502.300000011921,
+          "stack": "Error\n    at Audio.audio.<computed> [as pause] (<anonymous>:16:120)\n    at $.stop (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54034:296)\n    at no.stop (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54093:90)\n    at http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:149563:16\n    at gt (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:146265:4)\n    at _d (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:6219:7)\n    at http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:6463:4\n    at K (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:1517:11)\n    at Cd (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:6287:3)\n    at up (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:7705:20)"
+        },
+        {
+          "type": "pause",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/correct.mp3",
+          "position": 0,
+          "time": 2511.5
+        },
+        {
+          "type": "play-request",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/correct.mp3",
+          "time": 2553,
+          "stack": "Error\n    at Audio.audio.<computed> [as play] (<anonymous>:16:120)\n    at $.playWeb (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54008:25)\n    at $.play (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:53986:40)\n    at no.flush (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54082:79)\n    at no.play (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54068:26)\n    at http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:149551:5\n    at gt (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:146278:117)\n    at _d (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:6219:7)\n    at http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:6463:4\n    at K (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:1517:11)"
+        },
+        {
+          "type": "waiting",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/correct.mp3",
+          "position": 0,
+          "time": 2557.199999988079
+        },
+        {
+          "type": "playing",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/correct.mp3",
+          "position": 0,
+          "time": 2558.800000011921
+        },
+        {
+          "type": "pause-request",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/correct.mp3",
+          "time": 2574.600000023842,
+          "stack": "Error\n    at Audio.audio.<computed> [as pause] (<anonymous>:16:120)\n    at $.stop (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54034:296)\n    at no.stop (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54093:90)\n    at http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:149563:16\n    at gt (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:146265:4)\n    at _d (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:6219:7)\n    at http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:6463:4\n    at K (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:1517:11)\n    at Cd (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:6287:3)\n    at up (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:7705:20)"
+        },
+        {
+          "type": "pause",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/correct.mp3",
+          "position": 0.01625,
+          "time": 2583.699999988079
+        },
+        {
+          "type": "play-request",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/correct.mp3",
+          "time": 2626,
+          "stack": "Error\n    at Audio.audio.<computed> [as play] (<anonymous>:16:120)\n    at $.playWeb (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54008:25)\n    at $.play (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:53986:40)\n    at no.flush (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54082:79)\n    at no.play (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54068:26)\n    at http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:149551:5\n    at gt (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:146278:117)\n    at _d (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:6219:7)\n    at http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:6463:4\n    at K (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:1517:11)"
+        },
+        {
+          "type": "waiting",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/correct.mp3",
+          "position": 0,
+          "time": 2631.100000023842
+        },
+        {
+          "type": "playing",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/correct.mp3",
+          "position": 0,
+          "time": 2632.699999988079
+        },
+        {
+          "type": "pause-request",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/correct.mp3",
+          "time": 2646.399999976158,
+          "stack": "Error\n    at Audio.audio.<computed> [as pause] (<anonymous>:16:120)\n    at $.stop (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54034:296)\n    at no.stop (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54093:90)\n    at http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:149563:16\n    at gt (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:146265:4)\n    at _d (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:6219:7)\n    at http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:6463:4\n    at K (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:1517:11)\n    at Cd (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:6287:3)\n    at up (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:7705:20)"
+        },
+        {
+          "type": "pause",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/correct.mp3",
+          "position": 0.010434,
+          "time": 2654.899999976158
+        },
+        {
+          "type": "pause-request",
+          "src": "http://127.0.0.1:5186/dist/audio/aria/example-3561.mp3?v=Read%20this%20code.",
+          "time": 2670.800000011921,
+          "stack": "Error\n    at Audio.audio.<computed> [as pause] (<anonymous>:16:120)\n    at $.element (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:53955:58)\n    at $.playWeb (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54001:18)\n    at $.play (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:53986:40)\n    at xt (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:149755:37)\n    at jt (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:149775:46)\n    at Object.c [as play] (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:45562:20)\n    at onClick (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:146719:68)\n    at _d (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:6219:7)\n    at http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:6463:4"
+        },
+        {
+          "type": "play-request",
+          "src": "http://127.0.0.1:5186/dist/audio/aria/word-1880.mp3",
+          "time": 2670.899999976158,
+          "stack": "Error\n    at Audio.audio.<computed> [as play] (<anonymous>:16:120)\n    at $.playWeb (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54008:25)\n    at $.play (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:53986:40)\n    at xt (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:149755:37)\n    at jt (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:149775:46)\n    at Object.c [as play] (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:45562:20)\n    at onClick (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:146719:68)\n    at _d (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:6219:7)\n    at http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:6463:4\n    at K (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:1517:11)"
+        },
+        {
+          "type": "waiting",
+          "src": "http://127.0.0.1:5186/dist/audio/aria/word-1880.mp3",
+          "position": 0,
+          "time": 2674.399999976158
+        },
+        {
+          "type": "playing",
+          "src": "http://127.0.0.1:5186/dist/audio/aria/word-1880.mp3",
+          "position": 0,
+          "time": 2691.899999976158
+        },
+        {
+          "type": "pause-request",
+          "src": "http://127.0.0.1:5186/dist/audio/aria/word-1880.mp3",
+          "time": 2707,
+          "stack": "Error\n    at Audio.audio.<computed> [as pause] (<anonymous>:16:120)\n    at $.stop (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54034:296)\n    at http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:149563:6\n    at gt (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:146265:4)\n    at _d (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:6219:7)\n    at http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:6463:4\n    at K (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:1517:11)\n    at Cd (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:6287:3)\n    at up (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:7705:20)\n    at cp (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:7687:13)"
+        },
+        {
+          "type": "pause",
+          "src": "http://127.0.0.1:5186/dist/audio/aria/word-1880.mp3",
+          "position": 0.010566,
+          "time": 2715
+        },
+        {
+          "type": "play-request",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/correct.mp3",
+          "time": 2748.300000011921,
+          "stack": "Error\n    at Audio.audio.<computed> [as play] (<anonymous>:16:120)\n    at $.playWeb (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54008:25)\n    at $.play (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:53986:40)\n    at no.flush (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54082:79)\n    at no.play (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54068:26)\n    at http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:149551:5\n    at gt (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:146278:117)\n    at _d (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:6219:7)\n    at http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:6463:4\n    at K (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:1517:11)"
+        },
+        {
+          "type": "waiting",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/correct.mp3",
+          "position": 0,
+          "time": 2752.300000011921
+        },
+        {
+          "type": "playing",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/correct.mp3",
+          "position": 0,
+          "time": 2753.600000023842
+        },
+        {
+          "type": "pause-request",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/correct.mp3",
+          "time": 2768.600000023842,
+          "stack": "Error\n    at Audio.audio.<computed> [as pause] (<anonymous>:16:120)\n    at $.stop (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54034:296)\n    at no.stop (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54093:90)\n    at http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:149563:16\n    at gt (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:146265:4)\n    at _d (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:6219:7)\n    at http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:6463:4\n    at K (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:1517:11)\n    at Cd (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:6287:3)\n    at up (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:7705:20)"
+        },
+        {
+          "type": "pause",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/correct.mp3",
+          "position": 0.012413,
+          "time": 2778.5
+        },
+        {
+          "type": "pause-request",
+          "src": "http://127.0.0.1:5186/dist/audio/aria/word-20.mp3?v=readme",
+          "time": 2791.899999976158,
+          "stack": "Error\n    at Audio.audio.<computed> [as pause] (<anonymous>:16:120)\n    at $.element (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:53955:58)\n    at $.playWeb (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54001:18)\n    at $.play (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:53986:40)\n    at xt (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:149755:37)\n    at jt (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:149775:46)\n    at Object.c [as play] (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:45562:20)\n    at onClick (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:146719:68)\n    at _d (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:6219:7)\n    at http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:6463:4"
+        },
+        {
+          "type": "play-request",
+          "src": "http://127.0.0.1:5186/dist/audio/aria/word-11.mp3",
+          "time": 2792.100000023842,
+          "stack": "Error\n    at Audio.audio.<computed> [as play] (<anonymous>:16:120)\n    at $.playWeb (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54008:25)\n    at $.play (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:53986:40)\n    at xt (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:149755:37)\n    at jt (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:149775:46)\n    at Object.c [as play] (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:45562:20)\n    at onClick (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:146719:68)\n    at _d (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:6219:7)\n    at http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:6463:4\n    at K (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:1517:11)"
+        },
+        {
+          "type": "waiting",
+          "src": "http://127.0.0.1:5186/dist/audio/aria/word-11.mp3",
+          "position": 0,
+          "time": 2795.699999988079
+        },
+        {
+          "type": "playing",
+          "src": "http://127.0.0.1:5186/dist/audio/aria/word-11.mp3",
+          "position": 0,
+          "time": 2805.199999988079
+        },
+        {
+          "type": "pause-request",
+          "src": "http://127.0.0.1:5186/dist/audio/aria/word-11.mp3",
+          "time": 2828.899999976158,
+          "stack": "Error\n    at Audio.audio.<computed> [as pause] (<anonymous>:16:120)\n    at $.stop (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54034:296)\n    at http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:149563:6\n    at gt (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:146265:4)\n    at _d (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:6219:7)\n    at http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:6463:4\n    at K (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:1517:11)\n    at Cd (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:6287:3)\n    at up (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:7705:20)\n    at cp (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:7687:13)"
+        },
+        {
+          "type": "pause",
+          "src": "http://127.0.0.1:5186/dist/audio/aria/word-11.mp3",
+          "position": 0.01274,
+          "time": 2837.600000023842
+        },
+        {
+          "type": "play-request",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/correct.mp3",
+          "time": 2870.300000011921,
+          "stack": "Error\n    at Audio.audio.<computed> [as play] (<anonymous>:16:120)\n    at $.playWeb (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54008:25)\n    at $.play (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:53986:40)\n    at no.flush (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54082:79)\n    at no.play (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54068:26)\n    at http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:149551:5\n    at gt (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:146278:117)\n    at _d (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:6219:7)\n    at http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:6463:4\n    at K (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:1517:11)"
+        },
+        {
+          "type": "waiting",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/correct.mp3",
+          "position": 0,
+          "time": 2874.100000023842
+        },
+        {
+          "type": "playing",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/correct.mp3",
+          "position": 0,
+          "time": 2875.199999988079
+        },
+        {
+          "type": "pause-request",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/correct.mp3",
+          "time": 2890.199999988079,
+          "stack": "Error\n    at Audio.audio.<computed> [as pause] (<anonymous>:16:120)\n    at $.stop (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54034:296)\n    at no.stop (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54093:90)\n    at http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:149563:16\n    at gt (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:146265:4)\n    at _d (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:6219:7)\n    at http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:6463:4\n    at K (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:1517:11)\n    at Cd (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:6287:3)\n    at up (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:7705:20)"
+        },
+        {
+          "type": "pause",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/correct.mp3",
+          "position": 0.014162,
+          "time": 2899.699999988079
+        },
+        {
+          "type": "play-request",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/correct.mp3",
+          "time": 2932,
+          "stack": "Error\n    at Audio.audio.<computed> [as play] (<anonymous>:16:120)\n    at $.playWeb (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54008:25)\n    at $.play (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:53986:40)\n    at no.flush (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54082:79)\n    at no.play (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54068:26)\n    at http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:149551:5\n    at gt (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:146278:117)\n    at _d (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:6219:7)\n    at http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:6463:4\n    at K (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:1517:11)"
+        },
+        {
+          "type": "waiting",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/correct.mp3",
+          "position": 0,
+          "time": 2937.100000023842
+        },
+        {
+          "type": "playing",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/correct.mp3",
+          "position": 0.002311,
+          "time": 2938.699999988079
+        },
+        {
+          "type": "pause-request",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/correct.mp3",
+          "time": 2952,
+          "stack": "Error\n    at Audio.audio.<computed> [as pause] (<anonymous>:16:120)\n    at $.stop (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54034:296)\n    at no.stop (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54093:90)\n    at http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:149563:16\n    at gt (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:146265:4)\n    at _d (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:6219:7)\n    at http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:6463:4\n    at K (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:1517:11)\n    at Cd (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:6287:3)\n    at up (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:7705:20)"
+        },
+        {
+          "type": "pause",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/correct.mp3",
+          "position": 0.015603,
+          "time": 2961.300000011921
+        },
+        {
+          "type": "pause-request",
+          "src": "http://127.0.0.1:5186/dist/audio/aria/example-20.mp3?v=Read%20the%20README%20for%20help.",
+          "time": 2975.199999988079,
+          "stack": "Error\n    at Audio.audio.<computed> [as pause] (<anonymous>:16:120)\n    at $.element (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:53955:58)\n    at $.playWeb (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54001:18)\n    at $.play (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:53986:40)\n    at xt (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:149755:37)\n    at jt (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:149775:46)\n    at Object.c [as play] (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:45562:20)\n    at onClick (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:146719:68)\n    at _d (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:6219:7)\n    at http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:6463:4"
+        },
+        {
+          "type": "play-request",
+          "src": "http://127.0.0.1:5186/dist/audio/aria/word-1384.mp3",
+          "time": 2975.5,
+          "stack": "Error\n    at Audio.audio.<computed> [as play] (<anonymous>:16:120)\n    at $.playWeb (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54008:25)\n    at $.play (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:53986:40)\n    at xt (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:149755:37)\n    at jt (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:149775:46)\n    at Object.c [as play] (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:45562:20)\n    at onClick (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:146719:68)\n    at _d (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:6219:7)\n    at http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:6463:4\n    at K (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:1517:11)"
+        },
+        {
+          "type": "waiting",
+          "src": "http://127.0.0.1:5186/dist/audio/aria/word-1384.mp3",
+          "position": 0,
+          "time": 2980.100000023842
+        },
+        {
+          "type": "playing",
+          "src": "http://127.0.0.1:5186/dist/audio/aria/word-1384.mp3",
+          "position": 0,
+          "time": 2989.600000023842
+        },
+        {
+          "type": "pause-request",
+          "src": "http://127.0.0.1:5186/dist/audio/aria/word-1384.mp3",
+          "time": 3018.399999976158,
+          "stack": "Error\n    at Audio.audio.<computed> [as pause] (<anonymous>:16:120)\n    at $.stop (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54034:296)\n    at http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:149563:6\n    at gt (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:146265:4)\n    at _d (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:6219:7)\n    at http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:6463:4\n    at K (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:1517:11)\n    at Cd (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:6287:3)\n    at up (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:7705:20)\n    at cp (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:7687:13)"
+        },
+        {
+          "type": "play-request",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/complete.mp3",
+          "time": 3020.100000023842,
+          "stack": "Error\n    at Audio.audio.<computed> [as play] (<anonymous>:16:120)\n    at $.playWeb (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54008:25)\n    at $.play (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:53986:40)\n    at no.flush (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54082:79)\n    at no.play (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54068:26)\n    at http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:149551:5\n    at gt (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:146267:80)\n    at _d (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:6219:7)\n    at http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:6463:4\n    at K (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:1517:11)"
+        },
+        {
+          "type": "pause",
+          "src": "http://127.0.0.1:5186/dist/audio/aria/word-1384.mp3",
+          "position": 0.002032,
+          "time": 3025.300000011921
+        },
+        {
+          "type": "waiting",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/complete.mp3",
+          "position": 0,
+          "time": 3025.399999976158
+        },
+        {
+          "type": "playing",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/complete.mp3",
+          "position": 0,
+          "time": 3027.5
+        },
+        {
+          "type": "pause",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/complete.mp3",
+          "position": 1.1,
+          "time": 4196.399999976158
+        },
+        {
+          "type": "pause-request",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/complete.mp3",
+          "time": 4196.399999976158,
+          "stack": "Error\n    at Audio.audio.<computed> [as pause] (<anonymous>:16:120)\n    at $.stop (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54034:296)\n    at t.onpause (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54005:45)"
+        },
+        {
+          "type": "ended",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/complete.mp3",
+          "position": 1.1,
+          "time": 4196.399999976158
+        }
+      ]
+    },
+    {
+      "name": "programming-390-restored",
+      "passed": true,
+      "completionRequests": 4,
+      "events": [
+        {
+          "type": "error",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/complete.mp3",
+          "position": 0,
+          "time": 1033.4000000357628
+        },
+        {
+          "type": "play-request",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/complete.mp3",
+          "time": 1048.1000000238419,
+          "stack": "Error\n    at Audio.audio.<computed> [as play] (<anonymous>:16:120)\n    at $.playWeb (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54008:25)\n    at $.play (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:53986:40)\n    at no.flush (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54082:79)\n    at no.play (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54068:26)\n    at http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:149551:5\n    at gt (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:146267:80)\n    at _d (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:6219:7)\n    at http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:6463:4\n    at K (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:1517:11)"
+        },
+        {
+          "type": "waiting",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/complete.mp3",
+          "position": 0,
+          "time": 1063.2000000476837
+        },
+        {
+          "type": "error",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/complete.mp3",
+          "position": 0,
+          "time": 1068.1000000238419
+        },
+        {
+          "type": "pause-request",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/complete.mp3",
+          "time": 1068.1000000238419,
+          "stack": "Error\n    at Audio.audio.<computed> [as pause] (<anonymous>:16:120)\n    at $.stop (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54034:296)\n    at $.fail (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54020:57)\n    at t.onerror (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54006:31)"
+        },
+        {
+          "type": "pause",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/complete.mp3",
+          "position": 0,
+          "time": 1068.5
+        },
+        {
+          "type": "play-request",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/complete.mp3",
+          "time": 1188.6000000238419,
+          "stack": "Error\n    at Audio.audio.<computed> [as play] (<anonymous>:16:120)\n    at $.playWeb (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54008:25)\n    at $.play (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:53986:40)\n    at no.flush (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54082:79)\n    at http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54090:56"
+        },
+        {
+          "type": "waiting",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/complete.mp3",
+          "position": 0,
+          "time": 1189.1000000238419
+        },
+        {
+          "type": "playing",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/complete.mp3",
+          "position": 0,
+          "time": 1199.6000000238419
+        },
+        {
+          "type": "pause",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/complete.mp3",
+          "position": 1.1,
+          "time": 2351.100000023842
+        },
+        {
+          "type": "pause-request",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/complete.mp3",
+          "time": 2351.100000023842,
+          "stack": "Error\n    at Audio.audio.<computed> [as pause] (<anonymous>:16:120)\n    at $.stop (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54034:296)\n    at t.onpause (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54005:45)"
+        },
+        {
+          "type": "ended",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/complete.mp3",
+          "position": 1.1,
+          "time": 2351.100000023842
+        }
+      ]
+    },
+    {
+      "name": "programming-390-rapid-check",
+      "passed": true,
+      "completionRequests": 4,
+      "events": [
+        {
+          "type": "error",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/complete.mp3",
+          "position": 0,
+          "time": 1002.8999999761581
+        },
+        {
+          "type": "play-request",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/correct.mp3",
+          "time": 1029.1000000238419,
+          "stack": "Error\n    at Audio.audio.<computed> [as play] (<anonymous>:16:120)\n    at $.playWeb (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54008:25)\n    at $.play (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:53986:40)\n    at no.flush (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54082:79)\n    at no.play (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54068:26)\n    at http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:149551:5\n    at gt (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:146278:117)\n    at _d (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:6219:7)\n    at http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:6463:4\n    at K (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:1517:11)"
+        },
+        {
+          "type": "waiting",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/correct.mp3",
+          "position": 0,
+          "time": 1045.6000000238419
+        },
+        {
+          "type": "pause-request",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/correct.mp3",
+          "time": 1067.800000011921,
+          "stack": "Error\n    at Audio.audio.<computed> [as pause] (<anonymous>:16:120)\n    at $.stop (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54034:296)\n    at no.stop (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54093:90)\n    at http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:149563:16\n    at gt (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:146265:4)\n    at _d (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:6219:7)\n    at http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:6463:4\n    at K (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:1517:11)\n    at Cd (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:6287:3)\n    at up (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:7705:20)"
+        },
+        {
+          "type": "play-request",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/complete.mp3",
+          "time": 1069.800000011921,
+          "stack": "Error\n    at Audio.audio.<computed> [as play] (<anonymous>:16:120)\n    at $.playWeb (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54008:25)\n    at $.play (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:53986:40)\n    at no.flush (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54082:79)\n    at no.play (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54068:26)\n    at http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:149551:5\n    at gt (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:146267:80)\n    at _d (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:6219:7)\n    at http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:6463:4\n    at K (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:1517:11)"
+        },
+        {
+          "type": "pause",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/correct.mp3",
+          "position": 0,
+          "time": 1078.5
+        },
+        {
+          "type": "waiting",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/complete.mp3",
+          "position": 0,
+          "time": 1079
+        },
+        {
+          "type": "error",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/complete.mp3",
+          "position": 0,
+          "time": 1082.6000000238419
+        },
+        {
+          "type": "pause-request",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/complete.mp3",
+          "time": 1082.6000000238419,
+          "stack": "Error\n    at Audio.audio.<computed> [as pause] (<anonymous>:16:120)\n    at $.stop (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54034:296)\n    at $.fail (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54020:57)\n    at t.onerror (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54006:31)"
+        },
+        {
+          "type": "pause",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/complete.mp3",
+          "position": 0,
+          "time": 1082.8999999761581
+        },
+        {
+          "type": "play-request",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/complete.mp3",
+          "time": 1204.199999988079,
+          "stack": "Error\n    at Audio.audio.<computed> [as play] (<anonymous>:16:120)\n    at $.playWeb (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54008:25)\n    at $.play (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:53986:40)\n    at no.flush (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54082:79)\n    at http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54090:56"
+        },
+        {
+          "type": "waiting",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/complete.mp3",
+          "position": 0,
+          "time": 1204.6000000238419
+        },
+        {
+          "type": "playing",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/complete.mp3",
+          "position": 0,
+          "time": 1214.199999988079
+        },
+        {
+          "type": "pause",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/complete.mp3",
+          "position": 1.1,
+          "time": 2381.899999976158
+        },
+        {
+          "type": "pause-request",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/complete.mp3",
+          "time": 2381.899999976158,
+          "stack": "Error\n    at Audio.audio.<computed> [as pause] (<anonymous>:16:120)\n    at $.stop (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54034:296)\n    at t.onpause (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54005:45)"
+        },
+        {
+          "type": "ended",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/complete.mp3",
+          "position": 1.1,
+          "time": 2382
+        }
+      ]
+    },
+    {
+      "name": "daily-1440-restored",
+      "passed": true,
+      "completionRequests": 4,
+      "events": [
+        {
+          "type": "error",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/complete.mp3",
+          "position": 0,
+          "time": 953.1000000238419
+        },
+        {
+          "type": "play-request",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/complete.mp3",
+          "time": 972.1000000238419,
+          "stack": "Error\n    at Audio.audio.<computed> [as play] (<anonymous>:16:120)\n    at $.playWeb (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54008:25)\n    at $.play (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:53986:40)\n    at no.flush (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54082:79)\n    at no.play (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54068:26)\n    at http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:149551:5\n    at gt (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:146267:80)\n    at _d (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:6219:7)\n    at http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:6463:4\n    at K (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:1517:11)"
+        },
+        {
+          "type": "waiting",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/complete.mp3",
+          "position": 0,
+          "time": 985.3999999761581
+        },
+        {
+          "type": "error",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/complete.mp3",
+          "position": 0,
+          "time": 988.3999999761581
+        },
+        {
+          "type": "pause-request",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/complete.mp3",
+          "time": 988.3999999761581,
+          "stack": "Error\n    at Audio.audio.<computed> [as pause] (<anonymous>:16:120)\n    at $.stop (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54034:296)\n    at $.fail (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54020:57)\n    at t.onerror (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54006:31)"
+        },
+        {
+          "type": "pause",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/complete.mp3",
+          "position": 0,
+          "time": 988.6000000238419
+        },
+        {
+          "type": "play-request",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/complete.mp3",
+          "time": 1109.699999988079,
+          "stack": "Error\n    at Audio.audio.<computed> [as play] (<anonymous>:16:120)\n    at $.playWeb (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54008:25)\n    at $.play (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:53986:40)\n    at no.flush (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54082:79)\n    at http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54090:56"
+        },
+        {
+          "type": "waiting",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/complete.mp3",
+          "position": 0,
+          "time": 1110.199999988079
+        },
+        {
+          "type": "playing",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/complete.mp3",
+          "position": 0,
+          "time": 1119.5
+        },
+        {
+          "type": "pause",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/complete.mp3",
+          "position": 1.1,
+          "time": 2282.100000023842
+        },
+        {
+          "type": "pause-request",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/complete.mp3",
+          "time": 2282.199999988079,
+          "stack": "Error\n    at Audio.audio.<computed> [as pause] (<anonymous>:16:120)\n    at $.stop (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54034:296)\n    at t.onpause (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54005:45)"
+        },
+        {
+          "type": "ended",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/complete.mp3",
+          "position": 1.1,
+          "time": 2282.199999988079
+        }
+      ]
+    },
+    {
+      "name": "daily-1440-rapid-check",
+      "passed": true,
+      "completionRequests": 4,
+      "events": [
+        {
+          "type": "error",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/complete.mp3",
+          "position": 0,
+          "time": 935.7000000476837
+        },
+        {
+          "type": "play-request",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/correct.mp3",
+          "time": 951.2000000476837,
+          "stack": "Error\n    at Audio.audio.<computed> [as play] (<anonymous>:16:120)\n    at $.playWeb (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54008:25)\n    at $.play (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:53986:40)\n    at no.flush (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54082:79)\n    at no.play (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54068:26)\n    at http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:149551:5\n    at gt (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:146278:117)\n    at _d (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:6219:7)\n    at http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:6463:4\n    at K (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:1517:11)"
+        },
+        {
+          "type": "waiting",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/correct.mp3",
+          "position": 0,
+          "time": 960.5
+        },
+        {
+          "type": "playing",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/correct.mp3",
+          "position": 0,
+          "time": 963.2000000476837
+        },
+        {
+          "type": "pause-request",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/correct.mp3",
+          "time": 976,
+          "stack": "Error\n    at Audio.audio.<computed> [as pause] (<anonymous>:16:120)\n    at $.stop (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54034:296)\n    at no.stop (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54093:90)\n    at http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:149563:16\n    at gt (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:146265:4)\n    at _d (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:6219:7)\n    at http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:6463:4\n    at K (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:1517:11)\n    at Cd (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:6287:3)\n    at up (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:7705:20)"
+        },
+        {
+          "type": "play-request",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/complete.mp3",
+          "time": 977,
+          "stack": "Error\n    at Audio.audio.<computed> [as play] (<anonymous>:16:120)\n    at $.playWeb (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54008:25)\n    at $.play (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:53986:40)\n    at no.flush (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54082:79)\n    at no.play (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54068:26)\n    at http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:149551:5\n    at gt (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:146267:80)\n    at _d (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:6219:7)\n    at http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:6463:4\n    at K (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:1517:11)"
+        },
+        {
+          "type": "pause",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/correct.mp3",
+          "position": 0.001086,
+          "time": 984.8000000119209
+        },
+        {
+          "type": "waiting",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/complete.mp3",
+          "position": 0,
+          "time": 985.4000000357628
+        },
+        {
+          "type": "error",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/complete.mp3",
+          "position": 0,
+          "time": 987.2000000476837
+        },
+        {
+          "type": "pause-request",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/complete.mp3",
+          "time": 987.3000000119209,
+          "stack": "Error\n    at Audio.audio.<computed> [as pause] (<anonymous>:16:120)\n    at $.stop (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54034:296)\n    at $.fail (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54020:57)\n    at t.onerror (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54006:31)"
+        },
+        {
+          "type": "pause",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/complete.mp3",
+          "position": 0,
+          "time": 987.5
+        },
+        {
+          "type": "play-request",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/complete.mp3",
+          "time": 1111.9000000357628,
+          "stack": "Error\n    at Audio.audio.<computed> [as play] (<anonymous>:16:120)\n    at $.playWeb (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54008:25)\n    at $.play (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:53986:40)\n    at no.flush (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54082:79)\n    at http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54090:56"
+        },
+        {
+          "type": "waiting",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/complete.mp3",
+          "position": 0,
+          "time": 1112.4000000357628
+        },
+        {
+          "type": "playing",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/complete.mp3",
+          "position": 0,
+          "time": 1122.5
+        },
+        {
+          "type": "pause",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/complete.mp3",
+          "position": 1.1,
+          "time": 2275.400000035763
+        },
+        {
+          "type": "pause-request",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/complete.mp3",
+          "time": 2275.5,
+          "stack": "Error\n    at Audio.audio.<computed> [as pause] (<anonymous>:16:120)\n    at $.stop (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54034:296)\n    at t.onpause (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54005:45)"
+        },
+        {
+          "type": "ended",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/complete.mp3",
+          "position": 1.1,
+          "time": 2275.600000023842
+        }
+      ]
+    },
+    {
+      "name": "daily-390-restored",
+      "passed": true,
+      "completionRequests": 4,
+      "events": [
+        {
+          "type": "error",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/complete.mp3",
+          "position": 0,
+          "time": 947.6000000238419
+        },
+        {
+          "type": "play-request",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/complete.mp3",
+          "time": 966.1000000238419,
+          "stack": "Error\n    at Audio.audio.<computed> [as play] (<anonymous>:16:120)\n    at $.playWeb (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54008:25)\n    at $.play (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:53986:40)\n    at no.flush (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54082:79)\n    at no.play (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54068:26)\n    at http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:149551:5\n    at gt (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:146267:80)\n    at _d (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:6219:7)\n    at http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:6463:4\n    at K (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:1517:11)"
+        },
+        {
+          "type": "waiting",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/complete.mp3",
+          "position": 0,
+          "time": 982.1000000238419
+        },
+        {
+          "type": "error",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/complete.mp3",
+          "position": 0,
+          "time": 984.6000000238419
+        },
+        {
+          "type": "pause-request",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/complete.mp3",
+          "time": 984.6000000238419,
+          "stack": "Error\n    at Audio.audio.<computed> [as pause] (<anonymous>:16:120)\n    at $.stop (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54034:296)\n    at $.fail (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54020:57)\n    at t.onerror (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54006:31)"
+        },
+        {
+          "type": "pause",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/complete.mp3",
+          "position": 0,
+          "time": 984.8999999761581
+        },
+        {
+          "type": "play-request",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/complete.mp3",
+          "time": 1105.3999999761581,
+          "stack": "Error\n    at Audio.audio.<computed> [as play] (<anonymous>:16:120)\n    at $.playWeb (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54008:25)\n    at $.play (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:53986:40)\n    at no.flush (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54082:79)\n    at http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54090:56"
+        },
+        {
+          "type": "waiting",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/complete.mp3",
+          "position": 0,
+          "time": 1106.1000000238419
+        },
+        {
+          "type": "playing",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/complete.mp3",
+          "position": 0,
+          "time": 1115.699999988079
+        },
+        {
+          "type": "pause",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/complete.mp3",
+          "position": 1.1,
+          "time": 2295.300000011921
+        },
+        {
+          "type": "pause-request",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/complete.mp3",
+          "time": 2295.300000011921,
+          "stack": "Error\n    at Audio.audio.<computed> [as pause] (<anonymous>:16:120)\n    at $.stop (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54034:296)\n    at t.onpause (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54005:45)"
+        },
+        {
+          "type": "ended",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/complete.mp3",
+          "position": 1.1,
+          "time": 2295.5
+        }
+      ]
+    },
+    {
+      "name": "daily-390-rapid-check",
+      "passed": true,
+      "completionRequests": 4,
+      "events": [
+        {
+          "type": "error",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/complete.mp3",
+          "position": 0,
+          "time": 1014.3000000119209
+        },
+        {
+          "type": "play-request",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/correct.mp3",
+          "time": 1034,
+          "stack": "Error\n    at Audio.audio.<computed> [as play] (<anonymous>:16:120)\n    at $.playWeb (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54008:25)\n    at $.play (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:53986:40)\n    at no.flush (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54082:79)\n    at no.play (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54068:26)\n    at http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:149551:5\n    at gt (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:146278:117)\n    at _d (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:6219:7)\n    at http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:6463:4\n    at K (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:1517:11)"
+        },
+        {
+          "type": "waiting",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/correct.mp3",
+          "position": 0,
+          "time": 1044.199999988079
+        },
+        {
+          "type": "playing",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/correct.mp3",
+          "position": 0,
+          "time": 1046.800000011921
+        },
+        {
+          "type": "pause-request",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/correct.mp3",
+          "time": 1062.5,
+          "stack": "Error\n    at Audio.audio.<computed> [as pause] (<anonymous>:16:120)\n    at $.stop (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54034:296)\n    at no.stop (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54093:90)\n    at http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:149563:16\n    at gt (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:146265:4)\n    at _d (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:6219:7)\n    at http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:6463:4\n    at K (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:1517:11)\n    at Cd (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:6287:3)\n    at up (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:7705:20)"
+        },
+        {
+          "type": "play-request",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/complete.mp3",
+          "time": 1063.699999988079,
+          "stack": "Error\n    at Audio.audio.<computed> [as play] (<anonymous>:16:120)\n    at $.playWeb (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54008:25)\n    at $.play (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:53986:40)\n    at no.flush (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54082:79)\n    at no.play (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54068:26)\n    at http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:149551:5\n    at gt (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:146267:80)\n    at _d (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:6219:7)\n    at http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:6463:4\n    at K (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:1517:11)"
+        },
+        {
+          "type": "pause",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/correct.mp3",
+          "position": 0.004888,
+          "time": 1072.800000011921
+        },
+        {
+          "type": "waiting",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/complete.mp3",
+          "position": 0,
+          "time": 1073.199999988079
+        },
+        {
+          "type": "error",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/complete.mp3",
+          "position": 0,
+          "time": 1075.300000011921
+        },
+        {
+          "type": "pause-request",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/complete.mp3",
+          "time": 1075.300000011921,
+          "stack": "Error\n    at Audio.audio.<computed> [as pause] (<anonymous>:16:120)\n    at $.stop (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54034:296)\n    at $.fail (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54020:57)\n    at t.onerror (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54006:31)"
+        },
+        {
+          "type": "pause",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/complete.mp3",
+          "position": 0,
+          "time": 1075.5
+        },
+        {
+          "type": "play-request",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/complete.mp3",
+          "time": 1195.5999999642372,
+          "stack": "Error\n    at Audio.audio.<computed> [as play] (<anonymous>:16:120)\n    at $.playWeb (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54008:25)\n    at $.play (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:53986:40)\n    at no.flush (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54082:79)\n    at http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54090:56"
+        },
+        {
+          "type": "waiting",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/complete.mp3",
+          "position": 0,
+          "time": 1196
+        },
+        {
+          "type": "playing",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/complete.mp3",
+          "position": 0,
+          "time": 1205.5
+        },
+        {
+          "type": "pause",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/complete.mp3",
+          "position": 1.1,
+          "time": 2378.199999988079
+        },
+        {
+          "type": "pause-request",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/complete.mp3",
+          "time": 2378.300000011921,
+          "stack": "Error\n    at Audio.audio.<computed> [as pause] (<anonymous>:16:120)\n    at $.stop (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54034:296)\n    at t.onpause (http://127.0.0.1:5186/dist/assets/index-Dm9N_0_I.js:54005:45)"
+        },
+        {
+          "type": "ended",
+          "src": "http://127.0.0.1:5186/dist/audio/feedback/complete.mp3",
+          "position": 1.1,
+          "time": 2378.300000011921
+        }
+      ]
+    }
+  ]
+}

@@ -86,6 +86,7 @@ export default function Home() {
     path => new URL(path, document.baseURI).href,
     undefined,
     () => player.isBusy,
+    busy => blockSyncApply('feedback-playback', busy),
   ));
   feedbackPlayer.enabled = feedbackEnabled;
   const playFeedback = useCallback((sound: FeedbackSound, eventId: string) => { feedbackPlayer.play(sound, eventId); }, [feedbackPlayer]);
