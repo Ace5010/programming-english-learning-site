@@ -1,0 +1,72 @@
+{
+  "baseURL": "http://127.0.0.1:5186/dist/",
+  "isolatedBrowserData": true,
+  "results": [
+    {
+      "width": 1440,
+      "rounds": 11,
+      "courseWords": 63,
+      "library": [
+        {
+          "id": 7,
+          "word": "pull request",
+          "phonetic": "pʊl rɪˈkwest"
+        },
+        {
+          "id": 11,
+          "word": "checkout",
+          "phonetic": "ˈtʃek.aʊt"
+        },
+        {
+          "id": 20,
+          "word": "readme",
+          "phonetic": "ˈriːdˌmiː"
+        },
+        {
+          "id": 687,
+          "word": "message",
+          "phonetic": "ˈmes.ɪdʒ"
+        },
+        {
+          "id": 1880,
+          "word": "main",
+          "phonetic": "meɪn"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "width": 390,
+      "rounds": 11,
+      "courseWords": 63,
+      "library": [
+        {
+          "id": 7,
+          "word": "pull request",
+          "phonetic": "pʊl rɪˈkwest"
+        },
+        {
+          "id": 11,
+          "word": "checkout",
+          "phonetic": "ˈtʃek.aʊt"
+        },
+        {
+          "id": 20,
+          "word": "readme",
+          "phonetic": "ˈriːdˌmiː"
+        },
+        {
+          "id": 687,
+          "word": "message",
+          "phonetic": "ˈmes.ɪdʒ"
+        },
+        {
+          "id": 1880,
+          "word": "main",
+          "phonetic": "meɪn"
+        }
+      ],
+      "errors": []
+    }
+  ]
+}

@@ -1,4 +1,4 @@
-import { Fragment, useEffect } from 'react';
+import { Fragment, useEffect, useState } from 'react';
 import Icon from './Icon';
 import ReadAloudText from './ReadAloud';
 import { assessSpeech, MAX_SPEECH_ATTEMPTS } from './speechComparison';
@@ -18,14 +18,30 @@ interface Props {
   stopAudio: () => void;
   onChange: (draft: Partial<DailyDraft>) => void;
   onBusyChange: (busy: boolean) => void;
+  optional?: boolean;
 }
 
 export function dailySpeakingMode(draft: DailyDraft) {
   return draft.speech?.mode ?? (draft.text || draft.checks.some(Boolean) ? 'self' : 'read');
 }
 
-export default function DailySpeaking({ exercise, draft, disabled, skipped, speaking, play, stopAudio, onChange, onBusyChange }: Props) {
-  const mode = dailySpeakingMode(draft);
+export function OptionalDailySpeaking(props: Props) {
+  const [open, setOpen] = useState(() => !!props.draft.text || Object.values(props.draft.speech?.transcripts ?? {}).some(Boolean));
+  return <>
+    <p className="speech-optional-note">不练跟读时，直接点“继续”。</p>
+    <details className="daily-optional-speaking" open={open} onToggle={event => {
+      const next = event.currentTarget.open;
+      if (!next) props.stopAudio();
+      setOpen(next);
+    }}>
+      <summary>跟读练习（可选）</summary>
+      {open && <DailySpeaking {...props} optional />}
+    </details>
+  </>;
+}
+
+export default function DailySpeaking({ exercise, draft, disabled, skipped, speaking, play, stopAudio, onChange, onBusyChange, optional = false }: Props) {
+  const mode = optional ? 'read' : dailySpeakingMode(draft);
   const transcripts = draft.speech?.transcripts ?? {};
   const revealed = draft.speech?.revealed ?? [];
   const sources = draft.speech?.sources ?? {};
@@ -37,7 +53,7 @@ export default function DailySpeaking({ exercise, draft, disabled, skipped, spea
   }, stopAudio, (text, id) => {
     const target = exercise.readAloud?.find(phrase => phrase.id === id);
     return !!target && assessSpeech(target.en, text).accepted;
-  });
+  }, optional);
   useEffect(() => { if (disabled || speaking) speech.abort(); }, [disabled, speaking]);
   useEffect(() => { onBusyChange(speech.busy); return () => onBusyChange(false); }, [speech.busy, onBusyChange]);
 
@@ -63,20 +79,20 @@ export default function DailySpeaking({ exercise, draft, disabled, skipped, spea
     </button>;
   }
   const notice = <div className="speech-service-note">
-    <p>{speech.supported ? speech.qwen ? '使用本机 Qwen3-ASR 识别，录音只在这台电脑处理且不保存；识别文字随进度保存。' : speech.local ? '使用设备上的英语识别。识别文字随进度保存，本站不保存录音。' : `使用${isAndroidApp() ? '手机系统' : '浏览器'}语音服务，声音可能发送至该服务。识别文字随进度保存，不保存录音。` : window.isSecureContext ? '当前浏览器不支持语音识别。可换用支持此功能的 Chrome，或选择“自己表达”继续。' : '麦克风需要安全连接。请使用 HTTPS 或本机 localhost 地址打开，或选择“自己表达”继续。'}</p>
+    <p>{speech.supported ? speech.qwen ? '使用本机 Qwen3-ASR 识别，录音只在这台电脑处理且不保存；识别文字随进度保存。' : speech.local ? '使用设备上的英语识别。识别文字随进度保存，本站不保存录音。' : `使用${isAndroidApp() ? '手机系统' : '浏览器'}语音服务，声音可能发送至该服务。识别文字随进度保存，不保存录音。` : optional ? '当前无法使用语音识别，可以听示范或直接继续。' : window.isSecureContext ? '当前浏览器不支持语音识别。可换用支持此功能的 Chrome，或选择“自己表达”继续。' : '麦克风需要安全连接。请使用 HTTPS 或本机 localhost 地址打开，或选择“自己表达”继续。'}</p>
   </div>;
   return <section className="daily-speaking" aria-label="口语练习">
-    <div className="speech-mode" role="group" aria-label="口语练习方式">
+    {!optional && <div className="speech-mode" role="group" aria-label="口语练习方式">
       <button type="button" disabled={disabled} aria-pressed={mode === 'read'} onClick={() => switchMode('read')}>跟读示例</button>
       <button type="button" disabled={disabled} aria-pressed={mode === 'self'} onClick={() => switchMode('self')}>自己表达</button>
-    </div>
+    </div>}
     {notice}
     {exercise.speechQuestion && <div className="speech-actions" aria-label="听问题">
       <button type="button" className="daily-audio" onClick={() => listen(exercise.speechQuestion!)}><Icon name="sound" />听问题</button>
       <button type="button" className="daily-inline-slow" aria-label="慢速听问题" onClick={() => listen(exercise.speechQuestion!, true)}>慢速</button>
     </div>}
     {mode === 'read' ? <>
-      <p className="speech-instruction">听示范，点击麦克风，逐句读出下面的表达。会结合整句语境容忍近音识别差异，只差一个词也可通过；仍不通过时最多尝试 3 次，再提示跳过。</p>
+      {!optional && <p className="speech-instruction">听示范，点击麦克风，逐句读出下面的表达。会结合整句语境容忍近音识别差异，只差一个词也可通过；仍不通过时最多尝试 3 次，再提示跳过。</p>}
       <div className="speech-targets">{exercise.readAloud?.map(phrase => {
         const transcript = transcripts[phrase.id] ?? '';
         const result = transcript ? assessSpeech(phrase.en, transcript) : undefined;
@@ -94,13 +110,14 @@ export default function DailySpeaking({ exercise, draft, disabled, skipped, spea
           <div className="speech-actions"><button type="button" className={`daily-audio${playing ? ' playing' : ''}`} aria-label={`听示范 ${concealed ? '当前句子' : phrase.en}`} aria-pressed={playing} disabled={speech.busy} onClick={() => listen(phrase, false)}><Icon name="sound" />听示范</button><button type="button" className={`daily-inline-slow${speaking === `daily-${phrase.id}-slow` ? ' playing' : ''}`} aria-pressed={speaking === `daily-${phrase.id}-slow`} aria-label={`慢速朗读 ${concealed ? '当前句子' : phrase.en}`} disabled={speech.busy} onClick={() => listen(phrase, true)}>慢速</button>{mic(phrase.id, phrase.en)}{concealed && <button type="button" className="daily-button text" disabled={disabled || speech.busy} onClick={() => onChange({ helped: true, speech: { mode, transcripts, revealed: [...revealed, phrase.id], sources, heard, attempts } })}>显示文本</button>}</div>
           {!concealed && !!exercise.supportWords?.length && <details className="course-support-words"><summary>句中词语的含义</summary><ul>{exercise.supportWords.map(word => <li key={word.en}><ReadAloudText text={word.en} beforeRead={speech.abort} />：{word.zh}</li>)}</ul></details>}
           {current && <p className="speech-live" role="status">{speech.phase === 'listening' ? '正在听，请开口读…' : speech.phase === 'starting' ? '正在启动麦克风，请允许使用麦克风…' : '正在核对识别结果…'}{speech.interim && <span lang="en">{speech.interim}</span>}</p>}
-          {comparison && <div className="speech-result" aria-live="polite"><p>{accepted ? result?.assessment === 'context' ? '这句通过了。已结合上下文容忍近音词的识别差异。' : result?.assessment === 'tolerated' ? '这句通过了。只差一个词，可以继续。' : sources[phrase.id] === 'recognition' ? '这句已识别完整。' : sources[phrase.id] === 'edited' ? '修正后的文字与参考句一致。' : '文字与参考句一致。' : skipped ? '这题先跳过，不必再读。' : `再试一次：还有内容未识别到（已尝试 ${attempts?.[phrase.id] ?? 0}/${MAX_SPEECH_ATTEMPTS} 次）。`}</p><p className="speech-transcript">{sources[phrase.id] === 'edited' ? '修正文字' : sources[phrase.id] === 'recognition' ? '识别到' : '保存文字'}：<span lang="en">{transcript}</span></p>
-            <details><summary>修正识别文字</summary><textarea className="daily-write" rows={2} aria-label="修正识别文字" value={transcript} disabled={disabled || speech.busy} onChange={event => onChange({ speech: { mode, transcripts: { ...transcripts, [phrase.id]: event.target.value }, revealed, heard, sources: { ...sources, [phrase.id]: 'edited' }, attempts } })} /></details>
+          {comparison && <div className="speech-result" aria-live="polite"><p>{optional ? accepted ? '已核对识别文字。' : '有些内容未识别到，可重听示范或继续。' : accepted ? result?.assessment === 'context' ? '这句通过了。已结合上下文容忍近音词的识别差异。' : result?.assessment === 'tolerated' ? '这句通过了。只差一个词，可以继续。' : sources[phrase.id] === 'recognition' ? '这句已识别完整。' : sources[phrase.id] === 'edited' ? '修正后的文字与参考句一致。' : '文字与参考句一致。' : skipped ? '这题先跳过，不必再读。' : `再试一次：还有内容未识别到（已尝试 ${attempts?.[phrase.id] ?? 0}/${MAX_SPEECH_ATTEMPTS} 次）。`}</p><p className="speech-transcript">{sources[phrase.id] === 'edited' ? '修正文字' : sources[phrase.id] === 'recognition' ? '识别到' : '保存文字'}：<span lang="en">{transcript}</span></p>
+            {!optional && <details><summary>修正识别文字</summary><textarea className="daily-write" rows={2} aria-label="修正识别文字" value={transcript} disabled={disabled || speech.busy} onChange={event => onChange({ speech: { mode, transcripts: { ...transcripts, [phrase.id]: event.target.value }, revealed, heard, sources: { ...sources, [phrase.id]: 'edited' }, attempts } })} /></details>}
             {!accepted && (concealed ? <p>有些内容没有识别到，可以重听重录，或显示文本核对。</p> : <ul>{comparison.targetWords.filter(word => word.status !== 'matched').map((word, index) => <li key={index}>{word.status === 'missing' ? <>未识别到 <strong lang="en"><ReadAloudText text={word.text} beforeRead={speech.abort} /></strong></> : <><strong lang="en"><ReadAloudText text={word.text} beforeRead={speech.abort} /></strong> 被识别为 <span lang="en">{word.heard.join(' ')}</span></>}</li>)}{comparison.extras.map((word, index) => <li key={`extra-${index}`}>多识别到 <span lang="en">{word.text}</span></li>)}</ul>)}
           </div>}
         </article>;
       })}</div>
-      <p className="daily-key-hint">第三次仍不通过会提示先跳过，由你点“继续”换题。权限、网络失败和空结果不占次数。</p>
+      {!optional && <p className="daily-key-hint">第三次仍不通过会提示先跳过，由你点“继续”换题。权限、网络失败和空结果不占次数。</p>}
+      {optional && draft.text && <details className="daily-sample"><summary>已保存的表达</summary><p lang="en">{draft.text}</p></details>}
     </> : <>
       <p className="speech-instruction">按题目说出自己的表达。点击麦克风转成文字，也可直接填写；自己的姓名和内容不必与示例相同。</p>
       <div className="speech-actions">{mic('self', '自己的表达')}</div>

@@ -1,0 +1,25 @@
+{
+  "results": [
+    "study-lagoon",
+    "study-pearl",
+    "study-sky",
+    "study-mint",
+    "local-correction-reload-isolation",
+    "summary-practice-reload",
+    "first-letter-help-evidence",
+    "library-single-word-practice"
+  ],
+  "errors": [],
+  "audio": [
+    {
+      "src": "http://localhost:5186/audio/daily/aria/daily-word-student.mp3?v=student",
+      "rate": 1,
+      "pitch": true
+    },
+    {
+      "src": "http://localhost:5186/audio/daily/aria/daily-word-student.mp3?v=student",
+      "rate": 0.72,
+      "pitch": true
+    }
+  ]
+}

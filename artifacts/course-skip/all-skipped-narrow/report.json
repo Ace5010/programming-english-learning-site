@@ -1,0 +1,36 @@
+{
+  "baseURL": "http://localhost:5186/dist/",
+  "results": [
+    "daily-all-skipped-restore",
+    "programming-all-skipped-restore"
+  ],
+  "failures": [],
+  "errors": [],
+  "findings": [
+    {
+      "name": "daily-all-skipped-list",
+      "viewport": 320,
+      "documentWidth": 320,
+      "overflow": []
+    },
+    {
+      "name": "daily-all-skipped-restore",
+      "viewport": 320,
+      "documentWidth": 320,
+      "overflow": []
+    },
+    {
+      "name": "programming-all-skipped-list",
+      "viewport": 320,
+      "documentWidth": 320,
+      "overflow": []
+    },
+    {
+      "name": "programming-all-skipped-restore",
+      "viewport": 320,
+      "documentWidth": 320,
+      "overflow": []
+    }
+  ],
+  "audio": []
+}

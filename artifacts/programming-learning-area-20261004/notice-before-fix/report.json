@@ -1,0 +1,10 @@
+{
+  "baseURL": "http://127.0.0.1:5186/dist/",
+  "results": [],
+  "failures": [
+    {
+      "name": "review-switch-keeps-draft-until-confirmed",
+      "error": "AssertionError [ERR_ASSERTION]: switch notice must be in view: {\"x\":56,\"y\":-1101.21875,\"width\":1328,\"height\":78}\n    at file:///D:/vibe%E9%A1%B9%E7%9B%AE/Interactive%20learning/tools/test-programming-word-check-browser.mjs:377:10\n    at async scenario (file:///D:/vibe%E9%A1%B9%E7%9B%AE/Interactive%20learning/tools/test-programming-word-check-browser.mjs:77:22)\n    at async file:///D:/vibe%E9%A1%B9%E7%9B%AE/Interactive%20learning/tools/test-programming-word-check-browser.mjs:367:1"
+    }
+  ]
+}

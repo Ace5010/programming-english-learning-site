@@ -22,6 +22,23 @@ const ex = (en: string, zh: string, note: string, extra: Partial<TutorialExample
   id: `foundation-tutorial-example-${exampleKey(`${en}\n${zh}\n${note}`)}`, en, zh, note, ...extra,
 });
 const practice = (prompt: string, options: string[], explanation: string[], reveal = explanation[0]) => ({ prompt, options, explanation, reveal });
+export type FoundationConceptGuide = Pick<FoundationTutorial, 'id' | 'title' | 'group' | 'sound' | 'question' | 'sections' | 'source'>;
+export const foundationSoundConcepts: FoundationConceptGuide = {
+  id: 'foundation-sound-concepts', title: '认识元音、辅音和音节', group: '发音概念入门', sound: true,
+  question: '先认识这几个名称，例词可以点听。',
+  sections: [
+    { title: '元音', text: ['元音是英语中的一类声音，发音时气流比较通畅。', 'a、e、i、o、u 是常见的元音字母；y 有时也表示元音。同一个字母在不同词里，声音可以不同。'] },
+    { title: '辅音', text: ['辅音是另一类声音，发音时气流会受到阻挡或收窄。m、p、t 等是常见的辅音字母。'] },
+    { title: '音节', text: ['音节是单词读出来时的一段声音，可以把它理解成一个声音的节拍。'], examples: [
+      ex('teacher', '老师', '两个音节。点听时，留意单词里的两个声音节拍。'),
+      ex('American', '美国人', '四个音节。长单词也可以按声音分成几段来理解。'),
+    ] },
+    { title: '重音', text: ['重音是一个词里读得更突出的一段。teacher 的第一音节重读；下面的 about 是第二音节重读。'], examples: [
+      ex('about', '关于', '第二音节读得更突出。'),
+    ] },
+  ],
+  source: 'https://dictionary.cambridge.org/help/phonetics.html',
+};
 export const foundationTutorials: FoundationTutorial[] = [
   {
     id: 'foundation-word-order', title: '句子语序：谁、做什么、对什么', group: '句子怎么组成', sound: false, batch: 'A',
@@ -240,4 +257,4 @@ export const foundationTutorials: FoundationTutorial[] = [
   },
 ];
 
-export const tutorialExamples = foundationTutorials.flatMap(item => item.sections.flatMap(section => section.examples ?? []));
+export const tutorialExamples = [...foundationTutorials, foundationSoundConcepts].flatMap(item => item.sections.flatMap(section => section.examples ?? []));

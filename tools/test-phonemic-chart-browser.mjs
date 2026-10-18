@@ -9,7 +9,7 @@ assert.match(baseURL, /^http:\/\/(localhost|127\.0\.0\.1)(:|\/)/);
 const output = process.env.CODEWORDS_ARTIFACT_DIR || 'artifacts/phonemic-offline';
 const phonemeAudioURL = (id, kind) => new URL(phonemeAudioPath(id, kind), baseURL).href;
 await mkdir(output, { recursive: true });
-const browser = await chromium.launch({ channel: 'chrome', headless: true });
+const browser = await chromium.launch({ channel: 'chrome', headless: true, args: ['--no-proxy-server'] });
 const results = [], failures = [], errors = [], audio = [], externalRequests = [];
 const raw = '{"version":1,"favorites":["foundation-letters"],"unknown":"keep exactly"}';
 async function open(width = 1440, theme = 'lagoon') {
@@ -34,7 +34,7 @@ async function open(width = 1440, theme = 'lagoon') {
       return original.apply(this, args);
     };
   }, { theme, raw });
-  await page.goto(baseURL);
+  await page.goto(baseURL, { waitUntil: 'domcontentloaded' });
   await page.getByRole('navigation', { name: '学习导航' }).getByRole('button', { name: '音标与发音', exact: true }).click();
   await page.locator('.phonemic-cell').first().waitFor();
   return { page, context };

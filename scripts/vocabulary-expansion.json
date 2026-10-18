@@ -613,6 +613,7 @@
       "id": 1880,
       "word": "main",
       "meaning": "主要的；主要部分；main 主分支",
+      "phonetic": "meɪn",
       "example": "Switch to the main branch.",
       "exampleZh": "切换到主分支。"
     },
@@ -709,6 +710,7 @@
       "id": 687,
       "word": "message",
       "meaning": "消息；信息；说明",
+      "phonetic": "ˈmes.ɪdʒ",
       "example": "Write a commit message.",
       "exampleZh": "写一条提交说明。"
     },
@@ -745,6 +747,21 @@
       "meaning": "输出；输出内容",
       "example": "Read the output.",
       "exampleZh": "阅读输出内容。"
+    },
+    {
+      "id": 7,
+      "word": "pull request",
+      "phonetic": "pʊl rɪˈkwest"
+    },
+    {
+      "id": 11,
+      "word": "checkout",
+      "phonetic": "ˈtʃek.aʊt"
+    },
+    {
+      "id": 20,
+      "word": "readme",
+      "phonetic": "ˈriːdˌmiː"
     }
   ]
 }

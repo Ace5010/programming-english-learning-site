@@ -1,0 +1,15 @@
+{
+  "checkedAt": "2026-10-14T07:55:34.383Z",
+  "beforeDeploymentId": "0ecca06a-d4a1-41d1-aa88-529faa7dc109",
+  "deploymentId": "bebf5028-0482-4102-b4db-3aa61a92f785",
+  "productionHealthy": true,
+  "frontendBytesUnchanged": true,
+  "originalSyncUnmodified": true,
+  "learningUnchanged": true,
+  "profiles": 7,
+  "parts": 14,
+  "existingOAuthConnectionRetained": true,
+  "existingExpiryUnchanged": true,
+  "activeVoiceAcceptance": "pending",
+  "note": "Deployment performs no schema or learning writes; test profiles are separate."
+}

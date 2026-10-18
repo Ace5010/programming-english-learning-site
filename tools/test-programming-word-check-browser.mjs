@@ -101,6 +101,7 @@ for (const theme of ['lagoon', 'pearl', 'sky', 'mint']) for (const width of [144
     assert.equal(Object.keys(saved?.learning?.targets ?? {}).length, 0);
     const cards = root.locator('.course-word-card');
     assert.equal(await cards.count(), 6);
+    assert.equal(await cards.locator('.course-word-phonetic').count(), 6);
     assert.equal(await cards.nth(1).locator('.course-word-meaning').innerText(), '项目');
     assert.equal(await root.locator('.course-word-usage, .course-word-contrast').count(), 0);
     assert.equal(await root.locator('.course-word-example').count(), 6);

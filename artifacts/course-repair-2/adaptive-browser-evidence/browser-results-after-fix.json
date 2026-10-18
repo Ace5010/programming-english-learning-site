@@ -1,0 +1,111 @@
+{
+  "baseURL": "http://127.0.0.1:5186/",
+  "production": false,
+  "scenarios": [
+    {
+      "name": "programming: historical active session and legacy favorites remain readable",
+      "durationMs": 2174
+    },
+    {
+      "name": "daily: historical active session and legacy favorites remain readable",
+      "durationMs": 2428
+    },
+    {
+      "name": "real Aria and Guy word, example and daily phrase playback",
+      "durationMs": 1815,
+      "evidence": [
+        {
+          "type": "playing",
+          "src": "http://127.0.0.1:5186/audio/aria/word-3561.mp3",
+          "rate": 1,
+          "duration": 1.872
+        },
+        {
+          "type": "playing",
+          "src": "http://127.0.0.1:5186/audio/aria/example-3561.mp3?v=Read%20this%20code.",
+          "rate": 1,
+          "duration": 1.992
+        },
+        {
+          "type": "playing",
+          "src": "http://127.0.0.1:5186/audio/daily/aria/hello.mp3?v=Hello!",
+          "rate": 1,
+          "duration": 1.56
+        },
+        {
+          "type": "playing",
+          "src": "http://127.0.0.1:5186/audio/guy/word-3561.mp3",
+          "rate": 1,
+          "duration": 1.872
+        },
+        {
+          "type": "playing",
+          "src": "http://127.0.0.1:5186/audio/guy/example-3561.mp3?v=Read%20this%20code.",
+          "rate": 1,
+          "duration": 2.016
+        },
+        {
+          "type": "playing",
+          "src": "http://127.0.0.1:5186/audio/daily/guy/hello.mp3?v=Hello!",
+          "rate": 1,
+          "duration": 1.536
+        }
+      ]
+    }
+  ],
+  "failures": [
+    {
+      "name": "programming: strong adaptive rounds and review admission",
+      "error": "locator.waitFor: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#programming-content').locator('.daily-study-card') to be visible\u001b[22m\n\n    at startRound (D:\\coding项目\\交互式英语学习网站\\tools\\test-adaptive-course-browser.mjs:121:48)\n    at async file:///D:/coding%E9%A1%B9%E7%9B%AE/%E4%BA%A4%E4%BA%92%E5%BC%8F%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99/tools/test-adaptive-course-browser.mjs:247:20\n    at async scenario (D:\\coding项目\\交互式英语学习网站\\tools\\test-adaptive-course-browser.mjs:85:22)\n    at async file:///D:/coding%E9%A1%B9%E7%9B%AE/%E4%BA%A4%E4%BA%92%E5%BC%8F%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99/tools/test-adaptive-course-browser.mjs:243:94"
+    },
+    {
+      "name": "programming: weak adaptive rounds and review admission",
+      "error": "locator.waitFor: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#programming-content').locator('.daily-study-card') to be visible\u001b[22m\n\n    at startRound (D:\\coding项目\\交互式英语学习网站\\tools\\test-adaptive-course-browser.mjs:121:48)\n    at async file:///D:/coding%E9%A1%B9%E7%9B%AE/%E4%BA%A4%E4%BA%92%E5%BC%8F%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99/tools/test-adaptive-course-browser.mjs:247:20\n    at async scenario (D:\\coding项目\\交互式英语学习网站\\tools\\test-adaptive-course-browser.mjs:85:22)\n    at async file:///D:/coding%E9%A1%B9%E7%9B%AE/%E4%BA%A4%E4%BA%92%E5%BC%8F%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99/tools/test-adaptive-course-browser.mjs:243:94"
+    },
+    {
+      "name": "daily: strong adaptive rounds and review admission",
+      "error": "AssertionError [ERR_ASSERTION]: The input did not match the regular expression /^第\\s*\\d+\\s*节$/. Input:\n\n'第 1 节 · 见面与告别'\n\n    at startRound (file:///D:/coding%E9%A1%B9%E7%9B%AE/%E4%BA%A4%E4%BA%92%E5%BC%8F%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99/tools/test-adaptive-course-browser.mjs:124:10)\n    at async file:///D:/coding%E9%A1%B9%E7%9B%AE/%E4%BA%A4%E4%BA%92%E5%BC%8F%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99/tools/test-adaptive-course-browser.mjs:247:20\n    at async scenario (file:///D:/coding%E9%A1%B9%E7%9B%AE/%E4%BA%A4%E4%BA%92%E5%BC%8F%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99/tools/test-adaptive-course-browser.mjs:85:22)\n    at async file:///D:/coding%E9%A1%B9%E7%9B%AE/%E4%BA%A4%E4%BA%92%E5%BC%8F%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99/tools/test-adaptive-course-browser.mjs:243:94"
+    },
+    {
+      "name": "daily: weak adaptive rounds and review admission",
+      "error": "AssertionError [ERR_ASSERTION]: The input did not match the regular expression /^第\\s*\\d+\\s*节$/. Input:\n\n'第 1 节 · 见面与告别'\n\n    at startRound (file:///D:/coding%E9%A1%B9%E7%9B%AE/%E4%BA%A4%E4%BA%92%E5%BC%8F%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99/tools/test-adaptive-course-browser.mjs:124:10)\n    at async file:///D:/coding%E9%A1%B9%E7%9B%AE/%E4%BA%A4%E4%BA%92%E5%BC%8F%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99/tools/test-adaptive-course-browser.mjs:247:20\n    at async scenario (file:///D:/coding%E9%A1%B9%E7%9B%AE/%E4%BA%A4%E4%BA%92%E5%BC%8F%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99/tools/test-adaptive-course-browser.mjs:85:22)\n    at async file:///D:/coding%E9%A1%B9%E7%9B%AE/%E4%BA%A4%E4%BA%92%E5%BC%8F%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99/tools/test-adaptive-course-browser.mjs:243:94"
+    },
+    {
+      "name": "programming: stable draft, queue, option order and different random seeds",
+      "error": "locator.waitFor: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#programming-content').locator('.daily-study-card') to be visible\u001b[22m\n\n    at startRound (D:\\coding项目\\交互式英语学习网站\\tools\\test-adaptive-course-browser.mjs:121:48)\n    at async file:///D:/coding%E9%A1%B9%E7%9B%AE/%E4%BA%A4%E4%BA%92%E5%BC%8F%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99/tools/test-adaptive-course-browser.mjs:310:19\n    at async scenario (D:\\coding项目\\交互式英语学习网站\\tools\\test-adaptive-course-browser.mjs:85:22)\n    at async file:///D:/coding%E9%A1%B9%E7%9B%AE/%E4%BA%A4%E4%BA%92%E5%BC%8F%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99/tools/test-adaptive-course-browser.mjs:309:51"
+    },
+    {
+      "name": "daily: stable draft, queue, option order and different random seeds",
+      "error": "AssertionError [ERR_ASSERTION]: The input did not match the regular expression /^第\\s*\\d+\\s*节$/. Input:\n\n'第 1 节 · 见面与告别'\n\n    at startRound (file:///D:/coding%E9%A1%B9%E7%9B%AE/%E4%BA%A4%E4%BA%92%E5%BC%8F%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99/tools/test-adaptive-course-browser.mjs:124:10)\n    at async file:///D:/coding%E9%A1%B9%E7%9B%AE/%E4%BA%A4%E4%BA%92%E5%BC%8F%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99/tools/test-adaptive-course-browser.mjs:310:19\n    at async scenario (file:///D:/coding%E9%A1%B9%E7%9B%AE/%E4%BA%A4%E4%BA%92%E5%BC%8F%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99/tools/test-adaptive-course-browser.mjs:85:22)\n    at async file:///D:/coding%E9%A1%B9%E7%9B%AE/%E4%BA%A4%E4%BA%92%E5%BC%8F%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99/tools/test-adaptive-course-browser.mjs:309:51"
+    },
+    {
+      "name": "programming: competing page edits protect saved course and damaged records",
+      "error": "locator.waitFor: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#programming-content').locator('.daily-study-card') to be visible\u001b[22m\n\n    at startRound (D:\\coding项目\\交互式英语学习网站\\tools\\test-adaptive-course-browser.mjs:121:48)\n    at async file:///D:/coding%E9%A1%B9%E7%9B%AE/%E4%BA%A4%E4%BA%92%E5%BC%8F%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99/tools/test-adaptive-course-browser.mjs:349:7\n    at async scenario (D:\\coding项目\\交互式英语学习网站\\tools\\test-adaptive-course-browser.mjs:85:22)\n    at async file:///D:/coding%E9%A1%B9%E7%9B%AE/%E4%BA%A4%E4%BA%92%E5%BC%8F%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99/tools/test-adaptive-course-browser.mjs:348:5"
+    },
+    {
+      "name": "daily: competing page edits protect saved course and damaged records",
+      "error": "AssertionError [ERR_ASSERTION]: The input did not match the regular expression /^第\\s*\\d+\\s*节$/. Input:\n\n'第 1 节 · 见面与告别'\n\n    at startRound (file:///D:/coding%E9%A1%B9%E7%9B%AE/%E4%BA%A4%E4%BA%92%E5%BC%8F%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99/tools/test-adaptive-course-browser.mjs:124:10)\n    at async file:///D:/coding%E9%A1%B9%E7%9B%AE/%E4%BA%A4%E4%BA%92%E5%BC%8F%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99/tools/test-adaptive-course-browser.mjs:349:7\n    at async scenario (file:///D:/coding%E9%A1%B9%E7%9B%AE/%E4%BA%A4%E4%BA%92%E5%BC%8F%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99/tools/test-adaptive-course-browser.mjs:85:22)\n    at async file:///D:/coding%E9%A1%B9%E7%9B%AE/%E4%BA%A4%E4%BA%92%E5%BC%8F%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99/tools/test-adaptive-course-browser.mjs:348:5"
+    },
+    {
+      "name": "programming: four themes at 1440px",
+      "error": "locator.waitFor: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#programming-content').locator('.daily-study-card') to be visible\u001b[22m\n\n    at startRound (D:\\coding项目\\交互式英语学习网站\\tools\\test-adaptive-course-browser.mjs:121:48)\n    at async file:///D:/coding%E9%A1%B9%E7%9B%AE/%E4%BA%A4%E4%BA%92%E5%BC%8F%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99/tools/test-adaptive-course-browser.mjs:463:5\n    at async scenario (D:\\coding项目\\交互式英语学习网站\\tools\\test-adaptive-course-browser.mjs:85:22)\n    at async file:///D:/coding%E9%A1%B9%E7%9B%AE/%E4%BA%A4%E4%BA%92%E5%BC%8F%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99/tools/test-adaptive-course-browser.mjs:462:84"
+    },
+    {
+      "name": "programming: four themes at 390px",
+      "error": "locator.waitFor: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#programming-content').locator('.daily-study-card') to be visible\u001b[22m\n\n    at startRound (D:\\coding项目\\交互式英语学习网站\\tools\\test-adaptive-course-browser.mjs:121:48)\n    at async file:///D:/coding%E9%A1%B9%E7%9B%AE/%E4%BA%A4%E4%BA%92%E5%BC%8F%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99/tools/test-adaptive-course-browser.mjs:463:5\n    at async scenario (D:\\coding项目\\交互式英语学习网站\\tools\\test-adaptive-course-browser.mjs:85:22)\n    at async file:///D:/coding%E9%A1%B9%E7%9B%AE/%E4%BA%A4%E4%BA%92%E5%BC%8F%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99/tools/test-adaptive-course-browser.mjs:462:84"
+    },
+    {
+      "name": "daily: four themes at 1440px",
+      "error": "AssertionError [ERR_ASSERTION]: The input did not match the regular expression /^第\\s*\\d+\\s*节$/. Input:\n\n'第 1 节 · 见面与告别'\n\n    at startRound (file:///D:/coding%E9%A1%B9%E7%9B%AE/%E4%BA%A4%E4%BA%92%E5%BC%8F%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99/tools/test-adaptive-course-browser.mjs:124:10)\n    at async file:///D:/coding%E9%A1%B9%E7%9B%AE/%E4%BA%A4%E4%BA%92%E5%BC%8F%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99/tools/test-adaptive-course-browser.mjs:463:5\n    at async scenario (file:///D:/coding%E9%A1%B9%E7%9B%AE/%E4%BA%A4%E4%BA%92%E5%BC%8F%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99/tools/test-adaptive-course-browser.mjs:85:22)\n    at async file:///D:/coding%E9%A1%B9%E7%9B%AE/%E4%BA%A4%E4%BA%92%E5%BC%8F%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99/tools/test-adaptive-course-browser.mjs:462:84"
+    },
+    {
+      "name": "daily: four themes at 390px",
+      "error": "AssertionError [ERR_ASSERTION]: The input did not match the regular expression /^第\\s*\\d+\\s*节$/. Input:\n\n'第 1 节 · 见面与告别'\n\n    at startRound (file:///D:/coding%E9%A1%B9%E7%9B%AE/%E4%BA%A4%E4%BA%92%E5%BC%8F%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99/tools/test-adaptive-course-browser.mjs:124:10)\n    at async file:///D:/coding%E9%A1%B9%E7%9B%AE/%E4%BA%A4%E4%BA%92%E5%BC%8F%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99/tools/test-adaptive-course-browser.mjs:463:5\n    at async scenario (file:///D:/coding%E9%A1%B9%E7%9B%AE/%E4%BA%A4%E4%BA%92%E5%BC%8F%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99/tools/test-adaptive-course-browser.mjs:85:22)\n    at async file:///D:/coding%E9%A1%B9%E7%9B%AE/%E4%BA%A4%E4%BA%92%E5%BC%8F%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99/tools/test-adaptive-course-browser.mjs:462:84"
+    }
+  ],
+  "browserErrors": [],
+  "objectiveAnswers": 0,
+  "selfChecks": 0,
+  "microphoneTested": false,
+  "testedAt": "2026-10-01T14:11:30.124Z"
+}

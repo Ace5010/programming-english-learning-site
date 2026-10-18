@@ -1,0 +1,17 @@
+{
+  "unrelatedModifiedFilesPreserved": 4,
+  "existingFoundationAudioPreserved": 708,
+  "newAudio": [
+    {
+      "path": "public\\audio\\foundation\\aria\\f-0baaf6f25d1c5da8.mp3",
+      "bytes": 11232,
+      "publicDistHashesMatch": true
+    },
+    {
+      "path": "public\\audio\\foundation\\guy\\f-0baaf6f25d1c5da8.mp3",
+      "bytes": 11232,
+      "publicDistHashesMatch": true
+    }
+  ],
+  "branch": "main"
+}

@@ -157,7 +157,17 @@ try {
           await page.getByLabel('界面配色', { exact: true }).selectOption(theme);
           await check(page, `${section}/${kind}/${theme}`);
         }
-        if (kind === 'speak') { await root.getByRole('button', { name: '自己表达', exact: true }).click(); await root.locator('.speech-edit summary').click(); }
+        if (kind === 'speak') {
+          if (section === 'daily') {
+            await root.locator('.daily-optional-speaking > summary').click();
+            await check(page, 'daily/optional-speaking/open');
+            assert.equal(await root.locator('.daily-checks input, .speech-edit').count(), 0);
+            assert.equal(await root.locator('.daily-controls .primary').innerText(), '继续');
+            await page.screenshot({ path: path.join(output, 'daily-optional-speaking-320.png') });
+          } else {
+            await root.getByRole('button', { name: '自己表达', exact: true }).click(); await root.locator('.speech-edit summary').click();
+          }
+        }
         const input = question.locator('input, textarea').first();
         if (await input.count()) {
           await input.fill('test');

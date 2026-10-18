@@ -1,0 +1,803 @@
+{
+  "baseURL": "http://127.0.0.1:5186/",
+  "results": [
+    {
+      "name": "layout-lagoon-1440",
+      "width": 1440,
+      "theme": "lagoon",
+      "evidence": {
+        "width": 1440,
+        "content": 1440,
+        "overflow": [],
+        "styles": {
+          "color": "rgb(37, 76, 85)",
+          "size": 30,
+          "accent": "#254c55"
+        },
+        "card": {
+          "x": 90,
+          "y": 427.53125,
+          "width": 619,
+          "height": 474.578125
+        },
+        "testEntry": {
+          "x": 90,
+          "y": 2006.453125,
+          "width": 1260,
+          "height": 158.25
+        }
+      }
+    },
+    {
+      "name": "layout-lagoon-390",
+      "width": 390,
+      "theme": "lagoon",
+      "evidence": {
+        "width": 390,
+        "content": 390,
+        "overflow": [],
+        "styles": {
+          "color": "rgb(37, 76, 85)",
+          "size": 27,
+          "accent": "#254c55"
+        },
+        "card": {
+          "x": 32,
+          "y": 488.296875,
+          "width": 326,
+          "height": 483.171875
+        },
+        "testEntry": {
+          "x": 32,
+          "y": 3730.890625,
+          "width": 326,
+          "height": 248
+        }
+      }
+    },
+    {
+      "name": "layout-lagoon-320",
+      "width": 320,
+      "theme": "lagoon",
+      "evidence": {
+        "width": 320,
+        "content": 320,
+        "overflow": [],
+        "styles": {
+          "color": "rgb(37, 76, 85)",
+          "size": 27,
+          "accent": "#254c55"
+        },
+        "card": {
+          "x": 32,
+          "y": 545.046875,
+          "width": 256,
+          "height": 544.359375
+        },
+        "testEntry": {
+          "x": 32,
+          "y": 4120.578125,
+          "width": 256,
+          "height": 248
+        }
+      }
+    },
+    {
+      "name": "layout-pearl-1440",
+      "width": 1440,
+      "theme": "pearl",
+      "evidence": {
+        "width": 1440,
+        "content": 1440,
+        "overflow": [],
+        "styles": {
+          "color": "rgb(52, 66, 80)",
+          "size": 30,
+          "accent": "#344250"
+        },
+        "card": {
+          "x": 90,
+          "y": 427.53125,
+          "width": 619,
+          "height": 474.578125
+        },
+        "testEntry": {
+          "x": 90,
+          "y": 2006.453125,
+          "width": 1260,
+          "height": 158.25
+        }
+      }
+    },
+    {
+      "name": "layout-pearl-390",
+      "width": 390,
+      "theme": "pearl",
+      "evidence": {
+        "width": 390,
+        "content": 390,
+        "overflow": [],
+        "styles": {
+          "color": "rgb(52, 66, 80)",
+          "size": 27,
+          "accent": "#344250"
+        },
+        "card": {
+          "x": 32,
+          "y": 488.296875,
+          "width": 326,
+          "height": 483.171875
+        },
+        "testEntry": {
+          "x": 32,
+          "y": 3730.890625,
+          "width": 326,
+          "height": 248
+        }
+      }
+    },
+    {
+      "name": "layout-pearl-320",
+      "width": 320,
+      "theme": "pearl",
+      "evidence": {
+        "width": 320,
+        "content": 320,
+        "overflow": [],
+        "styles": {
+          "color": "rgb(52, 66, 80)",
+          "size": 27,
+          "accent": "#344250"
+        },
+        "card": {
+          "x": 32,
+          "y": 545.046875,
+          "width": 256,
+          "height": 544.359375
+        },
+        "testEntry": {
+          "x": 32,
+          "y": 4120.578125,
+          "width": 256,
+          "height": 248
+        }
+      }
+    },
+    {
+      "name": "layout-sky-1440",
+      "width": 1440,
+      "theme": "sky",
+      "evidence": {
+        "width": 1440,
+        "content": 1440,
+        "overflow": [],
+        "styles": {
+          "color": "rgb(23, 67, 95)",
+          "size": 30,
+          "accent": "#17435f"
+        },
+        "card": {
+          "x": 90,
+          "y": 427.53125,
+          "width": 619,
+          "height": 474.578125
+        },
+        "testEntry": {
+          "x": 90,
+          "y": 2006.453125,
+          "width": 1260,
+          "height": 158.25
+        }
+      }
+    },
+    {
+      "name": "layout-sky-390",
+      "width": 390,
+      "theme": "sky",
+      "evidence": {
+        "width": 390,
+        "content": 390,
+        "overflow": [],
+        "styles": {
+          "color": "rgb(23, 67, 95)",
+          "size": 27,
+          "accent": "#17435f"
+        },
+        "card": {
+          "x": 32,
+          "y": 488.296875,
+          "width": 326,
+          "height": 483.171875
+        },
+        "testEntry": {
+          "x": 32,
+          "y": 3730.890625,
+          "width": 326,
+          "height": 248
+        }
+      }
+    },
+    {
+      "name": "layout-sky-320",
+      "width": 320,
+      "theme": "sky",
+      "evidence": {
+        "width": 320,
+        "content": 320,
+        "overflow": [],
+        "styles": {
+          "color": "rgb(23, 67, 95)",
+          "size": 27,
+          "accent": "#17435f"
+        },
+        "card": {
+          "x": 32,
+          "y": 545.046875,
+          "width": 256,
+          "height": 544.359375
+        },
+        "testEntry": {
+          "x": 32,
+          "y": 4120.578125,
+          "width": 256,
+          "height": 248
+        }
+      }
+    },
+    {
+      "name": "layout-mint-1440",
+      "width": 1440,
+      "theme": "mint",
+      "evidence": {
+        "width": 1440,
+        "content": 1440,
+        "overflow": [],
+        "styles": {
+          "color": "rgb(35, 82, 64)",
+          "size": 30,
+          "accent": "#235240"
+        },
+        "card": {
+          "x": 90,
+          "y": 427.53125,
+          "width": 619,
+          "height": 474.578125
+        },
+        "testEntry": {
+          "x": 90,
+          "y": 2006.453125,
+          "width": 1260,
+          "height": 158.25
+        }
+      }
+    },
+    {
+      "name": "layout-mint-390",
+      "width": 390,
+      "theme": "mint",
+      "evidence": {
+        "width": 390,
+        "content": 390,
+        "overflow": [],
+        "styles": {
+          "color": "rgb(35, 82, 64)",
+          "size": 27,
+          "accent": "#235240"
+        },
+        "card": {
+          "x": 32,
+          "y": 488.296875,
+          "width": 326,
+          "height": 483.171875
+        },
+        "testEntry": {
+          "x": 32,
+          "y": 3730.890625,
+          "width": 326,
+          "height": 248
+        }
+      }
+    },
+    {
+      "name": "layout-mint-320",
+      "width": 320,
+      "theme": "mint",
+      "evidence": {
+        "width": 320,
+        "content": 320,
+        "overflow": [],
+        "styles": {
+          "color": "rgb(35, 82, 64)",
+          "size": 27,
+          "accent": "#235240"
+        },
+        "card": {
+          "x": 32,
+          "y": 545.046875,
+          "width": 256,
+          "height": 544.359375
+        },
+        "testEntry": {
+          "x": 32,
+          "y": 4120.578125,
+          "width": 256,
+          "height": 248
+        }
+      }
+    },
+    {
+      "name": "flow-1440",
+      "width": 1440,
+      "theme": "lagoon",
+      "evidence": {
+        "first": [
+          "word-1",
+          "word-2801",
+          "word-3561",
+          "word-20",
+          "word-4",
+          "word-5"
+        ],
+        "next": [
+          "word-2",
+          "word-11",
+          "word-1880",
+          "word-1384",
+          "word-3",
+          "word-687"
+        ],
+        "observed": [
+          {
+            "id": "P1-01-01-p-2801-word",
+            "kind": "choice",
+            "targets": [
+              "word-2801"
+            ],
+            "wrong": false
+          },
+          {
+            "id": "P1-01-02-p-4-meaning",
+            "kind": "choice",
+            "targets": [
+              "word-4"
+            ],
+            "wrong": true
+          },
+          {
+            "id": "P1-01-01-r01",
+            "kind": "choice",
+            "targets": [
+              "word-20"
+            ],
+            "wrong": false
+          },
+          {
+            "id": "P1-01-01-p-3561-word",
+            "kind": "choice",
+            "targets": [
+              "word-3561"
+            ],
+            "wrong": false
+          },
+          {
+            "id": "P1-01-01-e01",
+            "kind": "choice",
+            "targets": [
+              "word-1"
+            ],
+            "wrong": false
+          },
+          {
+            "id": "P1-01-02-r01",
+            "kind": "choice",
+            "targets": [
+              "word-5"
+            ],
+            "wrong": false
+          },
+          {
+            "id": "P1-01-01-r02",
+            "kind": "choice",
+            "targets": [
+              "word-2801",
+              "word-3561"
+            ],
+            "wrong": false
+          },
+          {
+            "id": "P1-01-06-e01",
+            "kind": "choice",
+            "targets": [
+              "word-20",
+              "word-4"
+            ],
+            "wrong": false
+          },
+          {
+            "id": "P1-01-02-p-5-word",
+            "kind": "choice",
+            "targets": [
+              "word-5"
+            ],
+            "wrong": false
+          },
+          {
+            "id": "P1-01-02-p-4-translation",
+            "kind": "choice",
+            "targets": [
+              "word-4"
+            ],
+            "wrong": false
+          }
+        ],
+        "studyAudio": [
+          {
+            "src": "http://127.0.0.1:5186/audio/aria/word-1.mp3?v=repository",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/aria/word-1.mp3?v=repository",
+            "rate": 0.72,
+            "pitch": true
+          }
+        ],
+        "sceneQuestion": "P1-01-01-e02",
+        "audio": [
+          {
+            "src": "http://127.0.0.1:5186/audio/feedback/correct.mp3",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/feedback/correct.mp3",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/feedback/correct.mp3",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/feedback/correct.mp3",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/aria/word-5.mp3",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/aria/example-4.mp3?v=Clone%20this%20project.",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/feedback/complete.mp3",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/aria/word-4.mp3?v=clone",
+            "rate": 0.72,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/aria/word-1.mp3",
+            "rate": 1,
+            "pitch": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "flow-390",
+      "width": 390,
+      "theme": "lagoon",
+      "evidence": {
+        "first": [
+          "word-1",
+          "word-2801",
+          "word-3561",
+          "word-20",
+          "word-4",
+          "word-5"
+        ],
+        "next": [
+          "word-2",
+          "word-11",
+          "word-1880",
+          "word-1384",
+          "word-3",
+          "word-687"
+        ],
+        "observed": [
+          {
+            "id": "P1-01-01-p-2801-word",
+            "kind": "choice",
+            "targets": [
+              "word-2801"
+            ],
+            "wrong": true
+          },
+          {
+            "id": "P1-01-02-p-4-meaning",
+            "kind": "choice",
+            "targets": [
+              "word-4"
+            ],
+            "wrong": true
+          },
+          {
+            "id": "P1-01-01-r01",
+            "kind": "choice",
+            "targets": [
+              "word-20"
+            ],
+            "wrong": true
+          },
+          {
+            "id": "P1-01-01-p-3561-word",
+            "kind": "choice",
+            "targets": [
+              "word-3561"
+            ],
+            "wrong": true
+          },
+          {
+            "id": "P1-01-01-e01",
+            "kind": "choice",
+            "targets": [
+              "word-1"
+            ],
+            "wrong": true
+          },
+          {
+            "id": "P1-01-02-r01",
+            "kind": "choice",
+            "targets": [
+              "word-5"
+            ],
+            "wrong": true
+          },
+          {
+            "id": "P1-01-01-e05",
+            "kind": "choice",
+            "targets": [
+              "word-1"
+            ],
+            "wrong": true
+          },
+          {
+            "id": "P1-01-02-p-5-cloze",
+            "kind": "choice",
+            "targets": [
+              "word-5"
+            ],
+            "wrong": true
+          },
+          {
+            "id": "P1-01-02-p-4-word",
+            "kind": "choice",
+            "targets": [
+              "word-4"
+            ],
+            "wrong": true
+          },
+          {
+            "id": "P1-01-02-p-5-meaning",
+            "kind": "choice",
+            "targets": [
+              "word-5"
+            ],
+            "wrong": true
+          }
+        ],
+        "studyAudio": [
+          {
+            "src": "http://127.0.0.1:5186/audio/aria/word-1.mp3?v=repository",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/aria/word-1.mp3?v=repository",
+            "rate": 0.72,
+            "pitch": true
+          }
+        ],
+        "sceneQuestion": "P1-01-01-e05",
+        "audio": [
+          {
+            "src": "http://127.0.0.1:5186/audio/aria/word-3561.mp3",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/aria/word-1.mp3",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/feedback/complete.mp3",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/aria/word-1.mp3?v=repository",
+            "rate": 0.72,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/aria/word-1.mp3",
+            "rate": 1,
+            "pitch": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "card-click-playback",
+      "width": 1440,
+      "theme": "lagoon",
+      "evidence": {
+        "clicks": [
+          {
+            "target": "word-1",
+            "voice": "aria",
+            "request": {
+              "src": "http://127.0.0.1:5186/audio/aria/word-1.mp3?v=repository",
+              "rate": 1,
+              "pitch": true
+            }
+          },
+          {
+            "target": "word-1",
+            "voice": "aria",
+            "request": {
+              "src": "http://127.0.0.1:5186/audio/aria/word-1.mp3?v=repository",
+              "rate": 1,
+              "pitch": true
+            }
+          },
+          {
+            "target": "word-1",
+            "voice": "aria",
+            "request": {
+              "src": "http://127.0.0.1:5186/audio/aria/word-1.mp3?v=repository",
+              "rate": 1,
+              "pitch": true
+            }
+          },
+          {
+            "target": "word-1",
+            "voice": "aria",
+            "request": {
+              "src": "http://127.0.0.1:5186/audio/aria/word-1.mp3?v=repository",
+              "rate": 1,
+              "pitch": true
+            }
+          },
+          {
+            "target": "word-1",
+            "voice": "aria",
+            "request": {
+              "src": "http://127.0.0.1:5186/audio/aria/word-1.mp3?v=repository",
+              "rate": 1,
+              "pitch": true
+            }
+          },
+          {
+            "target": "word-1",
+            "voice": "aria",
+            "request": {
+              "src": "http://127.0.0.1:5186/audio/aria/word-1.mp3?v=repository",
+              "rate": 1,
+              "pitch": true
+            }
+          },
+          {
+            "target": "word-1",
+            "voice": "aria",
+            "request": {
+              "src": "http://127.0.0.1:5186/audio/aria/word-1.mp3?v=repository",
+              "rate": 1,
+              "pitch": true
+            }
+          },
+          {
+            "target": "example-1",
+            "voice": "aria",
+            "request": {
+              "src": "http://127.0.0.1:5186/audio/aria/example-1.mp3?v=Open%20this%20repository.",
+              "rate": 1,
+              "pitch": true
+            }
+          },
+          {
+            "target": "example-1",
+            "voice": "aria",
+            "request": {
+              "src": "http://127.0.0.1:5186/audio/aria/example-1.mp3?v=Open%20this%20repository.",
+              "rate": 1,
+              "pitch": true
+            }
+          },
+          {
+            "target": "example-1",
+            "voice": "aria",
+            "request": {
+              "src": "http://127.0.0.1:5186/audio/aria/example-1.mp3?v=Open%20this%20repository.",
+              "rate": 1,
+              "pitch": true
+            }
+          },
+          {
+            "target": "word-1",
+            "voice": "guy",
+            "request": {
+              "src": "http://127.0.0.1:5186/audio/guy/word-1.mp3?v=repository",
+              "rate": 1,
+              "pitch": true
+            }
+          },
+          {
+            "target": "example-1",
+            "voice": "guy",
+            "request": {
+              "src": "http://127.0.0.1:5186/audio/guy/example-1.mp3?v=Open%20this%20repository.",
+              "rate": 1,
+              "pitch": true
+            }
+          }
+        ],
+        "audio": [],
+        "isolatedProgress": true
+      }
+    },
+    {
+      "name": "saved-study-direct-test",
+      "width": 390,
+      "theme": "sky",
+      "evidence": {
+        "session": "1791113263690-adaptive-qa4qnf",
+        "targets": [
+          "word-1",
+          "word-2801",
+          "word-3561",
+          "word-20",
+          "word-4",
+          "word-5"
+        ]
+      }
+    },
+    {
+      "name": "saved-answer-home-and-resume",
+      "width": 390,
+      "theme": "lagoon",
+      "evidence": {
+        "task": "P1-01-02-p-4-word",
+        "draft": {
+          "choice": "repository",
+          "order": [],
+          "blanks": [],
+          "text": "",
+          "checks": [],
+          "helped": false,
+          "revealed": false
+        }
+      }
+    }
+  ],
+  "failures": [
+    {
+      "name": "skip-and-undo-before-test",
+      "error": "TypeError: Cannot read properties of undefined (reading 'targets')\n    at file:///D:/vibe%E9%A1%B9%E7%9B%AE/Interactive%20learning/tools/test-programming-word-check-browser.mjs:322:56\n    at async scenario (file:///D:/vibe%E9%A1%B9%E7%9B%AE/Interactive%20learning/tools/test-programming-word-check-browser.mjs:74:22)\n    at async file:///D:/vibe%E9%A1%B9%E7%9B%AE/Interactive%20learning/tools/test-programming-word-check-browser.mjs:309:1"
+    },
+    {
+      "name": "review-switch-keeps-draft-until-confirmed",
+      "error": "AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:\n\n  assert.ok(newIds.every(id => !before.learning.targets[id]))\n\n    at file:///D:/vibe%E9%A1%B9%E7%9B%AE/Interactive%20learning/tools/test-programming-word-check-browser.mjs:339:10\n    at async scenario (file:///D:/vibe%E9%A1%B9%E7%9B%AE/Interactive%20learning/tools/test-programming-word-check-browser.mjs:74:22)\n    at async file:///D:/vibe%E9%A1%B9%E7%9B%AE/Interactive%20learning/tools/test-programming-word-check-browser.mjs:334:1"
+    }
+  ]
+}

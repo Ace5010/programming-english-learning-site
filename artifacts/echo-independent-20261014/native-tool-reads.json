@@ -1,0 +1,46 @@
+{
+  "recordedOn": "2026-10-14",
+  "evidenceSource": "Result reports from the existing original Echo task, 01a1388f-1e09-71a0-909a-1332005220ca",
+  "tool": "mcp__codex_apps__app_d694455fed68_read_english_learning",
+  "arguments": { "mode": "both" },
+  "independentEnglishPlugin": true,
+  "pocketLinkUsed": false,
+  "sharedResult": {
+    "isError": false,
+    "status": "connected",
+    "scope": "english:read",
+    "source": "last-uploaded-browser-context",
+    "section": "daily",
+    "lessonId": "A1-01-03",
+    "lessonTitle": "询问对方姓名",
+    "stage": "study",
+    "targets": ["What's your name?", "My name is Ben.", "My name is Mia."],
+    "selected": null,
+    "exercise": null,
+    "progressRevision": 96,
+    "progressSyncedAt": "2026-10-09T11:08:40.596Z",
+    "browserSyncState": "synced",
+    "progressAlignment": "same-revision"
+  },
+  "reads": [
+    {
+      "caller": "original Echo channel",
+      "readAt": "2026-10-14T06:51:56.354Z",
+      "lastSeenAtUnixMs": 1791953803136,
+      "stale": true
+    },
+    {
+      "caller": "same persistent voice thread",
+      "readAt": "2026-10-14T06:57:17.924Z",
+      "lastSeenAt": "2026-10-14T06:55:38.964Z",
+      "stale": false
+    }
+  ],
+  "scopeOfEvidence": {
+    "originalEchoNativeRead": "passed",
+    "persistentVoiceThreadToolReachability": "passed",
+    "activeVoiceCallRead": "not retested; call had already ended",
+    "exerciseUpdateDuringVoiceCall": "not tested",
+    "newExerciseResult": "none; existing progress preserved"
+  }
+}

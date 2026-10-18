@@ -1,0 +1,206 @@
+{
+  "baseURL": "http://localhost:5186/",
+  "production": false,
+  "scenarios": [
+    {
+      "name": "daily: weak adaptive rounds and review admission",
+      "durationMs": 19316,
+      "evidence": {
+        "rounds": 6,
+        "firstAdmissionRound": 0,
+        "objectiveAnswers": 120,
+        "readyCount": 0,
+        "plans": [
+          {
+            "new": 4,
+            "focus": [
+              "hello",
+              "hi",
+              "goodbye",
+              "bye"
+            ],
+            "answers": 20
+          },
+          {
+            "new": 0,
+            "focus": [
+              "goodbye",
+              "hi",
+              "hello",
+              "bye"
+            ],
+            "answers": 20
+          },
+          {
+            "new": 0,
+            "focus": [
+              "goodbye",
+              "hi",
+              "hello",
+              "bye"
+            ],
+            "answers": 20
+          },
+          {
+            "new": 0,
+            "focus": [
+              "goodbye",
+              "hi",
+              "hello",
+              "bye"
+            ],
+            "answers": 20
+          },
+          {
+            "new": 0,
+            "focus": [
+              "goodbye",
+              "hi",
+              "hello",
+              "bye"
+            ],
+            "answers": 20
+          },
+          {
+            "new": 0,
+            "focus": [
+              "goodbye",
+              "hi",
+              "hello",
+              "bye"
+            ],
+            "answers": 20
+          }
+        ]
+      }
+    },
+    {
+      "name": "daily: stable draft, queue, option order and different random seeds",
+      "durationMs": 6579,
+      "evidence": {
+        "seedA": 3404866623,
+        "seedB": 902964619,
+        "sequenceA": [
+          "A1-01-01-p-bye-listen",
+          "A1-01-01-p-hello-listen",
+          "A1-01-01-p-hi-listen",
+          "A1-01-06-p-goodbye-listen",
+          "A1-01-06-p-goodbye-expression"
+        ],
+        "sequenceB": [
+          "A1-01-01-p-hello-listen",
+          "A1-01-01-p-goodbye-meaning",
+          "A1-01-01-p-hi-meaning",
+          "A1-01-01-e04",
+          "A1-01-01-e01"
+        ]
+      }
+    },
+    {
+      "name": "programming: historical active session and legacy favorites remain readable",
+      "durationMs": 4176
+    },
+    {
+      "name": "programming: competing page edits protect saved course and damaged records",
+      "durationMs": 4704
+    },
+    {
+      "name": "daily: historical active session and legacy favorites remain readable",
+      "durationMs": 3198
+    },
+    {
+      "name": "daily: competing page edits protect saved course and damaged records",
+      "durationMs": 5195
+    },
+    {
+      "name": "real Aria and Guy word, example and daily phrase playback",
+      "durationMs": 2898,
+      "evidence": [
+        {
+          "type": "playing",
+          "src": "http://localhost:5186/audio/aria/word-3561.mp3",
+          "rate": 1,
+          "duration": 1.872
+        },
+        {
+          "type": "playing",
+          "src": "http://localhost:5186/audio/aria/example-3561.mp3?v=Read%20this%20code.",
+          "rate": 1,
+          "duration": 1.992
+        },
+        {
+          "type": "playing",
+          "src": "http://localhost:5186/audio/daily/aria/hello.mp3?v=Hello!",
+          "rate": 1,
+          "duration": 1.56
+        },
+        {
+          "type": "playing",
+          "src": "http://localhost:5186/audio/guy/word-3561.mp3",
+          "rate": 1,
+          "duration": 1.872
+        },
+        {
+          "type": "playing",
+          "src": "http://localhost:5186/audio/guy/example-3561.mp3?v=Read%20this%20code.",
+          "rate": 1,
+          "duration": 2.016
+        },
+        {
+          "type": "playing",
+          "src": "http://localhost:5186/audio/daily/guy/hello.mp3?v=Hello!",
+          "rate": 1,
+          "duration": 1.536
+        }
+      ]
+    },
+    {
+      "name": "programming: four themes at 1440px",
+      "durationMs": 2778
+    },
+    {
+      "name": "programming: four themes at 390px",
+      "durationMs": 2800
+    },
+    {
+      "name": "daily: four themes at 1440px",
+      "durationMs": 2693
+    },
+    {
+      "name": "daily: four themes at 390px",
+      "durationMs": 3340
+    }
+  ],
+  "failures": [
+    {
+      "name": "programming: strong adaptive rounds and review admission",
+      "error": "AssertionError [ERR_ASSERTION]: P1-01-01-p-20-order-blocks\n\nfalse !== true\n\n    at answer (file:///D:/coding%E9%A1%B9%E7%9B%AE/%E4%BA%A4%E4%BA%92%E5%BC%8F%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99/tools/test-adaptive-course-browser.mjs:202:12)\n    at async finishRound (file:///D:/coding%E9%A1%B9%E7%9B%AE/%E4%BA%A4%E4%BA%92%E5%BC%8F%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99/tools/test-adaptive-course-browser.mjs:218:5)\n    at async file:///D:/coding%E9%A1%B9%E7%9B%AE/%E4%BA%A4%E4%BA%92%E5%BC%8F%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99/tools/test-adaptive-course-browser.mjs:286:21\n    at async scenario (file:///D:/coding%E9%A1%B9%E7%9B%AE/%E4%BA%A4%E4%BA%92%E5%BC%8F%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99/tools/test-adaptive-course-browser.mjs:87:22)\n    at async file:///D:/coding%E9%A1%B9%E7%9B%AE/%E4%BA%A4%E4%BA%92%E5%BC%8F%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99/tools/test-adaptive-course-browser.mjs:276:94"
+    },
+    {
+      "name": "programming: weak adaptive rounds and review admission",
+      "error": "AssertionError [ERR_ASSERTION]: P1-01-01-p-1-match-audio\n\nfalse !== true\n\n    at answer (file:///D:/coding%E9%A1%B9%E7%9B%AE/%E4%BA%A4%E4%BA%92%E5%BC%8F%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99/tools/test-adaptive-course-browser.mjs:197:12)\n    at async finishRound (file:///D:/coding%E9%A1%B9%E7%9B%AE/%E4%BA%A4%E4%BA%92%E5%BC%8F%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99/tools/test-adaptive-course-browser.mjs:218:5)\n    at async file:///D:/coding%E9%A1%B9%E7%9B%AE/%E4%BA%A4%E4%BA%92%E5%BC%8F%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99/tools/test-adaptive-course-browser.mjs:286:21\n    at async scenario (file:///D:/coding%E9%A1%B9%E7%9B%AE/%E4%BA%A4%E4%BA%92%E5%BC%8F%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99/tools/test-adaptive-course-browser.mjs:87:22)\n    at async file:///D:/coding%E9%A1%B9%E7%9B%AE/%E4%BA%A4%E4%BA%92%E5%BC%8F%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99/tools/test-adaptive-course-browser.mjs:276:94"
+    },
+    {
+      "name": "daily: strong adaptive rounds and review admission",
+      "error": "locator.waitFor: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#daily-content').locator('.daily-feedback') to be visible\u001b[22m\n\n    at answer (D:\\coding项目\\交互式英语学习网站\\tools\\test-adaptive-course-browser.mjs:194:46)\n    at async finishRound (D:\\coding项目\\交互式英语学习网站\\tools\\test-adaptive-course-browser.mjs:218:5)\n    at async file:///D:/coding%E9%A1%B9%E7%9B%AE/%E4%BA%A4%E4%BA%92%E5%BC%8F%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99/tools/test-adaptive-course-browser.mjs:286:21\n    at async scenario (D:\\coding项目\\交互式英语学习网站\\tools\\test-adaptive-course-browser.mjs:87:22)\n    at async file:///D:/coding%E9%A1%B9%E7%9B%AE/%E4%BA%A4%E4%BA%92%E5%BC%8F%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99/tools/test-adaptive-course-browser.mjs:276:94"
+    },
+    {
+      "name": "programming: stable draft, queue, option order and different random seeds",
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\nfalse !== true\n\n    at preserveDraft (file:///D:/coding%E9%A1%B9%E7%9B%AE/%E4%BA%A4%E4%BA%92%E5%BC%8F%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99/tools/test-adaptive-course-browser.mjs:266:10)\n    at async file:///D:/coding%E9%A1%B9%E7%9B%AE/%E4%BA%A4%E4%BA%92%E5%BC%8F%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99/tools/test-adaptive-course-browser.mjs:348:5\n    at async scenario (file:///D:/coding%E9%A1%B9%E7%9B%AE/%E4%BA%A4%E4%BA%92%E5%BC%8F%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99/tools/test-adaptive-course-browser.mjs:87:22)\n    at async file:///D:/coding%E9%A1%B9%E7%9B%AE/%E4%BA%A4%E4%BA%92%E5%BC%8F%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99/tools/test-adaptive-course-browser.mjs:346:51"
+    }
+  ],
+  "browserErrors": [
+    {
+      "name": "daily: strong adaptive rounds and review admission",
+      "error": "Failed to load resource: net::ERR_CONNECTION_REFUSED"
+    },
+    {
+      "name": "daily: strong adaptive rounds and review admission",
+      "error": "Failed to load resource: net::ERR_CONNECTION_REFUSED"
+    }
+  ],
+  "objectiveAnswers": 161,
+  "selfChecks": 1,
+  "microphoneTested": false,
+  "testedAt": "2026-10-03T01:23:13.977Z"
+}

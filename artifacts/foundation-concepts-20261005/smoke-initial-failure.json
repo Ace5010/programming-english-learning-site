@@ -1,0 +1,6 @@
+{
+  "stage": "isolated browser smoke",
+  "cause": "The initial storage assertion included the existing playback-speed preference. Clicking slow correctly wrote that preference; learning records were unchanged.",
+  "repair": "Exclude theme, voice and playback-speed preferences while checking learning records; retain actual playback-rate and audio-event checks.",
+  "status": "Requires rerun; this initial attempt is not passing evidence."
+}

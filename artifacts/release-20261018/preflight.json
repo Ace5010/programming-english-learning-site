@@ -1,0 +1,84 @@
+{
+  "checkedAt": "2026-10-18T14:16:46.568Z",
+  "branch": "main",
+  "scope": "All existing non-ignored workspace changes, including historical verification artifacts.",
+  "behavior": [
+    "Original daily questions and dynamic question count retained",
+    "Daily speaking practice is optional and can continue immediately",
+    "Existing progress keys and records retained",
+    "Foundation concept guide and both American recordings included",
+    "Five programming course phonetics completed"
+  ],
+  "checks": {
+    "priorTypeCheckAndBuild": "Passed in this session; ten changed files still match verification hashes",
+    "priorCourseAndSpeechTests": {
+      "passed": 136,
+      "evidence": "artifacts/daily-optional-speaking-20261018/verification.md"
+    },
+    "priorDailyOptionalBrowser": {
+      "passed": 13
+    },
+    "priorMobileBrowser": {
+      "passed": 13
+    },
+    "priorProgrammingBrowser": {
+      "passed": 19
+    },
+    "foundationNode": {
+      "passed": 14
+    },
+    "projectVerify": {
+      "passed": true,
+      "vocabulary": 3620,
+      "aria": 7241,
+      "guy": 7241,
+      "daily": 172
+    },
+    "foundationFullDecode": {
+      "passed": true,
+      "decoded": 716,
+      "failures": 0
+    },
+    "foundationBrowser": {
+      "passed": 26,
+      "failures": 0,
+      "pageErrors": 0
+    },
+    "phonemicBrowser": {
+      "passed": 15,
+      "failures": 0,
+      "pageErrors": 0
+    },
+    "conceptGuide": {
+      "layouts": 6,
+      "actualAudioPlaybacks": 12,
+      "pageErrors": 0
+    },
+    "viewedScreenshots": [
+      "phonemic-browser/lagoon-1440.png",
+      "phonemic-browser/lagoon-390.png",
+      "preview-1440.png",
+      "preview-390.png"
+    ],
+    "activeFilesWhitespaceCheck": "Passed; three archived build logs contain original trailing whitespace",
+    "credentials": "No credential literals found in added text files; production sync screenshot keeps the code hidden"
+  },
+  "browserEnvironment": "Isolated Chrome contexts against Vite production preview at 127.0.0.1:5186; no real user profile or progress writes",
+  "initialBrowserAttempts": "Development-server /dist/ navigation and audio waits timed out. Stopped only those test processes, used production preview, and reran the affected suites. Navigation waits use DOM readiness and local tests disable proxies.",
+  "activeFunctions": [
+    "/api/sync"
+  ],
+  "deploymentBundle": {
+    "indexSha256": "2dc4abb1ef83224e9cfff2449e2dccfb32d7d4771880e9f7d114c53a7300fe15",
+    "bundles": [
+      {
+        "path": "assets/index-C3DXGveE.js",
+        "sha256": "85e76779d69f1b9a159d60c917c9bddf2fe81431dad545cc524de5bff9509f2f"
+      },
+      {
+        "path": "assets/index-CIT3noG8.css",
+        "sha256": "ea6a63dc111ea691c60cdbf5b92f36e84be9aeb44886884a4969db2c629920a9"
+      }
+    ]
+  }
+}

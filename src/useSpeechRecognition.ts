@@ -17,21 +17,22 @@ function constructor(): RecognitionConstructor | undefined {
   return androidRecognitionConstructor() ?? scope.SpeechRecognition ?? scope.webkitSpeechRecognition;
 }
 
-export function speechErrorMessage(code: string): string {
+export function speechErrorMessage(code: string, optional = false): string {
+  const alternative = optional ? '也可直接继续下一题。' : '也可使用“自己表达”继续练习。';
   switch (code) {
     case 'not-allowed': return isAndroidApp() ? '麦克风权限未开启。请到手机设置的 CodeWords 应用权限中允许麦克风后重试。' : '麦克风权限未开启。请点击地址栏的网站权限，允许麦克风后重试。';
-    case 'service-not-allowed': return isAndroidApp() ? '手机没有可用的英语语音识别服务。可在系统设置中安装或启用语音服务，也可使用“自己表达”继续练习。' : '浏览器没有允许语音识别服务。请检查浏览器设置，或使用“自己表达”继续练习。';
+    case 'service-not-allowed': return (isAndroidApp() ? '手机没有可用的英语语音识别服务。可在系统设置中安装或启用语音服务。' : '浏览器没有允许语音识别服务。请检查浏览器设置。') + alternative;
     case 'audio-capture': return '没有找到可用的麦克风。请检查设备连接和系统麦克风权限。';
-    case 'network': return '语音识别服务连接失败。请检查网络后重试；这次没有判为读错。也可以切换到“自己表达”。';
+    case 'network': return '语音识别服务连接失败。请检查网络后重试；这次没有判为读错。' + alternative;
     case 'local-service': return '本机识别服务连接失败。请重新运行“启动英语学习”后重试；这次没有判为读错。';
     case 'no-speech': return '没有识别到声音。请靠近麦克风，点击麦克风再读一次。';
-    case 'language-not-supported': return isAndroidApp() ? '手机语音服务尚不支持英语。请在系统语音设置中启用英语，也可使用“自己表达”继续练习。' : '当前浏览器的识别服务不支持英语。请换用支持英语识别的浏览器，或使用“自己表达”。';
+    case 'language-not-supported': return (isAndroidApp() ? '手机语音服务尚不支持英语。请在系统语音设置中启用英语。' : '当前浏览器的识别服务不支持英语。请换用支持英语识别的浏览器。') + alternative;
     default: return '这次未能完成识别，请重试；没有判为读错。';
   }
 }
 
 /** Prefer the optional on-device desktop recognizer; keep native/browser fallback. */
-export function useSpeechRecognition(onFinal: (text: string, target: string) => void, beforeStart: () => void, isComplete: (text: string, target: string) => boolean) {
+export function useSpeechRecognition(onFinal: (text: string, target: string) => void, beforeStart: () => void, isComplete: (text: string, target: string) => boolean, optional = false) {
   const [supported, setSupported] = useState(() => window.isSecureContext && !!constructor());
   const [sessionToken, setSessionToken] = useState<string | undefined>();
   const [local, setLocal] = useState(false);
@@ -104,7 +105,7 @@ export function useSpeechRecognition(onFinal: (text: string, target: string) => 
     stopping.current = current;
     setPhase('processing'); clearTimer(); clearTimeout(limit.current);
     try { current.stop(); }
-    catch { abort(); setError(speechErrorMessage('unknown')); return; }
+    catch { abort(); setError(speechErrorMessage('unknown', optional)); return; }
     timer.current = setTimeout(() => { if (recognition.current === current) { abort(); setError('识别服务没有及时返回结果，请重试。'); } }, current.processingTimeoutMs ?? 8000);
   }
 
@@ -151,18 +152,18 @@ export function useSpeechRecognition(onFinal: (text: string, target: string) => 
     current.onerror = event => {
       if (!live()) return;
       if (sessionToken && event.error === 'network') setSessionToken(undefined);
-      failed = true; setError(speechErrorMessage(sessionToken && event.error === 'network' ? 'local-service' : event.error));
+      failed = true; setError(speechErrorMessage(sessionToken && event.error === 'network' ? 'local-service' : event.error, optional));
       abort();
     };
     current.onend = () => {
       if (!live()) return;
       recognition.current = null; stopping.current = null; clearTimer(); clearTimeout(limit.current); setPhase('idle'); setInterim('');
       if (!failed && finalText) callbacks.current.onFinal(finalText.slice(0, 2000), targetId);
-      else if (!failed) setError(speechErrorMessage('no-speech'));
+      else if (!failed) setError(speechErrorMessage('no-speech', optional));
     };
     timer.current = setTimeout(() => { if (live()) { abort(); setError('麦克风或识别服务没有启动。请检查麦克风权限后重试。'); } }, 15000);
     try { current.start(); }
-    catch { abort(); setError(speechErrorMessage('unknown')); }
+    catch { abort(); setError(speechErrorMessage('unknown', optional)); }
   }
 
   return { supported, local: phase === 'idle' ? !!sessionToken || local : activeLocal,

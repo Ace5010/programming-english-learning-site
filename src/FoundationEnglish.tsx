@@ -2,7 +2,7 @@ import { useEffect, useState, type RefObject } from 'react';
 import ReadAloudText, { useReading } from './ReadAloud';
 import { foundationTopics, foundationTutorialCatalog, foundationSources, type FoundationTopic } from './foundationCourse';
 import { grammarSampleId, grammarSampleTitle, grammarContrastPhrases } from './foundationSamples';
-import type { FoundationTutorial, TutorialExample } from './foundationTutorials';
+import type { FoundationConceptGuide, FoundationTutorial, TutorialExample } from './foundationTutorials';
 import { foundationDemoKey } from './foundationDemos';
 import type { DailyPhrase } from './dailyCourse';
 import './foundation.css';
@@ -98,6 +98,17 @@ function TutorialExampleCard({ phrase, ...audio }: { phrase: TutorialExample } &
     </details>}
   </div>;
 }
+function ConceptGuide({ guide, ...audio }: { guide: FoundationConceptGuide } & AudioProps & DemoAudioProps) {
+  return <article className="foundation-card tutorial-article foundation-concepts" data-topic={guide.id}>
+    <h2>{guide.title}</h2><p className="tutorial-lead">{guide.question}</p>
+    {audio.foundationError && <p className="foundation-audio-error" role="alert">{audio.foundationError} 请重新点读当前内容。</p>}
+    {guide.sections.map(section => <section key={section.title}><h3>{section.title}</h3>
+      {section.text.map(text => <p key={text}>{text}</p>)}
+      {section.examples && <div className="foundation-examples">{section.examples.map(phrase => <TutorialExampleCard key={phrase.id} phrase={phrase} {...audio} />)}</div>}
+    </section>)}
+    <details className="foundation-source"><summary>参考资料</summary><p>例词使用本站美式 Aria／Guy 录音。中文概念说明参考 <a href={guide.source} target="_blank" rel="noreferrer">Cambridge 音标与重音说明</a>。</p></details>
+  </article>;
+}
 function ExpandedTutorial({ tutorial, choose, ...audio }: { tutorial: FoundationTutorial; choose: (id: string) => void } & AudioProps & DemoAudioProps) {
   return <article className="foundation-card tutorial-article" data-topic={tutorial.id} data-batch={tutorial.batch}>
     <h2>{tutorial.title}</h2><p className="tutorial-lead">{tutorial.question}</p>
@@ -172,7 +183,7 @@ export default function FoundationEnglish({ request, openTopic, active, view, st
   catalog.splice(grammarIndex, 0, { ...catalog[grammarIndex], id: grammarSampleId, title: grammarSampleTitle, examples: grammarContrastPhrases });
   const topics = catalog.filter(topic => !topic.hidden && topic.sound === sounds).sort((a, b) => {
     const order = sounds
-      ? ['letter-sound', 'blending', 'letter-combinations', 'final-e', 'spelling-correspondence', ...catalog.filter(topic => topic.id.startsWith('foundation-sound-')).map(topic => topic.id.slice(11)), 'syllables', 'sentence-stress', 'weak', 'linking', 'intonation', 'endings']
+      ? ['sound-concepts', 'letter-sound', 'blending', 'letter-combinations', 'final-e', 'spelling-correspondence', ...catalog.filter(topic => topic.id.startsWith('foundation-sound-')).map(topic => topic.id.slice(11)), 'syllables', 'sentence-stress', 'weak', 'linking', 'intonation', 'endings']
       : ['word-concepts', 'nouns', 'verbs', 'adjectives', 'pronouns', 'noun-roles', 'word-order', 'be', 'sentence-expand', 'position', 'writing-conventions', 'roles', 'articles', 'plural', 'countable', 'the', 'place', 'possessive', 'there', 'manner-adverbs', 'frequency-adverbs', 'and-or', 'but', 'cause-result'];
     const rank = (topic: FoundationTopic) => { const index = order.indexOf(topic.id.slice(11)); return index < 0 ? order.length : index; };
     return rank(a) - rank(b);
@@ -186,12 +197,12 @@ export default function FoundationEnglish({ request, openTopic, active, view, st
   const choose = (id: string) => { stopAudio(); setSelected(id); if (sounds) setTutorialOpen(true); openTopic(id); requestAnimationFrame(() => document.getElementById('tutorial-reading')?.focus()); };
   const filtered = topics.filter(topic => `${titleOf(topic)} ${topic.group}`.toLowerCase().includes(query.trim().toLowerCase()));
   const tutorial = <div className="tutorial-layout"><aside className="tutorial-directory" aria-label="教程目录"><h2>推荐阅读顺序</h2>
-      <p>{sounds ? '声音合成 → 拼读与拼写 → 易混音 → 重音、弱读与连读 → 常见词尾' : '词与句中角色 → 句子拆解与扩展 → 小词 → 副词与连接词 → 提问、否定与时间表达'}</p>
+      <p>{sounds ? '概念入门 → 声音合成 → 拼读与拼写 → 易混音 → 重音、弱读与连读 → 常见词尾' : '词与句中角色 → 句子拆解与扩展 → 小词 → 副词与连接词 → 提问、否定与时间表达'}</p>
       <label>查找主题<input type="search" value={query} onChange={event => setQuery(event.target.value)} /></label>
       <ol>{filtered.map(topic => <li key={topic.id}><button type="button" aria-current={current.id === topic.id ? 'page' : undefined} onClick={() => choose(topic.id)}>{titleOf(topic)}{sampleTitles[topic.id] && <span>样章</span>}</button></li>)}</ol>
       {!filtered.length && <p>没有找到这个主题，试试其他关键词。</p>}
     </aside><div className="tutorial-reading" id="tutorial-reading" tabIndex={-1}>
-      <div key={current.id}>{current.id === grammarSampleId ? <GrammarSample {...audio} /> : current.id === 'foundation-sound-friction' ? <SoundSample {...audio} active={active && sounds && tutorialOpen} stopAudio={stopAudio} /> : current.tutorial ? <ExpandedTutorial tutorial={current.tutorial} choose={choose} {...audio} /> : <FoundationCard topic={current} {...audio} />}</div>
+      <div key={current.id}>{current.id === grammarSampleId ? <GrammarSample {...audio} /> : current.id === 'foundation-sound-friction' ? <SoundSample {...audio} active={active && sounds && tutorialOpen} stopAudio={stopAudio} /> : current.concepts ? <ConceptGuide guide={current.concepts} {...audio} /> : current.tutorial ? <ExpandedTutorial tutorial={current.tutorial} choose={choose} {...audio} /> : <FoundationCard topic={current} {...audio} />}</div>
       <nav className="tutorial-next" aria-label="章节翻页">{index > 0 && <button type="button" onClick={() => choose(topics[index - 1].id)}>上一篇：{titleOf(topics[index - 1])}</button>}{index < topics.length - 1 && <button type="button" onClick={() => choose(topics[index + 1].id)}>接下来：{titleOf(topics[index + 1])}</button>}</nav>
     </div></div>;
   return <main hidden={!active} ref={contentRef} className="content foundation-tutorial" id="foundation-content">

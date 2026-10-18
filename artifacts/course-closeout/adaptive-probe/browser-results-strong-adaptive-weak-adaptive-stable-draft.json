@@ -1,0 +1,166 @@
+{
+  "baseURL": "http://localhost:5186/",
+  "production": false,
+  "scenarios": [
+    {
+      "name": "daily: weak adaptive rounds and review admission",
+      "durationMs": 20852,
+      "evidence": {
+        "rounds": 6,
+        "firstAdmissionRound": 0,
+        "objectiveAnswers": 120,
+        "readyCount": 0,
+        "plans": [
+          {
+            "new": 4,
+            "focus": [
+              "hello",
+              "hi",
+              "goodbye",
+              "bye"
+            ],
+            "answers": 20
+          },
+          {
+            "new": 0,
+            "focus": [
+              "goodbye",
+              "hi",
+              "hello",
+              "bye"
+            ],
+            "answers": 20
+          },
+          {
+            "new": 0,
+            "focus": [
+              "goodbye",
+              "hi",
+              "hello",
+              "bye"
+            ],
+            "answers": 20
+          },
+          {
+            "new": 0,
+            "focus": [
+              "goodbye",
+              "hi",
+              "hello",
+              "bye"
+            ],
+            "answers": 20
+          },
+          {
+            "new": 0,
+            "focus": [
+              "goodbye",
+              "hi",
+              "hello",
+              "bye"
+            ],
+            "answers": 20
+          },
+          {
+            "new": 0,
+            "focus": [
+              "goodbye",
+              "hi",
+              "hello",
+              "bye"
+            ],
+            "answers": 20
+          }
+        ]
+      }
+    },
+    {
+      "name": "programming: stable draft, queue, option order and different random seeds",
+      "durationMs": 5192,
+      "evidence": {
+        "seedA": 3404866623,
+        "seedB": 902964619,
+        "sequenceA": [
+          "P1-01-01-p-20-order-blocks",
+          "P1-01-01-p-1-word",
+          "P1-01-01-p-2801-listen",
+          "P1-01-01-p-20-listen-gap",
+          "P1-01-06-p-1-listen-gap"
+        ],
+        "sequenceB": [
+          "P1-01-01-p-1-listen",
+          "P1-01-01-p-2801-match-audio",
+          "P1-01-01-r01",
+          "P1-01-01-e05",
+          "P1-01-01-e03"
+        ]
+      }
+    },
+    {
+      "name": "daily: stable draft, queue, option order and different random seeds",
+      "durationMs": 4402,
+      "evidence": {
+        "seedA": 3404866623,
+        "seedB": 902964619,
+        "sequenceA": [
+          "A1-01-01-p-bye-listen",
+          "A1-01-01-p-hello-listen",
+          "A1-01-01-p-hi-listen",
+          "A1-01-06-p-goodbye-listen",
+          "A1-01-06-p-goodbye-expression"
+        ],
+        "sequenceB": [
+          "A1-01-01-p-hello-listen",
+          "A1-01-01-p-goodbye-meaning",
+          "A1-01-01-p-hi-meaning",
+          "A1-01-01-e04",
+          "A1-01-01-e01"
+        ]
+      }
+    }
+  ],
+  "failures": [
+    {
+      "name": "programming: strong adaptive rounds and review admission",
+      "error": "AssertionError [ERR_ASSERTION]: Cannot assemble P1-01-01-p-2801-order-words\n    at orderIndexes (file:///D:/coding%E9%A1%B9%E7%9B%AE/%E4%BA%A4%E4%BA%92%E5%BC%8F%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99/tools/test-adaptive-course-browser.mjs:147:10)\n    at fillAnswer (file:///D:/coding%E9%A1%B9%E7%9B%AE/%E4%BA%A4%E4%BA%92%E5%BC%8F%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99/tools/test-adaptive-course-browser.mjs:173:21)\n    at async answer (file:///D:/coding%E9%A1%B9%E7%9B%AE/%E4%BA%A4%E4%BA%92%E5%BC%8F%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99/tools/test-adaptive-course-browser.mjs:187:3)\n    at async finishRound (file:///D:/coding%E9%A1%B9%E7%9B%AE/%E4%BA%A4%E4%BA%92%E5%BC%8F%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99/tools/test-adaptive-course-browser.mjs:218:5)\n    at async file:///D:/coding%E9%A1%B9%E7%9B%AE/%E4%BA%A4%E4%BA%92%E5%BC%8F%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99/tools/test-adaptive-course-browser.mjs:286:21\n    at async scenario (file:///D:/coding%E9%A1%B9%E7%9B%AE/%E4%BA%A4%E4%BA%92%E5%BC%8F%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99/tools/test-adaptive-course-browser.mjs:87:22)\n    at async file:///D:/coding%E9%A1%B9%E7%9B%AE/%E4%BA%A4%E4%BA%92%E5%BC%8F%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99/tools/test-adaptive-course-browser.mjs:276:94"
+    },
+    {
+      "name": "programming: weak adaptive rounds and review admission",
+      "error": "AssertionError [ERR_ASSERTION]: Cannot assemble P1-01-01-p-20-order-words\n    at orderIndexes (file:///D:/coding%E9%A1%B9%E7%9B%AE/%E4%BA%A4%E4%BA%92%E5%BC%8F%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99/tools/test-adaptive-course-browser.mjs:147:10)\n    at fillAnswer (file:///D:/coding%E9%A1%B9%E7%9B%AE/%E4%BA%A4%E4%BA%92%E5%BC%8F%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99/tools/test-adaptive-course-browser.mjs:173:21)\n    at async answer (file:///D:/coding%E9%A1%B9%E7%9B%AE/%E4%BA%A4%E4%BA%92%E5%BC%8F%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99/tools/test-adaptive-course-browser.mjs:187:3)\n    at async finishRound (file:///D:/coding%E9%A1%B9%E7%9B%AE/%E4%BA%A4%E4%BA%92%E5%BC%8F%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99/tools/test-adaptive-course-browser.mjs:218:5)\n    at async file:///D:/coding%E9%A1%B9%E7%9B%AE/%E4%BA%A4%E4%BA%92%E5%BC%8F%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99/tools/test-adaptive-course-browser.mjs:286:21\n    at async scenario (file:///D:/coding%E9%A1%B9%E7%9B%AE/%E4%BA%A4%E4%BA%92%E5%BC%8F%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99/tools/test-adaptive-course-browser.mjs:87:22)\n    at async file:///D:/coding%E9%A1%B9%E7%9B%AE/%E4%BA%A4%E4%BA%92%E5%BC%8F%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99/tools/test-adaptive-course-browser.mjs:276:94"
+    },
+    {
+      "name": "daily: strong adaptive rounds and review admission",
+      "error": "AssertionError [ERR_ASSERTION]: No browser runtime errors\n+ actual - expected\n\n+ [\n+   'Failed to load resource: net::ERR_CONNECTION_REFUSED',\n+   'Failed to load resource: net::ERR_CONNECTION_REFUSED',\n+   'Failed to load resource: net::ERR_CONNECTION_REFUSED',\n+   'Failed to load resource: net::ERR_CONNECTION_REFUSED',\n+   'Failed to load resource: net::ERR_CONNECTION_REFUSED',\n+   'Failed to load resource: net::ERR_CONNECTION_REFUSED'\n+ ]\n- []\n\n    at scenario (file:///D:/coding%E9%A1%B9%E7%9B%AE/%E4%BA%A4%E4%BA%92%E5%BC%8F%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99/tools/test-adaptive-course-browser.mjs:88:12)\n    at async file:///D:/coding%E9%A1%B9%E7%9B%AE/%E4%BA%A4%E4%BA%92%E5%BC%8F%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99/tools/test-adaptive-course-browser.mjs:276:94"
+    }
+  ],
+  "browserErrors": [
+    {
+      "name": "daily: strong adaptive rounds and review admission",
+      "error": "Failed to load resource: net::ERR_CONNECTION_REFUSED"
+    },
+    {
+      "name": "daily: strong adaptive rounds and review admission",
+      "error": "Failed to load resource: net::ERR_CONNECTION_REFUSED"
+    },
+    {
+      "name": "daily: strong adaptive rounds and review admission",
+      "error": "Failed to load resource: net::ERR_CONNECTION_REFUSED"
+    },
+    {
+      "name": "daily: strong adaptive rounds and review admission",
+      "error": "Failed to load resource: net::ERR_CONNECTION_REFUSED"
+    },
+    {
+      "name": "daily: strong adaptive rounds and review admission",
+      "error": "Failed to load resource: net::ERR_CONNECTION_REFUSED"
+    },
+    {
+      "name": "daily: strong adaptive rounds and review admission",
+      "error": "Failed to load resource: net::ERR_CONNECTION_REFUSED"
+    }
+  ],
+  "objectiveAnswers": 234,
+  "selfChecks": 3,
+  "microphoneTested": false,
+  "testedAt": "2026-10-03T01:23:30.144Z"
+}

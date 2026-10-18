@@ -21,7 +21,9 @@ export default function PhonemicChart({ playPhoneme, phonemeError, speaking, ope
   };
   const playing = (id: string, kind: PhonemeAudioKind, slow = false) => speaking === phonemeAudioKey(id, kind, slow);
   return <section className="phonemic-chart" aria-label="英式英语音标表">
-    <div className="phonemic-intro"><h2>英式英语音标表</h2><p>点音标听单音，点例词听完整单词。录音已保存在本地。</p></div>
+    <div className="phonemic-intro"><h2>英式英语音标表</h2><p>点音标听单音，点例词听完整单词。录音已保存在本地。</p>
+      <button type="button" className="phonemic-tutorial-link" onClick={() => openTutorial('foundation-sound-concepts')}>认识元音、辅音和音节</button>
+    </div>
     <div className="phonemic-workspace">
       <div className="phonemic-groups">{phonemeGroups.map(group => <section className={`phonemic-group phonemic-${group.id}`} key={group.id} aria-label={group.title}>
         <header><h3>{group.title}</h3><p>{group.description}</p></header>

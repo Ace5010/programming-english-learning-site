@@ -1,0 +1,24 @@
+
+> programming-english-learning-site@1.0.0 verify
+> python tools/verify_project.py
+
+{"lessons":24,"phrases":86,"audioFiles":172,"revision":"20016f71bffab88f"}
+{"texts":291,"recordings":582,"feedbackSounds":3}
+Foundation assets verified: {
+  historicalTopics: 60,
+  expandedTutorials: 21,
+  texts: 352,
+  recordingVariants: 354,
+  audioFiles: 708,
+  demonstrationFiles: 6
+}
+Phonemic audio verified: { phonemes: 44, recordings: 88, bytes: 2148600 }
+{"texts":7779,"units":5633,"reusedRecordings":6520,"generatedRecordings":4746,"packedFiles":48,"packedBytes":32075136,"verifiedFiles":5902}
+aria: 7241 MP3
+guy: 7241 MP3
+项目：编程英语学习网站
+词汇：3620
+语音：7122
+缺少项目文件：0
+缺少或损坏语音：0
+检查通过：完整项目已汇总。

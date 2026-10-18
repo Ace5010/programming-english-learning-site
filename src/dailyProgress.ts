@@ -567,6 +567,15 @@ export function speechCompletion(exercise: DailyExerciseSpec, draft: DailyDraft)
       || !!draft.speech?.heard?.some(id => exercise.readAloud?.some(item => item.id === id)) };
 }
 
+/** Optional daily practice can always be left; old self-check drafts stay intact. */
+export function submitOptionalDailySpeaking(progress: DailyProgress, lesson: DailyLessonSpec, now = Date.now()): DailyProgress {
+  const session = progress.session;
+  const exercise = session && findDailyExercise(lesson, session.queue[session.index]?.exerciseId);
+  if (!session || exercise?.kind !== 'speak') return progress;
+  const completed = session.draft.speech?.mode === 'read' && checkDailyAnswer(exercise, session.draft).correct;
+  return submitDailyAnswer(progress, lesson, { skipSpeech: !completed }, now);
+}
+
 export function submitDailyAnswer(
   progress: DailyProgress,
   lesson: DailyLessonSpec,

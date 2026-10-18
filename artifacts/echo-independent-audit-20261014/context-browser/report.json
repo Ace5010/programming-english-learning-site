@@ -1,0 +1,52 @@
+[
+  {
+    "width": 1440,
+    "source": "isolated-SQLite-production-handlers",
+    "programmingTargets": [
+      "word-1",
+      "word-2801",
+      "word-3561",
+      "word-20",
+      "word-4",
+      "word-5"
+    ],
+    "dailyId": "hello",
+    "audioPlayed": true,
+    "draftPreserved": true,
+    "exerciseUpdated": true,
+    "dailyDraftPreserved": true,
+    "dailyExerciseUpdated": true,
+    "dailyExerciseId": "A1-01-01-p-hello-oral-repeat",
+    "dailyExerciseKind": "speak",
+    "dailyOutcome": "self",
+    "wordReviewContext": true,
+    "offlineRecovered": true,
+    "closedPageStale": true,
+    "uploads": 11
+  },
+  {
+    "width": 390,
+    "source": "isolated-SQLite-production-handlers",
+    "programmingTargets": [
+      "word-1",
+      "word-2801",
+      "word-3561",
+      "word-20",
+      "word-4",
+      "word-5"
+    ],
+    "dailyId": "hello",
+    "audioPlayed": true,
+    "draftPreserved": true,
+    "exerciseUpdated": true,
+    "dailyDraftPreserved": true,
+    "dailyExerciseUpdated": true,
+    "dailyExerciseId": "A1-01-01-p-hello-oral-repeat",
+    "dailyExerciseKind": "speak",
+    "dailyOutcome": "self",
+    "wordReviewContext": true,
+    "offlineRecovered": true,
+    "closedPageStale": true,
+    "uploads": 11
+  }
+]

@@ -1,0 +1,95 @@
+{
+  "baseURL": "http://127.0.0.1:5186/dist/",
+  "results": [
+    {
+      "name": "layout-lagoon-1440",
+      "width": 1440,
+      "theme": "lagoon",
+      "evidence": {
+        "width": 1440,
+        "content": 1440,
+        "overflow": []
+      }
+    },
+    {
+      "name": "layout-lagoon-390",
+      "width": 390,
+      "theme": "lagoon",
+      "evidence": {
+        "width": 390,
+        "content": 390,
+        "overflow": []
+      }
+    },
+    {
+      "name": "layout-pearl-1440",
+      "width": 1440,
+      "theme": "pearl",
+      "evidence": {
+        "width": 1440,
+        "content": 1440,
+        "overflow": []
+      }
+    },
+    {
+      "name": "layout-pearl-390",
+      "width": 390,
+      "theme": "pearl",
+      "evidence": {
+        "width": 390,
+        "content": 390,
+        "overflow": []
+      }
+    },
+    {
+      "name": "layout-sky-1440",
+      "width": 1440,
+      "theme": "sky",
+      "evidence": {
+        "width": 1440,
+        "content": 1440,
+        "overflow": []
+      }
+    },
+    {
+      "name": "layout-sky-390",
+      "width": 390,
+      "theme": "sky",
+      "evidence": {
+        "width": 390,
+        "content": 390,
+        "overflow": []
+      }
+    },
+    {
+      "name": "layout-mint-1440",
+      "width": 1440,
+      "theme": "mint",
+      "evidence": {
+        "width": 1440,
+        "content": 1440,
+        "overflow": []
+      }
+    },
+    {
+      "name": "layout-mint-390",
+      "width": 390,
+      "theme": "mint",
+      "evidence": {
+        "width": 390,
+        "content": 390,
+        "overflow": []
+      }
+    }
+  ],
+  "failures": [
+    {
+      "name": "flow-1440",
+      "error": "locator.waitFor: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#programming-content').locator('.daily-question[data-exercise-id=\"P1-01-01-e02\"]') to be visible\u001b[22m\n\n    at D:\\vibe项目\\Interactive learning\\tools\\test-programming-word-check-browser.mjs:174:78\n    at async scenario (D:\\vibe项目\\Interactive learning\\tools\\test-programming-word-check-browser.mjs:64:22)\n    at async file:///D:/vibe%E9%A1%B9%E7%9B%AE/Interactive%20learning/tools/test-programming-word-check-browser.mjs:107:34"
+    },
+    {
+      "name": "flow-390",
+      "error": "locator.waitFor: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#programming-content').locator('.daily-question[data-exercise-id=\"P1-01-01-e05\"]') to be visible\u001b[22m\n\n    at D:\\vibe项目\\Interactive learning\\tools\\test-programming-word-check-browser.mjs:174:78\n    at async scenario (D:\\vibe项目\\Interactive learning\\tools\\test-programming-word-check-browser.mjs:64:22)\n    at async file:///D:/vibe%E9%A1%B9%E7%9B%AE/Interactive%20learning/tools/test-programming-word-check-browser.mjs:107:34"
+    }
+  ]
+}

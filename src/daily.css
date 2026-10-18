@@ -204,6 +204,11 @@
 }
 .daily-enter { animation: daily-enter .23s var(--ease) both; }
 .speech-mode { display: inline-flex; flex-wrap: wrap; gap: 4px; padding: 4px; border: 1px solid var(--frame); border-radius: 12px; background: var(--surface-2); }
+.speech-optional-note { margin: 0 0 16px; font-size: 16px; color: var(--muted); }
+.daily-optional-speaking > summary { cursor: pointer; padding: 14px 16px; border: 1px solid var(--accent-line); border-radius: var(--radius); background: var(--accent-soft); font-size: 18px; font-weight: 650; }
+.daily-optional-speaking[open] > summary { margin-bottom: 16px; }
+.daily-optional-speaking .speech-service-note { margin-top: 0; padding-top: 0; border-top: 0; font-size: 16px; }
+.daily-optional-speaking .speech-mic:not(.listening) { background: var(--palette-action, var(--accent-soft)); color: var(--action-ink); border-color: var(--accent-line); }
 .speech-mode button { padding: 9px 17px; min-height: 42px; border: 1px solid transparent; border-radius: 9px; background: transparent; font: inherit; }
 .speech-mode button[aria-pressed='true'] { border-color: var(--accent-line); color: var(--accent-deep); background: var(--accent-soft); font-weight: 650; }
 .speech-instruction { color: var(--muted); font-size: 16px; margin: 20px 0; }

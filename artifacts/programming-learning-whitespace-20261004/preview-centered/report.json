@@ -1,0 +1,33 @@
+{
+  "baseURL": "http://127.0.0.1:5186/",
+  "results": [
+    {
+      "name": "layout-lagoon-1440",
+      "width": 1440,
+      "theme": "lagoon",
+      "evidence": {
+        "width": 1440,
+        "content": 1440,
+        "overflow": [],
+        "styles": {
+          "color": "rgb(37, 76, 85)",
+          "size": 28,
+          "accent": "#254c55"
+        },
+        "card": {
+          "x": 130,
+          "y": 426.71875,
+          "width": 440,
+          "height": 458.578125
+        },
+        "testEntry": {
+          "x": 130,
+          "y": 1953.640625,
+          "width": 900,
+          "height": 158.25
+        }
+      }
+    }
+  ],
+  "failures": []
+}

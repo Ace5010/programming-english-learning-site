@@ -1,0 +1,46 @@
+{
+  "checkedAt": "2026-10-17T12:47:33.410Z",
+  "restoredOriginalSource": {
+    "src/DailyEnglish.tsx": {
+      "matchesInitialBytes": false,
+      "matchesOriginalSource": true
+    },
+    "src/progressSync.ts": {
+      "matchesInitialBytes": true,
+      "matchesOriginalSource": true
+    },
+    "src/SyncPanel.tsx": {
+      "matchesInitialBytes": false,
+      "matchesOriginalSource": true
+    },
+    "functions/api/sync.ts": {
+      "matchesInitialBytes": true,
+      "matchesOriginalSource": true
+    },
+    "src/syncProtocol.ts": {
+      "matchesInitialBytes": true,
+      "matchesOriginalSource": true
+    },
+    "src/syncClient.ts": {
+      "matchesInitialBytes": true,
+      "matchesOriginalSource": true
+    },
+    "src/main.tsx": {
+      "matchesInitialBytes": false,
+      "matchesOriginalSource": true
+    },
+    "public/_routes.json": {
+      "matchesInitialBytes": true,
+      "matchesOriginalSource": true
+    },
+    "src/App.tsx": {
+      "matchesInitialBytes": false,
+      "matchesOriginalSource": true
+    },
+    "public/_headers": {
+      "matchesInitialBytes": true,
+      "matchesOriginalSource": true
+    }
+  },
+  "unrelatedFilesPreserved": 12
+}

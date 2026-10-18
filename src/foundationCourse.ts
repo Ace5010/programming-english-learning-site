@@ -1,6 +1,6 @@
 import type { DailyPhrase, DailyUnit } from './dailyCourse';
 import type { LearningExercise, LearningLesson } from './learningTypes';
-import { foundationTutorials, type FoundationTutorial } from './foundationTutorials.ts';
+import { foundationSoundConcepts, foundationTutorials, type FoundationConceptGuide, type FoundationTutorial } from './foundationTutorials.ts';
 
 export const FOUNDATION_KEY = 'codewords-foundation-v1';
 export const foundationSources = {
@@ -416,7 +416,7 @@ foundationTopics.forEach(item => { item.prerequisiteIds = (prerequisites[item.id
 export const foundationPhrases = foundationTopics.flatMap(topic => topic.examples);
 // A separate reading catalog extends equivalent pages without changing old
 // lessons, exercise IDs, prerequisites, or progress parsing.
-export const foundationTutorialCatalog: (FoundationTopic & { tutorial?: FoundationTutorial })[] = foundationTopics.map(item => {
+export const foundationTutorialCatalog: (FoundationTopic & { tutorial?: FoundationTutorial; concepts?: FoundationConceptGuide })[] = foundationTopics.map(item => {
   const tutorial = foundationTutorials.find(tutorial => tutorial.id === item.id);
   return tutorial ? { ...item, group: tutorial.group, tutorial } : item;
 });
@@ -425,6 +425,9 @@ for (const tutorial of foundationTutorials) if (!foundationTutorialCatalog.some(
     explanation: [tutorial.question, tutorial.takeaway], examples: tutorial.sections.flatMap(section => section.examples ?? []),
     checks: [], prerequisiteIds: [], source: tutorial.sound ? 'sounds' : 'grammar', tutorial });
 }
+foundationTutorialCatalog.push({ id: foundationSoundConcepts.id, title: foundationSoundConcepts.title, group: foundationSoundConcepts.group, sound: true,
+  explanation: foundationSoundConcepts.sections.flatMap(section => section.text), examples: foundationSoundConcepts.sections.flatMap(section => section.examples ?? []),
+  checks: [], prerequisiteIds: [], source: 'sounds', concepts: foundationSoundConcepts });
 // Kept only for the existing audio manifest; no alphabet teaching UI uses this.
 export const foundationAlphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('').map(letter => ({ id: `foundation-letter-${letter.toLowerCase()}`, en: letter, zh: `${letter} / ${letter.toLowerCase()}` }));
 function arrangeTokens(tokens: string[], id: string) {

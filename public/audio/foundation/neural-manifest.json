@@ -9224,6 +9224,32 @@
       "synthesisSha256": "af8a2142320b1862bd2d293d3826dd4660c090c5e90ce881b4bf0f4c3eb70fe5",
       "generatedAt": "2026-10-03T06:08:30+00:00",
       "spoken": "We reed books."
+    },
+    "aria/f-0baaf6f25d1c5da8.mp3": {
+      "bytes": 11232,
+      "fileSha256": "4b2760078a09985bd5633021f26d6427040cc5674da4e007653e9c950cd0cd29",
+      "durationSeconds": 1.872,
+      "sampleRate": 24000,
+      "channels": 1,
+      "id": "f-0baaf6f25d1c5da8",
+      "text": "American",
+      "voice": "en-US-AriaNeural",
+      "rate": "+0%",
+      "synthesisSha256": "3c736b562e9130f3935da19b2fd294a5185ebb17984b258ed84c66d9ddf92d63",
+      "generatedAt": "2026-10-05T06:42:23+00:00"
+    },
+    "guy/f-0baaf6f25d1c5da8.mp3": {
+      "bytes": 11232,
+      "fileSha256": "34da6093b8544f04fbb3f9e5cdaba2e24faba907ea9ad6da08a9a1c3e8d3902b",
+      "durationSeconds": 1.872,
+      "sampleRate": 24000,
+      "channels": 1,
+      "id": "f-0baaf6f25d1c5da8",
+      "text": "American",
+      "voice": "en-US-GuyNeural",
+      "rate": "+0%",
+      "synthesisSha256": "5ede74ce1bdd880b4b4aa84490a993192223176bd7e311539570bb1e1db925b8",
+      "generatedAt": "2026-10-05T06:42:23+00:00"
     }
   }
 }

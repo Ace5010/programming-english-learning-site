@@ -1,0 +1,55 @@
+.daily-layout.course-home { grid-template-columns: minmax(0, 1fr) minmax(260px, .36fr); gap: 28px; }
+.course-home-main { display: grid; gap: 24px; min-width: 0; }
+.course-current, .course-details { padding: 26px; }
+.course-home h2 { margin: 0 0 22px; font-family: var(--display-font); font-size: 23px; line-height: 1.4; }
+.course-current-body { display: grid; grid-template-columns: minmax(170px, .75fr) minmax(0, 1.35fr); gap: 28px; align-items: stretch; }
+.course-illustration { display: grid; place-items: center; min-height: 285px; overflow: hidden; border-radius: var(--radius); background: var(--surface-2); color: var(--ink-soft); }
+.course-illustration svg { display: block; width: 100%; max-width: 280px; height: auto; }
+.course-current-copy { min-width: 0; display: flex; flex-direction: column; }
+.course-current-copy h3 { margin: 0 0 12px; font-size: 25px; line-height: 1.45; overflow-wrap: anywhere; }
+.course-home p { line-height: 1.75; }
+.course-goal { margin: 0; color: var(--ink-soft); }
+.course-facts { display: flex; flex-wrap: wrap; gap: 10px; margin: 22px 0 0; }
+.course-facts:empty { display: none; }
+.course-facts > div { display: flex; flex-direction: column; gap: 3px; padding: 12px 18px; border-radius: 10px; background: var(--surface-2); }
+.course-facts span { font-size: 15px; color: var(--muted); }
+.course-facts strong { font-size: 17px; font-weight: 600; }
+.course-arrangement { margin: 20px 0; color: var(--muted); font-size: 15px; }
+.course-start { margin-top: auto; padding-top: 20px; border-top: 1px solid var(--line); }
+:root[data-theme] .course-start .daily-button.primary { background: var(--ink); border-color: var(--ink); color: var(--surface); min-height: 48px; padding-inline: 24px; }
+:root[data-theme] .course-start .daily-button.primary:hover:not(:disabled) { background: var(--ink-soft); border-color: var(--ink-soft); }
+.course-detail-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.course-detail-grid > section { min-width: 0; border: 1px solid var(--line); border-radius: 12px; padding: 20px 16px; }
+.course-detail-grid > section > .icon { width: 24px; height: 24px; margin-bottom: 14px; color: var(--ink-soft); }
+.course-detail-grid h3 { margin: 0 0 16px; font-size: 17px; }
+.course-detail-grid p { margin: 0; color: var(--ink-soft); font-size: 16px; }
+.course-detail-grid .course-detail-note { margin-top: 16px; color: var(--muted); font-size: 15px; }
+.course-scenes { list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; line-height: 1.75; }
+.course-examples { display: grid; gap: 16px; }
+.course-examples .course-example-meaning { display: block; font-size: 18px; font-weight: 650; line-height: 1.5; }
+.course-examples .daily-phrase-content { font-family: var(--word-font); font-size: 16px; line-height: 1.6; overflow-wrap: anywhere; }
+.course-home .daily-note { padding: 26px; }
+.course-home .daily-total { margin: 0 0 20px; color: var(--ink); }
+.course-home .daily-total strong { font-size: 48px; margin: 0 6px; }
+.course-home .daily-note > .daily-button { width: 100%; margin-top: 24px; border: 1px solid var(--line); background: var(--surface-2); }
+@media (max-width: 1100px) {
+  .daily-layout.course-home { grid-template-columns: minmax(0, 1fr) 260px; gap: 20px; }
+  .course-current-body { grid-template-columns: minmax(130px, .65fr) minmax(0, 1.35fr); gap: 20px; }
+  .course-current, .course-details { padding: 22px; }
+  .course-detail-grid { grid-template-columns: 1fr; }
+  .course-detail-grid > section > .icon { display: none; }
+  .course-examples { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (max-width: 850px) {
+  .daily-layout.course-home { grid-template-columns: minmax(0, 1fr); }
+  .course-home .daily-rail { display: block; }
+}
+@media (max-width: 540px) {
+  .course-current, .course-details, .course-home .daily-note { padding: 20px; }
+  .course-current-body { grid-template-columns: minmax(0, 1fr); }
+  .course-illustration { min-height: 0; height: 160px; }
+  .course-illustration svg { width: 175px; }
+  .course-current-copy h3 { font-size: 22px; }
+  .course-examples { grid-template-columns: minmax(0, 1fr); }
+  .course-start .daily-button { width: 100%; }
+}

@@ -1,0 +1,361 @@
+{
+  "results": [
+    {
+      "width": 1440,
+      "theme": "lagoon",
+      "layout": {
+        "scroll": 1440,
+        "fontSizes": [
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          17
+        ],
+        "outside": false
+      },
+      "isolatedRecordsPreserved": true
+    },
+    {
+      "width": 390,
+      "theme": "lagoon",
+      "layout": {
+        "scroll": 390,
+        "fontSizes": [
+          17,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          17
+        ],
+        "outside": false
+      },
+      "isolatedRecordsPreserved": true
+    },
+    {
+      "width": 320,
+      "theme": "lagoon",
+      "layout": {
+        "scroll": 320,
+        "fontSizes": [
+          17,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          17
+        ],
+        "outside": false
+      },
+      "isolatedRecordsPreserved": true
+    },
+    {
+      "width": 320,
+      "theme": "pearl",
+      "layout": {
+        "scroll": 320,
+        "fontSizes": [
+          17,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          17
+        ],
+        "outside": false
+      },
+      "isolatedRecordsPreserved": true
+    },
+    {
+      "width": 320,
+      "theme": "sky",
+      "layout": {
+        "scroll": 320,
+        "fontSizes": [
+          17,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          17
+        ],
+        "outside": false
+      },
+      "isolatedRecordsPreserved": true
+    },
+    {
+      "width": 320,
+      "theme": "mint",
+      "layout": {
+        "scroll": 320,
+        "fontSizes": [
+          17,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          17
+        ],
+        "outside": false
+      },
+      "isolatedRecordsPreserved": true
+    }
+  ],
+  "audio": [
+    {
+      "voice": "aria",
+      "word": "teacher",
+      "slow": false,
+      "events": [
+        {
+          "event": "playing",
+          "src": "http://127.0.0.1:5186/audio/foundation/aria/f-1057a9604e04b274.mp3?v=teacher",
+          "rate": 1,
+          "preservesPitch": true
+        },
+        {
+          "event": "ended",
+          "src": "http://127.0.0.1:5186/audio/foundation/aria/f-1057a9604e04b274.mp3?v=teacher",
+          "rate": 1,
+          "preservesPitch": true
+        }
+      ]
+    },
+    {
+      "voice": "aria",
+      "word": "teacher",
+      "slow": true,
+      "events": [
+        {
+          "event": "playing",
+          "src": "http://127.0.0.1:5186/audio/foundation/aria/f-1057a9604e04b274.mp3?v=teacher",
+          "rate": 0.72,
+          "preservesPitch": true
+        },
+        {
+          "event": "ended",
+          "src": "http://127.0.0.1:5186/audio/foundation/aria/f-1057a9604e04b274.mp3?v=teacher",
+          "rate": 0.72,
+          "preservesPitch": true
+        }
+      ]
+    },
+    {
+      "voice": "aria",
+      "word": "American",
+      "slow": false,
+      "events": [
+        {
+          "event": "playing",
+          "src": "http://127.0.0.1:5186/audio/foundation/aria/f-0baaf6f25d1c5da8.mp3?v=American",
+          "rate": 1,
+          "preservesPitch": true
+        },
+        {
+          "event": "ended",
+          "src": "http://127.0.0.1:5186/audio/foundation/aria/f-0baaf6f25d1c5da8.mp3?v=American",
+          "rate": 1,
+          "preservesPitch": true
+        }
+      ]
+    },
+    {
+      "voice": "aria",
+      "word": "American",
+      "slow": true,
+      "events": [
+        {
+          "event": "playing",
+          "src": "http://127.0.0.1:5186/audio/foundation/aria/f-0baaf6f25d1c5da8.mp3?v=American",
+          "rate": 0.72,
+          "preservesPitch": true
+        },
+        {
+          "event": "ended",
+          "src": "http://127.0.0.1:5186/audio/foundation/aria/f-0baaf6f25d1c5da8.mp3?v=American",
+          "rate": 0.72,
+          "preservesPitch": true
+        }
+      ]
+    },
+    {
+      "voice": "aria",
+      "word": "about",
+      "slow": false,
+      "events": [
+        {
+          "event": "playing",
+          "src": "http://127.0.0.1:5186/audio/foundation/aria/f-a4262e1c9bcbc172.mp3?v=about",
+          "rate": 1,
+          "preservesPitch": true
+        },
+        {
+          "event": "ended",
+          "src": "http://127.0.0.1:5186/audio/foundation/aria/f-a4262e1c9bcbc172.mp3?v=about",
+          "rate": 1,
+          "preservesPitch": true
+        }
+      ]
+    },
+    {
+      "voice": "aria",
+      "word": "about",
+      "slow": true,
+      "events": [
+        {
+          "event": "playing",
+          "src": "http://127.0.0.1:5186/audio/foundation/aria/f-a4262e1c9bcbc172.mp3?v=about",
+          "rate": 0.72,
+          "preservesPitch": true
+        },
+        {
+          "event": "ended",
+          "src": "http://127.0.0.1:5186/audio/foundation/aria/f-a4262e1c9bcbc172.mp3?v=about",
+          "rate": 0.72,
+          "preservesPitch": true
+        }
+      ]
+    },
+    {
+      "voice": "guy",
+      "word": "teacher",
+      "slow": false,
+      "events": [
+        {
+          "event": "playing",
+          "src": "http://127.0.0.1:5186/audio/foundation/guy/f-1057a9604e04b274.mp3?v=teacher",
+          "rate": 1,
+          "preservesPitch": true
+        },
+        {
+          "event": "ended",
+          "src": "http://127.0.0.1:5186/audio/foundation/guy/f-1057a9604e04b274.mp3?v=teacher",
+          "rate": 1,
+          "preservesPitch": true
+        }
+      ]
+    },
+    {
+      "voice": "guy",
+      "word": "teacher",
+      "slow": true,
+      "events": [
+        {
+          "event": "playing",
+          "src": "http://127.0.0.1:5186/audio/foundation/guy/f-1057a9604e04b274.mp3?v=teacher",
+          "rate": 0.72,
+          "preservesPitch": true
+        },
+        {
+          "event": "ended",
+          "src": "http://127.0.0.1:5186/audio/foundation/guy/f-1057a9604e04b274.mp3?v=teacher",
+          "rate": 0.72,
+          "preservesPitch": true
+        }
+      ]
+    },
+    {
+      "voice": "guy",
+      "word": "American",
+      "slow": false,
+      "events": [
+        {
+          "event": "playing",
+          "src": "http://127.0.0.1:5186/audio/foundation/guy/f-0baaf6f25d1c5da8.mp3?v=American",
+          "rate": 1,
+          "preservesPitch": true
+        },
+        {
+          "event": "ended",
+          "src": "http://127.0.0.1:5186/audio/foundation/guy/f-0baaf6f25d1c5da8.mp3?v=American",
+          "rate": 1,
+          "preservesPitch": true
+        }
+      ]
+    },
+    {
+      "voice": "guy",
+      "word": "American",
+      "slow": true,
+      "events": [
+        {
+          "event": "playing",
+          "src": "http://127.0.0.1:5186/audio/foundation/guy/f-0baaf6f25d1c5da8.mp3?v=American",
+          "rate": 0.72,
+          "preservesPitch": true
+        },
+        {
+          "event": "ended",
+          "src": "http://127.0.0.1:5186/audio/foundation/guy/f-0baaf6f25d1c5da8.mp3?v=American",
+          "rate": 0.72,
+          "preservesPitch": true
+        }
+      ]
+    },
+    {
+      "voice": "guy",
+      "word": "about",
+      "slow": false,
+      "events": [
+        {
+          "event": "playing",
+          "src": "http://127.0.0.1:5186/audio/foundation/guy/f-a4262e1c9bcbc172.mp3?v=about",
+          "rate": 1,
+          "preservesPitch": true
+        },
+        {
+          "event": "ended",
+          "src": "http://127.0.0.1:5186/audio/foundation/guy/f-a4262e1c9bcbc172.mp3?v=about",
+          "rate": 1,
+          "preservesPitch": true
+        }
+      ]
+    },
+    {
+      "voice": "guy",
+      "word": "about",
+      "slow": true,
+      "events": [
+        {
+          "event": "playing",
+          "src": "http://127.0.0.1:5186/audio/foundation/guy/f-a4262e1c9bcbc172.mp3?v=about",
+          "rate": 0.72,
+          "preservesPitch": true
+        },
+        {
+          "event": "ended",
+          "src": "http://127.0.0.1:5186/audio/foundation/guy/f-a4262e1c9bcbc172.mp3?v=about",
+          "rate": 0.72,
+          "preservesPitch": true
+        }
+      ]
+    }
+  ],
+  "errors": []
+}

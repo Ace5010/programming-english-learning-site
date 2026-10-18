@@ -1,0 +1,583 @@
+{
+  "version": 1,
+  "revision": 438,
+  "lessons": {
+    "A1-01-01": {
+      "completedAt": 1790990678714,
+      "lastPracticedAt": 1790990699155,
+      "skills": {
+        "meaning": {
+          "attempts": 42,
+          "independentAnswers": 0,
+          "assistedAnswers": 7,
+          "revealedAnswers": 35,
+          "selfReports": 0,
+          "successDays": 0,
+          "lastPracticedAt": 1790990699155,
+          "lastSuccessDay": "",
+          "lastDifficultyDay": "2026-10-03",
+          "dueAt": 1791077099155,
+          "needsPractice": true
+        },
+        "listening": {
+          "attempts": 42,
+          "independentAnswers": 0,
+          "assistedAnswers": 17,
+          "revealedAnswers": 25,
+          "selfReports": 0,
+          "successDays": 0,
+          "lastPracticedAt": 1790990697223,
+          "lastSuccessDay": "",
+          "lastDifficultyDay": "2026-10-03",
+          "dueAt": 1791077097223,
+          "needsPractice": true
+        },
+        "writing": {
+          "attempts": 36,
+          "independentAnswers": 0,
+          "assistedAnswers": 36,
+          "revealedAnswers": 0,
+          "selfReports": 0,
+          "successDays": 0,
+          "lastPracticedAt": 1790990699066,
+          "lastSuccessDay": "",
+          "lastDifficultyDay": "2026-10-03",
+          "dueAt": 1791077099066,
+          "needsPractice": true
+        },
+        "speaking": {
+          "attempts": 0,
+          "independentAnswers": 0,
+          "assistedAnswers": 0,
+          "revealedAnswers": 0,
+          "selfReports": 0,
+          "successDays": 0,
+          "lastPracticedAt": 0,
+          "lastSuccessDay": "",
+          "lastDifficultyDay": "",
+          "dueAt": 0,
+          "needsPractice": false
+        }
+      },
+      "errors": {
+        "A1-01-01-p-hi-meaning": {
+          "lastAt": 1790990698921,
+          "lastDay": "2026-10-03",
+          "dueAt": 1791077098921,
+          "outcome": "revealed",
+          "resolvedAt": 0
+        },
+        "A1-01-01-p-bye-listen": {
+          "lastAt": 1790990693474,
+          "lastDay": "2026-10-03",
+          "dueAt": 1791077093474,
+          "outcome": "revealed",
+          "resolvedAt": 0
+        },
+        "A1-01-01-e02": {
+          "lastAt": 1790990695036,
+          "lastDay": "2026-10-03",
+          "dueAt": 1791077095036,
+          "outcome": "assisted",
+          "resolvedAt": 0
+        },
+        "A1-01-01-p-hello-listen": {
+          "lastAt": 1790990695365,
+          "lastDay": "2026-10-03",
+          "dueAt": 1791077095365,
+          "outcome": "revealed",
+          "resolvedAt": 0
+        },
+        "A1-01-01-e04": {
+          "lastAt": 1790990695517,
+          "lastDay": "2026-10-03",
+          "dueAt": 1791077095517,
+          "outcome": "assisted",
+          "resolvedAt": 0
+        },
+        "A1-01-01-p-goodbye-expression": {
+          "lastAt": 1790990695627,
+          "lastDay": "2026-10-03",
+          "dueAt": 1791077095627,
+          "outcome": "revealed",
+          "resolvedAt": 0
+        },
+        "A1-01-01-r01": {
+          "lastAt": 1790990695748,
+          "lastDay": "2026-10-03",
+          "dueAt": 1791077095748,
+          "outcome": "assisted",
+          "resolvedAt": 0
+        },
+        "A1-01-01-p-hi-expression": {
+          "lastAt": 1790990695845,
+          "lastDay": "2026-10-03",
+          "dueAt": 1791077095845,
+          "outcome": "revealed",
+          "resolvedAt": 0
+        },
+        "A1-01-01-p-goodbye-write": {
+          "lastAt": 1790990695965,
+          "lastDay": "2026-10-03",
+          "dueAt": 1791077095965,
+          "outcome": "assisted",
+          "resolvedAt": 0
+        },
+        "A1-01-01-p-goodbye-listen": {
+          "lastAt": 1790990696059,
+          "lastDay": "2026-10-03",
+          "dueAt": 1791077096059,
+          "outcome": "revealed",
+          "resolvedAt": 0
+        },
+        "A1-01-01-p-hi-write": {
+          "lastAt": 1790990696143,
+          "lastDay": "2026-10-03",
+          "dueAt": 1791077096143,
+          "outcome": "assisted",
+          "resolvedAt": 0
+        },
+        "A1-01-01-p-hello-meaning": {
+          "lastAt": 1790990696226,
+          "lastDay": "2026-10-03",
+          "dueAt": 1791077096226,
+          "outcome": "revealed",
+          "resolvedAt": 0
+        },
+        "A1-01-06-p-goodbye-letters": {
+          "lastAt": 1790990696352,
+          "lastDay": "2026-10-03",
+          "dueAt": 1791077096352,
+          "outcome": "assisted",
+          "resolvedAt": 0
+        },
+        "A1-01-06-p-goodbye-listen": {
+          "lastAt": 1790990697223,
+          "lastDay": "2026-10-03",
+          "dueAt": 1791077097223,
+          "outcome": "revealed",
+          "resolvedAt": 0
+        },
+        "A1-01-01-p-bye-write": {
+          "lastAt": 1790990698369,
+          "lastDay": "2026-10-03",
+          "dueAt": 1791077098369,
+          "outcome": "assisted",
+          "resolvedAt": 0
+        },
+        "A1-01-01-e01": {
+          "lastAt": 1790990698641,
+          "lastDay": "2026-10-03",
+          "dueAt": 1791077098641,
+          "outcome": "revealed",
+          "resolvedAt": 0
+        },
+        "A1-01-06-p-goodbye-meaning": {
+          "lastAt": 1790990698810,
+          "lastDay": "2026-10-03",
+          "dueAt": 1791077098810,
+          "outcome": "assisted",
+          "resolvedAt": 0
+        },
+        "A1-01-01-p-hi-listen": {
+          "lastAt": 1790990693170,
+          "lastDay": "2026-10-03",
+          "dueAt": 1791077093170,
+          "outcome": "revealed",
+          "resolvedAt": 0
+        },
+        "A1-01-01-e03": {
+          "lastAt": 1790990699066,
+          "lastDay": "2026-10-03",
+          "dueAt": 1791077099066,
+          "outcome": "assisted",
+          "resolvedAt": 0
+        },
+        "A1-01-01-p-bye-meaning": {
+          "lastAt": 1790990699155,
+          "lastDay": "2026-10-03",
+          "dueAt": 1791077099155,
+          "outcome": "revealed",
+          "resolvedAt": 0
+        }
+      }
+    }
+  },
+  "session": null,
+  "knowledge": {
+    "hello": {
+      "firstLearnedAt": 1790990676892,
+      "lessonIds": [
+        "A1-01-01"
+      ],
+      "skills": {
+        "meaning": {
+          "attempts": 12,
+          "independentAnswers": 0,
+          "assistedAnswers": 0,
+          "revealedAnswers": 12,
+          "selfReports": 0,
+          "successDays": 0,
+          "lastPracticedAt": 1790990698641,
+          "lastSuccessDay": "",
+          "lastDifficultyDay": "2026-10-03",
+          "dueAt": 1791077098641,
+          "needsPractice": true
+        },
+        "listening": {
+          "attempts": 6,
+          "independentAnswers": 0,
+          "assistedAnswers": 0,
+          "revealedAnswers": 6,
+          "selfReports": 0,
+          "successDays": 0,
+          "lastPracticedAt": 1790990695365,
+          "lastSuccessDay": "",
+          "lastDifficultyDay": "2026-10-03",
+          "dueAt": 1791077095365,
+          "needsPractice": true
+        },
+        "writing": {
+          "attempts": 6,
+          "independentAnswers": 0,
+          "assistedAnswers": 6,
+          "revealedAnswers": 0,
+          "selfReports": 0,
+          "successDays": 0,
+          "lastPracticedAt": 1790990699066,
+          "lastSuccessDay": "",
+          "lastDifficultyDay": "2026-10-03",
+          "dueAt": 1791077099066,
+          "needsPractice": true
+        },
+        "speaking": {
+          "attempts": 0,
+          "independentAnswers": 0,
+          "assistedAnswers": 0,
+          "revealedAnswers": 0,
+          "selfReports": 0,
+          "successDays": 0,
+          "lastPracticedAt": 0,
+          "lastSuccessDay": "",
+          "lastDifficultyDay": "",
+          "dueAt": 0,
+          "needsPractice": false
+        }
+      }
+    },
+    "hi": {
+      "firstLearnedAt": 1790990676892,
+      "lessonIds": [
+        "A1-01-01"
+      ],
+      "skills": {
+        "meaning": {
+          "attempts": 12,
+          "independentAnswers": 0,
+          "assistedAnswers": 1,
+          "revealedAnswers": 11,
+          "selfReports": 0,
+          "successDays": 0,
+          "lastPracticedAt": 1790990698921,
+          "lastSuccessDay": "",
+          "lastDifficultyDay": "2026-10-03",
+          "dueAt": 1791077098921,
+          "needsPractice": true
+        },
+        "listening": {
+          "attempts": 6,
+          "independentAnswers": 0,
+          "assistedAnswers": 5,
+          "revealedAnswers": 1,
+          "selfReports": 0,
+          "successDays": 0,
+          "lastPracticedAt": 1790990693170,
+          "lastSuccessDay": "",
+          "lastDifficultyDay": "2026-10-03",
+          "dueAt": 1791077093170,
+          "needsPractice": true
+        },
+        "writing": {
+          "attempts": 12,
+          "independentAnswers": 0,
+          "assistedAnswers": 12,
+          "revealedAnswers": 0,
+          "selfReports": 0,
+          "successDays": 0,
+          "lastPracticedAt": 1790990696143,
+          "lastSuccessDay": "",
+          "lastDifficultyDay": "2026-10-03",
+          "dueAt": 1791077096143,
+          "needsPractice": true
+        },
+        "speaking": {
+          "attempts": 0,
+          "independentAnswers": 0,
+          "assistedAnswers": 0,
+          "revealedAnswers": 0,
+          "selfReports": 0,
+          "successDays": 0,
+          "lastPracticedAt": 0,
+          "lastSuccessDay": "",
+          "lastDifficultyDay": "",
+          "dueAt": 0,
+          "needsPractice": false
+        }
+      }
+    },
+    "goodbye": {
+      "firstLearnedAt": 1790990676892,
+      "lessonIds": [
+        "A1-01-01",
+        "A1-01-06"
+      ],
+      "skills": {
+        "meaning": {
+          "attempts": 12,
+          "independentAnswers": 0,
+          "assistedAnswers": 6,
+          "revealedAnswers": 6,
+          "selfReports": 0,
+          "successDays": 0,
+          "lastPracticedAt": 1790990698810,
+          "lastSuccessDay": "",
+          "lastDifficultyDay": "2026-10-03",
+          "dueAt": 1791077098810,
+          "needsPractice": true
+        },
+        "listening": {
+          "attempts": 18,
+          "independentAnswers": 0,
+          "assistedAnswers": 6,
+          "revealedAnswers": 12,
+          "selfReports": 0,
+          "successDays": 0,
+          "lastPracticedAt": 1790990697223,
+          "lastSuccessDay": "",
+          "lastDifficultyDay": "2026-10-03",
+          "dueAt": 1791077097223,
+          "needsPractice": true
+        },
+        "writing": {
+          "attempts": 12,
+          "independentAnswers": 0,
+          "assistedAnswers": 12,
+          "revealedAnswers": 0,
+          "selfReports": 0,
+          "successDays": 0,
+          "lastPracticedAt": 1790990696352,
+          "lastSuccessDay": "",
+          "lastDifficultyDay": "2026-10-03",
+          "dueAt": 1791077096352,
+          "needsPractice": true
+        },
+        "speaking": {
+          "attempts": 0,
+          "independentAnswers": 0,
+          "assistedAnswers": 0,
+          "revealedAnswers": 0,
+          "selfReports": 0,
+          "successDays": 0,
+          "lastPracticedAt": 0,
+          "lastSuccessDay": "",
+          "lastDifficultyDay": "",
+          "dueAt": 0,
+          "needsPractice": false
+        }
+      }
+    },
+    "bye": {
+      "firstLearnedAt": 1790990676892,
+      "lessonIds": [
+        "A1-01-01"
+      ],
+      "skills": {
+        "meaning": {
+          "attempts": 6,
+          "independentAnswers": 0,
+          "assistedAnswers": 0,
+          "revealedAnswers": 6,
+          "selfReports": 0,
+          "successDays": 0,
+          "lastPracticedAt": 1790990699155,
+          "lastSuccessDay": "",
+          "lastDifficultyDay": "2026-10-03",
+          "dueAt": 1791077099155,
+          "needsPractice": true
+        },
+        "listening": {
+          "attempts": 12,
+          "independentAnswers": 0,
+          "assistedAnswers": 6,
+          "revealedAnswers": 6,
+          "selfReports": 0,
+          "successDays": 0,
+          "lastPracticedAt": 1790990695748,
+          "lastSuccessDay": "",
+          "lastDifficultyDay": "2026-10-03",
+          "dueAt": 1791077095748,
+          "needsPractice": true
+        },
+        "writing": {
+          "attempts": 6,
+          "independentAnswers": 0,
+          "assistedAnswers": 6,
+          "revealedAnswers": 0,
+          "selfReports": 0,
+          "successDays": 0,
+          "lastPracticedAt": 1790990698369,
+          "lastSuccessDay": "",
+          "lastDifficultyDay": "2026-10-03",
+          "dueAt": 1791077098369,
+          "needsPractice": true
+        },
+        "speaking": {
+          "attempts": 0,
+          "independentAnswers": 0,
+          "assistedAnswers": 0,
+          "revealedAnswers": 0,
+          "selfReports": 0,
+          "successDays": 0,
+          "lastPracticedAt": 0,
+          "lastSuccessDay": "",
+          "lastDifficultyDay": "",
+          "dueAt": 0,
+          "needsPractice": false
+        }
+      }
+    }
+  },
+  "learning": {
+    "version": 1,
+    "turns": 120,
+    "rounds": 6,
+    "targets": {
+      "hello": {
+        "introducedAt": 1790990676892,
+        "confidence": 0,
+        "abilities": {
+          "listening": 0,
+          "meaning": 0,
+          "writing": 0
+        },
+        "lastSeenTurn": 119,
+        "lastFailureTurn": 119,
+        "signatures": [],
+        "transfer": false,
+        "readyAt": 0,
+        "independentRecallAt": 0,
+        "evidence": {
+          "recognition": {
+            "attempts": 12,
+            "independent": 0,
+            "assisted": 0,
+            "revealed": 12,
+            "elapsedMs": 1177
+          }
+        },
+        "lastSessionId": "1790990693070-adaptive-631v7n",
+        "lastEvidenceAt": 1790990699066
+      },
+      "hi": {
+        "introducedAt": 1790990676892,
+        "confidence": 0,
+        "abilities": {
+          "meaning": 0,
+          "writing": 0,
+          "listening": 0
+        },
+        "lastSeenTurn": 118,
+        "lastFailureTurn": 118,
+        "signatures": [],
+        "transfer": false,
+        "readyAt": 0,
+        "independentRecallAt": 0,
+        "lastEvidenceAt": 1790990698921,
+        "evidence": {
+          "recognition": {
+            "attempts": 12,
+            "independent": 0,
+            "assisted": 6,
+            "revealed": 6,
+            "elapsedMs": 1296
+          },
+          "recall": {
+            "attempts": 12,
+            "independent": 0,
+            "assisted": 12,
+            "revealed": 0,
+            "elapsedMs": 1376
+          }
+        },
+        "lastSessionId": "1790990693070-adaptive-631v7n"
+      },
+      "goodbye": {
+        "introducedAt": 1790990676892,
+        "confidence": 0,
+        "abilities": {
+          "listening": 0,
+          "meaning": 0,
+          "writing": 0
+        },
+        "lastSeenTurn": 117,
+        "lastFailureTurn": 117,
+        "signatures": [],
+        "transfer": false,
+        "readyAt": 0,
+        "independentRecallAt": 0,
+        "lastEvidenceAt": 1790990698810,
+        "evidence": {
+          "recognition": {
+            "attempts": 24,
+            "independent": 0,
+            "assisted": 12,
+            "revealed": 12,
+            "elapsedMs": 4635
+          },
+          "recall": {
+            "attempts": 6,
+            "independent": 0,
+            "assisted": 6,
+            "revealed": 0,
+            "elapsedMs": 619
+          }
+        },
+        "lastSessionId": "1790990693070-adaptive-631v7n"
+      },
+      "bye": {
+        "introducedAt": 1790990676892,
+        "confidence": 0,
+        "abilities": {
+          "listening": 0,
+          "writing": 0,
+          "meaning": 0
+        },
+        "lastSeenTurn": 120,
+        "lastFailureTurn": 120,
+        "signatures": [],
+        "transfer": false,
+        "readyAt": 0,
+        "independentRecallAt": 0,
+        "evidence": {
+          "recognition": {
+            "attempts": 12,
+            "independent": 0,
+            "assisted": 0,
+            "revealed": 12,
+            "elapsedMs": 1213
+          },
+          "recall": {
+            "attempts": 6,
+            "independent": 0,
+            "assisted": 6,
+            "revealed": 0,
+            "elapsedMs": 1579
+          }
+        },
+        "lastSessionId": "1790990693070-adaptive-631v7n",
+        "lastEvidenceAt": 1790990699155
+      }
+    },
+    "lastAnswer": "1790990693070-adaptive-631v7n:19:1790990699155"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "actualNativeOAuth": false,
+  "isolatedServer": true,
+  "results": [
+    {
+      "width": 1440,
+      "flow": "same-browser",
+      "passed": true,
+      "originalIdentityRecognized": true,
+      "manualCodeEntry": false,
+      "outsideRequests": 0
+    },
+    {
+      "width": 1440,
+      "flow": "stale-identity-fallback",
+      "passed": true,
+      "originalIdentityRecognized": false,
+      "manualCodeEntry": true,
+      "outsideRequests": 0
+    },
+    {
+      "width": 390,
+      "flow": "same-browser",
+      "passed": true,
+      "originalIdentityRecognized": true,
+      "manualCodeEntry": false,
+      "outsideRequests": 0
+    },
+    {
+      "width": 390,
+      "flow": "stale-identity-fallback",
+      "passed": true,
+      "originalIdentityRecognized": false,
+      "manualCodeEntry": true,
+      "outsideRequests": 0
+    }
+  ]
+}

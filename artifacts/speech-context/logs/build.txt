@@ -1,0 +1,48 @@
+
+> programming-english-learning-site@1.0.0 build
+> vite build && node scripts/prepare-deploy.mjs
+
+vite v8.2.2 building client environment for production...
+transforming...
+✓ 100 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                     0.76 kB │ gzip:   0.52 kB
+dist/assets/index-5YV8uiHB.css    150.49 kB │ gzip:  26.32 kB
+dist/assets/index-BVHPKgkr.js   2,881.36 kB │ gzip: 676.69 kB
+
+✓ built in 8.20s
+[plugin builtin:vite-reporter] 
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+[PLUGIN_TIMINGS] Your build spent 97% of 8.2s inside plugin hooks (8.0s).
+Measured inside the callback, so queue time is excluded and time the callback itself awaited is not:
+  - vite:prepare-out-dir renderStart (96%, 7.9s, 1 call)
+Those rows are 96% of the build; the rest of the 97% is below.
+Not measurable — 1 hook whose calls overlap, so elapsed time covers work other calls were doing. Profile with `node --cpu-prof`:
+  - vite:css transform (15 calls)
+See https://rolldown.rs/reference/InputOptions.checks#plugintimings for more details.
+
+Daily English verified: 24 lessons, 172 audio files.
+Course reading and feedback verified: { texts: 291, recordings: 582, feedbackSounds: 3 }
+Foundation English verified: {
+  historicalTopics: 60,
+  expandedTutorials: 21,
+  texts: 352,
+  recordingVariants: 354,
+  audioFiles: 708,
+  demonstrationFiles: 6
+}
+Phonemic audio verified: { phonemes: 44, recordings: 88, bytes: 2148600 }
+Word-by-word slow audio verified: {
+  texts: 7779,
+  units: 5633,
+  reusedRecordings: 6520,
+  generatedRecordings: 4746,
+  packedFiles: 48,
+  packedBytes: 32075136,
+  verifiedFiles: 5902
+}
+Deployment verified: 16115 files, two complete voices.

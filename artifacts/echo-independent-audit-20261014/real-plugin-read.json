@@ -1,0 +1,93 @@
+{
+  "checkedOn": "2026-10-14",
+  "caller": "this desktop task; not an active voice call",
+  "tool": "mcp__codex_apps__app_d694455fed68_read_english_learning",
+  "mode": "current",
+  "before": {
+    "readAt": 1791963992909,
+    "status": "connected",
+    "scope": "english:read",
+    "progressRevision": 96,
+    "current": {
+      "state": "available",
+      "source": "last-uploaded-browser-context",
+      "section": "daily",
+      "view": "course",
+      "lessonId": "A1-01-03",
+      "lessonTitle": "询问对方姓名",
+      "stage": "study",
+      "targets": [
+        {
+          "id": "whats-your-name",
+          "en": "What's your name?",
+          "zh": "你叫什么名字？"
+        },
+        {
+          "id": "my-name-is-ben",
+          "en": "My name is Ben.",
+          "zh": "我的名字是 Ben。"
+        },
+        {
+          "id": "my-name-is-mia",
+          "en": "My name is Mia.",
+          "zh": "我的名字是 Mia。"
+        }
+      ],
+      "selected": null,
+      "exercise": null,
+      "contextUpdatedAt": 1791960938964,
+      "lastSeenAt": 1791961524141,
+      "receivedAt": 1791961525229,
+      "stale": true,
+      "browserSyncState": "synced",
+      "browserKnownRevision": 96,
+      "progressAlignment": "same-revision",
+      "message": "这是最近上传的内容，网页已离开或上下文已过期，不能称为实时屏幕。"
+    }
+  },
+  "after": {
+    "readAt": 1791964771899,
+    "status": "connected",
+    "scope": "english:read",
+    "progressRevision": 96,
+    "current": {
+      "state": "available",
+      "source": "last-uploaded-browser-context",
+      "section": "daily",
+      "view": "course",
+      "lessonId": "A1-01-03",
+      "lessonTitle": "询问对方姓名",
+      "stage": "study",
+      "targets": [
+        {
+          "id": "whats-your-name",
+          "en": "What's your name?",
+          "zh": "你叫什么名字？"
+        },
+        {
+          "id": "my-name-is-ben",
+          "en": "My name is Ben.",
+          "zh": "我的名字是 Ben。"
+        },
+        {
+          "id": "my-name-is-mia",
+          "en": "My name is Mia.",
+          "zh": "我的名字是 Mia。"
+        }
+      ],
+      "selected": null,
+      "exercise": null,
+      "contextUpdatedAt": 1791960938964,
+      "lastSeenAt": 1791961524141,
+      "receivedAt": 1791961525229,
+      "stale": true,
+      "browserSyncState": "synced",
+      "browserKnownRevision": 96,
+      "progressAlignment": "same-revision",
+      "message": "这是最近上传的内容，网页已离开或上下文已过期，不能称为实时屏幕。"
+    }
+  },
+  "isErrorBefore": false,
+  "isErrorAfter": false,
+  "activeVoiceAccepted": false
+}

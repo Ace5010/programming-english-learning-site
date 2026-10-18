@@ -1,0 +1,187 @@
+{
+  "url": "http://127.0.0.1:5186/dist/",
+  "results": [
+    {
+      "name": "skip-without-microphone-or-self-check",
+      "passed": true
+    },
+    {
+      "name": "legacy-self-draft-and-favorites-preserved",
+      "passed": true
+    },
+    {
+      "name": "voluntary-recognition-and-real-normal-slow-audio",
+      "passed": true
+    },
+    {
+      "name": "three-mismatches-do-not-force-retry-or-self-check",
+      "passed": true
+    },
+    {
+      "name": "unsupported-browser-can-continue",
+      "passed": true
+    },
+    {
+      "name": "error-network-can-continue",
+      "passed": true
+    },
+    {
+      "name": "error-not-allowed-can-continue",
+      "passed": true
+    },
+    {
+      "name": "error-language-not-supported-can-continue",
+      "passed": true
+    },
+    {
+      "name": "leave-starting-cancels-late-result",
+      "passed": true
+    },
+    {
+      "name": "leave-listening-cancels-late-result",
+      "passed": true
+    },
+    {
+      "name": "leave-processing-cancels-late-result",
+      "passed": true
+    },
+    {
+      "name": "last-optional-item-finishes-and-restores-summary",
+      "passed": true
+    },
+    {
+      "name": "desktop-mobile-and-four-palettes",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "layouts": [
+    {
+      "label": "daily-1440-lagoon-closed",
+      "viewport": 1440,
+      "width": 1440,
+      "font": "18px",
+      "selfCheckControls": 0
+    },
+    {
+      "label": "daily-1440-lagoon-open",
+      "viewport": 1440,
+      "width": 1440,
+      "font": "18px",
+      "selfCheckControls": 0
+    },
+    {
+      "label": "daily-1440-pearl-closed",
+      "viewport": 1440,
+      "width": 1440,
+      "font": "18px",
+      "selfCheckControls": 0
+    },
+    {
+      "label": "daily-1440-pearl-open",
+      "viewport": 1440,
+      "width": 1440,
+      "font": "18px",
+      "selfCheckControls": 0
+    },
+    {
+      "label": "daily-1440-sky-closed",
+      "viewport": 1440,
+      "width": 1440,
+      "font": "18px",
+      "selfCheckControls": 0
+    },
+    {
+      "label": "daily-1440-sky-open",
+      "viewport": 1440,
+      "width": 1440,
+      "font": "18px",
+      "selfCheckControls": 0
+    },
+    {
+      "label": "daily-1440-mint-closed",
+      "viewport": 1440,
+      "width": 1440,
+      "font": "18px",
+      "selfCheckControls": 0
+    },
+    {
+      "label": "daily-1440-mint-open",
+      "viewport": 1440,
+      "width": 1440,
+      "font": "18px",
+      "selfCheckControls": 0
+    },
+    {
+      "label": "daily-390-lagoon-closed",
+      "viewport": 390,
+      "width": 390,
+      "font": "18px",
+      "selfCheckControls": 0
+    },
+    {
+      "label": "daily-390-lagoon-open",
+      "viewport": 390,
+      "width": 390,
+      "font": "18px",
+      "selfCheckControls": 0
+    },
+    {
+      "label": "daily-390-pearl-closed",
+      "viewport": 390,
+      "width": 390,
+      "font": "18px",
+      "selfCheckControls": 0
+    },
+    {
+      "label": "daily-390-pearl-open",
+      "viewport": 390,
+      "width": 390,
+      "font": "18px",
+      "selfCheckControls": 0
+    },
+    {
+      "label": "daily-390-sky-closed",
+      "viewport": 390,
+      "width": 390,
+      "font": "18px",
+      "selfCheckControls": 0
+    },
+    {
+      "label": "daily-390-sky-open",
+      "viewport": 390,
+      "width": 390,
+      "font": "18px",
+      "selfCheckControls": 0
+    },
+    {
+      "label": "daily-390-mint-closed",
+      "viewport": 390,
+      "width": 390,
+      "font": "18px",
+      "selfCheckControls": 0
+    },
+    {
+      "label": "daily-390-mint-open",
+      "viewport": 390,
+      "width": 390,
+      "font": "18px",
+      "selfCheckControls": 0
+    },
+    {
+      "label": "daily-320-lagoon-closed",
+      "viewport": 320,
+      "width": 320,
+      "font": "18px",
+      "selfCheckControls": 0
+    },
+    {
+      "label": "daily-320-lagoon-open",
+      "viewport": 320,
+      "width": 320,
+      "font": "18px",
+      "selfCheckControls": 0
+    }
+  ],
+  "recognition": "simulated callbacks; local example MP3 playback is real"
+}

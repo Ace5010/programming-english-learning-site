@@ -1,0 +1,18 @@
+{
+  "checkedAt": "2026-10-17T12:44:57.918Z",
+  "beforeDeploymentId": "bebf5028-0482-4102-b4db-3aa61a92f785",
+  "restoredDeploymentId": "65ff6a70-6330-46bb-8bbf-68d4ee7c1a29",
+  "rollbackReturnedId": "65ff6a70-6330-46bb-8bbf-68d4ee7c1a29",
+  "successful": true,
+  "activeStates": 0,
+  "activeGrants": 0,
+  "validTokens": 0,
+  "learning": {
+    "profiles": 8,
+    "parts": 16,
+    "profilesHash": "582dbdd3ac1798e46f72ef35883d9d6a0f90b7386d4ba84505ca3d3c112c83d0",
+    "partsHash": "88a08001835c6154c62fc3904bd57f4d762544acd07d1478eccb5546d33384a8"
+  },
+  "learningUnchanged": true,
+  "originalSyncD1Retained": true
+}

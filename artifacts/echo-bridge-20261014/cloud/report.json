@@ -1,0 +1,69 @@
+{
+  "startedAt": "2026-10-14T03:27:05.582Z",
+  "scope": "deployed services with generated test profile and controlled native OAuth client; no real voice call",
+  "checks": [
+    {
+      "check": "original-sync-created-isolated-profile",
+      "passed": true
+    },
+    {
+      "check": "real-native-pairing-oauth-and-mcp-discovery",
+      "passed": true,
+      "scope": "pocket:read only; prepared management test credential; no actual Echo client or voice"
+    },
+    {
+      "check": "deployed-current-course-and-selected-word-match-page",
+      "passed": true,
+      "targetIds": [
+        "word-1",
+        "word-2801",
+        "word-3561",
+        "word-20",
+        "word-4",
+        "word-5"
+      ]
+    },
+    {
+      "check": "real-page-practice-original-sync-and-mcp-update",
+      "passed": true,
+      "revision": 3,
+      "answerCount": 1,
+      "unfinishedSessionPreserved": true,
+      "draftSurvivedReload": true
+    },
+    {
+      "check": "offline-returns-last-uploaded-context-and-online-recovers",
+      "passed": true,
+      "scope": "Chrome offline mode; Node MCP client remains online"
+    },
+    {
+      "check": "leaving-real-page-is-reported-stale",
+      "passed": true
+    },
+    {
+      "check": "real-revocation-denies-mcp-and-keeps-unfinished-progress",
+      "passed": true
+    },
+    {
+      "check": "all-existing-cloud-progress-byte-hashes-and-revisions-preserved",
+      "passed": true,
+      "profiles": 4,
+      "parts": 8
+    }
+  ],
+  "testHarnessCorrection": {
+    "error": "Seed script accessed sessionStorage on opaque about:blank after all functional checks passed",
+    "correction": "Guard test seeding by exact website origin",
+    "separateBrowserRecheckPassed": true,
+    "noAdditionalCloudPracticeOrGrantCreated": true
+  },
+  "cleanup": {
+    "testOAuthRevoked": true,
+    "englishGrantRevoked": true,
+    "temporaryPocketEnglishDocumentRemoved": true,
+    "generatedSyncProfilesRetained": 2,
+    "credentialsStoredOnlyInIgnoredDPAPI": true
+  },
+  "finishedAt": "2026-10-14T03:30:35.945Z",
+  "realVoiceVerified": false
+}

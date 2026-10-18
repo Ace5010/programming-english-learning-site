@@ -1,0 +1,6 @@
+.speech-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; flex: 0 0 auto; max-width: 100%; }
+:root[data-theme] .speech-controls .speech-voice { min-height: 46px; padding: 8px 10px; gap: 7px; }
+@media (max-width: 600px) {
+  .speech-controls { gap: 8px; }
+  :root[data-theme] .speech-controls .speech-voice { padding-inline: 8px; }
+}

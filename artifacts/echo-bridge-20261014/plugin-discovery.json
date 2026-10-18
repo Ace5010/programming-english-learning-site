@@ -1,0 +1,20 @@
+{
+  "checkedAtUtc": "2026-10-14T04:13:06Z",
+  "plugin": "Pocket",
+  "existingPluginReused": true,
+  "mcpEndpoint": "https://pocket-companion.swq3506.workers.dev/mcp",
+  "connectedAccountCount": 2,
+  "existingPermissionModeChanged": false,
+  "refreshActionCompleted": true,
+  "uiToolCount": 17,
+  "uiReadToolCount": 8,
+  "englishToolShownInUi": "read_english_learning",
+  "currentExecutionToolCount": 16,
+  "englishToolInCurrentExecution": false,
+  "realVoiceBeforeRefresh": "user-reported-failure-no-tool-or-unable-to-read",
+  "realVoiceAfterRefresh": "not-retested",
+  "userLatestRetestAnswer": "还没有再次通话",
+  "progressWrittenByThisCheck": false,
+  "newOAuthConnectionCreated": false,
+  "finalVoiceAcceptancePassed": false
+}

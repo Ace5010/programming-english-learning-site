@@ -10,7 +10,7 @@ const baseURL = process.env.CODEWORDS_TEST_URL || 'http://localhost:5186/';
 assert.match(baseURL, /^http:\/\/(localhost|127\.0\.0\.1)(:|\/)/);
 const output = process.env.CODEWORDS_ARTIFACT_DIR || 'artifacts/foundation-tutorial';
 await mkdir(output, { recursive: true });
-const browser = await chromium.launch({ channel: 'chrome', headless: true });
+const browser = await chromium.launch({ channel: 'chrome', headless: true, args: ['--no-proxy-server'] });
 const results = [], failures = [], errors = [], audioEvents = [];
 const raw = '{"version":1,"favorites":["foundation-letters"],"unrecognized":"preserve exactly"}';
 async function open(width = 1440, theme = 'lagoon', record = raw) {
@@ -36,7 +36,7 @@ async function open(width = 1440, theme = 'lagoon', record = raw) {
       return original.apply(this, args);
     };
   }, { theme, record, key: FOUNDATION_KEY });
-  await page.goto(baseURL); await page.locator('#foundation-content h1').waitFor();
+  await page.goto(baseURL, { waitUntil: 'domcontentloaded' }); await page.locator('#foundation-content h1').waitFor();
   return { page, context };
 }
 const nav = async (page, name) => {

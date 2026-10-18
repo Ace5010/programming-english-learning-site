@@ -1,0 +1,404 @@
+/* Theme presentation only. The exercise DOM, answer state and audio events stay shared. */
+:root[data-theme] .lesson-overlay {
+  --lesson-edge: var(--line);
+  --lesson-radius: 20px;
+  --lesson-control-radius: 12px;
+  --lesson-shadow: 0 4px 24px #1d1d1f04;
+  --lesson-button-shadow: none;
+  --lesson-primary-ink: var(--action-ink, #fff);
+  --lesson-listen-fill: var(--accent-soft);
+  --lesson-listen-ink: var(--accent-deep);
+  --lesson-stage-image: none;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+}
+
+:root[data-theme] .lesson-header {
+  border-color: var(--lesson-edge);
+  background: var(--surface);
+}
+
+:root[data-theme] .lesson-header-inner {
+  display: grid;
+  grid-template-columns: auto auto minmax(140px, 1fr) auto;
+  gap: 30px;
+  width: min(1320px, 100%);
+  min-height: 94px;
+  padding: 20px 40px;
+}
+
+:root[data-theme] .lesson-context strong {
+  font-family: var(--display-font, var(--sans));
+  font-size: 19px;
+}
+
+:root[data-theme] .lesson-progress-group { width: 100%; max-width: none; margin: 0; }
+:root[data-theme] .lesson-progress { height: 8px; background: var(--surface-2); }
+:root[data-theme] .lesson-progress > span { background: var(--accent); }
+:root[data-theme] .lesson-theme-picker { margin: 0; justify-self: end; flex-shrink: 0; }
+:root[data-theme] .lesson-theme-picker select { max-width: 150px; }
+:root[data-theme] .lesson-close { border-radius: var(--lesson-control-radius); }
+
+:root[data-theme] .lesson-stage {
+  background-color: var(--paper);
+  background-image: var(--lesson-stage-image);
+  background-attachment: local;
+}
+
+:root[data-theme] .lesson-content {
+  position: relative;
+  isolation: isolate;
+  border: 1px solid var(--lesson-edge);
+  border-radius: var(--lesson-radius);
+  background: var(--surface);
+  box-shadow: var(--lesson-shadow);
+}
+
+:root[data-theme] .lesson-content h1 {
+  font-family: var(--display-font, var(--sans));
+  font-weight: 650;
+  color: var(--ink);
+}
+
+:root[data-theme] .lesson-target,
+:root[data-theme] .lesson-sentence {
+  border-radius: var(--lesson-control-radius);
+  background: var(--accent-soft);
+}
+
+:root[data-theme] .lesson-target > strong,
+:root[data-theme] .lesson-summary-word strong,
+:root[data-theme] .lesson-pair-column[aria-label="英文单词"] .lesson-pair-card,
+:root[data-theme] .lesson-exercise-listen .lesson-option > span:last-child,
+:root[data-theme] .lesson-exercise-cloze .lesson-option > span:last-child {
+  font-family: var(--word-font, var(--sans));
+}
+
+:root[data-theme] .lesson-audio button {
+  border-color: var(--accent-line);
+  border-radius: var(--lesson-control-radius);
+  background: var(--lesson-listen-fill);
+  color: var(--lesson-listen-ink);
+  box-shadow: var(--lesson-button-shadow);
+}
+
+:root[data-theme] .lesson-audio .lesson-audio-slow {
+  border-color: var(--lesson-edge);
+  background: var(--surface-2);
+  color: var(--ink-soft);
+  box-shadow: none;
+}
+
+:root[data-theme] .lesson-target .lesson-audio-main { background: var(--surface); box-shadow: none; }
+:root[data-theme] .lesson-target .lesson-audio .lesson-audio-slow { background: transparent; }
+:root[data-theme] .lesson-audio button:hover { border-color: var(--accent); background: var(--accent-soft); }
+:root[data-theme] .lesson-audio .lesson-is-playing,
+:root[data-theme] .lesson-target .lesson-audio .lesson-is-playing {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: var(--lesson-primary-ink);
+}
+
+:root[data-theme] .lesson-option,
+:root[data-theme] .lesson-pair-card {
+  border-color: var(--lesson-edge);
+  border-radius: var(--lesson-control-radius);
+  background: var(--surface);
+  color: var(--ink-soft);
+}
+
+:root[data-theme] .lesson-option:hover:not(:disabled),
+:root[data-theme] .lesson-pair-card:hover:not(:disabled) {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+:root[data-theme] .lesson-option.lesson-selected,
+:root[data-theme] .lesson-pair-card.lesson-selected {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  color: var(--accent-deep);
+  box-shadow: inset 0 0 0 1px var(--accent);
+}
+
+:root[data-theme] .lesson-option-indicator { border-color: var(--muted); }
+:root[data-theme] .lesson-selected .lesson-option-indicator { border-color: var(--accent); }
+:root[data-theme] .lesson-option-indicator i { background: var(--accent); }
+:root[data-theme] .lesson-sentence { color: var(--ink); }
+:root[data-theme] .lesson-sentence-gap { border-color: var(--accent); color: var(--accent-deep); }
+:root[data-theme] .lesson-letter-slots > span,
+:root[data-theme] .lesson-letter-slots .lesson-letter-input {
+  width: 44px;
+  height: 56px;
+  border: 1px solid var(--lesson-edge);
+  border-radius: var(--lesson-control-radius);
+  background: var(--surface-2);
+  color: var(--muted);
+}
+
+:root[data-theme] .lesson-letter-slots .lesson-letter-input {
+  border-color: var(--accent-line);
+  background: var(--surface);
+  color: var(--ink);
+}
+
+:root[data-theme] .lesson-letter-input:focus {
+  border-color: var(--accent);
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  background: var(--surface);
+}
+
+:root[data-theme] .lesson-letter-slots .lesson-letter-hint {
+  background: var(--accent-soft);
+  color: var(--accent-deep);
+}
+
+:root[data-theme] .lesson-letter-slots .lesson-letter-space { width: 14px; border: 0; background: transparent; }
+:root[data-theme] .lesson-dictation-input {
+  border-color: var(--lesson-edge);
+  border-radius: var(--lesson-control-radius);
+  background: var(--surface);
+}
+
+:root[data-theme] .lesson-note {
+  border-color: var(--accent-line);
+  border-radius: var(--lesson-control-radius);
+  background: var(--accent-soft);
+  color: var(--accent-deep);
+}
+
+:root[data-theme] .lesson-footer {
+  border-color: var(--lesson-edge);
+  background: var(--surface);
+}
+
+:root[data-theme] .lesson-primary {
+  border-color: var(--accent);
+  border-radius: var(--lesson-control-radius);
+  background: var(--accent);
+  color: var(--lesson-primary-ink);
+  box-shadow: var(--lesson-button-shadow);
+  font-family: var(--display-font, var(--sans));
+}
+
+:root[data-theme] .lesson-primary:hover:not(:disabled) {
+  background: var(--accent-deep);
+  border-color: var(--accent-deep);
+  box-shadow: var(--lesson-button-shadow);
+}
+
+:root[data-theme] .lesson-primary:disabled {
+  border-color: var(--line);
+  background: var(--surface-2);
+  color: var(--muted);
+  box-shadow: none;
+}
+
+:root[data-theme] .lesson-secondary { border-radius: var(--lesson-control-radius); }
+:root[data-theme] .lesson-summary-word button { border-radius: var(--lesson-control-radius); }
+:root[data-theme] .lesson-summary-list,
+:root[data-theme] .lesson-summary-list li { border-color: var(--line); }
+
+/* Quiet, translucent surfaces and a short settling transition. */
+:root[data-theme="minimal"] .lesson-header { background: #ffffffed; }
+:root[data-theme="minimal"] .lesson-content { animation: theme-lesson-minimal 220ms cubic-bezier(.2, .7, .25, 1) both; }
+:root[data-theme="minimal"] .lesson-content h1 { letter-spacing: -.6px; }
+:root[data-theme="minimal"] .lesson-option.lesson-selected { box-shadow: 0 0 0 1px var(--accent), 0 3px 10px #0071e309; }
+:root[data-theme="minimal"] .lesson-primary { font-family: var(--sans); font-weight: 500; }
+
+/* Notebook paper, ink edges and marker-colored answer selections. */
+:root[data-theme="sketch"] .lesson-overlay {
+  --lesson-edge: #60554e;
+  --lesson-radius: 10px 17px 12px 8px;
+  --lesson-control-radius: 9px 6px 12px 7px;
+  --lesson-shadow: 4px 6px 0 #d7c9a275, 0 9px 22px #594a3010;
+  --lesson-button-shadow: 2px 3px 0 #39343a;
+  --lesson-listen-fill: #add3e6;
+  --lesson-listen-ink: #244e77;
+  --lesson-stage-image: linear-gradient(#758dab12 1px, transparent 1px), linear-gradient(90deg, #758dab12 1px, transparent 1px);
+}
+
+:root[data-theme="sketch"] .lesson-stage { background-size: 27px 27px; }
+:root[data-theme="sketch"] .lesson-header { border-bottom-width: 1.5px; }
+:root[data-theme="sketch"] .lesson-content { border-width: 1.5px; animation: theme-lesson-sketch 270ms cubic-bezier(.2, .8, .25, 1) both; }
+:root[data-theme="sketch"] .lesson-content::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  pointer-events: none;
+  inset: 4px 3px 3px 4px;
+  border: 1px solid #60554e35;
+  border-radius: 12px 9px 7px 14px;
+}
+
+:root[data-theme="sketch"] .lesson-content h1 { font-size: 30px; letter-spacing: .4px; }
+:root[data-theme="sketch"] .lesson-question-header h1 { text-decoration: underline; text-decoration-color: #ffd447; text-decoration-thickness: 7px; text-underline-offset: 3px; text-decoration-skip-ink: none; }
+:root[data-theme="sketch"] .lesson-target { border: 1px solid #c6b78b; background: #fbf1c8; }
+:root[data-theme="sketch"] .lesson-target > strong { color: #244e77; font-size: 40px; font-weight: 400; }
+:root[data-theme="sketch"] .lesson-audio button { border-color: #466d8b; }
+:root[data-theme="sketch"] .lesson-option,
+:root[data-theme="sketch"] .lesson-pair-card { border-width: 1.5px; }
+:root[data-theme="sketch"] .lesson-option.lesson-selected,
+:root[data-theme="sketch"] .lesson-pair-card.lesson-selected { background: #fff0b6; color: var(--ink); }
+:root[data-theme="sketch"] .lesson-letter-slots > span,
+:root[data-theme="sketch"] .lesson-letter-slots .lesson-letter-input { border-width: 1.5px; border-bottom-width: 2px; }
+:root[data-theme="sketch"] .lesson-primary { border-color: #39343a; font-size: 19px; }
+:root[data-theme="sketch"] .lesson-secondary-actions .lesson-secondary:first-child { background: #f9eec8; border-color: #c6b78b; }
+:root[data-theme="sketch"] .lesson-progress { border: 1px solid #c6b78b; height: 10px; border-radius: 4px 7px 3px 5px; }
+
+/* Flat printed blocks with tactile, offset shadows. */
+:root[data-theme="print"] .lesson-overlay {
+  --lesson-edge: var(--frame, var(--ink));
+  --lesson-radius: 8px;
+  --lesson-control-radius: 6px;
+  --lesson-shadow: 7px 7px 0 var(--frame, var(--ink));
+  --lesson-button-shadow: 3px 3px 0 var(--frame, var(--ink));
+}
+
+:root[data-theme="print"] .lesson-header { background: var(--secondary); border-bottom-width: 2px; }
+:root[data-theme="print"] .lesson-content { border-width: 2px; animation: theme-lesson-print 250ms cubic-bezier(.2, .8, .3, 1) both; }
+:root[data-theme="print"] .lesson-content h1 { font-size: 30px; font-weight: 750; }
+:root[data-theme="print"] .lesson-target,
+:root[data-theme="print"] .lesson-sentence { border: 2px solid var(--lesson-edge); }
+:root[data-theme="print"] .lesson-target > strong { color: var(--accent-deep); font-weight: 750; }
+:root[data-theme="print"] .lesson-option,
+:root[data-theme="print"] .lesson-pair-card { border-width: 2px; box-shadow: 2px 2px 0 var(--lesson-edge); }
+:root[data-theme="print"] .lesson-option.lesson-selected,
+:root[data-theme="print"] .lesson-pair-card.lesson-selected { border-color: var(--lesson-edge); box-shadow: 3px 3px 0 var(--lesson-edge); }
+:root[data-theme="print"] .lesson-audio button,
+:root[data-theme="print"] .lesson-primary { border: 2px solid var(--lesson-edge); }
+:root[data-theme="print"] .lesson-letter-slots > span,
+:root[data-theme="print"] .lesson-letter-slots .lesson-letter-input { border-width: 2px; box-shadow: 2px 2px 0 var(--line); }
+:root[data-theme="print"] .lesson-secondary-actions .lesson-secondary:first-child { background: var(--secondary); border: 2px solid var(--lesson-edge); }
+:root[data-theme="print"] .lesson-progress { border: 2px solid var(--lesson-edge); height: 12px; border-radius: 3px; background: var(--surface); }
+:root[data-theme="print"] .lesson-footer { border-top-width: 2px; }
+
+/* Spray color stays at the page edge; the question remains on clean paper. */
+:root[data-theme="graffiti"] .lesson-overlay {
+  --lesson-edge: var(--frame, #17171b);
+  --lesson-radius: 3px;
+  --lesson-control-radius: 3px;
+  --lesson-shadow: 6px 6px 0 #17171b, 10px 10px 0 #f4498b;
+  --lesson-button-shadow: 3px 3px 0 #17171b;
+  --lesson-primary-ink: #17171b;
+  --lesson-listen-fill: #3dcfe8;
+  --lesson-listen-ink: #17171b;
+  --lesson-stage-image: radial-gradient(ellipse at 2% 3%, #f4498b35 0, transparent 24%), radial-gradient(ellipse at 98% 80%, #3dcfe838 0, transparent 23%);
+}
+
+:root[data-theme="graffiti"] .lesson-header { border-bottom-width: 2px; }
+:root[data-theme="graffiti"] .lesson-context strong { font-size: 23px; font-weight: 400; }
+:root[data-theme="graffiti"] .lesson-content { border-width: 2px; animation: theme-lesson-graffiti 240ms cubic-bezier(.2, .8, .2, 1) both; }
+:root[data-theme="graffiti"] .lesson-content h1 { font-size: 32px; font-weight: 400; letter-spacing: .8px; }
+:root[data-theme="graffiti"] .lesson-question-header h1 { border-left: 6px solid #f4498b; padding-left: 15px; }
+:root[data-theme="graffiti"] .lesson-target { border: 2px solid var(--lesson-edge); background: #ffe34d; }
+:root[data-theme="graffiti"] .lesson-target > strong { color: #17171b; font-size: 37px; font-weight: 400; }
+:root[data-theme="graffiti"] .lesson-option,
+:root[data-theme="graffiti"] .lesson-pair-card { border-width: 2px; }
+:root[data-theme="graffiti"] .lesson-option.lesson-selected,
+:root[data-theme="graffiti"] .lesson-pair-card.lesson-selected { border-color: #17171b; background: #b7eff7; color: #17171b; box-shadow: 3px 3px 0 #17171b; }
+:root[data-theme="graffiti"] .lesson-audio button,
+:root[data-theme="graffiti"] .lesson-primary { border: 2px solid #17171b; }
+:root[data-theme="graffiti"] .lesson-audio button { font-family: var(--display-font, var(--sans)); font-size: 20px; font-weight: 400; }
+:root[data-theme="graffiti"] .lesson-audio .lesson-audio-slow { font-family: var(--sans); font-size: 15px; background: #ffe34d; }
+:root[data-theme="graffiti"] .lesson-primary { font-size: 22px; font-weight: 400; }
+:root[data-theme="graffiti"] .lesson-primary:hover:not(:disabled) { background: #f66ca4; border-color: #17171b; }
+:root[data-theme="graffiti"] .lesson-letter-slots > span,
+:root[data-theme="graffiti"] .lesson-letter-slots .lesson-letter-input { border: 2px solid #17171b; box-shadow: 2px 2px 0 #d6d2c6; }
+:root[data-theme="graffiti"] .lesson-secondary-actions .lesson-secondary:first-child { background: #ffe34d; border: 2px solid #17171b; }
+:root[data-theme="graffiti"] .lesson-progress { border: 2px solid #17171b; height: 12px; border-radius: 2px; background: var(--surface); }
+:root[data-theme="graffiti"] .lesson-progress > span { background: #3dcfe8; }
+:root[data-theme="graffiti"] .lesson-footer { border-top-width: 2px; }
+
+/* Answer meaning is consistent across all four appearances. */
+:root[data-theme] .lesson-option.lesson-correct,
+:root[data-theme] .lesson-pair-card.lesson-matched {
+  border-color: var(--success);
+  background: var(--success-soft);
+  color: var(--success);
+  box-shadow: inset 0 0 0 1px var(--success);
+}
+
+:root[data-theme] .lesson-option.lesson-incorrect {
+  border-color: var(--error);
+  background: var(--error-soft);
+  color: var(--error);
+  box-shadow: inset 0 0 0 1px var(--error);
+}
+
+:root[data-theme] .lesson-correct .lesson-option-indicator { border-color: var(--success); background: var(--success); color: #fff; }
+:root[data-theme] .lesson-incorrect .lesson-option-indicator { border-color: var(--error); }
+:root[data-theme] .lesson-incorrect .lesson-option-indicator i { background: var(--error); }
+:root[data-theme] .lesson-footer-correct { background: var(--success-soft); border-color: var(--success); }
+:root[data-theme] .lesson-footer-correction { background: var(--error-soft); border-color: var(--error); }
+:root[data-theme] .lesson-feedback { color: var(--success); }
+:root[data-theme] .lesson-footer-correction .lesson-feedback { color: var(--error); }
+:root[data-theme] .lesson-storage-note { border-color: var(--error); border-radius: var(--lesson-control-radius); }
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  :root[data-theme="print"] .lesson-option:hover:not(:disabled),
+  :root[data-theme="print"] .lesson-pair-card:hover:not(:disabled),
+  :root[data-theme="graffiti"] .lesson-option:hover:not(:disabled),
+  :root[data-theme="graffiti"] .lesson-pair-card:hover:not(:disabled) { transform: translateY(-2px); }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  :root[data-theme="sketch"] .lesson-primary:active:not(:disabled),
+  :root[data-theme="print"] .lesson-primary:active:not(:disabled),
+  :root[data-theme="graffiti"] .lesson-primary:active:not(:disabled) { transform: translate(2px, 2px); box-shadow: 1px 1px 0 var(--lesson-edge); }
+}
+
+@keyframes theme-lesson-minimal { from { opacity: 0; transform: translateY(7px); } to { opacity: 1; transform: none; } }
+@keyframes theme-lesson-sketch { from { opacity: 0; transform: translate(8px, 4px) rotate(-.3deg); } to { opacity: 1; transform: none; } }
+@keyframes theme-lesson-print { from { opacity: 0; transform: translateY(-8px) scale(.993); } to { opacity: 1; transform: none; } }
+@keyframes theme-lesson-graffiti { from { opacity: 0; transform: translateX(12px) scale(.994); } to { opacity: 1; transform: none; } }
+
+@media (max-width: 1040px) {
+  :root[data-theme] .lesson-header-inner { gap: 22px; padding: 18px 26px; }
+  :root[data-theme] .lesson-context { display: block; }
+  :root[data-theme] .lesson-context span { display: block; }
+  :root[data-theme] .lesson-theme-picker > span { display: none; }
+}
+
+@media (max-width: 760px) {
+  :root[data-theme] .lesson-header-inner { grid-template-columns: 44px minmax(0, 1fr) auto; gap: 12px 16px; padding: 14px 20px 15px; }
+  :root[data-theme] .lesson-close { grid-column: 1; grid-row: 1; padding: 10px; }
+  :root[data-theme] .lesson-context { grid-column: 2; grid-row: 1; }
+  :root[data-theme] .lesson-theme-picker { grid-column: 3; grid-row: 1; }
+  :root[data-theme] .lesson-progress-group { grid-column: 1 / -1; grid-row: 2; gap: 14px; }
+  :root[data-theme] .lesson-content { padding: 28px; }
+  :root[data-theme="sketch"] .lesson-content h1,
+  :root[data-theme="print"] .lesson-content h1 { font-size: 27px; }
+  :root[data-theme="graffiti"] .lesson-content h1 { font-size: 29px; }
+}
+
+@media (max-width: 500px) {
+  :root[data-theme] .lesson-header-inner { grid-template-columns: 36px minmax(0, 1fr) auto; padding: 11px 14px 12px; gap: 9px 10px; }
+  :root[data-theme] .lesson-close { padding: 8px; }
+  :root[data-theme] .lesson-context strong { font-size: 17px; }
+  :root[data-theme] .lesson-context span { font-size: 13px; }
+  :root[data-theme] .lesson-theme-picker { gap: 0; max-width: 130px; }
+  :root[data-theme] .lesson-theme-picker select { width: 126px; max-width: 100%; font-size: 14px; }
+  :root[data-theme] .lesson-theme-picker > svg { display: none; }
+  :root[data-theme] .lesson-content { padding: 23px 19px 27px; }
+  :root[data-theme] .lesson-content h1 { font-size: 23px; }
+  :root[data-theme="graffiti"] .lesson-content h1 { font-size: 25px; }
+  :root[data-theme="graffiti"] .lesson-question-header h1 { padding-left: 11px; border-left-width: 4px; }
+  :root[data-theme="sketch"] .lesson-target > strong { font-size: 34px; }
+  :root[data-theme="graffiti"] .lesson-target > strong { font-size: 31px; }
+  :root[data-theme] .lesson-letter-slots > span,
+  :root[data-theme] .lesson-letter-slots .lesson-letter-input { width: 34px; height: 46px; }
+  :root[data-theme] .lesson-letter-slots .lesson-letter-space { width: 10px; }
+  :root[data-theme="print"] .lesson-content { box-shadow: 4px 4px 0 var(--lesson-edge); }
+  :root[data-theme="graffiti"] .lesson-content { box-shadow: 4px 4px 0 #17171b, 7px 7px 0 #f4498b; }
+  :root[data-theme="sketch"] .lesson-primary { font-size: 18px; }
+  :root[data-theme="graffiti"] .lesson-primary { font-size: 20px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root[data-theme] .lesson-overlay *,
+  :root[data-theme] .lesson-overlay *::before,
+  :root[data-theme] .lesson-overlay *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}

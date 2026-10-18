@@ -1,0 +1,20 @@
+{
+  "actualNativeOAuth": false,
+  "isolatedServer": true,
+  "results": [
+    {
+      "width": 1440,
+      "passed": true,
+      "originalIdentityRecognized": true,
+      "manualCodeEntry": false,
+      "outsideRequests": 0
+    },
+    {
+      "width": 390,
+      "passed": true,
+      "originalIdentityRecognized": true,
+      "manualCodeEntry": false,
+      "outsideRequests": 0
+    }
+  ]
+}

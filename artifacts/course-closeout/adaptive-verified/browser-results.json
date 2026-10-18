@@ -1,0 +1,475 @@
+{
+  "baseURL": "http://localhost:5186/",
+  "production": false,
+  "scenarios": [
+    {
+      "name": "programming: strong adaptive rounds and review admission",
+      "durationMs": 19608,
+      "evidence": {
+        "rounds": 6,
+        "firstAdmissionRound": 3,
+        "objectiveAnswers": 77,
+        "readyCount": 3,
+        "plans": [
+          {
+            "new": 4,
+            "focus": [
+              "word-1",
+              "word-2801",
+              "word-3561",
+              "word-20"
+            ],
+            "answers": 12
+          },
+          {
+            "new": 1,
+            "focus": [
+              "word-3561",
+              "word-2801",
+              "word-1",
+              "word-4"
+            ],
+            "answers": 14
+          },
+          {
+            "new": 1,
+            "focus": [
+              "word-4",
+              "word-20",
+              "word-2801",
+              "word-5"
+            ],
+            "answers": 13
+          },
+          {
+            "new": 1,
+            "focus": [
+              "word-5",
+              "word-2801",
+              "word-4",
+              "word-2"
+            ],
+            "answers": 12
+          },
+          {
+            "new": 1,
+            "focus": [
+              "word-2",
+              "word-1",
+              "word-2801",
+              "word-11"
+            ],
+            "answers": 13
+          },
+          {
+            "new": 1,
+            "focus": [
+              "word-11",
+              "word-5",
+              "word-2801",
+              "word-1880"
+            ],
+            "answers": 13
+          }
+        ]
+      }
+    },
+    {
+      "name": "programming: weak adaptive rounds and review admission",
+      "durationMs": 22633,
+      "evidence": {
+        "rounds": 6,
+        "firstAdmissionRound": 0,
+        "objectiveAnswers": 120,
+        "readyCount": 0,
+        "plans": [
+          {
+            "new": 4,
+            "focus": [
+              "word-1",
+              "word-2801",
+              "word-3561",
+              "word-20"
+            ],
+            "answers": 20
+          },
+          {
+            "new": 0,
+            "focus": [
+              "word-20",
+              "word-2801",
+              "word-3561",
+              "word-1"
+            ],
+            "answers": 20
+          },
+          {
+            "new": 0,
+            "focus": [
+              "word-2801",
+              "word-1",
+              "word-20",
+              "word-3561"
+            ],
+            "answers": 20
+          },
+          {
+            "new": 0,
+            "focus": [
+              "word-3561",
+              "word-2801",
+              "word-1",
+              "word-20"
+            ],
+            "answers": 20
+          },
+          {
+            "new": 0,
+            "focus": [
+              "word-2801",
+              "word-1",
+              "word-20",
+              "word-3561"
+            ],
+            "answers": 20
+          },
+          {
+            "new": 0,
+            "focus": [
+              "word-2801",
+              "word-1",
+              "word-20",
+              "word-3561"
+            ],
+            "answers": 20
+          }
+        ]
+      }
+    },
+    {
+      "name": "daily: strong adaptive rounds and review admission",
+      "durationMs": 17047,
+      "evidence": {
+        "rounds": 6,
+        "firstAdmissionRound": 2,
+        "objectiveAnswers": 69,
+        "readyCount": 6,
+        "plans": [
+          {
+            "new": 4,
+            "focus": [
+              "hello",
+              "hi",
+              "goodbye",
+              "bye"
+            ],
+            "answers": 12
+          },
+          {
+            "new": 1,
+            "focus": [
+              "goodbye",
+              "hi",
+              "bye",
+              "i-am-ben"
+            ],
+            "answers": 12
+          },
+          {
+            "new": 1,
+            "focus": [
+              "i-am-ben",
+              "hello",
+              "bye",
+              "i-am-mia"
+            ],
+            "answers": 12
+          },
+          {
+            "new": 2,
+            "focus": [
+              "i-am-mia",
+              "i-am-ben",
+              "im-ben",
+              "im-mia"
+            ],
+            "answers": 12
+          },
+          {
+            "new": 1,
+            "focus": [
+              "im-ben",
+              "im-mia",
+              "i-am-mia",
+              "whats-your-name"
+            ],
+            "answers": 12
+          },
+          {
+            "new": 1,
+            "focus": [
+              "whats-your-name",
+              "i-am-ben",
+              "i-am-mia",
+              "my-name-is-ben"
+            ],
+            "answers": 12
+          }
+        ]
+      }
+    },
+    {
+      "name": "daily: weak adaptive rounds and review admission",
+      "durationMs": 19507,
+      "evidence": {
+        "rounds": 6,
+        "firstAdmissionRound": 0,
+        "objectiveAnswers": 120,
+        "readyCount": 0,
+        "plans": [
+          {
+            "new": 4,
+            "focus": [
+              "hello",
+              "hi",
+              "goodbye",
+              "bye"
+            ],
+            "answers": 20
+          },
+          {
+            "new": 0,
+            "focus": [
+              "goodbye",
+              "hi",
+              "hello",
+              "bye"
+            ],
+            "answers": 20
+          },
+          {
+            "new": 0,
+            "focus": [
+              "goodbye",
+              "hi",
+              "hello",
+              "bye"
+            ],
+            "answers": 20
+          },
+          {
+            "new": 0,
+            "focus": [
+              "goodbye",
+              "hi",
+              "hello",
+              "bye"
+            ],
+            "answers": 20
+          },
+          {
+            "new": 0,
+            "focus": [
+              "goodbye",
+              "hi",
+              "hello",
+              "bye"
+            ],
+            "answers": 20
+          },
+          {
+            "new": 0,
+            "focus": [
+              "goodbye",
+              "hi",
+              "hello",
+              "bye"
+            ],
+            "answers": 20
+          }
+        ]
+      }
+    },
+    {
+      "name": "programming: stable draft, queue, option order and different random seeds",
+      "durationMs": 4722,
+      "evidence": {
+        "seedA": 3404866623,
+        "seedB": 902964619,
+        "sequenceA": [
+          "P1-01-01-p-20-order-blocks",
+          "P1-01-01-p-1-word",
+          "P1-01-01-p-2801-listen",
+          "P1-01-01-p-20-listen-gap",
+          "P1-01-06-p-1-listen-gap"
+        ],
+        "sequenceB": [
+          "P1-01-01-p-1-listen",
+          "P1-01-01-p-2801-match-audio",
+          "P1-01-01-r01",
+          "P1-01-01-e05",
+          "P1-01-01-e03"
+        ]
+      }
+    },
+    {
+      "name": "daily: stable draft, queue, option order and different random seeds",
+      "durationMs": 4936,
+      "evidence": {
+        "seedA": 3404866623,
+        "seedB": 902964619,
+        "sequenceA": [
+          "A1-01-01-p-bye-listen",
+          "A1-01-01-p-hello-listen",
+          "A1-01-01-p-hi-listen",
+          "A1-01-06-p-goodbye-listen",
+          "A1-01-06-p-goodbye-expression"
+        ],
+        "sequenceB": [
+          "A1-01-01-p-hello-listen",
+          "A1-01-01-p-goodbye-meaning",
+          "A1-01-01-p-hi-meaning",
+          "A1-01-01-e04",
+          "A1-01-01-e01"
+        ]
+      }
+    },
+    {
+      "name": "programming: historical active session and legacy favorites remain readable",
+      "durationMs": 2462
+    },
+    {
+      "name": "programming: competing page edits protect saved course and damaged records",
+      "durationMs": 3893
+    },
+    {
+      "name": "programming: earned review offers early practice and due practice",
+      "durationMs": 1319,
+      "evidence": {
+        "ready": [
+          "word-20",
+          "word-4",
+          "word-2"
+        ],
+        "dueQueue": [
+          "P1-01-01-e02",
+          "P1-01-01-p-20-free-gap",
+          "P1-01-01-p-20-sentence",
+          "P1-01-01-p-20-translation",
+          "P1-01-01-p-20-cloze"
+        ]
+      }
+    },
+    {
+      "name": "daily: historical active session and legacy favorites remain readable",
+      "durationMs": 2337
+    },
+    {
+      "name": "daily: competing page edits protect saved course and damaged records",
+      "durationMs": 3232
+    },
+    {
+      "name": "daily: earned review offers early practice and due practice",
+      "durationMs": 1406,
+      "evidence": {
+        "ready": [
+          "hello",
+          "hi",
+          "goodbye",
+          "bye",
+          "im-ben",
+          "im-mia"
+        ],
+        "dueQueue": [
+          "A1-01-05-p-im-mia-meaning",
+          "A1-01-05-p-im-mia-listen",
+          "A1-01-05-p-im-mia-expression",
+          "A1-01-05-p-im-mia-order",
+          "A1-01-05-p-im-mia-write"
+        ]
+      }
+    },
+    {
+      "name": "daily: spoken expression self check cannot increase mastery",
+      "durationMs": 1418,
+      "evidence": {
+        "sourceLessonId": "A1-01-01",
+        "microphoneTested": false
+      }
+    },
+    {
+      "name": "real Aria and Guy word, example and daily phrase playback",
+      "durationMs": 1840,
+      "evidence": [
+        {
+          "type": "playing",
+          "src": "http://localhost:5186/audio/aria/word-3561.mp3",
+          "rate": 1,
+          "duration": 1.872
+        },
+        {
+          "type": "playing",
+          "src": "http://localhost:5186/audio/aria/example-3561.mp3?v=Read%20this%20code.",
+          "rate": 1,
+          "duration": 1.992
+        },
+        {
+          "type": "playing",
+          "src": "http://localhost:5186/audio/daily/aria/hello.mp3?v=Hello!",
+          "rate": 1,
+          "duration": 1.56
+        },
+        {
+          "type": "playing",
+          "src": "http://localhost:5186/audio/guy/word-3561.mp3",
+          "rate": 1,
+          "duration": 1.872
+        },
+        {
+          "type": "playing",
+          "src": "http://localhost:5186/audio/guy/example-3561.mp3?v=Read%20this%20code.",
+          "rate": 1,
+          "duration": 2.016
+        },
+        {
+          "type": "playing",
+          "src": "http://localhost:5186/audio/daily/guy/hello.mp3?v=Hello!",
+          "rate": 1,
+          "duration": 1.536
+        }
+      ]
+    },
+    {
+      "name": "programming: four themes at 1440px",
+      "durationMs": 2063
+    },
+    {
+      "name": "programming: four themes at 390px",
+      "durationMs": 1931
+    },
+    {
+      "name": "daily: four themes at 1440px",
+      "durationMs": 2448
+    },
+    {
+      "name": "daily: four themes at 390px",
+      "durationMs": 2585
+    }
+  ],
+  "failures": [
+    {
+      "name": "programming: confirm switching unfinished review to adaptive course",
+      "error": "locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#programming-content').locator('.course-current .course-start').getByRole('button', { name: /^(开始|继续)学习$/ })\u001b[22m\n\n    at D:\\coding项目\\交互式英语学习网站\\tools\\test-adaptive-course-browser.mjs:436:109\n    at async scenario (D:\\coding项目\\交互式英语学习网站\\tools\\test-adaptive-course-browser.mjs:91:22)\n    at async file:///D:/coding%E9%A1%B9%E7%9B%AE/%E4%BA%A4%E4%BA%92%E5%BC%8F%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99/tools/test-adaptive-course-browser.mjs:418:26"
+    },
+    {
+      "name": "daily: confirm switching unfinished review to adaptive course",
+      "error": "locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#daily-content').locator('.course-current .course-start').getByRole('button', { name: /^(开始|继续)学习$/ })\u001b[22m\n\n    at D:\\coding项目\\交互式英语学习网站\\tools\\test-adaptive-course-browser.mjs:436:109\n    at async scenario (D:\\coding项目\\交互式英语学习网站\\tools\\test-adaptive-course-browser.mjs:91:22)\n    at async file:///D:/coding%E9%A1%B9%E7%9B%AE/%E4%BA%A4%E4%BA%92%E5%BC%8F%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99/tools/test-adaptive-course-browser.mjs:418:26"
+    }
+  ],
+  "browserErrors": [],
+  "requestFailures": [],
+  "objectiveAnswers": 404,
+  "selfChecks": 4,
+  "microphoneTested": false,
+  "testedAt": "2026-10-03T01:29:09.704Z"
+}

@@ -1,0 +1,31 @@
+.reading-text, .daily-phrase .reading-text, .daily-phrase .reading-button-word { font: inherit; color: inherit; }
+.reading-word { display: inline; padding: 2px 1px; margin: -2px -1px; border: 0; border-radius: 4px; background: transparent; color: inherit; font: inherit; line-height: inherit; text-align: inherit; vertical-align: baseline; cursor: pointer; text-decoration: underline dotted color-mix(in srgb, currentColor 30%, transparent); text-underline-offset: .2em; }
+.reading-word:hover, .reading-word.playing, .reading-button-word:hover { color: var(--accent-deep); background: var(--accent-soft); }
+.reading-word:active { background: var(--accent-line); }
+.reading-word:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.reading-popup { position: fixed; z-index: 1000; display: flex; gap: 4px; padding: 4px; max-width: calc(100vw - 16px); border: 1px solid var(--frame); border-radius: 10px; box-shadow: var(--shadow); background: var(--surface); color: var(--ink); }
+.reading-popup button, .reading-controls button { display: inline-flex; justify-content: center; align-items: center; gap: 6px; min-width: 44px; min-height: 44px; padding: 7px 10px; border: 1px solid transparent; border-radius: 7px; color: var(--ink-soft); background: transparent; font: inherit; font-size: 15px; line-height: 1.4; }
+.reading-popup button:hover, .reading-controls button:hover, .reading-popup .playing, .reading-controls .playing { color: var(--accent-deep); background: var(--accent-soft); border-color: var(--accent-line); }
+.reading-popup button:focus-visible, .reading-controls button:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+.reading-popup button:active, .reading-controls button:active { transform: translateY(1px); }
+.reading-controls { display: inline-flex; flex: 0 0 auto; align-items: center; gap: 0; }
+.reading-option { display: flex; min-width: 0; align-items: stretch; gap: 4px; }
+.reading-option > .daily-option, .reading-option > .lesson-option { flex: 1; min-width: 0; overflow-wrap: anywhere; }
+.reading-option > .lesson-pair-card { flex: 1; min-width: 0; overflow-wrap: anywhere; }
+.lesson-exercise-cloze .reading-option { flex: 1 1 180px; }
+.daily-phrase-content { align-items: center; gap: 8px; }
+.daily-expression-content { display: flex; align-items: center; gap: 8px; }
+.reading-option > .reading-controls { flex-direction: column; justify-content: center; }
+.reading-token { display: inline-flex; align-items: stretch; max-width: 100%; gap: 2px; }
+.reading-token > .daily-token { min-width: 0; overflow-wrap: anywhere; }
+.reading-token > .daily-token.used { opacity: .45; }
+.reading-token .reading-controls { flex-wrap: nowrap; }
+.reading-token .reading-controls button { padding-inline: 6px; }
+.daily-phrase-content .reading-text, .daily-expression-content .reading-text { display: inline; }
+.daily-expression-content .reading-text { font: inherit; }
+.reading-notice { margin: 12px 0 0; color: var(--muted); font-size: 15px; }
+.voice-feedback-setting { display: flex; align-items: center; gap: 10px; margin-top: 20px; font-size: 16px; }
+.voice-feedback-setting input { width: 20px; height: 20px; accent-color: var(--accent); }
+.daily-feedback-details:not([open]) > .daily-feedback-explanation { display: none; }
+.daily-feedback .daily-expected { display: flex; align-items: center; flex-wrap: wrap; gap: 6px; }
+.daily-expected > .reading-text { min-width: 0; max-width: 100%; }

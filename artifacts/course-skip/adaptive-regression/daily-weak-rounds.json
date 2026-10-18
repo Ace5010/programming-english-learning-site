@@ -1,0 +1,2095 @@
+[
+  {
+    "round": 1,
+    "plan": {
+      "version": 1,
+      "round": 1,
+      "focusIds": [
+        "hello",
+        "hi",
+        "goodbye",
+        "bye"
+      ],
+      "newIds": [
+        "hello",
+        "hi",
+        "goodbye",
+        "bye"
+      ],
+      "sourceLessonId": "A1-01-01",
+      "budget": 12,
+      "seed": 1422306624
+    },
+    "answers": 20,
+    "readyIds": [],
+    "targets": {
+      "hello": {
+        "introducedAt": 1790993039068,
+        "confidence": 0,
+        "abilities": {
+          "listening": 0,
+          "meaning": 0,
+          "writing": 0
+        },
+        "lastSeenTurn": 19,
+        "lastFailureTurn": 19,
+        "signatures": [],
+        "transfer": false,
+        "readyAt": 0,
+        "independentRecallAt": 0,
+        "evidence": {
+          "recognition": {
+            "attempts": 2,
+            "independent": 0,
+            "assisted": 0,
+            "revealed": 2,
+            "elapsedMs": 157
+          }
+        },
+        "lastSessionId": "1790993039024-adaptive-631v7n",
+        "lastEvidenceAt": 1790993040723
+      },
+      "hi": {
+        "introducedAt": 1790993039068,
+        "confidence": 0,
+        "abilities": {
+          "meaning": 0,
+          "writing": 0,
+          "listening": 0
+        },
+        "lastSeenTurn": 18,
+        "lastFailureTurn": 18,
+        "signatures": [],
+        "transfer": false,
+        "readyAt": 0,
+        "independentRecallAt": 0,
+        "lastEvidenceAt": 1790993040638,
+        "evidence": {
+          "recognition": {
+            "attempts": 2,
+            "independent": 0,
+            "assisted": 1,
+            "revealed": 1,
+            "elapsedMs": 276
+          },
+          "recall": {
+            "attempts": 2,
+            "independent": 0,
+            "assisted": 2,
+            "revealed": 0,
+            "elapsedMs": 166
+          }
+        },
+        "lastSessionId": "1790993039024-adaptive-631v7n"
+      },
+      "goodbye": {
+        "introducedAt": 1790993039068,
+        "confidence": 0,
+        "abilities": {
+          "listening": 0,
+          "meaning": 0,
+          "writing": 0
+        },
+        "lastSeenTurn": 17,
+        "lastFailureTurn": 17,
+        "signatures": [],
+        "transfer": false,
+        "readyAt": 0,
+        "independentRecallAt": 0,
+        "lastEvidenceAt": 1790993040567,
+        "evidence": {
+          "recognition": {
+            "attempts": 4,
+            "independent": 0,
+            "assisted": 2,
+            "revealed": 2,
+            "elapsedMs": 367
+          },
+          "recall": {
+            "attempts": 1,
+            "independent": 0,
+            "assisted": 1,
+            "revealed": 0,
+            "elapsedMs": 140
+          }
+        },
+        "lastSessionId": "1790993039024-adaptive-631v7n"
+      },
+      "bye": {
+        "introducedAt": 1790993039068,
+        "confidence": 0,
+        "abilities": {
+          "listening": 0,
+          "writing": 0,
+          "meaning": 0
+        },
+        "lastSeenTurn": 20,
+        "lastFailureTurn": 20,
+        "signatures": [],
+        "transfer": false,
+        "readyAt": 0,
+        "independentRecallAt": 0,
+        "evidence": {
+          "recognition": {
+            "attempts": 2,
+            "independent": 0,
+            "assisted": 0,
+            "revealed": 2,
+            "elapsedMs": 129
+          },
+          "recall": {
+            "attempts": 1,
+            "independent": 0,
+            "assisted": 1,
+            "revealed": 0,
+            "elapsedMs": 73
+          }
+        },
+        "lastSessionId": "1790993039024-adaptive-631v7n",
+        "lastEvidenceAt": 1790993040778
+      }
+    },
+    "sequence": [
+      {
+        "id": "A1-01-01-p-hi-meaning",
+        "kind": "choice",
+        "knowledgeIds": [
+          "hi"
+        ],
+        "signature": "daily:hi:meaning",
+        "outcome": "assisted",
+        "turn": 1
+      },
+      {
+        "id": "A1-01-01-p-bye-listen",
+        "kind": "listen",
+        "knowledgeIds": [
+          "bye"
+        ],
+        "signature": "daily:bye:listen",
+        "outcome": "revealed",
+        "turn": 2
+      },
+      {
+        "id": "A1-01-01-e02",
+        "kind": "listen",
+        "knowledgeIds": [
+          "goodbye"
+        ],
+        "signature": "daily:original:A1-01-01-e02",
+        "outcome": "assisted",
+        "turn": 3
+      },
+      {
+        "id": "A1-01-01-p-hello-listen",
+        "kind": "listen",
+        "knowledgeIds": [
+          "hello"
+        ],
+        "signature": "daily:hello:listen",
+        "outcome": "revealed",
+        "turn": 4
+      },
+      {
+        "id": "A1-01-01-e04",
+        "kind": "write",
+        "knowledgeIds": [
+          "hi"
+        ],
+        "signature": "daily:original:A1-01-01-e04",
+        "outcome": "assisted",
+        "turn": 5
+      },
+      {
+        "id": "A1-01-01-p-goodbye-expression",
+        "kind": "choice",
+        "knowledgeIds": [
+          "goodbye"
+        ],
+        "signature": "daily:goodbye:expression",
+        "outcome": "revealed",
+        "turn": 6
+      },
+      {
+        "id": "A1-01-01-r01",
+        "kind": "listen",
+        "knowledgeIds": [
+          "bye"
+        ],
+        "signature": "daily:original:A1-01-01-r01",
+        "outcome": "assisted",
+        "turn": 7
+      },
+      {
+        "id": "A1-01-01-p-hi-expression",
+        "kind": "choice",
+        "knowledgeIds": [
+          "hi"
+        ],
+        "signature": "daily:hi:expression",
+        "outcome": "revealed",
+        "turn": 8
+      },
+      {
+        "id": "A1-01-01-p-goodbye-write",
+        "kind": "write",
+        "knowledgeIds": [
+          "goodbye"
+        ],
+        "signature": "daily:goodbye:write",
+        "outcome": "assisted",
+        "turn": 9
+      },
+      {
+        "id": "A1-01-01-p-goodbye-listen",
+        "kind": "listen",
+        "knowledgeIds": [
+          "goodbye"
+        ],
+        "signature": "daily:goodbye:listen",
+        "outcome": "revealed",
+        "turn": 10
+      },
+      {
+        "id": "A1-01-01-p-hi-write",
+        "kind": "write",
+        "knowledgeIds": [
+          "hi"
+        ],
+        "signature": "daily:hi:write",
+        "outcome": "assisted",
+        "turn": 11
+      },
+      {
+        "id": "A1-01-01-p-hello-meaning",
+        "kind": "choice",
+        "knowledgeIds": [
+          "hello"
+        ],
+        "signature": "daily:hello:meaning",
+        "outcome": "revealed",
+        "turn": 12
+      },
+      {
+        "id": "A1-01-06-p-goodbye-letters",
+        "kind": "fill",
+        "knowledgeIds": [
+          "goodbye"
+        ],
+        "signature": "daily:goodbye:letters",
+        "outcome": "assisted",
+        "turn": 13
+      },
+      {
+        "id": "A1-01-06-p-goodbye-listen",
+        "kind": "listen",
+        "knowledgeIds": [
+          "goodbye"
+        ],
+        "signature": "daily:goodbye:listen",
+        "outcome": "revealed",
+        "turn": 14
+      },
+      {
+        "id": "A1-01-01-p-bye-write",
+        "kind": "write",
+        "knowledgeIds": [
+          "bye"
+        ],
+        "signature": "daily:bye:write",
+        "outcome": "assisted",
+        "turn": 15
+      },
+      {
+        "id": "A1-01-01-e01",
+        "kind": "choice",
+        "knowledgeIds": [
+          "hello"
+        ],
+        "signature": "daily:original:A1-01-01-e01",
+        "outcome": "revealed",
+        "turn": 16
+      },
+      {
+        "id": "A1-01-06-p-goodbye-meaning",
+        "kind": "choice",
+        "knowledgeIds": [
+          "goodbye"
+        ],
+        "signature": "daily:goodbye:meaning",
+        "outcome": "assisted",
+        "turn": 17
+      },
+      {
+        "id": "A1-01-01-p-hi-listen",
+        "kind": "listen",
+        "knowledgeIds": [
+          "hi"
+        ],
+        "signature": "daily:hi:listen",
+        "outcome": "revealed",
+        "turn": 18
+      },
+      {
+        "id": "A1-01-01-e03",
+        "kind": "fill",
+        "knowledgeIds": [
+          "hello"
+        ],
+        "signature": "daily:original:A1-01-01-e03",
+        "outcome": "assisted",
+        "turn": 19
+      },
+      {
+        "id": "A1-01-01-p-bye-meaning",
+        "kind": "choice",
+        "knowledgeIds": [
+          "bye"
+        ],
+        "signature": "daily:bye:meaning",
+        "outcome": "revealed",
+        "turn": 20
+      }
+    ]
+  },
+  {
+    "round": 2,
+    "plan": {
+      "version": 1,
+      "round": 2,
+      "focusIds": [
+        "goodbye",
+        "hi",
+        "hello",
+        "bye"
+      ],
+      "newIds": [],
+      "sourceLessonId": "A1-01-01",
+      "budget": 16,
+      "seed": 1422306624
+    },
+    "answers": 20,
+    "readyIds": [],
+    "targets": {
+      "hello": {
+        "introducedAt": 1790993039068,
+        "confidence": 0,
+        "abilities": {
+          "listening": 0,
+          "meaning": 0,
+          "writing": 0
+        },
+        "lastSeenTurn": 39,
+        "lastFailureTurn": 39,
+        "signatures": [],
+        "transfer": false,
+        "readyAt": 0,
+        "independentRecallAt": 0,
+        "evidence": {
+          "recognition": {
+            "attempts": 4,
+            "independent": 0,
+            "assisted": 0,
+            "revealed": 4,
+            "elapsedMs": 315
+          }
+        },
+        "lastSessionId": "1790993042107-adaptive-631v7n",
+        "lastEvidenceAt": 1790993043719
+      },
+      "hi": {
+        "introducedAt": 1790993039068,
+        "confidence": 0,
+        "abilities": {
+          "meaning": 0,
+          "writing": 0,
+          "listening": 0
+        },
+        "lastSeenTurn": 38,
+        "lastFailureTurn": 38,
+        "signatures": [],
+        "transfer": false,
+        "readyAt": 0,
+        "independentRecallAt": 0,
+        "lastEvidenceAt": 1790993043645,
+        "evidence": {
+          "recognition": {
+            "attempts": 4,
+            "independent": 0,
+            "assisted": 2,
+            "revealed": 2,
+            "elapsedMs": 441
+          },
+          "recall": {
+            "attempts": 4,
+            "independent": 0,
+            "assisted": 4,
+            "revealed": 0,
+            "elapsedMs": 342
+          }
+        },
+        "lastSessionId": "1790993042107-adaptive-631v7n"
+      },
+      "goodbye": {
+        "introducedAt": 1790993039068,
+        "confidence": 0,
+        "abilities": {
+          "listening": 0,
+          "meaning": 0,
+          "writing": 0
+        },
+        "lastSeenTurn": 37,
+        "lastFailureTurn": 37,
+        "signatures": [],
+        "transfer": false,
+        "readyAt": 0,
+        "independentRecallAt": 0,
+        "lastEvidenceAt": 1790993043590,
+        "evidence": {
+          "recognition": {
+            "attempts": 8,
+            "independent": 0,
+            "assisted": 4,
+            "revealed": 4,
+            "elapsedMs": 803
+          },
+          "recall": {
+            "attempts": 2,
+            "independent": 0,
+            "assisted": 2,
+            "revealed": 0,
+            "elapsedMs": 218
+          }
+        },
+        "lastSessionId": "1790993042107-adaptive-631v7n"
+      },
+      "bye": {
+        "introducedAt": 1790993039068,
+        "confidence": 0,
+        "abilities": {
+          "listening": 0,
+          "writing": 0,
+          "meaning": 0
+        },
+        "lastSeenTurn": 40,
+        "lastFailureTurn": 40,
+        "signatures": [],
+        "transfer": false,
+        "readyAt": 0,
+        "independentRecallAt": 0,
+        "evidence": {
+          "recognition": {
+            "attempts": 4,
+            "independent": 0,
+            "assisted": 0,
+            "revealed": 4,
+            "elapsedMs": 278
+          },
+          "recall": {
+            "attempts": 2,
+            "independent": 0,
+            "assisted": 2,
+            "revealed": 0,
+            "elapsedMs": 146
+          }
+        },
+        "lastSessionId": "1790993042107-adaptive-631v7n",
+        "lastEvidenceAt": 1790993043784
+      }
+    },
+    "sequence": [
+      {
+        "id": "A1-01-01-p-hi-listen",
+        "kind": "listen",
+        "knowledgeIds": [
+          "hi"
+        ],
+        "signature": "daily:hi:listen",
+        "outcome": "assisted",
+        "turn": 21
+      },
+      {
+        "id": "A1-01-01-p-bye-listen",
+        "kind": "listen",
+        "knowledgeIds": [
+          "bye"
+        ],
+        "signature": "daily:bye:listen",
+        "outcome": "revealed",
+        "turn": 22
+      },
+      {
+        "id": "A1-01-01-e02",
+        "kind": "listen",
+        "knowledgeIds": [
+          "goodbye"
+        ],
+        "signature": "daily:original:A1-01-01-e02",
+        "outcome": "assisted",
+        "turn": 23
+      },
+      {
+        "id": "A1-01-01-p-hello-listen",
+        "kind": "listen",
+        "knowledgeIds": [
+          "hello"
+        ],
+        "signature": "daily:hello:listen",
+        "outcome": "revealed",
+        "turn": 24
+      },
+      {
+        "id": "A1-01-01-e04",
+        "kind": "write",
+        "knowledgeIds": [
+          "hi"
+        ],
+        "signature": "daily:original:A1-01-01-e04",
+        "outcome": "assisted",
+        "turn": 25
+      },
+      {
+        "id": "A1-01-01-p-goodbye-expression",
+        "kind": "choice",
+        "knowledgeIds": [
+          "goodbye"
+        ],
+        "signature": "daily:goodbye:expression",
+        "outcome": "revealed",
+        "turn": 26
+      },
+      {
+        "id": "A1-01-01-r01",
+        "kind": "listen",
+        "knowledgeIds": [
+          "bye"
+        ],
+        "signature": "daily:original:A1-01-01-r01",
+        "outcome": "assisted",
+        "turn": 27
+      },
+      {
+        "id": "A1-01-01-p-hi-expression",
+        "kind": "choice",
+        "knowledgeIds": [
+          "hi"
+        ],
+        "signature": "daily:hi:expression",
+        "outcome": "revealed",
+        "turn": 28
+      },
+      {
+        "id": "A1-01-01-p-goodbye-write",
+        "kind": "write",
+        "knowledgeIds": [
+          "goodbye"
+        ],
+        "signature": "daily:goodbye:write",
+        "outcome": "assisted",
+        "turn": 29
+      },
+      {
+        "id": "A1-01-01-p-goodbye-listen",
+        "kind": "listen",
+        "knowledgeIds": [
+          "goodbye"
+        ],
+        "signature": "daily:goodbye:listen",
+        "outcome": "revealed",
+        "turn": 30
+      },
+      {
+        "id": "A1-01-01-p-hi-write",
+        "kind": "write",
+        "knowledgeIds": [
+          "hi"
+        ],
+        "signature": "daily:hi:write",
+        "outcome": "assisted",
+        "turn": 31
+      },
+      {
+        "id": "A1-01-01-p-hello-meaning",
+        "kind": "choice",
+        "knowledgeIds": [
+          "hello"
+        ],
+        "signature": "daily:hello:meaning",
+        "outcome": "revealed",
+        "turn": 32
+      },
+      {
+        "id": "A1-01-06-p-goodbye-letters",
+        "kind": "fill",
+        "knowledgeIds": [
+          "goodbye"
+        ],
+        "signature": "daily:goodbye:letters",
+        "outcome": "assisted",
+        "turn": 33
+      },
+      {
+        "id": "A1-01-06-p-goodbye-listen",
+        "kind": "listen",
+        "knowledgeIds": [
+          "goodbye"
+        ],
+        "signature": "daily:goodbye:listen",
+        "outcome": "revealed",
+        "turn": 34
+      },
+      {
+        "id": "A1-01-01-p-bye-write",
+        "kind": "write",
+        "knowledgeIds": [
+          "bye"
+        ],
+        "signature": "daily:bye:write",
+        "outcome": "assisted",
+        "turn": 35
+      },
+      {
+        "id": "A1-01-01-e01",
+        "kind": "choice",
+        "knowledgeIds": [
+          "hello"
+        ],
+        "signature": "daily:original:A1-01-01-e01",
+        "outcome": "revealed",
+        "turn": 36
+      },
+      {
+        "id": "A1-01-06-p-goodbye-meaning",
+        "kind": "choice",
+        "knowledgeIds": [
+          "goodbye"
+        ],
+        "signature": "daily:goodbye:meaning",
+        "outcome": "assisted",
+        "turn": 37
+      },
+      {
+        "id": "A1-01-01-p-hi-meaning",
+        "kind": "choice",
+        "knowledgeIds": [
+          "hi"
+        ],
+        "signature": "daily:hi:meaning",
+        "outcome": "revealed",
+        "turn": 38
+      },
+      {
+        "id": "A1-01-01-e03",
+        "kind": "fill",
+        "knowledgeIds": [
+          "hello"
+        ],
+        "signature": "daily:original:A1-01-01-e03",
+        "outcome": "assisted",
+        "turn": 39
+      },
+      {
+        "id": "A1-01-01-p-bye-meaning",
+        "kind": "choice",
+        "knowledgeIds": [
+          "bye"
+        ],
+        "signature": "daily:bye:meaning",
+        "outcome": "revealed",
+        "turn": 40
+      }
+    ]
+  },
+  {
+    "round": 3,
+    "plan": {
+      "version": 1,
+      "round": 3,
+      "focusIds": [
+        "goodbye",
+        "hi",
+        "hello",
+        "bye"
+      ],
+      "newIds": [],
+      "sourceLessonId": "A1-01-01",
+      "budget": 16,
+      "seed": 1422306624
+    },
+    "answers": 20,
+    "readyIds": [],
+    "targets": {
+      "hello": {
+        "introducedAt": 1790993039068,
+        "confidence": 0,
+        "abilities": {
+          "listening": 0,
+          "meaning": 0,
+          "writing": 0
+        },
+        "lastSeenTurn": 59,
+        "lastFailureTurn": 59,
+        "signatures": [],
+        "transfer": false,
+        "readyAt": 0,
+        "independentRecallAt": 0,
+        "evidence": {
+          "recognition": {
+            "attempts": 6,
+            "independent": 0,
+            "assisted": 0,
+            "revealed": 6,
+            "elapsedMs": 481
+          }
+        },
+        "lastSessionId": "1790993045034-adaptive-631v7n",
+        "lastEvidenceAt": 1790993046623
+      },
+      "hi": {
+        "introducedAt": 1790993039068,
+        "confidence": 0,
+        "abilities": {
+          "meaning": 0,
+          "writing": 0,
+          "listening": 0
+        },
+        "lastSeenTurn": 58,
+        "lastFailureTurn": 58,
+        "signatures": [],
+        "transfer": false,
+        "readyAt": 0,
+        "independentRecallAt": 0,
+        "lastEvidenceAt": 1790993046550,
+        "evidence": {
+          "recognition": {
+            "attempts": 6,
+            "independent": 0,
+            "assisted": 3,
+            "revealed": 3,
+            "elapsedMs": 635
+          },
+          "recall": {
+            "attempts": 6,
+            "independent": 0,
+            "assisted": 6,
+            "revealed": 0,
+            "elapsedMs": 515
+          }
+        },
+        "lastSessionId": "1790993045034-adaptive-631v7n"
+      },
+      "goodbye": {
+        "introducedAt": 1790993039068,
+        "confidence": 0,
+        "abilities": {
+          "listening": 0,
+          "meaning": 0,
+          "writing": 0
+        },
+        "lastSeenTurn": 57,
+        "lastFailureTurn": 57,
+        "signatures": [],
+        "transfer": false,
+        "readyAt": 0,
+        "independentRecallAt": 0,
+        "lastEvidenceAt": 1790993046495,
+        "evidence": {
+          "recognition": {
+            "attempts": 12,
+            "independent": 0,
+            "assisted": 6,
+            "revealed": 6,
+            "elapsedMs": 1155
+          },
+          "recall": {
+            "attempts": 3,
+            "independent": 0,
+            "assisted": 3,
+            "revealed": 0,
+            "elapsedMs": 296
+          }
+        },
+        "lastSessionId": "1790993045034-adaptive-631v7n"
+      },
+      "bye": {
+        "introducedAt": 1790993039068,
+        "confidence": 0,
+        "abilities": {
+          "listening": 0,
+          "writing": 0,
+          "meaning": 0
+        },
+        "lastSeenTurn": 60,
+        "lastFailureTurn": 60,
+        "signatures": [],
+        "transfer": false,
+        "readyAt": 0,
+        "independentRecallAt": 0,
+        "evidence": {
+          "recognition": {
+            "attempts": 6,
+            "independent": 0,
+            "assisted": 0,
+            "revealed": 6,
+            "elapsedMs": 406
+          },
+          "recall": {
+            "attempts": 3,
+            "independent": 0,
+            "assisted": 3,
+            "revealed": 0,
+            "elapsedMs": 274
+          }
+        },
+        "lastSessionId": "1790993045034-adaptive-631v7n",
+        "lastEvidenceAt": 1790993046678
+      }
+    },
+    "sequence": [
+      {
+        "id": "A1-01-01-p-hi-listen",
+        "kind": "listen",
+        "knowledgeIds": [
+          "hi"
+        ],
+        "signature": "daily:hi:listen",
+        "outcome": "assisted",
+        "turn": 41
+      },
+      {
+        "id": "A1-01-01-p-bye-listen",
+        "kind": "listen",
+        "knowledgeIds": [
+          "bye"
+        ],
+        "signature": "daily:bye:listen",
+        "outcome": "revealed",
+        "turn": 42
+      },
+      {
+        "id": "A1-01-01-e02",
+        "kind": "listen",
+        "knowledgeIds": [
+          "goodbye"
+        ],
+        "signature": "daily:original:A1-01-01-e02",
+        "outcome": "assisted",
+        "turn": 43
+      },
+      {
+        "id": "A1-01-01-p-hello-listen",
+        "kind": "listen",
+        "knowledgeIds": [
+          "hello"
+        ],
+        "signature": "daily:hello:listen",
+        "outcome": "revealed",
+        "turn": 44
+      },
+      {
+        "id": "A1-01-01-e04",
+        "kind": "write",
+        "knowledgeIds": [
+          "hi"
+        ],
+        "signature": "daily:original:A1-01-01-e04",
+        "outcome": "assisted",
+        "turn": 45
+      },
+      {
+        "id": "A1-01-01-p-goodbye-expression",
+        "kind": "choice",
+        "knowledgeIds": [
+          "goodbye"
+        ],
+        "signature": "daily:goodbye:expression",
+        "outcome": "revealed",
+        "turn": 46
+      },
+      {
+        "id": "A1-01-01-r01",
+        "kind": "listen",
+        "knowledgeIds": [
+          "bye"
+        ],
+        "signature": "daily:original:A1-01-01-r01",
+        "outcome": "assisted",
+        "turn": 47
+      },
+      {
+        "id": "A1-01-01-p-hi-expression",
+        "kind": "choice",
+        "knowledgeIds": [
+          "hi"
+        ],
+        "signature": "daily:hi:expression",
+        "outcome": "revealed",
+        "turn": 48
+      },
+      {
+        "id": "A1-01-01-p-goodbye-write",
+        "kind": "write",
+        "knowledgeIds": [
+          "goodbye"
+        ],
+        "signature": "daily:goodbye:write",
+        "outcome": "assisted",
+        "turn": 49
+      },
+      {
+        "id": "A1-01-01-p-goodbye-listen",
+        "kind": "listen",
+        "knowledgeIds": [
+          "goodbye"
+        ],
+        "signature": "daily:goodbye:listen",
+        "outcome": "revealed",
+        "turn": 50
+      },
+      {
+        "id": "A1-01-01-p-hi-write",
+        "kind": "write",
+        "knowledgeIds": [
+          "hi"
+        ],
+        "signature": "daily:hi:write",
+        "outcome": "assisted",
+        "turn": 51
+      },
+      {
+        "id": "A1-01-01-p-hello-meaning",
+        "kind": "choice",
+        "knowledgeIds": [
+          "hello"
+        ],
+        "signature": "daily:hello:meaning",
+        "outcome": "revealed",
+        "turn": 52
+      },
+      {
+        "id": "A1-01-06-p-goodbye-letters",
+        "kind": "fill",
+        "knowledgeIds": [
+          "goodbye"
+        ],
+        "signature": "daily:goodbye:letters",
+        "outcome": "assisted",
+        "turn": 53
+      },
+      {
+        "id": "A1-01-06-p-goodbye-listen",
+        "kind": "listen",
+        "knowledgeIds": [
+          "goodbye"
+        ],
+        "signature": "daily:goodbye:listen",
+        "outcome": "revealed",
+        "turn": 54
+      },
+      {
+        "id": "A1-01-01-p-bye-write",
+        "kind": "write",
+        "knowledgeIds": [
+          "bye"
+        ],
+        "signature": "daily:bye:write",
+        "outcome": "assisted",
+        "turn": 55
+      },
+      {
+        "id": "A1-01-01-e01",
+        "kind": "choice",
+        "knowledgeIds": [
+          "hello"
+        ],
+        "signature": "daily:original:A1-01-01-e01",
+        "outcome": "revealed",
+        "turn": 56
+      },
+      {
+        "id": "A1-01-06-p-goodbye-meaning",
+        "kind": "choice",
+        "knowledgeIds": [
+          "goodbye"
+        ],
+        "signature": "daily:goodbye:meaning",
+        "outcome": "assisted",
+        "turn": 57
+      },
+      {
+        "id": "A1-01-01-p-hi-meaning",
+        "kind": "choice",
+        "knowledgeIds": [
+          "hi"
+        ],
+        "signature": "daily:hi:meaning",
+        "outcome": "revealed",
+        "turn": 58
+      },
+      {
+        "id": "A1-01-01-e03",
+        "kind": "fill",
+        "knowledgeIds": [
+          "hello"
+        ],
+        "signature": "daily:original:A1-01-01-e03",
+        "outcome": "assisted",
+        "turn": 59
+      },
+      {
+        "id": "A1-01-01-p-bye-meaning",
+        "kind": "choice",
+        "knowledgeIds": [
+          "bye"
+        ],
+        "signature": "daily:bye:meaning",
+        "outcome": "revealed",
+        "turn": 60
+      }
+    ]
+  },
+  {
+    "round": 4,
+    "plan": {
+      "version": 1,
+      "round": 4,
+      "focusIds": [
+        "goodbye",
+        "hi",
+        "hello",
+        "bye"
+      ],
+      "newIds": [],
+      "sourceLessonId": "A1-01-01",
+      "budget": 16,
+      "seed": 1422306624
+    },
+    "answers": 20,
+    "readyIds": [],
+    "targets": {
+      "hello": {
+        "introducedAt": 1790993039068,
+        "confidence": 0,
+        "abilities": {
+          "listening": 0,
+          "meaning": 0,
+          "writing": 0
+        },
+        "lastSeenTurn": 79,
+        "lastFailureTurn": 79,
+        "signatures": [],
+        "transfer": false,
+        "readyAt": 0,
+        "independentRecallAt": 0,
+        "evidence": {
+          "recognition": {
+            "attempts": 8,
+            "independent": 0,
+            "assisted": 0,
+            "revealed": 8,
+            "elapsedMs": 636
+          }
+        },
+        "lastSessionId": "1790993047951-adaptive-631v7n",
+        "lastEvidenceAt": 1790993049440
+      },
+      "hi": {
+        "introducedAt": 1790993039068,
+        "confidence": 0,
+        "abilities": {
+          "meaning": 0,
+          "writing": 0,
+          "listening": 0
+        },
+        "lastSeenTurn": 78,
+        "lastFailureTurn": 78,
+        "signatures": [],
+        "transfer": false,
+        "readyAt": 0,
+        "independentRecallAt": 0,
+        "lastEvidenceAt": 1790993049367,
+        "evidence": {
+          "recognition": {
+            "attempts": 8,
+            "independent": 0,
+            "assisted": 4,
+            "revealed": 4,
+            "elapsedMs": 791
+          },
+          "recall": {
+            "attempts": 8,
+            "independent": 0,
+            "assisted": 8,
+            "revealed": 0,
+            "elapsedMs": 676
+          }
+        },
+        "lastSessionId": "1790993047951-adaptive-631v7n"
+      },
+      "goodbye": {
+        "introducedAt": 1790993039068,
+        "confidence": 0,
+        "abilities": {
+          "listening": 0,
+          "meaning": 0,
+          "writing": 0
+        },
+        "lastSeenTurn": 77,
+        "lastFailureTurn": 77,
+        "signatures": [],
+        "transfer": false,
+        "readyAt": 0,
+        "independentRecallAt": 0,
+        "lastEvidenceAt": 1790993049311,
+        "evidence": {
+          "recognition": {
+            "attempts": 16,
+            "independent": 0,
+            "assisted": 8,
+            "revealed": 8,
+            "elapsedMs": 1485
+          },
+          "recall": {
+            "attempts": 4,
+            "independent": 0,
+            "assisted": 4,
+            "revealed": 0,
+            "elapsedMs": 368
+          }
+        },
+        "lastSessionId": "1790993047951-adaptive-631v7n"
+      },
+      "bye": {
+        "introducedAt": 1790993039068,
+        "confidence": 0,
+        "abilities": {
+          "listening": 0,
+          "writing": 0,
+          "meaning": 0
+        },
+        "lastSeenTurn": 80,
+        "lastFailureTurn": 80,
+        "signatures": [],
+        "transfer": false,
+        "readyAt": 0,
+        "independentRecallAt": 0,
+        "evidence": {
+          "recognition": {
+            "attempts": 8,
+            "independent": 0,
+            "assisted": 0,
+            "revealed": 8,
+            "elapsedMs": 531
+          },
+          "recall": {
+            "attempts": 4,
+            "independent": 0,
+            "assisted": 4,
+            "revealed": 0,
+            "elapsedMs": 364
+          }
+        },
+        "lastSessionId": "1790993047951-adaptive-631v7n",
+        "lastEvidenceAt": 1790993049496
+      }
+    },
+    "sequence": [
+      {
+        "id": "A1-01-01-p-hi-listen",
+        "kind": "listen",
+        "knowledgeIds": [
+          "hi"
+        ],
+        "signature": "daily:hi:listen",
+        "outcome": "assisted",
+        "turn": 61
+      },
+      {
+        "id": "A1-01-01-p-bye-listen",
+        "kind": "listen",
+        "knowledgeIds": [
+          "bye"
+        ],
+        "signature": "daily:bye:listen",
+        "outcome": "revealed",
+        "turn": 62
+      },
+      {
+        "id": "A1-01-01-e02",
+        "kind": "listen",
+        "knowledgeIds": [
+          "goodbye"
+        ],
+        "signature": "daily:original:A1-01-01-e02",
+        "outcome": "assisted",
+        "turn": 63
+      },
+      {
+        "id": "A1-01-01-p-hello-listen",
+        "kind": "listen",
+        "knowledgeIds": [
+          "hello"
+        ],
+        "signature": "daily:hello:listen",
+        "outcome": "revealed",
+        "turn": 64
+      },
+      {
+        "id": "A1-01-01-e04",
+        "kind": "write",
+        "knowledgeIds": [
+          "hi"
+        ],
+        "signature": "daily:original:A1-01-01-e04",
+        "outcome": "assisted",
+        "turn": 65
+      },
+      {
+        "id": "A1-01-01-p-goodbye-expression",
+        "kind": "choice",
+        "knowledgeIds": [
+          "goodbye"
+        ],
+        "signature": "daily:goodbye:expression",
+        "outcome": "revealed",
+        "turn": 66
+      },
+      {
+        "id": "A1-01-01-r01",
+        "kind": "listen",
+        "knowledgeIds": [
+          "bye"
+        ],
+        "signature": "daily:original:A1-01-01-r01",
+        "outcome": "assisted",
+        "turn": 67
+      },
+      {
+        "id": "A1-01-01-p-hi-expression",
+        "kind": "choice",
+        "knowledgeIds": [
+          "hi"
+        ],
+        "signature": "daily:hi:expression",
+        "outcome": "revealed",
+        "turn": 68
+      },
+      {
+        "id": "A1-01-01-p-goodbye-write",
+        "kind": "write",
+        "knowledgeIds": [
+          "goodbye"
+        ],
+        "signature": "daily:goodbye:write",
+        "outcome": "assisted",
+        "turn": 69
+      },
+      {
+        "id": "A1-01-01-p-goodbye-listen",
+        "kind": "listen",
+        "knowledgeIds": [
+          "goodbye"
+        ],
+        "signature": "daily:goodbye:listen",
+        "outcome": "revealed",
+        "turn": 70
+      },
+      {
+        "id": "A1-01-01-p-hi-write",
+        "kind": "write",
+        "knowledgeIds": [
+          "hi"
+        ],
+        "signature": "daily:hi:write",
+        "outcome": "assisted",
+        "turn": 71
+      },
+      {
+        "id": "A1-01-01-p-hello-meaning",
+        "kind": "choice",
+        "knowledgeIds": [
+          "hello"
+        ],
+        "signature": "daily:hello:meaning",
+        "outcome": "revealed",
+        "turn": 72
+      },
+      {
+        "id": "A1-01-06-p-goodbye-letters",
+        "kind": "fill",
+        "knowledgeIds": [
+          "goodbye"
+        ],
+        "signature": "daily:goodbye:letters",
+        "outcome": "assisted",
+        "turn": 73
+      },
+      {
+        "id": "A1-01-06-p-goodbye-listen",
+        "kind": "listen",
+        "knowledgeIds": [
+          "goodbye"
+        ],
+        "signature": "daily:goodbye:listen",
+        "outcome": "revealed",
+        "turn": 74
+      },
+      {
+        "id": "A1-01-01-p-bye-write",
+        "kind": "write",
+        "knowledgeIds": [
+          "bye"
+        ],
+        "signature": "daily:bye:write",
+        "outcome": "assisted",
+        "turn": 75
+      },
+      {
+        "id": "A1-01-01-e01",
+        "kind": "choice",
+        "knowledgeIds": [
+          "hello"
+        ],
+        "signature": "daily:original:A1-01-01-e01",
+        "outcome": "revealed",
+        "turn": 76
+      },
+      {
+        "id": "A1-01-06-p-goodbye-meaning",
+        "kind": "choice",
+        "knowledgeIds": [
+          "goodbye"
+        ],
+        "signature": "daily:goodbye:meaning",
+        "outcome": "assisted",
+        "turn": 77
+      },
+      {
+        "id": "A1-01-01-p-hi-meaning",
+        "kind": "choice",
+        "knowledgeIds": [
+          "hi"
+        ],
+        "signature": "daily:hi:meaning",
+        "outcome": "revealed",
+        "turn": 78
+      },
+      {
+        "id": "A1-01-01-e03",
+        "kind": "fill",
+        "knowledgeIds": [
+          "hello"
+        ],
+        "signature": "daily:original:A1-01-01-e03",
+        "outcome": "assisted",
+        "turn": 79
+      },
+      {
+        "id": "A1-01-01-p-bye-meaning",
+        "kind": "choice",
+        "knowledgeIds": [
+          "bye"
+        ],
+        "signature": "daily:bye:meaning",
+        "outcome": "revealed",
+        "turn": 80
+      }
+    ]
+  },
+  {
+    "round": 5,
+    "plan": {
+      "version": 1,
+      "round": 5,
+      "focusIds": [
+        "goodbye",
+        "hi",
+        "hello",
+        "bye"
+      ],
+      "newIds": [],
+      "sourceLessonId": "A1-01-01",
+      "budget": 16,
+      "seed": 1422306624
+    },
+    "answers": 20,
+    "readyIds": [],
+    "targets": {
+      "hello": {
+        "introducedAt": 1790993039068,
+        "confidence": 0,
+        "abilities": {
+          "listening": 0,
+          "meaning": 0,
+          "writing": 0
+        },
+        "lastSeenTurn": 99,
+        "lastFailureTurn": 99,
+        "signatures": [],
+        "transfer": false,
+        "readyAt": 0,
+        "independentRecallAt": 0,
+        "evidence": {
+          "recognition": {
+            "attempts": 10,
+            "independent": 0,
+            "assisted": 0,
+            "revealed": 10,
+            "elapsedMs": 775
+          }
+        },
+        "lastSessionId": "1790993050734-adaptive-631v7n",
+        "lastEvidenceAt": 1790993052234
+      },
+      "hi": {
+        "introducedAt": 1790993039068,
+        "confidence": 0,
+        "abilities": {
+          "meaning": 0,
+          "writing": 0,
+          "listening": 0
+        },
+        "lastSeenTurn": 98,
+        "lastFailureTurn": 98,
+        "signatures": [],
+        "transfer": false,
+        "readyAt": 0,
+        "independentRecallAt": 0,
+        "lastEvidenceAt": 1790993052162,
+        "evidence": {
+          "recognition": {
+            "attempts": 10,
+            "independent": 0,
+            "assisted": 5,
+            "revealed": 5,
+            "elapsedMs": 947
+          },
+          "recall": {
+            "attempts": 10,
+            "independent": 0,
+            "assisted": 10,
+            "revealed": 0,
+            "elapsedMs": 893
+          }
+        },
+        "lastSessionId": "1790993050734-adaptive-631v7n"
+      },
+      "goodbye": {
+        "introducedAt": 1790993039068,
+        "confidence": 0,
+        "abilities": {
+          "listening": 0,
+          "meaning": 0,
+          "writing": 0
+        },
+        "lastSeenTurn": 97,
+        "lastFailureTurn": 97,
+        "signatures": [],
+        "transfer": false,
+        "readyAt": 0,
+        "independentRecallAt": 0,
+        "lastEvidenceAt": 1790993052106,
+        "evidence": {
+          "recognition": {
+            "attempts": 20,
+            "independent": 0,
+            "assisted": 10,
+            "revealed": 10,
+            "elapsedMs": 1805
+          },
+          "recall": {
+            "attempts": 5,
+            "independent": 0,
+            "assisted": 5,
+            "revealed": 0,
+            "elapsedMs": 439
+          }
+        },
+        "lastSessionId": "1790993050734-adaptive-631v7n"
+      },
+      "bye": {
+        "introducedAt": 1790993039068,
+        "confidence": 0,
+        "abilities": {
+          "listening": 0,
+          "writing": 0,
+          "meaning": 0
+        },
+        "lastSeenTurn": 100,
+        "lastFailureTurn": 100,
+        "signatures": [],
+        "transfer": false,
+        "readyAt": 0,
+        "independentRecallAt": 0,
+        "evidence": {
+          "recognition": {
+            "attempts": 10,
+            "independent": 0,
+            "assisted": 0,
+            "revealed": 10,
+            "elapsedMs": 654
+          },
+          "recall": {
+            "attempts": 5,
+            "independent": 0,
+            "assisted": 5,
+            "revealed": 0,
+            "elapsedMs": 436
+          }
+        },
+        "lastSessionId": "1790993050734-adaptive-631v7n",
+        "lastEvidenceAt": 1790993052289
+      }
+    },
+    "sequence": [
+      {
+        "id": "A1-01-01-p-hi-listen",
+        "kind": "listen",
+        "knowledgeIds": [
+          "hi"
+        ],
+        "signature": "daily:hi:listen",
+        "outcome": "assisted",
+        "turn": 81
+      },
+      {
+        "id": "A1-01-01-p-bye-listen",
+        "kind": "listen",
+        "knowledgeIds": [
+          "bye"
+        ],
+        "signature": "daily:bye:listen",
+        "outcome": "revealed",
+        "turn": 82
+      },
+      {
+        "id": "A1-01-01-e02",
+        "kind": "listen",
+        "knowledgeIds": [
+          "goodbye"
+        ],
+        "signature": "daily:original:A1-01-01-e02",
+        "outcome": "assisted",
+        "turn": 83
+      },
+      {
+        "id": "A1-01-01-p-hello-listen",
+        "kind": "listen",
+        "knowledgeIds": [
+          "hello"
+        ],
+        "signature": "daily:hello:listen",
+        "outcome": "revealed",
+        "turn": 84
+      },
+      {
+        "id": "A1-01-01-e04",
+        "kind": "write",
+        "knowledgeIds": [
+          "hi"
+        ],
+        "signature": "daily:original:A1-01-01-e04",
+        "outcome": "assisted",
+        "turn": 85
+      },
+      {
+        "id": "A1-01-01-p-goodbye-expression",
+        "kind": "choice",
+        "knowledgeIds": [
+          "goodbye"
+        ],
+        "signature": "daily:goodbye:expression",
+        "outcome": "revealed",
+        "turn": 86
+      },
+      {
+        "id": "A1-01-01-r01",
+        "kind": "listen",
+        "knowledgeIds": [
+          "bye"
+        ],
+        "signature": "daily:original:A1-01-01-r01",
+        "outcome": "assisted",
+        "turn": 87
+      },
+      {
+        "id": "A1-01-01-p-hi-expression",
+        "kind": "choice",
+        "knowledgeIds": [
+          "hi"
+        ],
+        "signature": "daily:hi:expression",
+        "outcome": "revealed",
+        "turn": 88
+      },
+      {
+        "id": "A1-01-01-p-goodbye-write",
+        "kind": "write",
+        "knowledgeIds": [
+          "goodbye"
+        ],
+        "signature": "daily:goodbye:write",
+        "outcome": "assisted",
+        "turn": 89
+      },
+      {
+        "id": "A1-01-01-p-goodbye-listen",
+        "kind": "listen",
+        "knowledgeIds": [
+          "goodbye"
+        ],
+        "signature": "daily:goodbye:listen",
+        "outcome": "revealed",
+        "turn": 90
+      },
+      {
+        "id": "A1-01-01-p-hi-write",
+        "kind": "write",
+        "knowledgeIds": [
+          "hi"
+        ],
+        "signature": "daily:hi:write",
+        "outcome": "assisted",
+        "turn": 91
+      },
+      {
+        "id": "A1-01-01-p-hello-meaning",
+        "kind": "choice",
+        "knowledgeIds": [
+          "hello"
+        ],
+        "signature": "daily:hello:meaning",
+        "outcome": "revealed",
+        "turn": 92
+      },
+      {
+        "id": "A1-01-06-p-goodbye-letters",
+        "kind": "fill",
+        "knowledgeIds": [
+          "goodbye"
+        ],
+        "signature": "daily:goodbye:letters",
+        "outcome": "assisted",
+        "turn": 93
+      },
+      {
+        "id": "A1-01-06-p-goodbye-listen",
+        "kind": "listen",
+        "knowledgeIds": [
+          "goodbye"
+        ],
+        "signature": "daily:goodbye:listen",
+        "outcome": "revealed",
+        "turn": 94
+      },
+      {
+        "id": "A1-01-01-p-bye-write",
+        "kind": "write",
+        "knowledgeIds": [
+          "bye"
+        ],
+        "signature": "daily:bye:write",
+        "outcome": "assisted",
+        "turn": 95
+      },
+      {
+        "id": "A1-01-01-e01",
+        "kind": "choice",
+        "knowledgeIds": [
+          "hello"
+        ],
+        "signature": "daily:original:A1-01-01-e01",
+        "outcome": "revealed",
+        "turn": 96
+      },
+      {
+        "id": "A1-01-06-p-goodbye-meaning",
+        "kind": "choice",
+        "knowledgeIds": [
+          "goodbye"
+        ],
+        "signature": "daily:goodbye:meaning",
+        "outcome": "assisted",
+        "turn": 97
+      },
+      {
+        "id": "A1-01-01-p-hi-meaning",
+        "kind": "choice",
+        "knowledgeIds": [
+          "hi"
+        ],
+        "signature": "daily:hi:meaning",
+        "outcome": "revealed",
+        "turn": 98
+      },
+      {
+        "id": "A1-01-01-e03",
+        "kind": "fill",
+        "knowledgeIds": [
+          "hello"
+        ],
+        "signature": "daily:original:A1-01-01-e03",
+        "outcome": "assisted",
+        "turn": 99
+      },
+      {
+        "id": "A1-01-01-p-bye-meaning",
+        "kind": "choice",
+        "knowledgeIds": [
+          "bye"
+        ],
+        "signature": "daily:bye:meaning",
+        "outcome": "revealed",
+        "turn": 100
+      }
+    ]
+  },
+  {
+    "round": 6,
+    "plan": {
+      "version": 1,
+      "round": 6,
+      "focusIds": [
+        "goodbye",
+        "hi",
+        "hello",
+        "bye"
+      ],
+      "newIds": [],
+      "sourceLessonId": "A1-01-01",
+      "budget": 16,
+      "seed": 1422306624
+    },
+    "answers": 20,
+    "readyIds": [],
+    "targets": {
+      "hello": {
+        "introducedAt": 1790993039068,
+        "confidence": 0,
+        "abilities": {
+          "listening": 0,
+          "meaning": 0,
+          "writing": 0
+        },
+        "lastSeenTurn": 119,
+        "lastFailureTurn": 119,
+        "signatures": [],
+        "transfer": false,
+        "readyAt": 0,
+        "independentRecallAt": 0,
+        "evidence": {
+          "recognition": {
+            "attempts": 12,
+            "independent": 0,
+            "assisted": 0,
+            "revealed": 12,
+            "elapsedMs": 925
+          }
+        },
+        "lastSessionId": "1790993053512-adaptive-631v7n",
+        "lastEvidenceAt": 1790993055034
+      },
+      "hi": {
+        "introducedAt": 1790993039068,
+        "confidence": 0,
+        "abilities": {
+          "meaning": 0,
+          "writing": 0,
+          "listening": 0
+        },
+        "lastSeenTurn": 118,
+        "lastFailureTurn": 118,
+        "signatures": [],
+        "transfer": false,
+        "readyAt": 0,
+        "independentRecallAt": 0,
+        "lastEvidenceAt": 1790993054962,
+        "evidence": {
+          "recognition": {
+            "attempts": 12,
+            "independent": 0,
+            "assisted": 6,
+            "revealed": 6,
+            "elapsedMs": 1103
+          },
+          "recall": {
+            "attempts": 12,
+            "independent": 0,
+            "assisted": 12,
+            "revealed": 0,
+            "elapsedMs": 1115
+          }
+        },
+        "lastSessionId": "1790993053512-adaptive-631v7n"
+      },
+      "goodbye": {
+        "introducedAt": 1790993039068,
+        "confidence": 0,
+        "abilities": {
+          "listening": 0,
+          "meaning": 0,
+          "writing": 0
+        },
+        "lastSeenTurn": 117,
+        "lastFailureTurn": 117,
+        "signatures": [],
+        "transfer": false,
+        "readyAt": 0,
+        "independentRecallAt": 0,
+        "lastEvidenceAt": 1790993054906,
+        "evidence": {
+          "recognition": {
+            "attempts": 24,
+            "independent": 0,
+            "assisted": 12,
+            "revealed": 12,
+            "elapsedMs": 2136
+          },
+          "recall": {
+            "attempts": 6,
+            "independent": 0,
+            "assisted": 6,
+            "revealed": 0,
+            "elapsedMs": 524
+          }
+        },
+        "lastSessionId": "1790993053512-adaptive-631v7n"
+      },
+      "bye": {
+        "introducedAt": 1790993039068,
+        "confidence": 0,
+        "abilities": {
+          "listening": 0,
+          "writing": 0,
+          "meaning": 0
+        },
+        "lastSeenTurn": 120,
+        "lastFailureTurn": 120,
+        "signatures": [],
+        "transfer": false,
+        "readyAt": 0,
+        "independentRecallAt": 0,
+        "evidence": {
+          "recognition": {
+            "attempts": 12,
+            "independent": 0,
+            "assisted": 0,
+            "revealed": 12,
+            "elapsedMs": 779
+          },
+          "recall": {
+            "attempts": 6,
+            "independent": 0,
+            "assisted": 6,
+            "revealed": 0,
+            "elapsedMs": 508
+          }
+        },
+        "lastSessionId": "1790993053512-adaptive-631v7n",
+        "lastEvidenceAt": 1790993055090
+      }
+    },
+    "sequence": [
+      {
+        "id": "A1-01-01-p-hi-listen",
+        "kind": "listen",
+        "knowledgeIds": [
+          "hi"
+        ],
+        "signature": "daily:hi:listen",
+        "outcome": "assisted",
+        "turn": 101
+      },
+      {
+        "id": "A1-01-01-p-bye-listen",
+        "kind": "listen",
+        "knowledgeIds": [
+          "bye"
+        ],
+        "signature": "daily:bye:listen",
+        "outcome": "revealed",
+        "turn": 102
+      },
+      {
+        "id": "A1-01-01-e02",
+        "kind": "listen",
+        "knowledgeIds": [
+          "goodbye"
+        ],
+        "signature": "daily:original:A1-01-01-e02",
+        "outcome": "assisted",
+        "turn": 103
+      },
+      {
+        "id": "A1-01-01-p-hello-listen",
+        "kind": "listen",
+        "knowledgeIds": [
+          "hello"
+        ],
+        "signature": "daily:hello:listen",
+        "outcome": "revealed",
+        "turn": 104
+      },
+      {
+        "id": "A1-01-01-e04",
+        "kind": "write",
+        "knowledgeIds": [
+          "hi"
+        ],
+        "signature": "daily:original:A1-01-01-e04",
+        "outcome": "assisted",
+        "turn": 105
+      },
+      {
+        "id": "A1-01-01-p-goodbye-expression",
+        "kind": "choice",
+        "knowledgeIds": [
+          "goodbye"
+        ],
+        "signature": "daily:goodbye:expression",
+        "outcome": "revealed",
+        "turn": 106
+      },
+      {
+        "id": "A1-01-01-r01",
+        "kind": "listen",
+        "knowledgeIds": [
+          "bye"
+        ],
+        "signature": "daily:original:A1-01-01-r01",
+        "outcome": "assisted",
+        "turn": 107
+      },
+      {
+        "id": "A1-01-01-p-hi-expression",
+        "kind": "choice",
+        "knowledgeIds": [
+          "hi"
+        ],
+        "signature": "daily:hi:expression",
+        "outcome": "revealed",
+        "turn": 108
+      },
+      {
+        "id": "A1-01-01-p-goodbye-write",
+        "kind": "write",
+        "knowledgeIds": [
+          "goodbye"
+        ],
+        "signature": "daily:goodbye:write",
+        "outcome": "assisted",
+        "turn": 109
+      },
+      {
+        "id": "A1-01-01-p-goodbye-listen",
+        "kind": "listen",
+        "knowledgeIds": [
+          "goodbye"
+        ],
+        "signature": "daily:goodbye:listen",
+        "outcome": "revealed",
+        "turn": 110
+      },
+      {
+        "id": "A1-01-01-p-hi-write",
+        "kind": "write",
+        "knowledgeIds": [
+          "hi"
+        ],
+        "signature": "daily:hi:write",
+        "outcome": "assisted",
+        "turn": 111
+      },
+      {
+        "id": "A1-01-01-p-hello-meaning",
+        "kind": "choice",
+        "knowledgeIds": [
+          "hello"
+        ],
+        "signature": "daily:hello:meaning",
+        "outcome": "revealed",
+        "turn": 112
+      },
+      {
+        "id": "A1-01-06-p-goodbye-letters",
+        "kind": "fill",
+        "knowledgeIds": [
+          "goodbye"
+        ],
+        "signature": "daily:goodbye:letters",
+        "outcome": "assisted",
+        "turn": 113
+      },
+      {
+        "id": "A1-01-06-p-goodbye-listen",
+        "kind": "listen",
+        "knowledgeIds": [
+          "goodbye"
+        ],
+        "signature": "daily:goodbye:listen",
+        "outcome": "revealed",
+        "turn": 114
+      },
+      {
+        "id": "A1-01-01-p-bye-write",
+        "kind": "write",
+        "knowledgeIds": [
+          "bye"
+        ],
+        "signature": "daily:bye:write",
+        "outcome": "assisted",
+        "turn": 115
+      },
+      {
+        "id": "A1-01-01-e01",
+        "kind": "choice",
+        "knowledgeIds": [
+          "hello"
+        ],
+        "signature": "daily:original:A1-01-01-e01",
+        "outcome": "revealed",
+        "turn": 116
+      },
+      {
+        "id": "A1-01-06-p-goodbye-meaning",
+        "kind": "choice",
+        "knowledgeIds": [
+          "goodbye"
+        ],
+        "signature": "daily:goodbye:meaning",
+        "outcome": "assisted",
+        "turn": 117
+      },
+      {
+        "id": "A1-01-01-p-hi-meaning",
+        "kind": "choice",
+        "knowledgeIds": [
+          "hi"
+        ],
+        "signature": "daily:hi:meaning",
+        "outcome": "revealed",
+        "turn": 118
+      },
+      {
+        "id": "A1-01-01-e03",
+        "kind": "fill",
+        "knowledgeIds": [
+          "hello"
+        ],
+        "signature": "daily:original:A1-01-01-e03",
+        "outcome": "assisted",
+        "turn": 119
+      },
+      {
+        "id": "A1-01-01-p-bye-meaning",
+        "kind": "choice",
+        "knowledgeIds": [
+          "bye"
+        ],
+        "signature": "daily:bye:meaning",
+        "outcome": "revealed",
+        "turn": 120
+      }
+    ]
+  }
+]

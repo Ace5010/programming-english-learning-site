@@ -1,0 +1,57 @@
+{
+  "checkedAt": "2026-10-17T12:47:23.139Z",
+  "assets": [
+    {
+      "file": "assets/index-CM6HEMW3.js",
+      "bytes": 2900733,
+      "sha256": "6a04a36b74a14ce18be391bf6ec4e51101c47a5a8ac5b9869ffa9269dba701df",
+      "matchesOriginal": true
+    },
+    {
+      "file": "assets/index-DODbSUpP.css",
+      "bytes": 157840,
+      "sha256": "0d36b055f97adc3cce742eca83c5fddb0c75d4b173d60868106795dc1aaab7f1",
+      "matchesOriginal": true
+    }
+  ],
+  "originalSyncResponding": true,
+  "retiredRoutes": [
+    {
+      "path": "/api/echo",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "originalStaticFallback": true
+    },
+    {
+      "path": "/api/echo-mcp",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "originalStaticFallback": true
+    },
+    {
+      "path": "/api/echo-oauth/authorize",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "originalStaticFallback": true
+    },
+    {
+      "path": "/.well-known/oauth-authorization-server",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "originalStaticFallback": true
+    },
+    {
+      "path": "/.well-known/oauth-protected-resource/api/echo-mcp",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "originalStaticFallback": true
+    }
+  ],
+  "originalPocketHealth": {
+    "service": "pocket-companion",
+    "platform": "cloudflare",
+    "version": "0.1.0",
+    "status": "configured",
+    "nativeEchoVerified": false
+  }
+}

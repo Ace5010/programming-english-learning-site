@@ -1,0 +1,11 @@
+warning: in the working copy of 'AGENTS.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/COURSE_SYSTEM.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/PROGRAMMING_ENGLISH.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/App.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/CourseOverview.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/DailyEnglish.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/adaptiveLearning.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/courseOverview.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/courseOverviewData.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'tools/test-course-home-browser.mjs', LF will be replaced by CRLF the next time Git touches it

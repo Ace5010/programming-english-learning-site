@@ -1,0 +1,14 @@
+baseline: working tree (uncommitted, handover state) 2026-10-01 21:15
+HEAD 049f28e5e1ec33f0b43d070ec4f20d04e09b53a0
+
+c30f3b81ca946f6a6236f965c644c179bdcfd5e2774cad0ac90b3fd191d04ee1  src/adaptiveLearning.ts  (25555 bytes)
+663e010b33e1b9876ebcd35cbcf2a88df16b19b18af4eadc18b9310b469046cc  src/programmingPractice.ts  (12248 bytes)
+af2de056e90d8c29cbc50162ab996f09b093dd7b88ac172fcf1f2c739616aef8  src/programmingSupport.ts  (5596 bytes)
+d738d76fff0a781766d3a46c446693387444bce46b910e08192dec58dd0a429c  src/pairPractice.ts  (4108 bytes)
+15f1c5cd28aa0c268ce1d827cd3046c09581168212a5464b920dce8caab201bd  src/CoursePairs.tsx  (2987 bytes)
+10cc9d0ec7e522855d3ef4343f95fc175071ba2d1e06f0015cb00e62e749ec40  src/DailyEnglish.tsx  (50798 bytes)
+88b58fa8635fb1b555c1464d4da762eef2b6457cf7a9a02253c755a880a4be3b  src/dailyProgress.ts  (53285 bytes)
+2781b043f0a34c317ae0f918d44562b7c40be8c1716980a26774e69424589eef  src/coursePractice.css  (4032 bytes)
+fa27570e9a78bdb9e8e43322c949fdd442d725c1db925889bb715a4dffdcd311  src/learningTypes.ts  (1624 bytes)
+7d4e47d7dfb3bfe81f666bdf9e1ddad29fa7ddf37bd0c243529a0f33e0e6c97f  tools/test-course-upgrade-browser.mjs  (24882 bytes)
+fbd259da65a6d1c6bd8323887542bf95b51dfa9a5a784e2e6e233025f8a31830  tools/test-course-upgrade.mjs  (15376 bytes)

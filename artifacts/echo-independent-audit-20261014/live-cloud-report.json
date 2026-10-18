@@ -1,0 +1,18 @@
+{
+  "at": "2026-10-14T07:59:51.634Z",
+  "passed": true,
+  "checks": [
+    "current-course-and-unfinished-draft",
+    "unsynced-answer-is-not-cloud-evidence",
+    "saved-answer-update",
+    "closed-page-honesty",
+    "revoked-access-denied",
+    "all-preexisting-learning-unchanged"
+  ],
+  "profileType": "new-generated-test-profile",
+  "realProductionServices": true,
+  "actualNativeEcho": false,
+  "originalProfilesUnchanged": 7,
+  "testGrantRevoked": true,
+  "testProgressRetained": true
+}
