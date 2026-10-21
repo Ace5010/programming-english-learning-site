@@ -79,6 +79,12 @@
 .course-word-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
 .course-word-card { display: flex; flex-direction: column; min-width: 0; padding: 18px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); cursor: pointer; }
 .course-word-card:is(:hover, .word-playing, .example-playing) { border-color: var(--accent); }
+.course-example-support { margin: 0 0 12px; font-size: 16px; }
+.course-daily-expressions { margin-top: 28px; }
+.course-daily-expressions > h2 { font-size: 22px; margin: 0 0 16px; }
+.course-daily-expressions .course-examples { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.course-daily-expressions .course-examples > div { padding: 18px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); }
+@media (max-width: 720px) { .course-daily-expressions .course-examples { grid-template-columns: minmax(0, 1fr); } }
 .course-word-card:is(.word-playing, .example-playing) { box-shadow: 0 0 0 2px var(--accent-line); }
 .course-word-main, .course-word-example-content { display: flex; flex-direction: column; width: 100%; gap: 4px; border: 0; padding: 0; text-align: left; background: transparent; color: var(--ink); }
 .course-word-meaning { font-size: 24px; line-height: 1.5; font-weight: 750; overflow-wrap: anywhere; }

@@ -11,6 +11,7 @@ import json
 import os
 from pathlib import Path
 import shutil
+import subprocess
 import sys
 import tempfile
 
@@ -121,16 +122,36 @@ async def generate(args):
                     for attempt in range(args.attempts):
                         temporary = temporary_mp3(first_path.parent, first_path.stem)
                         try:
-                            await asyncio.wait_for(
-                                edge_tts.Communicate(text, voice, rate=RATE).save(str(temporary)),
-                                timeout=args.timeout,
-                            )
+                            context = targets[0].get('pronunciationContext')
+                            if context:
+                                boundaries = []
+                                async def contextual():
+                                    with temporary.open('wb') as output:
+                                        async for chunk in edge_tts.Communicate(context['text'], voice, rate=RATE, boundary='WordBoundary').stream():
+                                            if chunk['type'] == 'audio': output.write(chunk['data'])
+                                            elif chunk['type'] == 'WordBoundary': boundaries.append(chunk)
+                                await asyncio.wait_for(contextual(), timeout=args.timeout)
+                                boundary = boundaries[context['targetIndex']]
+                                if boundary['text'].lower().strip('.,!?') != text.lower():
+                                    raise ValueError('Contextual word boundary does not match the target')
+                                cropped = temporary_mp3(first_path.parent, 'context')
+                                try:
+                                    subprocess.run([tools[0], '-v', 'error', '-y', '-i', str(temporary),
+                                        '-ss', str(max(0, boundary['offset'] / 1e7 - .015)),
+                                        '-t', str(boundary['duration'] / 1e7 + .03), '-codec:a', 'libmp3lame',
+                                        '-b:a', '64k', '-f', 'mp3', str(cropped)], check=True, capture_output=True, timeout=30)
+                                    cropped.replace(temporary)
+                                finally:
+                                    cropped.unlink(missing_ok=True)
+                            else:
+                                await asyncio.wait_for(edge_tts.Communicate(text, voice, rate=RATE).save(str(temporary)), timeout=args.timeout)
                             metadata = await asyncio.to_thread(inspect_audio, temporary, tools)
                             metadata.update({
                                 'voice': voice, 'rate': RATE, 'text': text,
                                 'synthesisSha256': synthesis_hash(voice, text),
                                 'generatedAt': datetime.now(timezone.utc).isoformat(timespec='seconds'),
                             })
+                            if context: metadata['pronunciationContext'] = context
                             temporary.replace(first_path)
                             temporary = None
                             source = first_path

@@ -1,13 +1,18 @@
 import type { DailyPhrase } from './dailyCourse.ts';
 import type { DailyExerciseSpec, DailyDraft } from './dailyProgress.ts';
 import { normalizeWrittenAnswer } from './writtenAnswer.ts';
+import { dailyVocabularyWords } from './dailyVocabulary.ts';
 
 /** Authored pilot, not automatic extraction of every word in a sentence. */
-export const dailyWordTargets: (DailyPhrase & { contexts: string[]; chunk?: string })[] = [
+const pilotWords: (DailyPhrase & { contexts: string[]; chunk?: string })[] = [
   { id: 'daily-word-from', en: 'from', zh: '来自', contexts: ['from-china', 'from-japan', 'he-is-from-china', 'she-is-from-japan'], note: '放在身份表达后面，再接来源地点。' },
   { id: 'daily-word-student', en: 'student', zh: '学生', contexts: ['i-am-a-student', 'she-is-a-student', 'is-she-a-student'], chunk: 'a student', note: '说一名学生时，保留前面的 a。' },
   { id: 'daily-word-teacher', en: 'teacher', zh: '老师', contexts: ['i-am-a-teacher', 'he-is-a-teacher'], chunk: 'a teacher', note: '说一名老师时，保留前面的 a。' },
 ];
+export const dailyWordTargets = dailyVocabularyWords.map(word => {
+  const pilot = pilotWords.find(item => item.id === word.id);
+  return { ...word, ...pilot, contexts: [...(pilot?.contexts ?? []), ...word.contexts] };
+});
 
 export const wordsForPhrase = (id: string) => dailyWordTargets.filter(word => word.contexts.includes(id));
 

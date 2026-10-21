@@ -47,7 +47,7 @@ export type LearningExercise = DailyExerciseSpec & {
 export type LearningLesson = DailyLesson & DailyLessonSpec & {
   practice: LearningExercise[];
   learningTargets: string[];
-  learningGoal: 'reading' | 'communication' | 'listening';
+  learningGoal: 'reading' | 'communication' | 'listening' | 'vocabulary';
   /** Optional prerequisite concepts and a smaller focus for absolute beginners. */
   prerequisiteIds?: string[];
   focusLimit?: number;

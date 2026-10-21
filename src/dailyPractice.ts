@@ -3,6 +3,7 @@ import type { LearningExercise, LearningLesson } from './learningTypes.ts';
 import { normalizeWrittenAnswer, writtenAnswersMatch } from './writtenAnswer.ts';
 import { sentenceVariants } from './courseVariants.ts';
 import { dailyWordTargets, wordsForPhrase } from './dailyWordTargets.ts';
+import { dailyVocabularyGroups, dailyVocabularyWords, dailyVocabularyExpressions } from './dailyVocabulary.ts';
 
 export type AdaptiveDailyExercise = LearningExercise & {
   knowledgeIds: string[];
@@ -227,11 +228,11 @@ function oralVariants(lesson: DailyLesson, target: DailyPhrase): AdaptiveDailyEx
     learningContext: `phrase:${phrase.id}`,
   }));
 }
-export const adaptiveDailyUnits: AdaptiveDailyUnit[] = dailyUnits.map(unit => ({
+export const legacyAdaptiveDailyUnits: AdaptiveDailyUnit[] = dailyUnits.map(unit => ({
   ...unit,
   lessons: unit.lessons.map(lesson => {
     for (const phrase of lesson.phrases) introduced.set(phrase.id, phrase);
-    const focusWords = dailyWordTargets.filter(word => word.contexts.some(id => lesson.phrases.some(phrase => phrase.id === id)));
+    const focusWords = dailyWordTargets.filter(word => ['daily-word-from', 'daily-word-student', 'daily-word-teacher'].includes(word.id) && word.contexts.some(id => lesson.phrases.some(phrase => phrase.id === id)));
     for (const word of focusWords) introduced.set(word.id, word);
     const taught = [...new Map([...lesson.phrases, ...[...introduced.values()].reverse()].map(phrase => [phrase.id, phrase])).values()];
     const exercises = lesson.exercises.map(task => extendOriginal(task, taught));
@@ -272,4 +273,79 @@ export const adaptiveDailyUnits: AdaptiveDailyUnit[] = dailyUnits.map(unit => ({
     };
   }),
 }));
+export const legacyAdaptiveDailyLessons = legacyAdaptiveDailyUnits.flatMap(unit => unit.lessons);
+
+function vocabularyLesson(group: typeof dailyVocabularyGroups[number]): LearningLesson {
+  const expressions = group.expressions.length ? group.expressions.map(id => byId.get(id)!)
+    : dailyVocabularyExpressions.filter(item => item.id.startsWith(`daily-expression-${group.id.toLowerCase()}-`));
+  const phrases = [...group.words, ...group.words.flatMap(word => word.examples), ...expressions];
+  const tasks: LearningExercise[] = [];
+  for (const word of group.words) {
+    const alternatives = [word, ...group.words.filter(other => other.id !== word.id)].slice(0, 3);
+    const choicePrerequisites = alternatives.filter(other => other.id !== word.id).map(other => other.id);
+    const make = (variant: string, draft: Omit<PracticeDraft, 'explanation'>, level: 'recognition' | 'context' | 'recall' = 'recognition') => tasks.push({
+      ...draft, id: `${group.id}-${word.id}-${variant}`, knowledgeIds: [word.id],
+      learningDifficulty: level, learningSignature: `vocabulary:${word.id}:${variant}`,
+      learningContext: `word:${word.id}`, explanation: `${word.en} 表示“${word.zh}”。`,
+    });
+    make('meaning', { kind: 'choice', ability: 'meaning', prompt: `这个单词是什么意思？\n${word.en}`,
+      options: arranged(alternatives.map(item => item.zh), `${word.id}:meaning`), answers: [word.zh], prerequisiteIds: choicePrerequisites });
+    make('listen-meaning', { kind: 'listen', ability: 'listening', audioId: word.id, prompt: '听单词，选择对应的中文。',
+      options: arranged(alternatives.map(item => item.zh), `${word.id}:listen`), answers: [word.zh], prerequisiteIds: choicePrerequisites });
+    make('recognize', { kind: 'choice', ability: 'meaning', prompt: `哪个单词表示“${word.zh}”？`,
+      options: arranged(alternatives.map(item => item.en), `${word.id}:recognize`), answers: [word.en], prerequisiteIds: choicePrerequisites });
+    make('write', { kind: 'write', ability: 'spelling', prompt: `写出这个单词：\n${word.zh}`, answers: [word.en],
+      hint: `首字母是 ${word.en[0]}，共 ${word.en.length} 个字母。` }, 'recall');
+    for (const [contextIndex, example] of word.examples.entries()) {
+      const match = new RegExp(`\\b${word.en}\\b`, 'i').exec(example.en)!;
+      const parts = [example.en.slice(0, match.index), example.en.slice(match.index + match[0].length)];
+      for (const audioPrompt of [false, true]) tasks.push({
+        id: `${group.id}-${word.id}-context-${contextIndex}-${audioPrompt ? 'hear' : 'recall'}`,
+        kind: 'fill', ability: audioPrompt ? 'listening' : 'context', audioId: example.id, audioPrompt,
+        prompt: audioPrompt ? '听句子，补上这个单词。' : `补上合适的单词：\n${example.zh}`,
+        parts, blanks: [[match[0]]], knowledgeIds: [word.id], learningDifficulty: 'recall',
+        prerequisiteIds: dailyVocabularyWords.filter(other => other.id !== word.id && new RegExp(`\\b${other.en}s?\\b`, 'i').test(example.en)).map(other => other.id),
+        learningContext: `sentence:${example.en.toLowerCase()}`, learningSignature: `${word.id}:${example.id}:${audioPrompt}`,
+        explanation: `${example.en} ${example.zh}`, hint: `首字母是 ${word.en[0]}。`,
+      });
+      tasks.push({ id: `${group.id}-${word.id}-context-${contextIndex}-choice`, kind: 'choice', ability: 'context',
+        prompt: `选择合适的单词：\n${example.zh}\n${parts.join('____')}`,
+        options: arranged(alternatives.map(item => item.en), `${word.id}:${contextIndex}`), answers: [word.en],
+        knowledgeIds: [word.id], learningDifficulty: 'context', learningContext: `sentence:${example.en.toLowerCase()}`,
+        prerequisiteIds: [...new Set([...choicePrerequisites, ...dailyVocabularyWords.filter(other => other.id !== word.id && new RegExp(`\\b${other.en}s?\\b`, 'i').test(example.en)).map(other => other.id)])],
+        learningSignature: `${word.id}:${example.id}:choice`, explanation: `${example.en} ${example.zh}` });
+    }
+  }
+  for (const expression of expressions) {
+    const alternatives = [expression, ...expressions.filter(item => item.zh !== expression.zh),
+      ...group.words.filter(item => item.zh !== expression.zh)].slice(0, 3);
+    tasks.push({ id: `${group.id}-${expression.id}-expression`, kind: 'choice', ability: 'meaning',
+      prompt: `这句表达是什么意思？\n${expression.en}`, options: arranged(alternatives.map(item => item.zh), expression.id),
+      answers: [expression.zh], knowledgeIds: [expression.id], learningDifficulty: 'recognition',
+      learningSignature: `${group.id}:${expression.id}:expression`, learningContext: `phrase:${expression.id}`,
+      explanation: `${expression.en} ${expression.zh}` });
+    tasks.push({ id: `${group.id}-${expression.id}-expression-listen`, kind: 'listen', ability: 'listening', audioId: expression.id,
+      prompt: '听表达，选择对应的中文。', options: arranged(alternatives.map(item => item.zh), `${expression.id}:listen`),
+      answers: [expression.zh], knowledgeIds: [expression.id], learningDifficulty: 'recognition',
+      learningSignature: `${group.id}:${expression.id}:expression-listen`, learningContext: `phrase:${expression.id}`,
+      explanation: `${expression.en} ${expression.zh}` });
+    tasks.push({ id: `${group.id}-${expression.id}-expression-recall`, kind: 'write', audioId: expression.id,
+      prompt: `用学过的表达写出：\n${expression.zh}`, answers: [expression.en], knowledgeIds: [expression.id],
+      learningDifficulty: 'recall', learningSignature: `${group.id}:${expression.id}:expression-recall`,
+      learningContext: `phrase:${expression.id}`, explanation: `${expression.en} ${expression.zh}` });
+  }
+  return { id: group.id, title: group.title, goal: '认识单词，听懂词义，并在短句里使用。', explanation: '',
+    phrases: [...new Map(phrases.map(phrase => [phrase.id, phrase])).values()],
+    exercises: tasks, rechecks: [], practice: tasks, learningTargets: [...group.words.map(word => word.id), ...expressions.map(item => item.id)],
+    learningGoal: 'vocabulary', focusLimit: 8 };
+}
+const vocabularyUnitTitles = ['认识你我', '地点与活动', '家人与生活', '物品与食物'];
+export const dailyVocabularyUnits = vocabularyUnitTitles.map((title, index) => ({
+  id: `DV1-${index + 1}`, title, goal: '以单词为主，学习常用表达。', description: '',
+  lessons: dailyVocabularyGroups.slice(index * 3, index * 3 + 3).map(vocabularyLesson),
+}));
+// Stable historical IDs and complete exercise pools keep saved sessions and favorites readable.
+export const adaptiveDailyUnits = [...dailyVocabularyUnits, ...legacyAdaptiveDailyUnits.map(unit => ({
+  ...unit, lessons: unit.lessons.map(lesson => ({ ...lesson, referenceOnly: true })),
+}))];
 export const adaptiveDailyLessons = adaptiveDailyUnits.flatMap(unit => unit.lessons);

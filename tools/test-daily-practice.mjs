@@ -2,7 +2,7 @@ import { correctDraft } from './helpers/course-answer.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { dailyUnits, dailyLessons, dailyPhrases } from '../src/dailyCourse.ts';
-import { adaptiveDailyUnits, adaptiveDailyLessons } from '../src/dailyPractice.ts';
+import { legacyAdaptiveDailyUnits as adaptiveDailyUnits, legacyAdaptiveDailyLessons as adaptiveDailyLessons } from '../src/dailyPractice.ts';
 import { createDailyDraft, checkDailyAnswer, dailyExerciseAbility, findDailyExercise } from '../src/dailyProgress.ts';
 import { writtenAnswersMatch } from '../src/writtenAnswer.ts';
 

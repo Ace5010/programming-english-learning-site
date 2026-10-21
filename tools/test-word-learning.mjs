@@ -24,7 +24,8 @@ test('same word across sentences shares one ID; gaps test from instead of China'
   const tasks = catalog.filter(task => task.knowledgeIds[0] === 'daily-word-from' && task.audioPrompt);
   assert.ok(tasks.length >= 4);
   assert.ok(tasks.every(task => task.blanks[0][0].toLowerCase() === 'from'));
-  assert.ok(tasks.every(task => task.prerequisiteIds.includes(task.audioId)));
+  assert.ok(tasks.filter(task => !task.id.startsWith('DV1-')).every(task => task.prerequisiteIds.includes(task.audioId)));
+  assert.ok(tasks.filter(task => task.id.startsWith('DV1-')).every(task => !task.prerequisiteIds.includes('daily-word-from')));
   for (const word of dailyWordTargets) assert.ok(catalog.some(task => task.knowledgeIds[0] === word.id && task.kind === 'write' && !task.options));
 });
 test('reliable local attribution distinguishes spelling and article; uncertain changes remain expression-level', () => {

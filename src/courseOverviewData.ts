@@ -28,13 +28,14 @@ export function courseOverview(progress: DailyProgress, lessons: LearningLesson[
         : `本轮学习 ${newCount} 条新内容，同时穿插巩固 ${oldCount} 条还不熟悉的内容。`;
   const reading = source.learningGoal === 'reading';
   const wordCheck = source.courseMode === 'word-check';
+  const vocabulary = source.learningGoal === 'vocabulary';
   const shortMeaning = (text: string) => text.split(/[；;]/)[0].replace(/[。！!？?]$/, '');
   const meanings = [...new Set(targets.map(item => shortMeaning(item.zh)))].slice(0, 3);
   return {
-    source, targets, newCount, oldCount, arrangement, reading, wordCheck, budget: scope?.budget, resume: !!saved,
+    source, targets, newCount, oldCount, arrangement, reading, wordCheck, vocabulary, budget: scope?.budget, resume: !!saved,
     testStarted: wordCheck && !!saved && saved.stage !== 'study',
-    studyPhrases: wordCheck ? targets.flatMap(target => {
-      const example = phrases.find(phrase => phrase.id === target.id.replace(/^word-/, 'example-'));
+    studyPhrases: wordCheck || vocabulary ? targets.flatMap(target => {
+      const example = phrases.find(phrase => phrase.id === (vocabulary ? `${target.id}-example-1` : target.id.replace(/^word-/, 'example-')));
       return example ? [target, example] : [target];
     }) : targets,
     round: scope?.round ?? (progress.learning?.rounds ?? lessons.filter(item => progress.lessons[item.id]?.completedAt).length) + 1,

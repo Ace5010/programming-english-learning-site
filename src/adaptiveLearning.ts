@@ -16,6 +16,7 @@ export const COURSE_ACTIVITY_MIX = {
   communication: { speaking: .60, understanding: .25, input: .15 },
   reading: { speaking: .50, understanding: .35, input: .15 },
   listening: { speaking: .60, understanding: .25, input: .15 },
+  vocabulary: { speaking: 0, understanding: .80, input: .20 },
 } as const;
 export function courseActivity(exercise: LearningExercise): CourseActivity {
   return exercise.kind === 'speak' ? 'speaking' : exercise.kind === 'fill' || exercise.kind === 'write' ? 'input' : 'understanding';
@@ -104,6 +105,7 @@ function pickNext(state: LearningState, plan: AdaptivePlan, lessons: LearningLes
   const allowed = new Set([...Object.keys(state.targets), ...Object.keys(state.selfKnown ?? {}), ...plan.newIds]);
   const focus = new Set(plan.focusIds);
   const catalog = candidates(lessons);
+  const vocabulary = lessons.find(lesson => lesson.id === plan.sourceLessonId)?.learningGoal === 'vocabulary';
   const successful = new Set(answers.flatMap(answer => {
     const item = catalog.find(candidate => candidate.exercise.id === answer.exerciseId);
     if (!item) return [];
@@ -114,7 +116,8 @@ function pickNext(state: LearningState, plan: AdaptivePlan, lessons: LearningLes
   // admission can drop out of the focus list (it is ordered by low confidence,
   // not by missing evidence); gating on focus would make them unreachable and
   // leave the teaching scope unfinishable. Weakness still outranks revision 3:0.4.
-  const available = catalog.filter(item => (!wordsOnly || item.ids.every(id => focus.has(id))) && (!item.lesson.referenceOnly || item.ids.some(id => focus.has(id))) && !used.has(item.exercise.id) && item.ids.length > 0
+  const available = catalog.filter(item => (!vocabulary || item.lesson.learningGoal === 'vocabulary' && item.ids.every(id => focus.has(id)))
+    && (!wordsOnly || item.ids.every(id => focus.has(id))) && (!item.lesson.referenceOnly || item.ids.some(id => focus.has(id))) && !used.has(item.exercise.id) && item.ids.length > 0
     && (item.exercise.kind !== 'speak' || !!item.exercise.speechActivity || (item.exercise.readAloud?.length ?? 0) <= 1)
     && (wordsOnly || !item.ids.some(id => state.selfKnown?.[id]))
     && !item.ids.some(id => successful.has(practiceKey(item.exercise, id)))
@@ -128,6 +131,24 @@ function pickNext(state: LearningState, plan: AdaptivePlan, lessons: LearningLes
       && available.some(other => other.ids.includes(id) && difficulty(other.exercise) === 'recognition')
       && !catalog.some(other => used.has(other.exercise.id) && other.ids.includes(id) && difficulty(other.exercise) === 'recognition')));
   const seed = step(plan.seed);
+  if (vocabulary && !wordsOnly) {
+    const history = answers.flatMap(answer => { const item = catalog.find(item => item.exercise.id === answer.exerciseId); return item ? [item] : []; });
+    const wordItem = (item: Candidate) => item.ids.every(id => id.startsWith('daily-word-'));
+    const wordAnswers = history.filter(wordItem).length;
+    const needWord = wordAnswers < Math.ceil((history.length + 1) * .75);
+    const balanced = pool.filter(item => wordItem(item) === needWord);
+    if (balanced.length) pool = balanced;
+    const uncovered = plan.focusIds.filter(id => id.startsWith('daily-word-') && !history.some(item => item.ids.includes(id)));
+    if (needWord && uncovered.length) {
+      const firstChecks = pool.filter(item => item.ids.some(id => uncovered.includes(id)) && difficulty(item.exercise) === 'recognition');
+      if (firstChecks.length) pool = firstChecks;
+    }
+    const inputs = history.filter(item => courseActivity(item.exercise) === 'input');
+    const consecutiveInput = history.slice(-2).length === 2 && history.slice(-2).every(item => courseActivity(item.exercise) === 'input');
+    const accessible = pool.filter(item => !(ability(item.exercise) === 'spelling' && inputs.some(previous => ability(previous.exercise) === 'spelling'))
+      && !(courseActivity(item.exercise) === 'input' && (consecutiveInput || inputs.length >= Math.ceil(plan.budget * .25))));
+    if (accessible.length) pool = accessible;
+  }
   const weight = (item: Candidate) => {
     let score = 0;
     for (const id of item.ids) {
@@ -156,10 +177,10 @@ function pickNext(state: LearningState, plan: AdaptivePlan, lessons: LearningLes
     const pilot = plan.focusIds.some(id => id.startsWith('daily-word-'));
     const wordTask = item.ids.some(id => id.startsWith('daily-word-'));
     const wordCount = catalog.filter(other => used.has(other.exercise.id) && other.ids.some(id => id.startsWith('daily-word-'))).length;
-    const balance = pilot && !wordsOnly ? wordTask ? (wordCount / Math.max(1, used.size) < .4 ? 2 : .35) : 1 : 1;
+    const balance = pilot && !wordsOnly && !vocabulary ? wordTask ? (wordCount / Math.max(1, used.size) < .4 ? 2 : .35) : 1 : 1;
     return Math.max(0.01, balance * score / item.ids.length * (item.exercise.kind === 'match' ? 0.65 : 1));
   };
-  if (!wordsOnly) {
+  if (!wordsOnly && !vocabulary) {
     const history = answers.map(answer => catalog.find(item => item.exercise.id === answer.exerciseId)?.exercise).filter((item): item is LearningExercise => !!item);
     const consecutiveInput = history.slice(-2).length === 2 && history.slice(-2).every(item => courseActivity(item) === 'input');
     if (consecutiveInput) pool = pool.filter(item => courseActivity(item.exercise) !== 'input');
@@ -233,13 +254,31 @@ function pickWordCheck(state: LearningState, plan: AdaptivePlan, lessons: Learni
 
 export function hasAdaptiveContent(progress: DailyProgress, lessons: LearningLesson[]): boolean {
   const state = learningState(progress, lessons);
-  return lessons.some(lesson => !lesson.referenceOnly && lesson.learningTargets.some(id => !state.selfKnown?.[id]
+  return lessons.some(lesson => !lesson.referenceOnly && lesson.learningTargets.some(id => (lessons[0]?.learningGoal !== 'vocabulary' || id.startsWith('daily-word-')) && !state.selfKnown?.[id]
     && (wordCheckCourse(lessons) ? !state.targets[id]?.introducedAt : needsLearning(state.targets[id]))));
 }
 
 /** Read-only scope shared by the homepage and session creation; never draws a question. */
 export function previewAdaptiveScope(progress: DailyProgress, lessons: LearningLesson[]): Omit<AdaptivePlan, 'seed'> | null {
   const state = learningState(progress, lessons);
+  if (lessons[0]?.learningGoal === 'vocabulary') {
+    const active = lessons.filter(lesson => !lesson.referenceOnly);
+    const wordIds = unique(active.flatMap(lesson => lesson.learningTargets.filter(id => id.startsWith('daily-word-'))));
+    const weak = wordIds.filter(id => state.targets[id] && !state.selfKnown?.[id] && needsLearning(state.targets[id]))
+      .sort((a, b) => state.targets[a].confidence - state.targets[b].confidence || state.targets[a].lastSeenTurn - state.targets[b].lastSeenTurn);
+    const source = active.find(lesson => lesson.learningTargets.some(id => id.startsWith('daily-word-') && !state.targets[id] && !state.selfKnown?.[id]))
+      ?? active.find(lesson => lesson.learningTargets.some(id => id.startsWith('daily-word-') && !state.selfKnown?.[id] && needsLearning(state.targets[id])));
+    if (!source) return null;
+    const severe = weak.filter(id => state.targets[id].confidence < .3);
+    const newWords = source.learningTargets.filter(id => id.startsWith('daily-word-') && !state.targets[id] && !state.selfKnown?.[id])
+      .slice(0, severe.length >= 4 ? 4 : 6);
+    const oldWords = weak.slice(0, newWords.length ? 2 : 6);
+    const expressions = source.learningTargets.filter(id => !id.startsWith('daily-word-') && !state.selfKnown?.[id] && needsLearning(state.targets[id])).slice(0, 2);
+    const focusIds = unique([...newWords, ...oldWords, ...expressions]);
+    const newIds = focusIds.filter(id => !state.targets[id]);
+    return focusIds.length ? { version: 1, round: state.rounds + 1, sourceLessonId: source.id, focusIds, newIds,
+      budget: Math.min(16, Math.max(10, (newWords.length + oldWords.length) * 2)) } : null;
+  }
   if (wordCheckCourse(lessons)) {
     const newIds = unique(lessons.filter(lesson => !lesson.referenceOnly).flatMap(lesson => lesson.learningTargets))
       .filter(id => !state.targets[id]?.introducedAt && !state.selfKnown?.[id]).slice(0, WORD_CHECK_SIZE);
@@ -298,7 +337,7 @@ export function resolveAdaptiveLesson(session: DailySession, lessons: LearningLe
   const phraseIds = new Set([...focus, ...[...focus].filter(id => id.startsWith('word-')).map(id => id.replace(/^word-/, 'example-'))]);
   for (const word of dailyWordTargets.filter(word => focus.has(word.id))) {
     // Teach one authored sentence alongside an independently introduced word.
-    if (!word.contexts.some(id => phraseIds.has(id))) phraseIds.add(word.contexts[0]);
+    if (!word.contexts.some(id => phraseIds.has(id))) phraseIds.add(source.learningGoal === 'vocabulary' ? word.examples[0].id : word.contexts[0]);
   }
   const phraseMap = new Map(lessons.flatMap(lesson => lesson.phrases).filter(phrase => phraseIds.has(phrase.id)).map(phrase => [phrase.id, phrase]));
   const sources = unique([source, ...lessons.filter(lesson => lesson.learningTargets.some(id => focus.has(id) && !id.startsWith('daily-word-')))]).slice(0, 2);
@@ -367,7 +406,7 @@ export function beginAdaptiveLearning(progress: DailyProgress, lessons: Learning
 function readiness(target: LearningTarget, goal: LearningLesson['learningGoal'], id: string): boolean {
   const relevant = goal === 'reading' ? target.abilities.context ?? 0 : goal === 'listening' ? target.abilities.listening ?? 0
     : Math.max(target.abilities.meaning ?? 0, target.abilities.listening ?? 0, target.abilities.writing ?? 0, target.abilities.context ?? 0);
-  const evidence = target.transfer || goal === 'communication' && !id.startsWith('daily-word-') && !!target.independentRecallAt;
+  const evidence = target.transfer || (goal === 'communication' || goal === 'vocabulary') && !id.startsWith('daily-word-') && !!target.independentRecallAt;
   return target.confidence >= READY_CONFIDENCE && relevant >= 0.5 && evidence && target.signatures.length >= 2;
 }
 

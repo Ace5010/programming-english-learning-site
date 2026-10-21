@@ -1,6 +1,6 @@
 # Aria / Guy 双声线
 
-全站提供 en-US-AriaNeural（女声）和 en-US-GuyNeural（男声），与用户确认的试听样音使用同一声线和正常语速。生成工具为 edge-tts 7.2.8，调用 Edge 在线语音服务；非官方 Azure API 集成。服务可用性不作保证，日常网站点读只读取已生成的静态文件，不依赖生成服务。
+全站提供 en-US-AriaNeural（女声）和 en-US-GuyNeural（男声），与用户确认的试听样音使用同一声线和正常语速。生成工具为 edge-tts 7.3.1，调用 Edge 在线语音服务；非官方 Azure API 集成。日常网站点读只读取已生成的静态文件，不依赖生成服务。2026-10-21 更新用于修复旧生成器的服务握手故障，原有录音保留。
 
 每套包含 3,560 个单词、3,560 个例句和一个试听文件，共 7,121 个 MP3。两套合计 14,242 个。目录为 public/audio/aria 和 public/audio/guy。语音设置默认 Aria，偏好保存在 codewords-voice；不修改学习进度键或词汇 ID。
 

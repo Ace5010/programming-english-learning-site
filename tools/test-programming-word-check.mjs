@@ -246,5 +246,6 @@ test('current answers and drafts survive parsing and sync validation; daily cour
   assert.equal(parseDailyProgress(JSON.stringify(invalid), lessons).writable, false);
   const daily = planAdaptiveSession(createDailyProgress(), adaptiveDailyLessons, now, () => .37);
   assert.equal(daily.adaptive.courseMode, undefined);
-  assert.equal(resolveAdaptiveLesson(daily, adaptiveDailyLessons).exercises.find(task => task.id === daily.queue[0].exerciseId).kind, 'speak');
+  assert.ok(['choice', 'listen'].includes(resolveAdaptiveLesson(daily, adaptiveDailyLessons).exercises.find(task => task.id === daily.queue[0].exerciseId).kind));
+  assert.equal(adaptiveDailyLessons[0].learningGoal, 'vocabulary');
 });

@@ -1,0 +1,614 @@
+{
+  "url": "http://127.0.0.1:5186/",
+  "bundles": [
+    "http://127.0.0.1:5186/assets/index-CIvNy4_h.js"
+  ],
+  "results": [
+    "layout-1440-lagoon",
+    "layout-390-lagoon",
+    "layout-320-pearl",
+    "layout-390-sky",
+    "layout-390-mint",
+    "real-local-audio-aria",
+    "real-local-audio-guy",
+    "wrong-help-reload-complete-next-study",
+    "legacy-session-favorites-library-isolation",
+    "skip-undo-same-scope",
+    "admitted-word-review-real-answer",
+    "later-theme-places",
+    "later-theme-family",
+    "later-theme-objects",
+    "later-theme-food",
+    "later-theme-late-course"
+  ],
+  "errors": [],
+  "audio": [
+    {
+      "voice": "aria",
+      "label": "朗读 I",
+      "events": [
+        {
+          "type": "playing",
+          "src": "http://127.0.0.1:5186/audio/daily/aria/daily-word-i.mp3?v=I",
+          "rate": 1,
+          "pitch": true,
+          "duration": 1.872
+        },
+        {
+          "type": "ended",
+          "src": "http://127.0.0.1:5186/audio/daily/aria/daily-word-i.mp3?v=I",
+          "rate": 1,
+          "pitch": true,
+          "duration": 1.872
+        }
+      ]
+    },
+    {
+      "voice": "aria",
+      "label": "慢速朗读 I",
+      "events": [
+        {
+          "type": "playing",
+          "src": "http://127.0.0.1:5186/audio/daily/aria/daily-word-i.mp3?v=I",
+          "rate": 0.72,
+          "pitch": true,
+          "duration": 1.872
+        },
+        {
+          "type": "ended",
+          "src": "http://127.0.0.1:5186/audio/daily/aria/daily-word-i.mp3?v=I",
+          "rate": 0.72,
+          "pitch": true,
+          "duration": 1.872
+        }
+      ]
+    },
+    {
+      "voice": "aria",
+      "label": "朗读 I am Ben.",
+      "events": [
+        {
+          "type": "playing",
+          "src": "http://127.0.0.1:5186/audio/daily/aria/daily-word-i-example-1.mp3?v=I%20am%20Ben.",
+          "rate": 1,
+          "pitch": true,
+          "duration": 1.752
+        },
+        {
+          "type": "ended",
+          "src": "http://127.0.0.1:5186/audio/daily/aria/daily-word-i-example-1.mp3?v=I%20am%20Ben.",
+          "rate": 1,
+          "pitch": true,
+          "duration": 1.752
+        }
+      ]
+    },
+    {
+      "voice": "aria",
+      "label": "慢速朗读 I am Ben.",
+      "events": [
+        {
+          "type": "playing",
+          "src": "http://127.0.0.1:5186/audio/aria/word-1758.mp3?v=e0899bfd6e2e3e76",
+          "rate": 0.72,
+          "pitch": true,
+          "duration": 1.44
+        },
+        {
+          "type": "playing",
+          "src": "http://127.0.0.1:5186/audio/aria/word-2984.mp3?v=92189ce35830631a",
+          "rate": 0.72,
+          "pitch": true,
+          "duration": 1.536
+        },
+        {
+          "type": "playing",
+          "src": "http://127.0.0.1:5186/audio/reading/aria/read-6700869c8ff7480e.mp3?v=24ed4f3782627944",
+          "rate": 0.72,
+          "pitch": true,
+          "duration": 1.872
+        }
+      ]
+    },
+    {
+      "voice": "aria",
+      "label": "朗读 I",
+      "events": [
+        {
+          "type": "playing",
+          "src": "http://127.0.0.1:5186/audio/daily/aria/daily-word-i.mp3?v=I",
+          "rate": 1,
+          "pitch": true,
+          "duration": 1.872
+        },
+        {
+          "type": "ended",
+          "src": "http://127.0.0.1:5186/audio/daily/aria/daily-word-i.mp3?v=I",
+          "rate": 1,
+          "pitch": true,
+          "duration": 1.872
+        }
+      ]
+    },
+    {
+      "voice": "aria",
+      "label": "live-1",
+      "events": [
+        {
+          "type": "playing",
+          "src": "http://127.0.0.1:5186/audio/daily/aria/daily-word-live.mp3?v=live%7Cverb-v1",
+          "rate": 1,
+          "pitch": true,
+          "duration": 0.2925
+        },
+        {
+          "type": "ended",
+          "src": "http://127.0.0.1:5186/audio/daily/aria/daily-word-live.mp3?v=live%7Cverb-v1",
+          "rate": 1,
+          "pitch": true,
+          "duration": 0.2925
+        }
+      ]
+    },
+    {
+      "voice": "aria",
+      "label": "live-0.72",
+      "events": [
+        {
+          "type": "playing",
+          "src": "http://127.0.0.1:5186/audio/daily/aria/daily-word-live.mp3?v=live%7Cverb-v1",
+          "rate": 0.72,
+          "pitch": true,
+          "duration": 0.2925
+        },
+        {
+          "type": "ended",
+          "src": "http://127.0.0.1:5186/audio/daily/aria/daily-word-live.mp3?v=live%7Cverb-v1",
+          "rate": 0.72,
+          "pitch": true,
+          "duration": 0.2925
+        }
+      ]
+    },
+    {
+      "voice": "guy",
+      "label": "朗读 I",
+      "events": [
+        {
+          "type": "playing",
+          "src": "http://127.0.0.1:5186/audio/daily/guy/daily-word-i.mp3?v=I",
+          "rate": 1,
+          "pitch": true,
+          "duration": 1.872
+        },
+        {
+          "type": "ended",
+          "src": "http://127.0.0.1:5186/audio/daily/guy/daily-word-i.mp3?v=I",
+          "rate": 1,
+          "pitch": true,
+          "duration": 1.872
+        }
+      ]
+    },
+    {
+      "voice": "guy",
+      "label": "慢速朗读 I",
+      "events": [
+        {
+          "type": "playing",
+          "src": "http://127.0.0.1:5186/audio/daily/guy/daily-word-i.mp3?v=I",
+          "rate": 0.72,
+          "pitch": true,
+          "duration": 1.872
+        },
+        {
+          "type": "ended",
+          "src": "http://127.0.0.1:5186/audio/daily/guy/daily-word-i.mp3?v=I",
+          "rate": 0.72,
+          "pitch": true,
+          "duration": 1.872
+        }
+      ]
+    },
+    {
+      "voice": "guy",
+      "label": "朗读 I am Ben.",
+      "events": [
+        {
+          "type": "playing",
+          "src": "http://127.0.0.1:5186/audio/daily/guy/daily-word-i-example-1.mp3?v=I%20am%20Ben.",
+          "rate": 1,
+          "pitch": true,
+          "duration": 1.752
+        },
+        {
+          "type": "ended",
+          "src": "http://127.0.0.1:5186/audio/daily/guy/daily-word-i-example-1.mp3?v=I%20am%20Ben.",
+          "rate": 1,
+          "pitch": true,
+          "duration": 1.752
+        }
+      ]
+    },
+    {
+      "voice": "guy",
+      "label": "慢速朗读 I am Ben.",
+      "events": [
+        {
+          "type": "playing",
+          "src": "http://127.0.0.1:5186/audio/guy/word-1758.mp3?v=3581f87c56777659",
+          "rate": 0.72,
+          "pitch": true,
+          "duration": 1.392
+        },
+        {
+          "type": "playing",
+          "src": "http://127.0.0.1:5186/audio/guy/word-2984.mp3?v=88b85b1f7cdfe765",
+          "rate": 0.72,
+          "pitch": true,
+          "duration": 1.488
+        },
+        {
+          "type": "playing",
+          "src": "http://127.0.0.1:5186/audio/reading/guy/read-6700869c8ff7480e.mp3?v=9ddff647a4da4007",
+          "rate": 0.72,
+          "pitch": true,
+          "duration": 1.872
+        }
+      ]
+    },
+    {
+      "voice": "guy",
+      "label": "朗读 I",
+      "events": [
+        {
+          "type": "playing",
+          "src": "http://127.0.0.1:5186/audio/daily/guy/daily-word-i.mp3?v=I",
+          "rate": 1,
+          "pitch": true,
+          "duration": 1.872
+        },
+        {
+          "type": "ended",
+          "src": "http://127.0.0.1:5186/audio/daily/guy/daily-word-i.mp3?v=I",
+          "rate": 1,
+          "pitch": true,
+          "duration": 1.872
+        }
+      ]
+    },
+    {
+      "voice": "guy",
+      "label": "live-1",
+      "events": [
+        {
+          "type": "playing",
+          "src": "http://127.0.0.1:5186/audio/daily/guy/daily-word-live.mp3?v=live%7Cverb-v1",
+          "rate": 1,
+          "pitch": true,
+          "duration": 0.355
+        },
+        {
+          "type": "ended",
+          "src": "http://127.0.0.1:5186/audio/daily/guy/daily-word-live.mp3?v=live%7Cverb-v1",
+          "rate": 1,
+          "pitch": true,
+          "duration": 0.355
+        }
+      ]
+    },
+    {
+      "voice": "guy",
+      "label": "live-0.72",
+      "events": [
+        {
+          "type": "playing",
+          "src": "http://127.0.0.1:5186/audio/daily/guy/daily-word-live.mp3?v=live%7Cverb-v1",
+          "rate": 0.72,
+          "pitch": true,
+          "duration": 0.355
+        },
+        {
+          "type": "ended",
+          "src": "http://127.0.0.1:5186/audio/daily/guy/daily-word-live.mp3?v=live%7Cverb-v1",
+          "rate": 0.72,
+          "pitch": true,
+          "duration": 0.355
+        }
+      ]
+    }
+  ],
+  "rounds": [
+    {
+      "id": "1792594211782-adaptive-16bua2h",
+      "lessonId": "DV1-01-01",
+      "mode": "lesson",
+      "stage": "summary",
+      "startedAt": 1792594211782,
+      "queue": [
+        {
+          "exerciseId": "DV1-01-01-daily-word-is-listen-meaning",
+          "retry": false
+        },
+        {
+          "exerciseId": "DV1-01-01-daily-word-am-meaning",
+          "retry": false
+        },
+        {
+          "exerciseId": "DV1-01-01-daily-word-are-meaning",
+          "retry": false
+        },
+        {
+          "exerciseId": "DV1-01-01-hello-expression",
+          "retry": false
+        },
+        {
+          "exerciseId": "DV1-01-01-daily-word-a-listen-meaning",
+          "retry": false
+        },
+        {
+          "exerciseId": "DV1-01-01-daily-word-i-listen-meaning",
+          "retry": false
+        },
+        {
+          "exerciseId": "DV1-01-01-daily-word-you-listen-meaning",
+          "retry": false
+        },
+        {
+          "exerciseId": "DV1-01-01-goodbye-expression-listen",
+          "retry": false
+        },
+        {
+          "exerciseId": "DV1-01-01-daily-word-are-context-1-recall",
+          "retry": false
+        },
+        {
+          "exerciseId": "DV1-01-01-daily-word-is-meaning",
+          "retry": false
+        },
+        {
+          "exerciseId": "DV1-01-01-daily-word-am-listen-meaning",
+          "retry": false
+        },
+        {
+          "exerciseId": "DV1-01-01-hello-expression-listen",
+          "retry": false
+        },
+        {
+          "exerciseId": "DV1-01-01-daily-word-you-recognize",
+          "retry": false
+        },
+        {
+          "exerciseId": "DV1-01-01-daily-word-i-context-1-choice",
+          "retry": false
+        },
+        {
+          "exerciseId": "DV1-01-01-daily-word-am-context-1-hear",
+          "retry": false
+        },
+        {
+          "exerciseId": "DV1-01-01-goodbye-expression-recall",
+          "retry": false
+        },
+        {
+          "exerciseId": "DV1-01-01-daily-word-are-listen-meaning",
+          "retry": false
+        },
+        {
+          "exerciseId": "DV1-01-01-daily-word-am-context-1-recall",
+          "retry": false
+        },
+        {
+          "exerciseId": "DV1-01-01-daily-word-a-write",
+          "retry": false
+        },
+        {
+          "exerciseId": "DV1-01-01-goodbye-expression",
+          "retry": false
+        }
+      ],
+      "index": 20,
+      "answers": [
+        {
+          "exerciseId": "DV1-01-01-daily-word-is-listen-meaning",
+          "retry": false,
+          "ability": "listening",
+          "outcome": "revealed",
+          "correct": false,
+          "at": 1792594211863
+        },
+        {
+          "exerciseId": "DV1-01-01-daily-word-am-meaning",
+          "retry": false,
+          "ability": "meaning",
+          "outcome": "assisted",
+          "correct": true,
+          "at": 1792594212840
+        },
+        {
+          "exerciseId": "DV1-01-01-daily-word-are-meaning",
+          "retry": false,
+          "ability": "meaning",
+          "outcome": "independent",
+          "correct": true,
+          "at": 1792594212923
+        },
+        {
+          "exerciseId": "DV1-01-01-hello-expression",
+          "retry": false,
+          "ability": "meaning",
+          "outcome": "independent",
+          "correct": true,
+          "at": 1792594213007
+        },
+        {
+          "exerciseId": "DV1-01-01-daily-word-a-listen-meaning",
+          "retry": false,
+          "ability": "listening",
+          "outcome": "independent",
+          "correct": true,
+          "at": 1792594213085
+        },
+        {
+          "exerciseId": "DV1-01-01-daily-word-i-listen-meaning",
+          "retry": false,
+          "ability": "listening",
+          "outcome": "independent",
+          "correct": true,
+          "at": 1792594213167
+        },
+        {
+          "exerciseId": "DV1-01-01-daily-word-you-listen-meaning",
+          "retry": false,
+          "ability": "listening",
+          "outcome": "independent",
+          "correct": true,
+          "at": 1792594213235
+        },
+        {
+          "exerciseId": "DV1-01-01-goodbye-expression-listen",
+          "retry": false,
+          "ability": "listening",
+          "outcome": "independent",
+          "correct": true,
+          "at": 1792594213317
+        },
+        {
+          "exerciseId": "DV1-01-01-daily-word-are-context-1-recall",
+          "retry": false,
+          "ability": "writing",
+          "outcome": "independent",
+          "correct": true,
+          "at": 1792594213401
+        },
+        {
+          "exerciseId": "DV1-01-01-daily-word-is-meaning",
+          "retry": false,
+          "ability": "meaning",
+          "outcome": "independent",
+          "correct": true,
+          "at": 1792594213484
+        },
+        {
+          "exerciseId": "DV1-01-01-daily-word-am-listen-meaning",
+          "retry": false,
+          "ability": "listening",
+          "outcome": "independent",
+          "correct": true,
+          "at": 1792594213550
+        },
+        {
+          "exerciseId": "DV1-01-01-hello-expression-listen",
+          "retry": false,
+          "ability": "listening",
+          "outcome": "independent",
+          "correct": true,
+          "at": 1792594213622
+        },
+        {
+          "exerciseId": "DV1-01-01-daily-word-you-recognize",
+          "retry": false,
+          "ability": "meaning",
+          "outcome": "independent",
+          "correct": true,
+          "at": 1792594213695
+        },
+        {
+          "exerciseId": "DV1-01-01-daily-word-i-context-1-choice",
+          "retry": false,
+          "ability": "meaning",
+          "outcome": "independent",
+          "correct": true,
+          "at": 1792594213767
+        },
+        {
+          "exerciseId": "DV1-01-01-daily-word-am-context-1-hear",
+          "retry": false,
+          "ability": "listening",
+          "outcome": "independent",
+          "correct": true,
+          "at": 1792594213834
+        },
+        {
+          "exerciseId": "DV1-01-01-goodbye-expression-recall",
+          "retry": false,
+          "ability": "writing",
+          "outcome": "independent",
+          "correct": true,
+          "at": 1792594213939
+        },
+        {
+          "exerciseId": "DV1-01-01-daily-word-are-listen-meaning",
+          "retry": false,
+          "ability": "listening",
+          "outcome": "independent",
+          "correct": true,
+          "at": 1792594214006
+        },
+        {
+          "exerciseId": "DV1-01-01-daily-word-am-context-1-recall",
+          "retry": false,
+          "ability": "writing",
+          "outcome": "independent",
+          "correct": true,
+          "at": 1792594214067
+        },
+        {
+          "exerciseId": "DV1-01-01-daily-word-a-write",
+          "retry": false,
+          "ability": "writing",
+          "outcome": "independent",
+          "correct": true,
+          "at": 1792594214128
+        },
+        {
+          "exerciseId": "DV1-01-01-goodbye-expression",
+          "retry": false,
+          "ability": "meaning",
+          "outcome": "independent",
+          "correct": true,
+          "at": 1792594214194
+        }
+      ],
+      "draft": {
+        "choice": null,
+        "order": [],
+        "blanks": [],
+        "text": "",
+        "checks": [],
+        "helped": false,
+        "revealed": false
+      },
+      "feedback": null,
+      "adaptive": {
+        "version": 1,
+        "round": 1,
+        "sourceLessonId": "DV1-01-01",
+        "focusIds": [
+          "daily-word-i",
+          "daily-word-you",
+          "daily-word-am",
+          "daily-word-are",
+          "daily-word-is",
+          "daily-word-a",
+          "hello",
+          "goodbye"
+        ],
+        "newIds": [
+          "daily-word-i",
+          "daily-word-you",
+          "daily-word-am",
+          "daily-word-are",
+          "daily-word-is",
+          "daily-word-a",
+          "hello",
+          "goodbye"
+        ],
+        "budget": 20,
+        "seed": 1148612333
+      }
+    }
+  ],
+  "words": 72,
+  "note": "Isolated Chrome browser data; later-theme and review setup uses synthetic local records."
+}

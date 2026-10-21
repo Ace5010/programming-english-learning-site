@@ -27,7 +27,10 @@ for (const [name, lessons] of [['daily', adaptiveDailyLessons], ['programming', 
       assert.ok(first.targets.every(target => !progress.learning?.targets[target.id]));
     } else {
       if (kind === 'mixed') assert.ok(first.oldCount && first.newCount);
-      if (kind === 'weak') assert.equal(first.newCount, 0);
+      if (kind === 'weak') {
+        assert.ok(first.oldCount > 0);
+        assert.ok(first.targets.filter(item => item.id.startsWith('daily-word-') && !progress.learning.targets[item.id]).length <= 4);
+      }
     }
   });
   for (const kind of ['saved', 'legacy']) test(`${name}: ${kind} session wins over next scope without changing queue or draft`, () => {

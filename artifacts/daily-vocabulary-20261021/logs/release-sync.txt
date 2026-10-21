@@ -1,0 +1,45 @@
+✔ speech retry counters and failed outcome survive isolated two-client sync (57.016ms)
+✔ correction survives two-client synchronization before and after submission (20.2664ms)
+✔ pairs survives two-client synchronization before and after submission (9.9799ms)
+✔ a question saved before the scope rule is set aside once, keeping its draft and evidence (10.7725ms)
+✔ a saved question that is still inside the taught scope is restored untouched (1.2674ms)
+✔ a question that is already answered keeps its feedback and is never reshuffled (0.9147ms)
+✔ a reconciled record survives two-client synchronization unchanged (10.8448ms)
+✔ an out-of-scope question with no legal replacement returns to the course page without a broken session (0.6422ms)
+✔ four word-led units contain 72 unique words, two authored contexts each, and useful expressions (2.1848ms)
+✔ preview teaches words with examples, remains pure, and audio or preview creates no progress (7.3357ms)
+✔ every current candidate is answerable, has one accepted option, and audio matches the written gap (73.1426ms)
+✔ remaining optional expressions cannot turn the word course into an expression-only backlog (0.7401ms)
+✔ correct rounds prioritize words, cover every new word and save exact results (173.3902ms)
+✔ helped rounds prioritize words, cover every new word and save exact results (364.1289ms)
+✔ continued rounds introduce all 72 words while weaknesses change the next scope (2766.3094ms)
+✔ all 24 historical sessions, drafts, favorites and tested skill records still parse and resume unchanged (5.4384ms)
+✔ one word can enter review without enrolling its examples or untested neighboring words (53.5746ms)
+✔ existing mastered words, favorites and independent course keys survive first phone pairing (38.2363ms)
+✔ offline changes reconnect and another device receives them (5.1675ms)
+✔ concurrent favorite additions and removals merge from shared base (5.22ms)
+✔ independent daily and programming changes combine without mixing their IDs (4.0016ms)
+✔ linked evidence conflicts never silently overwrite either device; explicit choice is backed up (2.9957ms)
+✔ conflict choice expires if another device changed since the conflict was displayed (3.9186ms)
+✔ local edits made while uploading remain pending and are sent on the next sync (7.1949ms)
+✔ lost upload acknowledgement is recovered without duplication or reset (3.4089ms)
+✔ busy inputs and review quizzes defer incoming application even when sync is manually requested (3.2747ms)
+✔ quota failure rolls back every key and metadata to their prior values (3.8006ms)
+✔ interrupted local transaction is recoverable after reload (0.1901ms)
+✔ unknown or corrupt local records are retained and never uploaded (1.8404ms)
+✔ joining a mistyped but well-formed code cannot create a new cloud record (1.9181ms)
+✔ newer cloud schemas cannot replace compatible local records (2.6334ms)
+✔ oversized requests are rejected before database writes (9.5331ms)
+✔ disconnect cancels an in-flight pull without removing local progress (5.5682ms)
+✔ API rejects missing credentials, wrong origins, methods, content types and extra keys (1.8351ms)
+✔ SQL compare-and-swap prevents stale overwrites and isolates pairing codes (2.124ms)
+✔ large Unicode snapshots round-trip across database chunks and retain one preceding version (123.2474ms)
+✔ anonymous creation is bounded per source and cannot prevent existing records from updating (19.5057ms)
+ℹ tests 37
+ℹ suites 0
+ℹ pass 37
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 4975.494

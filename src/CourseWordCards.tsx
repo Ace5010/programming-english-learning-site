@@ -2,13 +2,14 @@ import type { MouseEvent } from 'react';
 import type { DailyPhrase } from './dailyCourse';
 import Icon from './Icon';
 
-export interface WordStudyInfo { phonetic?: string; usage: string; contrast?: string }
+export interface WordStudyInfo { phonetic?: string; usage: string; contrast?: string; supportWords?: DailyPhrase[] }
 
-export default function CourseWordCards({ targets, phrases, meaning, info, play, speaking }: {
+export default function CourseWordCards({ targets, phrases, meaning, info, exampleFor, play, speaking }: {
   targets: DailyPhrase[];
   phrases: DailyPhrase[];
   meaning?: (id: string) => string | undefined;
   info?: (id: string) => WordStudyInfo | undefined;
+  exampleFor?: (id: string) => string | undefined;
   play: (phrase: DailyPhrase, slow?: boolean) => void;
   speaking: string;
 }) {
@@ -22,7 +23,7 @@ export default function CourseWordCards({ targets, phrases, meaning, info, play,
 
   return <div className="course-word-grid" aria-label="本节词语学习卡片">{targets.map(word => {
     const details = info?.(word.id);
-    const example = phrases.find(phrase => phrase.id === word.id.replace(/^word-/, 'example-'));
+    const example = phrases.find(phrase => phrase.id === (exampleFor?.(word.id) ?? word.id.replace(/^word-/, 'example-')));
     const wordPlaying = speaking.startsWith(`daily-${word.id}-`);
     const examplePlaying = !!example && speaking.startsWith(`daily-${example.id}-`);
     return <article key={word.id} data-target-id={word.id} className={`course-word-card${wordPlaying ? ' word-playing' : ''}${examplePlaying ? ' example-playing' : ''}`}
@@ -36,6 +37,9 @@ export default function CourseWordCards({ targets, phrases, meaning, info, play,
         {details?.phonetic && <span className="course-word-phonetic" lang="en">/{details.phonetic}/</span>}
         {slowButton(word)}<span className="course-word-status" role="status">{wordPlaying ? '正在朗读' : ''}</span>
       </div>
+      {!!details?.supportWords?.length && <div className="course-example-support" onClick={event => event.stopPropagation()}>
+        {details.supportWords.map(item => <div key={item.id} className="daily-inline-reading"><button type="button" className="daily-phrase-content" aria-label={`朗读 ${item.en}`} onClick={event => click(event, item)}>{item.en}：{item.zh}</button>{slowButton(item)}</div>)}
+      </div>}
       {example && <section className={`course-word-example${examplePlaying ? ' playing' : ''}`} aria-label={`${word.en} 的例句`} onClick={event => click(event, example)}>
         <button type="button" className="course-word-example-content" aria-label={`朗读 ${example.en}`}
           aria-pressed={speaking === `daily-${example.id}-normal`} onClick={event => click(event, example)}>

@@ -144,6 +144,7 @@ def entry_matches(entry, path, phrase, voice):
             and entry.get('voice') == voice
             and entry.get('rate') == RATE
             and entry.get('synthesisSha256') == synthesis_hash(voice, phrase['en'])
+            and entry.get('pronunciationContext') == phrase.get('pronunciationContext')
             and entry.get('bytes') == Path(path).stat().st_size
             and entry['bytes'] >= 100
             and math.isfinite(entry['durationSeconds']) and entry['durationSeconds'] > 0

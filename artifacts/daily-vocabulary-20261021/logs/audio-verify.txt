@@ -1,0 +1,10 @@
+{
+  "phrases": 313,
+  "uniqueTexts": 270,
+  "expectedMp3": 626,
+  "actualMp3": 626,
+  "decodedMp3": 626,
+  "revision": "48b86db52050e00a",
+  "bytes": 7690312,
+  "errors": []
+}

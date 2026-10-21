@@ -1,6 +1,7 @@
 import { dailyWordTargets } from './dailyWordTargets.ts'
+import { dailyVocabularyExamples, dailyVocabularyExpressions } from './dailyVocabulary.ts'
 /** Original, bilingual course material. Programming vocabulary and its IDs stay separate. */
-export type DailyPhrase = { id: string; en: string; zh: string; note?: string }
+export type DailyPhrase = { id: string; en: string; zh: string; note?: string; audioRevision?: string }
 
 export type DailyExercise = {
   id: string
@@ -510,7 +511,7 @@ for (const lesson of dailyLessons) for (const exercise of lesson.exercises) {
     return phraseBank[id]
   })
 }
-export const dailyPhrases: DailyPhrase[] = [...new Map(dailyLessons.flatMap(lesson => lesson.phrases).map(phrase => [phrase.id, phrase])).values(), ...dailyWordTargets]
+export const dailyPhrases: DailyPhrase[] = [...new Map(dailyLessons.flatMap(lesson => lesson.phrases).map(phrase => [phrase.id, phrase])).values(), ...dailyWordTargets, ...dailyVocabularyExamples, ...dailyVocabularyExpressions]
 const lessonsById = new Map(dailyLessons.map(lesson => [lesson.id, lesson]))
 const exercisesById = new Map(dailyLessons.flatMap(lesson => [...lesson.exercises, ...lesson.rechecks]).map(exercise => [exercise.id, exercise]))
 export const findDailyLesson = (id: string): DailyLesson | undefined => lessonsById.get(id)

@@ -41,6 +41,19 @@ export default function CourseOverview({ overview, disabled, start, skip, render
   overview: Overview; disabled: boolean; start: () => void; skip?: () => void; renderPhrase: (phrase: DailyPhrase) => ReactNode;
   renderWords?: (targets: DailyPhrase[], phrases: DailyPhrase[]) => ReactNode;
 }) {
+  if (overview.vocabulary) {
+    const words = overview.targets.filter(item => item.id.startsWith('daily-word-'));
+    const expressions = overview.targets.filter(item => !item.id.startsWith('daily-word-'));
+    return <div className="course-home-main"><section className="daily-panel course-word-learning" aria-label="本节课会学到的词语">
+      <header className="course-word-learning-heading"><h3 className="course-word-lesson-title">第 {overview.round} 节 · {overview.title}</h3>
+        <h2>本节词语</h2></header>
+      {renderWords?.(words, overview.studyPhrases)}
+      {!!expressions.length && <section className="course-daily-expressions"><h2>常用表达</h2><div className="course-examples">{expressions.map(item => <div key={item.id}>{renderPhrase(item)}</div>)}</div></section>}
+      <div className="course-word-test-entry"><div className="course-start"><button className="daily-button primary" disabled={disabled} onClick={start}>{overview.resume ? '继续学习' : '开始练习'}<Icon name="arrow" /></button></div>
+        {skip && <button className="daily-button text course-word-skip" disabled={disabled} onClick={skip}>这些我都会，跳过本课</button>}
+      </div>
+    </section></div>;
+  }
   if (overview.wordCheck) return <div className="course-home-main">
     <section className="daily-panel course-current course-word-learning" aria-label="本节课会学到的词语">
       <header className="course-word-learning-heading">

@@ -251,7 +251,7 @@ export default function Home() {
   const playWord = (item: VocabularyItem, slow = playbackSpeed === 'slow', key = `word-${item.id}`) => playAudio(`word-${item.id}.mp3`, slow, key, false, item.word);
   // A text revision must not replay an older MP3 cached under the same word ID.
   const playExample = (item: VocabularyItem, slow = playbackSpeed === 'slow', key = `example-${item.id}`) => playAudio(`example-${item.id}.mp3?v=${encodeURIComponent(item.example)}`, slow, key, false, item.example);
-  const playDaily = (phrase: DailyPhrase, slow = playbackSpeed === 'slow') => playAudio(`${phrase.id}.mp3?v=${encodeURIComponent(phrase.en)}`, slow, `daily-${phrase.id}-${slow ? 'slow' : 'normal'}`, true, phrase.en);
+  const playDaily = (phrase: DailyPhrase, slow = playbackSpeed === 'slow') => playAudio(`${phrase.id}.mp3?v=${encodeURIComponent(phrase.en + (phrase.audioRevision ? `|${phrase.audioRevision}` : ''))}`, slow, `daily-${phrase.id}-${slow ? 'slow' : 'normal'}`, true, phrase.en);
   const playFoundation = (phrase: DailyPhrase, slow = false) => {
     const path = foundationAudioPath(phrase.en, voice, phrase.id.startsWith('foundation-tutorial-'));
     if (!path) return;
