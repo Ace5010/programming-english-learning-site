@@ -24,8 +24,8 @@ function New-IconPng([int]$size) {
 }
 
 try {
-    foreach ($size in @(32, 180, 512)) {
-        [IO.File]::WriteAllBytes((Join-Path $output "cijian-english-v1-$size.png"), (New-IconPng $size))
+    foreach ($size in @(32, 180, 192, 512)) {
+        [IO.File]::WriteAllBytes((Join-Path $output "cijian-book-a-v2-$size.png"), (New-IconPng $size))
     }
     $sizes = @(16, 24, 32, 48, 64, 96, 128, 256)
     $images = @($sizes | ForEach-Object { ,(New-IconPng $_) })
@@ -45,11 +45,11 @@ try {
         foreach ($bytes in $images) { $writer.Write([byte[]]$bytes) }
         $writer.Flush()
         $ico = $stream.ToArray()
-        [IO.File]::WriteAllBytes((Join-Path $output 'cijian-english-v1.ico'), $ico)
+        [IO.File]::WriteAllBytes((Join-Path $output 'cijian-book-a-v2.ico'), $ico)
         [IO.File]::WriteAllBytes((Join-Path $root 'public\favicon.ico'), $ico)
     } finally { $writer.Dispose(); $stream.Dispose() }
     $android = Join-Path $root 'android\app\src\main\res\drawable-nodpi'
     New-Item -ItemType Directory -Path $android -Force | Out-Null
-    Copy-Item -LiteralPath (Join-Path $output 'cijian-english-v1-512.png') -Destination (Join-Path $android 'cijian_icon.png') -Force
+    Copy-Item -LiteralPath (Join-Path $output 'cijian-book-a-v2-512.png') -Destination (Join-Path $android 'cijian_icon.png') -Force
     Write-Output "Icon assets generated: $output"
 } finally { $source.Dispose() }

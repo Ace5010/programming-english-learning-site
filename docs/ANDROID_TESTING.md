@@ -1,4 +1,6 @@
-# 词见安卓测试版 1.1.3
+# 词见安卓测试版 1.1.4
+
+2026-10-24：1.1.4（versionCode 6）使用用户选定的第一版「A＋书页」图标，与本地、在线网页及快捷方式一致。安装包为 `artifacts/android/cijian-1.1.4-release.apk`；保持原包名、签名与学习记录存储。构建及手机覆盖升级证据见 `artifacts/icon-book-a-v2-20261024/`。
 
 2026-10-23：应用显示名称统一为「词见」，当前本地包为 `artifacts/android/cijian-1.1.3-release.apk`；保持原包名和签名。改名后的构建、Lint、签名与包内资源检查见 `artifacts/rename-cijian-20261023/`，未安装到设备。
 
