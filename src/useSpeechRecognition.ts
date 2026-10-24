@@ -20,7 +20,7 @@ function constructor(): RecognitionConstructor | undefined {
 export function speechErrorMessage(code: string, optional = false): string {
   const alternative = optional ? '也可直接继续下一题。' : '也可使用“自己表达”继续练习。';
   switch (code) {
-    case 'not-allowed': return isAndroidApp() ? '麦克风权限未开启。请到手机设置的 CodeWords 应用权限中允许麦克风后重试。' : '麦克风权限未开启。请点击地址栏的网站权限，允许麦克风后重试。';
+    case 'not-allowed': return isAndroidApp() ? '麦克风权限未开启。请到手机设置的词见应用权限中允许麦克风后重试。' : '麦克风权限未开启。请点击地址栏的网站权限，允许麦克风后重试。';
     case 'service-not-allowed': return (isAndroidApp() ? '手机没有可用的英语语音识别服务。可在系统设置中安装或启用语音服务。' : '浏览器没有允许语音识别服务。请检查浏览器设置。') + alternative;
     case 'audio-capture': return '没有找到可用的麦克风。请检查设备连接和系统麦克风权限。';
     case 'network': return '语音识别服务连接失败。请检查网络后重试；这次没有判为读错。' + alternative;

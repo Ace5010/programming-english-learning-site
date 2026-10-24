@@ -48,9 +48,10 @@ try {
     $testServerId = $ids[0]
     $owner = Get-CimInstance Win32_Process -Filter ("ProcessId={0}" -f $testServerId)
     Assert-True ($owner.CommandLine.Contains((Join-Path $root 'node_modules\vite\bin\vite.js'))) 'server is the original project Vite'
-    $response = Invoke-WebRequest -Uri "http://localhost:$port/" -UseBasicParsing -TimeoutSec 5
-    Assert-True ($response.StatusCode -eq 200 -and $response.Content -match 'CodeWords') 'current website responds after cold startup'
-    $audio = Invoke-WebRequest -Uri "http://localhost:$port/audio/aria/word-1.mp3" -UseBasicParsing -TimeoutSec 5
+    $response = Invoke-WebRequest -Uri "http://127.0.0.1:$port/" -UseBasicParsing -TimeoutSec 5
+    $html = [Text.Encoding]::UTF8.GetString($response.RawContentStream.ToArray())
+    Assert-True ($response.StatusCode -eq 200 -and $html -match '<title>词见</title>') 'current website responds after cold startup'
+    $audio = Invoke-WebRequest -Uri "http://127.0.0.1:$port/audio/aria/word-1.mp3" -UseBasicParsing -TimeoutSec 5
     Assert-True ($audio.StatusCode -eq 200 -and $audio.RawContentLength -gt 0) 'local audio is accessible'
     $repeat = Run-Launcher $port 'repeat'
     Assert-True ((Wait-Launcher $repeat) -eq 0) 'repeat startup succeeds'
@@ -59,7 +60,7 @@ try {
 
     $foreignPort = Free-Port
     $fixture = Join-Path $work 'foreign-server.cjs'
-    [IO.File]::WriteAllText($fixture, "require('node:http').createServer((req,res)=>res.end('<title>CodeWords</title><script src=`"src/main.tsx`"></script>')).listen(Number(process.argv[2]),'127.0.0.1');")
+    [IO.File]::WriteAllText($fixture, "require('node:http').createServer((req,res)=>res.end('<title>词见</title><script src=`"src/main.tsx`"></script>')).listen(Number(process.argv[2]),'127.0.0.1');")
     $foreign = Start-Process -FilePath (Get-Command node.exe).Source -ArgumentList @(('"{0}"' -f $fixture), $foreignPort) -WorkingDirectory $work -WindowStyle Hidden -PassThru
     $deadline = (Get-Date).AddSeconds(10)
     while (-not (Listener-Ids $foreignPort)) {

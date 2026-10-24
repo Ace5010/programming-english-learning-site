@@ -10,6 +10,15 @@ import { verifyPhonemicAssets } from './verify-phonemic-assets.mjs';
 import { verifySlowAssets } from './verify-slow-assets.mjs';
 const root = fileURLToPath(new URL('../', import.meta.url));
 const dist = resolve(root, 'dist');
+// Keep unfinished recordings in source while excluding them from generated releases.
+for (const voice of ['aria', 'guy']) {
+  const folder = resolve(dist, 'audio/daily', voice);
+  if (existsSync(folder)) {
+    for (const name of readdirSync(folder).filter(name => name.startsWith('.') && name.endsWith('.part'))) {
+      rmSync(resolve(folder, name));
+    }
+  }
+}
 const readJSON = (path) => JSON.parse(readFileSync(resolve(root, path), 'utf8'));
 const vocabulary = JSON.parse(readFileSync(resolve(root, 'src/vocabulary.ts'), 'utf8').split('export const vocabulary: VocabularyItem[] = ')[1].trim().replace(/;$/, ''));
 const baseline = readJSON('scripts/vocabulary-baseline.json');

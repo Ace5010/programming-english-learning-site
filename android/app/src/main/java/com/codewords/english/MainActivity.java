@@ -256,7 +256,7 @@ public final class MainActivity extends Activity {
     }
 
     @Override public void onBackPressed() {
-        new AlertDialog.Builder(this).setTitle("退出 CodeWords？")
+        new AlertDialog.Builder(this).setTitle("退出词见？")
                 .setMessage("本机学习记录会保留。")
                 .setNegativeButton("继续学习", null).setPositiveButton("退出", (dialog, which) -> finish()).show();
     }

@@ -1,4 +1,6 @@
-# 发布信息
+# 词见发布信息
+
+网站显示名称统一为「词见」。现有网址、Cloudflare 项目标识、D1 绑定和学习记录键继续沿用，避免更换地址影响原有学习记录。
 
 - 实际学习站点：https://programming-english-learning-site.pages.dev/
 - 备用静态站点：https://ace5010.github.io/programming-english-learning-site/

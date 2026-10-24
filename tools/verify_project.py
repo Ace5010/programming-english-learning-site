@@ -96,7 +96,7 @@ def main() -> None:
                     if hashlib.sha256(path.read_bytes()).hexdigest() != record['fileSha256']:
                         audio_missing.append(f'{name}: audio file hash mismatch')
         print(f'{voice}: {len(actual)} MP3')
-    print(f"项目：编程英语学习网站")
+    print(f"项目：词见")
     print(f"词汇：{len(vocabulary)}")
     print(f"语音：{len(mp3_files)}")
     print(f"缺少项目文件：{len(missing)}")

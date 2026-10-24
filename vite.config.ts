@@ -4,7 +4,11 @@ import react from '@vitejs/plugin-react';
 export default defineConfig({
   base: './',
   plugins: [react()],
-  server: { host: 'localhost', port: 5186, strictPort: true },
+  server: {
+    host: 'localhost', port: 5186, strictPort: true,
+    watch: { ignored: ['**/.runtime/**', '**/.venv/**', '**/artifacts/**', '**/pretrained_models/**', '**/android/**'] },
+  },
+  optimizeDeps: { entries: ['index.html'] },
   build: {
     target: 'es2020',
     sourcemap: false,

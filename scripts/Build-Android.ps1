@@ -4,7 +4,7 @@ param(
     [string]$JavaPath = $env:JAVA_HOME,
     [Parameter(Mandatory=$true)][string]$GradlePath,
     [string]$GradleCache,
-    [ValidatePattern('^[a-z0-9.-]+$')][string]$ArtifactName = 'codewords-1.1.3',
+    [ValidatePattern('^[a-z0-9.-]+$')][string]$ArtifactName = 'cijian-1.1.3',
     [switch]$InitializeSigning,
     [switch]$SkipWebBuild,
     [switch]$Validate

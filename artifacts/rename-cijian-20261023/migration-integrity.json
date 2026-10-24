@@ -1,0 +1,29 @@
+{
+  "newRoot": "D:\\vibe项目\\词见",
+  "changedFiles": [
+    "AGENTS.md",
+    "README.md",
+    "android/app/src/main/AndroidManifest.xml",
+    "android/app/src/main/java/com/codewords/english/MainActivity.java",
+    "android/settings.gradle",
+    "docs/ANDROID_TESTING.md",
+    "docs/SENSEVOICE_COURSE.md",
+    "index.html",
+    "package-lock.json",
+    "package.json",
+    "scripts/Build-Android.ps1",
+    "scripts/Open-LocalSite.ps1",
+    "scripts/prepare-deploy.mjs",
+    "src/useSpeechRecognition.ts",
+    "tools/test-local-launcher.ps1",
+    "tools/verify_project.py",
+    "vite.config.ts"
+  ],
+  "renamedFiles": {
+    "启动英语学习.cmd": "启动词见.cmd"
+  },
+  "unchangedTrackedFiles": 27978,
+  "originalUntrackedEntriesPreserved": 78,
+  "gitHeadUnchanged": true,
+  "hiddenCompatibilityLink": "D:\\vibe项目\\Interactive learning"
+}

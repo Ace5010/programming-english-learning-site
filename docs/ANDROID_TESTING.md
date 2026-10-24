@@ -1,4 +1,6 @@
-# 安卓测试版 1.1.3
+# 词见安卓测试版 1.1.3
+
+2026-10-23：应用显示名称统一为「词见」，当前本地包为 `artifacts/android/cijian-1.1.3-release.apk`；保持原包名和签名。改名后的构建、Lint、签名与包内资源检查见 `artifacts/rename-cijian-20261023/`，未安装到设备。
 
 2026-09-28 逐词慢读本地候选包：`artifacts/android/codewords-slow-reading-release.apk`。正常整句录音保留，多词内容慢速使用原生片段队列；额外资源分包以保持部署文件数量。Release/Debug/Lint、签名、内嵌文件一致性与无联网权限的独立测试包原生播放已验证，实体手机和主观听感仍待验收，详见 [本轮记录](../artifacts/slow-reading/verification.md) 和 [实现说明](WORD_BY_WORD_AUDIO.md)。以下旧版记录保持其原有验收范围。
 

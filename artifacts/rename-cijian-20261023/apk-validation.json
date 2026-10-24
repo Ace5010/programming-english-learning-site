@@ -1,0 +1,10 @@
+{
+  "apk": "cijian-1.1.3-release.apk",
+  "bytes": 269661060,
+  "sha256": "86f4b973044a917bc954ca0235734ec6032041074e4628368791f7d8cdd57e2c",
+  "matchedWebFiles": 16569,
+  "mp3Files": 16545,
+  "payloadMatchesDist": true,
+  "noSigningFilesBundled": true,
+  "note": "Archive/payload verification only; installation and native device behavior are separate checks."
+}

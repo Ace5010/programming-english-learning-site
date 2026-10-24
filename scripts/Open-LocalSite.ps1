@@ -47,7 +47,8 @@ function Test-SiteOwner($listener) {
 function Test-SiteReady {
     try {
         $response = Invoke-WebRequest -Uri $probeUrl -UseBasicParsing -TimeoutSec 4
-        if ($response.StatusCode -ne 200 -or $response.Content -notmatch '<title>[^<]*CodeWords</title>' -or $response.Content -notmatch 'src/main.tsx') { return $false }
+        $html = [Text.Encoding]::UTF8.GetString($response.RawContentStream.ToArray())
+        if ($response.StatusCode -ne 200 -or $html -notmatch '<title>词见</title>' -or $html -notmatch 'src/main.tsx') { return $false }
         foreach ($listener in @(Get-NetTCPConnection -LocalPort $Port -State Listen -ErrorAction SilentlyContinue)) {
             if (Test-SiteOwner $listener) { return $true }
         }
@@ -106,7 +107,7 @@ try {
     Add-Content -LiteralPath (Join-Path $logDirectory 'startup-error.log') -Value $_.Exception.Message -Encoding UTF8
     if ($CheckOnly) { throw }
     Add-Type -AssemblyName System.Windows.Forms
-    [System.Windows.Forms.MessageBox]::Show($_.Exception.Message, '英语学习启动失败') | Out-Null
+    [System.Windows.Forms.MessageBox]::Show($_.Exception.Message, '词见启动失败') | Out-Null
     exit 1
 } finally {
     if ($ownsMutex) { $startupMutex.ReleaseMutex() }
