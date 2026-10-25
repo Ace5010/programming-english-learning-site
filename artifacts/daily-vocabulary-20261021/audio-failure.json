@@ -1,0 +1,13 @@
+{
+  "voice": "aria",
+  "rate": 1,
+  "events": [
+    {
+      "type": "error",
+      "src": "http://127.0.0.1:5186/audio/daily/aria/daily-word-live.mp3?v=live%7Cverb-v1",
+      "rate": 1,
+      "pitch": true,
+      "duration": null
+    }
+  ]
+}

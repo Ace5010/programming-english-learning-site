@@ -1,0 +1,17 @@
+{
+  "url": "https://ace5010.github.io/programming-english-learning-site/",
+  "title": "词见",
+  "assets": [
+    {
+      "path": "./assets/index-CUjUjbXz.js",
+      "sha256": "95a09925e7784cd7ced53284d7a6197f8a367a4af8055efcbe49877257e56315",
+      "matchesLocal": true
+    },
+    {
+      "path": "./assets/index-BT3dMe8T.css",
+      "sha256": "346cf7f4b4c4dc13a120835c6ff1e7fff4db31a0b262c9146d85e190af487575",
+      "matchesLocal": true
+    }
+  ],
+  "commit": "d403470344cebd6cd752a78d79807dba0b9472f1"
+}

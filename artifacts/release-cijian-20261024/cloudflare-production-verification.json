@@ -1,0 +1,18 @@
+{
+  "name": "programming-english-learning-site",
+  "productionDeploymentId": "cf21fa5b-c92a-41a1-92ae-4031945a5731",
+  "commit": "d403470344cebd6cd752a78d79807dba0b9472f1",
+  "latestStage": {
+    "name": "deploy",
+    "started_on": "2026-10-24T04:20:40.307862Z",
+    "ended_on": "2026-10-24T04:20:52.235624Z",
+    "status": "success"
+  },
+  "d1BindingPreserved": true,
+  "d1Bindings": {
+    "CODEWORDS_SYNC_DB": {
+      "id": "c106ed58-fbdf-4981-a767-cfe107b3f9bf"
+    }
+  },
+  "productionBranch": "main"
+}

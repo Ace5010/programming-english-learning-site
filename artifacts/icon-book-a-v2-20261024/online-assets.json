@@ -1,0 +1,88 @@
+[
+  {
+    "base": "https://programming-english-learning-site.pages.dev/",
+    "title": "词见",
+    "currentIconLinks": true,
+    "allRemoteAssetsMatchLocal": true,
+    "assets": [
+      {
+        "path": "icons/cijian-book-a-v2.ico",
+        "sha256": "f49c433e32bb4af4cd903950293a2197b26c40dd520a7c6598f3651d07780bd2",
+        "bytes": 82922
+      },
+      {
+        "path": "icons/cijian-book-a-v2-32.png",
+        "sha256": "e77a2b441ca4ca779f4577c175308036a6810be1c7ede753af463850c39ca69d",
+        "bytes": 1845
+      },
+      {
+        "path": "icons/cijian-book-a-v2-180.png",
+        "sha256": "9f4fcffc2f73fe7d7c939385a0dee7b35a7e172596f2b9c2561cdd5ba561ff0f",
+        "bytes": 24951
+      },
+      {
+        "path": "icons/cijian-book-a-v2-192.png",
+        "sha256": "5427df029c57b90827bb0a1c8551d84157d9dd1552bad137f5c40f5fdb81b915",
+        "bytes": 28293
+      },
+      {
+        "path": "icons/cijian-book-a-v2-512.png",
+        "sha256": "9b52323f6406e0ced5ae12a7396bd774ae17eaa3cdb37aed209e7f7cce43f6a1",
+        "bytes": 187744
+      },
+      {
+        "path": "site.webmanifest",
+        "sha256": "2be9d72bb46c95dd113da4dbbddc69343f930205a66ebe91540aac5a13f4faaa",
+        "bytes": 381
+      },
+      {
+        "path": "favicon.ico",
+        "sha256": "f49c433e32bb4af4cd903950293a2197b26c40dd520a7c6598f3651d07780bd2",
+        "bytes": 82922
+      }
+    ]
+  },
+  {
+    "base": "https://ace5010.github.io/programming-english-learning-site/",
+    "title": "词见",
+    "currentIconLinks": true,
+    "allRemoteAssetsMatchLocal": true,
+    "assets": [
+      {
+        "path": "icons/cijian-book-a-v2.ico",
+        "sha256": "f49c433e32bb4af4cd903950293a2197b26c40dd520a7c6598f3651d07780bd2",
+        "bytes": 82922
+      },
+      {
+        "path": "icons/cijian-book-a-v2-32.png",
+        "sha256": "e77a2b441ca4ca779f4577c175308036a6810be1c7ede753af463850c39ca69d",
+        "bytes": 1845
+      },
+      {
+        "path": "icons/cijian-book-a-v2-180.png",
+        "sha256": "9f4fcffc2f73fe7d7c939385a0dee7b35a7e172596f2b9c2561cdd5ba561ff0f",
+        "bytes": 24951
+      },
+      {
+        "path": "icons/cijian-book-a-v2-192.png",
+        "sha256": "5427df029c57b90827bb0a1c8551d84157d9dd1552bad137f5c40f5fdb81b915",
+        "bytes": 28293
+      },
+      {
+        "path": "icons/cijian-book-a-v2-512.png",
+        "sha256": "9b52323f6406e0ced5ae12a7396bd774ae17eaa3cdb37aed209e7f7cce43f6a1",
+        "bytes": 187744
+      },
+      {
+        "path": "site.webmanifest",
+        "sha256": "2be9d72bb46c95dd113da4dbbddc69343f930205a66ebe91540aac5a13f4faaa",
+        "bytes": 381
+      },
+      {
+        "path": "favicon.ico",
+        "sha256": "f49c433e32bb4af4cd903950293a2197b26c40dd520a7c6598f3651d07780bd2",
+        "bytes": 82922
+      }
+    ]
+  }
+]

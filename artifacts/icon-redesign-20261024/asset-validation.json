@@ -1,0 +1,46 @@
+{
+  "icoFrames": [
+    {
+      "size": 16,
+      "cornerAlpha": 0,
+      "centerAlpha": 253
+    },
+    {
+      "size": 24,
+      "cornerAlpha": 0,
+      "centerAlpha": 253
+    },
+    {
+      "size": 32,
+      "cornerAlpha": 0,
+      "centerAlpha": 253
+    },
+    {
+      "size": 48,
+      "cornerAlpha": 0,
+      "centerAlpha": 253
+    },
+    {
+      "size": 64,
+      "cornerAlpha": 0,
+      "centerAlpha": 253
+    },
+    {
+      "size": 96,
+      "cornerAlpha": 0,
+      "centerAlpha": 253
+    },
+    {
+      "size": 128,
+      "cornerAlpha": 0,
+      "centerAlpha": 253
+    },
+    {
+      "size": 256,
+      "cornerAlpha": 0,
+      "centerAlpha": 253
+    }
+  ],
+  "rootFaviconMatches": true,
+  "androidMatches": true
+}

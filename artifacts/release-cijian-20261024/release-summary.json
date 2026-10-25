@@ -1,0 +1,12 @@
+{
+  "commit": "d403470344cebd6cd752a78d79807dba0b9472f1",
+  "cloudflareProductionDeploymentId": "cf21fa5b-c92a-41a1-92ae-4031945a5731",
+  "cloudflareStatus": "success",
+  "githubRunId": 40061887126,
+  "githubStatus": "success",
+  "sourceWorkingTreeClean": true,
+  "d1BindingPreserved": true,
+  "bundleAsset": "./assets/index-CUjUjbXz.js",
+  "bundleSha256": "95a09925e7784cd7ced53284d7a6197f8a367a4af8055efcbe49877257e56315",
+  "temporaryAudioFilesInDist": 0
+}

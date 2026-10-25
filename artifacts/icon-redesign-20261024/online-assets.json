@@ -1,0 +1,66 @@
+[
+  {
+    "url": "https://programming-english-learning-site.pages.dev/",
+    "title": "词见",
+    "iconLinks": [
+      "<link rel=\"icon\" type=\"image/x-icon\" href=\"./icons/cijian-english-v1.ico\" />",
+      "<link rel=\"icon\" type=\"image/png\" sizes=\"32x32\" href=\"./icons/cijian-english-v1-32.png\" />",
+      "<link rel=\"apple-touch-icon\" sizes=\"180x180\" href=\"./icons/cijian-english-v1-180.png\" />"
+    ],
+    "assets": [
+      {
+        "asset": "cijian-english-v1-32.png",
+        "sha256": "4caeef5b28a7e3323be22e740abf5e07bbffa275bb05c6c0efd5c1e932e00481",
+        "matchesLocal": true
+      },
+      {
+        "asset": "cijian-english-v1.ico",
+        "sha256": "ac4cdb0f8053ca8e609388885838614b4df1652b4fe2bb81f543568032f50055",
+        "matchesLocal": true
+      },
+      {
+        "asset": "cijian-english-v1-180.png",
+        "sha256": "8816279eecf0b64e4ae25dfd78bb9168797ee09d1690e544be753abdbc35af93",
+        "matchesLocal": true
+      },
+      {
+        "asset": "cijian-english-v1-512.png",
+        "sha256": "470493c88b9e4f113460ce642d72837a77e4d41bd46001c43e2102bed43bfb46",
+        "matchesLocal": true
+      }
+    ],
+    "verified": true
+  },
+  {
+    "url": "https://ace5010.github.io/programming-english-learning-site/",
+    "title": "词见",
+    "iconLinks": [
+      "<link rel=\"icon\" type=\"image/x-icon\" href=\"./icons/cijian-english-v1.ico\" />",
+      "<link rel=\"icon\" type=\"image/png\" sizes=\"32x32\" href=\"./icons/cijian-english-v1-32.png\" />",
+      "<link rel=\"apple-touch-icon\" sizes=\"180x180\" href=\"./icons/cijian-english-v1-180.png\" />"
+    ],
+    "assets": [
+      {
+        "asset": "cijian-english-v1-32.png",
+        "sha256": "4caeef5b28a7e3323be22e740abf5e07bbffa275bb05c6c0efd5c1e932e00481",
+        "matchesLocal": true
+      },
+      {
+        "asset": "cijian-english-v1.ico",
+        "sha256": "ac4cdb0f8053ca8e609388885838614b4df1652b4fe2bb81f543568032f50055",
+        "matchesLocal": true
+      },
+      {
+        "asset": "cijian-english-v1-180.png",
+        "sha256": "8816279eecf0b64e4ae25dfd78bb9168797ee09d1690e544be753abdbc35af93",
+        "matchesLocal": true
+      },
+      {
+        "asset": "cijian-english-v1-512.png",
+        "sha256": "470493c88b9e4f113460ce642d72837a77e4d41bd46001c43e2102bed43bfb46",
+        "matchesLocal": true
+      }
+    ],
+    "verified": true
+  }
+]
