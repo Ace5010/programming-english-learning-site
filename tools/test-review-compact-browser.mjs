@@ -4,8 +4,12 @@ import { mkdir, readFile, writeFile } from 'node:fs/promises';
 const require = createRequire(import.meta.url);
 const { chromium } = require('C:/Users/shenwuqiang/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
 const fixture = JSON.parse(await readFile('artifacts/mobile-audit/programming-review-fixture.json', 'utf8'));
-const output = 'artifacts/review-card-examples-20261029';
+const output = 'artifacts/review-card-alignment-20261029';
 await mkdir(output, { recursive: true });
+// Add varied weak-ability labels to isolated fixture data, matching the reported layout.
+const review = JSON.parse(fixture.review);
+Object.values(review.words).slice(0, 4).forEach((word, index) => { word.meaning.needsPractice = true; if (index % 2) word.spelling.needsPractice = true; });
+fixture.review = JSON.stringify(review);
 const browser = await chromium.launch({ channel: 'chrome', headless: true });
 const context = await browser.newContext({ viewport: { width: 1440, height: 1000 }, reducedMotion: 'reduce' });
 const page = await context.newPage();
@@ -56,15 +60,18 @@ try {
  assert.notEqual(await star.getAttribute('aria-pressed'), wasFavorite);
  await star.click();
  assert.equal(await page.evaluate(() => localStorage.getItem('codewords-review-v1')), originalProgress);
- for (const width of [1440, 1024, 760, 390, 320]) {
+ for (const width of [1440, 1280, 1101, 1024, 760, 640, 390, 320]) {
   await page.setViewportSize({ width, height: width < 800 ? 844 : 1000 });
   for (const theme of ['lagoon', 'pearl', 'sky', 'mint']) {
    await page.getByLabel('界面配色', { exact: true }).selectOption(theme);
    const metrics = await panel.evaluate(panel => {
     const visible = el => el.checkVisibility() && el.getBoundingClientRect().width && el.getBoundingClientRect().height;
     const bad = [...panel.querySelectorAll('button, select, input, summary')].filter(visible).filter(el => { const b = el.getBoundingClientRect(); return b.left < -1 || b.right > innerWidth + 1; }).map(el => el.textContent);
-    return { width: innerWidth, documentWidth: document.documentElement.scrollWidth, columns: getComputedStyle(panel.querySelector(".word-grid")).gridTemplateColumns.split(" ").length, rowHeight: panel.querySelector('.word-card').getBoundingClientRect().height, bad };
+    const cards = [...panel.querySelectorAll('.word-card')].map(el => { const box = el.getBoundingClientRect(); const example = el.querySelector('.example').getBoundingClientRect(); const footer = el.querySelector('.card-actions').getBoundingClientRect(); return { top: box.top, bottom: box.bottom, exampleTop: example.top, footerBottom: footer.bottom, footerTop: footer.top, practiceTop: el.querySelector(".review-word-action").getBoundingClientRect().top }; });
+    const alignmentErrors = cards.filter((card, index) => cards.slice(0, index).some(other => Math.abs(other.top - card.top) < 1 && (Math.abs(other.bottom - card.bottom) > 1 || Math.abs(other.exampleTop - card.exampleTop) > 1 || Math.abs(other.footerBottom - card.footerBottom) > 1 || Math.abs(other.footerTop - card.footerTop) > 1 || Math.abs(other.practiceTop - card.practiceTop) > 1)));
+    return { alignmentErrors, width: innerWidth, documentWidth: document.documentElement.scrollWidth, columns: getComputedStyle(panel.querySelector(".word-grid")).gridTemplateColumns.split(" ").length, rowHeight: panel.querySelector('.word-card').getBoundingClientRect().height, bad };
    });
+   assert.deepEqual(metrics.alignmentErrors, [], 'same-row cards, examples and footers must align');
    assert.equal(metrics.columns, width >= 1280 ? 3 : width >= 640 ? 2 : 1);
    assert.ok(metrics.documentWidth <= width + 1, JSON.stringify(metrics));
    assert.deepEqual(metrics.bad, [], JSON.stringify(metrics));
@@ -80,6 +87,6 @@ try {
  await row.getByRole('button', { name: /^练习 / }).click();
  await page.locator('.lesson-overlay').waitFor();
  assert.deepEqual(errors, []);
- await writeFile(`${output}/results.json`, JSON.stringify({ checks: ['pagination, last page, search reset, filter reset', 'visible examples and real audio normal/slow playback', 'favorite toggle with review data preserved', 'single word practice opens', '20 viewport/palette overflow checks'], results, errors }, null, 2));
+ await writeFile(`${output}/results.json`, JSON.stringify({ checks: ['pagination, last page, search reset, filter reset', 'visible examples and real audio normal/slow playback', 'favorite toggle with review data preserved', 'single word practice opens', '32 viewport/palette alignment and overflow checks'], results, errors }, null, 2));
  console.log(JSON.stringify({ checks: 'passed', results }));
 } finally { await browser.close(); }

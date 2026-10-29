@@ -1,0 +1,300 @@
+{
+  "checks": [
+    "pagination, last page, search reset, filter reset",
+    "visible examples and real audio normal/slow playback",
+    "favorite toggle with review data preserved",
+    "single word practice opens",
+    "32 viewport/palette alignment and overflow checks"
+  ],
+  "results": [
+    {
+      "theme": "lagoon",
+      "alignmentErrors": [],
+      "width": 1440,
+      "documentWidth": 1440,
+      "columns": 3,
+      "rowHeight": 318.578125,
+      "bad": []
+    },
+    {
+      "theme": "pearl",
+      "alignmentErrors": [],
+      "width": 1440,
+      "documentWidth": 1440,
+      "columns": 3,
+      "rowHeight": 318.578125,
+      "bad": []
+    },
+    {
+      "theme": "sky",
+      "alignmentErrors": [],
+      "width": 1440,
+      "documentWidth": 1440,
+      "columns": 3,
+      "rowHeight": 318.578125,
+      "bad": []
+    },
+    {
+      "theme": "mint",
+      "alignmentErrors": [],
+      "width": 1440,
+      "documentWidth": 1440,
+      "columns": 3,
+      "rowHeight": 318.578125,
+      "bad": []
+    },
+    {
+      "theme": "lagoon",
+      "alignmentErrors": [],
+      "width": 1280,
+      "documentWidth": 1280,
+      "columns": 3,
+      "rowHeight": 341.078125,
+      "bad": []
+    },
+    {
+      "theme": "pearl",
+      "alignmentErrors": [],
+      "width": 1280,
+      "documentWidth": 1280,
+      "columns": 3,
+      "rowHeight": 341.078125,
+      "bad": []
+    },
+    {
+      "theme": "sky",
+      "alignmentErrors": [],
+      "width": 1280,
+      "documentWidth": 1280,
+      "columns": 3,
+      "rowHeight": 341.078125,
+      "bad": []
+    },
+    {
+      "theme": "mint",
+      "alignmentErrors": [],
+      "width": 1280,
+      "documentWidth": 1280,
+      "columns": 3,
+      "rowHeight": 341.078125,
+      "bad": []
+    },
+    {
+      "theme": "lagoon",
+      "alignmentErrors": [],
+      "width": 1101,
+      "documentWidth": 1101,
+      "columns": 2,
+      "rowHeight": 318.578125,
+      "bad": []
+    },
+    {
+      "theme": "pearl",
+      "alignmentErrors": [],
+      "width": 1101,
+      "documentWidth": 1101,
+      "columns": 2,
+      "rowHeight": 318.578125,
+      "bad": []
+    },
+    {
+      "theme": "sky",
+      "alignmentErrors": [],
+      "width": 1101,
+      "documentWidth": 1101,
+      "columns": 2,
+      "rowHeight": 318.578125,
+      "bad": []
+    },
+    {
+      "theme": "mint",
+      "alignmentErrors": [],
+      "width": 1101,
+      "documentWidth": 1101,
+      "columns": 2,
+      "rowHeight": 318.578125,
+      "bad": []
+    },
+    {
+      "theme": "lagoon",
+      "alignmentErrors": [],
+      "width": 1024,
+      "documentWidth": 1024,
+      "columns": 2,
+      "rowHeight": 318.578125,
+      "bad": []
+    },
+    {
+      "theme": "pearl",
+      "alignmentErrors": [],
+      "width": 1024,
+      "documentWidth": 1024,
+      "columns": 2,
+      "rowHeight": 318.578125,
+      "bad": []
+    },
+    {
+      "theme": "sky",
+      "alignmentErrors": [],
+      "width": 1024,
+      "documentWidth": 1024,
+      "columns": 2,
+      "rowHeight": 318.578125,
+      "bad": []
+    },
+    {
+      "theme": "mint",
+      "alignmentErrors": [],
+      "width": 1024,
+      "documentWidth": 1024,
+      "columns": 2,
+      "rowHeight": 318.578125,
+      "bad": []
+    },
+    {
+      "theme": "lagoon",
+      "alignmentErrors": [],
+      "width": 760,
+      "documentWidth": 760,
+      "columns": 2,
+      "rowHeight": 318.578125,
+      "bad": []
+    },
+    {
+      "theme": "pearl",
+      "alignmentErrors": [],
+      "width": 760,
+      "documentWidth": 760,
+      "columns": 2,
+      "rowHeight": 318.578125,
+      "bad": []
+    },
+    {
+      "theme": "sky",
+      "alignmentErrors": [],
+      "width": 760,
+      "documentWidth": 760,
+      "columns": 2,
+      "rowHeight": 318.578125,
+      "bad": []
+    },
+    {
+      "theme": "mint",
+      "alignmentErrors": [],
+      "width": 760,
+      "documentWidth": 760,
+      "columns": 2,
+      "rowHeight": 318.578125,
+      "bad": []
+    },
+    {
+      "theme": "lagoon",
+      "alignmentErrors": [],
+      "width": 640,
+      "documentWidth": 640,
+      "columns": 2,
+      "rowHeight": 315.78125,
+      "bad": []
+    },
+    {
+      "theme": "pearl",
+      "alignmentErrors": [],
+      "width": 640,
+      "documentWidth": 640,
+      "columns": 2,
+      "rowHeight": 315.78125,
+      "bad": []
+    },
+    {
+      "theme": "sky",
+      "alignmentErrors": [],
+      "width": 640,
+      "documentWidth": 640,
+      "columns": 2,
+      "rowHeight": 315.78125,
+      "bad": []
+    },
+    {
+      "theme": "mint",
+      "alignmentErrors": [],
+      "width": 640,
+      "documentWidth": 640,
+      "columns": 2,
+      "rowHeight": 315.78125,
+      "bad": []
+    },
+    {
+      "theme": "lagoon",
+      "alignmentErrors": [],
+      "width": 390,
+      "documentWidth": 390,
+      "columns": 1,
+      "rowHeight": 315.78125,
+      "bad": []
+    },
+    {
+      "theme": "pearl",
+      "alignmentErrors": [],
+      "width": 390,
+      "documentWidth": 390,
+      "columns": 1,
+      "rowHeight": 315.78125,
+      "bad": []
+    },
+    {
+      "theme": "sky",
+      "alignmentErrors": [],
+      "width": 390,
+      "documentWidth": 390,
+      "columns": 1,
+      "rowHeight": 315.78125,
+      "bad": []
+    },
+    {
+      "theme": "mint",
+      "alignmentErrors": [],
+      "width": 390,
+      "documentWidth": 390,
+      "columns": 1,
+      "rowHeight": 315.78125,
+      "bad": []
+    },
+    {
+      "theme": "lagoon",
+      "alignmentErrors": [],
+      "width": 320,
+      "documentWidth": 320,
+      "columns": 1,
+      "rowHeight": 315.78125,
+      "bad": []
+    },
+    {
+      "theme": "pearl",
+      "alignmentErrors": [],
+      "width": 320,
+      "documentWidth": 320,
+      "columns": 1,
+      "rowHeight": 315.78125,
+      "bad": []
+    },
+    {
+      "theme": "sky",
+      "alignmentErrors": [],
+      "width": 320,
+      "documentWidth": 320,
+      "columns": 1,
+      "rowHeight": 315.78125,
+      "bad": []
+    },
+    {
+      "theme": "mint",
+      "alignmentErrors": [],
+      "width": 320,
+      "documentWidth": 320,
+      "columns": 1,
+      "rowHeight": 315.78125,
+      "bad": []
+    }
+  ],
+  "errors": []
+}
