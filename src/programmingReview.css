@@ -54,7 +54,7 @@
   .review-vocabulary .list-columns { display: none; }
   :root[data-theme] .review-vocabulary .word-card { grid-template-columns: minmax(0, 1fr) auto; padding: 18px 16px; gap: 10px 12px; }
   .review-vocabulary .word-copy { grid-column: 1; grid-row: 1; }
-  .review-vocabulary .card-actions { grid-column: 2; grid-row: 1; grid-template-columns: 1fr; gap: 5px; max-width: 118px; }
+  .review-vocabulary .card-actions { grid-column: 1; grid-row: 2; grid-template-columns: 1fr; gap: 5px; max-width: 118px; }
   .review-vocabulary .favorite { grid-column: 1; grid-row: 1; justify-self: end; }
   .review-vocabulary .word-learning-status { grid-column: 1; grid-row: 2; padding-top: 0; }
   .review-vocabulary .review-word-action { grid-column: 1; grid-row: 3; }
@@ -67,4 +67,44 @@
   .review-vocabulary .card-actions { grid-column: 1; grid-row: 2; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; max-width: none; }
   .review-vocabulary .word-learning-status { flex: 1; text-align: left; }
   .review-vocabulary .example { grid-row: 3; }
+}
+/* Review cards show their examples directly in the multi-column grid. */
+:root[data-theme] .review-vocabulary .word-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: start;
+  gap: 12px;
+  padding: 4px 16px 16px;
+}
+:root[data-theme] .review-vocabulary .word-card {
+  grid-template-columns: minmax(0, 1fr);
+  align-items: center;
+  gap: 6px 8px;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--surface);
+  overflow: hidden;
+}
+:root[data-theme] .review-vocabulary .word-card .word-copy { grid-column: 1 / -1; grid-row: 1; gap: 2px; }
+:root[data-theme] .review-vocabulary .word-card .word-row { display: flex; flex-wrap: wrap; align-items: center; gap: 0 12px; }
+:root[data-theme] .review-vocabulary .word-card .word-button { width: auto; min-height: 44px; }
+:root[data-theme] .review-vocabulary .word-card .word-pronunciation { margin: 0; }
+:root[data-theme] .review-vocabulary .word-card .slow-button { min-height: 44px; min-width: 44px; }
+:root[data-theme] .review-vocabulary .word-card .card-actions { grid-column: 1 / -1; grid-row: 3; display: flex; flex-direction: row; flex-wrap: wrap; align-items: center; max-width: none; gap: 4px; }
+:root[data-theme] .review-vocabulary .word-card .word-learning-status { flex: 1; padding: 0; text-align: left; }
+:root[data-theme] .review-vocabulary .word-card .favorite { width: 44px; height: 44px; flex-basis: 44px; }
+:root[data-theme] .review-vocabulary .word-card .review-word-action { min-height: 44px; }
+:root[data-theme] .review-vocabulary .word-card > .example { grid-column: 1 / -1; grid-row: 2; display: flex; align-items: center; gap: 8px; margin: 4px 0; padding: 10px; }
+:root[data-theme] .review-vocabulary .word-card > .example > button:first-child { flex: 1; min-width: 0; }
+:root[data-theme] .review-vocabulary .list-guide { display: flex; align-items: center; flex-wrap: wrap; justify-content: space-between; gap: 8px; padding-bottom: 10px; scroll-margin-top: 180px; }
+.review-pagination { display: flex; align-items: center; justify-content: center; gap: 8px; padding: 12px; }
+.list-guide .review-pagination { padding: 0; }
+.review-pagination select { min-height: 44px; max-width: 120px; border: 1px solid var(--line); border-radius: 8px; padding: 6px; background: var(--surface); color: var(--ink); font: inherit; }
+.review-pagination .daily-button { min-height: 44px; padding: 6px 10px; }
+@media (max-width: 1279px) {
+  :root[data-theme] .review-vocabulary .word-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 639px) {
+  :root[data-theme] .review-vocabulary .word-grid { grid-template-columns: minmax(0, 1fr); padding-inline: 12px; gap: 10px; }
+  :root[data-theme] .review-vocabulary .list-guide { scroll-margin-top: 260px; }
 }

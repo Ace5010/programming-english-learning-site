@@ -1,4 +1,4 @@
-import { useMemo, useState, type ReactNode, type RefObject } from 'react';
+import { useMemo, useRef, useState, type ReactNode, type RefObject } from 'react';
 import Icon from './Icon';
 import VocabularyRow from './VocabularyRow';
 import { getSkill, isWordDue, reviewAbilities, type ReviewProgress } from './review';
@@ -31,7 +31,8 @@ type Filter = 'all' | 'due' | 'weak' | 'scheduled';
 export default function ReviewVocabulary({ words, progress, favorites, favoriteWarning, disabled, speaking, speed, reviewButtonRef, scenarios, startDue, startWords, toggleFavorite, playWord, playExample, openCourse, exportRecord }: Props) {
   const [query, setQuery] = useState('');
   const [filter, setFilter] = useState<Filter>('all');
-  const [visibleCount, setVisibleCount] = useState(24);
+  const [page, setPage] = useState(1);
+  const listRef = useRef<HTMLDivElement>(null);
   const entries = useMemo(() => words.map(item => {
     const weak = reviewAbilities.filter(ability => getSkill(progress, item.id, ability).needsPractice);
     return { item, weak, due: isWordDue(progress, item.id), nextDue: Math.min(...reviewAbilities.map(ability => getSkill(progress, item.id, ability).dueAt)) };
@@ -40,7 +41,20 @@ export default function ReviewVocabulary({ words, progress, favorites, favoriteW
   const search = query.trim().toLowerCase();
   const filtered = entries.filter(({ item, weak, due }) => (filter === 'all' || filter === 'due' && due || filter === 'weak' && weak.length || filter === 'scheduled' && !due)
     && (!search || `${item.word} ${item.meaning} ${item.example} ${item.exampleZh}`.toLowerCase().includes(search)));
-  const resetFilters = () => { setQuery(''); setFilter('all'); setVisibleCount(24); };
+  const pageSize = 12;
+  const pageCount = Math.max(1, Math.ceil(filtered.length / pageSize));
+  const currentPage = Math.min(page, pageCount);
+  const changePage = (next: number) => {
+    setPage(next);
+    listRef.current?.scrollIntoView({ block: 'start' });
+    listRef.current?.focus({ preventScroll: true });
+  };
+  const pagination = pageCount > 1 && <nav className="review-pagination" aria-label="已学词汇分页">
+    <button className="daily-button" disabled={currentPage === 1} onClick={() => changePage(currentPage - 1)}>上一页</button>
+    <label><select aria-label="已学词汇页码" value={currentPage} onChange={event => changePage(Number(event.target.value))}>{Array.from({ length: pageCount }, (_, index) => <option key={index + 1} value={index + 1}>{index + 1} / {pageCount} 页</option>)}</select></label>
+    <button className="daily-button" disabled={currentPage === pageCount} onClick={() => changePage(currentPage + 1)}>下一页</button>
+  </nav>;
+  const resetFilters = () => { setQuery(''); setFilter('all'); setPage(1); };
 
   return <div className="programming-review-layout">
     <section className="vocabulary-panel review-vocabulary" aria-label="已学词汇">
@@ -50,16 +64,16 @@ export default function ReviewVocabulary({ words, progress, favorites, favoriteW
       </div></div>
       {favoriteWarning && <p className="review-list-notice" role="alert">{favoriteWarning}</p>}
       {words.length ? <>
-        <div className="review-list-tools"><label className="search"><Icon name="search" /><input aria-label="搜索已学词汇" value={query} onChange={event => { setQuery(event.target.value); setVisibleCount(24); }} placeholder="搜索单词、中文或例句" />{query && <button aria-label="清除已学词搜索" onClick={() => { setQuery(''); setVisibleCount(24); }}><Icon name="close" /></button>}</label>
-          <label className="category-select"><span>显示</span><select aria-label="复习词汇范围" value={filter} onChange={event => { setFilter(event.target.value as Filter); setVisibleCount(24); }}><option value="all">全部已学 · {counts.all}</option><option value="due">待复习 · {counts.due}</option><option value="weak">需要巩固 · {counts.weak}</option><option value="scheduled">未到期 · {counts.scheduled}</option></select></label>
+        <div className="review-list-tools"><label className="search"><Icon name="search" /><input aria-label="搜索已学词汇" value={query} onChange={event => { setQuery(event.target.value); setPage(1); }} placeholder="搜索单词、中文或例句" />{query && <button aria-label="清除已学词搜索" onClick={() => { setQuery(''); setPage(1); }}><Icon name="close" /></button>}</label>
+          <label className="category-select"><span>显示</span><select aria-label="复习词汇范围" value={filter} onChange={event => { setFilter(event.target.value as Filter); setPage(1); }}><option value="all">全部已学 · {counts.all}</option><option value="due">待复习 · {counts.due}</option><option value="weak">需要巩固 · {counts.weak}</option><option value="scheduled">未到期 · {counts.scheduled}</option></select></label>
         </div>
-        <div className="list-guide"><span role="status">{filtered.length} 个词</span></div>
+        <div className="list-guide" ref={listRef} tabIndex={-1}><span role="status">{filtered.length} 个词</span>{pagination}</div>
         {filtered.length ? <>
 
-          <div className="word-grid">{filtered.slice(0, visibleCount).map(({ item, weak, due, nextDue }) => <VocabularyRow key={item.id} item={item} favorite={favorites.has(item.id)} favoriteDisabled={!!favoriteWarning} speaking={speaking} speed={speed} toggleFavorite={toggleFavorite} playWord={playWord} playExample={playExample}
+          <div className="word-grid">{filtered.slice((currentPage - 1) * pageSize, currentPage * pageSize).map(({ item, weak, due, nextDue }) => <VocabularyRow key={item.id} item={item} favorite={favorites.has(item.id)} favoriteDisabled={!!favoriteWarning} speaking={speaking} speed={speed} toggleFavorite={toggleFavorite} playWord={playWord} playExample={playExample}
             status={<><span className={due ? 'review-due' : ''}>{due ? '待复习' : `下次复习 ${new Date(nextDue).toLocaleDateString('zh-CN', { month: 'numeric', day: 'numeric' })}`}</span>{weak.length > 0 && <span className="review-weak">需巩固：{weak.map(ability => abilityLabels[ability]).join('、')}</span>}</>}
             action={<button className="daily-button review-word-action" disabled={disabled} onClick={() => startWords([item.id])} aria-label={`练习 ${item.word}`}>练习</button>} />)}</div>
-          {visibleCount < filtered.length && <div className="load-more-area"><button className="load-more" onClick={() => setVisibleCount(count => count + 24)}>再显示 24 个<Icon name="chevron" /></button><span>已显示 {Math.min(visibleCount, filtered.length)} / {filtered.length}</span></div>}
+          {pagination}
         </> : <div className="review-list-empty"><p>{search ? '没有找到相符的已学词汇。' : filter === 'due' ? '暂时没有到期的词，可以提前练习已学词。' : filter === 'weak' ? '目前没有需要额外巩固的词。' : '目前的已学词都已到复习时间。'}</p><button className="daily-button" onClick={resetFilters}>查看全部已学词</button></div>}
       </> : <div className="review-list-empty"><p>暂无可复习的词语。</p><button className="daily-button" onClick={openCourse}>去学习当前课程<Icon name="arrow" /></button></div>}
     </section>
