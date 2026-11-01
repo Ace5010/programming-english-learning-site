@@ -9,6 +9,7 @@ import { vocabulary } from '../src/vocabulary.ts';
 import { mergeProgrammingCourse } from '../src/programmingProgress.ts';
 import { programmingReview } from '../src/programmingReview.ts';
 import { correctDraft } from './helpers/course-answer.mjs';
+import { expectedSlowQueue } from './helpers/slow-audio-expectation.mjs';
 
 const require = createRequire(import.meta.url);
 const { chromium } = require(process.env.CODEWORDS_PLAYWRIGHT || 'C:/Users/shenwuqiang/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
@@ -143,7 +144,7 @@ for (const width of [1440, 390]) await scenario(`flow-${width}`, width, 'lagoon'
   await root.getByRole('button', { name: `朗读 ${firstWord.word}`, exact: true }).click();
   await page.waitForFunction(() => window.__wordCheckAudio.some(item => /word-1\.mp3/.test(item.src) && item.rate === 1));
   await root.getByRole('button', { name: `慢速朗读 ${firstWord.word}`, exact: true }).click();
-  await page.waitForFunction(() => window.__wordCheckAudio.some(item => /word-1\.mp3/.test(item.src) && item.rate === .72 && item.pitch));
+  await page.waitForFunction(() => window.__wordCheckAudio.some(item => item.src.includes('/slow/aria/') && item.rate === 1 && item.pitch));
   assert.deepEqual(await read(page), beforeStudy, 'learning and audio must not enroll or grade words');
   const studyAudio = await page.evaluate(() => window.__wordCheckAudio);
   await root.getByRole('button', { name: '开始测试', exact: true }).click();
@@ -186,7 +187,7 @@ for (const width of [1440, 390]) await scenario(`flow-${width}`, width, 'lagoon'
   assert.equal(await unfamiliar.locator('.daily-phrase-word').count(), width === 390 ? 6 : 1);
   const resultAudioCount = await page.evaluate(() => window.__wordCheckAudio.length);
   await unfamiliar.getByRole('button', { name: /^慢速朗读 / }).first().click();
-  await page.waitForFunction(previous => window.__wordCheckAudio.length > previous && window.__wordCheckAudio.at(-1).rate === .72, resultAudioCount);
+  await page.waitForFunction(previous => window.__wordCheckAudio.length > previous && window.__wordCheckAudio.at(-1).rate === 1 && window.__wordCheckAudio.at(-1).src.includes('/slow/'), resultAudioCount);
   await checkLayout(page);
   await screenshot(page, `result-${width}.png`);
   await page.getByRole('navigation', { name: '学习导航' }).getByRole('button', { name: '复习', exact: true }).click();
@@ -250,7 +251,7 @@ await scenario('card-click-playback', 1440, 'lagoon', async ({ page, root }) => 
   await normal(() => page.keyboard.press('Space'), id);
   let before = await page.evaluate(() => window.__wordCheckAudio.length);
   await card.getByRole('button', { name: `慢速朗读 ${word.word}`, exact: true }).click();
-  await page.waitForFunction(({ before, id }) => window.__wordCheckAudio.slice(before).some(event => event.src.includes(`${id}.mp3`) && event.rate === .72 && event.pitch), { before, id });
+  await page.waitForFunction(({ before, url }) => window.__wordCheckAudio.slice(before).some(event => event.src === url && event.rate === 1 && event.pitch), { before, url: expectedSlowQueue(`/${id}.mp3`, 'aria', baseURL)[0].url });
   await normal(() => card.locator('.course-word-meaning').click(), id); // Slow must not leak into normal.
   const example = card.locator('.course-word-example'), exampleId = id.replace('word-', 'example-');
   await normal(() => example.locator('.course-word-example-meaning').click(), exampleId);
@@ -258,7 +259,7 @@ await scenario('card-click-playback', 1440, 'lagoon', async ({ page, root }) => 
   await normal(() => example.click({ position: { x: 5, y: 5 } }), exampleId);
   before = await page.evaluate(() => window.__wordCheckAudio.length);
   await example.getByRole('button', { name: `慢速朗读 ${word.example}`, exact: true }).click();
-  await page.waitForFunction(before => window.__wordCheckAudio.slice(before).some(event => event.rate === .72 && event.pitch), before);
+  await page.waitForFunction(before => window.__wordCheckAudio.slice(before).some(event => event.rate === 1 && event.src.includes('/slow/') && event.pitch), before);
   await example.locator('.course-word-status').getByText('正在朗读例句', { exact: true }).waitFor();
   assert.ok(!(await card.getAttribute('class')).includes('word-playing'));
   assert.ok((await card.getAttribute('class')).includes('example-playing'));
@@ -270,15 +271,15 @@ await scenario('card-click-playback', 1440, 'lagoon', async ({ page, root }) => 
       let count = await page.evaluate(() => window.__wordCheckAudio.length);
       const wordSlow = currentCard.locator('.course-word-pronunciation .daily-inline-slow');
       await wordSlow.click();
-      await page.waitForFunction(({ count, target, voice }) => window.__wordCheckAudio.slice(count).some(event =>
-        event.src.includes(`/audio/${voice}/${target}.mp3`) && event.rate === .72 && event.pitch), { count, target, voice });
+      await page.waitForFunction(({ count, url }) => window.__wordCheckAudio.slice(count).some(event =>
+        event.src === url && event.rate === 1 && event.pitch), { count, url: expectedSlowQueue(`/${target}.mp3`, voice, baseURL)[0].url });
       assert.equal(await wordSlow.getAttribute('aria-pressed'), 'true');
       slowReads.push({ target, voice, kind: 'word', ...(await page.evaluate(() => window.__wordCheckAudio.at(-1))) });
       await normal(() => currentCard.locator('.course-word-example-content').click(), target.replace('word-', 'example-'), voice);
       count = await page.evaluate(() => window.__wordCheckAudio.length);
       const sentenceSlow = currentCard.locator('.course-word-example .daily-inline-slow');
       await sentenceSlow.click();
-      await page.waitForFunction(count => window.__wordCheckAudio.slice(count).some(event => event.rate === .72 && event.pitch), count);
+      await page.waitForFunction(count => window.__wordCheckAudio.slice(count).some(event => event.rate === 1 && event.src.includes('/slow/') && event.pitch), count);
       assert.equal(await sentenceSlow.getAttribute('aria-pressed'), 'true');
       assert.ok(!(await currentCard.getAttribute('class')).includes('word-playing'));
       slowReads.push({ target, voice, kind: 'example', ...(await page.evaluate(() => window.__wordCheckAudio.at(-1))) });

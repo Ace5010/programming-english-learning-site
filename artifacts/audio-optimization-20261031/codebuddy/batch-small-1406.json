@@ -1,0 +1,113 @@
+{
+  "batch": "small-1406",
+  "firstId": 1406,
+  "lastId": 1655,
+  "submitted": 250,
+  "exitCode": 0,
+  "timedOut": false,
+  "complete": true,
+  "elapsedSeconds": 130.757,
+  "records": [
+    {
+      "model": "deepseek-v4.1-flash",
+      "usage": {
+        "prompt_tokens": 17859,
+        "completion_tokens": 24274,
+        "total_tokens": 42133,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 23535,
+          "rejected_prediction_tokens": 0,
+          "cached_tokens": 0
+        },
+        "prompt_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": 0,
+          "cached_tokens": 7808
+        },
+        "prompt_cache_hit_tokens": 7808,
+        "prompt_cache_miss_tokens": 10051,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 0,
+        "prompt_cache_write_tokens": 0,
+        "completion_thinking_tokens": 23535,
+        "credit": 1.53,
+        "cached_tokens": 0
+      },
+      "requestId": "01a194e3bc4d7136a50927954c956315"
+    }
+  ],
+  "result": {
+    "reviewedCount": 250,
+    "findings": [
+      {
+        "id": 1413,
+        "word": "close",
+        "issue": "Real heteronym: verb \"close\" is /kloʊz/, while adjective \"close\" is /kloʊs/. The meaning lists both, but only the verb pronunciation is given; the example is also the verb.",
+        "intendedIPA": "/kloʊz/",
+        "context": "Please close this file.",
+        "confidence": "high"
+      },
+      {
+        "id": 1455,
+        "word": "courage",
+        "issue": "IPA has an extra /r/ after the r-colored vowel (/kɝr-/); standard American is /ˈkɝɪdʒ/. The phonetic field also begins with a space.",
+        "intendedIPA": "/ˈkɝɪdʒ/",
+        "context": "He showed great courage in the race.",
+        "confidence": "medium"
+      },
+      {
+        "id": 1522,
+        "word": "drawer",
+        "issue": "Sense-dependent: furniture \"drawer\" is /drɔr/, but the person senses listed (开票人；起草者；酒馆侍) are /ˈdrɔːər/. IPA and example cover only the furniture sense.",
+        "intendedIPA": "/drɔr/",
+        "context": "She kept the keys in the top drawer.",
+        "confidence": "high"
+      },
+      {
+        "id": 1554,
+        "word": "encourage",
+        "issue": "Same extra /r/ as courage: standard American is /ɪnˈkɝɪdʒ/, not /ɪnˈkɝrɪdʒ/.",
+        "intendedIPA": "/ɪnˈkɝɪdʒ/",
+        "context": "Teachers should encourage every student.",
+        "confidence": "medium"
+      },
+      {
+        "id": 1559,
+        "word": "England",
+        "issue": "First vowel is transcribed /i/ but should be /ɪ/: /ˈɪŋɡlənd/.",
+        "intendedIPA": "/ˈɪŋɡlənd/",
+        "context": "She lives in England.",
+        "confidence": "medium"
+      },
+      {
+        "id": 1567,
+        "word": "European",
+        "issue": "Stress is misplaced and two primary stresses are marked; standard stress is on \"-pe-\": /ˌjʊrəˈpiːən/.",
+        "intendedIPA": "/ˌjʊrəˈpiːən/",
+        "context": "She studies European history.",
+        "confidence": "high"
+      },
+      {
+        "id": 1606,
+        "word": "February",
+        "issue": "Uses /ʊ/ in \"Feb-ru-\" and marks two primary stresses; standard is /ˈfɛbruˌɛri/ (also /ˈfɛbjuˌɛri/).",
+        "intendedIPA": "/ˈfɛbruˌɛri/",
+        "context": "The course starts in February.",
+        "confidence": "medium"
+      },
+      {
+        "id": 1651,
+        "word": "Friday",
+        "issue": "Phonetic field is empty; no pronunciation is supplied.",
+        "intendedIPA": "/ˈfraɪdeɪ/",
+        "context": "We will meet on Friday.",
+        "confidence": "high"
+      }
+    ],
+    "notes": "No audio was supplied; review is text-only. I treated the widespread use of \"e\" for /eɪ/ and omitted length marks (date, day, eight, famous, etc.) as a systematic notation convention rather than individual errors. Ordinary US/UK variants (either, comfortable, crayon, direct, clothes reduced /kloʊz/) were not marked. \"excuse\" is a real noun/verb heteronym, but the entry is noun-only and internally consistent. Non-pronunciation data notes: classroom repeats the same IPA twice; dialogue's example uses the variant spelling \"dialog\". No acronym/code-spelling issues found."
+  }
+}

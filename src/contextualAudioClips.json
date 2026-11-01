@@ -1,0 +1,226 @@
+{
+  "aria:live@verb": {
+    "path": "slow/aria/pack-v2-normal-0.mp3",
+    "startMs": 0,
+    "endMs": 440,
+    "leadingMs": 80,
+    "trailingMs": 100,
+    "version": "d2200ee94377392c"
+  },
+  "aria:live@adjective": {
+    "path": "slow/aria/pack-v2-normal-0.mp3",
+    "startMs": 540,
+    "endMs": 1070,
+    "leadingMs": 80,
+    "trailingMs": 100,
+    "version": "d2200ee94377392c"
+  },
+  "aria:use@verb": {
+    "path": "slow/aria/pack-v2-normal-0.mp3",
+    "startMs": 1170,
+    "endMs": 1600,
+    "leadingMs": 80,
+    "trailingMs": 100,
+    "version": "d2200ee94377392c"
+  },
+  "aria:use@noun": {
+    "path": "slow/aria/pack-v2-normal-0.mp3",
+    "startMs": 1700,
+    "endMs": 2090,
+    "leadingMs": 80,
+    "trailingMs": 100,
+    "version": "d2200ee94377392c"
+  },
+  "aria:record@verb": {
+    "path": "slow/aria/pack-v2-normal-0.mp3",
+    "startMs": 2190,
+    "endMs": 2740,
+    "leadingMs": 80,
+    "trailingMs": 100,
+    "version": "d2200ee94377392c"
+  },
+  "aria:record@noun": {
+    "path": "slow/aria/pack-v2-normal-0.mp3",
+    "startMs": 2840,
+    "endMs": 3380,
+    "leadingMs": 80,
+    "trailingMs": 100,
+    "version": "d2200ee94377392c"
+  },
+  "aria:close@verb": {
+    "path": "slow/aria/pack-v2-normal-0.mp3",
+    "startMs": 3480,
+    "endMs": 3940,
+    "leadingMs": 80,
+    "trailingMs": 100,
+    "version": "d2200ee94377392c"
+  },
+  "aria:close@adjective": {
+    "path": "slow/aria/pack-v2-normal-0.mp3",
+    "startMs": 4040,
+    "endMs": 4460,
+    "leadingMs": 80,
+    "trailingMs": 100,
+    "version": "d2200ee94377392c"
+  },
+  "aria:read@present": {
+    "path": "slow/aria/pack-v2-normal-0.mp3",
+    "startMs": 4560,
+    "endMs": 5200,
+    "leadingMs": 80,
+    "trailingMs": 100,
+    "version": "d2200ee94377392c"
+  },
+  "aria:read@past": {
+    "path": "slow/aria/pack-v2-normal-0.mp3",
+    "startMs": 5300,
+    "endMs": 5890,
+    "leadingMs": 80,
+    "trailingMs": 100,
+    "version": "d2200ee94377392c"
+  },
+  "aria:used@habit": {
+    "path": "slow/aria/pack-v2-normal-0.mp3",
+    "startMs": 5990,
+    "endMs": 6530,
+    "leadingMs": 80,
+    "trailingMs": 100,
+    "version": "d2200ee94377392c"
+  },
+  "aria:used@past": {
+    "path": "slow/aria/pack-v2-normal-0.mp3",
+    "startMs": 6630,
+    "endMs": 7330,
+    "leadingMs": 80,
+    "trailingMs": 100,
+    "version": "d2200ee94377392c"
+  },
+  "aria:refuse@noun": {
+    "path": "slow/aria/pack-v2-normal-0.mp3",
+    "startMs": 7430,
+    "endMs": 8020,
+    "leadingMs": 80,
+    "trailingMs": 100,
+    "version": "d2200ee94377392c"
+  },
+  "aria:refuse@verb": {
+    "path": "slow/aria/pack-v2-normal-0.mp3",
+    "startMs": 8120,
+    "endMs": 8720,
+    "leadingMs": 80,
+    "trailingMs": 100,
+    "version": "d2200ee94377392c"
+  },
+  "guy:live@verb": {
+    "path": "slow/guy/pack-v2-normal-0.mp3",
+    "startMs": 0,
+    "endMs": 450,
+    "leadingMs": 80,
+    "trailingMs": 100,
+    "version": "ca6eab53dcb290fd"
+  },
+  "guy:live@adjective": {
+    "path": "slow/guy/pack-v2-normal-0.mp3",
+    "startMs": 550,
+    "endMs": 1010,
+    "leadingMs": 80,
+    "trailingMs": 100,
+    "version": "ca6eab53dcb290fd"
+  },
+  "guy:use@verb": {
+    "path": "slow/guy/pack-v2-normal-0.mp3",
+    "startMs": 1110,
+    "endMs": 1530,
+    "leadingMs": 80,
+    "trailingMs": 100,
+    "version": "ca6eab53dcb290fd"
+  },
+  "guy:use@noun": {
+    "path": "slow/guy/pack-v2-normal-0.mp3",
+    "startMs": 1630,
+    "endMs": 2000,
+    "leadingMs": 80,
+    "trailingMs": 100,
+    "version": "ca6eab53dcb290fd"
+  },
+  "guy:record@verb": {
+    "path": "slow/guy/pack-v2-normal-0.mp3",
+    "startMs": 2100,
+    "endMs": 2670,
+    "leadingMs": 80,
+    "trailingMs": 100,
+    "version": "ca6eab53dcb290fd"
+  },
+  "guy:record@noun": {
+    "path": "slow/guy/pack-v2-normal-0.mp3",
+    "startMs": 2770,
+    "endMs": 3330,
+    "leadingMs": 80,
+    "trailingMs": 100,
+    "version": "ca6eab53dcb290fd"
+  },
+  "guy:close@verb": {
+    "path": "slow/guy/pack-v2-normal-0.mp3",
+    "startMs": 3430,
+    "endMs": 3900,
+    "leadingMs": 80,
+    "trailingMs": 100,
+    "version": "ca6eab53dcb290fd"
+  },
+  "guy:close@adjective": {
+    "path": "slow/guy/pack-v2-normal-0.mp3",
+    "startMs": 4000,
+    "endMs": 4380,
+    "leadingMs": 80,
+    "trailingMs": 100,
+    "version": "ca6eab53dcb290fd"
+  },
+  "guy:read@present": {
+    "path": "slow/guy/pack-v2-normal-0.mp3",
+    "startMs": 4480,
+    "endMs": 5110,
+    "leadingMs": 80,
+    "trailingMs": 100,
+    "version": "ca6eab53dcb290fd"
+  },
+  "guy:read@past": {
+    "path": "slow/guy/pack-v2-normal-0.mp3",
+    "startMs": 5210,
+    "endMs": 5810,
+    "leadingMs": 80,
+    "trailingMs": 100,
+    "version": "ca6eab53dcb290fd"
+  },
+  "guy:used@habit": {
+    "path": "slow/guy/pack-v2-normal-0.mp3",
+    "startMs": 5910,
+    "endMs": 6390,
+    "leadingMs": 80,
+    "trailingMs": 100,
+    "version": "ca6eab53dcb290fd"
+  },
+  "guy:used@past": {
+    "path": "slow/guy/pack-v2-normal-0.mp3",
+    "startMs": 6490,
+    "endMs": 7160,
+    "leadingMs": 80,
+    "trailingMs": 100,
+    "version": "ca6eab53dcb290fd"
+  },
+  "guy:refuse@noun": {
+    "path": "slow/guy/pack-v2-normal-0.mp3",
+    "startMs": 7260,
+    "endMs": 7900,
+    "leadingMs": 80,
+    "trailingMs": 100,
+    "version": "ca6eab53dcb290fd"
+  },
+  "guy:refuse@verb": {
+    "path": "slow/guy/pack-v2-normal-0.mp3",
+    "startMs": 8000,
+    "endMs": 8610,
+    "leadingMs": 80,
+    "trailingMs": 100,
+    "version": "ca6eab53dcb290fd"
+  }
+}

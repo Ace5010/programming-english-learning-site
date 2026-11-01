@@ -1,0 +1,306 @@
+{
+  "live@verb": {
+    "spoken": "Live here.",
+    "targetIndex": 0,
+    "targetWord": "Live",
+    "tailMs": 30
+  },
+  "live@adjective": {
+    "spoken": "Live broadcast.",
+    "targetIndex": 0,
+    "targetWord": "Live",
+    "tailMs": 60
+  },
+  "read@present": {
+    "spoken": "reed",
+    "targetIndex": 0,
+    "targetWord": "reed"
+  },
+  "read@past": {
+    "spoken": "red",
+    "targetIndex": 0,
+    "targetWord": "red"
+  },
+  "record@verb": {
+    "spoken": "Record this.",
+    "targetIndex": 0,
+    "targetWord": "Record"
+  },
+  "record@noun": {
+    "spoken": "Record label.",
+    "targetIndex": 0,
+    "targetWord": "Record"
+  },
+  "use@verb": {
+    "spoken": "Use this.",
+    "targetIndex": 0,
+    "targetWord": "Use"
+  },
+  "use@noun": {
+    "spoken": "Use of time.",
+    "targetIndex": 0,
+    "targetWord": "Use"
+  },
+  "close@verb": {
+    "spoken": "Close this.",
+    "targetIndex": 0,
+    "targetWord": "Close"
+  },
+  "close@adjective": {
+    "spoken": "Close to me.",
+    "targetIndex": 0,
+    "targetWord": "Close"
+  },
+  "used@habit": {
+    "spoken": "Used to walk.",
+    "targetIndex": 0,
+    "targetWord": "Used",
+    "tailMs": 100
+  },
+  "used@past": {
+    "spoken": "used",
+    "targetIndex": 0,
+    "targetWord": "used"
+  },
+  "read": {
+    "spoken": "reed",
+    "targetIndex": 0,
+    "targetWord": "reed"
+  },
+  "record": {
+    "spoken": "Record this.",
+    "targetIndex": 0,
+    "targetWord": "Record"
+  },
+  "use": {
+    "spoken": "Use this.",
+    "targetIndex": 0,
+    "targetWord": "Use"
+  },
+  "close": {
+    "spoken": "Close this.",
+    "targetIndex": 0,
+    "targetWord": "Close"
+  },
+  "live": {
+    "spoken": "Live broadcast.",
+    "targetIndex": 0,
+    "targetWord": "Live",
+    "tailMs": 60
+  },
+  "lead": {
+    "spoken": "Lead the way.",
+    "targetIndex": 0,
+    "targetWord": "Lead"
+  },
+  "present": {
+    "spoken": "Present this.",
+    "targetIndex": 0,
+    "targetWord": "Present"
+  },
+  "refuse": {
+    "spoken": "Refuse collection.",
+    "targetIndex": 0,
+    "targetWord": "Refuse"
+  },
+  "import": {
+    "spoken": "Import this.",
+    "targetIndex": 0,
+    "targetWord": "Import"
+  },
+  "export": {
+    "spoken": "Export this.",
+    "targetIndex": 0,
+    "targetWord": "Export"
+  },
+  "attribute": {
+    "spoken": "Attribute name.",
+    "targetIndex": 0,
+    "targetWord": "Attribute"
+  },
+  "bow": {
+    "spoken": "bough",
+    "voiceOverrides": {
+      "guy": {
+        "spoken": "Bow to me.",
+        "targetIndex": 0,
+        "targetWord": "bow"
+      }
+    }
+  },
+  "console": {
+    "spoken": "Console window.",
+    "targetIndex": 0,
+    "targetWord": "Console"
+  },
+  "separate": {
+    "spoken": "Separate these.",
+    "targetIndex": 0,
+    "targetWord": "Separate"
+  },
+  "refuse@noun": {
+    "spoken": "Refuse collection.",
+    "targetIndex": 0,
+    "targetWord": "refuse"
+  },
+  "refuse@verb": {
+    "spoken": "Refuse this offer.",
+    "targetIndex": 0,
+    "targetWord": "refuse"
+  },
+  "used": {
+    "spoken": "Used to walk.",
+    "targetIndex": 0,
+    "targetWord": "used",
+    "tailMs": 100
+  },
+  "increase": {
+    "spoken": "Increase in sales.",
+    "targetIndex": 0,
+    "targetWord": "increase"
+  },
+  "produce": {
+    "spoken": "Produce this.",
+    "targetIndex": 0,
+    "targetWord": "produce"
+  },
+  "object": {
+    "spoken": "Object name.",
+    "targetIndex": 0,
+    "targetWord": "object"
+  },
+  "conflict": {
+    "spoken": "Conflict resolution.",
+    "targetIndex": 0,
+    "targetWord": "conflict"
+  },
+  "minute": {
+    "spoken": "Minute hand.",
+    "targetIndex": 0,
+    "targetWord": "minute"
+  },
+  "progress": {
+    "spoken": "Progress report.",
+    "targetIndex": 0,
+    "targetWord": "progress"
+  },
+  "invalid": {
+    "spoken": "Invalid value.",
+    "targetIndex": 0,
+    "targetWord": "invalid"
+  },
+  "AD": {
+    "spoken": "A D"
+  },
+  "IT": {
+    "spoken": "I T"
+  },
+  "US": {
+    "spoken": "U S"
+  },
+  "readme": {
+    "spoken": "reed me"
+  },
+  "read-only": {
+    "spoken": "reed only"
+  },
+  "content": {
+    "spoken": "Content page.",
+    "targetIndex": 0,
+    "targetWord": "content"
+  },
+  "advocate": {
+    "spoken": "Advocate for change.",
+    "targetIndex": 0,
+    "targetWord": "advocate"
+  },
+  "project": {
+    "spoken": "Project name.",
+    "targetIndex": 0,
+    "targetWord": "project"
+  },
+  "MAU": {
+    "spoken": "M A U"
+  },
+  "MR": {
+    "spoken": "M R"
+  },
+  "OO": {
+    "spoken": "O O"
+  },
+  "QR": {
+    "spoken": "Q R"
+  },
+  "MCPC": {
+    "spoken": "M C P C"
+  },
+  "NC": {
+    "spoken": "N C"
+  },
+  "OA": {
+    "spoken": "O A"
+  },
+  "van": {
+    "spoken": "van",
+    "slowOnly": true,
+    "voiceOverrides": {
+      "aria": {
+        "audioSource": "foundation/aria/f-970b1897af0abab6.mp3"
+      }
+    }
+  },
+  "tutorial@f-030d756286e59f22": {
+    "spoken": "Ben",
+    "slowOnly": true,
+    "voiceOverrides": {
+      "aria": {
+        "audioSource": "foundation/aria/f-030d756286e59f22.mp3"
+      }
+    }
+  },
+  "tutorial@f-42e98b9b684637d1": {
+    "spoken": "I stop to rest.",
+    "slowOnly": true,
+    "voiceOverrides": {
+      "aria": {
+        "audioSource": "foundation/aria/f-42e98b9b684637d1.mp3"
+      }
+    }
+  },
+  "tutorial@f-18679f10e5067880": {
+    "spoken": "fool",
+    "slowOnly": true,
+    "voiceOverrides": {
+      "aria": {
+        "audioSource": "foundation/aria/f-18679f10e5067880.mp3"
+      }
+    }
+  },
+  "thing": {
+    "spoken": "thing",
+    "slowOnly": true,
+    "voiceOverrides": {
+      "guy": {
+        "audioSource": "guy/word-2389.mp3"
+      }
+    }
+  },
+  "tutorial@f-3e23e8160039594a": {
+    "spoken": "b",
+    "slowOnly": true,
+    "voiceOverrides": {
+      "guy": {
+        "audioSource": "foundation/guy/f-3e23e8160039594a.mp3"
+      }
+    }
+  },
+  "tutorial@f-d0013c2e0a387e4c": {
+    "spoken": "bit",
+    "slowOnly": true,
+    "voiceOverrides": {
+      "guy": {
+        "audioSource": "foundation/guy/f-d0013c2e0a387e4c.mp3"
+      }
+    }
+  }
+}

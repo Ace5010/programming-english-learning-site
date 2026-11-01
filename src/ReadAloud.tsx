@@ -5,7 +5,7 @@ import { readingWords, spokenEnglish } from './readingText';
 import './readAloud.css';
 
 type BeforeRead = () => void;
-type Reading = { speaking: string; preload?: (text: string) => void; play: (text: string, slow?: boolean, before?: BeforeRead) => void; word: (text: string, element: HTMLElement, before?: BeforeRead) => void };
+type Reading = { speaking: string; preload?: (text: string) => void; play: (text: string, slow?: boolean, before?: BeforeRead, context?: string) => void; word: (text: string, element: HTMLElement, before?: BeforeRead, context?: string) => void };
 const Context = createContext<Reading>({ speaking: '', play: () => {}, word: () => {} });
 export const useReading = () => useContext(Context);
 function popupPosition(element: HTMLElement) {
@@ -13,8 +13,8 @@ function popupPosition(element: HTMLElement) {
   return { left: Math.max(8, Math.min(box.left, window.innerWidth - 92)), top: box.bottom + 60 > window.innerHeight ? Math.max(8, box.top - 56) : box.bottom + 6 };
 }
 
-export function ReadAloudProvider({ speaking, play, preload, pageKey, children }: { speaking: string; play: (text: string, slow: boolean) => void; preload?: (text: string) => void; pageKey: string; children: ReactNode }) {
-  const [active, setActive] = useState<{ text: string; element: HTMLElement; before?: BeforeRead; left: number; top: number }>();
+export function ReadAloudProvider({ speaking, play, preload, pageKey, children }: { speaking: string; play: (text: string, slow: boolean, context?: string) => void; preload?: (text: string) => void; pageKey: string; children: ReactNode }) {
+  const [active, setActive] = useState<{ text: string; context?: string; element: HTMLElement; before?: BeforeRead; left: number; top: number }>();
   const popup = useRef<HTMLSpanElement>(null);
   useEffect(() => { setActive(undefined); }, [pageKey]);
   useEffect(() => { if (active && !active.element.isConnected) setActive(undefined); });
@@ -26,25 +26,25 @@ export function ReadAloudProvider({ speaking, play, preload, pageKey, children }
       const position = popupPosition(active.element);
       if (position.left !== active.left || position.top !== active.top) setActive({ ...active, ...position });
     };
-    const key = (event: KeyboardEvent) => { if (event.key === 'Escape') { event.stopPropagation(); setActive(undefined); active.element.focus(); } };
+    const key = (event: KeyboardEvent) => { if (event.key === 'Escape') { event.preventDefault(); event.stopPropagation(); setActive(undefined); active.element.focus(); } };
     document.addEventListener('pointerdown', dismiss);
     document.addEventListener('keydown', key, true);
     window.addEventListener('scroll', move, true);
     window.addEventListener('resize', move);
     return () => { document.removeEventListener('pointerdown', dismiss); document.removeEventListener('keydown', key, true); window.removeEventListener('scroll', move, true); window.removeEventListener('resize', move); };
   }, [active]);
-  const read = (text: string, slow = false, before?: BeforeRead) => {
+  const read = (text: string, slow = false, before?: BeforeRead, context?: string) => {
     if (!findReadingAudio(text)) return;
-    before?.(); play(text, slow);
+    before?.(); play(text, slow, context);
   };
-  const word = (text: string, element: HTMLElement, before?: BeforeRead) => {
-    setActive({ text, element, before, ...popupPosition(element) });
-    read(text, false, before);
+  const word = (text: string, element: HTMLElement, before?: BeforeRead, context?: string) => {
+    setActive({ text, context, element, before, ...popupPosition(element) });
+    read(text, false, before, context);
   };
   return <Context.Provider value={{ speaking, play: read, word, preload }}>{children}{active && active.element.isConnected && createPortal(
     <span ref={popup} className="reading-popup" role="group" aria-label={`${active.text} 发音`} style={{ left: active.left, top: active.top }}>
-      <button type="button" aria-label={`慢速朗读单词 ${active.text}`} className={speaking === readingPlaybackKey(active.text, true) ? 'playing' : ''} onClick={() => read(active.text, true, active.before)}>慢速</button>
-    </span>, document.body)}</Context.Provider>;
+      <button type="button" aria-label={`慢速朗读单词 ${active.text}`} className={speaking === readingPlaybackKey(active.text, true) ? 'playing' : ''} onClick={() => read(active.text, true, active.before, active.context)}>慢速</button>
+    </span>, active.element.closest('dialog[open]') ?? document.body)}</Context.Provider>;
 }
 
 /** In an existing answer button, use spans: no nested buttons or competing selection. */
@@ -56,7 +56,7 @@ export default function ReadAloudText({ text, inButton = false, beforeRead }: { 
     {!findReadingAudio(word.text) ? word.text : inButton ? <span className="reading-button-word" data-reading-word={word.text}>{word.text}</span> : <button
       type="button" className={`reading-word${reading.speaking === readingPlaybackKey(word.text) || reading.speaking === readingPlaybackKey(word.text, true) ? ' playing' : ''}`}
       aria-label={`朗读单词 ${word.text}`} data-reading-word={word.text}
-      onClick={event => { event.stopPropagation(); reading.word(word.text, event.currentTarget, beforeRead); }}>{word.text}</button>}
+      onClick={event => { event.stopPropagation(); reading.word(word.text, event.currentTarget, beforeRead, text); }}>{word.text}</button>}
   </Fragment>)}{words.length ? text.slice(words[words.length - 1].index + words[words.length - 1].text.length) : text}</span>;
 }
 

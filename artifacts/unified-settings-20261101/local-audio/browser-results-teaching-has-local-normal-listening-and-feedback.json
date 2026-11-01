@@ -1,0 +1,28 @@
+{
+  "baseURL": "http://localhost:5186/",
+  "production": false,
+  "loadedApplicationScripts": [],
+  "testedAt": "2026-11-01T03:24:19.516Z",
+  "scenarios": [],
+  "failures": [
+    {
+      "name": "programming teaching has local normal and slow without changing the lesson",
+      "error": "locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#programming-content').getByRole('button', { name: '开始学习', exact: true })\u001b[22m\n\n    at D:\\vibe项目\\词见\\tools\\test-local-audio-controls-browser.mjs:159:72\n    at D:\\vibe项目\\词见\\tools\\test-local-audio-controls-browser.mjs:329:30"
+    },
+    {
+      "name": "programming listening and feedback keep both local speeds and answer draft",
+      "error": "locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#programming-content').locator('.daily-question').getByRole('button', { name: 'code', exact: true })\u001b[22m\n\n    at D:\\vibe项目\\词见\\tools\\test-local-audio-controls-browser.mjs:186:99\n    at async file:///D:/vibe%E9%A1%B9%E7%9B%AE/%E8%AF%8D%E8%A7%81/tools/test-local-audio-controls-browser.mjs:329:24"
+    },
+    {
+      "name": "daily teaching has local normal and slow without changing the lesson",
+      "error": "locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#daily-content').getByRole('button', { name: '开始学习', exact: true })\u001b[22m\n\n    at D:\\vibe项目\\词见\\tools\\test-local-audio-controls-browser.mjs:159:72\n    at D:\\vibe项目\\词见\\tools\\test-local-audio-controls-browser.mjs:329:30"
+    },
+    {
+      "name": "daily listening and feedback keep both local speeds and answer draft",
+      "error": "locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#daily-content').locator('.daily-question').getByRole('button', { name: '是（与 I 连用）', exact: true })\u001b[22m\n\n    at D:\\vibe项目\\词见\\tools\\test-local-audio-controls-browser.mjs:186:99\n    at async file:///D:/vibe%E9%A1%B9%E7%9B%AE/%E8%AF%8D%E8%A7%81/tools/test-local-audio-controls-browser.mjs:329:24"
+    }
+  ],
+  "browserErrors": [],
+  "playbackEvidence": [],
+  "microphoneTested": false
+}

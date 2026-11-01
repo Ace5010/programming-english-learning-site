@@ -34,6 +34,9 @@ def decode(path):
     return pcm, dict(startMs=round(start * 1000), endMs=round(end * 1000), leadingMs=round((onset-start)*1000), trailingMs=round((end-offset)*1000))
 
 async def generate(workers):
+    active_manifest=OUT/'manifest.json'
+    if active_manifest.exists() and json.loads(active_manifest.read_text(encoding='utf8')).get('version',1)>=2:
+        raise RuntimeError('Native slow audio is active. Use generate_clear_slow_audio.py; this legacy generator would replace it with stretched normal-speed clips.')
     import edge_tts
     inventory_bytes = (ROOT / 'src/slowReadingInventory.json').read_bytes()
     inventory = json.loads(inventory_bytes)

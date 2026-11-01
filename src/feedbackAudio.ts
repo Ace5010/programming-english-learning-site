@@ -55,13 +55,13 @@ export class FeedbackAudio {
     this.pending = undefined;
     this.currentCue = pending;
     this.beforePlay();
-    this.player.play(this.url(feedbackFiles[pending.sound]), 1, pending.key);
+    this.player.play(this.url(feedbackFiles[pending.sound]), 1, pending.key, pending.sound === 'complete');
   }
   private retryCompletion(key?: string) {
     const cue = this.currentCue;
     if (!cue || cue.key !== key) return;
     this.currentCue = undefined;
-    // Completion has no second user action to retry a transient media failure.
+    // Completion has no second user action to retry a media failure/interruption.
     // Retry once, but navigation, muting or a newer action still cancels it.
     if (!this.enabled || cue.sound !== 'complete' || cue.retries || this.pending || Date.now() >= cue.expires) return;
     this.pending = { ...cue, retries: 1 };

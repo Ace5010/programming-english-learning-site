@@ -1,0 +1,1254 @@
+{
+  "results": [
+    "sound sample actions, normal and slow real audio in both voices, no phoneme masquerading as TTS",
+    "new noun role examples play in both voices and sample identity differs from word order",
+    "new audio contrasts: both voices, natural and slow sentences, real local phonemes, and fixed demonstrations",
+    "new demonstration failure recovers locally; chapter and section changes stop playback"
+  ],
+  "failures": [],
+  "errors": [],
+  "audioEvents": [
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/foundation/aria/f-e29a7f31cac05abc.mp3?v=fan&audio=clear-20261101-v1",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "ended",
+      "src": "http://localhost:5186/audio/foundation/aria/f-e29a7f31cac05abc.mp3?v=fan&audio=clear-20261101-v1",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/slow/aria/pack-v2-67.mp3?v=4b0241a4e76c1016",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/foundation/guy/f-e29a7f31cac05abc.mp3?v=fan&audio=clear-20261101-v1",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "ended",
+      "src": "http://localhost:5186/audio/foundation/guy/f-e29a7f31cac05abc.mp3?v=fan&audio=clear-20261101-v1",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/slow/guy/pack-v2-67.mp3?v=55101dfef070b031",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/foundation/aria/f-2d635bb7f5467a38.mp3?v=The+dog+sees+me.&audio=clear-20261101-v1",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "ended",
+      "src": "http://localhost:5186/audio/foundation/aria/f-2d635bb7f5467a38.mp3?v=The+dog+sees+me.&audio=clear-20261101-v1",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/slow/aria/pack-v2-19.mp3?v=630e2ccea92b1159",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/slow/aria/pack-v2-60.mp3?v=99939f9a54ebdcaf",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/slow/aria/pack-v2-115.mp3?v=6785091f6fc8bb05",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/slow/aria/pack-v2-89.mp3?v=6b53eff10589ad75",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/foundation/aria/f-6ffd3988739814fb.mp3?v=I+see+the+dog.&audio=clear-20261101-v1",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "ended",
+      "src": "http://localhost:5186/audio/foundation/aria/f-6ffd3988739814fb.mp3?v=I+see+the+dog.&audio=clear-20261101-v1",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/slow/aria/pack-v2-10.mp3?v=72bfcb2ad4f7a4c8",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/slow/aria/pack-v2-115.mp3?v=6785091f6fc8bb05",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/slow/aria/pack-v2-128.mp3?v=42028cb6d2a1a4b7",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/slow/aria/pack-v2-60.mp3?v=99939f9a54ebdcaf",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/foundation/guy/f-2d635bb7f5467a38.mp3?v=The+dog+sees+me.&audio=clear-20261101-v1",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "ended",
+      "src": "http://localhost:5186/audio/foundation/guy/f-2d635bb7f5467a38.mp3?v=The+dog+sees+me.&audio=clear-20261101-v1",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/slow/guy/pack-v2-19.mp3?v=1a81ae7c9f27706f",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/slow/guy/pack-v2-60.mp3?v=8979294a25d60a32",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/slow/guy/pack-v2-115.mp3?v=0bf2fdd80ebf141d",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/slow/guy/pack-v2-89.mp3?v=90cd5ebe1555709f",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/foundation/guy/f-6ffd3988739814fb.mp3?v=I+see+the+dog.&audio=clear-20261101-v1",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "ended",
+      "src": "http://localhost:5186/audio/foundation/guy/f-6ffd3988739814fb.mp3?v=I+see+the+dog.&audio=clear-20261101-v1",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/slow/guy/pack-v2-10.mp3?v=8a494efa861154bc",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/slow/guy/pack-v2-115.mp3?v=0bf2fdd80ebf141d",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/slow/guy/pack-v2-128.mp3?v=c699f0596004ad6a",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/slow/guy/pack-v2-60.mp3?v=8979294a25d60a32",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/foundation/aria/f-57f9cfb9fe7b89b6.mp3?v=I+reed+a+book+at+home+every+evening.&audio=clear-20261101-v1",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "ended",
+      "src": "http://localhost:5186/audio/foundation/aria/f-57f9cfb9fe7b89b6.mp3?v=I+reed+a+book+at+home+every+evening.&audio=clear-20261101-v1",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/slow/aria/pack-v2-141.mp3?v=4dcb167ca41ebf88",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/foundation/aria/f-492bc489e9d4c317.mp3?v=The+girl+in+the+room+likes+this+book.&audio=clear-20261101-v1",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "ended",
+      "src": "http://localhost:5186/audio/foundation/aria/f-492bc489e9d4c317.mp3?v=The+girl+in+the+room+likes+this+book.&audio=clear-20261101-v1",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/slow/aria/pack-v2-141.mp3?v=4dcb167ca41ebf88",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/foundation/aria/f-64f46a7526a186d2.mp3?v=pin&audio=clear-20261101-v1",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "ended",
+      "src": "http://localhost:5186/audio/foundation/aria/f-64f46a7526a186d2.mp3?v=pin&audio=clear-20261101-v1",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/foundation/aria/f-d292237213123931.mp3?v=pine&audio=clear-20261101-v1",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "ended",
+      "src": "http://localhost:5186/audio/foundation/aria/f-d292237213123931.mp3?v=pine&audio=clear-20261101-v1",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/slow/aria/pack-v2-141.mp3?v=4dcb167ca41ebf88",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/foundation/aria/f-cbc8a597a67c4654.mp3?v=kit&audio=clear-20261101-v1",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "ended",
+      "src": "http://localhost:5186/audio/foundation/aria/f-cbc8a597a67c4654.mp3?v=kit&audio=clear-20261101-v1",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/foundation/aria/f-8e8c7d42b456c9e4.mp3?v=kite&audio=clear-20261101-v1",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "ended",
+      "src": "http://localhost:5186/audio/foundation/aria/f-8e8c7d42b456c9e4.mp3?v=kite&audio=clear-20261101-v1",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/foundation/aria/f-193c45b5281908d2.mp3?v=have&audio=clear-20261101-v1",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "ended",
+      "src": "http://localhost:5186/audio/foundation/aria/f-193c45b5281908d2.mp3?v=have&audio=clear-20261101-v1",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/foundation/aria/f-e5d5b971139eefeb.mp3?v=ship&audio=clear-20261101-v1",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "ended",
+      "src": "http://localhost:5186/audio/foundation/aria/f-e5d5b971139eefeb.mp3?v=ship&audio=clear-20261101-v1",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/foundation/aria/f-d7cea7305a333d5c.mp3?v=chip&audio=clear-20261101-v1",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "ended",
+      "src": "http://localhost:5186/audio/foundation/aria/f-d7cea7305a333d5c.mp3?v=chip&audio=clear-20261101-v1",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/foundation/aria/f-1a0dc227b5aa78f8.mp3?v=thin&audio=clear-20261101-v1",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "ended",
+      "src": "http://localhost:5186/audio/foundation/aria/f-1a0dc227b5aa78f8.mp3?v=thin&audio=clear-20261101-v1",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/foundation/aria/f-1eb79602411ef02c.mp3?v=this&audio=clear-20261101-v1",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "ended",
+      "src": "http://localhost:5186/audio/foundation/aria/f-1eb79602411ef02c.mp3?v=this&audio=clear-20261101-v1",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/foundation/aria/f-aa9e9b5c907d50fe.mp3?v=see&audio=clear-20261101-v1",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "ended",
+      "src": "http://localhost:5186/audio/foundation/aria/f-aa9e9b5c907d50fe.mp3?v=see&audio=clear-20261101-v1",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/foundation/aria/f-4a69f19c8c264850.mp3?v=sea&audio=clear-20261101-v1",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "ended",
+      "src": "http://localhost:5186/audio/foundation/aria/f-4a69f19c8c264850.mp3?v=sea&audio=clear-20261101-v1",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/foundation/aria/f-92719fe0cf8cd515.mp3?v=book&audio=clear-20261101-v1",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "ended",
+      "src": "http://localhost:5186/audio/foundation/aria/f-92719fe0cf8cd515.mp3?v=book&audio=clear-20261101-v1",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/foundation/aria/f-c1f026582fe6e8cb.mp3?v=food&audio=clear-20261101-v1",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "ended",
+      "src": "http://localhost:5186/audio/foundation/aria/f-c1f026582fe6e8cb.mp3?v=food&audio=clear-20261101-v1",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/foundation/aria/f-356357f217eba1cf.mp3?v=He+speaks+slowly.&audio=clear-20261101-v1",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "ended",
+      "src": "http://localhost:5186/audio/foundation/aria/f-356357f217eba1cf.mp3?v=He+speaks+slowly.&audio=clear-20261101-v1",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/slow/aria/pack-v2-140.mp3?v=3de512fc30f254eb",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/foundation/aria/f-46e5d42565bb70e5.mp3?v=I+stop+because+I+am+tired.&audio=clear-20261101-v1",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "ended",
+      "src": "http://localhost:5186/audio/foundation/aria/f-46e5d42565bb70e5.mp3?v=I+stop+because+I+am+tired.&audio=clear-20261101-v1",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/slow/aria/pack-v2-141.mp3?v=4dcb167ca41ebf88",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/foundation/aria/f-1057a9604e04b274.mp3?v=teacher&audio=clear-20261101-v1",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "ended",
+      "src": "http://localhost:5186/audio/foundation/aria/f-1057a9604e04b274.mp3?v=teacher&audio=clear-20261101-v1",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/foundation/aria/f-a4262e1c9bcbc172.mp3?v=about&audio=clear-20261101-v1",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "ended",
+      "src": "http://localhost:5186/audio/foundation/aria/f-a4262e1c9bcbc172.mp3?v=about&audio=clear-20261101-v1",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/foundation/aria/f-4dfec7b6fe858196.mp3?v=I+can+swim.&audio=clear-20261101-v1",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "ended",
+      "src": "http://localhost:5186/audio/foundation/aria/f-4dfec7b6fe858196.mp3?v=I+can+swim.&audio=clear-20261101-v1",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/slow/aria/pack-v2-143.mp3?v=4e2cd1b1f3542779",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/foundation/aria/f-24f91c98c280dec7.mp3?v=a+cup+of+tea&audio=clear-20261101-v1",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "ended",
+      "src": "http://localhost:5186/audio/foundation/aria/f-24f91c98c280dec7.mp3?v=a+cup+of+tea&audio=clear-20261101-v1",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/slow/aria/pack-v2-145.mp3?v=ed990482885039e4",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/foundation/aria/f-6919b1f1326d0f86.mp3?v=Pick+it+up.&audio=clear-20261101-v1",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "ended",
+      "src": "http://localhost:5186/audio/foundation/aria/f-6919b1f1326d0f86.mp3?v=Pick+it+up.&audio=clear-20261101-v1",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/slow/aria/pack-v2-144.mp3?v=1ce4c0f74a5117bd",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/foundation/aria/f-37484360db9b3775.mp3?v=Turn+it+on.&audio=clear-20261101-v1",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "ended",
+      "src": "http://localhost:5186/audio/foundation/aria/f-37484360db9b3775.mp3?v=Turn+it+on.&audio=clear-20261101-v1",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/slow/aria/pack-v2-144.mp3?v=1ce4c0f74a5117bd",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/foundation/aria/f-ec5d2ded6e26b418.mp3?v=Are+you+ready%3F&audio=clear-20261101-v1",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "ended",
+      "src": "http://localhost:5186/audio/foundation/aria/f-ec5d2ded6e26b418.mp3?v=Are+you+ready%3F&audio=clear-20261101-v1",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/slow/aria/pack-v2-142.mp3?v=186e08eb417d9c7b",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/foundation/aria/f-fdd562c4965f0ab2.mp3?v=Yes%2C+I+am+ready.&audio=clear-20261101-v1",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "ended",
+      "src": "http://localhost:5186/audio/foundation/aria/f-fdd562c4965f0ab2.mp3?v=Yes%2C+I+am+ready.&audio=clear-20261101-v1",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/slow/aria/pack-v2-144.mp3?v=1ce4c0f74a5117bd",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/foundation/aria/f-d936608baaacc6b7.mp3?v=cats&audio=clear-20261101-v1",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "ended",
+      "src": "http://localhost:5186/audio/foundation/aria/f-d936608baaacc6b7.mp3?v=cats&audio=clear-20261101-v1",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/foundation/aria/f-23bcd2d83d4c0f27.mp3?v=dogs&audio=clear-20261101-v1",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "ended",
+      "src": "http://localhost:5186/audio/foundation/aria/f-23bcd2d83d4c0f27.mp3?v=dogs&audio=clear-20261101-v1",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/foundation/aria/f-4da014218dcf86f9.mp3?v=buses&audio=clear-20261101-v1",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "ended",
+      "src": "http://localhost:5186/audio/foundation/aria/f-4da014218dcf86f9.mp3?v=buses&audio=clear-20261101-v1",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/foundation/aria/f-2c158582949f34c9.mp3?v=walked&audio=clear-20261101-v1",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "ended",
+      "src": "http://localhost:5186/audio/foundation/aria/f-2c158582949f34c9.mp3?v=walked&audio=clear-20261101-v1",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/foundation/aria/f-8000dce068b164c2.mp3?v=played&audio=clear-20261101-v1",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "ended",
+      "src": "http://localhost:5186/audio/foundation/aria/f-8000dce068b164c2.mp3?v=played&audio=clear-20261101-v1",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/foundation/aria/f-ca9066873bf335f3.mp3?v=wanted&audio=clear-20261101-v1",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "ended",
+      "src": "http://localhost:5186/audio/foundation/aria/f-ca9066873bf335f3.mp3?v=wanted&audio=clear-20261101-v1",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/slow/aria/pack-v2-149.mp3?v=a539e0328a1d7e84",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/foundation/guy/f-57f9cfb9fe7b89b6.mp3?v=I+reed+a+book+at+home+every+evening.&audio=clear-20261101-v1",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "ended",
+      "src": "http://localhost:5186/audio/foundation/guy/f-57f9cfb9fe7b89b6.mp3?v=I+reed+a+book+at+home+every+evening.&audio=clear-20261101-v1",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/slow/guy/pack-v2-141.mp3?v=c498ff47aa786d8c",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/foundation/guy/f-492bc489e9d4c317.mp3?v=The+girl+in+the+room+likes+this+book.&audio=clear-20261101-v1",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "ended",
+      "src": "http://localhost:5186/audio/foundation/guy/f-492bc489e9d4c317.mp3?v=The+girl+in+the+room+likes+this+book.&audio=clear-20261101-v1",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/slow/guy/pack-v2-141.mp3?v=c498ff47aa786d8c",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/foundation/guy/f-64f46a7526a186d2.mp3?v=pin&audio=clear-20261101-v1",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "ended",
+      "src": "http://localhost:5186/audio/foundation/guy/f-64f46a7526a186d2.mp3?v=pin&audio=clear-20261101-v1",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/foundation/guy/f-d292237213123931.mp3?v=pine&audio=clear-20261101-v1",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "ended",
+      "src": "http://localhost:5186/audio/foundation/guy/f-d292237213123931.mp3?v=pine&audio=clear-20261101-v1",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/slow/guy/pack-v2-141.mp3?v=c498ff47aa786d8c",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/foundation/guy/f-cbc8a597a67c4654.mp3?v=kit&audio=clear-20261101-v1",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "ended",
+      "src": "http://localhost:5186/audio/foundation/guy/f-cbc8a597a67c4654.mp3?v=kit&audio=clear-20261101-v1",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/foundation/guy/f-8e8c7d42b456c9e4.mp3?v=kite&audio=clear-20261101-v1",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "ended",
+      "src": "http://localhost:5186/audio/foundation/guy/f-8e8c7d42b456c9e4.mp3?v=kite&audio=clear-20261101-v1",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/foundation/guy/f-193c45b5281908d2.mp3?v=have&audio=clear-20261101-v1",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "ended",
+      "src": "http://localhost:5186/audio/foundation/guy/f-193c45b5281908d2.mp3?v=have&audio=clear-20261101-v1",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/foundation/guy/f-e5d5b971139eefeb.mp3?v=ship&audio=clear-20261101-v1",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "ended",
+      "src": "http://localhost:5186/audio/foundation/guy/f-e5d5b971139eefeb.mp3?v=ship&audio=clear-20261101-v1",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/foundation/guy/f-d7cea7305a333d5c.mp3?v=chip&audio=clear-20261101-v1",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "ended",
+      "src": "http://localhost:5186/audio/foundation/guy/f-d7cea7305a333d5c.mp3?v=chip&audio=clear-20261101-v1",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/foundation/guy/f-1a0dc227b5aa78f8.mp3?v=thin&audio=clear-20261101-v1",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "ended",
+      "src": "http://localhost:5186/audio/foundation/guy/f-1a0dc227b5aa78f8.mp3?v=thin&audio=clear-20261101-v1",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/foundation/guy/f-1eb79602411ef02c.mp3?v=this&audio=clear-20261101-v1",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "ended",
+      "src": "http://localhost:5186/audio/foundation/guy/f-1eb79602411ef02c.mp3?v=this&audio=clear-20261101-v1",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/foundation/guy/f-aa9e9b5c907d50fe.mp3?v=see&audio=clear-20261101-v1",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "ended",
+      "src": "http://localhost:5186/audio/foundation/guy/f-aa9e9b5c907d50fe.mp3?v=see&audio=clear-20261101-v1",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/foundation/guy/f-4a69f19c8c264850.mp3?v=sea&audio=clear-20261101-v1",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "ended",
+      "src": "http://localhost:5186/audio/foundation/guy/f-4a69f19c8c264850.mp3?v=sea&audio=clear-20261101-v1",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/foundation/guy/f-92719fe0cf8cd515.mp3?v=book&audio=clear-20261101-v1",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "ended",
+      "src": "http://localhost:5186/audio/foundation/guy/f-92719fe0cf8cd515.mp3?v=book&audio=clear-20261101-v1",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/foundation/guy/f-c1f026582fe6e8cb.mp3?v=food&audio=clear-20261101-v1",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "ended",
+      "src": "http://localhost:5186/audio/foundation/guy/f-c1f026582fe6e8cb.mp3?v=food&audio=clear-20261101-v1",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/foundation/guy/f-356357f217eba1cf.mp3?v=He+speaks+slowly.&audio=clear-20261101-v1",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "ended",
+      "src": "http://localhost:5186/audio/foundation/guy/f-356357f217eba1cf.mp3?v=He+speaks+slowly.&audio=clear-20261101-v1",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/slow/guy/pack-v2-140.mp3?v=837049be5720b047",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/foundation/guy/f-46e5d42565bb70e5.mp3?v=I+stop+because+I+am+tired.&audio=clear-20261101-v1",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "ended",
+      "src": "http://localhost:5186/audio/foundation/guy/f-46e5d42565bb70e5.mp3?v=I+stop+because+I+am+tired.&audio=clear-20261101-v1",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/slow/guy/pack-v2-141.mp3?v=c498ff47aa786d8c",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/foundation/guy/f-1057a9604e04b274.mp3?v=teacher&audio=clear-20261101-v1",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "ended",
+      "src": "http://localhost:5186/audio/foundation/guy/f-1057a9604e04b274.mp3?v=teacher&audio=clear-20261101-v1",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/foundation/guy/f-a4262e1c9bcbc172.mp3?v=about&audio=clear-20261101-v1",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "ended",
+      "src": "http://localhost:5186/audio/foundation/guy/f-a4262e1c9bcbc172.mp3?v=about&audio=clear-20261101-v1",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/foundation/guy/f-4dfec7b6fe858196.mp3?v=I+can+swim.&audio=clear-20261101-v1",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "ended",
+      "src": "http://localhost:5186/audio/foundation/guy/f-4dfec7b6fe858196.mp3?v=I+can+swim.&audio=clear-20261101-v1",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/slow/guy/pack-v2-143.mp3?v=a5008292fb18f628",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/foundation/guy/f-24f91c98c280dec7.mp3?v=a+cup+of+tea&audio=clear-20261101-v1",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "ended",
+      "src": "http://localhost:5186/audio/foundation/guy/f-24f91c98c280dec7.mp3?v=a+cup+of+tea&audio=clear-20261101-v1",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/slow/guy/pack-v2-145.mp3?v=5bfd419613905106",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/foundation/guy/f-6919b1f1326d0f86.mp3?v=Pick+it+up.&audio=clear-20261101-v1",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "ended",
+      "src": "http://localhost:5186/audio/foundation/guy/f-6919b1f1326d0f86.mp3?v=Pick+it+up.&audio=clear-20261101-v1",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/slow/guy/pack-v2-144.mp3?v=74fef72723d86eb2",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/foundation/guy/f-37484360db9b3775.mp3?v=Turn+it+on.&audio=clear-20261101-v1",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "ended",
+      "src": "http://localhost:5186/audio/foundation/guy/f-37484360db9b3775.mp3?v=Turn+it+on.&audio=clear-20261101-v1",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/slow/guy/pack-v2-144.mp3?v=74fef72723d86eb2",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/foundation/guy/f-ec5d2ded6e26b418.mp3?v=Are+you+ready%3F&audio=clear-20261101-v1",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "ended",
+      "src": "http://localhost:5186/audio/foundation/guy/f-ec5d2ded6e26b418.mp3?v=Are+you+ready%3F&audio=clear-20261101-v1",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/slow/guy/pack-v2-142.mp3?v=fc9e00d15f898220",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/foundation/guy/f-fdd562c4965f0ab2.mp3?v=Yes%2C+I+am+ready.&audio=clear-20261101-v1",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "ended",
+      "src": "http://localhost:5186/audio/foundation/guy/f-fdd562c4965f0ab2.mp3?v=Yes%2C+I+am+ready.&audio=clear-20261101-v1",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/slow/guy/pack-v2-144.mp3?v=74fef72723d86eb2",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/foundation/guy/f-d936608baaacc6b7.mp3?v=cats&audio=clear-20261101-v1",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "ended",
+      "src": "http://localhost:5186/audio/foundation/guy/f-d936608baaacc6b7.mp3?v=cats&audio=clear-20261101-v1",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/foundation/guy/f-23bcd2d83d4c0f27.mp3?v=dogs&audio=clear-20261101-v1",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "ended",
+      "src": "http://localhost:5186/audio/foundation/guy/f-23bcd2d83d4c0f27.mp3?v=dogs&audio=clear-20261101-v1",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/foundation/guy/f-4da014218dcf86f9.mp3?v=buses&audio=clear-20261101-v1",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "ended",
+      "src": "http://localhost:5186/audio/foundation/guy/f-4da014218dcf86f9.mp3?v=buses&audio=clear-20261101-v1",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/foundation/guy/f-2c158582949f34c9.mp3?v=walked&audio=clear-20261101-v1",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "ended",
+      "src": "http://localhost:5186/audio/foundation/guy/f-2c158582949f34c9.mp3?v=walked&audio=clear-20261101-v1",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/foundation/guy/f-8000dce068b164c2.mp3?v=played&audio=clear-20261101-v1",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "ended",
+      "src": "http://localhost:5186/audio/foundation/guy/f-8000dce068b164c2.mp3?v=played&audio=clear-20261101-v1",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/foundation/guy/f-ca9066873bf335f3.mp3?v=wanted&audio=clear-20261101-v1",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "ended",
+      "src": "http://localhost:5186/audio/foundation/guy/f-ca9066873bf335f3.mp3?v=wanted&audio=clear-20261101-v1",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/slow/guy/pack-v2-149.mp3?v=009e14750668116c",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/foundation/demos/uk-map.mp3?v=509df5ff399cb059",
+      "rate": 0.6,
+      "preservesPitch": true
+    },
+    {
+      "event": "ended",
+      "src": "http://localhost:5186/audio/foundation/demos/uk-map.mp3?v=509df5ff399cb059",
+      "rate": 0.6
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/foundation/demos/uk-map.mp3?v=509df5ff399cb059",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "ended",
+      "src": "http://localhost:5186/audio/foundation/demos/uk-map.mp3?v=509df5ff399cb059",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/foundation/demos/uk-ship.mp3?v=f28d5d2fc69bd3da",
+      "rate": 0.6,
+      "preservesPitch": true
+    },
+    {
+      "event": "ended",
+      "src": "http://localhost:5186/audio/foundation/demos/uk-ship.mp3?v=f28d5d2fc69bd3da",
+      "rate": 0.6
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/foundation/demos/uk-ship.mp3?v=f28d5d2fc69bd3da",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "ended",
+      "src": "http://localhost:5186/audio/foundation/demos/uk-ship.mp3?v=f28d5d2fc69bd3da",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_moon_2023feb.mp3",
+      "rate": 0.6,
+      "preservesPitch": true
+    },
+    {
+      "event": "ended",
+      "src": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_moon_2023feb.mp3",
+      "rate": 0.6
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_moon_2023feb.mp3",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "ended",
+      "src": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_moon_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_hat_2023feb.mp3",
+      "rate": 0.6,
+      "preservesPitch": true
+    },
+    {
+      "event": "ended",
+      "src": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_hat_2023feb.mp3",
+      "rate": 0.6
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_hat_2023feb.mp3",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "ended",
+      "src": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_hat_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_pen_2023feb.mp3",
+      "rate": 0.6,
+      "preservesPitch": true
+    },
+    {
+      "event": "ended",
+      "src": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_pen_2023feb.mp3",
+      "rate": 0.6
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_pen_2023feb.mp3",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "ended",
+      "src": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_pen_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_she_2023feb.mp3",
+      "rate": 0.6,
+      "preservesPitch": true
+    },
+    {
+      "event": "ended",
+      "src": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_she_2023feb.mp3",
+      "rate": 0.6
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_she_2023feb.mp3",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "ended",
+      "src": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_she_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_ship_2023feb.mp3",
+      "rate": 0.6,
+      "preservesPitch": true
+    },
+    {
+      "event": "ended",
+      "src": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_ship_2023feb.mp3",
+      "rate": 0.6
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_ship_2023feb.mp3",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "ended",
+      "src": "http://localhost:5186/audio/phonemes/uk/uk_phonetics_sound_ship_2023feb.mp3",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/foundation/demos/focus-i.mp3?v=d31b2d31df8cd8aa",
+      "rate": 0.6,
+      "preservesPitch": true
+    },
+    {
+      "event": "ended",
+      "src": "http://localhost:5186/audio/foundation/demos/focus-i.mp3?v=d31b2d31df8cd8aa",
+      "rate": 0.6
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/foundation/demos/focus-i.mp3?v=d31b2d31df8cd8aa",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "ended",
+      "src": "http://localhost:5186/audio/foundation/demos/focus-i.mp3?v=d31b2d31df8cd8aa",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/foundation/demos/focus-tea.mp3?v=4b4fc46333fb4670",
+      "rate": 0.6,
+      "preservesPitch": true
+    },
+    {
+      "event": "ended",
+      "src": "http://localhost:5186/audio/foundation/demos/focus-tea.mp3?v=4b4fc46333fb4670",
+      "rate": 0.6
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/foundation/demos/focus-tea.mp3?v=4b4fc46333fb4670",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "ended",
+      "src": "http://localhost:5186/audio/foundation/demos/focus-tea.mp3?v=4b4fc46333fb4670",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/foundation/demos/ready-flow.mp3?v=77a7ce8bb3fbd88e",
+      "rate": 0.6,
+      "preservesPitch": true
+    },
+    {
+      "event": "ended",
+      "src": "http://localhost:5186/audio/foundation/demos/ready-flow.mp3?v=77a7ce8bb3fbd88e",
+      "rate": 0.6
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/foundation/demos/ready-flow.mp3?v=77a7ce8bb3fbd88e",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "ended",
+      "src": "http://localhost:5186/audio/foundation/demos/ready-flow.mp3?v=77a7ce8bb3fbd88e",
+      "rate": 1
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/foundation/demos/ready-pause.mp3?v=44eb24549d8a61b8",
+      "rate": 0.6,
+      "preservesPitch": true
+    },
+    {
+      "event": "ended",
+      "src": "http://localhost:5186/audio/foundation/demos/ready-pause.mp3?v=44eb24549d8a61b8",
+      "rate": 0.6
+    },
+    {
+      "event": "playing",
+      "src": "http://localhost:5186/audio/foundation/demos/ready-pause.mp3?v=44eb24549d8a61b8",
+      "rate": 1,
+      "preservesPitch": true
+    },
+    {
+      "event": "ended",
+      "src": "http://localhost:5186/audio/foundation/demos/ready-pause.mp3?v=44eb24549d8a61b8",
+      "rate": 1
+    }
+  ]
+}

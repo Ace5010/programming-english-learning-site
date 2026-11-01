@@ -1,0 +1,130 @@
+{
+  "baseURL": "http://localhost:5186/",
+  "results": [
+    {
+      "width": 1440,
+      "voice": "aria",
+      "passed": true,
+      "geometry": {
+        "inDialog": true,
+        "reachable": true,
+        "box": {
+          "x": 576.390625,
+          "y": 484.59375,
+          "width": 62,
+          "height": 54,
+          "top": 484.59375,
+          "right": 638.390625,
+          "bottom": 538.59375,
+          "left": 576.390625
+        }
+      },
+      "audio": [
+        {
+          "src": "http://localhost:5186/audio/aria/word-3023.mp3?audio=clear-20261101-v1",
+          "rate": 1,
+          "pitch": true
+        },
+        {
+          "src": "http://localhost:5186/audio/slow/aria/pack-v2-9.mp3?v=081a0f562b17a57d",
+          "rate": 1,
+          "pitch": true
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "voice": "guy",
+      "passed": true,
+      "geometry": {
+        "inDialog": true,
+        "reachable": true,
+        "box": {
+          "x": 576.390625,
+          "y": 484.59375,
+          "width": 62,
+          "height": 54,
+          "top": 484.59375,
+          "right": 638.390625,
+          "bottom": 538.59375,
+          "left": 576.390625
+        }
+      },
+      "audio": [
+        {
+          "src": "http://localhost:5186/audio/guy/word-3023.mp3?audio=clear-20261101-v1",
+          "rate": 1,
+          "pitch": true
+        },
+        {
+          "src": "http://localhost:5186/audio/slow/guy/pack-v2-9.mp3?v=572ac7931d078409",
+          "rate": 1,
+          "pitch": true
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "voice": "aria",
+      "passed": true,
+      "geometry": {
+        "inDialog": true,
+        "reachable": true,
+        "box": {
+          "x": 171.390625,
+          "y": 474.796875,
+          "width": 62,
+          "height": 54,
+          "top": 474.796875,
+          "right": 233.390625,
+          "bottom": 528.796875,
+          "left": 171.390625
+        }
+      },
+      "audio": [
+        {
+          "src": "http://localhost:5186/audio/aria/word-3023.mp3?audio=clear-20261101-v1",
+          "rate": 1,
+          "pitch": true
+        },
+        {
+          "src": "http://localhost:5186/audio/slow/aria/pack-v2-9.mp3?v=081a0f562b17a57d",
+          "rate": 1,
+          "pitch": true
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "voice": "guy",
+      "passed": true,
+      "geometry": {
+        "inDialog": true,
+        "reachable": true,
+        "box": {
+          "x": 171.390625,
+          "y": 474.796875,
+          "width": 62,
+          "height": 54,
+          "top": 474.796875,
+          "right": 233.390625,
+          "bottom": 528.796875,
+          "left": 171.390625
+        }
+      },
+      "audio": [
+        {
+          "src": "http://localhost:5186/audio/guy/word-3023.mp3?audio=clear-20261101-v1",
+          "rate": 1,
+          "pitch": true
+        },
+        {
+          "src": "http://localhost:5186/audio/slow/guy/pack-v2-9.mp3?v=572ac7931d078409",
+          "rate": 1,
+          "pitch": true
+        }
+      ]
+    }
+  ],
+  "errors": []
+}

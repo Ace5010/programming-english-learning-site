@@ -1,0 +1,418 @@
+[
+  {
+    "section": "编程英语",
+    "theme": "lagoon",
+    "width": 1440,
+    "dialog": {
+      "left": 420,
+      "right": 1020,
+      "top": 297.109375,
+      "bottom": 702.890625
+    },
+    "overflow": [],
+    "small": []
+  },
+  {
+    "section": "编程英语",
+    "theme": "pearl",
+    "width": 1440,
+    "dialog": {
+      "left": 420,
+      "right": 1020,
+      "top": 297.109375,
+      "bottom": 702.890625
+    },
+    "overflow": [],
+    "small": []
+  },
+  {
+    "section": "编程英语",
+    "theme": "sky",
+    "width": 1440,
+    "dialog": {
+      "left": 420,
+      "right": 1020,
+      "top": 297.109375,
+      "bottom": 702.890625
+    },
+    "overflow": [],
+    "small": []
+  },
+  {
+    "section": "编程英语",
+    "theme": "mint",
+    "width": 1440,
+    "dialog": {
+      "left": 420,
+      "right": 1020,
+      "top": 297.109375,
+      "bottom": 702.890625
+    },
+    "overflow": [],
+    "small": []
+  },
+  {
+    "section": "编程英语",
+    "theme": "lagoon",
+    "width": 640,
+    "dialog": {
+      "left": 20,
+      "right": 620,
+      "top": 297.109375,
+      "bottom": 702.890625
+    },
+    "overflow": [],
+    "small": []
+  },
+  {
+    "section": "编程英语",
+    "theme": "pearl",
+    "width": 640,
+    "dialog": {
+      "left": 20,
+      "right": 620,
+      "top": 297.109375,
+      "bottom": 702.890625
+    },
+    "overflow": [],
+    "small": []
+  },
+  {
+    "section": "编程英语",
+    "theme": "sky",
+    "width": 640,
+    "dialog": {
+      "left": 20,
+      "right": 620,
+      "top": 297.109375,
+      "bottom": 702.890625
+    },
+    "overflow": [],
+    "small": []
+  },
+  {
+    "section": "编程英语",
+    "theme": "mint",
+    "width": 640,
+    "dialog": {
+      "left": 20,
+      "right": 620,
+      "top": 297.109375,
+      "bottom": 702.890625
+    },
+    "overflow": [],
+    "small": []
+  },
+  {
+    "section": "编程英语",
+    "theme": "lagoon",
+    "width": 390,
+    "dialog": {
+      "left": 19,
+      "right": 371,
+      "top": 142.515625,
+      "bottom": 597.484375
+    },
+    "overflow": [],
+    "small": []
+  },
+  {
+    "section": "编程英语",
+    "theme": "pearl",
+    "width": 390,
+    "dialog": {
+      "left": 19,
+      "right": 371,
+      "top": 142.515625,
+      "bottom": 597.484375
+    },
+    "overflow": [],
+    "small": []
+  },
+  {
+    "section": "编程英语",
+    "theme": "sky",
+    "width": 390,
+    "dialog": {
+      "left": 19,
+      "right": 371,
+      "top": 142.515625,
+      "bottom": 597.484375
+    },
+    "overflow": [],
+    "small": []
+  },
+  {
+    "section": "编程英语",
+    "theme": "mint",
+    "width": 390,
+    "dialog": {
+      "left": 19,
+      "right": 371,
+      "top": 142.515625,
+      "bottom": 597.484375
+    },
+    "overflow": [],
+    "small": []
+  },
+  {
+    "section": "编程英语",
+    "theme": "lagoon",
+    "width": 320,
+    "dialog": {
+      "left": 19,
+      "right": 301,
+      "top": 142.515625,
+      "bottom": 597.484375
+    },
+    "overflow": [],
+    "small": []
+  },
+  {
+    "section": "编程英语",
+    "theme": "pearl",
+    "width": 320,
+    "dialog": {
+      "left": 19,
+      "right": 301,
+      "top": 142.515625,
+      "bottom": 597.484375
+    },
+    "overflow": [],
+    "small": []
+  },
+  {
+    "section": "编程英语",
+    "theme": "sky",
+    "width": 320,
+    "dialog": {
+      "left": 19,
+      "right": 301,
+      "top": 142.515625,
+      "bottom": 597.484375
+    },
+    "overflow": [],
+    "small": []
+  },
+  {
+    "section": "编程英语",
+    "theme": "mint",
+    "width": 320,
+    "dialog": {
+      "left": 19,
+      "right": 301,
+      "top": 142.515625,
+      "bottom": 597.484375
+    },
+    "overflow": [],
+    "small": []
+  },
+  {
+    "section": "日常英语",
+    "theme": "lagoon",
+    "width": 1440,
+    "dialog": {
+      "left": 420,
+      "right": 1020,
+      "top": 231.8125,
+      "bottom": 768.1875
+    },
+    "overflow": [],
+    "small": []
+  },
+  {
+    "section": "日常英语",
+    "theme": "pearl",
+    "width": 1440,
+    "dialog": {
+      "left": 420,
+      "right": 1020,
+      "top": 231.8125,
+      "bottom": 768.1875
+    },
+    "overflow": [],
+    "small": []
+  },
+  {
+    "section": "日常英语",
+    "theme": "sky",
+    "width": 1440,
+    "dialog": {
+      "left": 420,
+      "right": 1020,
+      "top": 231.8125,
+      "bottom": 768.1875
+    },
+    "overflow": [],
+    "small": []
+  },
+  {
+    "section": "日常英语",
+    "theme": "mint",
+    "width": 1440,
+    "dialog": {
+      "left": 420,
+      "right": 1020,
+      "top": 231.8125,
+      "bottom": 768.1875
+    },
+    "overflow": [],
+    "small": []
+  },
+  {
+    "section": "日常英语",
+    "theme": "lagoon",
+    "width": 640,
+    "dialog": {
+      "left": 20,
+      "right": 620,
+      "top": 231.8125,
+      "bottom": 768.1875
+    },
+    "overflow": [],
+    "small": []
+  },
+  {
+    "section": "日常英语",
+    "theme": "pearl",
+    "width": 640,
+    "dialog": {
+      "left": 20,
+      "right": 620,
+      "top": 231.8125,
+      "bottom": 768.1875
+    },
+    "overflow": [],
+    "small": []
+  },
+  {
+    "section": "日常英语",
+    "theme": "sky",
+    "width": 640,
+    "dialog": {
+      "left": 20,
+      "right": 620,
+      "top": 231.8125,
+      "bottom": 768.1875
+    },
+    "overflow": [],
+    "small": []
+  },
+  {
+    "section": "日常英语",
+    "theme": "mint",
+    "width": 640,
+    "dialog": {
+      "left": 20,
+      "right": 620,
+      "top": 231.8125,
+      "bottom": 768.1875
+    },
+    "overflow": [],
+    "small": []
+  },
+  {
+    "section": "日常英语",
+    "theme": "lagoon",
+    "width": 390,
+    "dialog": {
+      "left": 19,
+      "right": 371,
+      "top": 86.015625,
+      "bottom": 653.984375
+    },
+    "overflow": [],
+    "small": []
+  },
+  {
+    "section": "日常英语",
+    "theme": "pearl",
+    "width": 390,
+    "dialog": {
+      "left": 19,
+      "right": 371,
+      "top": 86.015625,
+      "bottom": 653.984375
+    },
+    "overflow": [],
+    "small": []
+  },
+  {
+    "section": "日常英语",
+    "theme": "sky",
+    "width": 390,
+    "dialog": {
+      "left": 19,
+      "right": 371,
+      "top": 86.015625,
+      "bottom": 653.984375
+    },
+    "overflow": [],
+    "small": []
+  },
+  {
+    "section": "日常英语",
+    "theme": "mint",
+    "width": 390,
+    "dialog": {
+      "left": 19,
+      "right": 371,
+      "top": 86.015625,
+      "bottom": 653.984375
+    },
+    "overflow": [],
+    "small": []
+  },
+  {
+    "section": "日常英语",
+    "theme": "lagoon",
+    "width": 320,
+    "dialog": {
+      "left": 19,
+      "right": 301,
+      "top": 86.015625,
+      "bottom": 653.984375
+    },
+    "overflow": [],
+    "small": []
+  },
+  {
+    "section": "日常英语",
+    "theme": "pearl",
+    "width": 320,
+    "dialog": {
+      "left": 19,
+      "right": 301,
+      "top": 86.015625,
+      "bottom": 653.984375
+    },
+    "overflow": [],
+    "small": []
+  },
+  {
+    "section": "日常英语",
+    "theme": "sky",
+    "width": 320,
+    "dialog": {
+      "left": 19,
+      "right": 301,
+      "top": 86.015625,
+      "bottom": 653.984375
+    },
+    "overflow": [],
+    "small": []
+  },
+  {
+    "section": "日常英语",
+    "theme": "mint",
+    "width": 320,
+    "dialog": {
+      "left": 19,
+      "right": 301,
+      "top": 86.015625,
+      "bottom": 653.984375
+    },
+    "overflow": [],
+    "small": []
+  }
+]

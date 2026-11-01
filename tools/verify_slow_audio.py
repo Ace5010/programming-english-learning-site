@@ -13,7 +13,7 @@ if __name__ == '__main__':
     tools = audio_tools()
     with ThreadPoolExecutor(max_workers=6) as pool:
         records = dict(zip(paths, pool.map(lambda p: inspect_audio(ROOT / 'public/audio' / p, tools), paths)))
-    for key, clip in manifest['clips'].items():
+    for key, clip in {**manifest['clips'],**{'normal:'+k:v for k,v in manifest.get('normalClips',{}).items()}}.items():
         if clip['endMs'] > records[clip['path']]['durationSeconds'] * 1000 + 25:
             raise ValueError(f'Segment outside file: {key}')
     print(f'Decoded {len(records)} reused/packed files; checked {len(manifest["clips"])} word boundaries.')

@@ -7,7 +7,7 @@ import { slowReadingQueue } from '../src/slowReading.ts';
 const require = createRequire(import.meta.url);
 const { chromium } = require(process.env.CODEWORDS_PLAYWRIGHT || 'C:/Users/shenwuqiang/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
 const base = process.env.CODEWORDS_TEST_URL || 'http://localhost:5186/';
-const output = path.resolve('artifacts/slow-reading'); await mkdir(output,{recursive:true});
+const output = path.resolve(process.env.CODEWORDS_ARTIFACT_DIR || 'artifacts/slow-reading'); await mkdir(output,{recursive:true});
 const browser = await chromium.launch({channel:'chrome',headless:true,args:['--no-proxy-server']});
 const results=[];
 async function open(voice,section='daily') {
@@ -25,11 +25,12 @@ async function open(voice,section='daily') {
   },{voice,section});
   await page.goto(base);
   await page.getByRole('navigation',{name:'学习导航'}).getByRole('button',{name:'词汇库',exact:true}).click();
+  if (section === 'daily') await page.getByLabel('词汇类型',{exact:true}).selectOption('all');
   return {context,page,errors};
 }
 async function select(e,text) {
-  await e.page.locator('#daily-content').getByLabel('查找表达').fill(text);
-  return e.page.locator('.daily-expression').filter({has:e.page.getByRole('button',{name:`慢速朗读 ${text}`,exact:true})}).first();
+  await e.page.locator('#daily-content').getByLabel('查找词汇',{exact:true}).fill(text);
+  return e.page.locator('.library-card').filter({has:e.page.getByRole('button',{name:`慢速朗读 ${text}`,exact:true})}).first();
 }
 async function play(e,text,voice,slow=true) {
   const row=await select(e,text), button=row.getByRole('button',{name:`${slow?'慢速朗读':'朗读'} ${text}`,exact:true});
@@ -58,7 +59,7 @@ async function play(e,text,voice,slow=true) {
   assert.equal(playing.length,queue?.length??1,`${voice} ${text}`);
   assert.equal(new Set(playing.map(x=>x.id)).size,1,'same task element');
   for(let i=0;i<playing.length;i++) {
-    assert.equal(playing[i].rate,slow?.72:1); assert.equal(playing[i].pitch,true); assert.ok(playing[i].active<=1);
+    assert.equal(playing[i].rate,slow && !queue ? .6 : 1); assert.equal(playing[i].pitch,true); assert.ok(playing[i].active<=1);
     if(queue) { assert.equal(playing[i].url,queue[i].url); assert.ok(Math.abs(playing[i].position*1000-queue[i].startMs)<180,`accurate seek ${text} ${i}`); }
   }
   const after=await e.page.evaluate(()=>JSON.stringify(Object.fromEntries(Object.entries(localStorage).filter(([k])=>/daily-v1|review-v1|course-v1|mastered|favorites/.test(k)))));
@@ -93,10 +94,10 @@ try {
     await e.context.close();
   }
   const e=await open('aria','programming');
-  const item=e.page.locator('[data-word-id="7"]'); const slow=item.getByRole('button',{name:'慢速朗读单词 pull request',exact:true});
+  const slow=e.page.getByRole('button',{name:'慢速朗读单词 pull request',exact:true});
   const start=await e.page.evaluate(()=>window.__audio.events.length); await slow.click();
   await e.page.waitForFunction(start=>window.__audio.events.slice(start).filter(x=>x.type==='playing').length===2,start);
-  await e.page.waitForFunction(()=>!document.querySelector('[data-word-id="7"] .slow-button.playing'));
+  await e.page.waitForFunction(()=>!document.querySelector('button[aria-label="慢速朗读单词 pull request"]')?.classList.contains('playing'));
   results.push({scenario:'multiword vocabulary',events:await e.page.evaluate(start=>window.__audio.events.slice(start),start)});
   assert.deepEqual(e.errors,[]); await e.context.close();
   const broken=await open('aria');

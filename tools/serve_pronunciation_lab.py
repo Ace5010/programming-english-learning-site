@@ -93,6 +93,7 @@ def main():
             if self.headers.get('Host')!=f'127.0.0.1:{args.port}':return self.reply(403,{'error':'host'})
             if self.path=='/health':return self.reply(200,{'ready':True,'engine':engine_version,'localOnly':True,
                 'busy':lock.locked(),'experimental':True,'rawAudioSaved':False,
+                'backend':getattr(engine,'backend',args.engine),
                 'processingSeconds':round(time.monotonic()-activity['since'],1) if activity['since'] else 0})
             if self.path=='/api/course-session' and is_asr:
                 if self.headers.get('Origin') not in COURSE_ORIGINS:return self.reply(403,{'error':'origin'})

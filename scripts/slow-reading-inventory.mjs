@@ -28,6 +28,10 @@ export function slowReadingInventory() {
     return { text, spoken: spokenForms[text] ?? text, path: path ?? `slow/{voice}/s-${createHash('sha256').update(text).digest('hex').slice(0, 16)}.mp3`, generated: !path };
   });
   for (const item of contextualReadings) entries.push({ ...item, path: `slow/{voice}/s-${createHash('sha256').update(item.text).digest('hex').slice(0,16)}.mp3`, generated: true });
+  // Tutorial sentences retain continuous phrasing, with their own native slow recording.
+  for (const item of foundationEntries.filter(x => x.tutorialOnly)) entries.push({ text: `tutorial@${item.id}`, spoken: item.ttsText ?? item.text, path: `slow/{voice}/s-${item.id}.mp3`, generated: true });
+  // Tutorials also reuse phrases from the original foundation inventory.
+  for (const item of foundationEntries.filter(x => !x.tutorialOnly)) entries.push({ text: `tutorial@${item.id}`, spoken: item.ttsText ?? item.text, path: `slow/{voice}/s-${item.id}.mp3`, generated: true });
   return { version: 1, texts, entries };
 }
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {

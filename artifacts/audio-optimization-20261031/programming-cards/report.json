@@ -1,0 +1,846 @@
+{
+  "baseURL": "http://127.0.0.1:5186/",
+  "results": [
+    {
+      "name": "card-click-playback",
+      "width": 1440,
+      "theme": "lagoon",
+      "evidence": {
+        "clicks": [
+          {
+            "target": "word-1",
+            "voice": "aria",
+            "request": {
+              "src": "http://127.0.0.1:5186/audio/aria/word-1.mp3?v=repository&audio=clear-20261101-v1",
+              "rate": 1,
+              "pitch": true
+            }
+          },
+          {
+            "target": "word-1",
+            "voice": "aria",
+            "request": {
+              "src": "http://127.0.0.1:5186/audio/aria/word-1.mp3?v=repository&audio=clear-20261101-v1",
+              "rate": 1,
+              "pitch": true
+            }
+          },
+          {
+            "target": "word-1",
+            "voice": "aria",
+            "request": {
+              "src": "http://127.0.0.1:5186/audio/aria/word-1.mp3?v=repository&audio=clear-20261101-v1",
+              "rate": 1,
+              "pitch": true
+            }
+          },
+          {
+            "target": "word-1",
+            "voice": "aria",
+            "request": {
+              "src": "http://127.0.0.1:5186/audio/aria/word-1.mp3?v=repository&audio=clear-20261101-v1",
+              "rate": 1,
+              "pitch": true
+            }
+          },
+          {
+            "target": "word-1",
+            "voice": "aria",
+            "request": {
+              "src": "http://127.0.0.1:5186/audio/aria/word-1.mp3?v=repository&audio=clear-20261101-v1",
+              "rate": 1,
+              "pitch": true
+            }
+          },
+          {
+            "target": "word-1",
+            "voice": "aria",
+            "request": {
+              "src": "http://127.0.0.1:5186/audio/aria/word-1.mp3?v=repository&audio=clear-20261101-v1",
+              "rate": 1,
+              "pitch": true
+            }
+          },
+          {
+            "target": "word-1",
+            "voice": "aria",
+            "request": {
+              "src": "http://127.0.0.1:5186/audio/aria/word-1.mp3?v=repository&audio=clear-20261101-v1",
+              "rate": 1,
+              "pitch": true
+            }
+          },
+          {
+            "target": "example-1",
+            "voice": "aria",
+            "request": {
+              "src": "http://127.0.0.1:5186/audio/aria/example-1.mp3?v=Open+this+repository.&audio=clear-20261101-v1",
+              "rate": 1,
+              "pitch": true
+            }
+          },
+          {
+            "target": "example-1",
+            "voice": "aria",
+            "request": {
+              "src": "http://127.0.0.1:5186/audio/aria/example-1.mp3?v=Open+this+repository.&audio=clear-20261101-v1",
+              "rate": 1,
+              "pitch": true
+            }
+          },
+          {
+            "target": "example-1",
+            "voice": "aria",
+            "request": {
+              "src": "http://127.0.0.1:5186/audio/aria/example-1.mp3?v=Open+this+repository.&audio=clear-20261101-v1",
+              "rate": 1,
+              "pitch": true
+            }
+          },
+          {
+            "target": "word-1",
+            "voice": "aria",
+            "request": {
+              "src": "http://127.0.0.1:5186/audio/aria/word-1.mp3?v=repository&audio=clear-20261101-v1",
+              "rate": 1,
+              "pitch": true
+            }
+          },
+          {
+            "target": "example-1",
+            "voice": "aria",
+            "request": {
+              "src": "http://127.0.0.1:5186/audio/aria/example-1.mp3?v=Open+this+repository.&audio=clear-20261101-v1",
+              "rate": 1,
+              "pitch": true
+            }
+          },
+          {
+            "target": "word-2801",
+            "voice": "aria",
+            "request": {
+              "src": "http://127.0.0.1:5186/audio/aria/word-2801.mp3?v=project&audio=clear-20261101-v1",
+              "rate": 1,
+              "pitch": true
+            }
+          },
+          {
+            "target": "example-2801",
+            "voice": "aria",
+            "request": {
+              "src": "http://127.0.0.1:5186/audio/aria/example-2801.mp3?v=Open+this+project.&audio=clear-20261101-v1",
+              "rate": 1,
+              "pitch": true
+            }
+          },
+          {
+            "target": "word-3561",
+            "voice": "aria",
+            "request": {
+              "src": "http://127.0.0.1:5186/audio/aria/word-3561.mp3?v=code&audio=clear-20261101-v1",
+              "rate": 1,
+              "pitch": true
+            }
+          },
+          {
+            "target": "example-3561",
+            "voice": "aria",
+            "request": {
+              "src": "http://127.0.0.1:5186/audio/aria/example-3561.mp3?v=Read+this+code.&audio=clear-20261101-v1",
+              "rate": 1,
+              "pitch": true
+            }
+          },
+          {
+            "target": "word-20",
+            "voice": "aria",
+            "request": {
+              "src": "http://127.0.0.1:5186/audio/aria/word-20.mp3?v=readme&audio=clear-20261101-v1",
+              "rate": 1,
+              "pitch": true
+            }
+          },
+          {
+            "target": "example-20",
+            "voice": "aria",
+            "request": {
+              "src": "http://127.0.0.1:5186/audio/aria/example-20.mp3?v=Read+the+README+for+help.&audio=clear-20261101-v1",
+              "rate": 1,
+              "pitch": true
+            }
+          },
+          {
+            "target": "word-4",
+            "voice": "aria",
+            "request": {
+              "src": "http://127.0.0.1:5186/audio/aria/word-4.mp3?v=clone&audio=clear-20261101-v1",
+              "rate": 1,
+              "pitch": true
+            }
+          },
+          {
+            "target": "example-4",
+            "voice": "aria",
+            "request": {
+              "src": "http://127.0.0.1:5186/audio/aria/example-4.mp3?v=Clone+this+project.&audio=clear-20261101-v1",
+              "rate": 1,
+              "pitch": true
+            }
+          },
+          {
+            "target": "word-5",
+            "voice": "aria",
+            "request": {
+              "src": "http://127.0.0.1:5186/audio/aria/word-5.mp3?v=fork&audio=clear-20261101-v1",
+              "rate": 1,
+              "pitch": true
+            }
+          },
+          {
+            "target": "example-5",
+            "voice": "aria",
+            "request": {
+              "src": "http://127.0.0.1:5186/audio/aria/example-5.mp3?v=Fork+this+project+on+GitHub.&audio=clear-20261101-v1",
+              "rate": 1,
+              "pitch": true
+            }
+          },
+          {
+            "target": "word-1",
+            "voice": "guy",
+            "request": {
+              "src": "http://127.0.0.1:5186/audio/guy/word-1.mp3?v=repository&audio=clear-20261101-v1",
+              "rate": 1,
+              "pitch": true
+            }
+          },
+          {
+            "target": "example-1",
+            "voice": "guy",
+            "request": {
+              "src": "http://127.0.0.1:5186/audio/guy/example-1.mp3?v=Open+this+repository.&audio=clear-20261101-v1",
+              "rate": 1,
+              "pitch": true
+            }
+          },
+          {
+            "target": "word-1",
+            "voice": "guy",
+            "request": {
+              "src": "http://127.0.0.1:5186/audio/guy/word-1.mp3?v=repository&audio=clear-20261101-v1",
+              "rate": 1,
+              "pitch": true
+            }
+          },
+          {
+            "target": "example-1",
+            "voice": "guy",
+            "request": {
+              "src": "http://127.0.0.1:5186/audio/guy/example-1.mp3?v=Open+this+repository.&audio=clear-20261101-v1",
+              "rate": 1,
+              "pitch": true
+            }
+          },
+          {
+            "target": "word-2801",
+            "voice": "guy",
+            "request": {
+              "src": "http://127.0.0.1:5186/audio/guy/word-2801.mp3?v=project&audio=clear-20261101-v1",
+              "rate": 1,
+              "pitch": true
+            }
+          },
+          {
+            "target": "example-2801",
+            "voice": "guy",
+            "request": {
+              "src": "http://127.0.0.1:5186/audio/guy/example-2801.mp3?v=Open+this+project.&audio=clear-20261101-v1",
+              "rate": 1,
+              "pitch": true
+            }
+          },
+          {
+            "target": "word-3561",
+            "voice": "guy",
+            "request": {
+              "src": "http://127.0.0.1:5186/audio/guy/word-3561.mp3?v=code&audio=clear-20261101-v1",
+              "rate": 1,
+              "pitch": true
+            }
+          },
+          {
+            "target": "example-3561",
+            "voice": "guy",
+            "request": {
+              "src": "http://127.0.0.1:5186/audio/guy/example-3561.mp3?v=Read+this+code.&audio=clear-20261101-v1",
+              "rate": 1,
+              "pitch": true
+            }
+          },
+          {
+            "target": "word-20",
+            "voice": "guy",
+            "request": {
+              "src": "http://127.0.0.1:5186/audio/guy/word-20.mp3?v=readme&audio=clear-20261101-v1",
+              "rate": 1,
+              "pitch": true
+            }
+          },
+          {
+            "target": "example-20",
+            "voice": "guy",
+            "request": {
+              "src": "http://127.0.0.1:5186/audio/guy/example-20.mp3?v=Read+the+README+for+help.&audio=clear-20261101-v1",
+              "rate": 1,
+              "pitch": true
+            }
+          },
+          {
+            "target": "word-4",
+            "voice": "guy",
+            "request": {
+              "src": "http://127.0.0.1:5186/audio/guy/word-4.mp3?v=clone&audio=clear-20261101-v1",
+              "rate": 1,
+              "pitch": true
+            }
+          },
+          {
+            "target": "example-4",
+            "voice": "guy",
+            "request": {
+              "src": "http://127.0.0.1:5186/audio/guy/example-4.mp3?v=Clone+this+project.&audio=clear-20261101-v1",
+              "rate": 1,
+              "pitch": true
+            }
+          },
+          {
+            "target": "word-5",
+            "voice": "guy",
+            "request": {
+              "src": "http://127.0.0.1:5186/audio/guy/word-5.mp3?v=fork&audio=clear-20261101-v1",
+              "rate": 1,
+              "pitch": true
+            }
+          },
+          {
+            "target": "example-5",
+            "voice": "guy",
+            "request": {
+              "src": "http://127.0.0.1:5186/audio/guy/example-5.mp3?v=Fork+this+project+on+GitHub.&audio=clear-20261101-v1",
+              "rate": 1,
+              "pitch": true
+            }
+          }
+        ],
+        "slowReads": [
+          {
+            "target": "word-1",
+            "voice": "aria",
+            "kind": "word",
+            "src": "http://127.0.0.1:5186/audio/slow/aria/pack-v2-110.mp3?v=041412dbed568a20",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "target": "word-1",
+            "voice": "aria",
+            "kind": "example",
+            "src": "http://127.0.0.1:5186/audio/slow/aria/pack-v2-15.mp3?v=7b1458becc05f2fb",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "target": "word-2801",
+            "voice": "aria",
+            "kind": "word",
+            "src": "http://127.0.0.1:5186/audio/slow/aria/pack-v2-105.mp3?v=cde55cfa7a945662",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "target": "word-2801",
+            "voice": "aria",
+            "kind": "example",
+            "src": "http://127.0.0.1:5186/audio/slow/aria/pack-v2-15.mp3?v=7b1458becc05f2fb",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "target": "word-3561",
+            "voice": "aria",
+            "kind": "word",
+            "src": "http://127.0.0.1:5186/audio/slow/aria/pack-v2-50.mp3?v=b17a2d9be3b83226",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "target": "word-3561",
+            "voice": "aria",
+            "kind": "example",
+            "src": "http://127.0.0.1:5186/audio/slow/aria/pack-v2-140.mp3?v=7216877aa830c50b",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "target": "word-20",
+            "voice": "aria",
+            "kind": "word",
+            "src": "http://127.0.0.1:5186/audio/slow/aria/pack-v2-108.mp3?v=c657f36b313eb00e",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "target": "word-20",
+            "voice": "aria",
+            "kind": "example",
+            "src": "http://127.0.0.1:5186/audio/slow/aria/pack-v2-140.mp3?v=7216877aa830c50b",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "target": "word-4",
+            "voice": "aria",
+            "kind": "word",
+            "src": "http://127.0.0.1:5186/audio/slow/aria/pack-v2-49.mp3?v=68f50783d3ff013d",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "target": "word-4",
+            "voice": "aria",
+            "kind": "example",
+            "src": "http://127.0.0.1:5186/audio/slow/aria/pack-v2-5.mp3?v=ed738ef2fb4bc85c",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "target": "word-5",
+            "voice": "aria",
+            "kind": "word",
+            "src": "http://127.0.0.1:5186/audio/slow/aria/pack-v2-70.mp3?v=dcd5a092d46b8e94",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "target": "word-5",
+            "voice": "aria",
+            "kind": "example",
+            "src": "http://127.0.0.1:5186/audio/slow/aria/pack-v2-8.mp3?v=7313aa12cc9342da",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "target": "word-1",
+            "voice": "guy",
+            "kind": "word",
+            "src": "http://127.0.0.1:5186/audio/slow/guy/pack-v2-110.mp3?v=5b63429e2c57238f",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "target": "word-1",
+            "voice": "guy",
+            "kind": "example",
+            "src": "http://127.0.0.1:5186/audio/slow/guy/pack-v2-15.mp3?v=36d9d43fb14e154b",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "target": "word-2801",
+            "voice": "guy",
+            "kind": "word",
+            "src": "http://127.0.0.1:5186/audio/slow/guy/pack-v2-105.mp3?v=8c59fcfbf6af54be",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "target": "word-2801",
+            "voice": "guy",
+            "kind": "example",
+            "src": "http://127.0.0.1:5186/audio/slow/guy/pack-v2-15.mp3?v=36d9d43fb14e154b",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "target": "word-3561",
+            "voice": "guy",
+            "kind": "word",
+            "src": "http://127.0.0.1:5186/audio/slow/guy/pack-v2-50.mp3?v=6aef7e6eea2d3fee",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "target": "word-3561",
+            "voice": "guy",
+            "kind": "example",
+            "src": "http://127.0.0.1:5186/audio/slow/guy/pack-v2-140.mp3?v=e2e6244e7135beae",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "target": "word-20",
+            "voice": "guy",
+            "kind": "word",
+            "src": "http://127.0.0.1:5186/audio/slow/guy/pack-v2-108.mp3?v=b1a7c3bff989c0f1",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "target": "word-20",
+            "voice": "guy",
+            "kind": "example",
+            "src": "http://127.0.0.1:5186/audio/slow/guy/pack-v2-140.mp3?v=e2e6244e7135beae",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "target": "word-4",
+            "voice": "guy",
+            "kind": "word",
+            "src": "http://127.0.0.1:5186/audio/slow/guy/pack-v2-49.mp3?v=f5e244e4eb3dd447",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "target": "word-4",
+            "voice": "guy",
+            "kind": "example",
+            "src": "http://127.0.0.1:5186/audio/slow/guy/pack-v2-5.mp3?v=67e8e4b24663b9d9",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "target": "word-5",
+            "voice": "guy",
+            "kind": "word",
+            "src": "http://127.0.0.1:5186/audio/slow/guy/pack-v2-70.mp3?v=3780a040befb2145",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "target": "word-5",
+            "voice": "guy",
+            "kind": "example",
+            "src": "http://127.0.0.1:5186/audio/slow/guy/pack-v2-8.mp3?v=e93b568d6b3219b2",
+            "rate": 1,
+            "pitch": true
+          }
+        ],
+        "audio": [
+          {
+            "src": "http://127.0.0.1:5186/audio/aria/word-1.mp3?v=repository&audio=clear-20261101-v1",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/aria/word-1.mp3?v=repository&audio=clear-20261101-v1",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/aria/word-1.mp3?v=repository&audio=clear-20261101-v1",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/aria/word-1.mp3?v=repository&audio=clear-20261101-v1",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/aria/word-1.mp3?v=repository&audio=clear-20261101-v1",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/aria/word-1.mp3?v=repository&audio=clear-20261101-v1",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/slow/aria/pack-v2-110.mp3?v=041412dbed568a20",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/aria/word-1.mp3?v=repository&audio=clear-20261101-v1",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/aria/example-1.mp3?v=Open+this+repository.&audio=clear-20261101-v1",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/aria/example-1.mp3?v=Open+this+repository.&audio=clear-20261101-v1",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/aria/example-1.mp3?v=Open+this+repository.&audio=clear-20261101-v1",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/slow/aria/pack-v2-15.mp3?v=7b1458becc05f2fb",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/aria/word-1.mp3?v=repository&audio=clear-20261101-v1",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/slow/aria/pack-v2-110.mp3?v=041412dbed568a20",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/aria/example-1.mp3?v=Open+this+repository.&audio=clear-20261101-v1",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/slow/aria/pack-v2-15.mp3?v=7b1458becc05f2fb",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/aria/word-2801.mp3?v=project&audio=clear-20261101-v1",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/slow/aria/pack-v2-105.mp3?v=cde55cfa7a945662",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/aria/example-2801.mp3?v=Open+this+project.&audio=clear-20261101-v1",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/slow/aria/pack-v2-15.mp3?v=7b1458becc05f2fb",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/aria/word-3561.mp3?v=code&audio=clear-20261101-v1",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/slow/aria/pack-v2-50.mp3?v=b17a2d9be3b83226",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/aria/example-3561.mp3?v=Read+this+code.&audio=clear-20261101-v1",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/slow/aria/pack-v2-140.mp3?v=7216877aa830c50b",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/aria/word-20.mp3?v=readme&audio=clear-20261101-v1",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/slow/aria/pack-v2-108.mp3?v=c657f36b313eb00e",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/aria/example-20.mp3?v=Read+the+README+for+help.&audio=clear-20261101-v1",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/slow/aria/pack-v2-140.mp3?v=7216877aa830c50b",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/aria/word-4.mp3?v=clone&audio=clear-20261101-v1",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/slow/aria/pack-v2-49.mp3?v=68f50783d3ff013d",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/aria/example-4.mp3?v=Clone+this+project.&audio=clear-20261101-v1",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/slow/aria/pack-v2-5.mp3?v=ed738ef2fb4bc85c",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/aria/word-5.mp3?v=fork&audio=clear-20261101-v1",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/slow/aria/pack-v2-70.mp3?v=dcd5a092d46b8e94",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/aria/example-5.mp3?v=Fork+this+project+on+GitHub.&audio=clear-20261101-v1",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/slow/aria/pack-v2-8.mp3?v=7313aa12cc9342da",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/guy/word-1.mp3?v=repository&audio=clear-20261101-v1",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/guy/example-1.mp3?v=Open+this+repository.&audio=clear-20261101-v1",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/guy/word-1.mp3?v=repository&audio=clear-20261101-v1",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/slow/guy/pack-v2-110.mp3?v=5b63429e2c57238f",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/guy/example-1.mp3?v=Open+this+repository.&audio=clear-20261101-v1",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/slow/guy/pack-v2-15.mp3?v=36d9d43fb14e154b",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/guy/word-2801.mp3?v=project&audio=clear-20261101-v1",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/slow/guy/pack-v2-105.mp3?v=8c59fcfbf6af54be",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/guy/example-2801.mp3?v=Open+this+project.&audio=clear-20261101-v1",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/slow/guy/pack-v2-15.mp3?v=36d9d43fb14e154b",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/guy/word-3561.mp3?v=code&audio=clear-20261101-v1",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/slow/guy/pack-v2-50.mp3?v=6aef7e6eea2d3fee",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/guy/example-3561.mp3?v=Read+this+code.&audio=clear-20261101-v1",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/slow/guy/pack-v2-140.mp3?v=e2e6244e7135beae",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/guy/word-20.mp3?v=readme&audio=clear-20261101-v1",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/slow/guy/pack-v2-108.mp3?v=b1a7c3bff989c0f1",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/guy/example-20.mp3?v=Read+the+README+for+help.&audio=clear-20261101-v1",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/slow/guy/pack-v2-140.mp3?v=e2e6244e7135beae",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/guy/word-4.mp3?v=clone&audio=clear-20261101-v1",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/slow/guy/pack-v2-49.mp3?v=f5e244e4eb3dd447",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/guy/example-4.mp3?v=Clone+this+project.&audio=clear-20261101-v1",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/slow/guy/pack-v2-5.mp3?v=67e8e4b24663b9d9",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/guy/word-5.mp3?v=fork&audio=clear-20261101-v1",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/slow/guy/pack-v2-70.mp3?v=3780a040befb2145",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/guy/example-5.mp3?v=Fork+this+project+on+GitHub.&audio=clear-20261101-v1",
+            "rate": 1,
+            "pitch": true
+          },
+          {
+            "src": "http://127.0.0.1:5186/audio/slow/guy/pack-v2-8.mp3?v=e93b568d6b3219b2",
+            "rate": 1,
+            "pitch": true
+          }
+        ],
+        "isolatedProgress": true
+      }
+    }
+  ],
+  "failures": []
+}

@@ -1,0 +1,35 @@
+{
+  "repo": "mrrubino/wav2vec2-large-xlsr-53-l2-arctic-phoneme",
+  "revision": "2f352022fbd7b611acb76b564a7fc3d99abd4d0e",
+  "license": "apache-2.0",
+  "files": {
+    "README.md": {
+      "bytes": 1559,
+      "sha256": "6ce48537937f1af172c22a4168e061f1b176d7af37a882154dbe0a1a736720a2"
+    },
+    "config.json": {
+      "bytes": 2272,
+      "sha256": "dc982a98db27bcccccece4d8d9d07cd90bbc061f1d0c39cad8ead025f5e7a2ca"
+    },
+    "preprocessor_config.json": {
+      "bytes": 215,
+      "sha256": "8cdfd65ff4115423185a1512bdae100e2e0cd744f5b322417429944aaafd0827"
+    },
+    "special_tokens_map.json": {
+      "bytes": 96,
+      "sha256": "f17f705b191ddb9aef0b42e40869d325d79b2a1e229e0d51d72698b5d3e4fc90"
+    },
+    "tokenizer_config.json": {
+      "bytes": 354,
+      "sha256": "0ee18a0ec05d310ae974a0780ce3e9f023e53acf14a34f70043f19d0d9f71ebc"
+    },
+    "vocab.json": {
+      "bytes": 458,
+      "sha256": "a521cdd39d6dc3a772abe60a97c88a5ca077672875020351e784a7273a6b97aa"
+    },
+    "pytorch_model.bin": {
+      "bytes": 1262059949,
+      "sha256": "618a134bfb2ea15d8f2df8eb58fae1224d24e30c57bbb0dbdfce5ab7118099f7"
+    }
+  }
+}

@@ -8,6 +8,7 @@ $output = Join-Path $root 'artifacts\local-launcher'
 New-Item -ItemType Directory -Path $work, $output -Force | Out-Null
 $results = @()
 $testServerId = $null
+$npmServer = $null
 $foreign = $null
 $launcherIds = @()
 $defaultIds = @(Get-NetTCPConnection -LocalPort 5186 -State Listen -ErrorAction SilentlyContinue | Select-Object -ExpandProperty OwningProcess -Unique)
@@ -58,17 +59,30 @@ try {
     Assert-True ((@(Listener-Ids $port) -join ',') -eq "$testServerId") 'repeat startup reuses the same process'
     $results += @{ name = 'cold concurrent startup and repeat reuse'; passed = $true; port = $port; pid = $testServerId }
 
+    $npmPort = Free-Port
+    $npmEntry = Join-Path $root 'node_modules\.bin\\..\vite\bin\vite.js'
+    $npmServer = Start-Process -FilePath (Get-Command node.exe).Source -ArgumentList @(('"{0}"' -f $npmEntry), '--host', 'localhost', '--port', $npmPort, '--strictPort') -WorkingDirectory $root -WindowStyle Hidden -RedirectStandardOutput (Join-Path $work 'npm-server.log') -RedirectStandardError (Join-Path $work 'npm-server-error.log') -PassThru
+    $deadline = (Get-Date).AddSeconds(15)
+    while (-not (Listener-Ids $npmPort)) {
+        if ($npmServer.HasExited -or (Get-Date) -gt $deadline) { throw 'npm-style Vite fixture did not start.' }
+        Start-Sleep -Milliseconds 100
+    }
+    $reuseNpm = Run-Launcher $npmPort 'npm-path'
+    Assert-True ((Wait-Launcher $reuseNpm) -eq 0) 'npm shim path with parent segments is recognized'
+    Assert-True ((@(Listener-Ids $npmPort) -join ',') -eq "$($npmServer.Id)") 'npm-started server is reused without restart'
+    $results += @{ name = 'npm Windows shim path reuse'; passed = $true; port = $npmPort; pid = $npmServer.Id }
+
     $foreignPort = Free-Port
     $fixture = Join-Path $work 'foreign-server.cjs'
     [IO.File]::WriteAllText($fixture, "require('node:http').createServer((req,res)=>res.end('<title>词见</title><script src=`"src/main.tsx`"></script>')).listen(Number(process.argv[2]),'127.0.0.1');")
-    $foreign = Start-Process -FilePath (Get-Command node.exe).Source -ArgumentList @(('"{0}"' -f $fixture), $foreignPort) -WorkingDirectory $work -WindowStyle Hidden -PassThru
+    $foreign = Start-Process -FilePath (Get-Command node.exe).Source -ArgumentList @(('"{0}"' -f $fixture), $foreignPort, ('"{0}"' -f (Join-Path $root 'node_modules\vite\bin\vite.js'))) -WorkingDirectory $work -WindowStyle Hidden -PassThru
     $deadline = (Get-Date).AddSeconds(10)
     while (-not (Listener-Ids $foreignPort)) {
         if ($foreign.HasExited -or (Get-Date) -gt $deadline) { throw 'Foreign-server fixture did not start.' }
         Start-Sleep -Milliseconds 100
     }
     $blocked = Run-Launcher $foreignPort 'occupied'
-    Assert-True ((Wait-Launcher $blocked) -ne 0) 'a lookalike website from another process is rejected'
+    Assert-True ((Wait-Launcher $blocked) -ne 0) 'a lookalike website is rejected even with the Vite path in a later argument'
     $message = Get-Content -LiteralPath (Join-Path $env:LOCALAPPDATA "CodeWords-Local\test-$foreignPort\startup-error.log") -Raw -Encoding UTF8
     Assert-True ($message -match '本地端口' -and $message -match '占用') 'port conflict has a readable Chinese diagnostic'
     Assert-True ((@(Listener-Ids $foreignPort) -join ',') -eq "$($foreign.Id)") 'conflicting process is preserved'
@@ -92,5 +106,11 @@ try {
     if ($foreign) {
         $owner = Get-CimInstance Win32_Process -Filter ("ProcessId={0}" -f $foreign.Id) -ErrorAction SilentlyContinue
         if ($owner -and $owner.CommandLine.Contains($fixture)) { Stop-Process -Id $foreign.Id -ErrorAction SilentlyContinue }
+    }
+    if ($npmServer) {
+        $owner = Get-CimInstance Win32_Process -Filter ("ProcessId={0}" -f $npmServer.Id) -ErrorAction SilentlyContinue
+        if ($owner -and $owner.CommandLine.Contains($npmEntry) -and $owner.CommandLine -match ("--port\s+{0}\b" -f $npmPort)) {
+            Stop-Process -Id $npmServer.Id -ErrorAction SilentlyContinue
+        }
     }
 }

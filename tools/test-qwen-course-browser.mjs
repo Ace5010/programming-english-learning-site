@@ -5,7 +5,6 @@ import { createRequire } from 'node:module';
 import path from 'node:path';
 import { mkdir, writeFile } from 'node:fs/promises';
 import { adaptiveDailyLessons } from '../src/dailyPractice.ts';
-import { adaptiveProgrammingLessons } from '../src/programmingPractice.ts';
 import { createDailyProgress, createDailySession } from '../src/dailyProgress.ts';
 
 const require = createRequire(import.meta.url);
@@ -16,13 +15,13 @@ assert.ok(url, 'Set CODEWORDS_TEST_URL to the running site.');
 const cases = realService ? [
   { section: 'daily', id: 'goodbye', wav: 'goodbye-recorder-test.wav', recordMs: 2500 },
   { section: 'daily', id: 'whats-your-name', wav: 'qwen-name-recorder.wav', recordMs: 3000 },
-  { section: 'programming', id: 'example-7', wav: 'qwen-pull-recorder.wav', recordMs: 4000 },
+  // Programming word-check courses no longer offer speaking questions.
 ] : [{ section: 'daily', id: 'goodbye', wav: 'goodbye-recorder-test.wav', recordMs: 2500 }];
-const output = path.resolve('artifacts/asr-replacement-20261004');
+const output = path.resolve(process.env.CODEWORDS_TEST_OUTPUT || 'artifacts/asr-replacement-20261004');
 await mkdir(output, { recursive: true });
 const reports = [];
 for (const fixture of cases) {
-const lessons = fixture.section === 'daily' ? adaptiveDailyLessons : adaptiveProgrammingLessons;
+const lessons = adaptiveDailyLessons;
 const candidates = lesson => [...lesson.exercises, ...(lesson.practice ?? [])];
 const lesson = lessons.find(item => candidates(item).some(task => task.kind === 'speak' && task.readAloud?.some(phrase => phrase.id === fixture.id) && (!task.speechActivity || task.speechActivity === 'repeat')));
 assert.ok(lesson, `No authored speaking task for ${fixture.id}`);
@@ -74,6 +73,8 @@ try {
     sessionStorage.setItem('qwen-course-seeded', '1');
   }, { progress: seed, section: fixture.section, storageKey });
   await page.goto(url, { waitUntil: 'domcontentloaded' });
+  const optionalPractice = page.getByText('跟读练习（可选）', { exact: true });
+  if (await optionalPractice.count()) await optionalPractice.click();
   await page.getByText('使用本机 Qwen3-ASR 识别', { exact: false }).waitFor();
   assert.equal(requests.some(request => request.method === 'POST'), false, 'No automatic recording');
   if (!realService) assert.ok(sessionProbes >= 3, 'A model becoming ready after page load is discovered');

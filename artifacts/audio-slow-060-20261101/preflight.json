@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "manifestSha256": "6e953b4ebcd3185732c96fb88213c2a8916ea499de65135815a7a0e7b47a3216",
+  "packsDecoded": 302,
+  "slowBounds": 11980,
+  "normalContextualBounds": 28,
+  "synthesisRate": "-40%",
+  "sourceRates": [
+    0.6
+  ]
+}

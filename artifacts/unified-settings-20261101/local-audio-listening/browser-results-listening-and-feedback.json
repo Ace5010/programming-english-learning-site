@@ -1,0 +1,82 @@
+{
+  "baseURL": "http://localhost:5186/",
+  "production": false,
+  "loadedApplicationScripts": [],
+  "testedAt": "2026-11-01T03:27:35.865Z",
+  "scenarios": [
+    {
+      "name": "daily listening and feedback keep both local speeds and answer draft",
+      "durationMs": 3822
+    }
+  ],
+  "failures": [
+    {
+      "name": "programming listening and feedback keep both local speeds and answer draft",
+      "error": "locator.waitFor: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#programming-content').locator('.daily-question') to be visible\u001b[22m\n\n    at D:\\vibe项目\\词见\\tools\\test-local-audio-controls-browser.mjs:187:48\n    at async file:///D:/vibe%E9%A1%B9%E7%9B%AE/%E8%AF%8D%E8%A7%81/tools/test-local-audio-controls-browser.mjs:337:24"
+    }
+  ],
+  "browserErrors": [],
+  "playbackEvidence": [
+    {
+      "label": "daily listening normal",
+      "id": 6,
+      "type": "playing",
+      "src": "http://localhost:5186/audio/daily/aria/daily-word-i.mp3?v=I&audio=clear-20261101-v1",
+      "rate": 1,
+      "duration": 1.872,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "daily listening slow",
+      "id": 25,
+      "type": "playing",
+      "src": "http://localhost:5186/audio/slow/aria/pack-v2-10.mp3?v=a78dc6102c827565",
+      "rate": 1,
+      "duration": 42.23,
+      "currentTime": 10.04,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "daily feedback normal",
+      "id": 6,
+      "type": "playing",
+      "src": "http://localhost:5186/audio/daily/aria/daily-word-i.mp3?v=I&audio=clear-20261101-v1",
+      "rate": 1,
+      "duration": 1.872,
+      "currentTime": 0.004713,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "daily feedback slow",
+      "id": 26,
+      "type": "playing",
+      "src": "http://localhost:5186/audio/slow/aria/pack-v2-10.mp3?v=a78dc6102c827565",
+      "rate": 1,
+      "duration": 42.23,
+      "currentTime": 10.04,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "daily feedback normal after refresh",
+      "id": 6,
+      "type": "playing",
+      "src": "http://localhost:5186/audio/daily/aria/daily-word-i.mp3?v=I&audio=clear-20261101-v1",
+      "rate": 1,
+      "duration": 1.872,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    }
+  ],
+  "microphoneTested": false
+}

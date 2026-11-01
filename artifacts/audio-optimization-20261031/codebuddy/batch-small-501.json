@@ -1,0 +1,121 @@
+{
+  "batch": "small-501",
+  "firstId": 501,
+  "lastId": 750,
+  "submitted": 250,
+  "exitCode": 0,
+  "timedOut": false,
+  "complete": true,
+  "elapsedSeconds": 90.852,
+  "records": [
+    {
+      "model": "deepseek-v4.1-flash",
+      "usage": {
+        "prompt_tokens": 15247,
+        "completion_tokens": 14428,
+        "total_tokens": 29675,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 13648,
+          "rejected_prediction_tokens": 0,
+          "cached_tokens": 0
+        },
+        "prompt_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": 0,
+          "cached_tokens": 7808
+        },
+        "prompt_cache_hit_tokens": 7808,
+        "prompt_cache_miss_tokens": 7439,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 0,
+        "prompt_cache_write_tokens": 0,
+        "completion_thinking_tokens": 13648,
+        "credit": 0.93,
+        "cached_tokens": 0
+      },
+      "requestId": "01a194f58d337cd8874dda8ca4846df3"
+    }
+  ],
+  "result": {
+    "reviewedCount": 250,
+    "findings": [
+      {
+        "id": 512,
+        "word": "foreground",
+        "issue": "The noun sense (前台) stresses the first syllable; the verb sense is stress-shifted.",
+        "intendedIPA": "/ˈfɔːr.ɡraʊnd/",
+        "context": "The app runs in the foreground.",
+        "confidence": "medium"
+      },
+      {
+        "id": 527,
+        "word": "GeoAddress",
+        "issue": "This camel-case proprietary spelling should be read as 'geo address', not spelled out letter by letter.",
+        "intendedIPA": "/ˈdʒiː.oʊ.əˌdres/",
+        "context": "The map uses GeoAddress to find the building.",
+        "confidence": "medium"
+      },
+      {
+        "id": 540,
+        "word": "Guo Biao (GB) code",
+        "issue": "GB here means 国标, not gigabyte; read 'Guo Biao' plus the letters G-B.",
+        "intendedIPA": "/ˌɡwoʊ ˈbjaʊ ˌdʒiː ˈbiː koʊd/",
+        "context": "The Guo Biao (GB) code covers Chinese characters.",
+        "confidence": "medium"
+      },
+      {
+        "id": 574,
+        "word": "iAM Smart",
+        "issue": "The brand is read as the phrase 'I am smart', not letter by letter.",
+        "intendedIPA": "/aɪ æm smɑːt/",
+        "context": "Use iAM Smart to log in to the service.",
+        "confidence": "medium"
+      },
+      {
+        "id": 613,
+        "word": "interlock",
+        "issue": "The noun 联锁 has first-syllable stress; the verb is stress-shifted.",
+        "intendedIPA": "/ˈɪn.tɚ.lɑːk/",
+        "context": "The interlock stops the machine when the door opens.",
+        "confidence": "medium"
+      },
+      {
+        "id": 627,
+        "word": "IT as utility",
+        "issue": "IT is the acronym /ˌaɪ ˈtiː/, not the pronoun 'it'.",
+        "intendedIPA": "/ˌaɪ ˈtiː æz juːˈtɪl.ə.ti/",
+        "context": "The report describes IT as utility, like electricity from a grid.",
+        "confidence": "high"
+      },
+      {
+        "id": 649,
+        "word": "live run",
+        "issue": "live is /laɪv/ here (production), not /lɪv/.",
+        "intendedIPA": "/laɪv rʌn/",
+        "context": "The team moved the service to a live run.",
+        "confidence": "high"
+      },
+      {
+        "id": 652,
+        "word": "local area network (LAN)",
+        "issue": "LAN is read as a word /læn/, not spelled L-A-N.",
+        "intendedIPA": "/ˌloʊ.kəl ˈer.i.ə ˈnet.wɝːk læn/",
+        "context": "The office local area network (LAN) is down.",
+        "confidence": "high"
+      },
+      {
+        "id": 731,
+        "word": "multiplexer (MUX)",
+        "issue": "MUX is read as a word /mʌks/, not spelled M-U-X.",
+        "intendedIPA": "/ˈmʌl.tɪ.plek.sɚ mʌks/",
+        "context": "The multiplexer (MUX) combines several signals into one.",
+        "confidence": "high"
+      }
+    ],
+    "notes": "Reviewed all 250 entries (501–750). Entry 687's IPA /ˈmes.ɪdʒ/ matches the noun sense; empty phonetic fields were not counted as mismatches. Bracketed qualifiers in headwords (e.g., 515, 672, 678, 684, 709) are editorial labels and should not be voiced. Ordinary US/UK variants were not flagged. Entry 575 repeats the iAM Smart issue; entry 618's Chinese meaning appears to describe GAC rather than ICANN, which needs a content check outside this pronunciation review."
+  }
+}

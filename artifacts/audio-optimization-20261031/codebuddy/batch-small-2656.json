@@ -1,0 +1,297 @@
+{
+  "batch": "small-2656",
+  "firstId": 2656,
+  "lastId": 2905,
+  "submitted": 250,
+  "exitCode": 0,
+  "timedOut": false,
+  "complete": true,
+  "elapsedSeconds": 62.245,
+  "records": [
+    {
+      "model": "deepseek-v4.1-flash",
+      "usage": {
+        "prompt_tokens": 18663,
+        "completion_tokens": 10563,
+        "total_tokens": 29226,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 8684,
+          "rejected_prediction_tokens": 0,
+          "cached_tokens": 0
+        },
+        "prompt_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": 0,
+          "cached_tokens": 7808
+        },
+        "prompt_cache_hit_tokens": 7808,
+        "prompt_cache_miss_tokens": 10855,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 0,
+        "prompt_cache_write_tokens": 0,
+        "completion_thinking_tokens": 8684,
+        "credit": 0.76,
+        "cached_tokens": 0
+      },
+      "requestId": "01a194eacd317206b9cf2471c050626c"
+    }
+  ],
+  "result": {
+    "reviewedCount": 250,
+    "findings": [
+      {
+        "id": 2658,
+        "word": "unable",
+        "issue": "The IPA /ˈebl/ lacks the FACE diphthong; it reads as “en-ebl” rather than /ʌnˈeɪbl/.",
+        "intendedIPA": "/ʌnˈeɪbl/",
+        "context": "He was unable to attend the meeting.",
+        "confidence": "high"
+      },
+      {
+        "id": 2665,
+        "word": "pro",
+        "issue": "The phonetic field is the spelling, not IPA; /pro/ is read as a short-o syllable.",
+        "intendedIPA": "/proʊ/",
+        "context": "She turned pro after college.",
+        "confidence": "high"
+      },
+      {
+        "id": 2672,
+        "word": "pain",
+        "issue": "The IPA /pen/ is the word “pen”; the verb needs the FACE diphthong.",
+        "intendedIPA": "/peɪn/",
+        "context": "The injury will pain him for weeks.",
+        "confidence": "high"
+      },
+      {
+        "id": 2674,
+        "word": "most",
+        "issue": "The phonetic field is the spelling; /most/ lacks the GOAT diphthong.",
+        "intendedIPA": "/moʊst/",
+        "context": "This is the most useful tool in the kit.",
+        "confidence": "high"
+      },
+      {
+        "id": 2680,
+        "word": "hey",
+        "issue": "The IPA /he/ lacks the FACE diphthong and reads like “heh”.",
+        "intendedIPA": "/heɪ/",
+        "context": "Hey, wait for me!",
+        "confidence": "high"
+      },
+      {
+        "id": 2685,
+        "word": "alien",
+        "issue": "Both listed variants start with /e/ rather than the FACE diphthong /eɪ/.",
+        "intendedIPA": "/ˈeɪliən/",
+        "context": "The customs felt alien to her.",
+        "confidence": "medium"
+      },
+      {
+        "id": 2717,
+        "word": "stage",
+        "issue": "The IPA /stedʒ/ uses the DRESS vowel; stage has the FACE diphthong.",
+        "intendedIPA": "/steɪdʒ/",
+        "context": "She walked onto the stage.",
+        "confidence": "high"
+      },
+      {
+        "id": 2719,
+        "word": "waiter",
+        "issue": "The IPA /ˈwetɚ/ uses /e/ instead of /eɪ/.",
+        "intendedIPA": "/ˈweɪtər/",
+        "context": "The waiter brought our coffee.",
+        "confidence": "high"
+      },
+      {
+        "id": 2723,
+        "word": "hold",
+        "issue": "The phonetic field is the spelling; /hold/ lacks the GOAT diphthong.",
+        "intendedIPA": "/hoʊld/",
+        "context": "Hold the door open, please.",
+        "confidence": "high"
+      },
+      {
+        "id": 2724,
+        "word": "later",
+        "issue": "The IPA /ˈletɚ/ uses /e/ instead of the FACE diphthong /eɪ/.",
+        "intendedIPA": "/ˈleɪtər/",
+        "context": "I’ll call you later.",
+        "confidence": "high"
+      },
+      {
+        "id": 2727,
+        "word": "take",
+        "issue": "The IPA /tek/ reads like “tech”; take needs the FACE diphthong.",
+        "intendedIPA": "/teɪk/",
+        "context": "Take an umbrella with you.",
+        "confidence": "high"
+      },
+      {
+        "id": 2732,
+        "word": "hole",
+        "issue": "The IPA /hol/ lacks the GOAT diphthong.",
+        "intendedIPA": "/hoʊl/",
+        "context": "There is a hole in my sock.",
+        "confidence": "high"
+      },
+      {
+        "id": 2774,
+        "word": "native",
+        "issue": "The IPA /ˈnetɪv/ uses /e/ instead of /eɪ/.",
+        "intendedIPA": "/ˈneɪtɪv/",
+        "context": "He returned to his native country.",
+        "confidence": "high"
+      },
+      {
+        "id": 2775,
+        "word": "make",
+        "issue": "The IPA /mek/ uses /e/ instead of the FACE diphthong /eɪ/.",
+        "intendedIPA": "/meɪk/",
+        "context": "Make a list before you shop.",
+        "confidence": "high"
+      },
+      {
+        "id": 2776,
+        "word": "microwave",
+        "issue": "The final syllable /wev/ lacks the FACE diphthong; the two primary stress marks are also unnecessary.",
+        "intendedIPA": "/ˈmaɪkrəweɪv/",
+        "context": "Heat the soup in the microwave.",
+        "confidence": "medium"
+      },
+      {
+        "id": 2789,
+        "word": "labor",
+        "issue": "The IPA /ˈlebɚ/ uses /e/ instead of the FACE diphthong /eɪ/.",
+        "intendedIPA": "/ˈleɪbər/",
+        "context": "The job requires hard labor.",
+        "confidence": "high"
+      },
+      {
+        "id": 2799,
+        "word": "agent",
+        "issue": "The IPA /ˈedʒənt/ uses /e/ instead of the FACE diphthong /eɪ/.",
+        "intendedIPA": "/ˈeɪdʒənt/",
+        "context": "Our agent booked the flight.",
+        "confidence": "high"
+      },
+      {
+        "id": 2801,
+        "word": "project",
+        "issue": "The example uses the noun, stressed on the first syllable; the entry lists the verb first and the noun second without a primary stress mark.",
+        "intendedIPA": "/ˈprɑːdʒɛkt/",
+        "context": "Open this project in the editor.",
+        "confidence": "high"
+      },
+      {
+        "id": 2842,
+        "word": "educate",
+        "issue": "The final syllable /ket/ lacks the FACE diphthong; the verb ending is /keɪt/.",
+        "intendedIPA": "/ˈedʒəkeɪt/",
+        "context": "Schools should educate children about money.",
+        "confidence": "high"
+      },
+      {
+        "id": 2845,
+        "word": "poster",
+        "issue": "The IPA /ˈpostɚ/ lacks the GOAT diphthong.",
+        "intendedIPA": "/ˈpoʊstər/",
+        "context": "She hung a poster on the wall.",
+        "confidence": "high"
+      },
+      {
+        "id": 2846,
+        "word": "throat",
+        "issue": "The IPA /θrot/ lacks the GOAT diphthong.",
+        "intendedIPA": "/θroʊt/",
+        "context": "My throat hurts.",
+        "confidence": "high"
+      },
+      {
+        "id": 2694,
+        "word": "tell",
+        "issue": "The phonetic field is empty.",
+        "intendedIPA": "/tel/",
+        "context": "Please tell me the truth.",
+        "confidence": "high"
+      },
+      {
+        "id": 2875,
+        "word": "aid",
+        "issue": "The IPA /ed/ lacks the FACE diphthong.",
+        "intendedIPA": "/eɪd/",
+        "context": "This tool will aid your recovery.",
+        "confidence": "high"
+      },
+      {
+        "id": 2877,
+        "word": "aim",
+        "issue": "The IPA /em/ lacks the FACE diphthong.",
+        "intendedIPA": "/eɪm/",
+        "context": "Our aim is to finish by noon.",
+        "confidence": "high"
+      },
+      {
+        "id": 2882,
+        "word": "polar",
+        "issue": "The IPA /ˈpolɚ/ lacks the GOAT diphthong.",
+        "intendedIPA": "/ˈpoʊlər/",
+        "context": "The polar bear swam across the ice.",
+        "confidence": "high"
+      },
+      {
+        "id": 2885,
+        "word": "shake",
+        "issue": "The IPA /ʃek/ uses the DRESS vowel; shake has the FACE diphthong.",
+        "intendedIPA": "/ʃeɪk/",
+        "context": "Shake the bottle before opening it.",
+        "confidence": "high"
+      },
+      {
+        "id": 2887,
+        "word": "cage",
+        "issue": "The IPA /kedʒ/ uses /e/ instead of the FACE diphthong /eɪ/.",
+        "intendedIPA": "/keɪdʒ/",
+        "context": "The bird escaped from its cage.",
+        "confidence": "high"
+      },
+      {
+        "id": 2895,
+        "word": "pronoun",
+        "issue": "The IPA /ˈpronaʊn/ lacks the GOAT diphthong in the first syllable.",
+        "intendedIPA": "/ˈproʊnaʊn/",
+        "context": "In this sentence, the pronoun refers to the teacher.",
+        "confidence": "high"
+      },
+      {
+        "id": 2892,
+        "word": "read",
+        "issue": "Two readings are listed without disambiguation; the example is the present-tense imperative /riːd/, not past /rɛd/.",
+        "intendedIPA": "/riːd/",
+        "context": "Read this book before class.",
+        "confidence": "high"
+      },
+      {
+        "id": 2849,
+        "word": "French",
+        "issue": "The phonetic field is empty.",
+        "intendedIPA": "/frɛntʃ/",
+        "context": "She teaches French at school.",
+        "confidence": "high"
+      },
+      {
+        "id": 2899,
+        "word": "France",
+        "issue": "The phonetic field is empty.",
+        "intendedIPA": "/fræns/",
+        "context": "France shares a border with Belgium.",
+        "confidence": "high"
+      }
+    ],
+    "notes": "No audio was supplied; review is based on the text and IPA only. Ordinary US/UK variants such as route, adult, toward, theatre/theater and laboratory were not flagged. Empty phonetic fields for tell, French and France were counted as IPA mismatches."
+  }
+}

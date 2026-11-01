@@ -1,0 +1,104 @@
+/* Compact library cards share one grid across both learning sections. */
+:root[data-theme] .library-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 12px;
+  margin: 0;
+  padding: 4px 22px 22px;
+  list-style: none;
+  border: 0;
+}
+.library-grid > li { display: contents; }
+.library-card {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  gap: 8px;
+  min-width: 0;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--surface);
+}
+.library-card:hover, .library-card.playing { border-color: var(--accent-line); background: var(--accent-soft); }
+.library-card-open {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+  width: 100%;
+  min-height: 44px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  text-align: left;
+}
+.library-card-meaning { min-width: 0; font-size: 20px; font-weight: 700; line-height: 1.4; overflow-wrap: anywhere; }
+.library-card-open > .icon { margin-top: 5px; color: var(--muted); transform: rotate(-90deg); }
+.library-card-reading { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 8px; min-width: 0; }
+.library-card-word { display: flex; flex: 1 1 100px; align-items: center; gap: 8px; min-width: 0; min-height: 44px; padding: 0; border: 0; background: transparent; text-align: left; }
+.library-card-word strong { min-width: 0; font-size: 18px; font-weight: 550; line-height: 1.45; overflow-wrap: anywhere; }
+.library-card-word .icon { color: var(--muted); width: 18px; height: 18px; }
+.library-card-word.playing .icon { color: var(--accent); animation: audio-breathe .8s ease-in-out infinite alternate; }
+.library-card .slow-button { min-height: 44px; min-width: 44px; }
+:root[data-theme] .library-card button:hover { translate: none; }
+
+.library-dialog {
+  position: fixed;
+  width: min(600px, calc(100vw - 28px));
+  max-height: calc(100dvh - 28px);
+  margin: auto;
+  padding: 24px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  color: var(--ink);
+  background: var(--surface);
+  box-shadow: 0 20px 80px #1a34452b;
+}
+.library-dialog::backdrop { background: #1e34445c; backdrop-filter: blur(3px); }
+.library-dialog-close { position: absolute; z-index: 1; top: 12px; right: 12px; display: grid; place-items: center; width: 44px; height: 44px; padding: 0; border: 0; border-radius: 50%; color: var(--muted); background: var(--surface-2); }
+:root[data-theme] .library-dialog .word-card { grid-template-columns: minmax(0, 1fr); align-items: stretch; gap: 18px; padding: 0; border: 0; background: transparent; }
+:root[data-theme] .library-dialog .word-card::before { display: none; }
+:root[data-theme] .library-dialog .word-copy { grid-column: 1; grid-row: 1; padding-right: 36px; }
+:root[data-theme] .library-dialog .word-card .meaning { font-size: 24px; font-weight: 700; }
+:root[data-theme] .library-dialog .word-card .card-actions { grid-column: 1; grid-row: 3; flex-direction: row; flex-wrap: wrap; align-items: center; justify-content: flex-start; max-width: none; }
+:root[data-theme] .library-dialog .word-card > .example { grid-column: 1; grid-row: 2; display: block; position: relative; padding: 16px; }
+:root[data-theme] .library-dialog .example > button:first-child { padding: 0 0 52px; }
+:root[data-theme] .library-dialog .example > button:first-child > .icon { top: auto; right: auto; left: 0; bottom: 12px; width: 20px; height: 20px; }
+:root[data-theme] .library-dialog .example > .slow-button { position: absolute; left: 58px; bottom: 16px; }
+:root[data-theme] .library-dialog .slow-button, :root[data-theme] .library-dialog .inline-example > .slow-button, .library-dialog .daily-inline-slow, .library-dialog .favorite { min-width: 44px; min-height: 44px; }
+.library-dialog .daily-inline-slow { padding: 5px 10px; border-color: var(--line); background: var(--surface); font-size: 15px; }
+.library-dialog .word-learning-status { font-size: 15px; }
+:root[data-theme] .library-dialog .daily-expression { display: flex; flex-direction: column; align-items: stretch; gap: 18px; padding: 0; border: 0; }
+.library-dialog .daily-expression-copy { flex-basis: auto; padding-right: 36px; }
+:root[data-theme] .library-dialog .daily-meaning { font-size: 24px; font-weight: 700; }
+.library-dialog .daily-expression-state { flex-direction: row; flex-wrap: wrap; justify-content: flex-start; gap: 8px 12px; white-space: normal; }
+.library-dialog .daily-expression-state .daily-expression-star { margin-left: auto; }
+.library-dialog .daily-inline-reading { flex-wrap: wrap; }
+.library-dialog .daily-expression-content { flex-direction: row; align-items: center; }
+.library-dialog .daily-expression-content, .library-dialog .word-button { min-height: 44px; }
+.library-dialog .daily-expression-content strong { overflow-wrap: anywhere; }
+.library-detail-example { position: relative; padding: 16px; border-radius: 10px; background: var(--surface-2); }
+.library-detail-example > button:first-child { position: relative; display: flex; flex-direction: column; align-items: flex-start; gap: 3px; width: 100%; padding: 0 0 52px; border: 0; background: transparent; text-align: left; font-size: 16px; line-height: 1.55; }
+.library-detail-example > button:first-child > span { max-width: 100%; overflow-wrap: anywhere; }
+.library-detail-example > button:first-child > [lang=en] { color: var(--ink-soft); }
+.library-detail-example > button:first-child > .icon { position: absolute; bottom: 12px; left: 0; color: var(--muted); }
+.library-detail-example > .daily-inline-slow { position: absolute; bottom: 16px; left: 58px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); padding: 5px 10px; }
+.library-detail-example > .playing .icon { color: var(--accent); animation: audio-breathe .8s ease-in-out infinite alternate; }
+.daily-library .daily-library-tools { margin-bottom: 18px; }
+
+@media (min-width: 1600px) {
+  :root[data-theme] .library-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+}
+@media (max-width: 1199px) {
+  :root[data-theme] .library-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (max-width: 899px) {
+  :root[data-theme] .library-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 599px) {
+  :root[data-theme] .library-grid { grid-template-columns: minmax(0, 1fr); padding: 4px 14px 14px; gap: 10px; }
+  .library-dialog { padding: 20px; }
+}

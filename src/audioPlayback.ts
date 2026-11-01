@@ -107,7 +107,7 @@ export class AudioPlayback {
     }
     return audio;
   }
-  play(url: string, rate: number, key: string) {
+  play(url: string, rate: number, key: string, recoverUnexpectedPause = false) {
     if (this.current?.url === url && this.current.rate === rate && this.current.key === key) {
       if (this.current.startedAt === undefined || Date.now() - this.current.startedAt < 750) return;
     }
@@ -129,7 +129,7 @@ export class AudioPlayback {
       if (this.current !== request || request.transport !== 'native') { native.stop(); return; }
       request.native = native;
       if (!request.playing) this.watch(request, 4500);
-    } else if (request.transport !== 'web') this.playWeb(request);
+    } else if (request.transport !== 'web') this.playWeb(request, recoverUnexpectedPause);
   }
   private playing(request: Request) {
     if (this.current !== request) return;
@@ -147,7 +147,7 @@ export class AudioPlayback {
     request.playing = false; request.startedAt = undefined; request.positionMs = 0; this.notify('');
     this.playWeb(request);
   }
-  private playWeb(request: Request) {
+  private playWeb(request: Request, recoverUnexpectedPause = false) {
     if (this.current !== request) return;
     request.transport = 'web';
     try {
@@ -158,7 +158,12 @@ export class AudioPlayback {
       audio.onplaying = () => this.playing(request);
       audio.ontimeupdate = () => this.progress(request, audio.currentTime * 1000);
       audio.onended = () => { if (this.current === request) this.stop(); };
-      audio.onpause = () => { if (this.current === request && audio.paused) this.stop(); };
+      audio.onpause = () => {
+        if (this.current !== request || !audio.paused || audio.ended) return;
+        // Explicit stop() removes handlers before pausing. Only an external
+        // interruption reaches here; completion cues can retry that failure.
+        if (recoverUnexpectedPause) this.fail(request); else this.stop();
+      };
       audio.onerror = () => this.fail(request);
       audio.onwaiting = () => {
         if (this.current !== request) return;

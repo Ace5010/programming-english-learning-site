@@ -1,0 +1,54 @@
+[
+  {
+    "url": "https://programming-english-learning-site.pages.dev/",
+    "width": 1440,
+    "css": [
+      "https://programming-english-learning-site.pages.dev/assets/index-D-oMtSX8.css"
+    ],
+    "aligned": true,
+    "subgrid": "subgrid [] [] [] []",
+    "columns": 3,
+    "cards": 12,
+    "examples": 12,
+    "serviceWorkerControlled": false
+  },
+  {
+    "url": "https://programming-english-learning-site.pages.dev/",
+    "width": 1280,
+    "css": [
+      "https://programming-english-learning-site.pages.dev/assets/index-D-oMtSX8.css"
+    ],
+    "aligned": true,
+    "subgrid": "subgrid [] [] [] []",
+    "columns": 3,
+    "cards": 12,
+    "examples": 12,
+    "serviceWorkerControlled": false
+  },
+  {
+    "url": "https://programming-english-learning-site.pages.dev/",
+    "width": 1024,
+    "css": [
+      "https://programming-english-learning-site.pages.dev/assets/index-D-oMtSX8.css"
+    ],
+    "aligned": true,
+    "subgrid": "subgrid [] [] [] []",
+    "columns": 2,
+    "cards": 12,
+    "examples": 12,
+    "serviceWorkerControlled": false
+  },
+  {
+    "url": "https://programming-english-learning-site.pages.dev/",
+    "width": 390,
+    "css": [
+      "https://programming-english-learning-site.pages.dev/assets/index-D-oMtSX8.css"
+    ],
+    "aligned": true,
+    "subgrid": "subgrid [] [] [] []",
+    "columns": 1,
+    "cards": 12,
+    "examples": 12,
+    "serviceWorkerControlled": false
+  }
+]

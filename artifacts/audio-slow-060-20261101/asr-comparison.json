@@ -1,0 +1,101 @@
+{
+  "currentScreened": 1126,
+  "previousAvailable": 1126,
+  "comparable": 1126,
+  "beforeExact": 1033,
+  "afterExact": 1026,
+  "newNonExact": [
+    {
+      "key": "aria:Barrett",
+      "expected": "Barrett",
+      "before": "Barrett.",
+      "after": "Bear it."
+    },
+    {
+      "key": "aria:OA",
+      "expected": "O A",
+      "before": "O a.",
+      "after": "Oh, a."
+    },
+    {
+      "key": "aria:UN",
+      "expected": "UN",
+      "before": "Un.",
+      "after": "An."
+    },
+    {
+      "key": "aria:between",
+      "expected": "between",
+      "before": "Between.",
+      "after": "The train."
+    },
+    {
+      "key": "aria:highly",
+      "expected": "highly",
+      "before": "Highly.",
+      "after": "Hi, Lee."
+    },
+    {
+      "key": "aria:tutorial@f-d0013c2e0a387e4c",
+      "expected": "bit",
+      "before": "Bit.",
+      "after": "Bet."
+    },
+    {
+      "key": "aria:van",
+      "expected": "van",
+      "before": "Van.",
+      "after": "Then."
+    },
+    {
+      "key": "guy:UN",
+      "expected": "UN",
+      "before": "Un.",
+      "after": "On."
+    },
+    {
+      "key": "guy:thing",
+      "expected": "thing",
+      "before": "Thing.",
+      "after": "Sing."
+    },
+    {
+      "key": "guy:tutorial@f-3c917533deebcc83",
+      "expected": "bout",
+      "before": "bout.",
+      "after": "About."
+    },
+    {
+      "key": "guy:tutorial@f-ca5bcec12f716f44",
+      "expected": "bat",
+      "before": "Bat.",
+      "after": "That."
+    }
+  ],
+  "newExact": [
+    {
+      "key": "aria:kiosk",
+      "expected": "kiosk",
+      "before": "He asked.",
+      "after": "Kiosk."
+    },
+    {
+      "key": "aria:tutorial@f-ba78973ddcf98d4e",
+      "expected": "are",
+      "before": "R.",
+      "after": "Are."
+    },
+    {
+      "key": "guy:beneath",
+      "expected": "beneath",
+      "before": "They need.",
+      "after": "Beneath."
+    },
+    {
+      "key": "guy:tutorial@f-18679f10e5067880",
+      "expected": "fool",
+      "before": "Four.",
+      "after": "Fool."
+    }
+  ]
+}

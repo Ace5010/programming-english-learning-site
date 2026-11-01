@@ -1,0 +1,77 @@
+{
+  "baseURL": "http://localhost:5186/",
+  "production": false,
+  "loadedApplicationScripts": [],
+  "testedAt": "2026-11-01T03:28:46.486Z",
+  "scenarios": [
+    {
+      "name": "programming listening and feedback keep both local speeds and answer draft",
+      "durationMs": 4829
+    }
+  ],
+  "failures": [],
+  "browserErrors": [],
+  "playbackEvidence": [
+    {
+      "label": "programming listening normal",
+      "id": 46,
+      "type": "playing",
+      "src": "http://localhost:5186/audio/aria/word-3561.mp3?v=code&audio=clear-20261101-v1",
+      "rate": 1,
+      "duration": 1.872,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "programming listening slow",
+      "id": 72,
+      "type": "playing",
+      "src": "http://localhost:5186/audio/slow/aria/pack-v2-50.mp3?v=b17a2d9be3b83226",
+      "rate": 1,
+      "duration": 42.42,
+      "currentTime": 3.14,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "programming feedback normal",
+      "id": 46,
+      "type": "playing",
+      "src": "http://localhost:5186/audio/aria/word-3561.mp3?v=code&audio=clear-20261101-v1",
+      "rate": 1,
+      "duration": 1.872,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "programming feedback slow",
+      "id": 73,
+      "type": "playing",
+      "src": "http://localhost:5186/audio/slow/aria/pack-v2-50.mp3?v=b17a2d9be3b83226",
+      "rate": 1,
+      "duration": 42.42,
+      "currentTime": 3.14,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    },
+    {
+      "label": "programming feedback normal after refresh",
+      "id": 46,
+      "type": "playing",
+      "src": "http://localhost:5186/audio/aria/word-3561.mp3?v=code&audio=clear-20261101-v1",
+      "rate": 1,
+      "duration": 1.872,
+      "currentTime": 0,
+      "paused": false,
+      "ended": false,
+      "preservesPitch": true
+    }
+  ],
+  "microphoneTested": false
+}

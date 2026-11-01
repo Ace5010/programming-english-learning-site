@@ -1,0 +1,72 @@
+{
+  "date": "2026-11-01",
+  "scope": "编程与日常词汇库（包括共用的收藏列表）：密集多列卡片、点击打开二级详情",
+  "layout": {
+    "combinations": 104,
+    "widths": [
+      1920,
+      1600,
+      1440,
+      1280,
+      1199,
+      1024,
+      900,
+      899,
+      640,
+      600,
+      599,
+      390,
+      320
+    ],
+    "palettes": [
+      "lagoon",
+      "pearl",
+      "sky",
+      "mint"
+    ],
+    "columns": {
+      "1600+": 5,
+      "1200-1599": 4,
+      "900-1199": 3,
+      "600-899": 2,
+      "below600": 1
+    }
+  },
+  "details": {
+    "combinations": 32,
+    "closeButton": true,
+    "escape": true,
+    "backdrop": true,
+    "overflow": false
+  },
+  "interactions": [
+    "programming normal from card",
+    "programming slow from card",
+    "programming example normal",
+    "programming example slow",
+    "dialog escape, focus restore, saved favorite, progress unchanged",
+    "programming search/filter, favorites page removal closes detail",
+    "daily normal from card",
+    "daily slow from card",
+    "daily example normal",
+    "daily example slow",
+    "daily details, examples, persisted favorites, removal, learning records unchanged",
+    "daily type filter, search and empty result",
+    "daily detail starts word practice, closes dialog, unlocks body",
+    "load more and backdrop dismissal",
+    "native modal keyboard traversal never enters background page; Escape restores trigger focus"
+  ],
+  "checks": {
+    "typescript": "passed",
+    "courseTests": "53 passed",
+    "mobile": "13 scenarios passed",
+    "fullBuild": "Vite compiled; prepare-deploy blocked by Slow recording manifest is stale",
+    "verify": "blocked by Slow recording manifest is stale (resource manifest version 1; verifier expects version 2)"
+  },
+  "notes": [
+    "Tests used disposable browser contexts and synthetic learning fixtures.",
+    "Existing audio work changed concurrently; only a duplicate local variable in its verifier was renamed. Audio recordings were not regenerated.",
+    "No commit, push, or deployment."
+  ],
+  "pageErrors": []
+}

@@ -1,0 +1,64 @@
+{"key": "aria:repository", "expected": "repository", "transcript": "Repository.", "modelMs": 143, "textMatch": true}
+{"key": "aria:function", "expected": "function", "transcript": "Function.", "modelMs": 91, "textMatch": true}
+{"key": "aria:variable", "expected": "variable", "transcript": "Variable.", "modelMs": 98, "textMatch": true}
+{"key": "aria:student", "expected": "student", "transcript": "Student.", "modelMs": 89, "textMatch": true}
+{"key": "aria:teacher", "expected": "teacher", "transcript": "Teacher.", "modelMs": 93, "textMatch": true}
+{"key": "aria:from", "expected": "from", "transcript": "From.", "modelMs": 89, "textMatch": true}
+{"key": "aria:think", "expected": "think", "transcript": "Think.", "modelMs": 85, "textMatch": true}
+{"key": "aria:three", "expected": "three", "transcript": "Three.", "modelMs": 92, "textMatch": true}
+{"key": "aria:live@verb", "expected": "live", "transcript": "I live.", "modelMs": 555, "textMatch": false}
+{"key": "aria:live@adjective", "expected": "live", "transcript": "Alive.", "modelMs": 547, "textMatch": false}
+{"key": "aria:record@verb", "expected": "record", "transcript": "Record.", "modelMs": 95, "textMatch": true}
+{"key": "aria:record@noun", "expected": "record", "transcript": "Record.", "modelMs": 92, "textMatch": true}
+{"key": "aria:read@present", "expected": "read", "transcript": "Read.", "modelMs": 81, "textMatch": true}
+{"key": "aria:read@past", "expected": "read", "transcript": "Red.", "modelMs": 402, "textMatch": false}
+{"key": "aria:US", "expected": "U S", "transcript": "U.S.", "modelMs": 95, "textMatch": true}
+{"key": "aria:What's", "expected": "What's", "transcript": "What's.", "modelMs": 101, "textMatch": true}
+{"key": "guy:repository", "expected": "repository", "transcript": "Repository.", "modelMs": 93, "textMatch": true}
+{"key": "guy:function", "expected": "function", "transcript": "Function.", "modelMs": 241, "textMatch": true}
+{"key": "guy:variable", "expected": "variable", "transcript": "Variable.", "modelMs": 91, "textMatch": true}
+{"key": "guy:student", "expected": "student", "transcript": "Student.", "modelMs": 95, "textMatch": true}
+{"key": "guy:teacher", "expected": "teacher", "transcript": "Teacher.", "modelMs": 101, "textMatch": true}
+{"key": "guy:from", "expected": "from", "transcript": "From.", "modelMs": 87, "textMatch": true}
+{"key": "guy:think", "expected": "think", "transcript": "Think.", "modelMs": 101, "textMatch": true}
+{"key": "guy:three", "expected": "three", "transcript": "Three.", "modelMs": 85, "textMatch": true}
+{"key": "guy:live@verb", "expected": "live", "transcript": "I live.", "modelMs": 96, "textMatch": false}
+{"key": "guy:live@adjective", "expected": "live", "transcript": "Alive.", "modelMs": 85, "textMatch": false}
+{"key": "guy:record@verb", "expected": "record", "transcript": "Record.", "modelMs": 95, "textMatch": true}
+{"key": "guy:record@noun", "expected": "record", "transcript": "Record.", "modelMs": 97, "textMatch": true}
+{"key": "guy:read@present", "expected": "read", "transcript": "Read.", "modelMs": 77, "textMatch": true}
+{"key": "guy:read@past", "expected": "read", "transcript": "Read.", "modelMs": 75, "textMatch": true}
+{"key": "guy:US", "expected": "U S", "transcript": "U.S.", "modelMs": 100, "textMatch": true}
+{"key": "guy:What's", "expected": "What's", "transcript": "What's.", "modelMs": 105, "textMatch": true}
+{"key": "aria:repository", "expected": "repository", "manifestSha256": "d914bd5c3155e9edaf3d1c1908765497485e18643ee0074163bc7968de24c3c6", "transcript": "Repository.", "modelMs": 119, "textMatch": true}
+{"key": "aria:function", "expected": "function", "manifestSha256": "d914bd5c3155e9edaf3d1c1908765497485e18643ee0074163bc7968de24c3c6", "transcript": "Function.", "modelMs": 77, "textMatch": true}
+{"key": "aria:variable", "expected": "variable", "manifestSha256": "d914bd5c3155e9edaf3d1c1908765497485e18643ee0074163bc7968de24c3c6", "transcript": "Variable.", "modelMs": 84, "textMatch": true}
+{"key": "aria:student", "expected": "student", "manifestSha256": "d914bd5c3155e9edaf3d1c1908765497485e18643ee0074163bc7968de24c3c6", "transcript": "Student.", "modelMs": 77, "textMatch": true}
+{"key": "aria:teacher", "expected": "teacher", "manifestSha256": "d914bd5c3155e9edaf3d1c1908765497485e18643ee0074163bc7968de24c3c6", "transcript": "Teacher.", "modelMs": 75, "textMatch": true}
+{"key": "aria:from", "expected": "from", "manifestSha256": "d914bd5c3155e9edaf3d1c1908765497485e18643ee0074163bc7968de24c3c6", "transcript": "From.", "modelMs": 75, "textMatch": true}
+{"key": "aria:think", "expected": "think", "manifestSha256": "d914bd5c3155e9edaf3d1c1908765497485e18643ee0074163bc7968de24c3c6", "transcript": "Think.", "modelMs": 75, "textMatch": true}
+{"key": "aria:three", "expected": "three", "manifestSha256": "d914bd5c3155e9edaf3d1c1908765497485e18643ee0074163bc7968de24c3c6", "transcript": "Three.", "modelMs": 76, "textMatch": true}
+{"key": "aria:live@verb", "expected": "live", "manifestSha256": "d914bd5c3155e9edaf3d1c1908765497485e18643ee0074163bc7968de24c3c6", "transcript": "Live.", "modelMs": 67, "textMatch": true}
+{"key": "aria:live@adjective", "expected": "live", "manifestSha256": "d914bd5c3155e9edaf3d1c1908765497485e18643ee0074163bc7968de24c3c6", "transcript": "Live.", "modelMs": 67, "textMatch": true}
+{"key": "aria:record@verb", "expected": "record", "manifestSha256": "d914bd5c3155e9edaf3d1c1908765497485e18643ee0074163bc7968de24c3c6", "transcript": "Record.", "modelMs": 76, "textMatch": true}
+{"key": "aria:record@noun", "expected": "record", "manifestSha256": "d914bd5c3155e9edaf3d1c1908765497485e18643ee0074163bc7968de24c3c6", "transcript": "Record.", "modelMs": 75, "textMatch": true}
+{"key": "aria:read@present", "expected": "read", "manifestSha256": "d914bd5c3155e9edaf3d1c1908765497485e18643ee0074163bc7968de24c3c6", "transcript": "Read.", "modelMs": 76, "textMatch": true}
+{"key": "aria:read@past", "expected": "read", "manifestSha256": "d914bd5c3155e9edaf3d1c1908765497485e18643ee0074163bc7968de24c3c6", "transcript": "Red.", "modelMs": 76, "textMatch": false}
+{"key": "aria:US", "expected": "U S", "manifestSha256": "d914bd5c3155e9edaf3d1c1908765497485e18643ee0074163bc7968de24c3c6", "transcript": "U.S.", "modelMs": 84, "textMatch": true}
+{"key": "aria:What's", "expected": "What's", "manifestSha256": "d914bd5c3155e9edaf3d1c1908765497485e18643ee0074163bc7968de24c3c6", "transcript": "What's.", "modelMs": 84, "textMatch": true}
+{"key": "guy:repository", "expected": "repository", "manifestSha256": "d914bd5c3155e9edaf3d1c1908765497485e18643ee0074163bc7968de24c3c6", "transcript": "Repository.", "modelMs": 87, "textMatch": true}
+{"key": "guy:function", "expected": "function", "manifestSha256": "d914bd5c3155e9edaf3d1c1908765497485e18643ee0074163bc7968de24c3c6", "transcript": "Function.", "modelMs": 75, "textMatch": true}
+{"key": "guy:variable", "expected": "variable", "manifestSha256": "d914bd5c3155e9edaf3d1c1908765497485e18643ee0074163bc7968de24c3c6", "transcript": "Variable.", "modelMs": 83, "textMatch": true}
+{"key": "guy:student", "expected": "student", "manifestSha256": "d914bd5c3155e9edaf3d1c1908765497485e18643ee0074163bc7968de24c3c6", "transcript": "Student.", "modelMs": 84, "textMatch": true}
+{"key": "guy:teacher", "expected": "teacher", "manifestSha256": "d914bd5c3155e9edaf3d1c1908765497485e18643ee0074163bc7968de24c3c6", "transcript": "Teacher.", "modelMs": 78, "textMatch": true}
+{"key": "guy:from", "expected": "from", "manifestSha256": "d914bd5c3155e9edaf3d1c1908765497485e18643ee0074163bc7968de24c3c6", "transcript": "From.", "modelMs": 76, "textMatch": true}
+{"key": "guy:think", "expected": "think", "manifestSha256": "d914bd5c3155e9edaf3d1c1908765497485e18643ee0074163bc7968de24c3c6", "transcript": "Think.", "modelMs": 76, "textMatch": true}
+{"key": "guy:three", "expected": "three", "manifestSha256": "d914bd5c3155e9edaf3d1c1908765497485e18643ee0074163bc7968de24c3c6", "transcript": "Three.", "modelMs": 76, "textMatch": true}
+{"key": "guy:live@verb", "expected": "live", "manifestSha256": "d914bd5c3155e9edaf3d1c1908765497485e18643ee0074163bc7968de24c3c6", "transcript": "Live.", "modelMs": 69, "textMatch": true}
+{"key": "guy:live@adjective", "expected": "live", "manifestSha256": "d914bd5c3155e9edaf3d1c1908765497485e18643ee0074163bc7968de24c3c6", "transcript": "Life.", "modelMs": 67, "textMatch": false}
+{"key": "guy:record@verb", "expected": "record", "manifestSha256": "d914bd5c3155e9edaf3d1c1908765497485e18643ee0074163bc7968de24c3c6", "transcript": "Record.", "modelMs": 77, "textMatch": true}
+{"key": "guy:record@noun", "expected": "record", "manifestSha256": "d914bd5c3155e9edaf3d1c1908765497485e18643ee0074163bc7968de24c3c6", "transcript": "Record.", "modelMs": 75, "textMatch": true}
+{"key": "guy:read@present", "expected": "read", "manifestSha256": "d914bd5c3155e9edaf3d1c1908765497485e18643ee0074163bc7968de24c3c6", "transcript": "Read.", "modelMs": 76, "textMatch": true}
+{"key": "guy:read@past", "expected": "read", "manifestSha256": "d914bd5c3155e9edaf3d1c1908765497485e18643ee0074163bc7968de24c3c6", "transcript": "Red.", "modelMs": 76, "textMatch": false}
+{"key": "guy:US", "expected": "U S", "manifestSha256": "d914bd5c3155e9edaf3d1c1908765497485e18643ee0074163bc7968de24c3c6", "transcript": "U.S.", "modelMs": 85, "textMatch": true}
+{"key": "guy:What's", "expected": "What's", "manifestSha256": "d914bd5c3155e9edaf3d1c1908765497485e18643ee0074163bc7968de24c3c6", "transcript": "What's.", "modelMs": 84, "textMatch": true}

@@ -1,0 +1,145 @@
+{
+  "batch": "small-2906",
+  "firstId": 2906,
+  "lastId": 3155,
+  "submitted": 250,
+  "exitCode": 0,
+  "timedOut": false,
+  "complete": true,
+  "elapsedSeconds": 36.062,
+  "records": [
+    {
+      "model": "deepseek-v4.1-flash",
+      "usage": {
+        "prompt_tokens": 18633,
+        "completion_tokens": 5696,
+        "total_tokens": 24329,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 4703,
+          "rejected_prediction_tokens": 0,
+          "cached_tokens": 0
+        },
+        "prompt_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": 0,
+          "cached_tokens": 7808
+        },
+        "prompt_cache_hit_tokens": 7808,
+        "prompt_cache_miss_tokens": 10825,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 0,
+        "prompt_cache_write_tokens": 0,
+        "completion_thinking_tokens": 4703,
+        "credit": 0.48,
+        "cached_tokens": 0
+      },
+      "requestId": "01a194ebb96a78ebbb3092eb338054d4"
+    }
+  ],
+  "result": {
+    "reviewedCount": 250,
+    "findings": [
+      {
+        "id": 2914,
+        "word": "envelope",
+        "issue": "The IPA field is empty. The noun meaning “信封” is /ˈɛnvəloʊp/, so the audio player receives no target transcription.",
+        "intendedIPA": "ˈɛnvəloʊp",
+        "context": "She sealed the letter in an envelope.",
+        "confidence": "high"
+      },
+      {
+        "id": 2950,
+        "word": "Yin",
+        "issue": "The IPA field is empty. The term read as “阴” is /jɪn/.",
+        "intendedIPA": "jɪn",
+        "context": "Yin represents the dark, cool side in Chinese philosophy.",
+        "confidence": "high"
+      },
+      {
+        "id": 2910,
+        "word": "nineteenth",
+        "issue": "Both syllables carry a primary stress mark. The ending -teenth takes the primary stress.",
+        "intendedIPA": "ˌnaɪnˈtiːnθ",
+        "context": "Her birthday is on the nineteenth of May.",
+        "confidence": "high"
+      },
+      {
+        "id": 2984,
+        "word": "am",
+        "issue": "The IPA /ɛm/ gives the wrong vowel. The strong form of “am” is /æm/; the weak form /əm/ is unstressed.",
+        "intendedIPA": "æm",
+        "context": "I am ready to start.",
+        "confidence": "high"
+      },
+      {
+        "id": 2954,
+        "word": "criticize",
+        "issue": "The transcription marks two primary stresses. The first syllable is primary and the final syllable is unstressed.",
+        "intendedIPA": "ˈkrɪtəsaɪz",
+        "context": "He did not criticize her work in public.",
+        "confidence": "high"
+      },
+      {
+        "id": 2998,
+        "word": "outstanding",
+        "issue": "The transcription marks two primary stresses. Only the second syllable -stand- takes the primary stress.",
+        "intendedIPA": "ˌaʊtˈstændɪŋ",
+        "context": "The team did an outstanding job.",
+        "confidence": "high"
+      },
+      {
+        "id": 2999,
+        "word": "escalator",
+        "issue": "The transcription marks two primary stresses. The first syllable is primary stress.",
+        "intendedIPA": "ˈɛskəleɪtɚ",
+        "context": "Take the escalator to the second floor.",
+        "confidence": "high"
+      },
+      {
+        "id": 3022,
+        "word": "operate",
+        "issue": "The transcription marks two primary stresses. The first syllable is primary stress.",
+        "intendedIPA": "ˈɑpəreɪt",
+        "context": "Surgeons will operate on his knee tomorrow.",
+        "confidence": "high"
+      },
+      {
+        "id": 3043,
+        "word": "bow",
+        "issue": "The word “bow” is a heteronym: /boʊ/ means a weapon or ribbon, while /baʊ/ means bending the head or body. The Chinese meaning “鞠躬，低头” requires /baʊ/.",
+        "intendedIPA": "baʊ",
+        "context": "He gave a small bow and left the room.",
+        "confidence": "high"
+      },
+      {
+        "id": 3061,
+        "word": "eighteenth",
+        "issue": "The transcription marks two primary stresses. The ending -teenth takes the primary stress.",
+        "intendedIPA": "ˌeɪˈtiːnθ",
+        "context": "The eighteenth century brought many changes.",
+        "confidence": "high"
+      },
+      {
+        "id": 3072,
+        "word": "fifteenth",
+        "issue": "The transcription marks two primary stresses. The ending -teenth takes the primary stress.",
+        "intendedIPA": "ˌfɪfˈtiːnθ",
+        "context": "Our seats are in the fifteenth row.",
+        "confidence": "high"
+      },
+      {
+        "id": 3111,
+        "word": "earthquake",
+        "issue": "The transcription marks two primary stresses. The compound has one primary stress on the first element.",
+        "intendedIPA": "ˈɝθkwek",
+        "context": "A strong earthquake shook the city at dawn.",
+        "confidence": "high"
+      }
+    ],
+    "notes": "Reviewed all 250 entries (2906–3155). Stress notation uses ASCII apostrophes, so a leading apostrophe alone is not flagged. Two entries have no phonetic value: 2914 and 2950. Besides those two, the main defects are duplicate primary-stress marks in number words and in a few longer words. Noun/verb stress heteronyms such as survey (3039), abstract (3136), and abuse (3139) already have meanings or examples that pick the right reading, so they are not counted as errors; however, 3039 embeds an editorial note '(for v.)' inside the IPA field and should be moved to a separate field. Non-pronunciation data issues to fix separately: 3126 wild has JSON markup in its example; 2989 hurt contains an invisible zero-width character inside the IPA; 3066 garage uses a colon length mark that is inconsistent with the rest of the file. American/British pairs (mom/mum type, yoghurt/yogurt, maths, clerk, garage) were not flagged."
+  }
+}

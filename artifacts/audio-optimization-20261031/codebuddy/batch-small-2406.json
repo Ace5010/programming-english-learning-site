@@ -1,0 +1,129 @@
+{
+  "batch": "small-2406",
+  "firstId": 2406,
+  "lastId": 2655,
+  "submitted": 250,
+  "exitCode": 0,
+  "timedOut": false,
+  "complete": true,
+  "elapsedSeconds": 105.57,
+  "records": [
+    {
+      "model": "deepseek-v4.1-flash",
+      "usage": {
+        "prompt_tokens": 18118,
+        "completion_tokens": 17439,
+        "total_tokens": 35557,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 16705,
+          "rejected_prediction_tokens": 0,
+          "cached_tokens": 0
+        },
+        "prompt_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": 0,
+          "cached_tokens": 7808
+        },
+        "prompt_cache_hit_tokens": 7808,
+        "prompt_cache_miss_tokens": 10310,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 0,
+        "prompt_cache_write_tokens": 0,
+        "completion_thinking_tokens": 16705,
+        "credit": 1.15,
+        "cached_tokens": 0
+      },
+      "requestId": "01a194e92a8c77bcaf1c8724f87147f7"
+    }
+  ],
+  "result": {
+    "reviewedCount": 250,
+    "findings": [
+      {
+        "id": 2411,
+        "word": "to",
+        "issue": "The entry lists weak and strong forms, but the adverb meaning ‘closed’ in the example requires the strong form /tuː/.",
+        "intendedIPA": "tuː",
+        "context": "The wind blew the door to.",
+        "confidence": "medium"
+      },
+      {
+        "id": 2448,
+        "word": "truth",
+        "issue": "The vowel is written as /ʊ/, but the standard vowel is /uː/.",
+        "intendedIPA": "truːθ",
+        "context": "How do we know you’re telling us the truth?",
+        "confidence": "high"
+      },
+      {
+        "id": 2469,
+        "word": "us",
+        "issue": "The IPA gives the letter-name reading of ‘U.S.’ (/juː ɛs/), not the pronoun; the meaning and example require /ʌs/.",
+        "intendedIPA": "ʌs",
+        "context": "Please help us.",
+        "confidence": "high"
+      },
+      {
+        "id": 2470,
+        "word": "use",
+        "issue": "Heteronym: the noun meaning ‘用途’ is /juːs/, while the verb is /juːz/; only the verb form is given, and the example uses the verb.",
+        "intendedIPA": "juːz",
+        "context": "May I use your pen?",
+        "confidence": "medium"
+      },
+      {
+        "id": 2471,
+        "word": "used",
+        "issue": "The IPA /juːzd/ matches the past tense of ‘use’, but ‘be used to’ in the example is pronounced /juːst/.",
+        "intendedIPA": "juːst",
+        "context": "I am used to this job.",
+        "confidence": "high"
+      },
+      {
+        "id": 2477,
+        "word": "VCD",
+        "issue": "The acronym has no IPA; it is read letter by letter, not as a word.",
+        "intendedIPA": "ˌviː siː ˈdiː",
+        "context": "We watched a film on VCD.",
+        "confidence": "high"
+      },
+      {
+        "id": 2535,
+        "word": "wife",
+        "issue": "/ʌɪ/ is not the correct diphthong; the word has /aɪ/.",
+        "intendedIPA": "waɪf",
+        "context": "Have you met my wife?",
+        "confidence": "high"
+      },
+      {
+        "id": 2560,
+        "word": "year",
+        "issue": "The spelling ‘yir’ suggests a different vowel; the standard AmE pronunciation is /jɪr/.",
+        "intendedIPA": "jɪr",
+        "context": "I arrived here a year ago.",
+        "confidence": "medium"
+      },
+      {
+        "id": 2596,
+        "word": "concentrate",
+        "issue": "The transcription omits the middle schwa and adds a second stress mark; the verb is /ˈkɑːnsəntreɪt/.",
+        "intendedIPA": "ˈkɑːnsəntreɪt",
+        "context": "I can’t concentrate with the TV on.",
+        "confidence": "medium"
+      },
+      {
+        "id": 2623,
+        "word": "tutor",
+        "issue": "The entry begins with /ʊ/, but standard AmE is /ˈtuːtər/ (BrE /ˈtjuːtə/).",
+        "intendedIPA": "ˈtuːtər",
+        "context": "My tutor helped me plan the course.",
+        "confidence": "high"
+      }
+    ],
+    "notes": "Reviewed all 250 entries. I did not flag standard US/UK variants, the simplified use of e for /eɪ/, omitted length marks, or wind’s already-noted verb reading. Empty phonetic fields also appear for website (2506), bush (2625), and chase (2647); those need IPA data but were not treated as mismatches. No audio was supplied."
+  }
+}

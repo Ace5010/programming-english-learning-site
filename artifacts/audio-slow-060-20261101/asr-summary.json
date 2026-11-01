@@ -1,0 +1,10 @@
+{
+  "complete": true,
+  "backend": "shared-q8-vulkan",
+  "noReferencePrompt": true,
+  "manifestSha256": "6e953b4ebcd3185732c96fb88213c2a8916ea499de65135815a7a0e7b47a3216",
+  "screened": 1126,
+  "exactNormalizedMatches": 1026,
+  "elapsedSeconds": 523.8,
+  "assessment": "transcription screening, not phoneme or human listening quality"
+}

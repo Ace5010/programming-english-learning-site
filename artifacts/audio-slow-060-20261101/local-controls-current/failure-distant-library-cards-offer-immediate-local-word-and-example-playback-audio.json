@@ -1,0 +1,123 @@
+[
+  {
+    "id": 32,
+    "type": "playing",
+    "src": "http://localhost:5186/dist/audio/aria/word-31.mp3?audio=clear-20261101-v1",
+    "rate": 1,
+    "duration": 1.656,
+    "currentTime": 0,
+    "paused": false,
+    "ended": false,
+    "preservesPitch": true
+  },
+  {
+    "id": 32,
+    "type": "pause",
+    "src": "http://localhost:5186/dist/audio/aria/word-31.mp3?audio=clear-20261101-v1",
+    "rate": 1,
+    "duration": 1.656,
+    "currentTime": 0,
+    "paused": true,
+    "ended": false,
+    "preservesPitch": true
+  },
+  {
+    "id": 34,
+    "type": "playing",
+    "src": "http://localhost:5186/dist/audio/slow/aria/pack-v2-39.mp3?v=927d4c2484f1aa4e",
+    "rate": 1,
+    "duration": 45.59,
+    "currentTime": 28.53,
+    "paused": false,
+    "ended": false,
+    "preservesPitch": true
+  },
+  {
+    "id": 32,
+    "type": "playing",
+    "src": "http://localhost:5186/dist/audio/aria/word-31.mp3?audio=clear-20261101-v1",
+    "rate": 1,
+    "duration": 1.656,
+    "currentTime": 0,
+    "paused": false,
+    "ended": false,
+    "preservesPitch": true
+  },
+  {
+    "id": 32,
+    "type": "pause",
+    "src": "http://localhost:5186/dist/audio/aria/word-31.mp3?audio=clear-20261101-v1",
+    "rate": 1,
+    "duration": 1.656,
+    "currentTime": 0.010477,
+    "paused": true,
+    "ended": false,
+    "preservesPitch": true
+  },
+  {
+    "id": 35,
+    "type": "playing",
+    "src": "http://localhost:5186/dist/audio/aria/example-31.mp3?v=A+boolean+can+be+true+or+false.&audio=clear-20261101-v1",
+    "rate": 1,
+    "duration": 2.88,
+    "currentTime": 0,
+    "paused": false,
+    "ended": false,
+    "preservesPitch": true
+  },
+  {
+    "id": 35,
+    "type": "pause",
+    "src": "http://localhost:5186/dist/audio/aria/example-31.mp3?v=A+boolean+can+be+true+or+false.&audio=clear-20261101-v1",
+    "rate": 1,
+    "duration": 2.88,
+    "currentTime": 0.014306,
+    "paused": true,
+    "ended": false,
+    "preservesPitch": true
+  },
+  {
+    "id": 42,
+    "type": "playing",
+    "src": "http://localhost:5186/dist/audio/slow/aria/pack-v2-1.mp3?v=9e2b4cead4055d9d",
+    "rate": 1,
+    "duration": 61.54,
+    "currentTime": 39.12,
+    "paused": false,
+    "ended": false,
+    "preservesPitch": true
+  },
+  {
+    "id": 43,
+    "type": "playing",
+    "src": "http://localhost:5186/dist/audio/aria/word-32.mp3?audio=clear-20261101-v1",
+    "rate": 1,
+    "duration": 1.68,
+    "currentTime": 0,
+    "paused": false,
+    "ended": false,
+    "preservesPitch": true
+  },
+  {
+    "id": 43,
+    "type": "pause",
+    "src": "http://localhost:5186/dist/audio/aria/word-32.mp3?audio=clear-20261101-v1",
+    "rate": 1,
+    "duration": 1.68,
+    "currentTime": 1.68,
+    "paused": true,
+    "ended": true,
+    "preservesPitch": true
+  },
+  {
+    "id": 43,
+    "type": "ended",
+    "src": "http://localhost:5186/dist/audio/aria/word-32.mp3?audio=clear-20261101-v1",
+    "rate": 1,
+    "duration": 1.68,
+    "currentTime": 1.68,
+    "paused": true,
+    "ended": true,
+    "preservesPitch": true
+  }
+]

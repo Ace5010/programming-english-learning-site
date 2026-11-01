@@ -1,0 +1,145 @@
+{
+  "batch": "small-1656",
+  "firstId": 1656,
+  "lastId": 1905,
+  "submitted": 250,
+  "exitCode": 0,
+  "timedOut": false,
+  "complete": true,
+  "elapsedSeconds": 74.842,
+  "records": [
+    {
+      "model": "deepseek-v4.1-flash",
+      "usage": {
+        "prompt_tokens": 17960,
+        "completion_tokens": 13058,
+        "total_tokens": 31018,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 12289,
+          "rejected_prediction_tokens": 0,
+          "cached_tokens": 0
+        },
+        "prompt_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": 0,
+          "cached_tokens": 7808
+        },
+        "prompt_cache_hit_tokens": 7808,
+        "prompt_cache_miss_tokens": 10152,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 0,
+        "prompt_cache_write_tokens": 0,
+        "completion_thinking_tokens": 12289,
+        "credit": 0.89,
+        "cached_tokens": 0
+      },
+      "requestId": "01a194e5b6377193905bcac50afa11d1"
+    }
+  ],
+  "result": {
+    "reviewedCount": 250,
+    "findings": [
+      {
+        "id": 1838,
+        "word": "lead",
+        "issue": "Heteronym: the meaning includes 铅 (metal, /lɛd/), but only /liːd/ is shown; the example uses the noun lead /liːd/.",
+        "intendedIPA": "liːd",
+        "context": "The team followed her lead during the crisis.",
+        "confidence": "high"
+      },
+      {
+        "id": 1859,
+        "word": "live",
+        "issue": "Ambiguous heteronym: adjective live is /laɪv/, verb live is /lɪv/; both are listed, but the example forces the adjective reading.",
+        "intendedIPA": "laɪv",
+        "context": "We watched a live broadcast from the stadium.",
+        "confidence": "high"
+      },
+      {
+        "id": 1771,
+        "word": "increase",
+        "issue": "Stress heteronym: noun is /ˈɪnkriːs/, verb is /ɪnˈkriːs/; meaning and example are the noun.",
+        "intendedIPA": "ˈɪnkriːs",
+        "context": "There has been an increase in sales this year.",
+        "confidence": "high"
+      },
+      {
+        "id": 1794,
+        "word": "it",
+        "issue": "IPA gives the letter names “I T” (/aɪ ti/), not the pronoun /ɪt/.",
+        "intendedIPA": "ɪt",
+        "context": "It was raining when we arrived.",
+        "confidence": "high"
+      },
+      {
+        "id": 1758,
+        "word": "I",
+        "issue": "IPA is empty for the pronoun I /aɪ/.",
+        "intendedIPA": "aɪ",
+        "context": "I live in Beijing.",
+        "confidence": "high"
+      },
+      {
+        "id": 1850,
+        "word": "lie",
+        "issue": "IPA is empty; the example uses lies /laɪz/, while the base form lie is /laɪ/.",
+        "intendedIPA": "laɪ",
+        "context": "The old books lie on the top shelf.",
+        "confidence": "high"
+      },
+      {
+        "id": 1810,
+        "word": "key",
+        "issue": "IPA is empty for key /kiː/.",
+        "intendedIPA": "ki",
+        "context": "I lost the key to my front door.",
+        "confidence": "high"
+      },
+      {
+        "id": 1802,
+        "word": "job",
+        "issue": "IPA is empty for job /dʒɑb/.",
+        "intendedIPA": "dʒɑb",
+        "context": "She found a new job at a small software company.",
+        "confidence": "high"
+      },
+      {
+        "id": 1801,
+        "word": "jeans",
+        "issue": "IPA is empty for jeans /dʒinz/.",
+        "intendedIPA": "dʒinz",
+        "context": "He wore a clean pair of jeans to the interview.",
+        "confidence": "high"
+      },
+      {
+        "id": 1870,
+        "word": "low",
+        "issue": "IPA is empty for low /lo/.",
+        "intendedIPA": "lo",
+        "context": "The morning sun stayed low behind the hills.",
+        "confidence": "high"
+      },
+      {
+        "id": 1885,
+        "word": "mark",
+        "issue": "IPA is empty for mark /mɑrk/.",
+        "intendedIPA": "mɑrk",
+        "context": "There was a small mark on the white wall.",
+        "confidence": "high"
+      },
+      {
+        "id": 1704,
+        "word": "hamburger",
+        "issue": "IPA contains an invisible zero-width space between ɝ and ɡ.",
+        "intendedIPA": "ˈhæmbɝɡɚ",
+        "context": "He ordered a hamburger and a glass of water.",
+        "confidence": "medium"
+      }
+    ],
+    "notes": "No audio was supplied, so findings concern text/IPA only. Ordinary American/British variants and approved alternatives were not flagged. The source uses a broad simplified transcription in many entries (e.g., e for /eɪ/, o for /oʊ/, omitted length marks); those systemic conventions were not flagged individually. Blank IPA entries were treated as data gaps rather than pronunciation variants."
+  }
+}

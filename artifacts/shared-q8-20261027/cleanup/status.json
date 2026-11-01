@@ -1,0 +1,12 @@
+{
+  "cleanupStatus": "complete",
+  "deletedDirectories": 14,
+  "deletedLogicalBytes": 37797242147,
+  "deletedGiB": 35.201,
+  "sharedModelAndHintsHashesUnchanged": true,
+  "cijianColdStartRealBrowser": "passed",
+  "cijianCoursePersistence": "passed",
+  "observerFreshProcessProductionAsrRunner": "passed on synthetic Chinese speech; production data unchanged",
+  "projectIntegrity": "npm run verify passed",
+  "temporaryTestServiceStopped": true
+}

@@ -1,0 +1,202 @@
+[
+  {
+    "voice": "aria",
+    "text": "I live in China.",
+    "word": "live",
+    "slow": false,
+    "url": "http://localhost:5186/audio/slow/aria/pack-v2-normal-0.mp3?v=d2200ee94377392c",
+    "position": 0,
+    "rate": 1,
+    "pitch": true
+  },
+  {
+    "voice": "aria",
+    "text": "I live in China.",
+    "word": "live",
+    "slow": true,
+    "url": "http://localhost:5186/audio/slow/aria/pack-v2-140.mp3?v=e2ed728ad3c36f3f",
+    "position": 27.26,
+    "rate": 1,
+    "pitch": true
+  },
+  {
+    "voice": "aria",
+    "text": "experiments on live animals",
+    "word": "live",
+    "slow": false,
+    "url": "http://localhost:5186/audio/slow/aria/pack-v2-normal-0.mp3?v=d2200ee94377392c",
+    "position": 0.54,
+    "rate": 1,
+    "pitch": true
+  },
+  {
+    "voice": "aria",
+    "text": "experiments on live animals",
+    "word": "live",
+    "slow": true,
+    "url": "http://localhost:5186/audio/slow/aria/pack-v2-140.mp3?v=e2ed728ad3c36f3f",
+    "position": 27.87,
+    "rate": 1,
+    "pitch": true
+  },
+  {
+    "voice": "aria",
+    "text": "She had read about it in the newspapers.",
+    "word": "read",
+    "slow": false,
+    "url": "http://localhost:5186/audio/slow/aria/pack-v2-normal-0.mp3?v=d2200ee94377392c",
+    "position": 5.3,
+    "rate": 1,
+    "pitch": true
+  },
+  {
+    "voice": "aria",
+    "text": "She had read about it in the newspapers.",
+    "word": "read",
+    "slow": true,
+    "url": "http://localhost:5186/audio/slow/aria/pack-v2-140.mp3?v=e2ed728ad3c36f3f",
+    "position": 33.42,
+    "rate": 1,
+    "pitch": true
+  },
+  {
+    "voice": "aria",
+    "text": "We refuse to talk to terrorists.",
+    "word": "refuse",
+    "slow": false,
+    "url": "http://localhost:5186/audio/slow/aria/pack-v2-normal-0.mp3?v=d2200ee94377392c",
+    "position": 8.119999,
+    "rate": 1,
+    "pitch": true
+  },
+  {
+    "voice": "aria",
+    "text": "We refuse to talk to terrorists.",
+    "word": "refuse",
+    "slow": true,
+    "url": "http://localhost:5186/audio/slow/aria/pack-v2-140.mp3?v=e2ed728ad3c36f3f",
+    "position": 36.78,
+    "rate": 1,
+    "pitch": true
+  },
+  {
+    "voice": "aria",
+    "text": "her close friendship with her aunt",
+    "word": "close",
+    "slow": false,
+    "url": "http://localhost:5186/audio/slow/aria/pack-v2-normal-0.mp3?v=d2200ee94377392c",
+    "position": 4.04,
+    "rate": 1,
+    "pitch": true
+  },
+  {
+    "voice": "aria",
+    "text": "her close friendship with her aunt",
+    "word": "close",
+    "slow": true,
+    "url": "http://localhost:5186/audio/slow/aria/pack-v2-140.mp3?v=e2ed728ad3c36f3f",
+    "position": 31.93,
+    "rate": 1,
+    "pitch": true
+  },
+  {
+    "voice": "guy",
+    "text": "I live in China.",
+    "word": "live",
+    "slow": false,
+    "url": "http://localhost:5186/audio/slow/guy/pack-v2-normal-0.mp3?v=ca6eab53dcb290fd",
+    "position": 0,
+    "rate": 1,
+    "pitch": true
+  },
+  {
+    "voice": "guy",
+    "text": "I live in China.",
+    "word": "live",
+    "slow": true,
+    "url": "http://localhost:5186/audio/slow/guy/pack-v2-140.mp3?v=bcf3c666314c18ce",
+    "position": 26.99,
+    "rate": 1,
+    "pitch": true
+  },
+  {
+    "voice": "guy",
+    "text": "experiments on live animals",
+    "word": "live",
+    "slow": false,
+    "url": "http://localhost:5186/audio/slow/guy/pack-v2-normal-0.mp3?v=ca6eab53dcb290fd",
+    "position": 0.55,
+    "rate": 1,
+    "pitch": true
+  },
+  {
+    "voice": "guy",
+    "text": "experiments on live animals",
+    "word": "live",
+    "slow": true,
+    "url": "http://localhost:5186/audio/slow/guy/pack-v2-140.mp3?v=bcf3c666314c18ce",
+    "position": 27.62,
+    "rate": 1,
+    "pitch": true
+  },
+  {
+    "voice": "guy",
+    "text": "She had read about it in the newspapers.",
+    "word": "read",
+    "slow": false,
+    "url": "http://localhost:5186/audio/slow/guy/pack-v2-normal-0.mp3?v=ca6eab53dcb290fd",
+    "position": 5.21,
+    "rate": 1,
+    "pitch": true
+  },
+  {
+    "voice": "guy",
+    "text": "She had read about it in the newspapers.",
+    "word": "read",
+    "slow": true,
+    "url": "http://localhost:5186/audio/slow/guy/pack-v2-140.mp3?v=bcf3c666314c18ce",
+    "position": 33.03,
+    "rate": 1,
+    "pitch": true
+  },
+  {
+    "voice": "guy",
+    "text": "We refuse to talk to terrorists.",
+    "word": "refuse",
+    "slow": false,
+    "url": "http://localhost:5186/audio/slow/guy/pack-v2-normal-0.mp3?v=ca6eab53dcb290fd",
+    "position": 8,
+    "rate": 1,
+    "pitch": true
+  },
+  {
+    "voice": "guy",
+    "text": "We refuse to talk to terrorists.",
+    "word": "refuse",
+    "slow": true,
+    "url": "http://localhost:5186/audio/slow/guy/pack-v2-140.mp3?v=bcf3c666314c18ce",
+    "position": 36.33,
+    "rate": 1,
+    "pitch": true
+  },
+  {
+    "voice": "guy",
+    "text": "her close friendship with her aunt",
+    "word": "close",
+    "slow": false,
+    "url": "http://localhost:5186/audio/slow/guy/pack-v2-normal-0.mp3?v=ca6eab53dcb290fd",
+    "position": 4,
+    "rate": 1,
+    "pitch": true
+  },
+  {
+    "voice": "guy",
+    "text": "her close friendship with her aunt",
+    "word": "close",
+    "slow": true,
+    "url": "http://localhost:5186/audio/slow/guy/pack-v2-140.mp3?v=bcf3c666314c18ce",
+    "position": 31.59,
+    "rate": 1,
+    "pitch": true
+  }
+]

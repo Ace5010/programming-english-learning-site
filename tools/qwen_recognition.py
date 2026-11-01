@@ -17,11 +17,20 @@ class QwenRecognition(SenseVoiceRecognition):
 
     def __init__(self):
         os.environ.update(HF_HUB_OFFLINE='1', TRANSFORMERS_OFFLINE='1', HF_HUB_DISABLE_TELEMETRY='1')
-        import torch
-        torch.set_num_threads(6)
-        torch.set_num_interop_threads(1)
-        from benchmark_qwen_asr import load
-        infer, _, _ = load()
+        backend = os.environ.get('CODEWORDS_QWEN_BACKEND', 'shared-q8')
+        if backend == 'shared-q8':
+            from shared_q8 import SharedQ8
+            infer = SharedQ8()
+            self.backend = infer.backend
+        elif backend == 'original':
+            import torch
+            torch.set_num_threads(6)
+            torch.set_num_interop_threads(1)
+            from benchmark_qwen_asr import load
+            infer, _, _ = load()
+            self.backend = 'original-fp32-cpu'
+        else:
+            raise ValueError('Unknown CODEWORDS_QWEN_BACKEND')
         def run(audio):
             result = infer(audio)
             if result.get('truncated'):

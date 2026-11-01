@@ -1,0 +1,116 @@
+{
+  "results": [
+    {
+      "check": "programming normal from card",
+      "events": [
+        {
+          "type": "playing",
+          "src": "http://localhost:5186/audio/aria/word-1.mp3?audio=clear-20261101-v1",
+          "rate": 1,
+          "pitch": true
+        }
+      ]
+    },
+    {
+      "check": "programming slow from card",
+      "events": [
+        {
+          "type": "playing",
+          "src": "http://localhost:5186/audio/aria/word-1.mp3?v=8d8ab328092d4aab",
+          "rate": 1,
+          "pitch": true
+        }
+      ]
+    },
+    {
+      "check": "programming example normal",
+      "events": [
+        {
+          "type": "playing",
+          "src": "http://localhost:5186/audio/aria/example-1.mp3?v=Open+this+repository.&audio=clear-20261101-v1",
+          "rate": 1,
+          "pitch": true
+        }
+      ]
+    },
+    {
+      "check": "programming example slow",
+      "events": [
+        {
+          "type": "playing",
+          "src": "http://localhost:5186/audio/foundation/aria/f-ed077f3d8125d60d.mp3?v=1565adac203ca474",
+          "rate": 1,
+          "pitch": true
+        }
+      ]
+    },
+    {
+      "check": "dialog escape, focus restore, saved favorite, progress unchanged"
+    },
+    {
+      "check": "programming search/filter, favorites page removal closes detail"
+    },
+    {
+      "check": "daily normal from card",
+      "events": [
+        {
+          "type": "playing",
+          "src": "http://localhost:5186/audio/daily/aria/daily-word-i.mp3?v=I&audio=clear-20261101-v1",
+          "rate": 1,
+          "pitch": true
+        }
+      ]
+    },
+    {
+      "check": "daily slow from card",
+      "events": [
+        {
+          "type": "playing",
+          "src": "http://localhost:5186/audio/aria/word-1758.mp3?v=e0899bfd6e2e3e76",
+          "rate": 1,
+          "pitch": true
+        }
+      ]
+    },
+    {
+      "check": "daily example normal",
+      "events": [
+        {
+          "type": "playing",
+          "src": "http://localhost:5186/audio/daily/aria/daily-word-i-example-1.mp3?v=I+am+Ben.&audio=clear-20261101-v1",
+          "rate": 1,
+          "pitch": true
+        }
+      ]
+    },
+    {
+      "check": "daily example slow",
+      "events": [
+        {
+          "type": "playing",
+          "src": "http://localhost:5186/audio/aria/word-1758.mp3?v=e0899bfd6e2e3e76",
+          "rate": 1,
+          "pitch": true
+        }
+      ]
+    },
+    {
+      "check": "daily details, examples, persisted favorites, removal, learning records unchanged"
+    },
+    {
+      "check": "daily type filter, search and empty result"
+    },
+    {
+      "check": "daily detail starts word practice, closes dialog, unlocks body",
+      "mode": "lesson",
+      "queue": 1
+    },
+    {
+      "check": "load more and backdrop dismissal"
+    },
+    {
+      "check": "native modal keyboard traversal never enters background page; Escape restores trigger focus"
+    }
+  ],
+  "errors": []
+}

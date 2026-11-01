@@ -1,0 +1,29 @@
+{
+  "baselineRecordings": 16400,
+  "currentRecordings": 16404,
+  "before": {
+    "min": -23.11,
+    "p05": -20.88,
+    "median": -19.22,
+    "p95": -17.58,
+    "max": -15.07,
+    "clippedSamples": 0,
+    "shortLeading": 2,
+    "shortTrailing": 4
+  },
+  "after": {
+    "min": -21.74,
+    "p05": -20.62,
+    "median": -20.31,
+    "p95": -19.13,
+    "max": -19.01,
+    "clippedSamples": 0,
+    "shortLeading": 0,
+    "shortTrailing": 0
+  },
+  "baselineChanged": 7483,
+  "baselineRegenerated": 110,
+  "newRecordings": 6,
+  "retiredDuplicates": 2,
+  "installedReplacements": 7488
+}

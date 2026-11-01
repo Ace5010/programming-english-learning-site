@@ -1,0 +1,674 @@
+{
+  "normal": {
+    "screened": 172,
+    "exactNormalizedMatches": 150,
+    "homophones": 7,
+    "spellingVariants": 1,
+    "manifestSha256": "f60964e15def89e902ba8dc4bda51a1b20ae3986ae8e42963618425683e79b0c",
+    "nonexact": [
+      {
+        "key": "aria/word-682.mp3",
+        "expected": "Media Centre PC (MCPC)",
+        "transcript": "Media Center PC, M C P C."
+      },
+      {
+        "key": "aria/example-682.mp3",
+        "expected": "This project uses Media Centre PC (MCPC).",
+        "transcript": "This project uses Media Center PC (MCPC)."
+      },
+      {
+        "key": "aria/word-2052.mp3",
+        "expected": "plane",
+        "transcript": "Plain."
+      },
+      {
+        "key": "aria/example-2198.mp3",
+        "expected": "a computer with an 18-inch colour screen",
+        "transcript": "A computer with an 18-inch color screen."
+      },
+      {
+        "key": "aria/word-2892.mp3",
+        "expected": "reed",
+        "transcript": "Read."
+      },
+      {
+        "key": "aria/example-3166.mp3",
+        "expected": "This town was built in AD 100.",
+        "transcript": "This town was built in A.D. one hundred."
+      },
+      {
+        "key": "daily/aria/daily-word-read.mp3",
+        "expected": "reed",
+        "transcript": "Read."
+      },
+      {
+        "key": "foundation/aria/f-3316348dbadfb7b1.mp3",
+        "expected": "reed",
+        "transcript": "Read."
+      },
+      {
+        "key": "guy/word-150.mp3",
+        "expected": "baud",
+        "transcript": "Bad."
+      },
+      {
+        "key": "guy/word-232.mp3",
+        "expected": "common QR code standard",
+        "transcript": "Common Q or code standard."
+      },
+      {
+        "key": "guy/example-232.mp3",
+        "expected": "Read about common QR code standard.",
+        "transcript": "Read about Common Q or Code Standard."
+      },
+      {
+        "key": "guy/word-682.mp3",
+        "expected": "Media Centre PC (MCPC)",
+        "transcript": "Media Center PC, MCPC."
+      },
+      {
+        "key": "guy/example-682.mp3",
+        "expected": "This project uses Media Centre PC (MCPC).",
+        "transcript": "This project uses Media Center PC (MCPC)."
+      },
+      {
+        "key": "guy/word-1615.mp3",
+        "expected": "fill",
+        "transcript": "Phil."
+      },
+      {
+        "key": "guy/example-2347.mp3",
+        "expected": "Nearly 10% of the Earth’s surface is covered by ice.",
+        "transcript": "Nearly ten percent of the Earth's surface is covered by ice."
+      },
+      {
+        "key": "guy/word-2892.mp3",
+        "expected": "reed",
+        "transcript": "Read."
+      },
+      {
+        "key": "guy/word-3080.mp3",
+        "expected": "Yang",
+        "transcript": "Young."
+      },
+      {
+        "key": "guy/example-3130.mp3",
+        "expected": "Slavery was abolished in the US in the 19th century.",
+        "transcript": "Slavery was abolished in the U.S. in the nineteenth century."
+      },
+      {
+        "key": "guy/example-3166.mp3",
+        "expected": "This town was built in AD 100.",
+        "transcript": "This town was built in A.D. one hundred."
+      },
+      {
+        "key": "guy/example-3519.mp3",
+        "expected": "We’d classify Drabble’s novels under ‘Romance’.",
+        "transcript": "We classify Drabel's novels under romance."
+      },
+      {
+        "key": "daily/guy/daily-word-read.mp3",
+        "expected": "reed",
+        "transcript": "Read."
+      },
+      {
+        "key": "foundation/guy/f-3316348dbadfb7b1.mp3",
+        "expected": "reed",
+        "transcript": "Read."
+      }
+    ]
+  },
+  "slow": {
+    "screened": 1126,
+    "exactNormalizedMatches": 1033,
+    "homophones": 4,
+    "spellingVariants": 0,
+    "manifestSha256": "70df69b82de17c7da8e374b2018412ca497b4ec07cdbcf74dc28dd4fcacc72c0",
+    "nonexact": [
+      {
+        "key": "aria:$20",
+        "expected": "$20",
+        "transcript": "Twenty dollars."
+      },
+      {
+        "key": "aria:30th",
+        "expected": "30th",
+        "transcript": "Thirtieth."
+      },
+      {
+        "key": "aria:COLLOINEXA",
+        "expected": "COLLOINEXA",
+        "transcript": "Coloaneixa."
+      },
+      {
+        "key": "aria:ICANN",
+        "expected": "ICANN",
+        "transcript": "I can."
+      },
+      {
+        "key": "aria:II",
+        "expected": "II",
+        "transcript": "Two."
+      },
+      {
+        "key": "aria:LAN",
+        "expected": "LAN",
+        "transcript": "Lawn."
+      },
+      {
+        "key": "aria:MUX",
+        "expected": "MUX",
+        "transcript": "Max."
+      },
+      {
+        "key": "aria:OK",
+        "expected": "OK",
+        "transcript": "Okay."
+      },
+      {
+        "key": "aria:OO",
+        "expected": "O O",
+        "transcript": "Oh! Oh!"
+      },
+      {
+        "key": "aria:QR",
+        "expected": "Q R",
+        "transcript": "Hugh R."
+      },
+      {
+        "key": "aria:ROM",
+        "expected": "ROM",
+        "transcript": "Ram."
+      },
+      {
+        "key": "aria:WAN",
+        "expected": "WAN",
+        "transcript": "One."
+      },
+      {
+        "key": "aria:Write",
+        "expected": "Write",
+        "transcript": "Right."
+      },
+      {
+        "key": "aria:been",
+        "expected": "been",
+        "transcript": "Then."
+      },
+      {
+        "key": "aria:blew",
+        "expected": "blew",
+        "transcript": "Blue."
+      },
+      {
+        "key": "aria:idol",
+        "expected": "idol",
+        "transcript": "Idle."
+      },
+      {
+        "key": "aria:kiosk",
+        "expected": "kiosk",
+        "transcript": "He asked."
+      },
+      {
+        "key": "aria:read@present",
+        "expected": "reed",
+        "transcript": "Read."
+      },
+      {
+        "key": "aria:tutorial@f-4a69f19c8c264850",
+        "expected": "sea",
+        "transcript": "C."
+      },
+      {
+        "key": "aria:tutorial@f-aa9e9b5c907d50fe",
+        "expected": "see",
+        "transcript": "C."
+      },
+      {
+        "key": "aria:tutorial@f-36521b4fc24dbcaf",
+        "expected": "Are",
+        "transcript": "R."
+      },
+      {
+        "key": "aria:tutorial@f-030d756286e59f22",
+        "expected": "Ben",
+        "transcript": "Then."
+      },
+      {
+        "key": "aria:tutorial@f-aa61b3aacbd32bbe",
+        "expected": "Ben's",
+        "transcript": "Benz."
+      },
+      {
+        "key": "aria:tutorial@f-65a25e8dc0c1ba8f",
+        "expected": "Ben’s",
+        "transcript": "Benz."
+      },
+      {
+        "key": "aria:tutorial@f-c4694f2e93d5c4e7",
+        "expected": "O",
+        "transcript": "Oh."
+      },
+      {
+        "key": "aria:tutorial@f-4ae81572f06e1b88",
+        "expected": "Q",
+        "transcript": "Hugh."
+      },
+      {
+        "key": "aria:tutorial@f-a25513c7e0f6eaa8",
+        "expected": "U",
+        "transcript": "You."
+      },
+      {
+        "key": "aria:tutorial@f-18f5384d58bcb1bb",
+        "expected": "Y",
+        "transcript": "Why."
+      },
+      {
+        "key": "aria:tutorial@f-ea325d761f98c6b7",
+        "expected": "an",
+        "transcript": "N."
+      },
+      {
+        "key": "aria:tutorial@f-ba78973ddcf98d4e",
+        "expected": "are",
+        "transcript": "R."
+      },
+      {
+        "key": "aria:tutorial@f-ca5bcec12f716f44",
+        "expected": "bat",
+        "transcript": "That."
+      },
+      {
+        "key": "aria:tutorial@f-46599c5bb5c33101",
+        "expected": "be",
+        "transcript": "B."
+      },
+      {
+        "key": "aria:tutorial@f-77af778b51abd4a3",
+        "expected": "cat",
+        "transcript": "Kate."
+      },
+      {
+        "key": "aria:tutorial@f-5643f33e5bcf75c6",
+        "expected": "heit",
+        "transcript": "Height."
+      },
+      {
+        "key": "aria:tutorial@f-d59ce33d91a87db7",
+        "expected": "ng",
+        "transcript": "Ing."
+      },
+      {
+        "key": "aria:tutorial@f-a8c23cc814179578",
+        "expected": "oo",
+        "transcript": "Oh oh."
+      },
+      {
+        "key": "aria:tutorial@f-09f5ffef28309853",
+        "expected": "sum",
+        "transcript": "Some."
+      },
+      {
+        "key": "aria:tutorial@f-27756f050e14a1cb",
+        "expected": "sun",
+        "transcript": "Son."
+      },
+      {
+        "key": "aria:tutorial@f-a9f74d1ec36ebdeb",
+        "expected": "tea",
+        "transcript": "T."
+      },
+      {
+        "key": "aria:tutorial@f-7383711c1b05e72a",
+        "expected": "than",
+        "transcript": "Then."
+      },
+      {
+        "key": "aria:tutorial@f-663ea1bfffe5038f",
+        "expected": "to",
+        "transcript": "Two."
+      },
+      {
+        "key": "guy:19th",
+        "expected": "19th",
+        "transcript": "Nineteenth."
+      },
+      {
+        "key": "guy:COLLOINEXA",
+        "expected": "COLLOINEXA",
+        "transcript": "Kalowinexa."
+      },
+      {
+        "key": "guy:ICANN",
+        "expected": "ICANN",
+        "transcript": "I can."
+      },
+      {
+        "key": "guy:II",
+        "expected": "II",
+        "transcript": "Two."
+      },
+      {
+        "key": "guy:Littman",
+        "expected": "Littman",
+        "transcript": "Litman."
+      },
+      {
+        "key": "guy:MUX",
+        "expected": "MUX",
+        "transcript": "Max."
+      },
+      {
+        "key": "guy:NC",
+        "expected": "N C",
+        "transcript": "And see."
+      },
+      {
+        "key": "guy:O",
+        "expected": "O",
+        "transcript": "Oh."
+      },
+      {
+        "key": "guy:OA",
+        "expected": "O A",
+        "transcript": "Away."
+      },
+      {
+        "key": "guy:OK",
+        "expected": "OK",
+        "transcript": "Okay."
+      },
+      {
+        "key": "guy:OO",
+        "expected": "O O",
+        "transcript": "Oh."
+      },
+      {
+        "key": "guy:ROM",
+        "expected": "ROM",
+        "transcript": "Rum."
+      },
+      {
+        "key": "guy:There's",
+        "expected": "There's",
+        "transcript": "Theirs."
+      },
+      {
+        "key": "guy:WAN",
+        "expected": "WAN",
+        "transcript": "One."
+      },
+      {
+        "key": "guy:beneath",
+        "expected": "beneath",
+        "transcript": "They need."
+      },
+      {
+        "key": "guy:encash",
+        "expected": "encash",
+        "transcript": "And cash."
+      },
+      {
+        "key": "guy:led",
+        "expected": "led",
+        "transcript": "Lead."
+      },
+      {
+        "key": "guy:read-only",
+        "expected": "reed only",
+        "transcript": "Read only."
+      },
+      {
+        "key": "guy:£5",
+        "expected": "£5",
+        "transcript": "Five pounds."
+      },
+      {
+        "key": "guy:read@present",
+        "expected": "reed",
+        "transcript": "Read."
+      },
+      {
+        "key": "guy:tutorial@f-4a69f19c8c264850",
+        "expected": "sea",
+        "transcript": "C."
+      },
+      {
+        "key": "guy:tutorial@f-aa9e9b5c907d50fe",
+        "expected": "see",
+        "transcript": "C."
+      },
+      {
+        "key": "guy:tutorial@f-36521b4fc24dbcaf",
+        "expected": "Are",
+        "transcript": "R."
+      },
+      {
+        "key": "guy:tutorial@f-aa61b3aacbd32bbe",
+        "expected": "Ben's",
+        "transcript": "Benz."
+      },
+      {
+        "key": "guy:tutorial@f-65a25e8dc0c1ba8f",
+        "expected": "Ben’s",
+        "transcript": "Benz."
+      },
+      {
+        "key": "guy:tutorial@f-42e98b9b684637d1",
+        "expected": "I stop to rest.",
+        "transcript": "I stopped to rest."
+      },
+      {
+        "key": "guy:tutorial@f-c4694f2e93d5c4e7",
+        "expected": "O",
+        "transcript": "Oh."
+      },
+      {
+        "key": "guy:tutorial@f-a25513c7e0f6eaa8",
+        "expected": "U",
+        "transcript": "You."
+      },
+      {
+        "key": "guy:tutorial@f-18f5384d58bcb1bb",
+        "expected": "Y",
+        "transcript": "Why."
+      },
+      {
+        "key": "guy:tutorial@f-910ab714907fe502",
+        "expected": "You were reading.",
+        "transcript": "You are reading."
+      },
+      {
+        "key": "guy:tutorial@f-ab6db599234d2636",
+        "expected": "am",
+        "transcript": "M."
+      },
+      {
+        "key": "guy:tutorial@f-ea325d761f98c6b7",
+        "expected": "an",
+        "transcript": "Un."
+      },
+      {
+        "key": "guy:tutorial@f-ba78973ddcf98d4e",
+        "expected": "are",
+        "transcript": "R."
+      },
+      {
+        "key": "guy:tutorial@f-64ee3287355f42ec",
+        "expected": "at two",
+        "transcript": "Add two."
+      },
+      {
+        "key": "guy:tutorial@f-46599c5bb5c33101",
+        "expected": "be",
+        "transcript": "B."
+      },
+      {
+        "key": "guy:tutorial@f-d0013c2e0a387e4c",
+        "expected": "bit",
+        "transcript": "That."
+      },
+      {
+        "key": "guy:tutorial@f-18679f10e5067880",
+        "expected": "fool",
+        "transcript": "Four."
+      },
+      {
+        "key": "guy:tutorial@f-1838a0b253b655ec",
+        "expected": "gooder",
+        "transcript": "Guder."
+      },
+      {
+        "key": "guy:tutorial@f-5643f33e5bcf75c6",
+        "expected": "heit",
+        "transcript": "Height."
+      },
+      {
+        "key": "guy:tutorial@f-2ad8a7049d7c5511",
+        "expected": "it",
+        "transcript": "It's."
+      },
+      {
+        "key": "guy:tutorial@f-d59ce33d91a87db7",
+        "expected": "ng",
+        "transcript": "Ing."
+      },
+      {
+        "key": "guy:tutorial@f-a8c23cc814179578",
+        "expected": "oo",
+        "transcript": "Oh."
+      },
+      {
+        "key": "guy:tutorial@f-09f5ffef28309853",
+        "expected": "sum",
+        "transcript": "Some."
+      },
+      {
+        "key": "guy:tutorial@f-27756f050e14a1cb",
+        "expected": "sun",
+        "transcript": "Son."
+      },
+      {
+        "key": "guy:tutorial@f-a9f74d1ec36ebdeb",
+        "expected": "tea",
+        "transcript": "T."
+      },
+      {
+        "key": "guy:tutorial@f-7383711c1b05e72a",
+        "expected": "than",
+        "transcript": "Then."
+      },
+      {
+        "key": "guy:tutorial@f-663ea1bfffe5038f",
+        "expected": "to",
+        "transcript": "Two."
+      },
+      {
+        "key": "guy:tutorial@f-910adfb424646393",
+        "expected": "were",
+        "transcript": "War."
+      },
+      {
+        "key": "guy:tutorial@f-1014d7f72aefaf5c",
+        "expected": "youthey",
+        "transcript": "You the."
+      },
+      {
+        "key": "normal:aria:record@noun",
+        "expected": "Record",
+        "transcript": "Records."
+      },
+      {
+        "key": "normal:aria:read@present",
+        "expected": "reed",
+        "transcript": "Read."
+      },
+      {
+        "key": "normal:guy:read@present",
+        "expected": "reed",
+        "transcript": "Read."
+      }
+    ]
+  },
+  "preservedSources": [
+    {
+      "key": "aria:van",
+      "expected": "van",
+      "manifestSha256": "70df69b82de17c7da8e374b2018412ca497b4ec07cdbcf74dc28dd4fcacc72c0",
+      "audioSha256": "a4b2a20007a0c8c82e4357d0ecadf24db8c8d99fc86f5341b26aaba66ca36f1f",
+      "transcript": "Van.",
+      "modelMs": 93,
+      "textMatch": true,
+      "homophoneMatch": false,
+      "spellingVariant": false
+    },
+    {
+      "key": "aria:tutorial@f-030d756286e59f22",
+      "expected": "Ben",
+      "manifestSha256": "70df69b82de17c7da8e374b2018412ca497b4ec07cdbcf74dc28dd4fcacc72c0",
+      "audioSha256": "e17f3026417d108cd74929f2cef7962741c7085b25fc7584718a7cc716f9e377",
+      "transcript": "Then.",
+      "modelMs": 79,
+      "textMatch": false,
+      "homophoneMatch": false,
+      "spellingVariant": false
+    },
+    {
+      "key": "aria:tutorial@f-42e98b9b684637d1",
+      "expected": "I stop to rest.",
+      "manifestSha256": "70df69b82de17c7da8e374b2018412ca497b4ec07cdbcf74dc28dd4fcacc72c0",
+      "audioSha256": "5b5c0dddc47a35eb150378505e6d6584b31a82dcb6441b118e80aa082724193a",
+      "transcript": "I stop to rest.",
+      "modelMs": 158,
+      "textMatch": true,
+      "homophoneMatch": false,
+      "spellingVariant": false
+    },
+    {
+      "key": "aria:tutorial@f-18679f10e5067880",
+      "expected": "fool",
+      "manifestSha256": "70df69b82de17c7da8e374b2018412ca497b4ec07cdbcf74dc28dd4fcacc72c0",
+      "audioSha256": "54532caf0b3119850c000990a3aa9a4ce7dd7c0bad0da5b0519544f4a62b0e12",
+      "transcript": "Fool.",
+      "modelMs": 87,
+      "textMatch": true,
+      "homophoneMatch": false,
+      "spellingVariant": false
+    },
+    {
+      "key": "guy:thing",
+      "expected": "thing",
+      "manifestSha256": "70df69b82de17c7da8e374b2018412ca497b4ec07cdbcf74dc28dd4fcacc72c0",
+      "audioSha256": "a7a1b8b19f8236492a79e5ce60f4b3e614ba4332885d5457f53af7d831f3cf56",
+      "transcript": "Thing.",
+      "modelMs": 81,
+      "textMatch": true,
+      "homophoneMatch": false,
+      "spellingVariant": false
+    },
+    {
+      "key": "guy:tutorial@f-3e23e8160039594a",
+      "expected": "b",
+      "manifestSha256": "70df69b82de17c7da8e374b2018412ca497b4ec07cdbcf74dc28dd4fcacc72c0",
+      "audioSha256": "65e936ceb4338575eec8e174b2a4e5513ba79b8daaca390eacdcca9af0970536",
+      "transcript": "B.",
+      "modelMs": 78,
+      "textMatch": true,
+      "homophoneMatch": false,
+      "spellingVariant": false
+    },
+    {
+      "key": "guy:tutorial@f-d0013c2e0a387e4c",
+      "expected": "bit",
+      "manifestSha256": "70df69b82de17c7da8e374b2018412ca497b4ec07cdbcf74dc28dd4fcacc72c0",
+      "audioSha256": "65e936ceb4338575eec8e174b2a4e5513ba79b8daaca390eacdcca9af0970536",
+      "transcript": "That.",
+      "modelMs": 73,
+      "textMatch": false,
+      "homophoneMatch": false,
+      "spellingVariant": false
+    }
+  ]
+}

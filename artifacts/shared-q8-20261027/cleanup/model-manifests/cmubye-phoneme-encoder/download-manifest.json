@@ -1,0 +1,35 @@
+{
+  "repo": "Pransfrance/cmubye-phoneme-encoder",
+  "revision": "454fa24e22a19c86bba9e91c2b154ee34779d849",
+  "license": "apache-2.0",
+  "files": {
+    "README.md": {
+      "bytes": 2014,
+      "sha256": "130393a1ba83f2bd80d2856c3de101db3fc23a79f4c34673ab40e449dad26ffd"
+    },
+    "added_tokens.json": {
+      "bytes": 239,
+      "sha256": "0ecad3509131d89b6e8e108e9409226de7dc2d9f5152c14852e27c3275d19ed4"
+    },
+    "config.json": {
+      "bytes": 2034,
+      "sha256": "4830e9d0b19762d42f9685354b20db65de56bf05123e5b2f09a887393f38f847"
+    },
+    "processor_config.json": {
+      "bytes": 299,
+      "sha256": "8bc3c8d6d97ea61524d5c15d8554b4baf072d2264c0bda1839bc7a822c200d66"
+    },
+    "tokenizer_config.json": {
+      "bytes": 2941,
+      "sha256": "a6e5c9dbbd5367fdc003555f950dcb0b05044d683a45781fa1254b393059312e"
+    },
+    "vocab.json": {
+      "bytes": 489,
+      "sha256": "27effdfa8cbdf80db5405d8d4385d20addff5f63d5dee91e58347972b9b6d76d"
+    },
+    "model.safetensors": {
+      "bytes": 1261987832,
+      "sha256": "6541e968178e70ddb273794b5e5cf74f36d7e9474252b432c857745e27e45770"
+    }
+  }
+}

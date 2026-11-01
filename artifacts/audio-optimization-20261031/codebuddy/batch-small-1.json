@@ -1,0 +1,65 @@
+{
+  "batch": "small-1",
+  "firstId": 1,
+  "lastId": 250,
+  "submitted": 250,
+  "exitCode": 0,
+  "timedOut": false,
+  "complete": true,
+  "elapsedSeconds": 83.258,
+  "records": [
+    {
+      "model": "deepseek-v4.1-flash",
+      "usage": {
+        "prompt_tokens": 15329,
+        "completion_tokens": 13408,
+        "total_tokens": 28737,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 13111,
+          "rejected_prediction_tokens": 0,
+          "cached_tokens": 0
+        },
+        "prompt_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": 0,
+          "cached_tokens": 7808
+        },
+        "prompt_cache_hit_tokens": 7808,
+        "prompt_cache_miss_tokens": 7521,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 0,
+        "prompt_cache_write_tokens": 0,
+        "completion_thinking_tokens": 13111,
+        "credit": 0.88,
+        "cached_tokens": 0
+      },
+      "requestId": "01a194f3981570c682a541f5481e8387"
+    }
+  ],
+  "result": {
+    "reviewedCount": 250,
+    "findings": [
+      {
+        "id": 20,
+        "word": "readme",
+        "issue": "Code-spelling/filename, not an ordinary word: lowercase 'readme' is ambiguous with the phrase 'read me', and 'read' can be /riːd/ or /red/. The supplied IPA fits the intended present-tense filename reading, but the spelling alone does not force it.",
+        "intendedIPA": "ˈriːd miː",
+        "context": "The readme file explains the setup.",
+        "confidence": "medium"
+      },
+      {
+        "id": 124,
+        "word": "attribute",
+        "issue": "Heteronym: the Chinese sense 属性 requires the noun reading with first-syllable stress; the verb is /əˈtrɪbjuːt/. No IPA was supplied, so the standalone entry is ambiguous.",
+        "intendedIPA": "ˈætrɪbjuːt",
+        "context": "Each attribute has a name and a value.",
+        "confidence": "high"
+      }
+    ],
+    "notes": "Reviewed all 250 entries. Entries 1–81 contain IPA; I found no clear segmental IPA mismatch for the supplied Chinese senses and examples. Entries 82–250 have empty phonetics, so their pronunciation cannot be checked; entry 234 also appears truncated ('Common Vulnerability and'). Several later entries are code/abbreviation spellings (e.g. 3D, Big-5, AR, QR, SMS), but no IPA is supplied for them."
+  }
+}

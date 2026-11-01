@@ -1,0 +1,41 @@
+{
+  "added": [
+    {
+      "path": "reading/aria/read-8ecbaf607e96e7fb.mp3",
+      "text": "bags",
+      "fileSha256": "ed73dfbcf43e337b7480e8fbd6ddb2bc9a2503f81a91bc16b5f48193ae53b6d3"
+    },
+    {
+      "path": "reading/aria/read-43b69e82bee632b3.mp3",
+      "text": "cups",
+      "fileSha256": "440db87a9784a2a27aad5611c381b0873bc952f13f5d856c558ab5c105b91612"
+    },
+    {
+      "path": "reading/aria/read-2e4b9cc2428beb7b.mp3",
+      "text": "friends",
+      "fileSha256": "ace86850e78a8c3d569a93cdf81e2124f2dc39328c259ca1710a62502ce4fd5e"
+    },
+    {
+      "path": "reading/guy/read-8ecbaf607e96e7fb.mp3",
+      "text": "bags",
+      "fileSha256": "8f4acbd8fd10eac928d1e148280a505df893d804416fb11b82d87fc6729bbc15"
+    },
+    {
+      "path": "reading/guy/read-43b69e82bee632b3.mp3",
+      "text": "cups",
+      "fileSha256": "763a86665ac7d3d7ba07d31cf0defb7d5c2fc0afce4d472c8b2133d6d84408a9"
+    },
+    {
+      "path": "reading/guy/read-2e4b9cc2428beb7b.mp3",
+      "text": "friends",
+      "fileSha256": "e604f4e34d050560f1e0f4f5283d7847fae25a99212eb63e34b540d014f71e82"
+    }
+  ],
+  "retired": [
+    "reading/aria/read-770e607624d68926.mp3",
+    "reading/guy/read-770e607624d68926.mp3"
+  ],
+  "readingTexts": 293,
+  "normalRecordings": 16404,
+  "originalInventorySha256": "f325ffb7dd8b8bae02ddc96589338bb7d898412adb9db8454055b1be52e9569e"
+}

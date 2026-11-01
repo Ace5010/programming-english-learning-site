@@ -1,0 +1,30 @@
+[
+  {
+    "section": "daily",
+    "phrase": "goodbye",
+    "browserMediaRecorder": true,
+    "localApiStubbed": false,
+    "transcriptSaved": "Goodbye.",
+    "modelAndDecodeMs": 182,
+    "stopToUiMs": 252,
+    "delayedStartupDiscovered": false,
+    "mobile390NoOverflow": true,
+    "refreshPreserved": true,
+    "noAutomaticMastery": true,
+    "errors": []
+  },
+  {
+    "section": "daily",
+    "phrase": "whats-your-name",
+    "browserMediaRecorder": true,
+    "localApiStubbed": false,
+    "transcriptSaved": "What's your name?",
+    "modelAndDecodeMs": 190,
+    "stopToUiMs": 262,
+    "delayedStartupDiscovered": false,
+    "mobile390NoOverflow": true,
+    "refreshPreserved": true,
+    "noAutomaticMastery": true,
+    "errors": []
+  }
+]

@@ -1,0 +1,258 @@
+[
+  {
+    "batch": "9cd866ab",
+    "text": "Live",
+    "extraMs": 0,
+    "heard": "Life."
+  },
+  {
+    "batch": "9cd866ab",
+    "text": "Live",
+    "extraMs": 50,
+    "heard": "Live."
+  },
+  {
+    "batch": "9cd866ab",
+    "text": "Live",
+    "extraMs": 100,
+    "heard": "Live."
+  },
+  {
+    "batch": "9cd866ab",
+    "text": "Used",
+    "extraMs": 0,
+    "heard": "Use."
+  },
+  {
+    "batch": "9cd866ab",
+    "text": "Used",
+    "extraMs": 50,
+    "heard": "Use."
+  },
+  {
+    "batch": "9cd866ab",
+    "text": "Used",
+    "extraMs": 100,
+    "heard": "Used."
+  },
+  {
+    "batch": "9cd866ab",
+    "text": "Wind",
+    "extraMs": 0,
+    "heard": "Wind."
+  },
+  {
+    "batch": "9cd866ab",
+    "text": "Wind",
+    "extraMs": 50,
+    "heard": "Winds."
+  },
+  {
+    "batch": "9cd866ab",
+    "text": "Wind",
+    "extraMs": 100,
+    "heard": "Winds."
+  },
+  {
+    "batch": "9cd866ab",
+    "text": "Wound",
+    "extraMs": 0,
+    "heard": "Wound."
+  },
+  {
+    "batch": "9cd866ab",
+    "text": "Wound",
+    "extraMs": 50,
+    "heard": "Wound."
+  },
+  {
+    "batch": "9cd866ab",
+    "text": "Wound",
+    "extraMs": 100,
+    "heard": "Wound."
+  },
+  {
+    "batch": "d2ef0f37",
+    "text": "Live",
+    "extraMs": 0,
+    "heard": "Life."
+  },
+  {
+    "batch": "d2ef0f37",
+    "text": "Live",
+    "extraMs": 50,
+    "heard": "Live."
+  },
+  {
+    "batch": "d2ef0f37",
+    "text": "Live",
+    "extraMs": 100,
+    "heard": "Live."
+  },
+  {
+    "batch": "d2ef0f37",
+    "text": "Used",
+    "extraMs": 0,
+    "heard": "Use."
+  },
+  {
+    "batch": "d2ef0f37",
+    "text": "Used",
+    "extraMs": 50,
+    "heard": "Used."
+  },
+  {
+    "batch": "d2ef0f37",
+    "text": "Used",
+    "extraMs": 100,
+    "heard": "Used."
+  },
+  {
+    "batch": "d2ef0f37",
+    "text": "Wind",
+    "extraMs": 0,
+    "heard": "When."
+  },
+  {
+    "batch": "d2ef0f37",
+    "text": "Wind",
+    "extraMs": 50,
+    "heard": "Winds."
+  },
+  {
+    "batch": "d2ef0f37",
+    "text": "Wind",
+    "extraMs": 100,
+    "heard": "Winds."
+  },
+  {
+    "batch": "d2ef0f37",
+    "text": "Wound",
+    "extraMs": 0,
+    "heard": "Won't."
+  },
+  {
+    "batch": "d2ef0f37",
+    "text": "Wound",
+    "extraMs": 50,
+    "heard": "Won't."
+  },
+  {
+    "batch": "d2ef0f37",
+    "text": "Wound",
+    "extraMs": 100,
+    "heard": "Won't."
+  },
+  {
+    "batch": "e511603e",
+    "text": "Bow",
+    "extraMs": 0,
+    "heard": "Bow."
+  },
+  {
+    "batch": "e511603e",
+    "text": "Bow",
+    "extraMs": 50,
+    "heard": "Bow."
+  },
+  {
+    "batch": "e511603e",
+    "text": "Bow",
+    "extraMs": 100,
+    "heard": "About."
+  },
+  {
+    "batch": "e511603e",
+    "text": "Live",
+    "extraMs": 0,
+    "heard": "Live."
+  },
+  {
+    "batch": "e511603e",
+    "text": "Live",
+    "extraMs": 50,
+    "heard": "Live."
+  },
+  {
+    "batch": "e511603e",
+    "text": "Live",
+    "extraMs": 100,
+    "heard": "Live."
+  },
+  {
+    "batch": "f7e94482",
+    "text": "Bow",
+    "extraMs": 0,
+    "heard": "Bow."
+  },
+  {
+    "batch": "f7e94482",
+    "text": "Bow",
+    "extraMs": 50,
+    "heard": "Bow."
+  },
+  {
+    "batch": "f7e94482",
+    "text": "Bow",
+    "extraMs": 100,
+    "heard": "About."
+  },
+  {
+    "batch": "f7e94482",
+    "text": "Live",
+    "extraMs": 0,
+    "heard": "Live."
+  },
+  {
+    "batch": "f7e94482",
+    "text": "Live",
+    "extraMs": 50,
+    "heard": "Live."
+  },
+  {
+    "batch": "f7e94482",
+    "text": "Live",
+    "extraMs": 100,
+    "heard": "Live."
+  },
+  {
+    "original": ".runtime\\audio-optimization-20261031\\baseline\\public\\audio\\aria\\word-1859.mp3",
+    "heard": "Live."
+  },
+  {
+    "original": ".runtime\\audio-optimization-20261031\\baseline\\public\\audio\\aria\\word-2471.mp3",
+    "heard": "Used."
+  },
+  {
+    "original": ".runtime\\audio-optimization-20261031\\baseline\\public\\audio\\aria\\word-2536.mp3",
+    "heard": "Wind."
+  },
+  {
+    "original": ".runtime\\audio-optimization-20261031\\baseline\\public\\audio\\aria\\word-2556.mp3",
+    "heard": "Wound."
+  },
+  {
+    "original": ".runtime\\audio-optimization-20261031\\baseline\\public\\audio\\aria\\word-3043.mp3",
+    "heard": "Bow."
+  },
+  {
+    "original": ".runtime\\audio-optimization-20261031\\baseline\\public\\audio\\guy\\word-1859.mp3",
+    "heard": "Live."
+  },
+  {
+    "original": ".runtime\\audio-optimization-20261031\\baseline\\public\\audio\\guy\\word-2471.mp3",
+    "heard": "Used."
+  },
+  {
+    "original": ".runtime\\audio-optimization-20261031\\baseline\\public\\audio\\guy\\word-2536.mp3",
+    "heard": "Wind."
+  },
+  {
+    "original": ".runtime\\audio-optimization-20261031\\baseline\\public\\audio\\guy\\word-2556.mp3",
+    "heard": "Wound."
+  },
+  {
+    "original": ".runtime\\audio-optimization-20261031\\baseline\\public\\audio\\guy\\word-3043.mp3",
+    "heard": "Wow."
+  }
+]

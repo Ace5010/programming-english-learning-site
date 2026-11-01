@@ -310,7 +310,7 @@ const ExerciseQuestion = forwardRef<ExerciseHandle, LessonExerciseProps>(functio
           aria-pressed={selected === option.id} onClick={event => {
             const alreadySelected = selectedRef.current !== null;
             if (!done && !excluded.includes(option.id)) { selectedRef.current = option.id; setSelected(option.id); }
-            reading.play(clickedReadingText(event.target, text), false, alreadySelected ? beforeRead : undefined);
+            reading.play(clickedReadingText(event.target, text), false, alreadySelected ? beforeRead : undefined, text);
           }}><span className="lesson-option-indicator" aria-hidden="true">{done && option.id === target.id ? <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"><path d="m5 12 4 4L19 6" /></svg> : selected === option.id ? <i /> : null}</span><ReadAloudText text={text} inButton /></button><ReadingControls text={text} beforeRead={beforeRead} /></div>;
       })}
     </div>}

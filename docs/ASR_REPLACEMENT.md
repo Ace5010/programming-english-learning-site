@@ -2,6 +2,14 @@
 
 2026-10-04。用户反馈现有跟读几乎没有正确识别，认为需要换模型。本轮在现有 `main` 上筛选本机候选并提供试用，随后按用户“那你直接用就可以了”的明确授权，将本机正式课程默认识别替换为 **Qwen3-ASR-1.7B**。
 
+2026-10-27 更新：按用户要求，桌面识别默认共用 `D:/AI/Qwen3-ASR-1.7B/models/Qwen3-ASR-1.7B-Q8_0.gguf` 及其 transcribe.cpp 运行库，优先 Vulkan。词见固定英语、`vocabulary=None`、`prompt=None`，不读取 Observer 的 181 项 AI 热词、中文领域提示或视频信息。共用磁盘模型，不共用请求或学习数据；旧权重最初保留，随后按用户明确授权清理；Python 环境保留。此次未改动 Observer 配置。
+
+56 段公开输入逐文件校验 SHA-256 后，Q8 无热词结果与 10 月 4 日原版的标准化转写 56/56 一致：课程 24/24、单词 8/8、成人录音 21/24 完全匹配。Q8 本轮推理中位 129.5 ms；加 AI 热词及领域提示后为 363.5 ms，正确数相同但一条 disc 变成 disk（参考为 desk）。原版历史中位 3555 ms；本轮原版重跑在加载时内存不足失败，因此速度不是同日对照，也不能只归因于量化（CPU/Vulkan 同时不同）。未使用用户私人录音。
+
+真实 Chrome MediaRecorder → Q8 → 日常可选跟读 → 刷新恢复通过，最终两例端到端 743/520 ms。独立试读验证 Three 不被参考 Tree 覆盖、静音、坏音频及错误令牌处理。编程普通新课当前没有跟读，旧课程验收脚本已移除失效入口，并适配日常折叠的可选跟读。31 项语音状态/比较回归、生产构建与完整性校验通过。证据：`artifacts/shared-q8-20261027/`；用户本人麦克风效果待实际使用。
+
+旧原版模型已清理，原版回退入口仅供将来恢复完整旧模型后使用（`CODEWORDS_QWEN_BACKEND=original`）；非默认共享安装目录可设置 `CODEWORDS_Q8_ROOT`。切换环境后需在没有识别任务时重启本机识别服务。默认共享模型缺失时明确启动失败，不下载文件或自动加载原版；网页继续保留已有设备/浏览器识别路径。下文为 10 月 4 日历史记录。
+
 ## 结果与选择
 
 正式选择是 **Qwen3-ASR-1.7B**。这组公开样本中它优于另外三项，但与 SenseVoice 的差距较小，不能宣称已解决用户的口音或麦克风问题。
@@ -68,3 +76,5 @@ SenseVoice 再次将公开标准 `tree` 音频转写成 `three`。Qwen 在该输
 公开试用链路结果在 [trial-browser.json](../artifacts/asr-replacement-20261004/trial-browser.json)，正式课程结果在 [course-browser.json](../artifacts/asr-replacement-20261004/course-browser.json)，启动延迟／处理延迟模拟结果在 [course-browser-stub.json](../artifacts/asr-replacement-20261004/course-browser-stub.json)，截图均在同目录。本轮没有用户真实麦克风、Android、已部署页面或真人学习效果验收；正式替换依据用户明确授权，效果边界保留。
 
 官方依据：[Qwen3-ASR 源码及推理说明](https://github.com/QwenLM/Qwen3-ASR)、[官方模型页](https://huggingface.co/Qwen/Qwen3-ASR-1.7B)。加载时仍显示本地 Transformers 的 Mistral regex 提示：本机代码会对该版本的本地非 Mistral 配置进入通用检测，而实际 tokenizer 配置为 Qwen2Tokenizer。本轮保留官方 Qwen 分词器与预处理，没有按该提示套用另一模型的正则或改写权重；全部上述结果均为原配置实测。
+
+2026-10-27 清理：经用户明确授权，删除 `.runtime/pronunciation/bench-models` 下全部 14 个旧模型目录，共 37,797,242,147 字节（约 35.20 GiB）。共享 Q8、两边运行环境、Piper 模型、录音与测试证据保留。下载清单另存 `artifacts/shared-q8-20261027/cleanup/model-manifests/`。删除后的冷启动、真实浏览器跟读和 Observer 实际本地转写入口验证见 `cleanup/after/`；Observer 使用合成中文音频验证，未提交生产队列或改动生产数据。

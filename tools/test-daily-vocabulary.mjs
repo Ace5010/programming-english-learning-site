@@ -145,7 +145,7 @@ test('all 24 historical sessions, drafts, favorites and tested skill records sti
   assert.equal(dailyLessons.length, 24);
 });
 
-test('one word can enter review without enrolling its examples or untested neighboring words', () => {
+test('voluntary review includes taught words without enrolling examples or unknown neighbors', () => {
   let progress = runRound(createDailyProgress());
   const word = 'daily-word-i';
   progress.learning.targets[word].readyAt = now;
@@ -153,6 +153,6 @@ test('one word can enter review without enrolling its examples or untested neigh
   assert.equal(dailyKnowledgeReviewable(progress, 'daily-word-you'), false);
   const session = createDailyReviewSession(progress, active[0], 'auto', now + 86400000);
   assert.ok(session.queue.length);
-  for (const entry of session.queue) assert.deepEqual(catalog.get(entry.exerciseId).knowledgeIds, [word]);
+  for (const entry of session.queue) assert.ok(catalog.get(entry.exerciseId).knowledgeIds.every(id => progress.learning.targets[id]?.introducedAt));
   assert.equal(progress.learning.targets['daily-word-i-example-1'], undefined);
 });

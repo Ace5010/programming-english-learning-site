@@ -1,0 +1,93 @@
+{
+  "method": "Same new clip at atempo=1.2, unchanged pitch, no reference prompt. This is an ASR sensitivity check and does not alter delivered files.",
+  "results": [
+    {
+      "key": "aria:Barrett",
+      "expected": "Barrett",
+      "before": "Barrett.",
+      "after": "Bear it.",
+      "sameNewClipAtPreviousTempo": "Barrett.",
+      "textMatchAtPreviousTempo": true
+    },
+    {
+      "key": "aria:OA",
+      "expected": "O A",
+      "before": "O a.",
+      "after": "Oh, a.",
+      "sameNewClipAtPreviousTempo": "O a.",
+      "textMatchAtPreviousTempo": true
+    },
+    {
+      "key": "aria:UN",
+      "expected": "UN",
+      "before": "Un.",
+      "after": "An.",
+      "sameNewClipAtPreviousTempo": "An.",
+      "textMatchAtPreviousTempo": false
+    },
+    {
+      "key": "aria:between",
+      "expected": "between",
+      "before": "Between.",
+      "after": "The train.",
+      "sameNewClipAtPreviousTempo": "Between.",
+      "textMatchAtPreviousTempo": true
+    },
+    {
+      "key": "aria:highly",
+      "expected": "highly",
+      "before": "Highly.",
+      "after": "Hi, Lee.",
+      "sameNewClipAtPreviousTempo": "Highly.",
+      "textMatchAtPreviousTempo": true
+    },
+    {
+      "key": "aria:tutorial@f-d0013c2e0a387e4c",
+      "expected": "bit",
+      "before": "Bit.",
+      "after": "Bet.",
+      "sameNewClipAtPreviousTempo": "Bit.",
+      "textMatchAtPreviousTempo": true
+    },
+    {
+      "key": "aria:van",
+      "expected": "van",
+      "before": "Van.",
+      "after": "Then.",
+      "sameNewClipAtPreviousTempo": "Then.",
+      "textMatchAtPreviousTempo": false
+    },
+    {
+      "key": "guy:UN",
+      "expected": "UN",
+      "before": "Un.",
+      "after": "On.",
+      "sameNewClipAtPreviousTempo": "On.",
+      "textMatchAtPreviousTempo": false
+    },
+    {
+      "key": "guy:thing",
+      "expected": "thing",
+      "before": "Thing.",
+      "after": "Sing.",
+      "sameNewClipAtPreviousTempo": "Thing.",
+      "textMatchAtPreviousTempo": true
+    },
+    {
+      "key": "guy:tutorial@f-3c917533deebcc83",
+      "expected": "bout",
+      "before": "bout.",
+      "after": "About.",
+      "sameNewClipAtPreviousTempo": "About.",
+      "textMatchAtPreviousTempo": false
+    },
+    {
+      "key": "guy:tutorial@f-ca5bcec12f716f44",
+      "expected": "bat",
+      "before": "Bat.",
+      "after": "That.",
+      "sameNewClipAtPreviousTempo": "That.",
+      "textMatchAtPreviousTempo": false
+    }
+  ]
+}

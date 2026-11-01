@@ -255,10 +255,16 @@ export function dailyKnowledgeReviewable(progress: DailyProgress, id: string): b
   return target ? target.readyAt > 0 : !!progress.knowledge?.[id];
 }
 
+/** Available for browsing and voluntary practice, independent of readiness. */
+export function dailyKnowledgeAvailable(progress: DailyProgress, id: string): boolean {
+  return !!(progress.learning?.targets[id]?.introducedAt || progress.learning?.selfKnown?.[id] || progress.knowledge?.[id]);
+}
+
 export function dailyLessonReviewable(progress: DailyProgress, lesson: DailyLessonSpec): boolean {
   if (!progress.learning) return dailyLessonLearned(progress, lesson);
   return [...lesson.exercises, ...(lesson.practice ?? [])].some(exercise => dailyExerciseKnowledgeIds(lesson, exercise)
-    .every(id => dailyKnowledgeReviewable(progress, id)));
+    .every(id => dailyKnowledgeAvailable(progress, id))
+    && (exercise.prerequisiteIds ?? []).every(id => dailyKnowledgeAvailable(progress, id)));
 }
 
 export function nextDailyLesson<T extends DailyLessonSpec>(progress: DailyProgress, lessons: T[]): T | undefined {
@@ -289,7 +295,7 @@ export function createDailyReviewSession(
   };
   let exercises = [...new Map([...lesson.exercises, ...(lesson.practice ?? [])].map(exercise => [exercise.id, exercise])).values()].filter(exercise => (focus === 'auto' || dailyExerciseAbility(exercise) === focus)
     && (exercise.prerequisiteIds ?? []).every(id => !!progress.knowledge?.[id] || !!progress.learning?.targets[id]?.introducedAt || !!progress.learning?.selfKnown?.[id])
-    && (!progress.learning || dailyExerciseKnowledgeIds(lesson, exercise).every(id => dailyKnowledgeReviewable(progress, id))));
+    && (!progress.learning || dailyExerciseKnowledgeIds(lesson, exercise).every(id => dailyKnowledgeAvailable(progress, id))));
   exercises = [...exercises].sort((a, b) => priority(a) - priority(b));
   if (focus === 'auto') {
     const urgent = exercises.filter(exercise => priority(exercise) <= 2);

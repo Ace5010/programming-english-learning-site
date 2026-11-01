@@ -1,0 +1,193 @@
+{
+  "batch": "small-906",
+  "firstId": 906,
+  "lastId": 1155,
+  "submitted": 250,
+  "exitCode": 0,
+  "timedOut": false,
+  "complete": true,
+  "elapsedSeconds": 124.149,
+  "records": [
+    {
+      "model": "deepseek-v4.1-flash",
+      "usage": {
+        "prompt_tokens": 15286,
+        "completion_tokens": 19950,
+        "total_tokens": 35236,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 18316,
+          "rejected_prediction_tokens": 0,
+          "cached_tokens": 0
+        },
+        "prompt_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": 0,
+          "cached_tokens": 15104
+        },
+        "prompt_cache_hit_tokens": 15104,
+        "prompt_cache_miss_tokens": 182,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 0,
+        "prompt_cache_write_tokens": 0,
+        "completion_thinking_tokens": 18316,
+        "credit": 1.15,
+        "cached_tokens": 0
+      },
+      "requestId": "01a194e080e379dbb5e4f1df1dcbc51f"
+    }
+  ],
+  "result": {
+    "reviewedCount": 250,
+    "findings": [
+      {
+        "id": 910,
+        "word": "restart",
+        "issue": "Stress-shift heteronym: noun /ˈriː.stɑːrt/, verb /ˌriːˈstɑːrt/. Chinese 重新启动 and normal use are verbal, but the example 'uses restart' is a noun; change the example to force the verb.",
+        "intendedIPA": "ˌriːˈstɑːrt",
+        "context": "Please restart the server after the update.",
+        "confidence": "medium"
+      },
+      {
+        "id": 912,
+        "word": "rich text format (RTF)",
+        "issue": "Parenthetical acronym needs an explicit spoken form; TTS may skip it or spell it unpredictably. If voiced, say R-T-F.",
+        "intendedIPA": "ˌrɪtʃ ˈtekst ˈfɔːrmæt ˌɑːr tiː ˈef",
+        "context": "Save the report as rich text format (RTF) before you send it.",
+        "confidence": "high"
+      },
+      {
+        "id": 924,
+        "word": "routine [procedure]",
+        "issue": "Bracketed gloss is metadata; do not speak it, or the phrase becomes 'routine procedure'.",
+        "intendedIPA": "ruːˈtiːn",
+        "context": "The program calls a routine to sort the list.",
+        "confidence": "high"
+      },
+      {
+        "id": 925,
+        "word": "routine [program]",
+        "issue": "Bracketed gloss is metadata; do not speak it, or the phrase becomes 'routine program'.",
+        "intendedIPA": "ruːˈtiːn",
+        "context": "Each routine handles one small task.",
+        "confidence": "high"
+      },
+      {
+        "id": 929,
+        "word": "screen [computer]",
+        "issue": "Bracketed domain tag '[computer]' is metadata; it must not be spoken.",
+        "intendedIPA": "skriːn",
+        "context": "The screen shows a clear error message.",
+        "confidence": "high"
+      },
+      {
+        "id": 1063,
+        "word": "terabyte (TB)",
+        "issue": "Parenthetical abbreviation is a written variant; do not let TTS read 'TB' as a word. If voiced, it is T-B.",
+        "intendedIPA": "ˈterəbaɪt ˌtiː ˈbiː",
+        "context": "The new drive stores one terabyte (TB) of data.",
+        "confidence": "high"
+      },
+      {
+        "id": 1073,
+        "word": "The Hong Kong Academy of",
+        "issue": "Headword is truncated after 'of'; restore the missing 'Sciences' so TTS does not stress a dangling preposition.",
+        "intendedIPA": "ðə ˌhɑːŋ ˈkɑːŋ əˈkædəmi əv ˈsaɪənsɪz",
+        "context": "The Hong Kong Academy of Sciences published the report.",
+        "confidence": "high"
+      },
+      {
+        "id": 1076,
+        "word": "Tier 3+ data centres",
+        "issue": "The '+' is code-like; the spoken form must be 'three plus', not 'three' or 'plus' alone.",
+        "intendedIPA": "ˌtɪr θriː ˈplʌs ˈdeɪtə ˌsentərz",
+        "context": "The company runs Tier 3+ data centres in two cities.",
+        "confidence": "high"
+      },
+      {
+        "id": 1089,
+        "word": "transform",
+        "issue": "Stress-shift heteronym: the verb stresses the second syllable, the rare noun the first. Chinese 转变 and the example require the verb.",
+        "intendedIPA": "trænsˈfɔːrm",
+        "context": "We transform the raw data into a chart.",
+        "confidence": "high"
+      },
+      {
+        "id": 1102,
+        "word": "unicode",
+        "issue": "Standard name is capitalized 'Unicode'; lowercase is a code-style spelling. Pronunciation is unchanged.",
+        "intendedIPA": "ˈjuːnɪkoʊd",
+        "context": "The page uses Unicode for the Chinese text.",
+        "confidence": "medium"
+      },
+      {
+        "id": 1107,
+        "word": "universal serial bus (USB)",
+        "issue": "Parenthetical acronym needs a defined spoken form; if voiced, say U-S-B, not 'usb'.",
+        "intendedIPA": "ˌjuːnɪˈvɜːrsəl ˈsɪriəl bʌs ˌjuː es ˈbiː",
+        "context": "The port follows the universal serial bus (USB) standard.",
+        "confidence": "high"
+      },
+      {
+        "id": 1109,
+        "word": "URL address [Internet]",
+        "issue": "Bracketed domain tag '[Internet]' is metadata and must not be spoken; 'URL' is letter-by-letter.",
+        "intendedIPA": "ˌjuː ɑːr ˈel əˈdres",
+        "context": "Enter the URL address in the browser bar.",
+        "confidence": "high"
+      },
+      {
+        "id": 1119,
+        "word": "ultra-mobile PC (UMPC)",
+        "issue": "Nested acronyms: 'PC' is P-C and 'UMPC' is U-M-P-C; do not read the parentheses.",
+        "intendedIPA": "ˌʌltrəˈmoʊbəl ˌpiː ˈsiː ˌjuː em piː ˈsiː",
+        "context": "She bought an ultra-mobile PC (UMPC) for travel.",
+        "confidence": "high"
+      },
+      {
+        "id": 1122,
+        "word": "video compact disc (VCD)",
+        "issue": "Parenthetical acronym needs an explicit spoken form; say V-C-D, not 'vcd'.",
+        "intendedIPA": "ˈvɪdioʊ kəmˈpækt dɪsk ˌviː siː ˈdiː",
+        "context": "The archive copy is on video compact disc (VCD).",
+        "confidence": "high"
+      },
+      {
+        "id": 1131,
+        "word": "virtual reality (VR)",
+        "issue": "Parenthetical acronym needs an explicit spoken form; say V-R.",
+        "intendedIPA": "ˈvɜːrtʃuəl riˈæləti ˌviː ˈɑːr",
+        "context": "The simulator uses virtual reality (VR) to train pilots.",
+        "confidence": "high"
+      },
+      {
+        "id": 1138,
+        "word": "visual display unit (VDU)",
+        "issue": "Parenthetical acronym needs an explicit spoken form; say V-D-U.",
+        "intendedIPA": "ˈvɪʒuəl dɪˈspleɪ ˈjuːnɪt ˌviː diː ˈjuː",
+        "context": "Each desk has a visual display unit (VDU) and a keyboard.",
+        "confidence": "high"
+      },
+      {
+        "id": 1140,
+        "word": "voice over IP (VoIP)",
+        "issue": "Acronym is pronounced as a word /vɔɪp/, not spelled V-O-I-P; the 'IP' in the full term is I-P.",
+        "intendedIPA": "vɔɪs ˈoʊvər ˌaɪ ˈpiː ˈvɔɪp",
+        "context": "The team switched to voice over IP (VoIP) for calls.",
+        "confidence": "high"
+      },
+      {
+        "id": 1153,
+        "word": "Web Content Accessibility",
+        "issue": "Headword is truncated; Chinese 指引 confirms the missing 'Guidelines'. Restore it and optionally WCAG; keep 'Content' as the noun /ˈkɑːntent/.",
+        "intendedIPA": "ˌweb ˈkɑːntent ækˌsesəˈbɪləti ˈɡaɪdlaɪnz",
+        "context": "The site follows the Web Content Accessibility Guidelines.",
+        "confidence": "high"
+      }
+    ],
+    "notes": "Reviewed all 250 entries (IDs 906–1155). No audio was supplied and every phonetic field is empty, so no audio/IPA mismatch could be verified; intendedIPA below gives the pronunciation required by the cited sense. Accepted US/UK variants (e.g. router, virtualisation, centres) and the schema variant were not scored. Non-pronunciation content issues for follow-up: 'resources estimation' should be 'resource estimation'; 'sample codes' is glossed as 原始码 (source code), not 示例代码; 'system resilience' is glossed as 系统恢复 (recovery)."
+  }
+}

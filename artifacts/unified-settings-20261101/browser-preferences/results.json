@@ -1,0 +1,32 @@
+{
+  "baseURL": "http://localhost:5186/",
+  "results": [
+    "preferences persist, real previews do not change autoplay speed, library filter survives"
+  ],
+  "failures": [],
+  "errors": [],
+  "geometry": [],
+  "playback": [
+    {
+      "name": "正常试听",
+      "files": [
+        {
+          "source": "/audio/guy/voice-test.mp3",
+          "time": 0.064418,
+          "rate": 1
+        }
+      ]
+    },
+    {
+      "name": "慢速试听",
+      "files": [
+        {
+          "source": "/audio/slow/guy/pack-v2-110.mp3",
+          "time": 29.125729,
+          "rate": 1
+        }
+      ]
+    }
+  ],
+  "note": "Isolated Chrome profiles; no personal records or native Android installation used."
+}

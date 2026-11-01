@@ -1,0 +1,29 @@
+{
+  "baseURL": "http://localhost:5186/",
+  "results": [
+    "review question and typed draft survive settings, keyboard trapping, Escape and reload",
+    "daily question and draft stay unchanged across appearance and sound settings",
+    "export from another section includes a newer unsaved daily draft after storage failure"
+  ],
+  "failures": [
+    {
+      "name": "preferences persist, real previews do not change autoplay speed, library filter survives",
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n'false' !== 'true'\n\n    at file:///D:/vibe%E9%A1%B9%E7%9B%AE/%E8%AF%8D%E8%A7%81/tools/test-settings-browser.mjs:117:14\n    at async scenario (file:///D:/vibe%E9%A1%B9%E7%9B%AE/%E8%AF%8D%E8%A7%81/tools/test-settings-browser.mjs:42:9)\n    at async file:///D:/vibe%E9%A1%B9%E7%9B%AE/%E8%AF%8D%E8%A7%81/tools/test-settings-browser.mjs:104:3"
+    }
+  ],
+  "errors": [],
+  "geometry": [],
+  "playback": [
+    {
+      "name": "正常试听",
+      "files": [
+        {
+          "source": "/audio/guy/voice-test.mp3",
+          "time": 0.113665,
+          "rate": 1
+        }
+      ]
+    }
+  ],
+  "note": "Isolated Chrome profiles; no personal records or native Android installation used."
+}

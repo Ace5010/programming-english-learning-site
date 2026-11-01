@@ -2,6 +2,7 @@
 // With CODEWORDS_LIVE_SYNC=1 only the phone's packaged assets are simulated; both
 // profiles use the deployed Pages Function and D1. No real user's browser data is read.
 import assert from 'node:assert/strict';
+import { openSettings, closeSettings, chooseTheme } from './helpers/settings-browser.mjs';
 import { createRequire } from 'node:module';
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import path from 'node:path';
@@ -46,12 +47,19 @@ async function device(phone, seed = {}) {
   page.on('pageerror', error => errors.push(error.message));
   await page.addInitScript(seed => { if (!sessionStorage.getItem('sync-fixture')) { Object.entries(seed).forEach(([key, value]) => localStorage.setItem(key, value)); sessionStorage.setItem('sync-fixture', '1'); } }, seed);
   await page.goto(phone ? `${phoneOrigin}/assets/web/index.html` : webOrigin);
-  await page.getByRole('button', { name: /^设备同步/ }).waitFor();
+  await page.getByRole('button', { name: '设置', exact: true }).waitFor();
   return { page, context, offline: value => { offline = value; }, requests: () => requests };
 }
 const nav = (page, name) => page.getByRole('navigation', { name: '学习导航' }).getByRole('button', { name, exact: true }).click();
-async function openSync(page) { if (!await page.locator('.sync-dialog').count()) await page.getByRole('button', { name: /^设备同步/ }).click(); }
-async function closeSync(page) { if (await page.locator('.sync-dialog').count()) await page.getByRole('button', { name: '关闭同步设置' }).click(); }
+async function openSync(page) { if (!await page.locator('.settings-sync').count()) { const dialog = await openSettings(page, 'data'); await dialog.getByRole('button', { name: /^设备同步/ }).click(); } }
+const closeSync = closeSettings;
+async function toggleFirstFavorite(page) {
+  await page.locator('.library-card-open').first().click();
+  await page.locator('.library-dialog .favorite').click();
+  const close = page.getByRole('button', { name: '关闭详情', exact: true });
+  // Removing the final card from a filtered list also unmounts its dialog.
+  if (await close.isVisible()) await close.click();
+}
 async function sync(page) { await openSync(page); const before = await page.evaluate(() => JSON.parse(localStorage.getItem('codewords-sync-v1')).syncedAt); await page.getByRole('button', { name: '立即同步', exact: true }).click(); await page.waitForFunction(before => JSON.parse(localStorage.getItem('codewords-sync-v1')).syncedAt > before, before); await page.locator('.sync-status.sync-synced').waitFor(); }
 const snapshot = page => page.evaluate(keys => Object.fromEntries(keys.map(key => [key, localStorage.getItem(key)])), SYNC_KEYS);
 async function compareDevices(a, b) {
@@ -70,33 +78,34 @@ try {
   for (const size of [{ width: 320, height: 640 }, { width: 360, height: 780 }, { width: 412, height: 915 }, { width: 844, height: 390 }]) {
     await phone.page.setViewportSize(size);
     for (const theme of ['lagoon', 'pearl', 'sky', 'mint']) {
-      await phone.page.getByLabel('界面配色', { exact: true }).selectOption(theme); await openSync(phone.page);
-      const bounds = await phone.page.evaluate(() => ({ width: innerWidth, dialogWidth: document.querySelector('.sync-dialog').getBoundingClientRect().width, headingHeight: document.querySelector('#sync-heading').getBoundingClientRect().height, document: document.documentElement.scrollWidth, outside: [...document.querySelectorAll('.sync-dialog button, .sync-dialog textarea')].filter(item => { const box = item.getBoundingClientRect(); return box.width && (box.left < 0 || box.right > innerWidth); }).length }));
+      await chooseTheme(phone.page, theme); await openSync(phone.page);
+      const bounds = await phone.page.evaluate(() => ({ width: innerWidth, dialogWidth: document.querySelector('.settings-dialog').getBoundingClientRect().width, headingHeight: document.querySelector('.settings-heading h2').getBoundingClientRect().height, document: document.documentElement.scrollWidth, outside: [...document.querySelectorAll('.settings-sync button, .settings-sync textarea')].filter(item => { const box = item.getBoundingClientRect(); return box.width && (box.left < 0 || box.right > innerWidth); }).length }));
       assert.equal(bounds.outside, 0); assert.ok(bounds.document <= bounds.width); assert.ok(bounds.dialogWidth >= Math.min(bounds.width - 40, 500), 'dialog must use available width'); assert.ok(bounds.headingHeight < 65, 'heading must not collapse into vertical text');
       if (!live && (size.width === 320 || size.width === 844)) await phone.page.screenshot({ path: path.join(output, `sync-${theme}-${size.width}.png`) });
       await closeSync(phone.page);
     }
   }
   results.push('sync dialog fits 320/360/412/844px and all four themes');
-  await phone.page.setViewportSize({ width: 360, height: 780 }); await phone.page.getByLabel('界面配色', { exact: true }).selectOption('lagoon');
+  await phone.page.setViewportSize({ width: 360, height: 780 }); await chooseTheme(phone.page, 'lagoon');
   await openSync(web.page); await web.page.getByRole('button', { name: '开启同步', exact: true }).click(); await web.page.locator('.sync-status.sync-synced').waitFor();
   await web.page.getByRole('button', { name: '显示同步码' }).click(); const code = await web.page.getByRole('textbox', { name: '本机同步码' }).inputValue();
   assert.match(code, /^[a-f0-9]{64}$/); await web.page.getByRole('button', { name: '隐藏同步码' }).click();
-  await openSync(phone.page); await phone.page.getByLabel('输入已有同步码').fill(code); await phone.page.getByRole('button', { name: '连接已有进度', exact: true }).click(); await phone.page.locator('.sync-status.sync-synced').waitFor();
+  await openSync(phone.page); await phone.page.getByRole('button', { name: '输入已有同步码', exact: true }).click(); await phone.page.getByLabel('输入已有同步码').fill(code); await phone.page.getByRole('button', { name: '连接已有进度', exact: true }).click(); await phone.page.locator('.sync-status.sync-synced').waitFor();
   await compareDevices(phone.page, web.page);
   results.push('web progress pairs into the APK origin, including historical mastery and both saved curricula');
-  await closeSync(web.page); await nav(web.page, '收藏'); await web.page.locator('.word-card .favorite').first().click(); await sync(web.page); await sync(phone.page);
+  await closeSync(web.page); await nav(web.page, '收藏'); await toggleFirstFavorite(web.page); await sync(web.page); await sync(phone.page);
   await compareDevices(phone.page, web.page);
   results.push('real favorite control changes sync from web to phone');
   if (!live) {
     const before = web.requests(), other = await web.context.newPage(); await other.goto(webOrigin);
-    await other.getByRole('button', { name: /^设备同步/ }).waitFor();
+    await other.getByRole('button', { name: '设置', exact: true }).waitFor();
     await new Promise(resolve => setTimeout(resolve, 6500));
     assert.ok(web.requests() - before <= 2, 'metadata-only storage events must not create a cross-tab sync loop');
     await other.close(); results.push('two web tabs do not trigger a repeating sync loop');
   }
   await closeSync(phone.page); await nav(phone.page, '词汇库'); phone.offline(true);
-  await phone.page.locator('.word-card .favorite').first().click(); await openSync(phone.page); await phone.page.getByRole('button', { name: '立即同步', exact: true }).click(); await phone.page.locator('.sync-status.sync-error').waitFor();
+  await toggleFirstFavorite(phone.page); await openSync(phone.page); await phone.page.getByRole('button', { name: '立即同步', exact: true }).click(); await phone.page.locator('.sync-status.sync-error').waitFor();
+  await closeSync(phone.page); await phone.page.locator('.site-header .settings-trigger .settings-attention').waitFor();
   const offlineFavorites = (await snapshot(phone.page))['codewords-favorites'];
   phone.offline(false); await sync(phone.page); await sync(web.page);
   assert.deepEqual(JSON.parse((await snapshot(web.page))['codewords-favorites']).sort(), JSON.parse(offlineFavorites).sort());
@@ -106,6 +115,7 @@ try {
   await web.page.evaluate(() => localStorage.setItem('codewords-mastered', '[1,2,3]'));
   await phone.page.evaluate(() => localStorage.setItem('codewords-mastered', '[1,2,4]'));
   await sync(web.page); await openSync(phone.page); await phone.page.getByRole('button', { name: '立即同步', exact: true }).click(); await phone.page.locator('.sync-status.sync-conflict').waitFor();
+  await closeSync(phone.page); await phone.page.locator('.site-header .settings-trigger .settings-attention').waitFor(); await openSync(phone.page);
   assert.equal((await snapshot(phone.page))['codewords-mastered'], '[1,2,4]');
   await phone.page.screenshot({ path: path.join(output, live ? 'live-conflict.png' : 'conflict.png') });
   await phone.page.getByRole('button', { name: '备份后使用另一设备记录' }).click(); await phone.page.locator('.sync-status.sync-synced').waitFor();

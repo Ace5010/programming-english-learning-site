@@ -1,0 +1,70 @@
+[
+  {
+    "width": 1440,
+    "overflow": false,
+    "nav": [
+      {
+        "height": 48.59375,
+        "text": "基础概念与语法",
+        "icon": 20
+      },
+      {
+        "height": 48.59375,
+        "text": "音标与发音",
+        "icon": 20
+      }
+    ],
+    "errors": []
+  },
+  {
+    "width": 768,
+    "overflow": false,
+    "nav": [
+      {
+        "height": 48,
+        "text": "基础概念与语法",
+        "icon": 0
+      },
+      {
+        "height": 48,
+        "text": "音标与发音",
+        "icon": 0
+      }
+    ],
+    "errors": []
+  },
+  {
+    "width": 390,
+    "overflow": false,
+    "nav": [
+      {
+        "height": 60,
+        "text": "基础概念与语法",
+        "icon": 0
+      },
+      {
+        "height": 60,
+        "text": "音标与发音",
+        "icon": 0
+      }
+    ],
+    "errors": []
+  },
+  {
+    "width": 320,
+    "overflow": false,
+    "nav": [
+      {
+        "height": 60,
+        "text": "基础概念与语法",
+        "icon": 0
+      },
+      {
+        "height": 60,
+        "text": "音标与发音",
+        "icon": 0
+      }
+    ],
+    "errors": []
+  }
+]

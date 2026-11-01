@@ -1,13 +1,19 @@
 [
   {
-    "pid": 41752,
-    "port": 60792,
+    "port": 52204,
+    "name": "cold concurrent startup and repeat reuse",
     "passed": true,
-    "name": "cold concurrent startup and repeat reuse"
+    "pid": 42128
   },
   {
-    "port": 58304,
+    "port": 59854,
+    "name": "npm Windows shim path reuse",
     "passed": true,
-    "name": "identity and port conflict protection"
+    "pid": 25440
+  },
+  {
+    "port": 58659,
+    "name": "identity and port conflict protection",
+    "passed": true
   }
 ]

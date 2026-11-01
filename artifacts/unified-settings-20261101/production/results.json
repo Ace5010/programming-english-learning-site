@@ -1,0 +1,2318 @@
+{
+  "baseURL": "http://localhost:5186/dist/",
+  "results": [
+    "centered desktop and full-screen mobile categories in all palettes",
+    "preferences persist, real previews do not change autoplay speed, library filter survives",
+    "review question and typed draft survive settings, keyboard trapping, Escape and reload",
+    "daily question and draft stay unchanged across appearance and sound settings",
+    "global export preserves unvisited and damaged records, then retains recovery after visiting",
+    "export from another section includes a newer unsaved daily draft after storage failure"
+  ],
+  "failures": [],
+  "errors": [],
+  "geometry": [
+    {
+      "label": "1440/lagoon/initial",
+      "viewport": {
+        "width": 1440,
+        "height": 960
+      },
+      "box": {
+        "x": 310,
+        "y": 170,
+        "width": 820,
+        "height": 620,
+        "top": 170,
+        "right": 1130,
+        "bottom": 790,
+        "left": 310
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "1440/lagoon/audio",
+      "viewport": {
+        "width": 1440,
+        "height": 960
+      },
+      "box": {
+        "x": 310,
+        "y": 170,
+        "width": 820,
+        "height": 620,
+        "top": 170,
+        "right": 1130,
+        "bottom": 790,
+        "left": 310
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "1440/lagoon/appearance",
+      "viewport": {
+        "width": 1440,
+        "height": 960
+      },
+      "box": {
+        "x": 310,
+        "y": 170,
+        "width": 820,
+        "height": 620,
+        "top": 170,
+        "right": 1130,
+        "bottom": 790,
+        "left": 310
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "1440/lagoon/data",
+      "viewport": {
+        "width": 1440,
+        "height": 960
+      },
+      "box": {
+        "x": 310,
+        "y": 170,
+        "width": 820,
+        "height": 620,
+        "top": 170,
+        "right": 1130,
+        "bottom": 790,
+        "left": 310
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "1440/lagoon/sync",
+      "viewport": {
+        "width": 1440,
+        "height": 960
+      },
+      "box": {
+        "x": 310,
+        "y": 170,
+        "width": 820,
+        "height": 620,
+        "top": 170,
+        "right": 1130,
+        "bottom": 790,
+        "left": 310
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "1440/lagoon/export",
+      "viewport": {
+        "width": 1440,
+        "height": 960
+      },
+      "box": {
+        "x": 310,
+        "y": 170,
+        "width": 820,
+        "height": 620,
+        "top": 170,
+        "right": 1130,
+        "bottom": 790,
+        "left": 310
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "1440/pearl/initial",
+      "viewport": {
+        "width": 1440,
+        "height": 960
+      },
+      "box": {
+        "x": 310,
+        "y": 170,
+        "width": 820,
+        "height": 620,
+        "top": 170,
+        "right": 1130,
+        "bottom": 790,
+        "left": 310
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "1440/pearl/audio",
+      "viewport": {
+        "width": 1440,
+        "height": 960
+      },
+      "box": {
+        "x": 310,
+        "y": 170,
+        "width": 820,
+        "height": 620,
+        "top": 170,
+        "right": 1130,
+        "bottom": 790,
+        "left": 310
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "1440/pearl/appearance",
+      "viewport": {
+        "width": 1440,
+        "height": 960
+      },
+      "box": {
+        "x": 310,
+        "y": 170,
+        "width": 820,
+        "height": 620,
+        "top": 170,
+        "right": 1130,
+        "bottom": 790,
+        "left": 310
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "1440/pearl/data",
+      "viewport": {
+        "width": 1440,
+        "height": 960
+      },
+      "box": {
+        "x": 310,
+        "y": 170,
+        "width": 820,
+        "height": 620,
+        "top": 170,
+        "right": 1130,
+        "bottom": 790,
+        "left": 310
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "1440/pearl/sync",
+      "viewport": {
+        "width": 1440,
+        "height": 960
+      },
+      "box": {
+        "x": 310,
+        "y": 170,
+        "width": 820,
+        "height": 620,
+        "top": 170,
+        "right": 1130,
+        "bottom": 790,
+        "left": 310
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "1440/pearl/export",
+      "viewport": {
+        "width": 1440,
+        "height": 960
+      },
+      "box": {
+        "x": 310,
+        "y": 170,
+        "width": 820,
+        "height": 620,
+        "top": 170,
+        "right": 1130,
+        "bottom": 790,
+        "left": 310
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "1440/sky/initial",
+      "viewport": {
+        "width": 1440,
+        "height": 960
+      },
+      "box": {
+        "x": 310,
+        "y": 170,
+        "width": 820,
+        "height": 620,
+        "top": 170,
+        "right": 1130,
+        "bottom": 790,
+        "left": 310
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "1440/sky/audio",
+      "viewport": {
+        "width": 1440,
+        "height": 960
+      },
+      "box": {
+        "x": 310,
+        "y": 170,
+        "width": 820,
+        "height": 620,
+        "top": 170,
+        "right": 1130,
+        "bottom": 790,
+        "left": 310
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "1440/sky/appearance",
+      "viewport": {
+        "width": 1440,
+        "height": 960
+      },
+      "box": {
+        "x": 310,
+        "y": 170,
+        "width": 820,
+        "height": 620,
+        "top": 170,
+        "right": 1130,
+        "bottom": 790,
+        "left": 310
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "1440/sky/data",
+      "viewport": {
+        "width": 1440,
+        "height": 960
+      },
+      "box": {
+        "x": 310,
+        "y": 170,
+        "width": 820,
+        "height": 620,
+        "top": 170,
+        "right": 1130,
+        "bottom": 790,
+        "left": 310
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "1440/sky/sync",
+      "viewport": {
+        "width": 1440,
+        "height": 960
+      },
+      "box": {
+        "x": 310,
+        "y": 170,
+        "width": 820,
+        "height": 620,
+        "top": 170,
+        "right": 1130,
+        "bottom": 790,
+        "left": 310
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "1440/sky/export",
+      "viewport": {
+        "width": 1440,
+        "height": 960
+      },
+      "box": {
+        "x": 310,
+        "y": 170,
+        "width": 820,
+        "height": 620,
+        "top": 170,
+        "right": 1130,
+        "bottom": 790,
+        "left": 310
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "1440/mint/initial",
+      "viewport": {
+        "width": 1440,
+        "height": 960
+      },
+      "box": {
+        "x": 310,
+        "y": 170,
+        "width": 820,
+        "height": 620,
+        "top": 170,
+        "right": 1130,
+        "bottom": 790,
+        "left": 310
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "1440/mint/audio",
+      "viewport": {
+        "width": 1440,
+        "height": 960
+      },
+      "box": {
+        "x": 310,
+        "y": 170,
+        "width": 820,
+        "height": 620,
+        "top": 170,
+        "right": 1130,
+        "bottom": 790,
+        "left": 310
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "1440/mint/appearance",
+      "viewport": {
+        "width": 1440,
+        "height": 960
+      },
+      "box": {
+        "x": 310,
+        "y": 170,
+        "width": 820,
+        "height": 620,
+        "top": 170,
+        "right": 1130,
+        "bottom": 790,
+        "left": 310
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "1440/mint/data",
+      "viewport": {
+        "width": 1440,
+        "height": 960
+      },
+      "box": {
+        "x": 310,
+        "y": 170,
+        "width": 820,
+        "height": 620,
+        "top": 170,
+        "right": 1130,
+        "bottom": 790,
+        "left": 310
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "1440/mint/sync",
+      "viewport": {
+        "width": 1440,
+        "height": 960
+      },
+      "box": {
+        "x": 310,
+        "y": 170,
+        "width": 820,
+        "height": 620,
+        "top": 170,
+        "right": 1130,
+        "bottom": 790,
+        "left": 310
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "1440/mint/export",
+      "viewport": {
+        "width": 1440,
+        "height": 960
+      },
+      "box": {
+        "x": 310,
+        "y": 170,
+        "width": 820,
+        "height": 620,
+        "top": 170,
+        "right": 1130,
+        "bottom": 790,
+        "left": 310
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "760/lagoon/initial",
+      "viewport": {
+        "width": 760,
+        "height": 640
+      },
+      "box": {
+        "x": 24,
+        "y": 32,
+        "width": 712,
+        "height": 576,
+        "top": 32,
+        "right": 736,
+        "bottom": 608,
+        "left": 24
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "760/lagoon/audio",
+      "viewport": {
+        "width": 760,
+        "height": 640
+      },
+      "box": {
+        "x": 24,
+        "y": 32,
+        "width": 712,
+        "height": 576,
+        "top": 32,
+        "right": 736,
+        "bottom": 608,
+        "left": 24
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "760/lagoon/appearance",
+      "viewport": {
+        "width": 760,
+        "height": 640
+      },
+      "box": {
+        "x": 24,
+        "y": 32,
+        "width": 712,
+        "height": 576,
+        "top": 32,
+        "right": 736,
+        "bottom": 608,
+        "left": 24
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "760/lagoon/data",
+      "viewport": {
+        "width": 760,
+        "height": 640
+      },
+      "box": {
+        "x": 24,
+        "y": 32,
+        "width": 712,
+        "height": 576,
+        "top": 32,
+        "right": 736,
+        "bottom": 608,
+        "left": 24
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "760/lagoon/sync",
+      "viewport": {
+        "width": 760,
+        "height": 640
+      },
+      "box": {
+        "x": 24,
+        "y": 32,
+        "width": 712,
+        "height": 576,
+        "top": 32,
+        "right": 736,
+        "bottom": 608,
+        "left": 24
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "760/lagoon/export",
+      "viewport": {
+        "width": 760,
+        "height": 640
+      },
+      "box": {
+        "x": 24,
+        "y": 32,
+        "width": 712,
+        "height": 576,
+        "top": 32,
+        "right": 736,
+        "bottom": 608,
+        "left": 24
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "760/pearl/initial",
+      "viewport": {
+        "width": 760,
+        "height": 640
+      },
+      "box": {
+        "x": 24,
+        "y": 32,
+        "width": 712,
+        "height": 576,
+        "top": 32,
+        "right": 736,
+        "bottom": 608,
+        "left": 24
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "760/pearl/audio",
+      "viewport": {
+        "width": 760,
+        "height": 640
+      },
+      "box": {
+        "x": 24,
+        "y": 32,
+        "width": 712,
+        "height": 576,
+        "top": 32,
+        "right": 736,
+        "bottom": 608,
+        "left": 24
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "760/pearl/appearance",
+      "viewport": {
+        "width": 760,
+        "height": 640
+      },
+      "box": {
+        "x": 24,
+        "y": 32,
+        "width": 712,
+        "height": 576,
+        "top": 32,
+        "right": 736,
+        "bottom": 608,
+        "left": 24
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "760/pearl/data",
+      "viewport": {
+        "width": 760,
+        "height": 640
+      },
+      "box": {
+        "x": 24,
+        "y": 32,
+        "width": 712,
+        "height": 576,
+        "top": 32,
+        "right": 736,
+        "bottom": 608,
+        "left": 24
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "760/pearl/sync",
+      "viewport": {
+        "width": 760,
+        "height": 640
+      },
+      "box": {
+        "x": 24,
+        "y": 32,
+        "width": 712,
+        "height": 576,
+        "top": 32,
+        "right": 736,
+        "bottom": 608,
+        "left": 24
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "760/pearl/export",
+      "viewport": {
+        "width": 760,
+        "height": 640
+      },
+      "box": {
+        "x": 24,
+        "y": 32,
+        "width": 712,
+        "height": 576,
+        "top": 32,
+        "right": 736,
+        "bottom": 608,
+        "left": 24
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "760/sky/initial",
+      "viewport": {
+        "width": 760,
+        "height": 640
+      },
+      "box": {
+        "x": 24,
+        "y": 32,
+        "width": 712,
+        "height": 576,
+        "top": 32,
+        "right": 736,
+        "bottom": 608,
+        "left": 24
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "760/sky/audio",
+      "viewport": {
+        "width": 760,
+        "height": 640
+      },
+      "box": {
+        "x": 24,
+        "y": 32,
+        "width": 712,
+        "height": 576,
+        "top": 32,
+        "right": 736,
+        "bottom": 608,
+        "left": 24
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "760/sky/appearance",
+      "viewport": {
+        "width": 760,
+        "height": 640
+      },
+      "box": {
+        "x": 24,
+        "y": 32,
+        "width": 712,
+        "height": 576,
+        "top": 32,
+        "right": 736,
+        "bottom": 608,
+        "left": 24
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "760/sky/data",
+      "viewport": {
+        "width": 760,
+        "height": 640
+      },
+      "box": {
+        "x": 24,
+        "y": 32,
+        "width": 712,
+        "height": 576,
+        "top": 32,
+        "right": 736,
+        "bottom": 608,
+        "left": 24
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "760/sky/sync",
+      "viewport": {
+        "width": 760,
+        "height": 640
+      },
+      "box": {
+        "x": 24,
+        "y": 32,
+        "width": 712,
+        "height": 576,
+        "top": 32,
+        "right": 736,
+        "bottom": 608,
+        "left": 24
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "760/sky/export",
+      "viewport": {
+        "width": 760,
+        "height": 640
+      },
+      "box": {
+        "x": 24,
+        "y": 32,
+        "width": 712,
+        "height": 576,
+        "top": 32,
+        "right": 736,
+        "bottom": 608,
+        "left": 24
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "760/mint/initial",
+      "viewport": {
+        "width": 760,
+        "height": 640
+      },
+      "box": {
+        "x": 24,
+        "y": 32,
+        "width": 712,
+        "height": 576,
+        "top": 32,
+        "right": 736,
+        "bottom": 608,
+        "left": 24
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "760/mint/audio",
+      "viewport": {
+        "width": 760,
+        "height": 640
+      },
+      "box": {
+        "x": 24,
+        "y": 32,
+        "width": 712,
+        "height": 576,
+        "top": 32,
+        "right": 736,
+        "bottom": 608,
+        "left": 24
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "760/mint/appearance",
+      "viewport": {
+        "width": 760,
+        "height": 640
+      },
+      "box": {
+        "x": 24,
+        "y": 32,
+        "width": 712,
+        "height": 576,
+        "top": 32,
+        "right": 736,
+        "bottom": 608,
+        "left": 24
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "760/mint/data",
+      "viewport": {
+        "width": 760,
+        "height": 640
+      },
+      "box": {
+        "x": 24,
+        "y": 32,
+        "width": 712,
+        "height": 576,
+        "top": 32,
+        "right": 736,
+        "bottom": 608,
+        "left": 24
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "760/mint/sync",
+      "viewport": {
+        "width": 760,
+        "height": 640
+      },
+      "box": {
+        "x": 24,
+        "y": 32,
+        "width": 712,
+        "height": 576,
+        "top": 32,
+        "right": 736,
+        "bottom": 608,
+        "left": 24
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "760/mint/export",
+      "viewport": {
+        "width": 760,
+        "height": 640
+      },
+      "box": {
+        "x": 24,
+        "y": 32,
+        "width": 712,
+        "height": 576,
+        "top": 32,
+        "right": 736,
+        "bottom": 608,
+        "left": 24
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "390/lagoon/initial",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 844,
+        "top": 0,
+        "right": 390,
+        "bottom": 844,
+        "left": 0
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "390/lagoon/audio",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 844,
+        "top": 0,
+        "right": 390,
+        "bottom": 844,
+        "left": 0
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "390/lagoon/appearance",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 844,
+        "top": 0,
+        "right": 390,
+        "bottom": 844,
+        "left": 0
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "390/lagoon/data",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 844,
+        "top": 0,
+        "right": 390,
+        "bottom": 844,
+        "left": 0
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "390/lagoon/sync",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 844,
+        "top": 0,
+        "right": 390,
+        "bottom": 844,
+        "left": 0
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "390/lagoon/export",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 844,
+        "top": 0,
+        "right": 390,
+        "bottom": 844,
+        "left": 0
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "390/pearl/initial",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 844,
+        "top": 0,
+        "right": 390,
+        "bottom": 844,
+        "left": 0
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "390/pearl/audio",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 844,
+        "top": 0,
+        "right": 390,
+        "bottom": 844,
+        "left": 0
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "390/pearl/appearance",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 844,
+        "top": 0,
+        "right": 390,
+        "bottom": 844,
+        "left": 0
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "390/pearl/data",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 844,
+        "top": 0,
+        "right": 390,
+        "bottom": 844,
+        "left": 0
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "390/pearl/sync",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 844,
+        "top": 0,
+        "right": 390,
+        "bottom": 844,
+        "left": 0
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "390/pearl/export",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 844,
+        "top": 0,
+        "right": 390,
+        "bottom": 844,
+        "left": 0
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "390/sky/initial",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 844,
+        "top": 0,
+        "right": 390,
+        "bottom": 844,
+        "left": 0
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "390/sky/audio",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 844,
+        "top": 0,
+        "right": 390,
+        "bottom": 844,
+        "left": 0
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "390/sky/appearance",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 844,
+        "top": 0,
+        "right": 390,
+        "bottom": 844,
+        "left": 0
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "390/sky/data",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 844,
+        "top": 0,
+        "right": 390,
+        "bottom": 844,
+        "left": 0
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "390/sky/sync",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 844,
+        "top": 0,
+        "right": 390,
+        "bottom": 844,
+        "left": 0
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "390/sky/export",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 844,
+        "top": 0,
+        "right": 390,
+        "bottom": 844,
+        "left": 0
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "390/mint/initial",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 844,
+        "top": 0,
+        "right": 390,
+        "bottom": 844,
+        "left": 0
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "390/mint/audio",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 844,
+        "top": 0,
+        "right": 390,
+        "bottom": 844,
+        "left": 0
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "390/mint/appearance",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 844,
+        "top": 0,
+        "right": 390,
+        "bottom": 844,
+        "left": 0
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "390/mint/data",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 844,
+        "top": 0,
+        "right": 390,
+        "bottom": 844,
+        "left": 0
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "390/mint/sync",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 844,
+        "top": 0,
+        "right": 390,
+        "bottom": 844,
+        "left": 0
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "390/mint/export",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 844,
+        "top": 0,
+        "right": 390,
+        "bottom": 844,
+        "left": 0
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "320/lagoon/initial",
+      "viewport": {
+        "width": 320,
+        "height": 640
+      },
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 320,
+        "height": 640,
+        "top": 0,
+        "right": 320,
+        "bottom": 640,
+        "left": 0
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "320/lagoon/audio",
+      "viewport": {
+        "width": 320,
+        "height": 640
+      },
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 320,
+        "height": 640,
+        "top": 0,
+        "right": 320,
+        "bottom": 640,
+        "left": 0
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "320/lagoon/appearance",
+      "viewport": {
+        "width": 320,
+        "height": 640
+      },
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 320,
+        "height": 640,
+        "top": 0,
+        "right": 320,
+        "bottom": 640,
+        "left": 0
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "320/lagoon/data",
+      "viewport": {
+        "width": 320,
+        "height": 640
+      },
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 320,
+        "height": 640,
+        "top": 0,
+        "right": 320,
+        "bottom": 640,
+        "left": 0
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "320/lagoon/sync",
+      "viewport": {
+        "width": 320,
+        "height": 640
+      },
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 320,
+        "height": 640,
+        "top": 0,
+        "right": 320,
+        "bottom": 640,
+        "left": 0
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "320/lagoon/export",
+      "viewport": {
+        "width": 320,
+        "height": 640
+      },
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 320,
+        "height": 640,
+        "top": 0,
+        "right": 320,
+        "bottom": 640,
+        "left": 0
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "320/pearl/initial",
+      "viewport": {
+        "width": 320,
+        "height": 640
+      },
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 320,
+        "height": 640,
+        "top": 0,
+        "right": 320,
+        "bottom": 640,
+        "left": 0
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "320/pearl/audio",
+      "viewport": {
+        "width": 320,
+        "height": 640
+      },
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 320,
+        "height": 640,
+        "top": 0,
+        "right": 320,
+        "bottom": 640,
+        "left": 0
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "320/pearl/appearance",
+      "viewport": {
+        "width": 320,
+        "height": 640
+      },
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 320,
+        "height": 640,
+        "top": 0,
+        "right": 320,
+        "bottom": 640,
+        "left": 0
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "320/pearl/data",
+      "viewport": {
+        "width": 320,
+        "height": 640
+      },
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 320,
+        "height": 640,
+        "top": 0,
+        "right": 320,
+        "bottom": 640,
+        "left": 0
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "320/pearl/sync",
+      "viewport": {
+        "width": 320,
+        "height": 640
+      },
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 320,
+        "height": 640,
+        "top": 0,
+        "right": 320,
+        "bottom": 640,
+        "left": 0
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "320/pearl/export",
+      "viewport": {
+        "width": 320,
+        "height": 640
+      },
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 320,
+        "height": 640,
+        "top": 0,
+        "right": 320,
+        "bottom": 640,
+        "left": 0
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "320/sky/initial",
+      "viewport": {
+        "width": 320,
+        "height": 640
+      },
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 320,
+        "height": 640,
+        "top": 0,
+        "right": 320,
+        "bottom": 640,
+        "left": 0
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "320/sky/audio",
+      "viewport": {
+        "width": 320,
+        "height": 640
+      },
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 320,
+        "height": 640,
+        "top": 0,
+        "right": 320,
+        "bottom": 640,
+        "left": 0
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "320/sky/appearance",
+      "viewport": {
+        "width": 320,
+        "height": 640
+      },
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 320,
+        "height": 640,
+        "top": 0,
+        "right": 320,
+        "bottom": 640,
+        "left": 0
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "320/sky/data",
+      "viewport": {
+        "width": 320,
+        "height": 640
+      },
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 320,
+        "height": 640,
+        "top": 0,
+        "right": 320,
+        "bottom": 640,
+        "left": 0
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "320/sky/sync",
+      "viewport": {
+        "width": 320,
+        "height": 640
+      },
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 320,
+        "height": 640,
+        "top": 0,
+        "right": 320,
+        "bottom": 640,
+        "left": 0
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "320/sky/export",
+      "viewport": {
+        "width": 320,
+        "height": 640
+      },
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 320,
+        "height": 640,
+        "top": 0,
+        "right": 320,
+        "bottom": 640,
+        "left": 0
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "320/mint/initial",
+      "viewport": {
+        "width": 320,
+        "height": 640
+      },
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 320,
+        "height": 640,
+        "top": 0,
+        "right": 320,
+        "bottom": 640,
+        "left": 0
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "320/mint/audio",
+      "viewport": {
+        "width": 320,
+        "height": 640
+      },
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 320,
+        "height": 640,
+        "top": 0,
+        "right": 320,
+        "bottom": 640,
+        "left": 0
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "320/mint/appearance",
+      "viewport": {
+        "width": 320,
+        "height": 640
+      },
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 320,
+        "height": 640,
+        "top": 0,
+        "right": 320,
+        "bottom": 640,
+        "left": 0
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "320/mint/data",
+      "viewport": {
+        "width": 320,
+        "height": 640
+      },
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 320,
+        "height": 640,
+        "top": 0,
+        "right": 320,
+        "bottom": 640,
+        "left": 0
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "320/mint/sync",
+      "viewport": {
+        "width": 320,
+        "height": 640
+      },
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 320,
+        "height": 640,
+        "top": 0,
+        "right": 320,
+        "bottom": 640,
+        "left": 0
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "320/mint/export",
+      "viewport": {
+        "width": 320,
+        "height": 640
+      },
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 320,
+        "height": 640,
+        "top": 0,
+        "right": 320,
+        "bottom": 640,
+        "left": 0
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "844/lagoon/initial",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "box": {
+        "x": 24,
+        "y": 32,
+        "width": 796,
+        "height": 326,
+        "top": 32,
+        "right": 820,
+        "bottom": 358,
+        "left": 24
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "844/lagoon/audio",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "box": {
+        "x": 24,
+        "y": 32,
+        "width": 796,
+        "height": 326,
+        "top": 32,
+        "right": 820,
+        "bottom": 358,
+        "left": 24
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "844/lagoon/appearance",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "box": {
+        "x": 24,
+        "y": 32,
+        "width": 796,
+        "height": 326,
+        "top": 32,
+        "right": 820,
+        "bottom": 358,
+        "left": 24
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "844/lagoon/data",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "box": {
+        "x": 24,
+        "y": 32,
+        "width": 796,
+        "height": 326,
+        "top": 32,
+        "right": 820,
+        "bottom": 358,
+        "left": 24
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "844/lagoon/sync",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "box": {
+        "x": 24,
+        "y": 32,
+        "width": 796,
+        "height": 326,
+        "top": 32,
+        "right": 820,
+        "bottom": 358,
+        "left": 24
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "844/lagoon/export",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "box": {
+        "x": 24,
+        "y": 32,
+        "width": 796,
+        "height": 326,
+        "top": 32,
+        "right": 820,
+        "bottom": 358,
+        "left": 24
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "844/pearl/initial",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "box": {
+        "x": 24,
+        "y": 32,
+        "width": 796,
+        "height": 326,
+        "top": 32,
+        "right": 820,
+        "bottom": 358,
+        "left": 24
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "844/pearl/audio",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "box": {
+        "x": 24,
+        "y": 32,
+        "width": 796,
+        "height": 326,
+        "top": 32,
+        "right": 820,
+        "bottom": 358,
+        "left": 24
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "844/pearl/appearance",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "box": {
+        "x": 24,
+        "y": 32,
+        "width": 796,
+        "height": 326,
+        "top": 32,
+        "right": 820,
+        "bottom": 358,
+        "left": 24
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "844/pearl/data",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "box": {
+        "x": 24,
+        "y": 32,
+        "width": 796,
+        "height": 326,
+        "top": 32,
+        "right": 820,
+        "bottom": 358,
+        "left": 24
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "844/pearl/sync",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "box": {
+        "x": 24,
+        "y": 32,
+        "width": 796,
+        "height": 326,
+        "top": 32,
+        "right": 820,
+        "bottom": 358,
+        "left": 24
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "844/pearl/export",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "box": {
+        "x": 24,
+        "y": 32,
+        "width": 796,
+        "height": 326,
+        "top": 32,
+        "right": 820,
+        "bottom": 358,
+        "left": 24
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "844/sky/initial",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "box": {
+        "x": 24,
+        "y": 32,
+        "width": 796,
+        "height": 326,
+        "top": 32,
+        "right": 820,
+        "bottom": 358,
+        "left": 24
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "844/sky/audio",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "box": {
+        "x": 24,
+        "y": 32,
+        "width": 796,
+        "height": 326,
+        "top": 32,
+        "right": 820,
+        "bottom": 358,
+        "left": 24
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "844/sky/appearance",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "box": {
+        "x": 24,
+        "y": 32,
+        "width": 796,
+        "height": 326,
+        "top": 32,
+        "right": 820,
+        "bottom": 358,
+        "left": 24
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "844/sky/data",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "box": {
+        "x": 24,
+        "y": 32,
+        "width": 796,
+        "height": 326,
+        "top": 32,
+        "right": 820,
+        "bottom": 358,
+        "left": 24
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "844/sky/sync",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "box": {
+        "x": 24,
+        "y": 32,
+        "width": 796,
+        "height": 326,
+        "top": 32,
+        "right": 820,
+        "bottom": 358,
+        "left": 24
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "844/sky/export",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "box": {
+        "x": 24,
+        "y": 32,
+        "width": 796,
+        "height": 326,
+        "top": 32,
+        "right": 820,
+        "bottom": 358,
+        "left": 24
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "844/mint/initial",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "box": {
+        "x": 24,
+        "y": 32,
+        "width": 796,
+        "height": 326,
+        "top": 32,
+        "right": 820,
+        "bottom": 358,
+        "left": 24
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "844/mint/audio",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "box": {
+        "x": 24,
+        "y": 32,
+        "width": 796,
+        "height": 326,
+        "top": 32,
+        "right": 820,
+        "bottom": 358,
+        "left": 24
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "844/mint/appearance",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "box": {
+        "x": 24,
+        "y": 32,
+        "width": 796,
+        "height": 326,
+        "top": 32,
+        "right": 820,
+        "bottom": 358,
+        "left": 24
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "844/mint/data",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "box": {
+        "x": 24,
+        "y": 32,
+        "width": 796,
+        "height": 326,
+        "top": 32,
+        "right": 820,
+        "bottom": 358,
+        "left": 24
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "844/mint/sync",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "box": {
+        "x": 24,
+        "y": 32,
+        "width": 796,
+        "height": 326,
+        "top": 32,
+        "right": 820,
+        "bottom": 358,
+        "left": 24
+      },
+      "outside": [],
+      "overflow": false
+    },
+    {
+      "label": "844/mint/export",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "box": {
+        "x": 24,
+        "y": 32,
+        "width": 796,
+        "height": 326,
+        "top": 32,
+        "right": 820,
+        "bottom": 358,
+        "left": 24
+      },
+      "outside": [],
+      "overflow": false
+    }
+  ],
+  "playback": [
+    {
+      "name": "正常试听",
+      "files": [
+        {
+          "source": "/dist/audio/guy/voice-test.mp3",
+          "time": 0.063395,
+          "rate": 1
+        }
+      ]
+    },
+    {
+      "name": "慢速试听",
+      "files": [
+        {
+          "source": "/dist/audio/slow/guy/pack-v2-110.mp3",
+          "time": 29.111794,
+          "rate": 1
+        }
+      ]
+    }
+  ],
+  "note": "Isolated Chrome profiles; no personal records or native Android installation used."
+}

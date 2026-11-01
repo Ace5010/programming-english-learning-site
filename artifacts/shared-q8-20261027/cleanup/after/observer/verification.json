@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "afterOldModelsDeleted": true,
+  "freshModelProcess": true,
+  "realModel": true,
+  "input": "Windows Huihui synthetic Chinese speech, not a real video",
+  "usesObserverProductionRunner": true,
+  "productionDatabaseWritten": false,
+  "elapsedSeconds": 12.325,
+  "text": "今天我们测试本地语音识别。人工智能可以帮助我们整理视频口播，保存文字，方便以后查看。",
+  "hotwordsCount": 181,
+  "backend": "vulkan",
+  "model": "Qwen3-ASR-1.7B-Q8_0",
+  "aiContextEnabled": true
+}

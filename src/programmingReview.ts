@@ -56,7 +56,7 @@ export function programmingReview(progress: ReviewProgress, now = Date.now()): N
   return {
     options: [{ value: 'context', label: '阅读理解' }, { value: 'meaning', label: '词义' },
       { value: 'spelling', label: '拼写' }, { value: 'listening', label: '听力' }],
-    ability: exercise => target(exercise).ability,
+    ability: exercise => exercise.kind === 'speak' ? 'speaking' : target(exercise).ability,
     reviewable: (course, lesson) => dailyLessonLearned(course, lesson) && lessonPool(lesson).some(exercise => skills(exercise).length > 0),
     lessons: (course, lessons, focus = 'auto') => lessons.filter(lesson => dailyLessonLearned(course, lesson)
       && lessonPool(lesson).some(exercise => (focus === 'auto' || target(exercise).ability === focus) && rank(exercise) < 3)),

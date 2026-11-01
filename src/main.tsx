@@ -9,6 +9,7 @@ import './themeLesson.css';
 import './mobile.css';
 import './sync.css';
 import './palettes.css';
+import './settings.css';
 
 void startProgressSync().then(() => ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>

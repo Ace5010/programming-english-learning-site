@@ -9,7 +9,7 @@ const require = createRequire(import.meta.url);
 const { chromium } = require(process.env.CODEWORDS_PLAYWRIGHT ||
   'C:/Users/shenwuqiang/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
 const origin = process.env.CODEWORDS_LAB_ORIGIN || 'http://127.0.0.1:18769';
-const output = path.resolve('artifacts/asr-replacement-20261004');
+const output = path.resolve(process.env.CODEWORDS_TEST_OUTPUT || 'artifacts/asr-replacement-20261004');
 await mkdir(output, { recursive: true });
 const browser = await chromium.launch({ channel: 'chrome', headless: true, args: [
   '--no-proxy-server', '--use-fake-device-for-media-stream', '--use-fake-ui-for-media-stream',

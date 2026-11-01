@@ -1,0 +1,24 @@
+{
+  "complete": true,
+  "reviewedVocabulary": 3620,
+  "completedRequests": 15,
+  "findings": 200,
+  "confirmedCredits": 13.76,
+  "priorUnknownRequests": [
+    {
+      "report": "batch-0.json",
+      "submitted": 905,
+      "reason": "No result or usage receipt after host sleep; terminated owned process. Charge unknown."
+    }
+  ],
+  "scope": "Text, meaning and pronunciation risk screening; no audio supplied to CodeBuddy.",
+  "decisions": {
+    "adopted": "Reviewed heteronym contexts; explicit letter readings; five verified IPA corrections.",
+    "notApplied": "KK/IPA convention differences, missing phonetics, unsupported stress claims, bracket-removal and editorial content changes; audio processing retains the displayed content."
+  },
+  "dictionaryChecks": [
+    "https://dictionary.cambridge.org/pronunciation/english/present",
+    "https://dictionary.cambridge.org/pronunciation/english/refuse",
+    "https://dictionary.cambridge.org/us/pronunciation/english/used"
+  ]
+}

@@ -1,0 +1,170 @@
+{
+  "repo": "changelinglab/PhoneticXeus",
+  "revision": "3a8d860fa68f8936ceb4196651221215bab9dae4",
+  "files": {
+    "README.md": {
+      "bytes": 2007,
+      "sha256": "526c38b6aab89b860fbfc2f2a808c55618286818e57a549246b45603ef0485e4"
+    },
+    "config.json": {
+      "bytes": 490,
+      "sha256": "e3a1159d19f0908ecf21053c854e5f1994e90e6339a01025ea081d965d7d5a1b"
+    },
+    "config_tree.log": {
+      "bytes": 11503,
+      "sha256": "8f6e28018bdd7f00b0d10808f8d5aa1212815be5ee68a957f9bd71894e2873b1"
+    },
+    "configuration_phoneticxeus.py": {
+      "bytes": 1075,
+      "sha256": "be6167a7f8572cfe37407ac3b92379c46664dcf24f7e7d74ee6013d3c2c3dd51"
+    },
+    "ipa_vocab.json": {
+      "bytes": 5977,
+      "sha256": "96c70e0f72c02aa882a6cf9083b2e1a007c37ff5890a94afc3bf0039748654c3"
+    },
+    "modeling_phoneticxeus.py": {
+      "bytes": 4568,
+      "sha256": "7583603ff37667ce3d0d84760280e8d9d5cbeb20de749f41db2c9fd3feea256a"
+    },
+    "pxeus/__init__.py": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "pxeus/core/__init__.py": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "pxeus/core/utils.py": {
+      "bytes": 3668,
+      "sha256": "e837c100eaa0b3b6df572b0e0743550767a32139010e74de1a1d288a274cc665"
+    },
+    "pxeus/espnet_import/__init__.py": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "pxeus/espnet_import/attention.py": {
+      "bytes": 17811,
+      "sha256": "281729d0e2e7450e1b3c702d09afde9b5d948837ce8eed867f583c804d689c23"
+    },
+    "pxeus/espnet_import/cgmlp.py": {
+      "bytes": 3489,
+      "sha256": "027fd6754daab5a2b4080a3affc1edeb8b63a0997720bd6e98efc37bb3358ef3"
+    },
+    "pxeus/espnet_import/embedding.py": {
+      "bytes": 17812,
+      "sha256": "2ec7912011a0fb75250ca2cf3d5d4e9708542cdaa559cff50fc063dc6410d1eb"
+    },
+    "pxeus/espnet_import/fastformer.py": {
+      "bytes": 5282,
+      "sha256": "e1a3a07a4b35dd187e2054a60936bbc9f6e88b8ac01bcf19a096ab962a65528f"
+    },
+    "pxeus/espnet_import/label_smoothing_loss.py": {
+      "bytes": 2235,
+      "sha256": "b1ae7794efe3f2650dc5c50cffa5f568a65398b162988fa59c39d6b7aa390977"
+    },
+    "pxeus/espnet_import/layer_norm.py": {
+      "bytes": 1072,
+      "sha256": "09ae1baa48bd76813f53b0deeadbc8ede816258acdc64ec7e4edbf81cff39ab2"
+    },
+    "pxeus/espnet_import/nets_utils.py": {
+      "bytes": 22863,
+      "sha256": "a36c74c940d910d75f633e0c163dc258c05b4329b6a2c732c3d791026366e502"
+    },
+    "pxeus/espnet_import/positionwise_feed_forward.py": {
+      "bytes": 983,
+      "sha256": "b9980b46e2c2bec968c20bfa99a494996e156d53db95dbbb7005c0a2fc76eef0"
+    },
+    "pxeus/espnet_import/repeat.py": {
+      "bytes": 1299,
+      "sha256": "9fefa31e135c0f8c4da1ac9437be162075210bf5f23fcd1b702d256e584783ad"
+    },
+    "pxeus/espnet_import/subsampling.py": {
+      "bytes": 27063,
+      "sha256": "f0b25ecf19b516b4d0626273a7b78042676176b3d37df75ba54ed909d03cd5d7"
+    },
+    "pxeus/model/__init__.py": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "pxeus/model/powsm/__init__.py": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "pxeus/model/powsm/ctc.py": {
+      "bytes": 8024,
+      "sha256": "88d945d8f71db7cc5da335707747fe707d79f9e2d65b74f6ffd219938de621aa"
+    },
+    "pxeus/model/powsm/e_branchformer.py": {
+      "bytes": 20348,
+      "sha256": "5870009388038a29368358095350da6f4ca7e8a8a8a7f78e38de1294dbc6aa93"
+    },
+    "pxeus/model/powsm/specaug.py": {
+      "bytes": 12093,
+      "sha256": "c3266cfdc40c25c908c6e3d0357506a097f668a15266fde7103b19fe37b29e25"
+    },
+    "pxeus/model/powsm/utils.py": {
+      "bytes": 3020,
+      "sha256": "d075f02ad6bd492d494f2afbbac0d06807d6d0c1a351a4c696a200d9abb8a631"
+    },
+    "pxeus/model/xeusphoneme/__init__.py": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "pxeus/model/xeusphoneme/builders.py": {
+      "bytes": 10817,
+      "sha256": "2287ea7e83d944358a136b83c558017a663d610a4904017345fa47873743241c"
+    },
+    "pxeus/model/xeusphoneme/cnn_frontend.py": {
+      "bytes": 8063,
+      "sha256": "c8a303f39b471e1ec33fa9e549c073220a014da5f3a373a47ec2e57a9ff50683"
+    },
+    "pxeus/model/xeusphoneme/linear_layer.py": {
+      "bytes": 677,
+      "sha256": "4d4e40cda034d1674fbb395e2703c4b3ddd5aac93e2b32f4956c6e580168253b"
+    },
+    "pxeus/model/xeusphoneme/resources/__init__.py": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "pxeus/model/xeusphoneme/resources/ipa_vocab.json": {
+      "bytes": 5977,
+      "sha256": "96c70e0f72c02aa882a6cf9083b2e1a007c37ff5890a94afc3bf0039748654c3"
+    },
+    "pxeus/model/xeusphoneme/resources/xeus_config.yaml": {
+      "bytes": 8056,
+      "sha256": "382ab33c232e14ccf3eabdd0129db239ae0420fc2d8546098a4260820255062e"
+    },
+    "pxeus/model/xeusphoneme/xeuspr_inference.py": {
+      "bytes": 2824,
+      "sha256": "742d51fcf39ea12d39817aab01f0bd30026b77f57eb88d21f43510226bfb91d9"
+    },
+    "pxeus/model/xeusphoneme/xeuspr_model.py": {
+      "bytes": 15999,
+      "sha256": "f9aa59fa7c9ae0761a49253b972f5140abdb9b5033c62d751a2b2f9240e0e011"
+    },
+    "pxeus/recipe/__init__.py": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "pxeus/recipe/phone_recognition/__init__.py": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "pxeus/recipe/phone_recognition/greedy_ctc_strategy.py": {
+      "bytes": 1988,
+      "sha256": "e7aa4c2849b9c02e6f3fda399970a37a6ff0a2e4906171b6a0d52015d9f67c6c"
+    },
+    "pxeus/utils/__init__.py": {
+      "bytes": 46,
+      "sha256": "4698425f6b0c88a00e4058e055b0fba2d393021d55f38a98a2c0827d12253cc9"
+    },
+    "pxeus/utils/pylogger.py": {
+      "bytes": 734,
+      "sha256": "680eaba59200727b1489bf53a52e61fa1ff18d812a3e6ea960ad93cbf6a57158"
+    },
+    "model.safetensors": {
+      "bytes": 2300089432,
+      "sha256": "ad58bf20a60e9d0380327bd8b2d0e8e90a9b8de2adccbfb479f9b21ea85eda18"
+    }
+  }
+}

@@ -175,8 +175,8 @@ function SoundSample({ active, stopAudio, ...audio }: AudioProps & { active: boo
   </article>;
 }
 
-type Props = AudioProps & DemoAudioProps & PhonemicAudioProps & { active: boolean; view: 'course' | 'review' | 'library' | 'favorites'; request?: { id: string; revision: number }; openTopic: (id: string) => void; stopAudio: () => void; openVoice: () => void; contentRef?: RefObject<HTMLElement | null>; headingRef?: RefObject<HTMLElement | null> };
-export default function FoundationEnglish({ request, openTopic, active, view, stopAudio, openVoice, contentRef, headingRef, playPhoneme, phonemeError, ...audio }: Props) {
+type Props = AudioProps & DemoAudioProps & PhonemicAudioProps & { active: boolean; view: 'course' | 'review' | 'library' | 'favorites'; request?: { id: string; revision: number }; openTopic: (id: string) => void; stopAudio: () => void; contentRef?: RefObject<HTMLElement | null>; headingRef?: RefObject<HTMLElement | null> };
+export default function FoundationEnglish({ request, openTopic, active, view, stopAudio, contentRef, headingRef, playPhoneme, phonemeError, ...audio }: Props) {
   const sounds = view === 'library';
   const catalog = [...foundationTutorialCatalog];
   const grammarIndex = catalog.findIndex(topic => topic.id === 'foundation-word-order');
@@ -206,11 +206,11 @@ export default function FoundationEnglish({ request, openTopic, active, view, st
       <nav className="tutorial-next" aria-label="章节翻页">{index > 0 && <button type="button" onClick={() => choose(topics[index - 1].id)}>上一篇：{titleOf(topics[index - 1])}</button>}{index < topics.length - 1 && <button type="button" onClick={() => choose(topics[index + 1].id)}>接下来：{titleOf(topics[index + 1])}</button>}</nav>
     </div></div>;
   return <main hidden={!active} ref={contentRef} className="content foundation-tutorial" id="foundation-content">
-    <header className="page-heading" ref={headingRef}><div><h1>{sounds ? '音标与发音' : '基础概念与语法'}</h1><p>{sounds ? '先听一个声音，再看怎样发音。全部音标都可以直接点读。' : '可以按推荐顺序阅读，也可以直接选一个想弄懂的主题。'}</p></div>{!sounds && <button className="daily-button" onClick={openVoice}>选择声音</button>}</header>
+    <header className="page-heading" ref={headingRef}><div><h1>{sounds ? '音标与发音' : '基础概念与语法'}</h1><p>{sounds ? '先听一个声音，再看怎样发音。全部音标都可以直接点读。' : '可以按推荐顺序阅读，也可以直接选一个想弄懂的主题。'}</p></div></header>
     {sounds ? <>
       <PhonemicChart speaking={audio.speaking} phonemeError={phonemeError} playPhoneme={(id, kind, slow) => { setTutorialOpen(false); playPhoneme(id, kind, slow); }} openTutorial={choose} />
       <details className="phonemic-tutorials" open={tutorialOpen} onToggle={event => { const next = event.currentTarget.open; if (next !== tutorialOpen) { stopAudio(); setTutorialOpen(next); } }}><summary>进一步学习：拼读、拼写与整句听读</summary>
-        <div className="phonemic-tutorial-note"><p>各篇注明示范口音；声音合成篇采用英式，其余词句沿用美式录音。</p><button className="daily-button" onClick={openVoice}>选择声音</button></div>
+        <div className="phonemic-tutorial-note"><p>各篇注明示范口音；声音合成篇采用英式，其余词句沿用美式录音。</p></div>
         {tutorial}
       </details>
     </> : tutorial}

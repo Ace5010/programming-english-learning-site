@@ -1,0 +1,39 @@
+{
+  "repo": "istomin9192/mHuBERT-147-ipa-ctc-ft",
+  "revision": "b5fec117a9edd0056e23384891ea29cd83784dd9",
+  "license": "apache-2.0",
+  "files": {
+    "README.md": {
+      "bytes": 2496,
+      "sha256": "243559c2a1a2281db5b11cbac10e33da135efe50abdc835a424b2ab6ca0efb45"
+    },
+    "__init__.py": {
+      "bytes": 191,
+      "sha256": "65fa5fff3e1d4d1f65eb5b5770bb4a05c75f02acde346583ff5eea6d4a51ea60"
+    },
+    "config.json": {
+      "bytes": 2281,
+      "sha256": "8ce0f7dcb28e92d389a6a1d4ce4fbde5d85bc4bcfc816d2571f12508a12a06ee"
+    },
+    "configuration_mhubert_ipa_ctc_ft.py": {
+      "bytes": 1562,
+      "sha256": "f407d7f9a5cf0cd77889e7974dc5ea97e9b829ce5502cab156544ec7ae922594"
+    },
+    "ipa_map.json": {
+      "bytes": 2168,
+      "sha256": "7191e8aa70b82585da81da1074cbfea429c261770df1cc36d85df17a0d673bd9"
+    },
+    "modeling_mhubert_ipa_ctc_ft.py": {
+      "bytes": 1759,
+      "sha256": "395d2e2a9d18f98c7fff0caa787c06d0d79ec02ec5dc795a82e1366b130170df"
+    },
+    "preprocessor_config.json": {
+      "bytes": 227,
+      "sha256": "e850c9afcd068b4f7f226000ccee047349368a23e1dc5f5784838f822b2d185c"
+    },
+    "pytorch_model.bin": {
+      "bytes": 388961027,
+      "sha256": "3209201d88739a56f226043af46bfd2bdbc94582ad2b9ef880069849ebe8e81c"
+    }
+  }
+}

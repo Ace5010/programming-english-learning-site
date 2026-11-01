@@ -1,0 +1,145 @@
+{
+  "batch": "small-3156",
+  "firstId": 3156,
+  "lastId": 3405,
+  "submitted": 250,
+  "exitCode": 0,
+  "timedOut": false,
+  "complete": true,
+  "elapsedSeconds": 75.226,
+  "records": [
+    {
+      "model": "deepseek-v4.1-flash",
+      "usage": {
+        "prompt_tokens": 18213,
+        "completion_tokens": 12226,
+        "total_tokens": 30439,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 11364,
+          "rejected_prediction_tokens": 0,
+          "cached_tokens": 0
+        },
+        "prompt_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": 0,
+          "cached_tokens": 7808
+        },
+        "prompt_cache_hit_tokens": 7808,
+        "prompt_cache_miss_tokens": 10405,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 0,
+        "prompt_cache_write_tokens": 0,
+        "completion_thinking_tokens": 11364,
+        "credit": 0.85,
+        "cached_tokens": 0
+      },
+      "requestId": "01a194ec465373ecacce9aaba391ff75"
+    }
+  ],
+  "result": {
+    "reviewedCount": 250,
+    "findings": [
+      {
+        "id": 3166,
+        "word": "AD",
+        "issue": "The phonetic field is empty. This is the acronym for 公元, not the word 'ad' (广告), so it needs a distinct pronunciation.",
+        "intendedIPA": "/ˌeɪˈdiː/",
+        "context": "The temple was built in AD 70.",
+        "confidence": "high"
+      },
+      {
+        "id": 3186,
+        "word": "advocate",
+        "issue": "This is a noun/verb pair. The meaning and example are verbal, but the entry lists both final vowels without labels.",
+        "intendedIPA": "/ˈædvəkeɪt/",
+        "context": "They advocate a simpler approach to the problem.",
+        "confidence": "medium"
+      },
+      {
+        "id": 3199,
+        "word": "AIDS",
+        "issue": "The listed phonetic uses /edz/ instead of the acronym's /eɪdz/.",
+        "intendedIPA": "/eɪdz/",
+        "context": "The clinic offers free tests for AIDS.",
+        "confidence": "high"
+      },
+      {
+        "id": 3213,
+        "word": "alphabet",
+        "issue": "The phonetic has two primary stresses. It should have one primary stress and a weaker second syllable.",
+        "intendedIPA": "/ˈælfəˌbɛt/",
+        "context": "Children learn the alphabet before they learn to read.",
+        "confidence": "medium"
+      },
+      {
+        "id": 3259,
+        "word": "approve",
+        "issue": "The phonetic uses /ʊ/ instead of the required long /uː/.",
+        "intendedIPA": "/əˈpruːv/",
+        "context": "The committee will approve the plan on Friday.",
+        "confidence": "high"
+      },
+      {
+        "id": 3266,
+        "word": "architecture",
+        "issue": "The phonetic gives two primary stresses and places a schwa in the second syllable.",
+        "intendedIPA": "/ˈɑrkəˌtektʃər/",
+        "context": "She studied architecture at university.",
+        "confidence": "medium"
+      },
+      {
+        "id": 3289,
+        "word": "astronaut",
+        "issue": "The phonetic has two primary stresses, and the final vowel should be long /ɔː/.",
+        "intendedIPA": "/ˈæstrəˌnɔːt/",
+        "context": "The astronaut described life on the space station.",
+        "confidence": "medium"
+      },
+      {
+        "id": 3306,
+        "word": "automatic",
+        "issue": "The phonetic has two primary stresses. It should have a secondary stress, then a primary stress.",
+        "intendedIPA": "/ˌɔtəˈmætɪk/",
+        "context": "The doors are automatic and open when you approach.",
+        "confidence": "medium"
+      },
+      {
+        "id": 3339,
+        "word": "bath",
+        "issue": "The phonetic field is empty. The noun needs /bæθ/ in US English (/bɑːθ/ in UK English).",
+        "intendedIPA": "/bæθ/",
+        "context": "She gave the dog a bath.",
+        "confidence": "high"
+      },
+      {
+        "id": 3340,
+        "word": "bathe",
+        "issue": "The phonetic omits the /eɪ/ glide, making it sound like 'beth'.",
+        "intendedIPA": "/beɪð/",
+        "context": "You should bathe the wound with clean water.",
+        "confidence": "high"
+      },
+      {
+        "id": 3357,
+        "word": "behaviour",
+        "issue": "The headword 'behavious' is misspelled, the example repeats the misspelling, and the phonetic field is empty.",
+        "intendedIPA": "/bɪˈheɪvjər/",
+        "context": "His behaviour at dinner surprised everyone.",
+        "confidence": "high"
+      },
+      {
+        "id": 3405,
+        "word": "breakthrough",
+        "issue": "The phonetic uses /e/ for /eɪ/ and /ʊ/ for /uː/, and it also has two primary stresses.",
+        "intendedIPA": "/ˈbreɪkθruː/",
+        "context": "Researchers announced a breakthrough in cancer treatment.",
+        "confidence": "high"
+      }
+    ],
+    "notes": "Reviewed all 250 entries using only the supplied IPA, meanings and examples; no audio was provided. Normal US/UK variants were not marked. The list uses a simplified notation such as /e/ for /eɪ/ and /o/ for /oʊ/, and several compounds carry doubled primary-stress marks; only the clearest cases are listed."
+  }
+}

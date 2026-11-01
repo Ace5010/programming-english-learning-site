@@ -1,0 +1,80 @@
+{
+  "completedAt": "2026-11-01T12:14:12.289803+08:00",
+  "status": "local-complete",
+  "branch": "main",
+  "committed": false,
+  "pushed": false,
+  "published": false,
+  "slowRate": {
+    "nominal": 0.6,
+    "nativeSynthesis": "-40%",
+    "synthesizedClipPlaybackRate": 1,
+    "directRecordingPlaybackRate": 0.6,
+    "preservedSourceRate": 0.6,
+    "wordGapMs": 300,
+    "sentenceGapMs": 550
+  },
+  "scope": {
+    "slowUnits": 5990,
+    "slowClips": 11980,
+    "nativeSlowClips": 11973,
+    "preservedSourceSlowClips": 7,
+    "changedPacks": 300,
+    "totalPacks": 302,
+    "packBytes": 184712584,
+    "deploymentFiles": 16840
+  },
+  "slowManifestSha256": "6e953b4ebcd3185732c96fb88213c2a8916ea499de65135815a7a0e7b47a3216",
+  "protected": {
+    "unchangedMp3Files": 23625,
+    "normalRecordings": 16404,
+    "legacyPiper": 7122,
+    "normalContextualPacks": 2,
+    "humanAndFeedbackFiles": 97,
+    "learningRecords": "Browser tests use disposable contexts. No personal profiles, storage migrations or ID changes."
+  },
+  "checks": {
+    "typescript": true,
+    "productionBuild": true,
+    "projectVerify": true,
+    "decodedPacks": 302,
+    "audioAndFoundationUnitTests": 53,
+    "courseAndReviewUnitTests": 53,
+    "generatorFailureModeTests": 4,
+    "browserScenarios": {
+      "slowQueue": 16,
+      "phonemes": 15,
+      "foundation": 4,
+      "contextualWords": 20,
+      "settings": 1,
+      "localControls": 12
+    },
+    "productionBrowserScenarios": 7,
+    "browserCaptureTextMatches": 2
+  },
+  "asrScreening": {
+    "complete": true,
+    "backend": "shared-q8-vulkan",
+    "noReferencePrompt": true,
+    "manifestSha256": "6e953b4ebcd3185732c96fb88213c2a8916ea499de65135815a7a0e7b47a3216",
+    "screened": 1126,
+    "exactNormalizedMatches": 1026,
+    "elapsedSeconds": 523.8,
+    "assessment": "transcription screening, not phoneme or human listening quality"
+  },
+  "asrTempoRecheck": "asr-tempo-recheck.json",
+  "asrScope": "Screening only; user approved the comparison samples. Short-word transcription differences are retained in the evidence.",
+  "reviewFilterFix": {
+    "cause": "Retained speaking tasks have no word-skill metadata; selecting listening queried their ability and threw.",
+    "change": "Classify retained speak tasks as speaking; existing review pool still excludes them.",
+    "reproducedBefore": "review-filter-before.log",
+    "regression": "review-regression.log"
+  },
+  "initialBrowserChecks": "Six stale-UI/legacy-scenario failures retained in local-controls; updated locators, current optional speaking flow and review filter regression passed against the production bundle.",
+  "service": "Existing local Vite service was absent on resume. Restored using scripts/Open-LocalSite.ps1 -CheckOnly -SkipSpeech on the existing 5186 port.",
+  "recovery": {
+    "baseline": "D:\\vibe项目\\词见\\.runtime\\audio-slow-060-20261101\\baseline",
+    "installationJournal": "installation.json"
+  },
+  "logDirectory": "D:\\vibe项目\\词见\\.runtime\\audio-slow-060-20261101"
+}

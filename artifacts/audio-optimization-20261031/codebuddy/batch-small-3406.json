@@ -1,0 +1,129 @@
+{
+  "batch": "small-3406",
+  "firstId": 3406,
+  "lastId": 3620,
+  "submitted": 215,
+  "exitCode": 0,
+  "timedOut": false,
+  "complete": true,
+  "elapsedSeconds": 138.559,
+  "records": [
+    {
+      "model": "deepseek-v4.1-flash",
+      "usage": {
+        "prompt_tokens": 16393,
+        "completion_tokens": 24553,
+        "total_tokens": 40946,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 23676,
+          "rejected_prediction_tokens": 0,
+          "cached_tokens": 0
+        },
+        "prompt_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": 0,
+          "cached_tokens": 7808
+        },
+        "prompt_cache_hit_tokens": 7808,
+        "prompt_cache_miss_tokens": 8585,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 0,
+        "prompt_cache_write_tokens": 0,
+        "completion_thinking_tokens": 23676,
+        "credit": 1.53,
+        "cached_tokens": 0
+      },
+      "requestId": "01a194ed6c6f785aaca95440b21ea10a"
+    }
+  ],
+  "result": {
+    "reviewedCount": 215,
+    "findings": [
+      {
+        "id": 3427,
+        "word": "buffet",
+        "issue": "Heteronym: /bəˈfeɪ/ covers the meal sense; the listed 打击/冲击 sense is /ˈbʌfɪt/. One IPA cannot cover both.",
+        "intendedIPA": "bəˈfeɪ",
+        "context": "The hotel serves a cold buffet at lunch.",
+        "confidence": "high"
+      },
+      {
+        "id": 3438,
+        "word": "businesswoman",
+        "issue": "IPA has /i/ for the KIT vowels in 'business' and /u/ for the 'woman' vowel; standard is /ˈbɪznɪsˌwʊmən/ (also /ˈbɪznəs-/).",
+        "intendedIPA": "ˈbɪznɪsˌwʊmən",
+        "context": "The businesswoman runs her own company.",
+        "confidence": "high"
+      },
+      {
+        "id": 3467,
+        "word": "catholic",
+        "issue": "IPA lacks primary stress; standard /ˈkæθəlɪk/. The example is the proper noun Catholic, so casing should be aligned.",
+        "intendedIPA": "ˈkæθəlɪk",
+        "context": "She is a Catholic from Boston.",
+        "confidence": "medium"
+      },
+      {
+        "id": 3482,
+        "word": "chairwoman",
+        "issue": "Final element 'woman' is /wʊmən/, not /wumən/; the given /u/ is GOOSE, not the WOOD vowel.",
+        "intendedIPA": "ˈtʃeəwʊmən",
+        "context": "The chairwoman opened the meeting.",
+        "confidence": "high"
+      },
+      {
+        "id": 3502,
+        "word": "chips",
+        "issue": "IPA uses /i/ (FLEECE) instead of /ɪ/ (KIT), and the example contains singular 'chip', not the headword 'chips'.",
+        "intendedIPA": "tʃɪps",
+        "context": "These chips are too salty.",
+        "confidence": "high"
+      },
+      {
+        "id": 3575,
+        "word": "const",
+        "issue": "Empty IPA. Code keyword pronounced /ˈkɑːnst/, not the full word 'constant'.",
+        "intendedIPA": "ˈkɑːnst",
+        "context": "Declare the value with const.",
+        "confidence": "high"
+      },
+      {
+        "id": 3578,
+        "word": "async",
+        "issue": "Empty IPA. Code keyword/abbreviation usually /eɪˈsɪŋk/; /əˈsɪŋk/ is also heard.",
+        "intendedIPA": "eɪˈsɪŋk",
+        "context": "This async function returns a promise.",
+        "confidence": "medium"
+      },
+      {
+        "id": 3583,
+        "word": "config",
+        "issue": "Empty IPA. Shortened code term usually /ˈkɑːnfɪɡ/.",
+        "intendedIPA": "ˈkɑːnfɪɡ",
+        "context": "Open the config file first.",
+        "confidence": "medium"
+      },
+      {
+        "id": 3597,
+        "word": "invalid",
+        "issue": "Heteronym: adjective 无效的 is /ɪnˈvælɪd/; noun 'invalid' (sick person) is /ˈɪnvəlɪd/. IPA matches the supplied meaning but is ambiguous alone.",
+        "intendedIPA": "ɪnˈvælɪd",
+        "context": "The link is invalid after it expires.",
+        "confidence": "high"
+      },
+      {
+        "id": 3600,
+        "word": "console",
+        "issue": "Heteronym: noun 控制台 is /ˈkɑːnsoʊl/; verb 'console' (comfort) is /kənˈsoʊl/. IPA matches the supplied meaning but is ambiguous alone.",
+        "intendedIPA": "ˈkɑːnsoʊl",
+        "context": "Open the console to read the error.",
+        "confidence": "high"
+      }
+    ],
+    "notes": "Reviewed all 215 entries. Most entries use a simplified American transcription (/e/ for /eɪ/, /o/ for /oʊ/) and omitted length marks; these conventions were not flagged. Stress-shift noun/verb pairs such as import/export, update, and download/upload are transcribed in the verb form matching the supplied meanings; no error was recorded for them. Entry 3414 Britain's example appears corrupted ('This is the stud  naturalized from Britain.') and needs editorial cleanup. No audio was supplied, so no audio observations are made."
+  }
+}

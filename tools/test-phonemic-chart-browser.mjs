@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import { createRequire } from 'node:module';
 import { mkdir, writeFile } from 'node:fs/promises';
 import { phonemes, phonemeAudioPath } from '../src/phonemeInventory.ts';
+import { chooseTheme } from './helpers/settings-browser.mjs';
 const require = createRequire(import.meta.url);
 const { chromium } = require(process.env.CODEWORDS_PLAYWRIGHT || 'C:/Users/shenwuqiang/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
 const baseURL = process.env.CODEWORDS_TEST_URL || 'http://localhost:5186/';
@@ -61,7 +62,7 @@ try {
     await page.getByRole('button', { name: '听 /f/ 单音', exact: true }).focus();
     await page.keyboard.press('Enter');
     assert.equal(await page.locator('.phonemic-detail h3').textContent(), '/f/');
-    await page.getByRole('combobox', { name: '界面配色' }).selectOption('pearl');
+    await chooseTheme(page, 'pearl');
     assert.equal(await page.locator('.phonemic-detail h3').textContent(), '/f/');
     await page.getByRole('button', { name: '看 /f/ 与 /v/ 的详细讲解', exact: true }).click();
     await page.getByRole('heading', { name: '/f/ 和 /v/：嘴形相同，声音哪里不同', exact: true }).waitFor();
@@ -76,10 +77,10 @@ try {
       await played(page, page.getByRole('button', { name: `听 /${item.ipa}/ 单音`, exact: true }), phonemeAudioURL(id, 'sound'), 1);
       await played(page, page.getByRole('button', { name: `英式朗读 ${item.word}`, exact: true }), phonemeAudioURL(id, 'word'), 1);
     }
-    await played(page, page.getByRole('button', { name: '慢速听 /iː/ 单音', exact: true }), phonemeAudioURL('ee', 'sound'), .72);
-    await played(page, page.getByRole('button', { name: '英式慢速朗读 sheep', exact: true }), phonemeAudioURL('ee', 'word'), .72);
+    await played(page, page.getByRole('button', { name: '慢速听 /iː/ 单音', exact: true }), phonemeAudioURL('ee', 'sound'), .6);
+    await played(page, page.getByRole('button', { name: '英式慢速朗读 sheep', exact: true }), phonemeAudioURL('ee', 'word'), .6);
     await played(page, page.getByRole('button', { name: '听 /ɪ/ 单音', exact: true }), phonemeAudioURL('ih', 'sound'), 1);
-    await played(page, page.getByRole('button', { name: '慢速对比听 /iː/', exact: true }), phonemeAudioURL('ee', 'sound'), .72);
+    await played(page, page.getByRole('button', { name: '慢速对比听 /iː/', exact: true }), phonemeAudioURL('ee', 'sound'), .6);
     assert.equal(await page.locator('.phonemic-detail h3').textContent(), '/ɪ/');
     await played(page, page.getByRole('button', { name: '对比听 /ɪ/', exact: true }), phonemeAudioURL('ih', 'sound'), 1);
     await context.close();

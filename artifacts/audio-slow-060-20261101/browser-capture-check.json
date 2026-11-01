@@ -1,0 +1,25 @@
+{
+  "noReferencePrompt": true,
+  "results": [
+    {
+      "voice": "aria",
+      "file": "artifacts\\audio-slow-060-20261101\\slow-browser\\aria-actual-browser.webm",
+      "sha256": "5fe1f10868561cf8f04600ba1ca25b5e742a9016137845086e5394b40b747976",
+      "durationSeconds": 4.14,
+      "expected": "I am a student.",
+      "transcript": "I am a student.",
+      "modelMs": 181,
+      "textMatch": true
+    },
+    {
+      "voice": "guy",
+      "file": "artifacts\\audio-slow-060-20261101\\slow-browser\\guy-actual-browser.webm",
+      "sha256": "dc4d33299c50044d566c0805229e1fcc07de709fde51150549ba1bd2ea30b644",
+      "durationSeconds": 4.14,
+      "expected": "I am a student.",
+      "transcript": "I am a student.",
+      "modelMs": 148,
+      "textMatch": true
+    }
+  ]
+}

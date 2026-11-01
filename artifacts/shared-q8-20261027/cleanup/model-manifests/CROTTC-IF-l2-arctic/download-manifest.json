@@ -1,0 +1,110 @@
+{
+  "repo": "Haopeng/CROTTC-IF-l2-arctic",
+  "revision": "9149e5107b3332b9aa3f5573f6328a4e312006ad",
+  "files": {
+    "README.md": {
+      "bytes": 1199,
+      "sha256": "4da4d804b08e077857456e0e7b33f709a38f3925a8f0550fc9fdb391ff530eff"
+    },
+    "checkpoint/CKPT.yaml": {
+      "bytes": 187,
+      "sha256": "e4d88e64859b82317e5ad99d6d22c557579bb93b7497859af976d7aa69c37f60"
+    },
+    "custom_interface.py": {
+      "bytes": 5745,
+      "sha256": "a92f165ea657a9fb62835099d65613c4897f6d0f825fdd867ae61ceef30c272a"
+    },
+    "hyperparams.yaml": {
+      "bytes": 19737,
+      "sha256": "dde69e1b5c2f18a35f71ad5884275c8f948ba81a30be15f996fba6eaf845b5bb"
+    },
+    "label_encoder.txt": {
+      "bytes": 583,
+      "sha256": "98cee9707ab67c3e29ee337debf4ba319cbc61c3777024db6b8f3494f0df5bfe"
+    },
+    "manifest.json": {
+      "bytes": 545,
+      "sha256": "8dcd106eee0321195853f8b29bf9f4dd48764eea5a79444bc8d6f5731b0c794b"
+    },
+    "requirements.txt": {
+      "bytes": 230,
+      "sha256": "c339f9b6e61f442e19c94d59bffad5f9bffaf3a3022f339a57bee5aa88df803d"
+    },
+    "runtime/models/Trans_IFMDD_ConPCO_ver2.py": {
+      "bytes": 112938,
+      "sha256": "5955726fb7476e237bc08d18d5ea5d94124f976dfcb1bc3142d98ff100d57a61"
+    },
+    "runtime/models/__init__.py": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "runtime/models/projector.py": {
+      "bytes": 2999,
+      "sha256": "a7f21e63007c7dc0cab35921028a28f92277218bf4d8b1c7b333b58b6668702f"
+    },
+    "runtime/mpd_eval_v4.py": {
+      "bytes": 30799,
+      "sha256": "9e88388629a69f46ac41bd9c1b428aa30ffb4defb6a67113afc3309b893abcf2"
+    },
+    "runtime/trainer/AutoSSLoader.py": {
+      "bytes": 5393,
+      "sha256": "64f807bf202b7b1ee37e3a5b323868cfed78279d203ee1ceec571bc9500ec0e3"
+    },
+    "runtime/trainer/ConPCO_TransASR.py": {
+      "bytes": 10599,
+      "sha256": "6dcc57477071027ae7e3f30a1f9813bd8095ff6bb9055747e47c4518d8f544fd"
+    },
+    "runtime/trainer/__init__.py": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "runtime/utils/__init__.py": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "runtime/utils/layers/__init__.py": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "runtime/utils/layers/utils.py": {
+      "bytes": 7244,
+      "sha256": "cb4657c60f0cb889286c5d28f364ca6c542617f0b288dfc46bcfa29398590005"
+    },
+    "runtime/utils/losses/ConPCO_norm.py": {
+      "bytes": 6027,
+      "sha256": "d072ee4c26934fba4f1750b9bf30d6a80020f893ba2dab200bdd62d7bc066bda"
+    },
+    "runtime/utils/losses/__init__.py": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "runtime/utils/plot/__init__.py": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "runtime/utils/plot/plot_attn.py": {
+      "bytes": 1162,
+      "sha256": "183d522839fb67d6190c47b4c89e331efcaaecfa922a6f023d0548778396523a"
+    },
+    "runtime/utils/release_bundle.py": {
+      "bytes": 9823,
+      "sha256": "f3c619f7bc4fba6bcfe2f9078ddcf5e14d1b6bcff534bcd3f801e56c44aca898"
+    },
+    "wavlm/config.json": {
+      "bytes": 2222,
+      "sha256": "a3d8fe831aaf63d725b54a8ac36f3549cd4365c5086774b2c89cabbc6f9e129d"
+    },
+    "wavlm/preprocessor_config.json": {
+      "bytes": 214,
+      "sha256": "60ca5a31e13f69ee2fbf147504c8676db5f6398fd7a6b12294341dff838edfcf"
+    },
+    "checkpoint/model.ckpt": {
+      "bytes": 73894282,
+      "sha256": "3a9a4a03d2af6c90f71db8972a51dd4ce4559d1e9801f078904a65ce4aa113ef"
+    },
+    "checkpoint/perceived_ssl.ckpt": {
+      "bytes": 1262009130,
+      "sha256": "a1ff5b43b55c412e73381e8b257c9af3c2237fa71b76bac5119ca8b31a531ec4"
+    }
+  }
+}

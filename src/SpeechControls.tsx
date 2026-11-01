@@ -2,7 +2,7 @@ import Icon from './Icon';
 import './speechControls.css';
 
 export type PlaybackSpeed = 'normal' | 'slow';
-export const playbackRates: Record<PlaybackSpeed, number> = { normal: 1, slow: 0.72 };
+export const playbackRates: Record<PlaybackSpeed, number> = { normal: 1, slow: 0.6 };
 
 interface Props {
   speed: PlaybackSpeed;

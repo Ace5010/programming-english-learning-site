@@ -745,7 +745,6 @@
     "Give me one more chance.",
     "Glen was calm and composed at the funeral.",
     "Go away!",
-    "Good",
     "Good luck in your new home!",
     "Good watches don't come at bargain prices.",
     "Goodbye!",
@@ -4386,6 +4385,7 @@
     "badminton",
     "bag",
     "baggage",
+    "bags",
     "bake",
     "baked beans",
     "bakery",
@@ -5636,6 +5636,7 @@
     "fridge",
     "friend",
     "friendly",
+    "friends",
     "friendship",
     "frog",
     "from",
@@ -10073,7 +10074,7 @@
     {
       "text": "Good",
       "spoken": "Good",
-      "path": "reading/{voice}/read-770e607624d68926.mp3",
+      "path": "foundation/{voice}/f-770e607624d68926.mp3",
       "generated": false
     },
     {
@@ -16133,8 +16134,8 @@
     {
       "text": "bags",
       "spoken": "bags",
-      "path": "slow/{voice}/s-8ecbaf607e96e7fb.mp3",
-      "generated": true
+      "path": "reading/{voice}/read-8ecbaf607e96e7fb.mp3",
+      "generated": false
     },
     {
       "text": "bake",
@@ -21293,7 +21294,7 @@
     {
       "text": "cups",
       "spoken": "cups",
-      "path": "foundation/{voice}/f-43b69e82bee632b3.mp3",
+      "path": "reading/{voice}/read-43b69e82bee632b3.mp3",
       "generated": false
     },
     {
@@ -25091,8 +25092,8 @@
     {
       "text": "friends",
       "spoken": "friends",
-      "path": "slow/{voice}/s-2e4b9cc2428beb7b.mp3",
-      "generated": true
+      "path": "reading/{voice}/read-2e4b9cc2428beb7b.mp3",
+      "generated": false
     },
     {
       "text": "friendship",
@@ -41700,6 +41701,2150 @@
       "spoken": "I used a pen.",
       "targetIndex": 1,
       "path": "slow/{voice}/s-50e4c80c360bedac.mp3",
+      "generated": true
+    },
+    {
+      "text": "refuse@noun",
+      "spoken": "Refuse collection.",
+      "targetIndex": 0,
+      "path": "slow/{voice}/s-70b7509f74810fe6.mp3",
+      "generated": true
+    },
+    {
+      "text": "refuse@verb",
+      "spoken": "Refuse this offer.",
+      "targetIndex": 0,
+      "path": "slow/{voice}/s-f57b5b9af3903a77.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-0baaf6f25d1c5da8",
+      "spoken": "American",
+      "path": "slow/{voice}/s-f-0baaf6f25d1c5da8.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-73006da0a5a1e849",
+      "spoken": "Do you want tea or milk?",
+      "path": "slow/{voice}/s-f-73006da0a5a1e849.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-30efdfb52ff67f80",
+      "spoken": "He",
+      "path": "slow/{voice}/s-f-30efdfb52ff67f80.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-356357f217eba1cf",
+      "spoken": "He speaks slowly.",
+      "path": "slow/{voice}/s-f-356357f217eba1cf.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-2adc4fa08ec950b4",
+      "spoken": "He speaks.",
+      "path": "slow/{voice}/s-f-2adc4fa08ec950b4.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-28da92fe84684731",
+      "spoken": "I am tired",
+      "path": "slow/{voice}/s-f-28da92fe84684731.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-29584259efd8cf61",
+      "spoken": "I am tired, but I can work.",
+      "path": "slow/{voice}/s-f-29584259efd8cf61.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-927e03c7b6d3a43e",
+      "spoken": "I am tired, so I stop.",
+      "path": "slow/{voice}/s-f-927e03c7b6d3a43e.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-f405fc9a481225d9",
+      "spoken": "I am tired.",
+      "path": "slow/{voice}/s-f-f405fc9a481225d9.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-5a0ea773166c6bc6",
+      "spoken": "I can work",
+      "path": "slow/{voice}/s-f-5a0ea773166c6bc6.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-46c3f2dec7ce907f",
+      "spoken": "I can work.",
+      "path": "slow/{voice}/s-f-46c3f2dec7ce907f.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-95cc28c599291613",
+      "spoken": "I often reed.",
+      "path": "slow/{voice}/s-f-95cc28c599291613.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-57f9cfb9fe7b89b6",
+      "spoken": "I reed a book at home every evening.",
+      "path": "slow/{voice}/s-f-57f9cfb9fe7b89b6.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-aa525736f453bcec",
+      "spoken": "I reed a book at home.",
+      "path": "slow/{voice}/s-f-aa525736f453bcec.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-0c597dd7b7fe3aa8",
+      "spoken": "I reed a book.",
+      "path": "slow/{voice}/s-f-0c597dd7b7fe3aa8.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-510028d7febca562",
+      "spoken": "I reed and I write.",
+      "path": "slow/{voice}/s-f-510028d7febca562.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-5338cf0d60e93b1f",
+      "spoken": "I reed.",
+      "path": "slow/{voice}/s-f-5338cf0d60e93b1f.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-a8cd4c202534d70f",
+      "spoken": "I sometimes reed.",
+      "path": "slow/{voice}/s-f-a8cd4c202534d70f.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-9a1b4de9f73357c3",
+      "spoken": "I stop",
+      "path": "slow/{voice}/s-f-9a1b4de9f73357c3.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-46e5d42565bb70e5",
+      "spoken": "I stop because I am tired.",
+      "path": "slow/{voice}/s-f-46e5d42565bb70e5.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-7fde71fefcc2c0ee",
+      "spoken": "I want tea and milk.",
+      "path": "slow/{voice}/s-f-7fde71fefcc2c0ee.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-d51c916629e8b747",
+      "spoken": "I want tea.",
+      "path": "slow/{voice}/s-f-d51c916629e8b747.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-e573966447d1b021",
+      "spoken": "She is a teacher.",
+      "path": "slow/{voice}/s-f-e573966447d1b021.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-8d7a18db3debb2f5",
+      "spoken": "She is always happy.",
+      "path": "slow/{voice}/s-f-8d7a18db3debb2f5.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-3ece2f869093f12d",
+      "spoken": "Sometimes I reed.",
+      "path": "slow/{voice}/s-f-3ece2f869093f12d.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-380a89509ccf06f6",
+      "spoken": "The bus moves slowly.",
+      "path": "slow/{voice}/s-f-380a89509ccf06f6.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-95d80236cca3c7f3",
+      "spoken": "The girl in the room",
+      "path": "slow/{voice}/s-f-95d80236cca3c7f3.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-492bc489e9d4c317",
+      "spoken": "The girl in the room likes this book.",
+      "path": "slow/{voice}/s-f-492bc489e9d4c317.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-cafa9a1d7db1c6c5",
+      "spoken": "The girl likes this book.",
+      "path": "slow/{voice}/s-f-cafa9a1d7db1c6c5.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-a6fb523d32b848ca",
+      "spoken": "a slow bus",
+      "path": "slow/{voice}/s-f-a6fb523d32b848ca.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-82b99e63edf62f3f",
+      "spoken": "a teacher",
+      "path": "slow/{voice}/s-f-82b99e63edf62f3f.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-9cdc6c47aa193ae7",
+      "spoken": "always",
+      "path": "slow/{voice}/s-f-9cdc6c47aa193ae7.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-53d6cb30e7fc6f12",
+      "spoken": "at home",
+      "path": "slow/{voice}/s-f-53d6cb30e7fc6f12.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-a511aeeeb8a11993",
+      "spoken": "because",
+      "path": "slow/{voice}/s-f-a511aeeeb8a11993.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-cdc29937887188ad",
+      "spoken": "but",
+      "path": "slow/{voice}/s-f-cdc29937887188ad.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-d7cea7305a333d5c",
+      "spoken": "chip",
+      "path": "slow/{voice}/s-f-d7cea7305a333d5c.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-8c0894407cd5bd1d",
+      "spoken": "every evening",
+      "path": "slow/{voice}/s-f-8c0894407cd5bd1d.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-c1f026582fe6e8cb",
+      "spoken": "food",
+      "path": "slow/{voice}/s-f-c1f026582fe6e8cb.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-cbc8a597a67c4654",
+      "spoken": "kit",
+      "path": "slow/{voice}/s-f-cbc8a597a67c4654.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-8e8c7d42b456c9e4",
+      "spoken": "kite",
+      "path": "slow/{voice}/s-f-8e8c7d42b456c9e4.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-60be9861750facbf",
+      "spoken": "map",
+      "path": "slow/{voice}/s-f-60be9861750facbf.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-6497e4b3d7bed169",
+      "spoken": "never",
+      "path": "slow/{voice}/s-f-6497e4b3d7bed169.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-93c68148f4acfe0d",
+      "spoken": "often",
+      "path": "slow/{voice}/s-f-93c68148f4acfe0d.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-64f46a7526a186d2",
+      "spoken": "pin",
+      "path": "slow/{voice}/s-f-64f46a7526a186d2.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-d292237213123931",
+      "spoken": "pine",
+      "path": "slow/{voice}/s-f-d292237213123931.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-4a69f19c8c264850",
+      "spoken": "sea",
+      "path": "slow/{voice}/s-f-4a69f19c8c264850.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-aa9e9b5c907d50fe",
+      "spoken": "see",
+      "path": "slow/{voice}/s-f-aa9e9b5c907d50fe.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-793080bb3a187fca",
+      "spoken": "slowly",
+      "path": "slow/{voice}/s-f-793080bb3a187fca.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-a1d9890884c1b4b9",
+      "spoken": "so",
+      "path": "slow/{voice}/s-f-a1d9890884c1b4b9.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-28e5c066055aeb3d",
+      "spoken": "sometimes",
+      "path": "slow/{voice}/s-f-28e5c066055aeb3d.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-d036316da91141d5",
+      "spoken": "speaks",
+      "path": "slow/{voice}/s-f-d036316da91141d5.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-404be89a5a4a087d",
+      "spoken": "tea and milk",
+      "path": "slow/{voice}/s-f-404be89a5a4a087d.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-bd24d92e21a91fa9",
+      "spoken": "tea or milk",
+      "path": "slow/{voice}/s-f-bd24d92e21a91fa9.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-e8f223a3abf78198",
+      "spoken": "this book",
+      "path": "slow/{voice}/s-f-e8f223a3abf78198.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-ceb1e2514a1f1b45",
+      "spoken": "usually",
+      "path": "slow/{voice}/s-f-ceb1e2514a1f1b45.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@ft-a8baa1655315469f",
+      "spoken": "We reed books.",
+      "path": "slow/{voice}/s-ft-a8baa1655315469f.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@ft-3316348dbadfb7b1",
+      "spoken": "reed",
+      "path": "slow/{voice}/s-ft-3316348dbadfb7b1.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-559aead08264d579",
+      "spoken": "A",
+      "path": "slow/{voice}/s-f-559aead08264d579.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-36521b4fc24dbcaf",
+      "spoken": "Are",
+      "path": "slow/{voice}/s-f-36521b4fc24dbcaf.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-ec5d2ded6e26b418",
+      "spoken": "Are you ready?",
+      "path": "slow/{voice}/s-f-ec5d2ded6e26b418.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-4f96af8f1a030916",
+      "spoken": "Are you tired?",
+      "path": "slow/{voice}/s-f-4f96af8f1a030916.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-df7e70e5021544f4",
+      "spoken": "B",
+      "path": "slow/{voice}/s-f-df7e70e5021544f4.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-030d756286e59f22",
+      "spoken": "Ben",
+      "path": "slow/{voice}/s-f-030d756286e59f22.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-aa61b3aacbd32bbe",
+      "spoken": "Ben's",
+      "path": "slow/{voice}/s-f-aa61b3aacbd32bbe.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-158434e6362a0063",
+      "spoken": "Ben's book",
+      "path": "slow/{voice}/s-f-158434e6362a0063.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-65a25e8dc0c1ba8f",
+      "spoken": "Ben’s",
+      "path": "slow/{voice}/s-f-65a25e8dc0c1ba8f.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-909cb81127c5e194",
+      "spoken": "Book",
+      "path": "slow/{voice}/s-f-909cb81127c5e194.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-18326f03fa2446dc",
+      "spoken": "Book a room.",
+      "path": "slow/{voice}/s-f-18326f03fa2446dc.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-6b23c0d5f35d1b11",
+      "spoken": "C",
+      "path": "slow/{voice}/s-f-6b23c0d5f35d1b11.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-2dba9a8763b19b87",
+      "spoken": "Can",
+      "path": "slow/{voice}/s-f-2dba9a8763b19b87.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-06f58d32cca1370a",
+      "spoken": "Can you swim?",
+      "path": "slow/{voice}/s-f-06f58d32cca1370a.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-3f39d5c348e5b79d",
+      "spoken": "D",
+      "path": "slow/{voice}/s-f-3f39d5c348e5b79d.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-30094e0bec0046da",
+      "spoken": "Do",
+      "path": "slow/{voice}/s-f-30094e0bec0046da.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-d7e5c2a5909ca24f",
+      "spoken": "Do you like tea?",
+      "path": "slow/{voice}/s-f-d7e5c2a5909ca24f.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-c3c25857485f0135",
+      "spoken": "Does",
+      "path": "slow/{voice}/s-f-c3c25857485f0135.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-47af1309adb76a43",
+      "spoken": "Does she like tea?",
+      "path": "slow/{voice}/s-f-47af1309adb76a43.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-a7e1ae2bb2f7b663",
+      "spoken": "Don’t",
+      "path": "slow/{voice}/s-f-a7e1ae2bb2f7b663.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-a9f51566bd6705f7",
+      "spoken": "E",
+      "path": "slow/{voice}/s-f-a9f51566bd6705f7.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-f67ab10ad4e4c531",
+      "spoken": "F",
+      "path": "slow/{voice}/s-f-f67ab10ad4e4c531.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-333e0a1e27815d0c",
+      "spoken": "G",
+      "path": "slow/{voice}/s-f-333e0a1e27815d0c.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-44bd7ae60f478fae",
+      "spoken": "H",
+      "path": "slow/{voice}/s-f-44bd7ae60f478fae.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-b79cac926e0b2e34",
+      "spoken": "Help",
+      "path": "slow/{voice}/s-f-b79cac926e0b2e34.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-f6220ee7d794d272",
+      "spoken": "Help me.",
+      "path": "slow/{voice}/s-f-f6220ee7d794d272.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-a83dd0ccbffe39d0",
+      "spoken": "I",
+      "path": "slow/{voice}/s-f-a83dd0ccbffe39d0.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-aeef87b650c1108d",
+      "spoken": "I am afraid of dogs.",
+      "path": "slow/{voice}/s-f-aeef87b650c1108d.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-d7b132100599b547",
+      "spoken": "I am going to read.",
+      "path": "slow/{voice}/s-f-d7b132100599b547.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-33f315689935820d",
+      "spoken": "I am good at reading.",
+      "path": "slow/{voice}/s-f-33f315689935820d.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-e4383618e44faf25",
+      "spoken": "I am happy.",
+      "path": "slow/{voice}/s-f-e4383618e44faf25.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-67bb33c47e114868",
+      "spoken": "I am interested.",
+      "path": "slow/{voice}/s-f-67bb33c47e114868.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-cbd81909b8f1c075",
+      "spoken": "I am not tired.",
+      "path": "slow/{voice}/s-f-cbd81909b8f1c075.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-c2c0d90ebcfe3bf6",
+      "spoken": "I am reading.",
+      "path": "slow/{voice}/s-f-c2c0d90ebcfe3bf6.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-4dfec7b6fe858196",
+      "spoken": "I can swim.",
+      "path": "slow/{voice}/s-f-4dfec7b6fe858196.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-c89d9d9d883450cc",
+      "spoken": "I do not like tea.",
+      "path": "slow/{voice}/s-f-c89d9d9d883450cc.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-be6a70333a2ec936",
+      "spoken": "I don't like tea.",
+      "path": "slow/{voice}/s-f-be6a70333a2ec936.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-4e3c12d2882c7209",
+      "spoken": "I drink water.",
+      "path": "slow/{voice}/s-f-4e3c12d2882c7209.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-848572e001e72d3f",
+      "spoken": "I enjoy reading.",
+      "path": "slow/{voice}/s-f-848572e001e72d3f.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-c8aa84ea4738d032",
+      "spoken": "I have a book.",
+      "path": "slow/{voice}/s-f-c8aa84ea4738d032.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-dcec1b9b3638698a",
+      "spoken": "I have a cat.",
+      "path": "slow/{voice}/s-f-dcec1b9b3638698a.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-a1826a1b123e58e8",
+      "spoken": "I like tea.",
+      "path": "slow/{voice}/s-f-a1826a1b123e58e8.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-4702e5a54e694a44",
+      "spoken": "I run.",
+      "path": "slow/{voice}/s-f-4702e5a54e694a44.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-6ffd3988739814fb",
+      "spoken": "I see the dog.",
+      "path": "slow/{voice}/s-f-6ffd3988739814fb.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-46f0b977a612a87d",
+      "spoken": "I sit down to read.",
+      "path": "slow/{voice}/s-f-46f0b977a612a87d.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-b7c089739b5e33d7",
+      "spoken": "I sit.",
+      "path": "slow/{voice}/s-f-b7c089739b5e33d7.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-42e98b9b684637d1",
+      "spoken": "I stop to rest.",
+      "path": "slow/{voice}/s-f-42e98b9b684637d1.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-7063ddec9e27dfa6",
+      "spoken": "I talked yesterday.",
+      "path": "slow/{voice}/s-f-7063ddec9e27dfa6.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-c866e8387b312aa5",
+      "spoken": "I walked yesterday.",
+      "path": "slow/{voice}/s-f-c866e8387b312aa5.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-64184c661e864e86",
+      "spoken": "I want to read.",
+      "path": "slow/{voice}/s-f-64184c661e864e86.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-21987c9c233d14bc",
+      "spoken": "I was reading.",
+      "path": "slow/{voice}/s-f-21987c9c233d14bc.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-c9d7ed34ba7890f6",
+      "spoken": "I'm",
+      "path": "slow/{voice}/s-f-c9d7ed34ba7890f6.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-3b7840735e25f538",
+      "spoken": "I'm happy.",
+      "path": "slow/{voice}/s-f-3b7840735e25f538.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-f5985de1fd3a3b13",
+      "spoken": "Is",
+      "path": "slow/{voice}/s-f-f5985de1fd3a3b13.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-af631dac13465242",
+      "spoken": "Is she happy?",
+      "path": "slow/{voice}/s-f-af631dac13465242.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-1ea8a83bd69cc26b",
+      "spoken": "I’m",
+      "path": "slow/{voice}/s-f-1ea8a83bd69cc26b.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-6da43b944e494e88",
+      "spoken": "J",
+      "path": "slow/{voice}/s-f-6da43b944e494e88.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-86be9a55762d316a",
+      "spoken": "K",
+      "path": "slow/{voice}/s-f-86be9a55762d316a.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-72dfcfb0c470ac25",
+      "spoken": "L",
+      "path": "slow/{voice}/s-f-72dfcfb0c470ac25.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-08f271887ce94707",
+      "spoken": "M",
+      "path": "slow/{voice}/s-f-08f271887ce94707.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-8c78fe5b9936488c",
+      "spoken": "May",
+      "path": "slow/{voice}/s-f-8c78fe5b9936488c.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-6a00dfc1dc867e84",
+      "spoken": "Monday",
+      "path": "slow/{voice}/s-f-6a00dfc1dc867e84.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-8ce86a6ae65d3692",
+      "spoken": "N",
+      "path": "slow/{voice}/s-f-8ce86a6ae65d3692.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-c4694f2e93d5c4e7",
+      "spoken": "O",
+      "path": "slow/{voice}/s-f-c4694f2e93d5c4e7.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-ed077f3d8125d60d",
+      "spoken": "Open",
+      "path": "slow/{voice}/s-f-ed077f3d8125d60d.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-a1e83c80f5c3cd70",
+      "spoken": "Open the door.",
+      "path": "slow/{voice}/s-f-a1e83c80f5c3cd70.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-5c62e091b8c0565f",
+      "spoken": "P",
+      "path": "slow/{voice}/s-f-5c62e091b8c0565f.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-831a9d52a9c37435",
+      "spoken": "Pick",
+      "path": "slow/{voice}/s-f-831a9d52a9c37435.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-6919b1f1326d0f86",
+      "spoken": "Pick it up.",
+      "path": "slow/{voice}/s-f-6919b1f1326d0f86.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-907d4883cd4a82ba",
+      "spoken": "Please",
+      "path": "slow/{voice}/s-f-907d4883cd4a82ba.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-d07c1f7e1e59b23c",
+      "spoken": "Please sit down.",
+      "path": "slow/{voice}/s-f-d07c1f7e1e59b23c.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-4ae81572f06e1b88",
+      "spoken": "Q",
+      "path": "slow/{voice}/s-f-4ae81572f06e1b88.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-8c2574892063f995",
+      "spoken": "R",
+      "path": "slow/{voice}/s-f-8c2574892063f995.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-8de0b3c47f112c59",
+      "spoken": "S",
+      "path": "slow/{voice}/s-f-8de0b3c47f112c59.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-d602e91d93c835ee",
+      "spoken": "She",
+      "path": "slow/{voice}/s-f-d602e91d93c835ee.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-0653055c9fa1b9c4",
+      "spoken": "She does not like tea.",
+      "path": "slow/{voice}/s-f-0653055c9fa1b9c4.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-ff5baad1fc2ac4ff",
+      "spoken": "She is reading.",
+      "path": "slow/{voice}/s-f-ff5baad1fc2ac4ff.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-03f93ad329968052",
+      "spoken": "She likes tea.",
+      "path": "slow/{voice}/s-f-03f93ad329968052.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-e632b7095b0bf32c",
+      "spoken": "T",
+      "path": "slow/{voice}/s-f-e632b7095b0bf32c.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-b344d80e24a36799",
+      "spoken": "The",
+      "path": "slow/{voice}/s-f-b344d80e24a36799.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-667eaff52965294a",
+      "spoken": "The book is interesting.",
+      "path": "slow/{voice}/s-f-667eaff52965294a.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-b175398396702efc",
+      "spoken": "The book is red.",
+      "path": "slow/{voice}/s-f-b175398396702efc.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-2d635bb7f5467a38",
+      "spoken": "The dog sees me.",
+      "path": "slow/{voice}/s-f-2d635bb7f5467a38.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-e948d191e4036c7b",
+      "spoken": "There",
+      "path": "slow/{voice}/s-f-e948d191e4036c7b.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-77750f2dc852a977",
+      "spoken": "There is a cat.",
+      "path": "slow/{voice}/s-f-77750f2dc852a977.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-a32efbd9d674211e",
+      "spoken": "They",
+      "path": "slow/{voice}/s-f-a32efbd9d674211e.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-ac6ec6bf0b843eff",
+      "spoken": "They run.",
+      "path": "slow/{voice}/s-f-ac6ec6bf0b843eff.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-86e1de74820a9b25",
+      "spoken": "This",
+      "path": "slow/{voice}/s-f-86e1de74820a9b25.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-85831dd977ba1978",
+      "spoken": "This book is better.",
+      "path": "slow/{voice}/s-f-85831dd977ba1978.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-9db506ab242b5588",
+      "spoken": "This cup is bigger.",
+      "path": "slow/{voice}/s-f-9db506ab242b5588.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-b823d5f9d1ce690c",
+      "spoken": "Turn",
+      "path": "slow/{voice}/s-f-b823d5f9d1ce690c.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-37484360db9b3775",
+      "spoken": "Turn it on.",
+      "path": "slow/{voice}/s-f-37484360db9b3775.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-a25513c7e0f6eaa8",
+      "spoken": "U",
+      "path": "slow/{voice}/s-f-a25513c7e0f6eaa8.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-de5a6f78116eca62",
+      "spoken": "V",
+      "path": "slow/{voice}/s-f-de5a6f78116eca62.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-fcb5f40df9be6bae",
+      "spoken": "W",
+      "path": "slow/{voice}/s-f-fcb5f40df9be6bae.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-f3fe997b8d1ce818",
+      "spoken": "We",
+      "path": "slow/{voice}/s-f-f3fe997b8d1ce818.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-a8baa1655315469f",
+      "spoken": "We read books.",
+      "path": "slow/{voice}/s-f-a8baa1655315469f.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-14ac3ff491d493b7",
+      "spoken": "We run.",
+      "path": "slow/{voice}/s-f-14ac3ff491d493b7.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-1daaa38f33cd860e",
+      "spoken": "Where",
+      "path": "slow/{voice}/s-f-1daaa38f33cd860e.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-8d8b5724d808fa23",
+      "spoken": "Where is the cup?",
+      "path": "slow/{voice}/s-f-8d8b5724d808fa23.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-c17b94b8c9394d40",
+      "spoken": "Who",
+      "path": "slow/{voice}/s-f-c17b94b8c9394d40.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-7607f4a19b596167",
+      "spoken": "Who is he?",
+      "path": "slow/{voice}/s-f-7607f4a19b596167.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-4b68ab3847feda7d",
+      "spoken": "X",
+      "path": "slow/{voice}/s-f-4b68ab3847feda7d.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-18f5384d58bcb1bb",
+      "spoken": "Y",
+      "path": "slow/{voice}/s-f-18f5384d58bcb1bb.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-85a39ab345d672ff",
+      "spoken": "Yes",
+      "path": "slow/{voice}/s-f-85a39ab345d672ff.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-fdd562c4965f0ab2",
+      "spoken": "Yes, I am ready.",
+      "path": "slow/{voice}/s-f-fdd562c4965f0ab2.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-08b041935798fbf6",
+      "spoken": "You",
+      "path": "slow/{voice}/s-f-08b041935798fbf6.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-ea58e24e4e447c2a",
+      "spoken": "You are going to read.",
+      "path": "slow/{voice}/s-f-ea58e24e4e447c2a.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-c5cddf51ee4cf062",
+      "spoken": "You are happy.",
+      "path": "slow/{voice}/s-f-c5cddf51ee4cf062.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-4c2ab624e28909ac",
+      "spoken": "You are not late.",
+      "path": "slow/{voice}/s-f-4c2ab624e28909ac.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-910ab714907fe502",
+      "spoken": "You were reading.",
+      "path": "slow/{voice}/s-f-910ab714907fe502.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-bbeebd879e1dff69",
+      "spoken": "Z",
+      "path": "slow/{voice}/s-f-bbeebd879e1dff69.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-ca978112ca1bbdca",
+      "spoken": "a",
+      "path": "slow/{voice}/s-f-ca978112ca1bbdca.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-fd32ab743eb67e59",
+      "spoken": "a big cup",
+      "path": "slow/{voice}/s-f-fd32ab743eb67e59.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-ae35964219d1b24b",
+      "spoken": "a book",
+      "path": "slow/{voice}/s-f-ae35964219d1b24b.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-51e4674156077982",
+      "spoken": "a cat",
+      "path": "slow/{voice}/s-f-51e4674156077982.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-a58220be955b5cff",
+      "spoken": "a cup",
+      "path": "slow/{voice}/s-f-a58220be955b5cff.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-24f91c98c280dec7",
+      "spoken": "a cup of tea",
+      "path": "slow/{voice}/s-f-24f91c98c280dec7.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-b4db6d0776ccaf4b",
+      "spoken": "a cup of water",
+      "path": "slow/{voice}/s-f-b4db6d0776ccaf4b.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-7dbdf68ac0bb3482",
+      "spoken": "a dog",
+      "path": "slow/{voice}/s-f-7dbdf68ac0bb3482.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-535236874b1ea37a",
+      "spoken": "a few books",
+      "path": "slow/{voice}/s-f-535236874b1ea37a.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-5e57685d4f8afc78",
+      "spoken": "a little water",
+      "path": "slow/{voice}/s-f-5e57685d4f8afc78.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-d33b9a69762d2854",
+      "spoken": "a red cup",
+      "path": "slow/{voice}/s-f-d33b9a69762d2854.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-a4262e1c9bcbc172",
+      "spoken": "about",
+      "path": "slow/{voice}/s-f-a4262e1c9bcbc172.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-a1dcbd2066be82d7",
+      "spoken": "adj",
+      "path": "slow/{voice}/s-f-a1dcbd2066be82d7.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-180366dd3b2cc124",
+      "spoken": "afraid",
+      "path": "slow/{voice}/s-f-180366dd3b2cc124.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-ab6db599234d2636",
+      "spoken": "am",
+      "path": "slow/{voice}/s-f-ab6db599234d2636.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-ea325d761f98c6b7",
+      "spoken": "an",
+      "path": "slow/{voice}/s-f-ea325d761f98c6b7.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-f9a398fe15d0c440",
+      "spoken": "an egg",
+      "path": "slow/{voice}/s-f-f9a398fe15d0c440.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-ba78973ddcf98d4e",
+      "spoken": "are",
+      "path": "slow/{voice}/s-f-ba78973ddcf98d4e.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-b1d6b91b67c2afa5",
+      "spoken": "at",
+      "path": "slow/{voice}/s-f-b1d6b91b67c2afa5.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-64ee3287355f42ec",
+      "spoken": "at two",
+      "path": "slow/{voice}/s-f-64ee3287355f42ec.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-3e23e8160039594a",
+      "spoken": "b",
+      "path": "slow/{voice}/s-f-3e23e8160039594a.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-2f05d4b689d270ca",
+      "spoken": "bad",
+      "path": "slow/{voice}/s-f-2f05d4b689d270ca.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-ca5bcec12f716f44",
+      "spoken": "bat",
+      "path": "slow/{voice}/s-f-ca5bcec12f716f44.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-46599c5bb5c33101",
+      "spoken": "be",
+      "path": "slow/{voice}/s-f-46599c5bb5c33101.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-c5052532c2206140",
+      "spoken": "bed",
+      "path": "slow/{voice}/s-f-c5052532c2206140.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-d7d5dcc369426e2e",
+      "spoken": "better",
+      "path": "slow/{voice}/s-f-d7d5dcc369426e2e.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-2a21fe6d592a19b7",
+      "spoken": "big",
+      "path": "slow/{voice}/s-f-2a21fe6d592a19b7.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-9e5db53b5cf0dace",
+      "spoken": "bigger",
+      "path": "slow/{voice}/s-f-9e5db53b5cf0dace.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-7a5179eecc0fe187",
+      "spoken": "bird",
+      "path": "slow/{voice}/s-f-7a5179eecc0fe187.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-d0013c2e0a387e4c",
+      "spoken": "bit",
+      "path": "slow/{voice}/s-f-d0013c2e0a387e4c.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-92719fe0cf8cd515",
+      "spoken": "book",
+      "path": "slow/{voice}/s-f-92719fe0cf8cd515.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-6e317bcd6839e887",
+      "spoken": "books",
+      "path": "slow/{voice}/s-f-6e317bcd6839e887.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-3c917533deebcc83",
+      "spoken": "bout",
+      "path": "slow/{voice}/s-f-3c917533deebcc83.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-26f8567f25691822",
+      "spoken": "box",
+      "path": "slow/{voice}/s-f-26f8567f25691822.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-cc6a778404ea557d",
+      "spoken": "boy",
+      "path": "slow/{voice}/s-f-cc6a778404ea557d.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-4da014218dcf86f9",
+      "spoken": "buses",
+      "path": "slow/{voice}/s-f-4da014218dcf86f9.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-2e7d2c03a9507ae2",
+      "spoken": "c",
+      "path": "slow/{voice}/s-f-2e7d2c03a9507ae2.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-32cdb61919620005",
+      "spoken": "cake",
+      "path": "slow/{voice}/s-f-32cdb61919620005.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-8c90cbf5d27d61f5",
+      "spoken": "called",
+      "path": "slow/{voice}/s-f-8c90cbf5d27d61f5.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-9f584196e7fe6de8",
+      "spoken": "can",
+      "path": "slow/{voice}/s-f-9f584196e7fe6de8.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-9a43b6dac4660897",
+      "spoken": "cannot",
+      "path": "slow/{voice}/s-f-9a43b6dac4660897.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-77af778b51abd4a3",
+      "spoken": "cat",
+      "path": "slow/{voice}/s-f-77af778b51abd4a3.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-d936608baaacc6b7",
+      "spoken": "cats",
+      "path": "slow/{voice}/s-f-d936608baaacc6b7.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-3d7eb3d3dab17ee5",
+      "spoken": "chair",
+      "path": "slow/{voice}/s-f-3d7eb3d3dab17ee5.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-8218f3d6780abf45",
+      "spoken": "coat",
+      "path": "slow/{voice}/s-f-8218f3d6780abf45.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-c6171781d65f3ccc",
+      "spoken": "cup",
+      "path": "slow/{voice}/s-f-c6171781d65f3ccc.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-43b69e82bee632b3",
+      "spoken": "cups",
+      "path": "slow/{voice}/s-f-43b69e82bee632b3.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-18ac3e7343f01689",
+      "spoken": "d",
+      "path": "slow/{voice}/s-f-18ac3e7343f01689.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-944c27e5b97ab779",
+      "spoken": "day",
+      "path": "slow/{voice}/s-f-944c27e5b97ab779.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-8a8a1a9fe8565d64",
+      "spoken": "den",
+      "path": "slow/{voice}/s-f-8a8a1a9fe8565d64.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-ac0b52a2ae6ef999",
+      "spoken": "do",
+      "path": "slow/{voice}/s-f-ac0b52a2ae6ef999.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-961eb43699731759",
+      "spoken": "does",
+      "path": "slow/{voice}/s-f-961eb43699731759.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-3e0a9992c56d621c",
+      "spoken": "doesn’t",
+      "path": "slow/{voice}/s-f-3e0a9992c56d621c.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-cd6357efdd966de8",
+      "spoken": "dog",
+      "path": "slow/{voice}/s-f-cd6357efdd966de8.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-23bcd2d83d4c0f27",
+      "spoken": "dogs",
+      "path": "slow/{voice}/s-f-23bcd2d83d4c0f27.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-df7682099c96e3f6",
+      "spoken": "don't",
+      "path": "slow/{voice}/s-f-df7682099c96e3f6.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-af904c75047a7246",
+      "spoken": "don’t",
+      "path": "slow/{voice}/s-f-af904c75047a7246.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-2534e2de1dec24fe",
+      "spoken": "door",
+      "path": "slow/{voice}/s-f-2534e2de1dec24fe.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-908aec4512d80ff4",
+      "spoken": "down",
+      "path": "slow/{voice}/s-f-908aec4512d80ff4.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-218ae6b44966c8a9",
+      "spoken": "drink",
+      "path": "slow/{voice}/s-f-218ae6b44966c8a9.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-9c1623f0d38e28e9",
+      "spoken": "ed",
+      "path": "slow/{voice}/s-f-9c1623f0d38e28e9.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-34707c3f40dfa20c",
+      "spoken": "egg",
+      "path": "slow/{voice}/s-f-34707c3f40dfa20c.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-75fba329cb6ee890",
+      "spoken": "enjoy",
+      "path": "slow/{voice}/s-f-75fba329cb6ee890.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-e29a7f31cac05abc",
+      "spoken": "fan",
+      "path": "slow/{voice}/s-f-e29a7f31cac05abc.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-fa95e5080882f52b",
+      "spoken": "few",
+      "path": "slow/{voice}/s-f-fa95e5080882f52b.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-18679f10e5067880",
+      "spoken": "fool",
+      "path": "slow/{voice}/s-f-18679f10e5067880.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-a18b869b2e81c0c5",
+      "spoken": "full",
+      "path": "slow/{voice}/s-f-a18b869b2e81c0c5.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-cd0aa9856147b6c5",
+      "spoken": "g",
+      "path": "slow/{voice}/s-f-cd0aa9856147b6c5.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-4cd0e21a9a0795a1",
+      "spoken": "go",
+      "path": "slow/{voice}/s-f-4cd0e21a9a0795a1.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-5480f08f35968440",
+      "spoken": "goat",
+      "path": "slow/{voice}/s-f-5480f08f35968440.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-c44d8605913ba4ad",
+      "spoken": "going",
+      "path": "slow/{voice}/s-f-c44d8605913ba4ad.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-770e607624d68926",
+      "spoken": "good",
+      "path": "slow/{voice}/s-f-770e607624d68926.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-1838a0b253b655ec",
+      "spoken": "gooder",
+      "path": "slow/{voice}/s-f-1838a0b253b655ec.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-489f719cadf91909",
+      "spoken": "happy",
+      "path": "slow/{voice}/s-f-489f719cadf91909.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-18e1dd392168f601",
+      "spoken": "hat",
+      "path": "slow/{voice}/s-f-18e1dd392168f601.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-193c45b5281908d2",
+      "spoken": "have",
+      "path": "slow/{voice}/s-f-193c45b5281908d2.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-372f7e2fd2d01ce2",
+      "spoken": "he",
+      "path": "slow/{voice}/s-f-372f7e2fd2d01ce2.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-5643f33e5bcf75c6",
+      "spoken": "heit",
+      "path": "slow/{voice}/s-f-5643f33e5bcf75c6.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-106a5842fc5fce6f",
+      "spoken": "help",
+      "path": "slow/{voice}/s-f-106a5842fc5fce6f.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-4ea140588150773c",
+      "spoken": "home",
+      "path": "slow/{voice}/s-f-4ea140588150773c.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-7f5d1618e7d28cc7",
+      "spoken": "hot",
+      "path": "slow/{voice}/s-f-7f5d1618e7d28cc7.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-de7d1b721a1e0632",
+      "spoken": "i",
+      "path": "slow/{voice}/s-f-de7d1b721a1e0632.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-582967534d0f909d",
+      "spoken": "in",
+      "path": "slow/{voice}/s-f-582967534d0f909d.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-8f00e8594e7e6f96",
+      "spoken": "in the box",
+      "path": "slow/{voice}/s-f-8f00e8594e7e6f96.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-91af7d847f80f22c",
+      "spoken": "ing",
+      "path": "slow/{voice}/s-f-91af7d847f80f22c.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-a30d5f870e0bcb30",
+      "spoken": "interested",
+      "path": "slow/{voice}/s-f-a30d5f870e0bcb30.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-637ab2808704d851",
+      "spoken": "interesting",
+      "path": "slow/{voice}/s-f-637ab2808704d851.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-fa51fd49abf67705",
+      "spoken": "is",
+      "path": "slow/{voice}/s-f-fa51fd49abf67705.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-2ad8a7049d7c5511",
+      "spoken": "it",
+      "path": "slow/{voice}/s-f-2ad8a7049d7c5511.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-5e8c9902207afaeb",
+      "spoken": "job",
+      "path": "slow/{voice}/s-f-5e8c9902207afaeb.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-acac86c0e609ca90",
+      "spoken": "l",
+      "path": "slow/{voice}/s-f-acac86c0e609ca90.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-089001a35679a33e",
+      "spoken": "late",
+      "path": "slow/{voice}/s-f-089001a35679a33e.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-99a7026172d42714",
+      "spoken": "light",
+      "path": "slow/{voice}/s-f-99a7026172d42714.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-cab2644828bcc1f2",
+      "spoken": "like",
+      "path": "slow/{voice}/s-f-cab2644828bcc1f2.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-b0aa8a6c35b4deec",
+      "spoken": "likes",
+      "path": "slow/{voice}/s-f-b0aa8a6c35b4deec.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-180ca01b95f0dfdd",
+      "spoken": "little",
+      "path": "slow/{voice}/s-f-180ca01b95f0dfdd.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-2744ccd10c7533bd",
+      "spoken": "me",
+      "path": "slow/{voice}/s-f-2744ccd10c7533bd.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-c23b31a0179b550f",
+      "spoken": "morning",
+      "path": "slow/{voice}/s-f-c23b31a0179b550f.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-038468518ad8122e",
+      "spoken": "my",
+      "path": "slow/{voice}/s-f-038468518ad8122e.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-6702400178b1dbcd",
+      "spoken": "my book",
+      "path": "slow/{voice}/s-f-6702400178b1dbcd.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-1b16b1df538ba12d",
+      "spoken": "n",
+      "path": "slow/{voice}/s-f-1b16b1df538ba12d.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-d59ce33d91a87db7",
+      "spoken": "ng",
+      "path": "slow/{voice}/s-f-d59ce33d91a87db7.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-254bb97b57f12e16",
+      "spoken": "not",
+      "path": "slow/{voice}/s-f-254bb97b57f12e16.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-ed5eb9a37e2d8231",
+      "spoken": "now",
+      "path": "slow/{voice}/s-f-ed5eb9a37e2d8231.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-28391d3bc64ec15c",
+      "spoken": "of",
+      "path": "slow/{voice}/s-f-28391d3bc64ec15c.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-b8d31e852725afb1",
+      "spoken": "on",
+      "path": "slow/{voice}/s-f-b8d31e852725afb1.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-e919f661fa3e6ab6",
+      "spoken": "on Monday",
+      "path": "slow/{voice}/s-f-e919f661fa3e6ab6.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-78b2ec3677cd1bdf",
+      "spoken": "on the box",
+      "path": "slow/{voice}/s-f-78b2ec3677cd1bdf.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-7692c3ad3540bb80",
+      "spoken": "one",
+      "path": "slow/{voice}/s-f-7692c3ad3540bb80.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-1ec1be0ef8edc8b8",
+      "spoken": "one book",
+      "path": "slow/{voice}/s-f-1ec1be0ef8edc8b8.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-a8c23cc814179578",
+      "spoken": "oo",
+      "path": "slow/{voice}/s-f-a8c23cc814179578.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-2348f99874421257",
+      "spoken": "open",
+      "path": "slow/{voice}/s-f-2348f99874421257.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-68d753f055b1a15b",
+      "spoken": "pat",
+      "path": "slow/{voice}/s-f-68d753f055b1a15b.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-8ce33c6c86e991f7",
+      "spoken": "pick",
+      "path": "slow/{voice}/s-f-8ce33c6c86e991f7.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-8000dce068b164c2",
+      "spoken": "played",
+      "path": "slow/{voice}/s-f-8000dce068b164c2.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-56ccc4dcfc96534b",
+      "spoken": "please",
+      "path": "slow/{voice}/s-f-56ccc4dcfc96534b.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-454349e422f05297",
+      "spoken": "r",
+      "path": "slow/{voice}/s-f-454349e422f05297.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-3316348dbadfb7b1",
+      "spoken": "read",
+      "path": "slow/{voice}/s-f-3316348dbadfb7b1.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-d70afca615203838",
+      "spoken": "reading",
+      "path": "slow/{voice}/s-f-d70afca615203838.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-b24d6d33736ecd56",
+      "spoken": "ready",
+      "path": "slow/{voice}/s-f-b24d6d33736ecd56.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-b1f51a511f1da0cd",
+      "spoken": "red",
+      "path": "slow/{voice}/s-f-b1f51a511f1da0cd.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-2e09d5210db84177",
+      "spoken": "rest",
+      "path": "slow/{voice}/s-f-2e09d5210db84177.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-27042f4e6eca7d0b",
+      "spoken": "right",
+      "path": "slow/{voice}/s-f-27042f4e6eca7d0b.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-1f1c5b2fad778434",
+      "spoken": "room",
+      "path": "slow/{voice}/s-f-1f1c5b2fad778434.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-acba25512100f80b",
+      "spoken": "run",
+      "path": "slow/{voice}/s-f-acba25512100f80b.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-043a718774c572bd",
+      "spoken": "s",
+      "path": "slow/{voice}/s-f-043a718774c572bd.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-2cda85e504e155f3",
+      "spoken": "she",
+      "path": "slow/{voice}/s-f-2cda85e504e155f3.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-5c599616ac500daa",
+      "spoken": "sheep",
+      "path": "slow/{voice}/s-f-5c599616ac500daa.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-e5d5b971139eefeb",
+      "spoken": "ship",
+      "path": "slow/{voice}/s-f-e5d5b971139eefeb.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-6342d0648a746457",
+      "spoken": "sing",
+      "path": "slow/{voice}/s-f-6342d0648a746457.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-6c126e81fa8dc29d",
+      "spoken": "sip",
+      "path": "slow/{voice}/s-f-6c126e81fa8dc29d.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-584178e5e3517ddc",
+      "spoken": "sit",
+      "path": "slow/{voice}/s-f-584178e5e3517ddc.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-6c45cb72a36e63d5",
+      "spoken": "stop",
+      "path": "slow/{voice}/s-f-6c45cb72a36e63d5.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-09f5ffef28309853",
+      "spoken": "sum",
+      "path": "slow/{voice}/s-f-09f5ffef28309853.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-27756f050e14a1cb",
+      "spoken": "sun",
+      "path": "slow/{voice}/s-f-27756f050e14a1cb.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-d493f8869139bac7",
+      "spoken": "swim",
+      "path": "slow/{voice}/s-f-d493f8869139bac7.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-43e7018b6f3e7a16",
+      "spoken": "swims",
+      "path": "slow/{voice}/s-f-43e7018b6f3e7a16.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-e3b98a4da31a127d",
+      "spoken": "t",
+      "path": "slow/{voice}/s-f-e3b98a4da31a127d.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-0d4fc4a78d3706ed",
+      "spoken": "table",
+      "path": "slow/{voice}/s-f-0d4fc4a78d3706ed.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-ce7611e7481e75f0",
+      "spoken": "talk",
+      "path": "slow/{voice}/s-f-ce7611e7481e75f0.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-a5ebeda2fde7340e",
+      "spoken": "talked",
+      "path": "slow/{voice}/s-f-a5ebeda2fde7340e.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-a9f74d1ec36ebdeb",
+      "spoken": "tea",
+      "path": "slow/{voice}/s-f-a9f74d1ec36ebdeb.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-1057a9604e04b274",
+      "spoken": "teacher",
+      "path": "slow/{voice}/s-f-1057a9604e04b274.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-e4432baa90819aae",
+      "spoken": "ten",
+      "path": "slow/{voice}/s-f-e4432baa90819aae.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-6bde0b830d8bd56d",
+      "spoken": "th",
+      "path": "slow/{voice}/s-f-6bde0b830d8bd56d.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-7383711c1b05e72a",
+      "spoken": "than",
+      "path": "slow/{voice}/s-f-7383711c1b05e72a.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-8e7fc0236af43df9",
+      "spoken": "that",
+      "path": "slow/{voice}/s-f-8e7fc0236af43df9.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-b9776d7ddf459c9a",
+      "spoken": "the",
+      "path": "slow/{voice}/s-f-b9776d7ddf459c9a.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-9ef8b711dc02304e",
+      "spoken": "the cup on the table",
+      "path": "slow/{voice}/s-f-9ef8b711dc02304e.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-e244f187f696561d",
+      "spoken": "there",
+      "path": "slow/{voice}/s-f-e244f187f696561d.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-151e58a831306903",
+      "spoken": "they",
+      "path": "slow/{voice}/s-f-151e58a831306903.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-1a0dc227b5aa78f8",
+      "spoken": "thin",
+      "path": "slow/{voice}/s-f-1a0dc227b5aa78f8.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-1eb79602411ef02c",
+      "spoken": "this",
+      "path": "slow/{voice}/s-f-1eb79602411ef02c.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-c405760daf9bc32b",
+      "spoken": "tired",
+      "path": "slow/{voice}/s-f-c405760daf9bc32b.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-663ea1bfffe5038f",
+      "spoken": "to",
+      "path": "slow/{voice}/s-f-663ea1bfffe5038f.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-9b473845f684444f",
+      "spoken": "turn",
+      "path": "slow/{voice}/s-f-9b473845f684444f.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-3fc4ccfe745870e2",
+      "spoken": "two",
+      "path": "slow/{voice}/s-f-3fc4ccfe745870e2.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-a7a2b9611ef63cd9",
+      "spoken": "two books",
+      "path": "slow/{voice}/s-f-a7a2b9611ef63cd9.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-261090ae3a9076c9",
+      "spoken": "two cups of water",
+      "path": "slow/{voice}/s-f-261090ae3a9076c9.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-75a288c0d6898c5f",
+      "spoken": "up",
+      "path": "slow/{voice}/s-f-75a288c0d6898c5f.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-4c94485e0c21ae6c",
+      "spoken": "v",
+      "path": "slow/{voice}/s-f-4c94485e0c21ae6c.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-970b1897af0abab6",
+      "spoken": "van",
+      "path": "slow/{voice}/s-f-970b1897af0abab6.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-6806f86a17f0ae04",
+      "spoken": "verb",
+      "path": "slow/{voice}/s-f-6806f86a17f0ae04.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-5944ae849448011c",
+      "spoken": "vision",
+      "path": "slow/{voice}/s-f-5944ae849448011c.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-7a6c4fac6c5cd720",
+      "spoken": "walk",
+      "path": "slow/{voice}/s-f-7a6c4fac6c5cd720.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-2c158582949f34c9",
+      "spoken": "walked",
+      "path": "slow/{voice}/s-f-2c158582949f34c9.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-8656aa55d393b032",
+      "spoken": "want",
+      "path": "slow/{voice}/s-f-8656aa55d393b032.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-ca9066873bf335f3",
+      "spoken": "wanted",
+      "path": "slow/{voice}/s-f-ca9066873bf335f3.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-b63b99f6383ba713",
+      "spoken": "was",
+      "path": "slow/{voice}/s-f-b63b99f6383ba713.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-0f4168490e38b844",
+      "spoken": "water",
+      "path": "slow/{voice}/s-f-0f4168490e38b844.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-1801b094021884d7",
+      "spoken": "waters",
+      "path": "slow/{voice}/s-f-1801b094021884d7.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-dc7c811b9561739d",
+      "spoken": "we",
+      "path": "slow/{voice}/s-f-dc7c811b9561739d.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-bd7e83102fa3e6aa",
+      "spoken": "went",
+      "path": "slow/{voice}/s-f-bd7e83102fa3e6aa.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-910adfb424646393",
+      "spoken": "were",
+      "path": "slow/{voice}/s-f-910adfb424646393.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-534c51e17770c9b7",
+      "spoken": "wet",
+      "path": "slow/{voice}/s-f-534c51e17770c9b7.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-749ab2c0d06c42ae",
+      "spoken": "what",
+      "path": "slow/{voice}/s-f-749ab2c0d06c42ae.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-15eaa75240aed625",
+      "spoken": "when",
+      "path": "slow/{voice}/s-f-15eaa75240aed625.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-b48111c10c65fc11",
+      "spoken": "where",
+      "path": "slow/{voice}/s-f-b48111c10c65fc11.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-6ed0337140bd32b4",
+      "spoken": "who",
+      "path": "slow/{voice}/s-f-6ed0337140bd32b4.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-bc16f5825a9dafc8",
+      "spoken": "will",
+      "path": "slow/{voice}/s-f-bc16f5825a9dafc8.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-8a798890fe938171",
+      "spoken": "yes",
+      "path": "slow/{voice}/s-f-8a798890fe938171.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-9523d9fbe79bcf3e",
+      "spoken": "yesterday",
+      "path": "slow/{voice}/s-f-9523d9fbe79bcf3e.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-bb0347a468d97e98",
+      "spoken": "you",
+      "path": "slow/{voice}/s-f-bb0347a468d97e98.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-4d040d3f6466018c",
+      "spoken": "your",
+      "path": "slow/{voice}/s-f-4d040d3f6466018c.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-1014d7f72aefaf5c",
+      "spoken": "youthey",
+      "path": "slow/{voice}/s-f-1014d7f72aefaf5c.mp3",
+      "generated": true
+    },
+    {
+      "text": "tutorial@f-4a70fe9aa6436e02",
+      "spoken": "zip",
+      "path": "slow/{voice}/s-f-4a70fe9aa6436e02.mp3",
       "generated": true
     }
   ]

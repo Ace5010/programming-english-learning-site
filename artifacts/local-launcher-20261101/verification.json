@@ -1,0 +1,8 @@
+{
+  "ownerConfirmed": true,
+  "siteReady": true,
+  "existingPid": 9144,
+  "regression": "14 assertions passed: cold/concurrent/repeat, npm path reuse, foreign-process protection",
+  "dataOperations": "None",
+  "serverRestarted": false
+}

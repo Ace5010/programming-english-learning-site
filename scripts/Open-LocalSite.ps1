@@ -41,7 +41,15 @@ function Start-LocalQwen {
 
 function Test-SiteOwner($listener) {
     $owner = Get-CimInstance Win32_Process -Filter ("ProcessId={0}" -f $listener.OwningProcess)
-    return ($owner.CommandLine -and $owner.CommandLine.IndexOf($vite, [StringComparison]::OrdinalIgnoreCase) -ge 0)
+    if ($owner.Name -ne 'node.exe' -or -not $owner.CommandLine) { return $false }
+    # npm's Windows shim spells the same entry as node_modules\.bin\..\vite\bin\vite.js.
+    # Compare the actual script argument after path normalization, not arbitrary command text.
+    $entry = [regex]::Match($owner.CommandLine, '^\s*(?:"[^"]+"|\S+)\s+(?:"([^"]+)"|(\S+))')
+    if (-not $entry.Success) { return $false }
+    $scriptPath = if ($entry.Groups[1].Success) { $entry.Groups[1].Value } else { $entry.Groups[2].Value }
+    if (-not [IO.Path]::IsPathRooted($scriptPath)) { return $false }
+    try { return [IO.Path]::GetFullPath($scriptPath).Equals([IO.Path]::GetFullPath($vite), [StringComparison]::OrdinalIgnoreCase) }
+    catch { return $false }
 }
 
 function Test-SiteReady {

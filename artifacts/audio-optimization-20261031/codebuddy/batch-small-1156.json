@@ -1,0 +1,145 @@
+{
+  "batch": "small-1156",
+  "firstId": 1156,
+  "lastId": 1405,
+  "submitted": 250,
+  "exitCode": 0,
+  "timedOut": false,
+  "complete": true,
+  "elapsedSeconds": 87.392,
+  "records": [
+    {
+      "model": "deepseek-v4.1-flash",
+      "usage": {
+        "prompt_tokens": 17365,
+        "completion_tokens": 14912,
+        "total_tokens": 32277,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 13972,
+          "rejected_prediction_tokens": 0,
+          "cached_tokens": 0
+        },
+        "prompt_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": 0,
+          "cached_tokens": 7808
+        },
+        "prompt_cache_hit_tokens": 7808,
+        "prompt_cache_miss_tokens": 9557,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 0,
+        "prompt_cache_write_tokens": 0,
+        "completion_thinking_tokens": 13972,
+        "credit": 0.99,
+        "cached_tokens": 0
+      },
+      "requestId": "01a194e263317240a8d78a8e12e8b39e"
+    }
+  ],
+  "result": {
+    "reviewedCount": 250,
+    "findings": [
+      {
+        "id": 1156,
+        "word": "web feature service (WFS)",
+        "issue": "Acronym in the headword has no phonetic; WFS is read as letters, not as a word.",
+        "intendedIPA": "/ˌdʌbəljuː ɛf ˈɛs/",
+        "context": "The map uses a web feature service (WFS) to share data.",
+        "confidence": "high"
+      },
+      {
+        "id": 1158,
+        "word": "web map service (WMS)",
+        "issue": "Acronym in the headword has no phonetic; WMS is read as letters, not as a word.",
+        "intendedIPA": "/ˌdʌbəljuː ɛm ˈɛs/",
+        "context": "The site uses a web map service (WMS) for maps.",
+        "confidence": "high"
+      },
+      {
+        "id": 1168,
+        "word": "website/web site",
+        "issue": "Slash variant is not a single spoken headword; audio/context should target 'website'.",
+        "intendedIPA": "/ˈwɛbˌsaɪt/",
+        "context": "The website is easy to use.",
+        "confidence": "high"
+      },
+      {
+        "id": 1170,
+        "word": "wide area network (WAN)",
+        "issue": "WAN is normally read as a word /wæn/, not spelled out W-A-N; empty phonetic hides this.",
+        "intendedIPA": "/wæn/",
+        "context": "The office uses a wide area network (WAN) to connect sites.",
+        "confidence": "high"
+      },
+      {
+        "id": 1180,
+        "word": "World Wide Web (WWW)",
+        "issue": "WWW is an acronym read as three W letters; empty phonetic omits the abbreviation reading.",
+        "intendedIPA": "/ˌdʌbəljuː ˌdʌbəljuː ˈdʌbəljuː/",
+        "context": "The World Wide Web (WWW) is full of information.",
+        "confidence": "high"
+      },
+      {
+        "id": 1183,
+        "word": "year 2000 compliance (Y2K",
+        "issue": "Headword is malformed: missing closing ')' after Y2K; Y2K is also an acronym read as letters and a number.",
+        "intendedIPA": "/ˌwaɪ tuː ˈkeɪ/",
+        "context": "The team checked year 2000 compliance (Y2K) before the launch.",
+        "confidence": "high"
+      },
+      {
+        "id": 1263,
+        "word": "at",
+        "issue": "Function word has no phonetic; strong /æt/ and weak /ət/ are both needed.",
+        "intendedIPA": "/æt/ (strong), /ət/ (weak)",
+        "context": "She is at home.",
+        "confidence": "medium"
+      },
+      {
+        "id": 1266,
+        "word": "August",
+        "issue": "True heteronym: the Chinese gloss is adjective august /ɔːˈɡʌst/, but the example forces the month August /ˈɔːɡəst/.",
+        "intendedIPA": "/ˈɔːɡəst/",
+        "context": "The hot month of August comes after July.",
+        "confidence": "high"
+      },
+      {
+        "id": 1289,
+        "word": "beautiful",
+        "issue": "Given /ʊ/ is not the standard vowel; beautiful is /ˈbjuːtəfəl/.",
+        "intendedIPA": "/ˈbjuːtəfəl/",
+        "context": "The garden is beautiful in spring.",
+        "confidence": "high"
+      },
+      {
+        "id": 1356,
+        "word": "can",
+        "issue": "Chinese gloss is the preserve-in-a-can verb, but the example is modal can; standalone strong/weak reading is ambiguous.",
+        "intendedIPA": "/kæn/ (strong), /kən/ (weak)",
+        "context": "I can swim.",
+        "confidence": "high"
+      },
+      {
+        "id": 1373,
+        "word": "CD",
+        "issue": "Acronym with empty phonetic; CD is read as letters.",
+        "intendedIPA": "/ˌsiːˈdiː/",
+        "context": "I burned a CD of the songs.",
+        "confidence": "high"
+      },
+      {
+        "id": 1396,
+        "word": "Chinese",
+        "issue": "Empty phonetic; example 'a Chinese' means a Chinese meal, not the language/nationality in the gloss.",
+        "intendedIPA": "/ˌtʃaɪˈniːz/",
+        "context": "She is learning Chinese.",
+        "confidence": "high"
+      }
+    ],
+    "notes": "Reviewed all 250 entries. No audio was supplied, so no audio claims are made. Many multiword web/tech terms have empty phonetic fields; findings focus on acronym, notation, heteronym, or clear IPA conflicts rather than every missing field or normal US/UK variant."
+  }
+}

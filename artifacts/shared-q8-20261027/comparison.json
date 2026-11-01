@@ -1,0 +1,82 @@
+{
+  "baseline": "2026-10-04 historical actual inference, not rerun today",
+  "baselineSha256": "e58f6ba2ba0895f2d758c0e6c6c9b19d0688db0e6dff1fb9445f47981c77f7c0",
+  "todayOriginalAttempt": "failed before inference: DefaultCPUAllocator not enough memory (1244659712 bytes)",
+  "publicCases": 56,
+  "sameNormalizedTranscripts": 56,
+  "originalHistorical": {
+    "daily": {
+      "count": 12,
+      "matches": 12,
+      "medianMs": 3232.5
+    },
+    "programming": {
+      "count": 12,
+      "matches": 12,
+      "medianMs": 2791.5
+    },
+    "word": {
+      "count": 8,
+      "matches": 8,
+      "medianMs": 1676.0
+    },
+    "human-new": {
+      "count": 24,
+      "matches": 21,
+      "medianMs": 4369.0
+    }
+  },
+  "q8Today": {
+    "daily": {
+      "count": 12,
+      "matches": 12,
+      "medianMs": 119.0
+    },
+    "programming": {
+      "count": 12,
+      "matches": 12,
+      "medianMs": 119.5
+    },
+    "word": {
+      "count": 8,
+      "matches": 8,
+      "medianMs": 91.5
+    },
+    "human-new": {
+      "count": 24,
+      "matches": 21,
+      "medianMs": 172.5
+    }
+  },
+  "q8AiHintsToday": {
+    "daily": {
+      "count": 12,
+      "matches": 12,
+      "medianMs": 356.5
+    },
+    "programming": {
+      "count": 12,
+      "matches": 12,
+      "medianMs": 351.0
+    },
+    "word": {
+      "count": 8,
+      "matches": 8,
+      "medianMs": 330.5
+    },
+    "human-new": {
+      "count": 24,
+      "matches": 21,
+      "medianMs": 394.5
+    }
+  },
+  "hotwordsCount": 181,
+  "hintDifferences": [
+    {
+      "id": "human-011810133",
+      "reference": "I NEED TO PICK UP A DESK",
+      "noHints": "I need to pick up a disc.",
+      "aiHints": "I need to pick up a disk."
+    }
+  ]
+}

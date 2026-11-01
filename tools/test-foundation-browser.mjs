@@ -1,9 +1,12 @@
 import assert from 'node:assert/strict';
+import { openSettings, closeSettings, chooseTheme } from './helpers/settings-browser.mjs';
 import { createRequire } from 'node:module';
 import { mkdir, writeFile } from 'node:fs/promises';
 import { foundationTopics, foundationTutorialCatalog, FOUNDATION_KEY } from '../src/foundationCourse.ts';
 import { foundationTutorials } from '../src/foundationTutorials.ts';
 import { slowReadingQueue } from '../src/slowReading.ts';
+import { dailyLessons } from '../src/dailyCourse.ts';
+import { createDailyProgress, createDailySession } from '../src/dailyProgress.ts';
 const require = createRequire(import.meta.url);
 const { chromium } = require(process.env.CODEWORDS_PLAYWRIGHT || 'C:/Users/shenwuqiang/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
 const baseURL = process.env.CODEWORDS_TEST_URL || 'http://localhost:5186/';
@@ -45,7 +48,16 @@ const nav = async (page, name) => {
   if (name === '音标与发音' && await page.locator('.phonemic-tutorials').getAttribute('open') === null) await page.locator('.phonemic-tutorials > summary').click();
 };
 const section = (page, name) => page.getByRole('group', { name: '学习分区', exact: true }).getByRole('button', { name, exact: true }).click();
-async function scenario(name, run) { try { await run(); results.push(name); console.log(`PASS ${name}`); } catch (error) { failures.push({ name, error: error.stack }); console.error(`FAIL ${name}: ${error.message}`); } }
+async function scenario(name, run) {
+  if (process.env.CODEWORDS_FOUNDATION_SCENARIO && !new RegExp(process.env.CODEWORDS_FOUNDATION_SCENARIO).test(name)) return;
+  try { await run(); results.push(name); console.log(`PASS ${name}`); }
+  catch (error) {
+    const page = browser.contexts().at(-1)?.pages().at(-1);
+    const diagnostic = page ? await page.evaluate(() => ({ text: document.body.innerText.slice(0, 1000), buttons: [...document.querySelectorAll('.site-header button')].map(button => ({ text: button.textContent, label: button.getAttribute('aria-label') })) })) : undefined;
+    failures.push({ name, error: error.stack, diagnostic }); console.error(`FAIL ${name}: ${error.message}\n${JSON.stringify(diagnostic)}`);
+    if (page) await page.screenshot({ path: `${output}/failure-${failures.length}.png` });
+  } finally { for (const context of browser.contexts()) await context.close(); }
+}
 try {
   await scenario('independent tutorials, optional interaction, every visible topic reachable and records untouched', async () => {
     const { page, context } = await open();
@@ -53,7 +65,7 @@ try {
     await page.getByRole('heading', { name: '名词和主语有什么区别', exact: true }).waitFor();
     await page.getByRole('button', { name: '是，名词就是主语', exact: true }).click();
     await page.getByRole('status').filter({ hasText: '再看谁在读' }).waitFor();
-    await page.getByRole('combobox', { name: '界面配色' }).selectOption('pearl');
+    await chooseTheme(page, 'pearl');
     assert.equal(await page.getByRole('button', { name: '是，名词就是主语', exact: true }).getAttribute('aria-pressed'), 'true');
     await page.getByRole('navigation', { name: '章节翻页' }).getByRole('button', { name: /^接下来/ }).click();
     await page.getByRole('heading', { name: '句子语序：谁、做什么、对什么', exact: true }).waitFor();
@@ -78,15 +90,18 @@ try {
     assert.match(await page.locator('.tutorial-action').textContent(), /声带振动/);
     assert.match(await page.getByRole('link', { name: /观看 BBC/ }).getAttribute('href'), /vE12RFyH-hY/);
     for (const voice of ['aria', 'guy']) {
-      await page.getByRole('button', { name: '选择声音', exact: true }).click();
+      await openSettings(page, 'audio');
       await page.getByRole('combobox', { name: '点读声音', exact: true }).selectOption(voice);
-      await page.getByRole('button', { name: '关闭语音设置', exact: true }).click();
+      await closeSettings(page);
       for (const slow of [false, true]) {
         await page.evaluate(() => { window.audioEvents = []; });
-        await page.getByRole('button', { name: `${slow ? '慢速朗读' : '朗读'} fan`, exact: true }).click();
-        await page.waitForFunction(() => window.audioEvents.some(event => event.event === 'ended'));
+        const button = page.getByRole('button', { name: `${slow ? '慢速朗读' : '朗读'} fan`, exact: true });
+        await button.click();
+        await page.waitForFunction(() => window.audioEvents.some(event => event.event === 'playing'));
+        if (slow) await page.waitForFunction(el => el.getAttribute('aria-pressed') !== 'true' && !el.classList.contains('playing'), await button.elementHandle());
+        else await page.waitForFunction(() => window.audioEvents.some(event => event.event === 'ended'));
         const events = await page.evaluate(() => window.audioEvents); audioEvents.push(...events);
-        assert.ok(events.some(event => event.event === 'playing' && event.src.includes(`/foundation/${voice}/`) && event.rate === (slow ? .72 : 1)));
+        assert.ok(events.some(event => event.event === 'playing' && event.src.includes(`/${slow ? 'slow' : 'foundation'}/${voice}/`) && event.rate === 1));
         assert.ok(!events.some(event => event.event === 'error'));
       }
     }
@@ -96,9 +111,9 @@ try {
     const { page, context } = await open();
     assert.equal(await page.locator('#foundation-content .foundation-card').getAttribute('data-topic'), 'foundation-noun-roles');
     for (const voice of ['aria', 'guy']) {
-      await page.getByRole('button', { name: '选择声音', exact: true }).click();
+      await openSettings(page, 'audio');
       await page.getByRole('combobox', { name: '点读声音', exact: true }).selectOption(voice);
-      await page.getByRole('button', { name: '关闭语音设置', exact: true }).click();
+      await closeSettings(page);
       for (const text of ['The dog sees me.', 'I see the dog.']) for (const slow of [false, true]) {
         await page.evaluate(() => { window.audioEvents = []; });
         await page.getByRole('button', { name: `${slow ? '慢速朗读' : '朗读'} ${text}`, exact: true }).click();
@@ -110,7 +125,7 @@ try {
         if (slow) {
           const queue = slowReadingQueue(text, voice, baseURL);
           assert.deepEqual(events.filter(event => event.event === 'playing').map(event => event.src), queue.map(clip => clip.url));
-          assert.ok(events.filter(event => event.event === 'playing').every(event => event.rate === .72));
+          assert.ok(events.filter(event => event.event === 'playing').every(event => event.rate === 1));
         } else assert.ok(events.some(event => event.event === 'playing' && event.src.includes(`/foundation/${voice}/`) && event.rate === 1));
       }
     }
@@ -129,8 +144,12 @@ try {
     await context.close();
   });
   await scenario('original course can open foundation explanation then return to unchanged draft', async () => {
-    const { page, context } = await open(); await section(page, '日常英语');
-    await page.locator('#daily-content').getByRole('button', { name: '开始学习', exact: true }).click();
+    const { page, context } = await open();
+    // The retained original lesson still exposes the in-context tutorial link.
+    // New vocabulary lessons begin on their homepage word cards instead.
+    const progress = { ...createDailyProgress(), session: createDailySession(dailyLessons[0]) };
+    await page.evaluate(progress => localStorage.setItem('codewords-daily-v1', JSON.stringify(progress)), progress);
+    await page.reload(); await section(page, '日常英语');
     const before = await page.evaluate(() => localStorage.getItem('codewords-daily-v1'));
     assert.equal(await page.locator('#daily-content .foundation-help summary').count(), 0);
     await page.locator('#daily-content .foundation-guide-link').first().waitFor({ state: 'visible' });
@@ -177,9 +196,9 @@ try {
       assert.equal(await exercise.getByRole('status').textContent(), tutorial.try.explanation[1]);
       await exercise.getByText('直接看解释', { exact: true }).click();
       assert.equal(await exercise.locator('details p').textContent(), tutorial.try.reveal);
-      await page.getByRole('combobox', { name: '界面配色' }).selectOption(theme === 'pearl' ? 'lagoon' : 'pearl');
+      await chooseTheme(page, theme === 'pearl' ? 'lagoon' : 'pearl');
       assert.equal(await exercise.getByRole('button').nth(1).getAttribute('aria-pressed'), 'true');
-      await page.getByRole('combobox', { name: '界面配色' }).selectOption(theme);
+      await chooseTheme(page, theme);
       const layout = await article.evaluate(el => ({ scroll: document.documentElement.scrollWidth, outside: [...el.querySelectorAll('button')].filter(el => el.getBoundingClientRect().height).filter(el => el.getBoundingClientRect().right > innerWidth + 1 || el.getBoundingClientRect().left < -1).map(el => el.textContent) }));
       assert.ok(layout.scroll <= width + 1, `${tutorial.id}: ${JSON.stringify(layout)}`);
       assert.deepEqual(layout.outside, [], tutorial.id);
@@ -192,12 +211,21 @@ try {
     const { page, context } = await open();
     await context.route('**/*', route => new URL(route.request().url()).origin === new URL(baseURL).origin ? route.continue() : route.abort());
     async function listen(locator, slow) {
+      const label = await locator.getAttribute('aria-label') ?? await locator.textContent();
       await page.evaluate(() => { window.audioEvents = []; });
       await locator.click();
-      await page.waitForFunction(() => window.audioEvents.some(event => event.event === 'ended'));
+      await page.waitForFunction(() => window.audioEvents.some(event => event.event === 'playing'));
+      const packed = await page.evaluate(() => window.audioEvents.find(event => event.event === 'playing').src.includes('/slow/'));
+      try {
+        if (packed) await page.waitForFunction(el => el.getAttribute('aria-pressed') !== 'true' && !el.classList.contains('playing'), await locator.elementHandle());
+        else await page.waitForFunction(() => window.audioEvents.some(event => event.event === 'ended'));
+      } catch (error) {
+        const diagnostic = await page.evaluate(() => ({ events: window.audioEvents, visibility: document.visibilityState, media: window.tutorialMedia.slice(-3).map(audio => ({ src: audio.src, paused: audio.paused, ended: audio.ended, currentTime: audio.currentTime, duration: audio.duration, error: audio.error?.code })) }));
+        throw new Error(`${label}: ${error.message}\n${JSON.stringify(diagnostic)}`);
+      }
       const events = await page.evaluate(() => window.audioEvents); audioEvents.push(...events);
       assert.equal(events.filter(event => event.event === 'playing').length, 1, 'natural slow must remain one continuous clip');
-      assert.equal(events.find(event => event.event === 'playing').rate, slow ? .72 : 1);
+      assert.equal(events.find(event => event.event === 'playing').rate, slow && !packed ? .6 : 1);
       assert.equal(events.find(event => event.event === 'playing').preservesPitch, true);
       assert.ok(!events.some(event => event.event === 'error'));
     }
@@ -213,9 +241,9 @@ try {
       ...['cats', 'dogs', 'buses', 'walked', 'played', 'wanted'].map(text => ['foundation-endings', text]),
     ];
     for (const voice of ['aria', 'guy']) {
-      await page.getByRole('button', { name: '选择声音', exact: true }).click();
+      await openSettings(page, 'audio');
       await page.getByRole('combobox', { name: '点读声音', exact: true }).selectOption(voice);
-      await page.getByRole('button', { name: '关闭语音设置', exact: true }).click();
+      await closeSettings(page);
       for (const [id, text] of clips) {
         const tutorial = foundationTutorials.find(item => item.id === id);
         await nav(page, tutorial.sound ? '音标与发音' : '基础概念与语法');

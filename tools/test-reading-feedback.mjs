@@ -101,6 +101,32 @@ test('navigation, muting and a new action cancel a pending completion retry', t 
   assert.equal(items.at(-1).src, 'audio/feedback/correct.mp3');
 });
 
+test('an external completion pause retries once, while an explicit stop stays cancelled', t => {
+  const { feedback, items } = failingFeedback(t);
+  feedback.play('complete', 'round-1');
+  items[0].pause();
+  t.mock.timers.tick(200);
+  assert.equal(items.length, 2);
+  assert.equal(items[1].src, 'audio/feedback/complete.mp3');
+  items[1].pause();
+  t.mock.timers.tick(200);
+  assert.equal(items.length, 2, 'persistent interruption must not loop');
+  feedback.play('complete', 'round-2');
+  feedback.stop();
+  t.mock.timers.tick(200);
+  assert.equal(items.length, 3, 'explicit cancellation must not retry');
+});
+
+test('normal media end is not mistaken for an interruption', t => {
+  const { feedback, items } = failingFeedback(t);
+  feedback.play('complete', 'round-1');
+  items[0].ended = true;
+  items[0].pause();
+  items[0].onended();
+  t.mock.timers.tick(200);
+  assert.equal(items.length, 1);
+});
+
 test('failed answer cues are not replayed as delayed answers', t => {
   const { feedback, items } = failingFeedback(t);
   feedback.play('correct', 'round-1:1'); items[0].onerror();

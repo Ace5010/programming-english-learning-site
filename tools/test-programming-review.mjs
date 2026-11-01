@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { programmingReview } from '../src/programmingReview.ts';
 import { programmingLessons } from '../src/programmingCourse.ts';
+import { adaptiveProgrammingLessons } from '../src/programmingPractice.ts';
 import { createDailyProgress, learnDailyLesson, parseDailyProgress, createDailySession, beginDailyExercises, updateDailyDraft, submitDailyAnswer } from '../src/dailyProgress.ts';
 import { enrollWord, getSkill, reviewAbilities, updateReviewProgress } from '../src/review.ts';
 
@@ -12,6 +13,15 @@ function future() {
   for (const id of lesson.wordIds) progress = enrollWord(progress, id, 'course', at(22));
   return progress;
 }
+
+test('review filters classify retained speaking tasks without requiring word-skill metadata', () => {
+  const planner = programmingReview(future(), at(22));
+  const tasks = adaptiveProgrammingLessons.flatMap(lesson => [...lesson.exercises, ...lesson.practice]);
+  const speaking = tasks.find(task => task.kind === 'speak');
+  assert.ok(speaking);
+  assert.equal(planner.ability(speaking), 'speaking');
+  assert.doesNotThrow(() => tasks.filter(task => planner.ability(task) === 'listening'));
+});
 
 test('scene choice questions use context separately from meaning and order does not imply spelling', () => {
   const planner = programmingReview(future(), at(22));

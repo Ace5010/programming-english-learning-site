@@ -1,0 +1,15 @@
+{
+  "status": "applied",
+  "changedPacks": 4,
+  "newManifestSha256": "70df69b82de17c7da8e374b2018412ca497b4ec07cdbcf74dc28dd4fcacc72c0",
+  "backup": "D:\\vibe项目\\词见\\.runtime\\audio-optimization-20261031\\before-final-context-fix",
+  "files": [
+    "public\\audio\\slow\\aria\\pack-v2-140.mp3",
+    "public\\audio\\slow\\guy\\pack-v2-140.mp3",
+    "public\\audio\\slow\\aria\\pack-v2-normal-0.mp3",
+    "public\\audio\\slow\\guy\\pack-v2-normal-0.mp3",
+    "src\\slowReadingClips.json",
+    "src\\contextualAudioClips.json",
+    "public\\audio\\slow\\manifest.json"
+  ]
+}

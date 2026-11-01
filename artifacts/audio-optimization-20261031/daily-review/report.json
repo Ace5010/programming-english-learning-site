@@ -1,0 +1,77 @@
+{
+  "results": [
+    {
+      "mode": "skipped",
+      "width": 1440,
+      "theme": "lagoon",
+      "words": 8,
+      "audio": [
+        {
+          "src": "http://localhost:5186/audio/daily/aria/daily-word-i.mp3?v=I&audio=clear-20261101-v1",
+          "rate": 1,
+          "pitch": true
+        },
+        {
+          "src": "http://localhost:5186/audio/slow/aria/pack-v2-10.mp3?v=a78dc6102c827565",
+          "rate": 1,
+          "pitch": true
+        }
+      ]
+    },
+    {
+      "mode": "taught",
+      "width": 390,
+      "theme": "lagoon",
+      "words": 8,
+      "audio": [
+        {
+          "src": "http://localhost:5186/audio/daily/aria/daily-word-i.mp3?v=I&audio=clear-20261101-v1",
+          "rate": 1,
+          "pitch": true
+        },
+        {
+          "src": "http://localhost:5186/audio/slow/aria/pack-v2-10.mp3?v=a78dc6102c827565",
+          "rate": 1,
+          "pitch": true
+        }
+      ]
+    },
+    {
+      "mode": "skipped",
+      "width": 390,
+      "theme": "sky",
+      "words": 8,
+      "audio": [
+        {
+          "src": "http://localhost:5186/audio/daily/aria/daily-word-i.mp3?v=I&audio=clear-20261101-v1",
+          "rate": 1,
+          "pitch": true
+        },
+        {
+          "src": "http://localhost:5186/audio/slow/aria/pack-v2-10.mp3?v=a78dc6102c827565",
+          "rate": 1,
+          "pitch": true
+        }
+      ]
+    },
+    {
+      "mode": "skipped",
+      "width": 390,
+      "theme": "pearl",
+      "words": 8,
+      "audio": [
+        {
+          "src": "http://localhost:5186/audio/daily/aria/daily-word-i.mp3?v=I&audio=clear-20261101-v1",
+          "rate": 1,
+          "pitch": true
+        },
+        {
+          "src": "http://localhost:5186/audio/slow/aria/pack-v2-10.mp3?v=a78dc6102c827565",
+          "rate": 1,
+          "pitch": true
+        }
+      ]
+    }
+  ],
+  "errors": []
+}

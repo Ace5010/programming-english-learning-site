@@ -1,0 +1,304 @@
+{
+  "text": "I am a student. My teacher is from China.",
+  "mode": "word-by-word with the current site pause policy",
+  "wordGapMs": 300,
+  "sentenceGapMs": 550,
+  "normalization": "same existing bounded RMS normalization",
+  "source": "existing free Edge TTS; native -28% and -40% synthesis",
+  "siteChanged": false,
+  "verification": "full decode, no clipped samples, matching word boundaries, independent ASR without prompt",
+  "samples": [
+    {
+      "voice": "aria",
+      "synthesisRate": "-28%",
+      "nominalSpeed": 0.72,
+      "playbackRate": 1,
+      "file": "artifacts/audio-speed-comparison-20261101/aria-0p72.mp3",
+      "timing": [
+        {
+          "word": "I",
+          "startMs": 0,
+          "endMs": 690,
+          "pauseTargetMs": 300
+        },
+        {
+          "word": "am",
+          "startMs": 810,
+          "endMs": 1660,
+          "pauseTargetMs": 300
+        },
+        {
+          "word": "a",
+          "startMs": 1780,
+          "endMs": 2450,
+          "pauseTargetMs": 300
+        },
+        {
+          "word": "student",
+          "startMs": 2570,
+          "endMs": 3620,
+          "pauseTargetMs": 550
+        },
+        {
+          "word": "My",
+          "startMs": 3990,
+          "endMs": 4930,
+          "pauseTargetMs": 300
+        },
+        {
+          "word": "teacher",
+          "startMs": 5050,
+          "endMs": 5990,
+          "pauseTargetMs": 300
+        },
+        {
+          "word": "is",
+          "startMs": 6110,
+          "endMs": 7000,
+          "pauseTargetMs": 300
+        },
+        {
+          "word": "from",
+          "startMs": 7120,
+          "endMs": 8000,
+          "pauseTargetMs": 300
+        },
+        {
+          "word": "China",
+          "startMs": 8120,
+          "endMs": 9050,
+          "pauseTargetMs": 0
+        }
+      ],
+      "sha256": "d65b94e34b70617f16984c36a4f0c8be5813e1dcf712c19c6f61c40de3059e21",
+      "durationMs": 9050,
+      "speechRmsDb": -20.39,
+      "peakDb": -4.93,
+      "suggestedGainDb": 0.39,
+      "leadingMs": 80,
+      "trailingMs": 100,
+      "clippedSamples": 0,
+      "transcript": "I am a student. My teacher is from China.",
+      "textMatch": true
+    },
+    {
+      "voice": "aria",
+      "synthesisRate": "-40%",
+      "nominalSpeed": 0.6,
+      "playbackRate": 1,
+      "file": "artifacts/audio-speed-comparison-20261101/aria-0p60.mp3",
+      "timing": [
+        {
+          "word": "I",
+          "startMs": 0,
+          "endMs": 790,
+          "pauseTargetMs": 300
+        },
+        {
+          "word": "am",
+          "startMs": 910,
+          "endMs": 1890,
+          "pauseTargetMs": 300
+        },
+        {
+          "word": "a",
+          "startMs": 2010,
+          "endMs": 2770,
+          "pauseTargetMs": 300
+        },
+        {
+          "word": "student",
+          "startMs": 2890,
+          "endMs": 4090,
+          "pauseTargetMs": 550
+        },
+        {
+          "word": "My",
+          "startMs": 4460,
+          "endMs": 5550,
+          "pauseTargetMs": 300
+        },
+        {
+          "word": "teacher",
+          "startMs": 5670,
+          "endMs": 6750,
+          "pauseTargetMs": 300
+        },
+        {
+          "word": "is",
+          "startMs": 6870,
+          "endMs": 7890,
+          "pauseTargetMs": 300
+        },
+        {
+          "word": "from",
+          "startMs": 8010,
+          "endMs": 9030,
+          "pauseTargetMs": 300
+        },
+        {
+          "word": "China",
+          "startMs": 9150,
+          "endMs": 10230,
+          "pauseTargetMs": 0
+        }
+      ],
+      "sha256": "a954510e7b9b4ed289f157c589cad0ddb7a9fac0c897b0fe512817ba758a16c8",
+      "durationMs": 10230,
+      "speechRmsDb": -20.39,
+      "peakDb": -4.43,
+      "suggestedGainDb": 0.39,
+      "leadingMs": 80,
+      "trailingMs": 100,
+      "clippedSamples": 0,
+      "transcript": "I am a student. My teacher is from China.",
+      "textMatch": true
+    },
+    {
+      "voice": "guy",
+      "synthesisRate": "-28%",
+      "nominalSpeed": 0.72,
+      "playbackRate": 1,
+      "file": "artifacts/audio-speed-comparison-20261101/guy-0p72.mp3",
+      "timing": [
+        {
+          "word": "I",
+          "startMs": 0,
+          "endMs": 620,
+          "pauseTargetMs": 300
+        },
+        {
+          "word": "am",
+          "startMs": 740,
+          "endMs": 1510,
+          "pauseTargetMs": 300
+        },
+        {
+          "word": "a",
+          "startMs": 1630,
+          "endMs": 2290,
+          "pauseTargetMs": 300
+        },
+        {
+          "word": "student",
+          "startMs": 2410,
+          "endMs": 3590,
+          "pauseTargetMs": 550
+        },
+        {
+          "word": "My",
+          "startMs": 3960,
+          "endMs": 4780,
+          "pauseTargetMs": 300
+        },
+        {
+          "word": "teacher",
+          "startMs": 4900,
+          "endMs": 5890,
+          "pauseTargetMs": 300
+        },
+        {
+          "word": "is",
+          "startMs": 6010,
+          "endMs": 6670,
+          "pauseTargetMs": 300
+        },
+        {
+          "word": "from",
+          "startMs": 6790,
+          "endMs": 7720,
+          "pauseTargetMs": 300
+        },
+        {
+          "word": "China",
+          "startMs": 7840,
+          "endMs": 8680,
+          "pauseTargetMs": 0
+        }
+      ],
+      "sha256": "9f198764608ce0d299eb4acca284e1a698700c12a9bb6316528fcb87688b1622",
+      "durationMs": 8680,
+      "speechRmsDb": -20.45,
+      "peakDb": -3.63,
+      "suggestedGainDb": 0.45,
+      "leadingMs": 80,
+      "trailingMs": 100,
+      "clippedSamples": 0,
+      "transcript": "I am a student. My teacher is from China.",
+      "textMatch": true
+    },
+    {
+      "voice": "guy",
+      "synthesisRate": "-40%",
+      "nominalSpeed": 0.6,
+      "playbackRate": 1,
+      "file": "artifacts/audio-speed-comparison-20261101/guy-0p60.mp3",
+      "timing": [
+        {
+          "word": "I",
+          "startMs": 0,
+          "endMs": 690,
+          "pauseTargetMs": 300
+        },
+        {
+          "word": "am",
+          "startMs": 810,
+          "endMs": 1690,
+          "pauseTargetMs": 300
+        },
+        {
+          "word": "a",
+          "startMs": 1810,
+          "endMs": 2580,
+          "pauseTargetMs": 300
+        },
+        {
+          "word": "student",
+          "startMs": 2700,
+          "endMs": 4080,
+          "pauseTargetMs": 550
+        },
+        {
+          "word": "My",
+          "startMs": 4450,
+          "endMs": 5390,
+          "pauseTargetMs": 300
+        },
+        {
+          "word": "teacher",
+          "startMs": 5510,
+          "endMs": 6660,
+          "pauseTargetMs": 300
+        },
+        {
+          "word": "is",
+          "startMs": 6780,
+          "endMs": 7520,
+          "pauseTargetMs": 300
+        },
+        {
+          "word": "from",
+          "startMs": 7640,
+          "endMs": 8720,
+          "pauseTargetMs": 300
+        },
+        {
+          "word": "China",
+          "startMs": 8840,
+          "endMs": 9810,
+          "pauseTargetMs": 0
+        }
+      ],
+      "sha256": "1119dd0389e53404e1bcdc31ac4b12771d5075f89a2cf7c527827c1526b74de1",
+      "durationMs": 9810,
+      "speechRmsDb": -20.44,
+      "peakDb": -4.17,
+      "suggestedGainDb": 0.44,
+      "leadingMs": 80,
+      "trailingMs": 100,
+      "clippedSamples": 0,
+      "transcript": "I am a student. My teacher is from China.",
+      "textMatch": true
+    }
+  ]
+}

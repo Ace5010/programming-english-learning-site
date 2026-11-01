@@ -4,8 +4,10 @@
 
 ## 使用
 
-1. 在原来有学习进度的网页刷新一次，点击顶部“同步”→“开启同步”。等待“进度已同步”，再复制同步码。
-2. 安装 Android 1.1.2，在“同步”中粘贴这个码，点击“连接已有进度”。无需注册账号。
+当前源码（2026-11-01）已将同步收进“设置 → 学习数据 → 设备同步”。旧版网页及 Android 1.1.2 仍从顶部“同步”进入；安装包覆盖升级后使用新入口。
+
+1. 在原来有学习进度的设备打开同步面板，点击“开启同步”。等待“进度已同步”，再复制同步码。
+2. 在另一台设备的同步面板选择“输入已有同步码”，粘贴后点击“连接已有进度”。旧版面板直接显示输入框。无需注册账号。
 3. 之后学习变更会自动上传；页面回到前台、恢复联网、以及前台定期检查时拉取另一设备的更新。也可点击“立即同步”。后台或断网时不保证即时传输，但本机答题继续保存。
 
 同步范围包括旧的已掌握词、编程课程、词汇复习、练习统计、收藏和日常英语的课程、复习与收藏。两区原本的存储键及词汇 ID 相互独立。主题、声音、语速和当前导航保留为本机偏好。
@@ -28,7 +30,7 @@
 
 - `src/progressStorage.ts` 只通知成功的学习记录写入；不修改浏览器全局 Storage 原型。
 - `src/progressSync.ts` 完成同步协议、三方比较、冲突和回滚；`syncValidation.ts` 复用现有课程与复习校验器。
-- `src/SyncPanel.tsx` 提供配对、状态、冲突选择与导出；手机和四种风格共用。
+- `src/SettingsDialog.tsx` 统一声音、外观、学习数据入口；`src/SyncPanel.tsx` 在其中提供配对、状态、冲突选择与导出，手机和四套配色共用。
 - `functions/api/sync.ts` 是 Pages Function，绑定 `CODEWORDS_SYNC_DB`；`cloudflare/sync-schema.sql` 定义表与索引。
 - `wrangler.jsonc` 绑定专用 `codewords-progress-sync` D1 数据库。预览环境不绑定正式数据库。Git 主分支提交由现有 Cloudflare Pages 集成部署；GitHub Pages 仍是静态前端，访问指定的 Cloudflare 同步接口。
 - `public/_routes.json` 只将 `/api/sync` 交给 Function，音频继续走静态资源。CORS 只允许正式网站、GitHub Pages 的本站 origin 和 Android 本地 HTTPS origin；本地开发数据不会默认接入正式云端。

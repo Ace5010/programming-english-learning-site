@@ -1,0 +1,23 @@
+{
+  "repo": "Jianshu001/wavlm-phoneme-scorer",
+  "revision": "19f6b9675d02a61dcd5b2aec0fdcc4364c1fc9da",
+  "license": "mit",
+  "files": {
+    "README.md": {
+      "bytes": 5362,
+      "sha256": "d624af85499a4ae19bf37cbff743370879ad108a534195ae606a4aea374b5dc9"
+    },
+    "finetune_wavlm.py": {
+      "bytes": 28198,
+      "sha256": "47d77eb4862102e191cad81404d1487fcf6624715e4504cfdd9edb1ce0720c82"
+    },
+    "pipeline_v2.py": {
+      "bytes": 27586,
+      "sha256": "510d625c7ae7c3cd836fdbc84ceb3e48f2d4d0d69cb5ca6501aefeb5f8bfcd09"
+    },
+    "wavlm_finetuned.pt": {
+      "bytes": 1265922672,
+      "sha256": "7b9485b679d9a1219ac7dbef197b5185ec16e7909632b082b1f0576a963e0040"
+    }
+  }
+}

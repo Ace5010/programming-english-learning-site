@@ -1,0 +1,113 @@
+{
+  "batch": "small-1906",
+  "firstId": 1906,
+  "lastId": 2155,
+  "submitted": 250,
+  "exitCode": 0,
+  "timedOut": false,
+  "complete": true,
+  "elapsedSeconds": 82.811,
+  "records": [
+    {
+      "model": "deepseek-v4.1-flash",
+      "usage": {
+        "prompt_tokens": 17914,
+        "completion_tokens": 13561,
+        "total_tokens": 31475,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 13004,
+          "rejected_prediction_tokens": 0,
+          "cached_tokens": 0
+        },
+        "prompt_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": 0,
+          "cached_tokens": 7808
+        },
+        "prompt_cache_hit_tokens": 7808,
+        "prompt_cache_miss_tokens": 10106,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 0,
+        "prompt_cache_write_tokens": 0,
+        "completion_thinking_tokens": 13004,
+        "credit": 0.92,
+        "cached_tokens": 0
+      },
+      "requestId": "01a194e6dac373a5a37fe5ec8eee24f3"
+    }
+  ],
+  "result": {
+    "reviewedCount": 250,
+    "findings": [
+      {
+        "id": 1916,
+        "word": "Monday",
+        "issue": "Malformed IPA: the first variant is truncated (\"ˈmʌnde\") and the semicolon/space formatting is inconsistent.",
+        "intendedIPA": "/ˈmʌndeɪ/",
+        "context": "The meeting is on Monday at nine.",
+        "confidence": "high"
+      },
+      {
+        "id": 1960,
+        "word": "noodle",
+        "issue": "Wrong vowel: /ʊ/ is used instead of /uː/ for the American pronunciation.",
+        "intendedIPA": "/ˈnuːdl/",
+        "context": "This noodle is still too hot to eat.",
+        "confidence": "high"
+      },
+      {
+        "id": 1984,
+        "word": "OK",
+        "issue": "Initialism with an empty phonetic field; it needs its letter-name pronunciation.",
+        "intendedIPA": "/ˌoʊˈkeɪ/",
+        "context": "Let me know if that is OK.",
+        "confidence": "high"
+      },
+      {
+        "id": 2007,
+        "word": "page",
+        "issue": "No IPA was supplied.",
+        "intendedIPA": "/peɪdʒ/",
+        "context": "Open your book to page twenty.",
+        "confidence": "high"
+      },
+      {
+        "id": 2008,
+        "word": "paint",
+        "issue": "No IPA was supplied.",
+        "intendedIPA": "/peɪnt/",
+        "context": "We will paint the kitchen this weekend.",
+        "confidence": "high"
+      },
+      {
+        "id": 2085,
+        "word": "present",
+        "issue": "The supplied IPA is for the noun/adjective, but the Chinese meaning and example use the verb.",
+        "intendedIPA": "/prɪˈzɛnt/",
+        "context": "She will present her idea to the team.",
+        "confidence": "high"
+      },
+      {
+        "id": 2139,
+        "word": "refuse",
+        "issue": "The supplied IPA is the verb, but the Chinese meaning and example use the noun meaning \"garbage/waste.\"",
+        "intendedIPA": "/ˈrɛfjuːs/",
+        "context": "The refuse is collected every Tuesday.",
+        "confidence": "high"
+      },
+      {
+        "id": 2148,
+        "word": "reply",
+        "issue": "Non-IPA transcription uses the letters \"ai\" where the diphthong /aɪ/ is needed.",
+        "intendedIPA": "/rɪˈplaɪ/",
+        "context": "Please reply to my email today.",
+        "confidence": "medium"
+      }
+    ],
+    "notes": "Reviewed all 250 entries (IDs 1906–2155). No audio was supplied, so findings are based only on text and IPA. Ordinary American/British variants (neither, often, restaurant, etc.) were not flagged. The page, paint, and OK entries are missing IPA data rather than containing wrong symbols; present and refuse are the main heteronym/sense mismatches."
+  }
+}

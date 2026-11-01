@@ -1,0 +1,242 @@
+[
+  {
+    "kind": "programming",
+    "interruption": false,
+    "passed": true,
+    "events": [
+      {
+        "type": "play",
+        "src": "http://localhost:5186/dist/audio/feedback/complete.mp3",
+        "position": 0,
+        "duration": 1.1
+      },
+      {
+        "type": "playing",
+        "src": "http://localhost:5186/dist/audio/feedback/complete.mp3",
+        "position": 0,
+        "duration": 1.1
+      },
+      {
+        "type": "pause",
+        "src": "http://localhost:5186/dist/audio/feedback/complete.mp3",
+        "position": 1.1,
+        "duration": 1.1
+      },
+      {
+        "type": "ended",
+        "src": "http://localhost:5186/dist/audio/feedback/complete.mp3",
+        "position": 1.1,
+        "duration": 1.1
+      }
+    ]
+  },
+  {
+    "kind": "programming",
+    "interruption": true,
+    "passed": true,
+    "events": [
+      {
+        "type": "play",
+        "src": "http://localhost:5186/dist/audio/feedback/complete.mp3",
+        "position": 0,
+        "duration": 1.1
+      },
+      {
+        "type": "playing",
+        "src": "http://localhost:5186/dist/audio/feedback/complete.mp3",
+        "position": 0,
+        "duration": 1.1
+      },
+      {
+        "type": "pause",
+        "src": "http://localhost:5186/dist/audio/feedback/complete.mp3",
+        "position": 0,
+        "duration": 1.1
+      },
+      {
+        "type": "play",
+        "src": "http://localhost:5186/dist/audio/feedback/complete.mp3",
+        "position": 0,
+        "duration": null
+      },
+      {
+        "type": "playing",
+        "src": "http://localhost:5186/dist/audio/feedback/complete.mp3",
+        "position": 0.000088,
+        "duration": 1.1
+      },
+      {
+        "type": "pause",
+        "src": "http://localhost:5186/dist/audio/feedback/complete.mp3",
+        "position": 1.1,
+        "duration": 1.1
+      },
+      {
+        "type": "ended",
+        "src": "http://localhost:5186/dist/audio/feedback/complete.mp3",
+        "position": 1.1,
+        "duration": 1.1
+      }
+    ]
+  },
+  {
+    "kind": "daily",
+    "interruption": false,
+    "passed": true,
+    "events": [
+      {
+        "type": "play",
+        "src": "http://localhost:5186/dist/audio/feedback/complete.mp3",
+        "position": 0,
+        "duration": 1.1
+      },
+      {
+        "type": "playing",
+        "src": "http://localhost:5186/dist/audio/feedback/complete.mp3",
+        "position": 0,
+        "duration": 1.1
+      },
+      {
+        "type": "pause",
+        "src": "http://localhost:5186/dist/audio/feedback/complete.mp3",
+        "position": 1.1,
+        "duration": 1.1
+      },
+      {
+        "type": "ended",
+        "src": "http://localhost:5186/dist/audio/feedback/complete.mp3",
+        "position": 1.1,
+        "duration": 1.1
+      }
+    ]
+  },
+  {
+    "kind": "daily",
+    "interruption": true,
+    "passed": true,
+    "events": [
+      {
+        "type": "play",
+        "src": "http://localhost:5186/dist/audio/feedback/complete.mp3",
+        "position": 0,
+        "duration": 1.1
+      },
+      {
+        "type": "playing",
+        "src": "http://localhost:5186/dist/audio/feedback/complete.mp3",
+        "position": 0,
+        "duration": 1.1
+      },
+      {
+        "type": "pause",
+        "src": "http://localhost:5186/dist/audio/feedback/complete.mp3",
+        "position": 0,
+        "duration": 1.1
+      },
+      {
+        "type": "play",
+        "src": "http://localhost:5186/dist/audio/feedback/complete.mp3",
+        "position": 0,
+        "duration": null
+      },
+      {
+        "type": "playing",
+        "src": "http://localhost:5186/dist/audio/feedback/complete.mp3",
+        "position": 0,
+        "duration": 1.1
+      },
+      {
+        "type": "pause",
+        "src": "http://localhost:5186/dist/audio/feedback/complete.mp3",
+        "position": 1.1,
+        "duration": 1.1
+      },
+      {
+        "type": "ended",
+        "src": "http://localhost:5186/dist/audio/feedback/complete.mp3",
+        "position": 1.1,
+        "duration": 1.1
+      }
+    ]
+  },
+  {
+    "kind": "review",
+    "interruption": false,
+    "passed": true,
+    "events": [
+      {
+        "type": "play",
+        "src": "http://localhost:5186/dist/audio/feedback/complete.mp3",
+        "position": 0,
+        "duration": 1.1
+      },
+      {
+        "type": "playing",
+        "src": "http://localhost:5186/dist/audio/feedback/complete.mp3",
+        "position": 0,
+        "duration": 1.1
+      },
+      {
+        "type": "pause",
+        "src": "http://localhost:5186/dist/audio/feedback/complete.mp3",
+        "position": 1.1,
+        "duration": 1.1
+      },
+      {
+        "type": "ended",
+        "src": "http://localhost:5186/dist/audio/feedback/complete.mp3",
+        "position": 1.1,
+        "duration": 1.1
+      }
+    ]
+  },
+  {
+    "kind": "review",
+    "interruption": true,
+    "passed": true,
+    "events": [
+      {
+        "type": "play",
+        "src": "http://localhost:5186/dist/audio/feedback/complete.mp3",
+        "position": 0,
+        "duration": 1.1
+      },
+      {
+        "type": "playing",
+        "src": "http://localhost:5186/dist/audio/feedback/complete.mp3",
+        "position": 0,
+        "duration": 1.1
+      },
+      {
+        "type": "pause",
+        "src": "http://localhost:5186/dist/audio/feedback/complete.mp3",
+        "position": 0,
+        "duration": 1.1
+      },
+      {
+        "type": "play",
+        "src": "http://localhost:5186/dist/audio/feedback/complete.mp3",
+        "position": 0,
+        "duration": null
+      },
+      {
+        "type": "playing",
+        "src": "http://localhost:5186/dist/audio/feedback/complete.mp3",
+        "position": 0,
+        "duration": 1.1
+      },
+      {
+        "type": "pause",
+        "src": "http://localhost:5186/dist/audio/feedback/complete.mp3",
+        "position": 1.1,
+        "duration": 1.1
+      },
+      {
+        "type": "ended",
+        "src": "http://localhost:5186/dist/audio/feedback/complete.mp3",
+        "position": 1.1,
+        "duration": 1.1
+      }
+    ]
+  }
+]

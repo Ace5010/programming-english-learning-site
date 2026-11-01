@@ -1,0 +1,134 @@
+{
+  "at": "2026-11-01T03:31:04.345Z",
+  "branch": "main",
+  "production": {
+    "passed": 6,
+    "scenarios": [
+      "centered desktop and full-screen mobile categories in all palettes",
+      "preferences persist, real previews do not change autoplay speed, library filter survives",
+      "review question and typed draft survive settings, keyboard trapping, Escape and reload",
+      "daily question and draft stay unchanged across appearance and sound settings",
+      "global export preserves unvisited and damaged records, then retains recovery after visiting",
+      "export from another section includes a newer unsaved daily draft after storage failure"
+    ],
+    "sources": [
+      "production/results.json"
+    ],
+    "supersededFailures": []
+  },
+  "mobile": {
+    "passed": 13,
+    "scenarios": [
+      "phone pages, long words and settings in all themes",
+      "word review dictation stays reachable above the mobile keyboard",
+      "programming review choice at narrow and keyboard-height viewports",
+      "programming review listen at narrow and keyboard-height viewports",
+      "programming review order at narrow and keyboard-height viewports",
+      "programming review fill at narrow and keyboard-height viewports",
+      "programming review write at narrow and keyboard-height viewports",
+      "daily choice at narrow and keyboard-height viewports",
+      "daily listen at narrow and keyboard-height viewports",
+      "daily order at narrow and keyboard-height viewports",
+      "daily fill at narrow and keyboard-height viewports",
+      "daily write at narrow and keyboard-height viewports",
+      "daily speak at narrow and keyboard-height viewports"
+    ],
+    "sources": [
+      "mobile/browser-results.json"
+    ],
+    "supersededFailures": []
+  },
+  "sync": {
+    "passed": 8,
+    "scenarios": [
+      "sync dialog fits 320/360/412/844px and all four themes",
+      "web progress pairs into the APK origin, including historical mastery and both saved curricula",
+      "real favorite control changes sync from web to phone",
+      "two web tabs do not trigger a repeating sync loop",
+      "phone offline changes remain local and upload after reconnection",
+      "pairing and synced progress survive a full reload",
+      "conflicting progress is visibly held until a choice, then both copies are backed up",
+      "disconnect preserves local learning data"
+    ],
+    "sources": [
+      "sync/results.json"
+    ],
+    "supersededFailures": []
+  },
+  "foundation": {
+    "passed": 26,
+    "scenarios": [
+      "independent tutorials, optional interaction, every visible topic reachable and records untouched",
+      "sound sample actions, normal and slow real audio in both voices, no phoneme masquerading as TTS",
+      "new noun role examples play in both voices and sample identity differs from word order",
+      "embedded player is opt-in and removed when leaving pronunciation or reading a word",
+      "original course can open foundation explanation then return to unchanged draft",
+      "lagoon 1440px: both samples, readable meanings, reachable controls",
+      "lagoon 390px: both samples, readable meanings, reachable controls",
+      "lagoon 320px: both samples, readable meanings, reachable controls",
+      "pearl 1440px: both samples, readable meanings, reachable controls",
+      "pearl 390px: both samples, readable meanings, reachable controls",
+      "pearl 320px: both samples, readable meanings, reachable controls",
+      "sky 1440px: both samples, readable meanings, reachable controls",
+      "sky 390px: both samples, readable meanings, reachable controls",
+      "sky 320px: both samples, readable meanings, reachable controls",
+      "mint 1440px: both samples, readable meanings, reachable controls",
+      "mint 390px: both samples, readable meanings, reachable controls",
+      "mint 320px: both samples, readable meanings, reachable controls",
+      "corrupt historical data does not block tutorial and remains byte-for-byte unchanged",
+      "all 21 expanded tutorials: lagoon 1440px, optional feedback and unchanged data",
+      "all 21 expanded tutorials: lagoon 390px, optional feedback and unchanged data",
+      "all 21 expanded tutorials: lagoon 320px, optional feedback and unchanged data",
+      "all 21 expanded tutorials: pearl 320px, optional feedback and unchanged data",
+      "all 21 expanded tutorials: mint 320px, optional feedback and unchanged data",
+      "new audio contrasts: both voices, natural and slow sentences, real local phonemes, and fixed demonstrations",
+      "new demonstration failure recovers locally; chapter and section changes stop playback",
+      "all 21 expanded tutorials: sky 320px, optional feedback and unchanged data"
+    ],
+    "sources": [
+      "foundation/browser-results.json",
+      "foundation-recheck/browser-results.json"
+    ],
+    "supersededFailures": [
+      {
+        "source": "foundation/browser-results.json",
+        "name": "all 21 expanded tutorials: sky 320px, optional feedback and unchanged data"
+      }
+    ]
+  },
+  "localAudio": {
+    "passed": 4,
+    "scenarios": [
+      "programming teaching has local normal and slow without changing the lesson",
+      "daily teaching has local normal and slow without changing the lesson",
+      "daily listening and feedback keep both local speeds and answer draft",
+      "programming listening and feedback keep both local speeds and answer draft"
+    ],
+    "sources": [
+      "local-audio-recheck/browser-results-teaching-has-local-normal-listening-and-feedback.json",
+      "local-audio-listening/browser-results-listening-and-feedback.json",
+      "local-audio-programming/browser-results-programming-listening-and-feedback.json"
+    ],
+    "supersededFailures": [
+      {
+        "source": "local-audio-recheck/browser-results-teaching-has-local-normal-listening-and-feedback.json",
+        "name": "programming listening and feedback keep both local speeds and answer draft"
+      },
+      {
+        "source": "local-audio-recheck/browser-results-teaching-has-local-normal-listening-and-feedback.json",
+        "name": "daily listening and feedback keep both local speeds and answer draft"
+      },
+      {
+        "source": "local-audio-listening/browser-results-listening-and-feedback.json",
+        "name": "programming listening and feedback keep both local speeds and answer draft"
+      }
+    ]
+  },
+  "unit": {
+    "passed": 104,
+    "source": "unit.log"
+  },
+  "typecheck": "types.log",
+  "build": "build-final.log",
+  "environment": "Isolated Chrome profiles, real local MP3 playback, isolated SQLite sync; no personal browser data, live D1, native Android installation, commit or deployment."
+}

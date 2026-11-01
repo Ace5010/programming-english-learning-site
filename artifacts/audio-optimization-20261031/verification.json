@@ -1,0 +1,253 @@
+{
+  "completedAt": "2026-11-01T03:30:58.749229+00:00",
+  "status": "local-complete",
+  "branch": "main",
+  "committed": false,
+  "pushed": false,
+  "published": false,
+  "scope": {
+    "vocabulary": 3620,
+    "normalRecordings": 16404,
+    "normalFilesReplacedOrAdded": 7488,
+    "normalOriginalsRegenerated": 110,
+    "newReadingRecordings": 6,
+    "retiredDuplicateReadingRecordings": 2,
+    "slowUnits": 5990,
+    "slowClips": 11980,
+    "nativeSlowClips": 11973,
+    "preservedSourceSlowClips": 7,
+    "contextualNormalClips": 28,
+    "mp3Packs": 302,
+    "packBytes": 161114728,
+    "deploymentFiles": 16840
+  },
+  "audioRevision": "clear-20261101-v1",
+  "slowManifestSha256": "70df69b82de17c7da8e374b2018412ca497b4ec07cdbcf74dc28dd4fcacc72c0",
+  "normalQuality": {
+    "baselineRecordings": 16400,
+    "currentRecordings": 16404,
+    "before": {
+      "min": -23.11,
+      "p05": -20.88,
+      "median": -19.22,
+      "p95": -17.58,
+      "max": -15.07,
+      "clippedSamples": 0,
+      "shortLeading": 2,
+      "shortTrailing": 4
+    },
+    "after": {
+      "min": -21.74,
+      "p05": -20.62,
+      "median": -20.31,
+      "p95": -19.13,
+      "max": -19.01,
+      "clippedSamples": 0,
+      "shortLeading": 0,
+      "shortTrailing": 0
+    },
+    "baselineChanged": 7483,
+    "baselineRegenerated": 110,
+    "newRecordings": 6,
+    "retiredDuplicates": 2,
+    "installedReplacements": 7488
+  },
+  "protected": {
+    "unchangedAudioFiles": 97,
+    "cambridge": 88,
+    "fixedDemonstrations": 6,
+    "feedbackSounds": 3,
+    "legacyPiperCount": 7122,
+    "learningData": "No user-profile access or migration; browser tests used isolated contexts. Word IDs, learning keys and records remain compatible."
+  },
+  "checks": [
+    {
+      "name": "TypeScript",
+      "command": "npx tsc --noEmit",
+      "passed": true,
+      "log": ".runtime\\audio-optimization-20261031\\types-delivery.log"
+    },
+    {
+      "name": "Production build and packaged assets",
+      "command": "npm run build",
+      "passed": true,
+      "log": ".runtime/audio-optimization-20261031/build-delivery-2.log"
+    },
+    {
+      "name": "Full project verification",
+      "command": "npm run verify",
+      "passed": true,
+      "log": ".runtime/audio-optimization-20261031/verify-delivery-2.log"
+    },
+    {
+      "name": "Audio, course and progress regression tests",
+      "passed": 67,
+      "failed": 0,
+      "log": ".runtime/audio-optimization-20261031/final-tests.log"
+    },
+    {
+      "name": "Foundation and contextual audio unit tests",
+      "passed": 18,
+      "failed": 0,
+      "log": ".runtime/audio-optimization-20261031/focused-tests-delivery.log"
+    },
+    {
+      "name": "Playback, Android bridge and queue tests",
+      "passed": 35,
+      "failed": 0,
+      "log": ".runtime/audio-optimization-20261031/transport-tests-delivery.log"
+    },
+    {
+      "name": "Signal level, cropping and invalid target tests",
+      "command": ".runtime/slow-audio-venv/Scripts/python.exe tools/test-clear-audio.py",
+      "passed": 4,
+      "failed": 0
+    },
+    {
+      "name": "Daily full decode",
+      "decoded": 626,
+      "log": ".runtime/audio-optimization-20261031/daily-decode.log"
+    },
+    {
+      "name": "Foundation and demonstration full decode",
+      "decoded": 716,
+      "log": ".runtime/audio-optimization-20261031/foundation-decode.log"
+    },
+    {
+      "name": "Reading and feedback full decode",
+      "decoded": 589,
+      "log": ".runtime/audio-optimization-20261031/reading-decode.log"
+    },
+    {
+      "name": "Cambridge full decode",
+      "decoded": 88,
+      "log": ".runtime/audio-optimization-20261031/phonemes.log"
+    },
+    {
+      "name": "Slow and normal contextual packs full decode/bounds",
+      "decodedPacks": 302,
+      "slowBounds": 11980,
+      "contextualNormalBounds": 28,
+      "log": ".runtime/audio-optimization-20261031/slow-decode-delivery.log"
+    }
+  ],
+  "browser": [
+    {
+      "name": "Contextual normal/slow, both voices",
+      "passed": 20,
+      "report": "context-browser/results.json"
+    },
+    {
+      "name": "Slow words/sentences, both voices, repeated clicks, navigation cancellation and HTTP failure",
+      "passed": 16,
+      "report": "slow-browser/browser-results.json"
+    },
+    {
+      "name": "Programming course cards, both voices and speeds",
+      "passed": 1,
+      "report": "programming-cards/report.json"
+    },
+    {
+      "name": "Mobile exercise, feedback, summary and review flow",
+      "passed": 1,
+      "report": "programming-flow/report.json"
+    },
+    {
+      "name": "Daily review, desktop/mobile",
+      "passed": 4,
+      "report": "daily-review/report.json"
+    },
+    {
+      "name": "Foundation tutorial/voice/phoneme/demonstration scenarios",
+      "passed": 26,
+      "reports": [
+        "foundation-browser/browser-results.json",
+        "foundation-recheck-2/browser-results.json"
+      ],
+      "note": "Initial 24 passed, 2 failed; stale lesson fixture was corrected and both failed scenarios passed isolated recheck. Original failure evidence retained."
+    },
+    {
+      "name": "Corrected IPA details at 1440/390 px, actual normal/slow playback and unchanged storage",
+      "passed": 4,
+      "report": "visual-audit/report.json"
+    }
+  ],
+  "visualReview": {
+    "inspected": [
+      "visual-audit/present-390.png",
+      "visual-audit/refuse-1440.png",
+      "slow-browser/guy-mobile.png",
+      "daily-review/skipped-1440-lagoon.png",
+      "programming-flow/review-390.png"
+    ],
+    "result": "Required word, meaning, IPA and local playback controls remain readable; no new explanatory or development copy added."
+  },
+  "asr": {
+    "model": "Shared local Qwen3-ASR-1.7B Q8, no answer/reference prompt",
+    "normal": {
+      "screened": 172,
+      "exactNormalizedMatches": 150,
+      "homophones": 7,
+      "spellingVariants": 1,
+      "manifestSha256": "f60964e15def89e902ba8dc4bda51a1b20ae3986ae8e42963618425683e79b0c"
+    },
+    "slowAndContextualNormal": {
+      "screened": 1126,
+      "exactNormalizedMatches": 1033,
+      "homophones": 4,
+      "spellingVariants": 0,
+      "manifestSha256": "70df69b82de17c7da8e374b2018412ca497b4ec07cdbcf74dc28dd4fcacc72c0"
+    },
+    "remainingFlags": "asr-summary.json retains nonexact outputs, including number/letter spelling, homophones, proper names and ambiguous short words. Transcription matches do not measure phoneme accuracy; subjective listening remains a user check.",
+    "regressionHandling": "Compared suspicious clips against prior sources, preserved 7 better sources, and corrected close adjective crop in both speeds/voices.",
+    "browserCapturePreviews": "preview-verification.json"
+  },
+  "codebuddy": {
+    "complete": true,
+    "reviewedVocabulary": 3620,
+    "completedRequests": 15,
+    "findings": 200,
+    "confirmedCredits": 13.76,
+    "priorUnknownRequests": [
+      {
+        "report": "batch-0.json",
+        "submitted": 905,
+        "reason": "No result or usage receipt after host sleep; terminated owned process. Charge unknown."
+      }
+    ],
+    "scope": "Text, meaning and pronunciation risk screening; no audio supplied to CodeBuddy.",
+    "decisions": {
+      "adopted": "Reviewed heteronym contexts; explicit letter readings; five verified IPA corrections.",
+      "notApplied": "KK/IPA convention differences, missing phonetics, unsupported stress claims, bracket-removal and editorial content changes; audio processing retains the displayed content."
+    },
+    "dictionaryChecks": [
+      "https://dictionary.cambridge.org/pronunciation/english/present",
+      "https://dictionary.cambridge.org/pronunciation/english/refuse",
+      "https://dictionary.cambridge.org/us/pronunciation/english/used"
+    ]
+  },
+  "recovery": {
+    "baseline": ".runtime/audio-optimization-20261031/baseline",
+    "oldSlow": ".runtime/audio-optimization-20261031/previous-slow",
+    "retiredReading": ".runtime/audio-optimization-20261031/previous-reading",
+    "beforeFinalContextFix": ".runtime/audio-optimization-20261031/before-final-context-fix",
+    "installation": "installation.json",
+    "finalContextInstallation": "final-context-installation.json"
+  },
+  "executionNotes": [
+    "Windows refused replacing a watched directory; the initial installation rolled back and then completed with individual file moves. A final 4-pack contextual correction likewise used verified file moves and retained backups.",
+    "A concurrent settings task built the same dist directory during one build attempt. That attempt and a premature verify failed on missing dist files. An independent production rebuild and subsequent verification both passed; existing settings edits were preserved.",
+    "The old all-controls browser script still failed on obsolete library/course locators. Current card, review, course, context, slow-queue and tutorial flows were verified by the focused suites listed above; the old failure log was retained.",
+    "No new frontend dependency, paid TTS provider, API key, background service or learning-storage format was introduced. Android APK/device playback and online deployment are outside this website-only delivery."
+  ],
+  "sourceHashes": {
+    "src/audioRevision.ts": "7f76054c21ae7cf86758354ff33391500616b8753703004220adeecaa0acb46d",
+    "src/slowReading.ts": "734a146858843804d9444479b20ef707e9faffa99bedba0e96d74c3b71028e3f",
+    "src/contextualReading.ts": "14b260052238e94d5c8de758285148b35e77215bd500a6aae57240b0b8159dc5",
+    "src/ReadAloud.tsx": "6ef1be23f9cdbd8a06c151427dd45c64f6cf79e7ebb0835d477091db67f505b4",
+    "src/slowPronunciations.ts": "e9ed56c36867544d7c4dd339b31d334a8eb91ea9c93fc1bee7655eb3129c3a85",
+    "src/slowReadingClips.json": "c4e5ec43af27c91e3ca12c309c031237615f55a986488c344ba485f54894ef8b",
+    "src/contextualAudioClips.json": "d1e96a262114e2ca51f53d168c31219171c7361cbb9df77a244e3aa635d2a3a7",
+    "scripts/audio-pronunciation-recipes.json": "d2d7b0088e8c82c2d3e106da1c1bb41b5b780f75c20d94836c34003b5f2c869f"
+  }
+}

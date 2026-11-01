@@ -1,0 +1,15 @@
+{
+  "results": [],
+  "failures": [
+    {
+      "name": "original course can open foundation explanation then return to unchanged draft",
+      "error": "locator.waitFor: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#daily-content .foundation-guide-link').first() to be visible\u001b[22m\n\n    at D:\\vibe项目\\词见\\tools\\test-foundation-browser.mjs:139:73\n    at async scenario (D:\\vibe项目\\词见\\tools\\test-foundation-browser.mjs:48:168)\n    at async file:///D:/vibe%E9%A1%B9%E7%9B%AE/%E8%AF%8D%E8%A7%81/tools/test-foundation-browser.mjs:134:3"
+    },
+    {
+      "name": "new audio contrasts: both voices, natural and slow sentences, real local phonemes, and fixed demonstrations",
+      "error": "locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: '选择声音', exact: true })\u001b[22m\n\n    at D:\\vibe项目\\词见\\tools\\test-foundation-browser.mjs:228:69\n    at async scenario (D:\\vibe项目\\词见\\tools\\test-foundation-browser.mjs:48:168)\n    at async file:///D:/vibe%E9%A1%B9%E7%9B%AE/%E8%AF%8D%E8%A7%81/tools/test-foundation-browser.mjs:194:3"
+    }
+  ],
+  "errors": [],
+  "audioEvents": []
+}

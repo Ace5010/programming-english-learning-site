@@ -22,13 +22,12 @@ interface Props {
   playWord: (item: VocabularyItem, slow?: boolean, key?: string) => void;
   playExample: (item: VocabularyItem, slow?: boolean, key?: string) => void;
   openCourse: () => void;
-  exportRecord: () => void;
 }
 
 const abilityLabels = { meaning: '词义', context: '语境', spelling: '拼写', listening: '听力' };
 type Filter = 'all' | 'due' | 'weak' | 'scheduled';
 
-export default function ReviewVocabulary({ words, progress, favorites, favoriteWarning, disabled, speaking, speed, reviewButtonRef, scenarios, startDue, startWords, toggleFavorite, playWord, playExample, openCourse, exportRecord }: Props) {
+export default function ReviewVocabulary({ words, progress, favorites, favoriteWarning, disabled, speaking, speed, reviewButtonRef, scenarios, startDue, startWords, toggleFavorite, playWord, playExample, openCourse }: Props) {
   const [query, setQuery] = useState('');
   const [filter, setFilter] = useState<Filter>('all');
   const [page, setPage] = useState(1);
@@ -77,6 +76,6 @@ export default function ReviewVocabulary({ words, progress, favorites, favoriteW
         </> : <div className="review-list-empty"><p>{search ? '没有找到相符的已学词汇。' : filter === 'due' ? '暂时没有到期的词，可以提前练习已学词。' : filter === 'weak' ? '目前没有需要额外巩固的词。' : '目前的已学词都已到复习时间。'}</p><button className="daily-button" onClick={resetFilters}>查看全部已学词</button></div>}
       </> : <div className="review-list-empty"><p>暂无可复习的词语。</p><button className="daily-button" onClick={openCourse}>去学习当前课程<Icon name="arrow" /></button></div>}
     </section>
-    <aside className="review-sidebar" aria-label="复习安排"><section className="daily-note"><h2>本次复习</h2><p className="daily-total">待复习 <strong>{counts.due}</strong> 个词</p></section><details className="review-scenarios"><summary><span>场景复习</span><Icon name="chevron" /></summary><div className="review-scenario-content">{scenarios}</div></details><button className="daily-button text" onClick={exportRecord}>导出学习记录</button></aside>
+    <aside className="review-sidebar" aria-label="复习安排"><section className="daily-note"><h2>本次复习</h2><p className="daily-total">待复习 <strong>{counts.due}</strong> 个词</p></section><details className="review-scenarios"><summary><span>场景复习</span><Icon name="chevron" /></summary><div className="review-scenario-content">{scenarios}</div></details></aside>
   </div>;
 }

@@ -148,3 +148,21 @@
   :root[data-theme] *, :root[data-theme] *::before, :root[data-theme] *::after { animation:none!important; transition:none!important; scroll-behavior:auto!important; }
   :root[data-theme] button:hover { translate:none!important; }
 }
+
+/* Stable navigation rows; spacing separates the two navigation levels. */
+:root[data-theme] .header-inner { gap: 16px; }
+:root[data-theme] .section-switch { gap: 8px; }
+:root[data-theme] .section-switch button { min-height: 44px; padding: 10px 12px; border-radius: 10px; line-height: 24px; }
+:root[data-theme] .main-nav { gap: 8px; }
+:root[data-theme] .main-nav .nav-item { min-height: 48px; padding: 10px 12px 14px; gap: 8px; line-height: 24px; border-radius: 10px 10px 0 0; }
+:root[data-theme] :is(.main-nav, .section-switch) .icon { width: 16px; height: 16px; flex: 0 0 16px; }
+:root[data-theme] :is(.main-nav, .section-switch) button:hover:not(:disabled) { translate: none; }
+:root[data-theme] :is(.main-nav, .section-switch) button:active:not(:disabled) { scale: 1; }
+:root[data-theme] :is(.course-word-card, .course-current, .review-card, .progress-card) { border-radius: var(--radius); }
+@media (max-width: 680px) {
+  :root[data-theme] .header-inner { gap: 12px; }
+  :root[data-theme] .section-switch { gap: 4px; }
+  :root[data-theme] .section-switch button { padding: 8px; }
+  :root[data-theme] .main-nav { gap: 4px; }
+  :root[data-theme] .main-nav .nav-item { padding: 10px 8px 14px; }
+}

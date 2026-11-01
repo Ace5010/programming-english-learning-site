@@ -1,0 +1,39 @@
+{
+  "repo": "Haopeng/CTC_for_IF-MDD",
+  "revision": "de46aaf5778c5759c003ffa17657176fee772e77",
+  "license": "apache-2.0",
+  "files": {
+    "MyEncoderASR.py": {
+      "bytes": 7704,
+      "sha256": "0f6f2458cdf2c737c4c996ef3e955fee806505aaece5ff85eb41c7ca24602251"
+    },
+    "README.md": {
+      "bytes": 135,
+      "sha256": "351da67844b1cbac7ffd5a0642826154a37460a3aed8e81c52eb133af28bf8f5"
+    },
+    "config.json": {
+      "bytes": 45,
+      "sha256": "7a45e23db5a80ad86f1368624447847bea77c729f889c1d1a0cf5474cab4d02d"
+    },
+    "inference.yaml": {
+      "bytes": 6692,
+      "sha256": "cc6d5b9615a1961057803b3b5b111cfe75b9bed919450839f199e6f41d249268"
+    },
+    "inference_verbose.yaml": {
+      "bytes": 6751,
+      "sha256": "2000fd1c0f834eed0d2b64049a7bc8c50091a77db01c017188d528318050acc7"
+    },
+    "tokenizer.ckpt": {
+      "bytes": 583,
+      "sha256": "7c18649ce9e77f51b9c68288fdfc9ab16696c4e9a47600fc1f7f441ce8ac6752"
+    },
+    "model.ckpt": {
+      "bytes": 2239857,
+      "sha256": "d1131b48e67758775a07edaff0d77750d037fd4bcf51615adfdf8d0d16077a2a"
+    },
+    "perceived_ssl.ckpt": {
+      "bytes": 1262009603,
+      "sha256": "304670a95f15f90b3787a59cc795d8b7ab6f76d72dc0770721a0f720ca9f9c18"
+    }
+  }
+}

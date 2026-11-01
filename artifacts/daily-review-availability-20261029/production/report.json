@@ -1,0 +1,40 @@
+{
+  "results": [
+    {
+      "mode": "skipped",
+      "width": 1440,
+      "theme": "lagoon",
+      "words": 8,
+      "audio": []
+    },
+    {
+      "mode": "taught",
+      "width": 390,
+      "theme": "lagoon",
+      "words": 8,
+      "audio": []
+    },
+    {
+      "mode": "skipped",
+      "width": 320,
+      "theme": "mint",
+      "words": 8,
+      "audio": []
+    },
+    {
+      "mode": "skipped",
+      "width": 390,
+      "theme": "sky",
+      "words": 8,
+      "audio": []
+    },
+    {
+      "mode": "skipped",
+      "width": 390,
+      "theme": "pearl",
+      "words": 8,
+      "audio": []
+    }
+  ],
+  "errors": []
+}

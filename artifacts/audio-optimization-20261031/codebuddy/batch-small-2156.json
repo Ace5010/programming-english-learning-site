@@ -1,0 +1,369 @@
+{
+  "batch": "small-2156",
+  "firstId": 2156,
+  "lastId": 2405,
+  "submitted": 250,
+  "exitCode": 0,
+  "timedOut": false,
+  "complete": true,
+  "elapsedSeconds": 68.291,
+  "records": [
+    {
+      "model": "deepseek-v4.1-flash",
+      "usage": {
+        "prompt_tokens": 17779,
+        "completion_tokens": 11982,
+        "total_tokens": 29761,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 9419,
+          "rejected_prediction_tokens": 0,
+          "cached_tokens": 0
+        },
+        "prompt_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": 0,
+          "cached_tokens": 7808
+        },
+        "prompt_cache_hit_tokens": 7808,
+        "prompt_cache_miss_tokens": 9971,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 0,
+        "prompt_cache_write_tokens": 0,
+        "completion_thinking_tokens": 9419,
+        "credit": 0.83,
+        "cached_tokens": 0
+      },
+      "requestId": "01a194e81ef8749a92f190742703986e"
+    }
+  ],
+  "result": {
+    "reviewedCount": 250,
+    "findings": [
+      {
+        "id": 2163,
+        "word": "road",
+        "issue": "IPA 'rod' reads as the word rod (/rɑd/), not road; the GOAT diphthong is missing.",
+        "intendedIPA": "roʊd",
+        "context": "The road was wet after the rain.",
+        "confidence": "high"
+      },
+      {
+        "id": 2164,
+        "word": "robot",
+        "issue": "IPA 'robɑt' lacks the /oʊ/ diphthong in the first syllable.",
+        "intendedIPA": "ˈroʊbɑt",
+        "context": "This robot can clean the floor.",
+        "confidence": "high"
+      },
+      {
+        "id": 2166,
+        "word": "role",
+        "issue": "IPA 'rol' lacks the /oʊ/ diphthong and can be misread with /ɑ/.",
+        "intendedIPA": "roʊl",
+        "context": "She has a small role in the play.",
+        "confidence": "high"
+      },
+      {
+        "id": 2167,
+        "word": "room",
+        "issue": "IPA 'rum' reads as rum (/rʌm/), not room; the vowel should be /uː/.",
+        "intendedIPA": "ruːm",
+        "context": "My room is small but bright.",
+        "confidence": "high"
+      },
+      {
+        "id": 2168,
+        "word": "rope",
+        "issue": "IPA 'rop' lacks the /oʊ/ diphthong and can be misread with /ɑ/.",
+        "intendedIPA": "roʊp",
+        "context": "He tied the rope to a tree.",
+        "confidence": "high"
+      },
+      {
+        "id": 2169,
+        "word": "rose",
+        "issue": "IPA 'roz' lacks the /oʊ/ diphthong and can be misread with /ɑ/.",
+        "intendedIPA": "roʊz",
+        "context": "She gave me a red rose.",
+        "confidence": "high"
+      },
+      {
+        "id": 2171,
+        "word": "row",
+        "issue": "Real heteronym: row /roʊ/ (line) vs /raʊ/ (quarrel). The meaning includes 吵闹, but only the /roʊ/ reading is shown.",
+        "intendedIPA": "roʊ",
+        "context": "We sat in the front row.",
+        "confidence": "high"
+      },
+      {
+        "id": 2177,
+        "word": "Rusia",
+        "issue": "Nonstandard spelling of Russia; the IPA field is empty, so the proper noun has no pronunciation.",
+        "intendedIPA": "ˈrʌʃə",
+        "context": "The old map spells Russia as Rusia.",
+        "confidence": "medium"
+      },
+      {
+        "id": 2180,
+        "word": "safe",
+        "issue": "IPA 'sef' uses /ɛ/ instead of the /eɪ/ diphthong.",
+        "intendedIPA": "seɪf",
+        "context": "Keep your passport safe.",
+        "confidence": "high"
+      },
+      {
+        "id": 2181,
+        "word": "safety",
+        "issue": "IPA 'sefti' uses /ɛ/ instead of /eɪ/ in the first syllable.",
+        "intendedIPA": "ˈseɪfti",
+        "context": "Safety comes first at work.",
+        "confidence": "high"
+      },
+      {
+        "id": 2182,
+        "word": "sail",
+        "issue": "IPA 'sel' reads as sell (/sɛl/), not sail; the /eɪ/ diphthong is missing.",
+        "intendedIPA": "seɪl",
+        "context": "They plan to sail across the lake.",
+        "confidence": "high"
+      },
+      {
+        "id": 2184,
+        "word": "sale",
+        "issue": "IPA 'sel' reads as sell (/sɛl/), not sale; the /eɪ/ diphthong is missing.",
+        "intendedIPA": "seɪl",
+        "context": "The house is for sale.",
+        "confidence": "high"
+      },
+      {
+        "id": 2186,
+        "word": "same",
+        "issue": "IPA 'sem' uses /ɛ/ instead of the /eɪ/ diphthong.",
+        "intendedIPA": "seɪm",
+        "context": "We take the same bus every day.",
+        "confidence": "high"
+      },
+      {
+        "id": 2191,
+        "word": "save",
+        "issue": "IPA 'sev' uses /ɛ/ instead of the /eɪ/ diphthong.",
+        "intendedIPA": "seɪv",
+        "context": "I want to save some money.",
+        "confidence": "high"
+      },
+      {
+        "id": 2202,
+        "word": "seat",
+        "issue": "IPA 'sit' reads as sit (/sɪt/), not seat; the vowel should be /iː/.",
+        "intendedIPA": "siːt",
+        "context": "Please take a seat.",
+        "confidence": "high"
+      },
+      {
+        "id": 2210,
+        "word": "separate",
+        "issue": "Real heteronym, but the verb IPA 'sɛpəˌret' has the wrong final vowel and stress. Verb is /ˈsɛpəreɪt/; adjective is /ˈsɛprɪt/.",
+        "intendedIPA": "ˈsɛpəreɪt",
+        "context": "Please separate the white from the yolk.",
+        "confidence": "high"
+      },
+      {
+        "id": 2220,
+        "word": "shame",
+        "issue": "IPA 'ʃem' uses /ɛ/ instead of the /eɪ/ diphthong.",
+        "intendedIPA": "ʃeɪm",
+        "context": "He felt no shame about it.",
+        "confidence": "high"
+      },
+      {
+        "id": 2221,
+        "word": "shape",
+        "issue": "IPA 'ʃep' uses /ɛ/ instead of the /eɪ/ diphthong.",
+        "intendedIPA": "ʃeɪp",
+        "context": "The table has a round shape.",
+        "confidence": "high"
+      },
+      {
+        "id": 2249,
+        "word": "situation",
+        "issue": "IPA 'eʃən' lacks the /eɪ/ diphthong in the final syllable.",
+        "intendedIPA": "ˌsɪtʃuˈeɪʃən",
+        "context": "The situation is getting better.",
+        "confidence": "medium"
+      },
+      {
+        "id": 2255,
+        "word": "skate",
+        "issue": "IPA 'sket' uses /ɛ/ instead of the /eɪ/ diphthong.",
+        "intendedIPA": "skeɪt",
+        "context": "The children skate on the frozen pond.",
+        "confidence": "high"
+      },
+      {
+        "id": 2265,
+        "word": "smooth",
+        "issue": "IPA 'smʊð' uses /ʊ/ instead of /uː/; it does not match the intended vowel.",
+        "intendedIPA": "smuːð",
+        "context": "The stone felt smooth and cool.",
+        "confidence": "high"
+      },
+      {
+        "id": 2266,
+        "word": "snake",
+        "issue": "IPA 'snek' uses /ɛ/ instead of the /eɪ/ diphthong.",
+        "intendedIPA": "sneɪk",
+        "context": "A snake moved through the grass.",
+        "confidence": "high"
+      },
+      {
+        "id": 2268,
+        "word": "snowy",
+        "issue": "IPA 'snoɪ' has the wrong vowel sequence; snowy is /ˈsnoʊi/.",
+        "intendedIPA": "ˈsnoʊi",
+        "context": "The snowy fields looked beautiful.",
+        "confidence": "high"
+      },
+      {
+        "id": 2270,
+        "word": "soap",
+        "issue": "IPA 'sop' reads as sop (/sɑp/), not soap; the /oʊ/ diphthong is missing.",
+        "intendedIPA": "soʊp",
+        "context": "Wash your hands with soap.",
+        "confidence": "high"
+      },
+      {
+        "id": 2286,
+        "word": "soon",
+        "issue": "IPA 'sun' reads as sun (/sʌn/), not soon; the vowel should be /uː/.",
+        "intendedIPA": "suːn",
+        "context": "The train will arrive soon.",
+        "confidence": "high"
+      },
+      {
+        "id": 2290,
+        "word": "soup",
+        "issue": "IPA 'sup' reads as sup (/sʌp/), not soup; the vowel should be /uː/.",
+        "intendedIPA": "suːp",
+        "context": "She made tomato soup for lunch.",
+        "confidence": "high"
+      },
+      {
+        "id": 2294,
+        "word": "space",
+        "issue": "IPA 'spes' uses /ɛ/ instead of the /eɪ/ diphthong.",
+        "intendedIPA": "speɪs",
+        "context": "There is not enough space here.",
+        "confidence": "high"
+      },
+      {
+        "id": 2300,
+        "word": "spoon",
+        "issue": "IPA 'spʊn' uses /ʊ/ instead of /uː/.",
+        "intendedIPA": "spuːn",
+        "context": "He stirred the tea with a spoon.",
+        "confidence": "high"
+      },
+      {
+        "id": 2307,
+        "word": "state",
+        "issue": "IPA 'stet' reads as stet (/stɛt/), not state; the /eɪ/ diphthong is missing.",
+        "intendedIPA": "steɪt",
+        "context": "The state has built a new road.",
+        "confidence": "high"
+      },
+      {
+        "id": 2309,
+        "word": "stay",
+        "issue": "IPA 'ste' lacks the /eɪ/ diphthong.",
+        "intendedIPA": "steɪ",
+        "context": "We plan to stay for two nights.",
+        "confidence": "high"
+      },
+      {
+        "id": 2320,
+        "word": "strange",
+        "issue": "IPA 'strendʒ' uses /ɛ/ instead of the /eɪ/ diphthong.",
+        "intendedIPA": "streɪndʒ",
+        "context": "I heard a strange noise.",
+        "confidence": "high"
+      },
+      {
+        "id": 2321,
+        "word": "stranger",
+        "issue": "IPA 'strendʒɚ' uses /ɛ/ instead of the /eɪ/ diphthong.",
+        "intendedIPA": "ˈstreɪndʒɚ",
+        "context": "A stranger asked me for directions.",
+        "confidence": "high"
+      },
+      {
+        "id": 2342,
+        "word": "supermarket",
+        "issue": "IPA 'sʊpɚ' uses /ʊ/ instead of /uː/ and marks two primary stresses; first syllable should be /ˈsuːpɚ/.",
+        "intendedIPA": "ˈsuːpɚˌmɑrkɪt",
+        "context": "We buy food at the supermarket.",
+        "confidence": "medium"
+      },
+      {
+        "id": 2354,
+        "word": "tail",
+        "issue": "IPA 'tel' reads as tell (/tɛl/), not tail; the /eɪ/ diphthong is missing.",
+        "intendedIPA": "teɪl",
+        "context": "The dog wagged its tail.",
+        "confidence": "high"
+      },
+      {
+        "id": 2355,
+        "word": "tale",
+        "issue": "IPA 'tel' reads as tell (/tɛl/), not tale; the /eɪ/ diphthong is missing.",
+        "intendedIPA": "teɪl",
+        "context": "She told a tale about a brave girl.",
+        "confidence": "high"
+      },
+      {
+        "id": 2358,
+        "word": "tape",
+        "issue": "IPA 'tep' uses /ɛ/ instead of the /eɪ/ diphthong.",
+        "intendedIPA": "teɪp",
+        "context": "He fixed the box with tape.",
+        "confidence": "high"
+      },
+      {
+        "id": 2360,
+        "word": "taste",
+        "issue": "IPA 'test' reads as test (/tɛst/), not taste; the /eɪ/ diphthong is missing.",
+        "intendedIPA": "teɪst",
+        "context": "This soup has a good taste.",
+        "confidence": "high"
+      },
+      {
+        "id": 2366,
+        "word": "telephone",
+        "issue": "IPA has two primary stresses and lacks the /oʊ/ diphthong; standard stress is primary on the first syllable and secondary on the last.",
+        "intendedIPA": "ˈtɛləˌfoʊn",
+        "context": "The telephone rang twice.",
+        "confidence": "medium"
+      },
+      {
+        "id": 2385,
+        "word": "these",
+        "issue": "The second variant 'ðɪs' is the word this, not these; these is /ðiːz/.",
+        "intendedIPA": "ðiːz",
+        "context": "These books are mine.",
+        "confidence": "high"
+      },
+      {
+        "id": 2386,
+        "word": "they",
+        "issue": "IPA 'ðe' lacks the final /ɪ/ of the /eɪ/ diphthong.",
+        "intendedIPA": "ðeɪ",
+        "context": "They live next door.",
+        "confidence": "high"
+      }
+    ],
+    "notes": "250 entries reviewed. No audio was supplied, so all findings are based on text and IPA only. Ordinary American/British variants (rhotic r, /ɑ/ vs /ɔ/, etc.) were not treated as errors. The dataset also has systematic omissions of length marks and bare 'o' for /oʊ/ in many entries; only high-impact or confusable cases are listed. 'Rusia' appears to be a misspelling of Russia rather than a separate pronunciation entry."
+  }
+}

@@ -6,7 +6,7 @@ import { createLesson, answerLesson, nextLesson, summarizeLesson, type LessonTas
 import { REVIEW_KEY, parseReviewProgress, updateReviewProgress, type ReviewProgress } from './review';
 import { persistProgrammingReviewSnapshot } from './programmingProgress';
 import './lesson.css';
-import ThemePicker, { type Theme } from './ThemePicker';
+import SettingsButton from './SettingsButton';
 import type { PlaybackSpeed } from './SpeechControls';
 import ReadAloudText from './ReadAloud';
 import type { FeedbackSound } from './feedbackAudio';
@@ -43,14 +43,13 @@ type Props = {
   playExample: (item: VocabularyItem) => void;
   playFeedback: (sound: FeedbackSound, eventId: string) => void;
   speaking?: string;
-  theme: Theme;
-  onThemeChange: (value: Theme) => void;
+  openSettings: () => void;
   speed: PlaybackSpeed;
   onSpeedChange: (value: PlaybackSpeed) => void;
   stopAudio?: () => void;
 };
 
-export default function ReviewLesson({ pool, onClose, onFinished, playWord, playFeedback, speaking = '', theme, onThemeChange, speed, onSpeedChange, stopAudio }: Props) {
+export default function ReviewLesson({ pool, onClose, onFinished, playWord, playFeedback, speaking = '', openSettings, speed, onSpeedChange, stopAudio }: Props) {
   useEffect(() => { blockSyncApply('review-quiz', true); return () => blockSyncApply('review-quiz', false); }, []);
   const [initial] = useState(loadReview);
   const progress = useRef(initial.progress);
@@ -185,7 +184,7 @@ export default function ReviewLesson({ pool, onClose, onFinished, playWord, play
       <div className="lesson-context"><strong>词汇复习</strong>{!empty && <span>本轮 {lesson.items.length} 个词</span>}</div>
       <div className="lesson-progress-group"><div className="lesson-progress" role="progressbar" aria-label="本轮练习进度" aria-valuemin={0} aria-valuemax={lesson.tasks.length || 1} aria-valuenow={lesson.results.length}><span style={{ width: `${lesson.tasks.length ? lesson.results.length / lesson.tasks.length * 100 : 0}%` }} /></div>
         <span className="lesson-count">{done ? '完成' : empty ? '复习' : `${lesson.index + 1} / ${lesson.tasks.length}`}</span></div>
-      <ThemePicker className="lesson-theme-picker" value={theme} onChange={onThemeChange} />
+      <SettingsButton className="lesson-settings-button" onClick={openSettings} />
     </div></header>
     <main className="lesson-stage"><div key={done ? 'summary' : empty ? 'empty' : task?.id} className={`lesson-content${done ? ' lesson-summary' : ''}`}>
       {warning && <p className="lesson-storage-note" role="alert">{warning}</p>}

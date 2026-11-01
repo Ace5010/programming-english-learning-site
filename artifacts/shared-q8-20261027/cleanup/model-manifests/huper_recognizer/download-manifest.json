@@ -1,0 +1,39 @@
+{
+  "repo": "huper29/huper_recognizer",
+  "revision": "ae1006f83564c92c5e08ca3ea1429364ff091390",
+  "license": "mit",
+  "files": {
+    "README.md": {
+      "bytes": 1488,
+      "sha256": "deed13d2cc97636345f3df52bad5144e16439877e89da8b53fe131ba350e3de7"
+    },
+    "added_tokens.json": {
+      "bytes": 30,
+      "sha256": "236ee37656b33d411746c8ed564b36d8573021969efe5a0bddd0755fe77745fc"
+    },
+    "config.json": {
+      "bytes": 3719,
+      "sha256": "cffd874e08f4c68c8a9352b3abcab22483f98dfd057ec4efc7dce67b80502827"
+    },
+    "preprocessor_config.json": {
+      "bytes": 257,
+      "sha256": "617bd0950f8cc9ac4062e8c73a7be60305ca5790a243df55fa6f44fb671b55b1"
+    },
+    "special_tokens_map.json": {
+      "bytes": 96,
+      "sha256": "234969ae3c2d781b432981506b31006318acd9135336546fed136ab41375f499"
+    },
+    "tokenizer_config.json": {
+      "bytes": 5223,
+      "sha256": "3297da26dbf3d1ec8001a8fbef131743e6b7d1cfb0c98782ecd1957194c743cb"
+    },
+    "vocab.json": {
+      "bytes": 516,
+      "sha256": "0fdd63e20904ae54972224632f1e59d724fca534f92aa2c41353eaf8cb8f6d00"
+    },
+    "model.safetensors": {
+      "bytes": 1262060824,
+      "sha256": "6117404b02dcdeeabf3602feae10c2f95f4f5dcf73df8af92a942e301f510113"
+    }
+  }
+}

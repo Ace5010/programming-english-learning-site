@@ -1,0 +1,137 @@
+{
+  "batch": "small-751",
+  "firstId": 751,
+  "lastId": 905,
+  "submitted": 155,
+  "exitCode": 0,
+  "timedOut": false,
+  "complete": true,
+  "elapsedSeconds": 39.414,
+  "records": [
+    {
+      "model": "deepseek-v4.1-flash",
+      "usage": {
+        "prompt_tokens": 12434,
+        "completion_tokens": 5895,
+        "total_tokens": 18329,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 4562,
+          "rejected_prediction_tokens": 0,
+          "cached_tokens": 0
+        },
+        "prompt_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": 0,
+          "cached_tokens": 7808
+        },
+        "prompt_cache_hit_tokens": 7808,
+        "prompt_cache_miss_tokens": 4626,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 0,
+        "prompt_cache_write_tokens": 0,
+        "completion_thinking_tokens": 4562,
+        "credit": 0.41,
+        "cached_tokens": 0
+      },
+      "requestId": "01a194f6f1567f3c8c65dd487dd8d9f7"
+    }
+  ],
+  "result": {
+    "reviewedCount": 155,
+    "findings": [
+      {
+        "id": 765,
+        "word": "object orientation (OO)",
+        "issue": "Two risks in one entry: the acronym OO must be read as letters (/ˌəʊ ˈəʊ/), not as a word or a long /uː/; and 'object' here is the noun (/ˈɒbdʒɪkt/), not the verb /əbˈdʒekt/.",
+        "intendedIPA": "/ˈɒbdʒɪkt ˌɔːriənˈteɪʃn/; OO = /ˌəʊ ˈəʊ/",
+        "context": "Object orientation (OO) helps you group data and actions together.",
+        "confidence": "high"
+      },
+      {
+        "id": 768,
+        "word": "office automation (OA)",
+        "issue": "The acronym OA should be spelled out as /ˌəʊ ˈeɪ/; a generic reader may treat it as a single token or skip it.",
+        "intendedIPA": "/ˈɒfɪs ˌɔːtəˈmeɪʃn/; OA = /ˌəʊ ˈeɪ/",
+        "context": "Office automation (OA) can print and file documents for you.",
+        "confidence": "high"
+      },
+      {
+        "id": 812,
+        "word": "personal computer (PC)",
+        "issue": "The acronym PC must be read as two letters /ˌpiː ˈsiː/, not as a word; a generic reader may also read the brackets aloud.",
+        "intendedIPA": "/ˌpɜːsənl kəmˈpjuːtə/; PC = /ˌpiː ˈsiː/",
+        "context": "My personal computer (PC) at home runs both games and code.",
+        "confidence": "high"
+      },
+      {
+        "id": 822,
+        "word": "plain text (TXT)",
+        "issue": "The acronym TXT is a file-extension spelling and must be read letter by letter /ˌtiː eks ˈtiː/; standalone 'TXT' has no natural word reading.",
+        "intendedIPA": "/ˌpleɪn ˈtekst/; TXT = /ˌtiː eks ˈtiː/",
+        "context": "Save the log as plain text (TXT) so every tool can read it.",
+        "confidence": "high"
+      },
+      {
+        "id": 829,
+        "word": "popular IT education",
+        "issue": "The acronym IT must be read as letters /ˌaɪ ˈtiː/, not as the pronoun 'it' /ɪt/; this is the main ambiguity in the entry.",
+        "intendedIPA": "/ˌaɪ ˈtiː ˌedʒuˈkeɪʃn/",
+        "context": "Popular IT education helps beginners use computers with confidence.",
+        "confidence": "high"
+      },
+      {
+        "id": 843,
+        "word": "process",
+        "issue": "A verb/noun heteronym by stress only: the meaning 进程 is the noun, so stress falls first. A reader could produce the verb /prəˈses/.",
+        "intendedIPA": "/ˈprəʊses/ (noun)",
+        "context": "A process is a program that is running on the computer.",
+        "confidence": "medium"
+      },
+      {
+        "id": 852,
+        "word": "program [computer]",
+        "issue": "The bracketed '[computer]' is an editorial qualifier, not part of the spoken term; reading the brackets or the qualifier aloud would break the recording. Also note US 'program' vs UK 'programme' spelling, same pronunciation.",
+        "intendedIPA": "/ˈprəʊɡræm/",
+        "context": "This program [computer] prints a report every morning.",
+        "confidence": "medium"
+      },
+      {
+        "id": 878,
+        "word": "quick response (QR) Code",
+        "issue": "The acronym QR must be read as letters /ˌkjuː ˈɑː/; the capital 'C' in 'Code' also signals an inconsistent spelling style but does not change pronunciation.",
+        "intendedIPA": "/ˌkjuːɪk rɪˈspɒns/; QR = /ˌkjuː ˈɑː/",
+        "context": "The quick response (QR) Code on the poster opens the menu.",
+        "confidence": "high"
+      },
+      {
+        "id": "882",
+        "word": "read-only memory (ROM)",
+        "issue": "'read' is a heteronym: here it is the present form /riːd/, not the past /red/. ROM is a word-like acronym pronounced /rɒm/, not spelled out.",
+        "intendedIPA": "/ˌriːd ˈəʊnli ˈmeməri/; ROM = /rɒm/",
+        "context": "The firmware is stored in read-only memory (ROM) on the board.",
+        "confidence": "high"
+      },
+      {
+        "id": 885,
+        "word": "record type",
+        "issue": "'record' is a stress heteronym: as an attributive noun here it takes first-syllable stress, not the verb /rɪˈkɔːd/.",
+        "intendedIPA": "/ˈrekɔːd taɪp/",
+        "context": "Each record type in the database stores one kind of data.",
+        "confidence": "high"
+      },
+      {
+        "id": 889,
+        "word": "red team [cybersecurity]",
+        "issue": "The bracketed '[cybersecurity]' is a domain qualifier, not spoken text; a generic reader would verbalize it and the brackets.",
+        "intendedIPA": "/ˌred ˈtiːm/",
+        "context": "A red team [cybersecurity] tries to break into the system on purpose.",
+        "confidence": "medium"
+      }
+    ],
+    "notes": "All 155 entries (751–905) were checked; every phonetic field is empty, so no IPA could be compared against supplied transcriptions or audio (none was provided) — the IPA above is proposed intended pronunciation. Not flagged, deliberately: ordinary UK/US spelling and vowel variants (normalisation, optical fibre, on-line/online, program/programme), and single-rendering words with no homograph risk. Shared but unrepeated issues: id 844 'process re-engineering' has the same noun-stress requirement as 843; ids 764 and 766 use 'object' as the noun unambiguously, so no finding was raised. Homophones worth knowing but not errors: pharming ≈ farming (814). Spelling consistency only: 'on-line' (774, 775) coexists with 'online' (776–778) — pick one style so recordings and cards match. Meaning note outside pronunciation scope: 777 'online finance' is glossed 网上贷款 (lending), which is narrower than 'finance'; the gloss, not the pronunciation, should be reviewed."
+  }
+}

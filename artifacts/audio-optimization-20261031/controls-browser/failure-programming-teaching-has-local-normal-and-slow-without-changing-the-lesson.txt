@@ -1,0 +1,73 @@
+跳到学习内容
+编程英语
+日常英语
+英语基础
+课程
+复习
+词汇库
+收藏
+同步
+蓝绿
+黑白
+冰蓝
+薄荷绿
+编程英语
+语音设置
+第 1 节 · 仓库里有什么、复制到哪里
+本节课会学到的词语
+
+点击词卡听读音，点击例句听整句。先按自己的节奏学会这 6 个词，再开始测试。
+
+代码仓库
+repository
+/rɪˈpɑːzətɔːri/
+慢速
+打开这个代码仓库。
+Open this repository.
+慢速
+项目
+project
+/ˈprɑːdʒekt/
+慢速
+打开这个项目。
+Open this project.
+慢速
+代码
+code
+/koʊd/
+慢速
+阅读这段代码。
+Read this code.
+慢速
+项目说明文件
+readme
+/ˈriːdˌmiː/
+慢速
+阅读 README 获取帮助。
+Read the README for help.
+慢速
+克隆仓库
+clone
+/kloʊn/
+慢速
+克隆这个项目。
+Clone this project.
+慢速
+派生仓库
+fork
+/fɔːrk/
+慢速
+在 GitHub 上复刻这个项目。
+Fork this project on GitHub.
+慢速
+学好了，再检验一下
+
+本节 10 题，主要检验词义和简单语境。准备好后再开始。
+
+开始测试
+这些我都会，跳过本课
+课程进度
+
+已完成 0 节
+
+导出学习记录

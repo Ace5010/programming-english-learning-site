@@ -1,0 +1,89 @@
+{
+  "batch": "small-251",
+  "firstId": 251,
+  "lastId": 500,
+  "submitted": 250,
+  "exitCode": 0,
+  "timedOut": false,
+  "complete": true,
+  "elapsedSeconds": 44.154,
+  "records": [
+    {
+      "model": "deepseek-v4.1-flash",
+      "usage": {
+        "prompt_tokens": 15091,
+        "completion_tokens": 6159,
+        "total_tokens": 21250,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 5420,
+          "rejected_prediction_tokens": 0,
+          "cached_tokens": 0
+        },
+        "prompt_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": 0,
+          "cached_tokens": 7808
+        },
+        "prompt_cache_hit_tokens": 7808,
+        "prompt_cache_miss_tokens": 7283,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 0,
+        "prompt_cache_write_tokens": 0,
+        "completion_thinking_tokens": 5420,
+        "credit": 0.46,
+        "cached_tokens": 0
+      },
+      "requestId": "01a194f4e0b577d38fccfc44a5fb1e2a"
+    }
+  ],
+  "result": {
+    "reviewedCount": 250,
+    "findings": [
+      {
+        "id": 274,
+        "word": "content metamodel",
+        "issue": "Heteronym: “content” is the noun /ˈkɑːntent/ here (Chinese 内容), not the adjective /kənˈtent/ (“satisfied”). No IPA was supplied, so the noun stress is not pinned down.",
+        "intendedIPA": "/ˈkɑːntent ˈmetəˌmɑːdəl/",
+        "context": "The team drew a content metamodel before writing the database schema.",
+        "confidence": "high"
+      },
+      {
+        "id": 385,
+        "word": "denial of service (DoS)",
+        "issue": "Acronym reading is ambiguous: most learners will try to say DoS as a word /dɑːs/, but in security speech the abbreviation is normally spelled out letter by letter. The parenthetical invites the wrong reading.",
+        "intendedIPA": "/dɪˈnaɪəl əv ˈsɝːvɪs ˌdiː oʊ ˈɛs/",
+        "context": "A denial of service (DoS) attack can take a shop offline for hours.",
+        "confidence": "high"
+      },
+      {
+        "id": 396,
+        "word": "DevOps",
+        "issue": "Code-style mixed-case acronym: it is read as a blend /ˈdevɑːps/, not spelled out as “D-e-ops”. Standalone with no IPA it is easy to read wrongly.",
+        "intendedIPA": "/ˈdevɑːps/",
+        "context": "Our DevOps team ships a small release every Friday.",
+        "confidence": "high"
+      },
+      {
+        "id": 458,
+        "word": "electronic record",
+        "issue": "Heteronym: “record” is the noun /ˈrekɚd/ (Chinese 纪录), not the verb /rɪˈkɔːrd/. Empty phonetic leaves the stress unmarked.",
+        "intendedIPA": "/ɪˌlekˈtrɑːnɪk ˈrekɚd/",
+        "context": "The hospital keeps every electronic record for at least seven years.",
+        "confidence": "medium"
+      },
+      {
+        "id": 443,
+        "word": "e-ME",
+        "issue": "Brand-style spelling with a hyphen and capitals; the reading is the letter name plus “me” /ˌiː ˈmiː/, not a single invented word. Only appears in a template sentence, so nothing in the entry signals the letter-name reading.",
+        "intendedIPA": "/ˌiː ˈmiː/",
+        "context": "You can renew your licence through e-ME instead of visiting an office.",
+        "confidence": "medium"
+      }
+    ],
+    "notes": "All 250 entries have an empty phonetic field, so no IPA mismatch could be checked; the five intendedIPAs above are proposals for words where the reading is genuinely at risk. data (310) was not flagged: /ˈdeɪtə/ vs /ˈdɑːtə/ and fibre/centre/reorganisation/standardisation spellings are ordinary US/UK variants. Data defect outside the pronunciation scope: id 461 “of Schedule 1) Order 2014” is an orphaned fragment of a legal citation with no headword and no pronounceable target — it should be restored to the full title or removed. Two glosses also look drifted from the English and should be checked with the source: 403 digital document is given as 电子证照 (electronic licence rather than 电子文件), and 471 enterprise data modelling as 企业数据模型 (should be 建模). Separately, the example sentences are one reused template and many drop articles (“testing computer program”); that is not a pronunciation error, but it models broken English to beginners."
+  }
+}

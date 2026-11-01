@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import { openSettings, closeSettings, chooseTheme } from './helpers/settings-browser.mjs';
 import { createRequire } from 'node:module';
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
@@ -97,7 +98,7 @@ try {
       for (const size of [{ width: 320, height: 640 }, { width: 360, height: 780 }, { width: 412, height: 915 }, { width: 844, height: 390 }]) {
         await page.setViewportSize(size);
         for (const theme of ['lagoon', 'pearl', 'sky', 'mint']) {
-          await page.getByLabel('界面配色', { exact: true }).selectOption(theme);
+          await chooseTheme(page, theme);
           for (const [section, library] of [['编程英语', '词汇库'], ['日常英语', '词汇库']]) {
             await page.getByRole('button', { name: section, exact: true }).click();
             for (const view of ['课程', '复习', library, '收藏']) {
@@ -109,9 +110,9 @@ try {
           await page.getByLabel('搜索当前列表').fill(longest.word);
           await check(page, `${size.width}/${theme}/long-word`);
           await page.screenshot({ path: path.join(output, `long-word-${theme}-${size.width}.png`) });
-          await page.getByRole('button', { name: '语音设置', exact: true }).click();
+          await openSettings(page, 'audio');
           await check(page, `${size.width}/${theme}/settings`);
-          await page.getByRole('button', { name: '关闭语音设置', exact: true }).click();
+          await closeSettings(page);
           await page.getByLabel('搜索当前列表').fill('');
         }
       }
@@ -128,7 +129,7 @@ try {
         await page.getByRole('button', { name: '开始到期复习', exact: true }).click();
         const exercise = page.locator('.lesson-exercise-dictation'); await exercise.waitFor();
         for (const theme of ['lagoon', 'pearl', 'sky', 'mint']) {
-          await page.locator('.lesson-overlay').getByLabel('界面配色', { exact: true }).selectOption(theme);
+          await chooseTheme(page, theme);
           await check(page, `review/${word.id}/${theme}`);
         }
         const input = exercise.locator('input').first(); await input.fill('test');
@@ -154,7 +155,7 @@ try {
         const root = page.locator(`#${section}-content`), question = root.locator('.daily-question');
         await question.waitFor();
         for (const theme of ['lagoon', 'pearl', 'sky', 'mint']) {
-          await page.getByLabel('界面配色', { exact: true }).selectOption(theme);
+          await chooseTheme(page, theme);
           await check(page, `${section}/${kind}/${theme}`);
         }
         if (kind === 'speak') {

@@ -1,7 +1,11 @@
-type IconName = 'book' | 'today' | 'library' | 'star' | 'check' | 'sound' | 'search' | 'arrow' | 'close' | 'chevron' | 'review' | 'mic' | 'stop';
+type IconName = 'book' | 'today' | 'library' | 'star' | 'check' | 'sound' | 'search' | 'arrow' | 'close' | 'chevron' | 'review' | 'mic' | 'stop' | 'settings' | 'palette' | 'database' | 'download';
 
 export default function Icon({ name, className = '' }: { name: IconName; className?: string }) {
   const paths: Record<IconName, React.ReactNode> = {
+    settings: <><path d="m10 3-.6 2.2-1.6.9-2.2-.6-2 3.5 1.6 1.6v1.8L3.6 14l2 3.5 2.2-.6 1.6.9L10 20h4l.6-2.2 1.6-.9 2.2.6 2-3.5-1.6-1.6v-1.8L20.4 9l-2-3.5-2.2.6-1.6-.9L14 3Z" /><circle cx="12" cy="11.5" r="3" /></>,
+    palette: <><path d="M12 3a9 9 0 1 0 0 18h1.5a2 2 0 0 0 1.4-3.4 1.5 1.5 0 0 1 1.1-2.6h1a4 4 0 0 0 4-4 8 8 0 0 0-9-8Z" /><path d="M7.5 9h.01M11 6.5h.01M16 8h.01M6.5 13h.01" /></>,
+    database: <><ellipse cx="12" cy="5" rx="8" ry="3" /><path d="M4 5v14c0 4 16 4 16 0V5M4 12c0 4 16 4 16 0" /></>,
+    download: <><path d="M12 3v12m-5-5 5 5 5-5M4 16v5h16v-5" /></>,
     mic: <><rect x="9" y="2" width="6" height="13" rx="3" /><path d="M5 10v2a7 7 0 0 0 14 0v-2M12 19v3m-4 0h8" /></>,
     stop: <rect x="5" y="5" width="14" height="14" rx="2" />,
     book: <><path d="M12 6c-3-2-6-2-9-1v14c3-1 6-1 9 1 3-2 6-2 9-1V5c-3-1-6-1-9 1Z" /><path d="M12 6v14" /></>,

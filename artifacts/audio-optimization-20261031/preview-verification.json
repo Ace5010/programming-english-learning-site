@@ -1,0 +1,14 @@
+[
+  {
+    "voice": "aria",
+    "sha256": "dbb394aa96df0b5b9161bc6e3260836177353dc2c66d2938be9164e4a72a7f6e",
+    "transcript": "I am a student.",
+    "modelMs": 180
+  },
+  {
+    "voice": "guy",
+    "sha256": "142f8a650ecc2b1bc49a828161768dd219e465dad596bca88deb15ff0847d9b4",
+    "transcript": "I am a student.",
+    "modelMs": 144
+  }
+]

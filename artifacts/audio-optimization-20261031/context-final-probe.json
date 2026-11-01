@@ -1,0 +1,194 @@
+[
+  {
+    "voice": "aria",
+    "rate": "-28%",
+    "source": "Close friends.",
+    "transcript": "Close.",
+    "bounds": [
+      {
+        "type": "WordBoundary",
+        "offset": 1194580,
+        "duration": 5208330,
+        "text": "Close"
+      },
+      {
+        "type": "WordBoundary",
+        "offset": 6576250,
+        "duration": 7986250,
+        "text": "friends"
+      }
+    ],
+    "ms": 560
+  },
+  {
+    "voice": "aria",
+    "rate": "-28%",
+    "source": "Close to me.",
+    "transcript": "Close.",
+    "bounds": [
+      {
+        "type": "WordBoundary",
+        "offset": 1194580,
+        "duration": 4687500,
+        "text": "Close"
+      },
+      {
+        "type": "WordBoundary",
+        "offset": 6055410,
+        "duration": 1388750,
+        "text": "to"
+      },
+      {
+        "type": "WordBoundary",
+        "offset": 7617910,
+        "duration": 4166660,
+        "text": "me"
+      }
+    ],
+    "ms": 510
+  },
+  {
+    "voice": "aria",
+    "rate": "+0%",
+    "source": "Close friends.",
+    "transcript": "Close.",
+    "bounds": [
+      {
+        "type": "WordBoundary",
+        "offset": 1000000,
+        "duration": 3750000,
+        "text": "Close"
+      },
+      {
+        "type": "WordBoundary",
+        "offset": 4875000,
+        "duration": 5750000,
+        "text": "friends"
+      }
+    ],
+    "ms": 460
+  },
+  {
+    "voice": "aria",
+    "rate": "+0%",
+    "source": "Close to me.",
+    "transcript": "Close.",
+    "bounds": [
+      {
+        "type": "WordBoundary",
+        "offset": 1000000,
+        "duration": 3375000,
+        "text": "Close"
+      },
+      {
+        "type": "WordBoundary",
+        "offset": 4500000,
+        "duration": 1000000,
+        "text": "to"
+      },
+      {
+        "type": "WordBoundary",
+        "offset": 5625000,
+        "duration": 3000000,
+        "text": "me"
+      }
+    ],
+    "ms": 420
+  },
+  {
+    "voice": "guy",
+    "rate": "-28%",
+    "source": "Close friends.",
+    "transcript": "Close.",
+    "bounds": [
+      {
+        "type": "WordBoundary",
+        "offset": 1194580,
+        "duration": 4861250,
+        "text": "Close"
+      },
+      {
+        "type": "WordBoundary",
+        "offset": 6402910,
+        "duration": 7638750,
+        "text": "friends"
+      }
+    ],
+    "ms": 540
+  },
+  {
+    "voice": "guy",
+    "rate": "-28%",
+    "source": "Close to me.",
+    "transcript": "Close.",
+    "bounds": [
+      {
+        "type": "WordBoundary",
+        "offset": 1194580,
+        "duration": 4340410,
+        "text": "Close"
+      },
+      {
+        "type": "WordBoundary",
+        "offset": 5708330,
+        "duration": 1562500,
+        "text": "to"
+      },
+      {
+        "type": "WordBoundary",
+        "offset": 7617910,
+        "duration": 4513750,
+        "text": "me"
+      }
+    ],
+    "ms": 470
+  },
+  {
+    "voice": "guy",
+    "rate": "+0%",
+    "source": "Close friends.",
+    "transcript": "Closed.",
+    "bounds": [
+      {
+        "type": "WordBoundary",
+        "offset": 1000000,
+        "duration": 3500000,
+        "text": "Close"
+      },
+      {
+        "type": "WordBoundary",
+        "offset": 4750000,
+        "duration": 5500000,
+        "text": "friends"
+      }
+    ],
+    "ms": 440
+  },
+  {
+    "voice": "guy",
+    "rate": "+0%",
+    "source": "Close to me.",
+    "transcript": "Close.",
+    "bounds": [
+      {
+        "type": "WordBoundary",
+        "offset": 1000000,
+        "duration": 3125000,
+        "text": "Close"
+      },
+      {
+        "type": "WordBoundary",
+        "offset": 4250000,
+        "duration": 1125000,
+        "text": "to"
+      },
+      {
+        "type": "WordBoundary",
+        "offset": 5625000,
+        "duration": 3250000,
+        "text": "me"
+      }
+    ],
+    "ms": 380
+  }
+]

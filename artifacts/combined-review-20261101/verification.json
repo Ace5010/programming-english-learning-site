@@ -1,0 +1,168 @@
+{
+  "completedAt": "2026-11-01T04:57:35.913109+00:00",
+  "status": "ready-to-commit",
+  "baseCommit": "701f9ef2540672e079d2b2a6ff8eb618ac96a8ef",
+  "branch": "main",
+  "reviewedScopes": [
+    "audio clarity and 0.60 slow recordings",
+    "unified settings and record export",
+    "compact vocabulary library with detail dialogs",
+    "daily review availability",
+    "completion audio recovery",
+    "shared local Q8 and site launcher",
+    "associated documentation and verification artifacts"
+  ],
+  "foundAndFixed": [
+    {
+      "issue": "Daily library inline-word slow control was outside the native modal and could not receive clicks. Escape also reached native modal dismissal.",
+      "source": "src/ReadAloud.tsx",
+      "fix": "Mount the control in its nearest open dialog; consume Escape for the word control before closing the detail dialog.",
+      "before": "library-inline-before/results.json",
+      "after": "library-inline-production/results.json"
+    }
+  ],
+  "checks": {
+    "typescript": "passed",
+    "build": "passed",
+    "verify": "passed",
+    "unit": {
+      "passed": 173,
+      "failed": 0,
+      "evidence": "unit-results.json"
+    },
+    "browser": {
+      "settings": {
+        "passed": 6,
+        "evidence": "settings/results.json"
+      },
+      "sync": {
+        "passed": 8,
+        "evidence": "sync/results.json"
+      },
+      "mobile": {
+        "passed": 13,
+        "evidence": "mobile/browser-results.json"
+      },
+      "completionAudio": {
+        "passed": 6,
+        "evidence": "completion-audio/results.json"
+      },
+      "dailyReview": {
+        "passed": 5,
+        "evidence": "daily-review/report.json"
+      },
+      "libraryInline": {
+        "passed": 4,
+        "evidence": "library-inline-production/results.json"
+      },
+      "localAudio": {
+        "passed": 12,
+        "evidence": "local-audio/browser-results-production.json"
+      }
+    },
+    "browserTotal": 54,
+    "launcherAssertions": 14,
+    "pythonSyntaxFiles": 14,
+    "javascriptSyntaxFiles": 25,
+    "diffWhitespace": {
+      "status": "passed",
+      "exception": "Preserved baseline/preexisting.patch has three single-space blank context lines required by unified diff syntax; excluded from whitespace lint."
+    }
+  },
+  "visualReview": [
+    "settings desktop 1440px",
+    "settings mobile 320px",
+    "library details and inline slow control 1440px and 390px"
+  ],
+  "audio": {
+    "slowRate": 0.6,
+    "slowManifestSha256": "6e953b4ebcd3185732c96fb88213c2a8916ea499de65135815a7a0e7b47a3216",
+    "slowClips": 11980,
+    "voiceMp3Each": 7241,
+    "vocabulary": 3620,
+    "legacyPiperMp3": 7122,
+    "deploymentFiles": 16840,
+    "previousFullDecodeEvidence": "../audio-slow-060-20261101/verification.json"
+  },
+  "scopeNotes": [
+    "Browser tests used disposable profiles; sync used isolated SQLite.",
+    "Native Android installation was not part of this website release.",
+    "Prior dated reports retain their original local-only status; deployment is verified separately after push."
+  ],
+  "sourceSha256": {
+    "scripts/Open-LocalSite.ps1": "3a73228144050611f697344e49cdfaa48f34b3086ecb06abba3098a42fd9caea",
+    "scripts/audio-optimization-inventory.mjs": "8c2ceed551ba0feb1892d7ecd05983ce09c3dfa6971b77d8a77109c988b49a0f",
+    "scripts/audio-pronunciation-recipes.json": "d2d7b0088e8c82c2d3e106da1c1bb41b5b780f75c20d94836c34003b5f2c869f",
+    "scripts/slow-reading-inventory.mjs": "710a2574d2906c210c73a97fadd60b59a42b5c54b98f51bc800794b0694e22c6",
+    "scripts/verify-slow-assets.mjs": "835e7f9531e1a37470c6b90215be3862ba4d6734a5463f636dce9a7fdf7c346d",
+    "scripts/vocabulary-expansion.json": "2352da07ac095628132cbafcc7f22c2c4c0bb456350d68b4a7b42127ca2facda",
+    "src/App.tsx": "8b1ca63f92a0ba84fa3d7fbf61666d011960d6fe4956e976b4dcf569d4b7ea4e",
+    "src/DailyEnglish.tsx": "918fd7a5c010d399ad41a32817ced17096480b99291370565978ef810a26503b",
+    "src/FoundationEnglish.tsx": "cb3808c0b3fe71a52bb6f7f57d12c3128c1fd2079e40ffab0c1cc9ed5cd7af2a",
+    "src/Icon.tsx": "ab646cd1126aafa8365fa416c8e49c256faaab0047e95602552e49aed780f62d",
+    "src/LessonExercise.tsx": "c3510b00af0ff45d602142749b61bdc2385c76bc88917a5e8daa986ed467708b",
+    "src/LibraryCard.tsx": "c725e08fa85324e82bc55f4a84dcaf8322a71c0e41664551f74b771662180bda",
+    "src/ReadAloud.tsx": "84562170d3bf28337ab6efde9a5470ae6e69122d4e836743e31473d47c90cc68",
+    "src/ReviewLesson.tsx": "e9476fee6aeb3cfb0394060648cd919d450a0eb80eb968c66edf59cdc45279c2",
+    "src/ReviewVocabulary.tsx": "b13dcfd2c9128bb0a93728c787168a66dbf6cf9d2e9abf671809e71f53103668",
+    "src/SettingsButton.tsx": "272bbaa1c225161718ed92847c16e07a13ae5986803f49cd8539c59ca26455c9",
+    "src/SettingsDialog.tsx": "6e5531ccc1c49dbf4871b995571a99b69edec76ddb22593fd3f44814c8dde863",
+    "src/SpeechControls.tsx": "f38035ca85d58e8e76ed431e691435066bed12fb27d882b89ff55238358cb150",
+    "src/SyncPanel.tsx": "b54c29beb607b50dc46b4deb2824e86d28f0adc6d8adbb1ecf3eb4ecf63c5998",
+    "src/audioPlayback.ts": "dd7b8b4ba30f5449170e7650a1e70102013fc6efc38300de21866c286aa16598",
+    "src/audioRevision.ts": "7f76054c21ae7cf86758354ff33391500616b8753703004220adeecaa0acb46d",
+    "src/contextualAudioClips.json": "d1e96a262114e2ca51f53d168c31219171c7361cbb9df77a244e3aa635d2a3a7",
+    "src/contextualReading.ts": "14b260052238e94d5c8de758285148b35e77215bd500a6aae57240b0b8159dc5",
+    "src/dailyProgress.ts": "45c3fd24bc8fb91ab030f13ccc109b2dda4bf697402459f92c235a76237b7d2c",
+    "src/feedbackAudio.ts": "006276840e3949670ae1547d9115c027ac39c70a0c01c23038e5dbd606ae3d0d",
+    "src/library.css": "538972d079023bac0db3869e598c6f97c95f7ca22a6442e0ac07cfa472a2b4be",
+    "src/main.tsx": "dfd0c838d86557c3ffa7779d3b29eb9f5b0227b575d686c798a756a05167da15",
+    "src/palettes.css": "fd9c0f8054532a5f0c743c0bc36f018c738e6e92828f836fdd71799d9a5c83b1",
+    "src/programmingReview.ts": "e7175315a8a4c837a2dda1e297e13b527d70806034f649ec4ec1aa6892949489",
+    "src/readingAudio.json": "a948c2e4690fb46d2448bcbfbb283d737b851cce963d671c80277f0817d3f733",
+    "src/settings.css": "d184bb90eb13607970504155b2d423a0beef77bcca28ca1e059cabfb689bcd62",
+    "src/slowPronunciations.ts": "e9ed56c36867544d7c4dd339b31d334a8eb91ea9c93fc1bee7655eb3129c3a85",
+    "src/slowReading.ts": "b21fee2a151a4f0559e5d7806fafa3bd5046d596b17d833a62935d12ebef660c",
+    "src/slowReadingClips.json": "6106d4f07414f66463cf352357a433b101f0f9d12203066622f9a56cf7da8bbf",
+    "src/slowReadingInventory.json": "ad05bbc2c4271b198169304840f08ddee0b0ac3cd13ce62f3cda874f42db9531",
+    "src/vocabulary.ts": "4a9a51bda3fb0aabfc75a6b4975e12115ccb2a7c8454bac41d5c9b06c963e724",
+    "tools/audit_audio_quality.py": "fa3dd51c6b3f500f14ca18c3154b032c0c6174d11482e9c7caad6dde7e61e14b",
+    "tools/benchmark_shared_q8.py": "7163c383e4be03672364ed18dfc87b111b95ca3a345ed55182978f59dbaec5ca",
+    "tools/compare_slow_audio.py": "406a6f3acda5e788d67110562f366820f4d6642cb621106da5819c576f235a73",
+    "tools/complete_reading_audio.py": "a0b03a3066a52a43994e7cdf7604b53678e78c08a21b9fafe84265911086616c",
+    "tools/generate_clear_slow_audio.py": "4af2f121ed354d9c184b981f076fe8685405df0e74aa045c32004a5be6be5842",
+    "tools/generate_slow_audio.py": "a6daa0b98df0b670317f458a845ed8f5412038a2dfc2ae5098da55a1792e1d03",
+    "tools/helpers/contextual-audio-harness.mjs": "4a3745f0668d81b69ec04e0e3625bd572c1d94f05b00b5d50acb93cdc8c60e27",
+    "tools/helpers/settings-browser.mjs": "4844bed91ad951ebdba00c03d8639fe8178d0f88fe15a948cdcc916604b4733a",
+    "tools/helpers/slow-audio-expectation.mjs": "46a3c81ab52ca45f730dba1eda9236ec690835f03bf1cab1bbe50da7c8bebe42",
+    "tools/install_clear_audio.py": "61cec6c05b88d0589b2a1b5bc42ee1b8a91cf20368695fedbe747688ca725130",
+    "tools/optimize_normal_audio.py": "88a99a59c1c16bcd361c05f27c2246a16f6987e1f838852681bc6eda7156e878",
+    "tools/qwen_recognition.py": "85a6317a82f12d0d9e9c917f566c06cef8689d1299fc235f31bf4d58b495b5f0",
+    "tools/review_audio_codebuddy.mjs": "a039ee2a7c9a7dbd40b0acd4cad1c47b55ee2299c0d74b42654acdbbe2f86eab",
+    "tools/serve_pronunciation_lab.py": "93a2bf128e6a6b1757a4d29746f5496e627fcb8987a4abe7742cea56a7d10daa",
+    "tools/shared_q8.py": "e6cc6223414b6990fef92281213f880e27996385b1b9302673af4c06e87dfbb5",
+    "tools/test-clear-audio.mjs": "a1410fbfcccdf7f3975a64e38b15a3b805abbd69b7c6014c1f6e184d4c5bef04",
+    "tools/test-clear-audio.py": "5b0e387a08f839723e789b82c6baacc85bdf0ffa88c6c611f0d4dc5bdb20c7ae",
+    "tools/test-completion-audio-browser.mjs": "a912acba738c1e8b80edc709a5ab81a455f0dd46f643cc3173e9eb9f7b9c625b",
+    "tools/test-contextual-audio-browser.mjs": "9db41d417caf13391bdfa6da9092a23225d7af6711de69360b011666ca208b24",
+    "tools/test-daily-review-availability-browser.mjs": "1313e52df899174e276502fae5cc31127c401ff20b1bed7b30d1465dc9ffa20a",
+    "tools/test-daily-review-availability.mjs": "ff11441716ed22503b96d125900da9c9bc85b9cbbd34de048bc2b2d961a1d4b0",
+    "tools/test-daily-vocabulary.mjs": "211bd8c4c892df1e9840fc505095b59c253c0d5602c213e271c158e1aff4275f",
+    "tools/test-foundation-browser.mjs": "cb9872ef478b0fee1b2698666187025a2a2b470a41eeff9b0476ea75cf3c44df",
+    "tools/test-library-inline-reading-browser.mjs": "cf318a3d01752d51bf56b5a35ec322faeba21c10afb0c991bb82e13bcff1cfa3",
+    "tools/test-local-audio-controls-browser.mjs": "e316d532d5cc9f973bb63dfcb60d18296240b06db4f6247ab855fecdc9f680d4",
+    "tools/test-local-launcher.ps1": "8f9f7b673bcfb820fb7d1c56b36711c25479965e6dde472ac1ca420ab34c435e",
+    "tools/test-mobile-browser.mjs": "2e80f6fd5e93d44cbc0ee3a147ff62a55e3c2c05d1f7e11be745001df50476b4",
+    "tools/test-phonemic-chart-browser.mjs": "c027501a890d45d0f2c3fe7fc12a3f912dfba3214702e3933a4d0c4a6e5b945a",
+    "tools/test-programming-review.mjs": "5766f1d00123b256c358a7e82d621fe23204f902913f4db621eec3cc848ae850",
+    "tools/test-programming-word-check-browser.mjs": "b2fe0862632f2686d56a83b98dcc5d6178923ef58d11074e6436a671dea20188",
+    "tools/test-qwen-asr-lab-browser.mjs": "8aab56ed938fb9c602e470185fa111c5b2e032c40843cf24eafdd656f7ea4e5c",
+    "tools/test-qwen-course-browser.mjs": "afb9e53ecef5d212485aa91b03477fc999b1de7cd63e152e3d278600d57597e1",
+    "tools/test-reading-feedback.mjs": "8850c973c75769c5d98e5510c763c278e81ed211d28961d0d54af11a56364d61",
+    "tools/test-settings-browser.mjs": "9b2e4c63adf6685f8f6e63085ebcf065c688b5dcfffc5460626c061672247c9e",
+    "tools/test-slow-audio-browser.mjs": "87c59e7c787e2d09455b45ef5f1e094d68d337a6253f2a68d47d8ff83a1bc7c1",
+    "tools/test-sync-browser.mjs": "64214c3bf1b1fb9b474f299b5ebd2370f5199d2364ef035509da1a4990ab8da6",
+    "tools/validate_clear_audio.py": "bdfbd95f5fd92dbe022a5d958edd44f6fbcdefb67ae91caaff55060a6733cc72",
+    "tools/verify_slow_audio.py": "b402aed2dbc4ece547d68c7c2da9020e2ca5ac352add846667e37b923fcdfe70"
+  }
+}

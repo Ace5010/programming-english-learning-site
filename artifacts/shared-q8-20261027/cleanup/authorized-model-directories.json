@@ -1,0 +1,72 @@
+[
+  {
+    "path": "D:\\vibe项目\\词见\\.runtime\\pronunciation\\bench-models\\cmubye-phoneme-encoder",
+    "files": 84,
+    "bytes": 2523984822.0
+  },
+  {
+    "path": "D:\\vibe项目\\词见\\.runtime\\pronunciation\\bench-models\\CROTTC-IF-l2-arctic",
+    "files": 124,
+    "bytes": 2672218469.0
+  },
+  {
+    "path": "D:\\vibe项目\\词见\\.runtime\\pronunciation\\bench-models\\CTC_for_IF-MDD",
+    "files": 89,
+    "bytes": 2528524630.0
+  },
+  {
+    "path": "D:\\vibe项目\\词见\\.runtime\\pronunciation\\bench-models\\huper_recognizer",
+    "files": 85,
+    "bytes": 2524134250.0
+  },
+  {
+    "path": "D:\\vibe项目\\词见\\.runtime\\pronunciation\\bench-models\\mHuBERT-147-ipa-ctc-ft",
+    "files": 33,
+    "bytes": 777934048.0
+  },
+  {
+    "path": "D:\\vibe项目\\词见\\.runtime\\pronunciation\\bench-models\\PhoneticXeus",
+    "files": 211,
+    "bytes": 4600645483.0
+  },
+  {
+    "path": "D:\\vibe项目\\词见\\.runtime\\pronunciation\\bench-models\\Qwen3-ASR-1.7B",
+    "files": 266,
+    "bytes": 8923443976.0
+  },
+  {
+    "path": "D:\\vibe项目\\词见\\.runtime\\pronunciation\\bench-models\\SenseVoiceSmall-onnx",
+    "files": 64,
+    "bytes": 1875657065.0
+  },
+  {
+    "path": "D:\\vibe项目\\词见\\.runtime\\pronunciation\\bench-models\\wav2vec2-large-960h",
+    "files": 7,
+    "bytes": 1262011708.0
+  },
+  {
+    "path": "D:\\vibe项目\\词见\\.runtime\\pronunciation\\bench-models\\wav2vec2-large-xlsr-53-l2-arctic-phoneme",
+    "files": 84,
+    "bytes": 2524126016.0
+  },
+  {
+    "path": "D:\\vibe项目\\词见\\.runtime\\pronunciation\\bench-models\\wav2vec2-lv-60-espeak-cv-ft",
+    "files": 7,
+    "bytes": 1263543228.0
+  },
+  {
+    "path": "D:\\vibe项目\\词见\\.runtime\\pronunciation\\bench-models\\wav2vec2-xls-r-300m-timit-phoneme",
+    "files": 8,
+    "bytes": 1261992355.0
+  },
+  {
+    "path": "D:\\vibe项目\\词见\\.runtime\\pronunciation\\bench-models\\wav2vec2-xlsr-53-espeak-cv-ft",
+    "files": 84,
+    "bytes": 2527081653.0
+  },
+  {
+    "path": "D:\\vibe项目\\词见\\.runtime\\pronunciation\\bench-models\\wavlm-phoneme-scorer",
+    "files": 82,
+    "bytes": 2531944444.0
+  }
+]

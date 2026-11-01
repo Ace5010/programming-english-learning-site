@@ -1,8 +1,9 @@
-import { Fragment, useEffect, useMemo, useRef, useState, type ReactNode, type RefObject } from 'react';
+import { Fragment, useEffect, useImperativeHandle, useMemo, useRef, useState, type ReactNode, type Ref, type RefObject } from 'react';
 import Icon from './Icon';
+import LibraryCard from './LibraryCard';
 import { progressStorage, blockSyncApply } from './progressStorage';
 import { downloadRecord } from './nativeAndroid';
-import SpeechControls, { type PlaybackSpeed } from './SpeechControls';
+import type { PlaybackSpeed } from './SpeechControls';
 import DailySpeaking, { dailySpeakingMode, OptionalDailySpeaking } from './DailySpeaking';
 import ReadAloudText, { ReadingControls, clickedReadingText, useReading } from './ReadAloud';
 import type { FeedbackSound } from './feedbackAudio';
@@ -14,7 +15,7 @@ import { courseOverview } from './courseOverviewData';
 import { studyGroups, studyTitle } from './courseStudy';
 import { answerFingerprint } from './answerCorrection';
 import { dailyWordTargets, localWordError } from './dailyWordTargets';
-import { dailyStudyInfo } from './dailyVocabulary';
+import { dailyStudyInfo, dailyVocabularyWords } from './dailyVocabulary';
 import { planWordPractice } from './adaptiveLearning';
 import { createPairState, selectPair, pairsComplete } from './pairPractice';
 import './coursePractice.css';
@@ -27,7 +28,7 @@ import {
   beginDailyExercises, updateDailyDraft, submitDailyAnswer, submitOptionalDailySpeaking, checkDailyAttempt, updateDailyPairs,
   advanceDailySession, finishDailySession, markDailyHelp, markDailyAudioHelp, checkDailyAnswer, speechRetriesExhausted,
   findDailyExercise, summarizeDailySession, dailyReviewErrors, dueDailyLessons,
-  learnDailyLesson, dailyLessonReviewable, dailyKnowledgeReviewable, nextDailyLesson, createDailyReviewSession, dailyExerciseAbility,
+  learnDailyLesson, dailyLessonReviewable, dailyKnowledgeReviewable, dailyKnowledgeAvailable, nextDailyLesson, createDailyReviewSession, dailyExerciseAbility,
   type DailyProgress, type DailyDraft, type DailyMode, type DailyAbility, type DailySession,
 } from './dailyProgress';
 import './daily.css';
@@ -59,19 +60,21 @@ export interface DailyCurriculum {
     session: (lesson: DailyLesson, focus: string) => DailySession;
   };
 }
+export interface DailyEnglishHandle {
+  exportRecord: () => void;
+  getRecovery: () => { savedRaw: string | null; currentProgress: DailyProgress; warning: string } | null;
+}
 interface Props {
   active: boolean;
   view: View;
   navigation: number;
-  voice: 'aria' | 'guy';
   speed: PlaybackSpeed;
-  onSpeedChange: (speed: PlaybackSpeed) => void;
   speaking: string;
   play: (phrase: DailyPhrase, slow?: boolean) => void;
   playFeedback: (sound: FeedbackSound, eventId: string) => void;
   preload: (files: string[]) => void;
   stopAudio: () => void;
-  openVoice: () => void;
+  recordRef?: Ref<DailyEnglishHandle>;
   openLibrary: () => void;
   contentRef?: RefObject<HTMLElement | null>;
   headingRef?: RefObject<HTMLElement | null>;
@@ -91,7 +94,7 @@ function loadProgress(key: string, lessons: DailyLesson[]) {
   catch { return { progress: createDailyProgress(), writable: false, warning: '浏览器暂时无法读取课程记录。请恢复存储权限后重新加载。', raw: null }; }
 }
 
-export default function DailyEnglish({ active, view, navigation, voice, speed, onSpeedChange, speaking, play, playFeedback, preload, stopAudio, openVoice, openLibrary, contentRef, headingRef, curriculum, renderReview, reviewDescription, foundationHelp }: Props) {
+export default function DailyEnglish({ active, view, navigation, speed, speaking, play, playFeedback, preload, stopAudio, recordRef, openLibrary, contentRef, headingRef, curriculum, renderReview, reviewDescription, foundationHelp }: Props) {
   const reading = useReading();
   const storageKey = curriculum?.key ?? DAILY_KEY;
   const label = curriculum?.label ?? '日常英语';
@@ -399,7 +402,7 @@ export default function DailyEnglish({ active, view, navigation, voice, speed, o
     downloadRecord(`${storageKey}-record.json`, content);
   }
 
-  const speechControls = <SpeechControls speed={speed} onSpeedChange={onSpeedChange} voice={voice} openVoice={openVoice} />;
+  useImperativeHandle(recordRef, () => ({ exportRecord, getRecovery: () => warning ? { savedRaw: storedRaw.current, currentProgress: current.current, warning } : null }));
   const audioButton = (audioPhrase: DailyPhrase, slow = false, label?: string, iconOnly = false) => {
     const key = `daily-${audioPhrase.id}-${slow ? 'slow' : 'normal'}`;
     return <button type="button" className={`daily-audio${speaking === key ? ' playing' : ''}${iconOnly ? ' icon-only' : ''}`} aria-label={slow ? !feedback && (exercise?.kind === 'listen' || exercise?.audioPrompt) ? '慢速播放录音' : `慢速朗读 ${audioPhrase.en}` : iconOnly ? label ?? '播放语音' : undefined} title={iconOnly ? label : undefined} aria-pressed={speaking === key} onClick={() => play(audioPhrase, slow)}><Icon name="sound" />{!iconOnly && (label ?? '播放语音')}</button>;
@@ -410,7 +413,7 @@ export default function DailyEnglish({ active, view, navigation, voice, speed, o
     { value: 'meaning', label: '理解' }, { value: 'listening', label: '听力' }, { value: 'writing', label: '排序与书写' },
     ...(dailyLessons.some(item => item.exercises.some(task => task.kind === 'speak')) ? [{ value: 'speaking', label: '口语' }] : []),
   ];
-  const phraseLearned = (id: string) => !!progress.knowledge?.[id] || dailyLessons.some(item => !!progress.lessons[item.id]?.completedAt && item.phrases.some(phrase => phrase.id === id));
+  const phraseLearned = (id: string) => dailyKnowledgeAvailable(progress, id) || !progress.learning && dailyLessons.some(item => !!progress.lessons[item.id]?.completedAt && item.phrases.some(phrase => phrase.id === id));
   const showingFavorites = view === 'favorites';
   const listQuery = showingFavorites ? favoritesQuery : query;
   const updateListQuery = showingFavorites ? setFavoritesQuery : setQuery;
@@ -431,12 +434,12 @@ export default function DailyEnglish({ active, view, navigation, voice, speed, o
     {learnedLessons.filter(hasFocus).length > 0 && <details className="daily-early-review"><summary>主动练习已学内容</summary><ol className="daily-lessons">{learnedLessons.filter(hasFocus).map(item => <li className="daily-lesson-row" key={item.id}><div className="daily-lesson-copy"><h3>{item.title}</h3></div><button className="daily-button" disabled={!writable} onClick={() => start(item, 'review')}>开始练习</button></li>)}</ol></details>}
   </>;
 
-  // Review is a word/expression workspace. Keep the existing admission and
-  // scheduling rules; choosing a target opens its existing context exercises.
-  const reviewTargets = [...new Map(learnedLessons.filter(hasFocus).flatMap(source => {
+  // Browsing includes every taught or self-declared target. Readiness only
+  // controls scheduled review; voluntary practice still checks its scope.
+  const reviewTargets = [...new Map(dailyLessons.flatMap(source => {
     const targetIds = (source as LearningLesson).learningTargets;
     return source.phrases.filter(item => (!targetIds || targetIds.includes(item.id))
-      && (dailyKnowledgeReviewable(progress, item.id) || !progress.learning && !!progress.lessons[source.id]?.completedAt))
+      && (dailyKnowledgeAvailable(progress, item.id) || !progress.learning && !!progress.lessons[source.id]?.completedAt))
       .map(item => [item.id, { item, source }] as const);
   })).values()];
   const nextReview = session?.mode === 'review' && session.stage !== 'summary' && lesson
@@ -446,8 +449,8 @@ export default function DailyEnglish({ active, view, navigation, voice, speed, o
     <div className="daily-panel-heading"><label className="daily-workbook-filter">练习内容<select aria-label="复习内容" value={reviewFocus} onChange={event => setReviewFocus(event.target.value)}><option value="auto">系统安排</option>{reviewOptions.map(option => <option key={option.value} value={option.value}>{option.label}</option>)}</select></label></div>
     {reviewTargets.length ? <ul className="daily-expression-list">{reviewTargets.map(({ item, source }) => <li className="daily-expression" key={item.id}>
       <div className="daily-expression-copy"><strong className="daily-meaning">{item.zh}</strong><div className="daily-inline-reading"><button className={`daily-expression-content${speaking === `daily-${item.id}-normal` ? ' playing' : ''}`} aria-label={`朗读 ${item.en}`} onClick={() => play(item, false)} lang="en">{item.en}</button>{slowAudioButton(item)}</div>{item.note && <p>{item.note}</p>}</div>
-      <button className="daily-button" disabled={!writable} onClick={() => start(source, 'review')}>练习相关词汇</button>
-    </li>)}</ul> : <div className="daily-empty"><h2>暂无可复习的词汇</h2><p>课程中巩固好的词汇会显示在这里。</p></div>}
+      <div className="daily-expression-state">{progress.learning?.selfKnown?.[item.id] ? <span>已会</span> : !dailyKnowledgeReviewable(progress, item.id) && <span>待巩固</span>}<button className="daily-button" disabled={!writable || !createDailyReviewSession(progress, source, reviewFocus as DailyAbility | 'auto').queue.length} onClick={() => start(source, 'review')}>练习相关词汇</button></div>
+    </li>)}</ul> : <div className="daily-empty"><h2>暂无可复习的词汇</h2><p>学过或标记已会的词汇会显示在这里。</p></div>}
   </section>;
 
   const studyPhrase = (item: DailyPhrase) => <div key={item.id} className={`daily-phrase${item.id.startsWith('word-') ? ' daily-phrase-word' : item.id.startsWith('example-') ? ' daily-phrase-example' : ''}${speaking.startsWith(`daily-${item.id}-`) ? ' playing' : ''}`}><span className="daily-meaning" lang="zh-CN"><ReadAloudText text={curriculum?.targetMeaning?.(item.id) ?? item.zh} /></span><div className="daily-inline-reading"><button type="button" className="daily-phrase-content" aria-label={`朗读 ${item.en}`} aria-pressed={speaking === `daily-${item.id}-normal`} onClick={() => play(item, false)}><strong lang="en">{item.en}</strong>{wordCheck && <Icon name="sound" />}</button>{slowAudioButton(item)}</div>{item.id.startsWith('daily-word-') && <p>本轮重点词{dailyWordTargets.find(word => word.id === item.id)?.chunk && <> · <ReadAloudText text={dailyWordTargets.find(word => word.id === item.id)!.chunk!} /><ReadingControls text={dailyWordTargets.find(word => word.id === item.id)!.chunk!} /></>}</p>}{item.note && <p><ReadAloudText text={item.note} /></p>}</div>;
@@ -460,9 +463,9 @@ export default function DailyEnglish({ active, view, navigation, voice, speed, o
 
   return <main ref={contentRef} id={curriculum?.contentId ?? (storageKey === DAILY_KEY ? 'daily-content' : 'programming-content')} className={`content daily-content${customReview && !showSession ? ' programming-review-page' : ''}`} hidden={!active}>
     {warning && <div className="daily-notice" role="alert"><p>{warning.split('日常英语').join(label)}</p><button className="daily-button" onClick={exportRecord}>导出记录</button><button className="daily-button" onClick={reloadSaved}>重新加载记录</button></div>}
-    {view === 'course' && skipUndoAvailable && <div className="daily-note course-skip-notice" role="status"><p>已跳过上一轮的重点内容，未计入练习或复习。</p><button className="daily-button" disabled={!writable} onClick={undoSkip}>撤销跳过</button></div>}
+    {view === 'course' && skipUndoAvailable && <div className="daily-note course-skip-notice" role="status"><p>{storageKey === DAILY_KEY ? '已标记为已会，可在复习中回看。' : '已跳过上一轮的重点内容，未计入练习或复习。'}</p><button className="daily-button" disabled={!writable} onClick={undoSkip}>撤销跳过</button></div>}
     {showSession && session && lesson ? <div className={`daily-session${session.stage === 'study' ? ' is-studying' : ''}`}>
-      <div className="daily-session-top"><button className="daily-button text" onClick={() => { setSessionOpen(false); stopAudio(); }}>〈 返回{view === 'review' ? '复习' : '课程'}{writable ? ' · 已保存' : ''}</button>{speechControls}</div>
+      <div className="daily-session-top"><button className="daily-button text" onClick={() => { setSessionOpen(false); stopAudio(); }}>〈 返回{view === 'review' ? '复习' : '课程'}{writable ? ' · 已保存' : ''}</button></div>
       <header ref={headingRef} className="daily-session-heading"><h1 ref={studyRef} tabIndex={-1}>{session.mode === 'review' ? '读音与用法练习' : studyTitle(lesson, session, dailyLessons)}</h1>
         {session.stage === 'study' && !curriculum?.renderStudy && <p className="daily-study-intro">{wordCheck ? `先慢慢点读、跟读下面的 ${session.adaptive!.focusIds.length} 个新词，读顺、理解后再开始 ${session.adaptive!.budget} 题测试。` : storageKey === DAILY_KEY ? '先看本节的词语、句子和用法，再开始练习；如果已经都会，可以跳过本课。' : '先认识下面的词语，看它们怎样用在句子里；准备好后，开始练习。'}</p>}
         {session.stage !== 'study' && <>{!session.adaptive && <span className="progress-track" role="progressbar" aria-label="本课练习进度" aria-valuemin={0} aria-valuemax={session.queue.length} aria-valuenow={session.answers.length}><i style={{ width: `${session.stage === 'summary' ? 100 : Math.min(100, session.answers.length / Math.max(1, session.queue.length) * 100)}%` }} /></span>}<span className="daily-session-label">{session.adaptive ? session.stage === 'summary' ? `本轮完成 ${session.answers.length} 题` : wordCheck ? `已完成 ${session.answers.length} / ${session.adaptive.budget} 题` : `已完成 ${session.answers.length} 题 · 题数按表现调整，最多 20 题` : `${session.answers.length} / ${session.queue.length} 项`}{session.queue[session.index]?.retry ? ' · 换一道题复查' : ''}</span></>}
@@ -501,7 +504,7 @@ export default function DailyEnglish({ active, view, navigation, voice, speed, o
             <button type="button" className={`daily-option${feedback && exercise.answers?.includes(option) ? ' correct' : feedback && session.draft.choice === option && !feedback.correct ? ' incorrect' : ''}`} aria-pressed={session.draft.choice === option} onClick={event => {
               const alreadySelected = current.current.session?.draft.choice !== null;
               if (!feedback && writable) { draft({ choice: option }); submitRef.current?.focus(); }
-              reading.play(clickedReadingText(event.target, option), false, alreadySelected ? readingHint : undefined);
+              reading.play(clickedReadingText(event.target, option), false, alreadySelected ? readingHint : undefined, option);
             }}><ReadAloudText text={option} inButton /></button><ReadingControls text={option} beforeRead={readingHint} />
           </div>)}</div>}
           {exercise.kind === 'listen' && exercise.options?.some(option => /[A-Za-z]/.test(option)) && <p className="reading-notice">选中后自动朗读；重听或更换英文选项会记为使用提示。</p>}
@@ -511,10 +514,10 @@ export default function DailyEnglish({ active, view, navigation, voice, speed, o
             const marked = !feedback && retryUnchanged && correction?.marks.some(mark => mark.end > start && mark.start < start + token.length);
             return <span className="reading-token" key={tokenIndex}><button type="button" className={`daily-token${marked ? ' needs-correction' : ''}`} aria-label={`撤回 ${token}`} onClick={event => {
               if (!feedback && writable) draft({ order: session.draft.order.filter((_, position) => position !== index) });
-              reading.play(clickedReadingText(event.target, token));
+              reading.play(clickedReadingText(event.target, token), false, undefined, token);
             }}><ReadAloudText text={token} inButton /></button><ReadingControls text={token} /></span>;
           })}</div><div className="daily-tokens" aria-label="可选词块">{exercise.options?.map((token, index) => <span className="reading-token" key={index}>
-            <button type="button" className={`daily-token${session.draft.order.includes(index) ? ' used' : ''}`} aria-pressed={session.draft.order.includes(index)} onClick={event => { if (!feedback && writable && !session.draft.order.includes(index)) draft({ order: [...session.draft.order, index] }); reading.play(clickedReadingText(event.target, token)); }}><ReadAloudText text={token} inButton /></button><ReadingControls text={token} />
+            <button type="button" className={`daily-token${session.draft.order.includes(index) ? ' used' : ''}`} aria-pressed={session.draft.order.includes(index)} onClick={event => { if (!feedback && writable && !session.draft.order.includes(index)) draft({ order: [...session.draft.order, index] }); reading.play(clickedReadingText(event.target, token), false, undefined, token); }}><ReadAloudText text={token} inButton /></button><ReadingControls text={token} />
           </span>)}</div></>}
           {exercise.kind === 'fill' && <div className="daily-fill">{exercise.parts?.map((part, index) => <Fragment key={index}><span><ReadAloudText text={part} /></span>{index < (exercise.blanks?.length ?? 0) && <input aria-label={`第 ${index + 1} 个空`} aria-invalid={!feedback && correction?.blanks.includes(index) || undefined} className={!feedback && correction?.blanks.includes(index) ? 'needs-correction' : ''} data-blank={index} autoComplete="off" autoCorrect="off" autoCapitalize="none" spellCheck={false} value={session.draft.blanks[index] ?? ''} disabled={!!feedback || !writable}
             onCompositionStart={() => { composing.current = true; }} onCompositionEnd={event => { composing.current = false; const value = event.currentTarget.value; const blanks = [...current.current.session!.draft.blanks]; blanks[index] = value; draft({ blanks }); if (value && exercise.blanks![index].every(answer => answer.length === 1)) formRef.current?.querySelector<HTMLInputElement>(`[data-blank="${index + 1}"]`)?.focus(); }}
@@ -573,21 +576,27 @@ export default function DailyEnglish({ active, view, navigation, voice, speed, o
         </section>;
       })()}
     </div> : <>
-      <header ref={headingRef} className="page-heading"><div className="page-heading-copy"><h1>{view === 'course' ? label : view === 'review' ? customReview || storageKey === DAILY_KEY || curriculum?.renderStudy ? '复习' : '场景复习' : showingFavorites ? `收藏的${libraryNoun}` : `${libraryNoun}库`}</h1></div>{speechControls}</header>
+      <header ref={headingRef} className="page-heading"><div className="page-heading-copy"><h1>{view === 'course' ? label : view === 'review' ? customReview || storageKey === DAILY_KEY || curriculum?.renderStudy ? '复习' : '场景复习' : showingFavorites ? `收藏的${libraryNoun}` : `${libraryNoun}库`}</h1></div></header>
       {sessionVisible && session && (view !== 'course' || session.stage === 'summary') && <div className="daily-note daily-resume"><h2>{session.stage === 'summary' ? '查看上次结果' : '接着上次的位置'}</h2><p>{findDailyLesson(session.lessonId)?.title} · {session.stage === 'study' ? '正在学习' : session.adaptive ? `已完成 ${session.answers.length} 题` : `${session.answers.length} / ${session.queue.length} 项练习`}</p><button className="daily-button primary" onClick={() => { setSessionOpen(true); setPendingStart(null); }}>继续<Icon name="arrow" /></button></div>}
       {pendingStart && <div className="daily-notice" role="status"><p>还有一轮学习尚未结束。切换后保留已答记录，当前未提交的输入不再续接。</p><button className="daily-button" onClick={() => { setSessionOpen(sessionVisible); setPendingStart(null); }}>{sessionVisible ? '继续原来的练习' : '保留原来的练习'}</button><button className="daily-button" onClick={() => start(pendingStart.lesson, pendingStart.mode, true)}>开始“{pendingStart.lesson.title}”</button></div>}
       {view === 'library' || showingFavorites ? curriculum?.renderLibrary ? curriculum.renderLibrary({ progress, writable, favorites: showingFavorites, toggleFavorite }) : <section className="daily-panel daily-library" aria-label={showingFavorites ? '收藏的日常词汇' : '词汇查询'}>
         <div className="daily-library-tools"><label><span>查找词汇</span><input type="search" value={listQuery} onChange={event => updateListQuery(event.target.value)} placeholder={showingFavorites ? '搜索收藏的英文或中文' : '输入英文或中文'} /></label>{!showingFavorites && <>
           {storageKey === DAILY_KEY && <label><span>类型</span><select aria-label="词汇类型" value={libraryKind} onChange={event => setLibraryKind(event.target.value as typeof libraryKind)}><option value="words">单词</option><option value="expressions">表达与例句</option><option value="all">全部</option></select></label>}
           <label><span>学习状态</span><select value={libraryFilter} onChange={event => setLibraryFilter(event.target.value as typeof libraryFilter)}><option value="all">全部</option><option value="learned">已学习</option><option value="favorites">收藏</option></select></label></>}</div>
-        {libraryPhrases.length ? <ul className="daily-expression-list">{libraryPhrases.map(item => {
+        {libraryPhrases.length ? <ul className="library-grid">{libraryPhrases.map(item => {
           const favorite = !!progress.favorites?.includes(item.id);
           const learned = phraseLearned(item.id);
-          return <li key={item.id} className="daily-expression"><div className="daily-expression-copy"><span className="daily-meaning" lang="zh-CN"><ReadAloudText text={item.zh} /></span><div className="daily-inline-reading"><button type="button" className={`daily-expression-content${speaking.startsWith(`daily-${item.id}-`) ? ' playing' : ''}`} aria-label={`朗读 ${item.en}`} aria-pressed={speaking === `daily-${item.id}-normal`} onClick={() => play(item, false)}><strong lang="en">{item.en}</strong></button>{slowAudioButton(item)}</div>{item.note && <span><ReadAloudText text={item.note} /></span>}</div><div className="daily-expression-state">{learned && item.id.startsWith('daily-word-') && <button className="daily-button" disabled={!writable || !!session && session.stage !== 'summary'} onClick={() => practiceWords([item.id])}>练习这个词</button>}<span>{dailyKnowledgeReviewable(progress, item.id) ? '已进入复习' : learned ? '正在学习' : '未学习'}</span><button type="button" className="daily-expression-star" aria-label={`${favorite ? '取消收藏' : '收藏'} ${item.en}`} aria-pressed={favorite} disabled={!writable} onClick={() => commit({ ...current.current, favorites: favorite ? (current.current.favorites ?? []).filter(id => id !== item.id) : [...(current.current.favorites ?? []), item.id] })}><Icon name="star" /></button></div></li>;
+          return <li key={item.id}><LibraryCard word={item.en} meaning={item.zh} playing={speaking === `daily-${item.id}-normal`} slowPlaying={speaking === `daily-${item.id}-slow`} play={slow => play(item, slow)}>{close => {
+            const details = dailyVocabularyWords.find(word => word.id === item.id);
+            return <div className="daily-expression">
+            <div className="daily-expression-copy"><span className="daily-meaning" lang="zh-CN"><ReadAloudText text={item.zh} /></span><div className="daily-inline-reading"><button type="button" className={`daily-expression-content${speaking.startsWith(`daily-${item.id}-`) ? ' playing' : ''}`} aria-label={`朗读 ${item.en}`} aria-pressed={speaking === `daily-${item.id}-normal`} onClick={() => play(item, false)}><strong lang="en">{item.en}</strong><Icon name="sound" /></button>{slowAudioButton(item)}</div>{details?.phonetic && <span className="library-detail-phonetic" lang="en">/{details.phonetic}/</span>}{item.note && <span><ReadAloudText text={item.note} /></span>}</div>
+            {details?.examples.map(example => <div key={example.id} className="library-detail-example"><button type="button" className={speaking === `daily-${example.id}-normal` ? 'playing' : ''} aria-label={`朗读 ${example.en}`} aria-pressed={speaking === `daily-${example.id}-normal`} onClick={() => play(example, false)}><span lang="zh-CN">{example.zh}</span><span lang="en">{example.en}</span><Icon name="sound" /></button>{slowAudioButton(example)}</div>)}
+            <div className="daily-expression-state">{learned && (!progress.learning?.selfKnown?.[item.id] || !!progress.learning?.targets[item.id]?.introducedAt) && item.id.startsWith('daily-word-') && <button className="daily-button" disabled={!writable || !!session && session.stage !== 'summary'} onClick={() => { close(); practiceWords([item.id]); }}>练习这个词</button>}<span>{progress.learning?.selfKnown?.[item.id] ? '已会' : dailyKnowledgeReviewable(progress, item.id) ? '已进入复习' : learned ? '待巩固' : '未学习'}</span><button type="button" className="daily-expression-star" aria-label={`${favorite ? '取消收藏' : '收藏'} ${item.en}`} aria-pressed={favorite} disabled={!writable} onClick={() => commit({ ...current.current, favorites: favorite ? (current.current.favorites ?? []).filter(id => id !== item.id) : [...(current.current.favorites ?? []), item.id] })}><Icon name="star" /></button></div>
+          </div>; }}</LibraryCard></li>;
         })}</ul> : <div className="daily-empty">{showingFavorites ? <><h2>{favoriteCount ? '没有找到相符的词汇' : '还没有收藏词汇'}</h2><p>{favoriteCount ? '试试其他关键词。' : '在词汇旁点亮星标，就能在这里找到。'}</p><button className="daily-button" onClick={() => favoriteCount ? setFavoritesQuery('') : openLibrary()}>{favoriteCount ? '查看全部收藏' : '去词汇库收藏'}</button></> : <p>{query.trim() ? '没有找到相符的词汇。' : libraryFilter === 'favorites' ? '还没有收藏词汇。' : '完成教学后，学过的词汇会显示在这里。'}</p>}</div>}
       </section> : customReview && renderReview ? renderReview(scenarios) : <div className={`daily-layout${view === 'course' ? ' course-home' : ''}${overview?.wordCheck || overview?.vocabulary ? ' word-check-home' : ''}`}>
         {view === 'course' ? overview ? <CourseOverview overview={overview} disabled={!writable} start={() => start(overview.source, 'lesson')} skip={canSkipOverview ? skipOverviewCourse : undefined} renderWords={wordCards} renderPhrase={item => <><span className="course-example-meaning" lang="zh-CN">{curriculum?.targetMeaning?.(item.id) ?? item.zh}</span><div className="daily-inline-reading"><button type="button" className="daily-phrase-content" aria-label={`朗读 ${item.en}`} aria-pressed={speaking === `daily-${item.id}-normal`} onClick={() => play(item, false)} lang="en">{item.en}{overview.wordCheck && <Icon name="sound" />}</button>{slowAudioButton(item)}</div></>} /> : <section className="daily-panel daily-empty"><h2>{session?.mode === 'review' && session.stage !== 'summary' ? '下一轮待安排' : skippedPhrases.length ? '当前内容已学或跳过' : '当前内容已完成'}</h2><p>{session?.mode === 'review' && session.stage !== 'summary' ? '还有一轮复习未结束。可以继续复习，或确认切换到新课。' : skippedPhrases.length ? '可以复习已学内容，或把跳过的内容重新加入课程。' : '到“复习”继续巩固学过的内容。'}</p>{replacementCourse && <button className="daily-button primary" disabled={!writable} onClick={() => start(replacementCourse.source, 'lesson')}>开始新的一课</button>}</section> : dailyReview}
-        <aside className="daily-rail" aria-label={`${label}课程进度`}><section className="daily-note"><h2>{view === 'course' ? '课程进度' : '本次复习'}</h2><p className="daily-total">{view === 'course' ? <>已完成 <strong>{completed}</strong> 节</> : <>可练习 <strong>{reviewTargets.length}</strong> 条词汇</>}</p><button className="daily-button text" onClick={exportRecord}>导出学习记录</button></section>{view === 'course' && skippedPhrases.length > 0 && <details className="daily-note course-skipped"><summary>已跳过的内容（{skippedPhrases.length}）</summary><ul className="daily-expression-list">{skippedPhrases.map(item => <li key={item.id} className="daily-expression"><div className="daily-expression-copy"><strong className="daily-meaning">{item.zh}</strong><div className="daily-inline-reading"><button type="button" className="daily-expression-content" aria-label={`朗读 ${item.en}`} onClick={() => play(item, false)} lang="en">{item.en}</button>{slowAudioButton(item)}</div></div><button className="daily-button" disabled={!writable} aria-label={`重新加入课程 ${item.en}`} onClick={() => commit(restoreSkippedTarget(current.current, item.id))}>重新加入课程</button></li>)}</ul></details>}</aside></div>}
+        <aside className="daily-rail" aria-label={`${label}课程进度`}><section className="daily-note"><h2>{view === 'course' ? '课程进度' : '本次复习'}</h2><p className="daily-total">{view === 'course' ? <>已完成 <strong>{completed}</strong> 节</> : <>可练习 <strong>{reviewTargets.length}</strong> 条词汇</>}</p></section>{view === 'course' && skippedPhrases.length > 0 && <details className="daily-note course-skipped"><summary>已跳过的内容（{skippedPhrases.length}）</summary><ul className="daily-expression-list">{skippedPhrases.map(item => <li key={item.id} className="daily-expression"><div className="daily-expression-copy"><strong className="daily-meaning">{item.zh}</strong><div className="daily-inline-reading"><button type="button" className="daily-expression-content" aria-label={`朗读 ${item.en}`} onClick={() => play(item, false)} lang="en">{item.en}</button>{slowAudioButton(item)}</div></div><button className="daily-button" disabled={!writable} aria-label={`重新加入课程 ${item.en}`} onClick={() => commit(restoreSkippedTarget(current.current, item.id))}>重新加入课程</button></li>)}</ul></details>}</aside></div>}
     </>}
   </main>;
 }
