@@ -19,6 +19,23 @@
       "fix": "Mount the control in its nearest open dialog; consume Escape for the word control before closing the detail dialog.",
       "before": "library-inline-before/results.json",
       "after": "library-inline-production/results.json"
+    },
+    {
+      "issue": "Git newline conversion changed a byte-hashed pronunciation recipe between Windows and Linux checkouts.",
+      "source": ".gitattributes",
+      "fix": "Preserve exact bytes for the two JSON inputs hashed by the slow-audio manifest.",
+      "validation": [
+        {
+          "path": "src/slowReadingInventory.json",
+          "sha256": "ad05bbc2c4271b198169304840f08ddee0b0ac3cd13ce62f3cda874f42db9531",
+          "matchesManifest": true
+        },
+        {
+          "path": "scripts/audio-pronunciation-recipes.json",
+          "sha256": "d2d7b0088e8c82c2d3e106da1c1bb41b5b780f75c20d94836c34003b5f2c869f",
+          "matchesManifest": true
+        }
+      ]
     }
   ],
   "checks": {
@@ -67,7 +84,19 @@
     "diffWhitespace": {
       "status": "passed",
       "exception": "Preserved baseline/preexisting.patch has three single-space blank context lines required by unified diff syntax; excluded from whitespace lint."
-    }
+    },
+    "crossPlatformAudioManifestInputs": [
+      {
+        "path": "src/slowReadingInventory.json",
+        "sha256": "ad05bbc2c4271b198169304840f08ddee0b0ac3cd13ce62f3cda874f42db9531",
+        "matchesManifest": true
+      },
+      {
+        "path": "scripts/audio-pronunciation-recipes.json",
+        "sha256": "d2d7b0088e8c82c2d3e106da1c1bb41b5b780f75c20d94836c34003b5f2c869f",
+        "matchesManifest": true
+      }
+    ]
   },
   "visualReview": [
     "settings desktop 1440px",

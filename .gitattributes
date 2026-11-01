@@ -1,0 +1,4 @@
+# These JSON files are hashed byte-for-byte in the slow audio manifest.
+# Preserve their exact bytes across Windows and Linux checkouts.
+src/slowReadingInventory.json -text whitespace=cr-at-eol
+scripts/audio-pronunciation-recipes.json -text whitespace=cr-at-eol
