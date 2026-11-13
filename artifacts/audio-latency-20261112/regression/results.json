@@ -1,0 +1,1075 @@
+{
+  "latencyMs": 900,
+  "results": [
+    {
+      "scenario": "baseline warmed slow word",
+      "type": "playing",
+      "id": 1,
+      "url": "http://127.0.0.1:49427/before/audio/slow/aria/pack-v2-124.mp3?v=0b01acd80051b812",
+      "at": 2091.0999999940395,
+      "position": 0,
+      "rate": 1,
+      "ms": 931.0999999940395,
+      "extraRequests": 1,
+      "expectedFailure": "host returned 200 to Range; wrong position and watchdog timeout"
+    },
+    {
+      "scenario": "fixed warmed slow word",
+      "type": "playing",
+      "id": 0,
+      "url": "http://127.0.0.1:49427/audio/slow/aria/pack-v2-124.mp3?v=0b01acd80051b812",
+      "at": 1034.0999999940395,
+      "position": 6.64,
+      "rate": 1,
+      "ms": 1.899999976158142,
+      "extraRequests": 0
+    },
+    {
+      "scenario": "fixed repeat slow word",
+      "type": "playing",
+      "id": 0,
+      "url": "http://127.0.0.1:49427/audio/slow/aria/pack-v2-124.mp3?v=0b01acd80051b812",
+      "at": 2294.7000000178814,
+      "position": 6.64,
+      "rate": 1,
+      "ms": 1.5
+    },
+    {
+      "scenario": "cold first click completes after download",
+      "type": "playing",
+      "id": 0,
+      "url": "http://127.0.0.1:49427/audio/slow/guy/pack-v2-124.mp3?v=44701d362ef400d3",
+      "at": 1045.300000011921,
+      "position": 6.55,
+      "rate": 1,
+      "ms": 958.4000000059605
+    },
+    {
+      "scenario": "390 course normal",
+      "type": "playing",
+      "id": 0,
+      "url": "http://127.0.0.1:49427/audio/aria/word-1.mp3?v=repository&audio=clear-20261101-v1",
+      "at": 1875.5999999940395,
+      "position": 0,
+      "rate": 1,
+      "ms": 11.199999988079071
+    },
+    {
+      "scenario": "390 course slow",
+      "type": "playing",
+      "id": 15,
+      "url": "http://127.0.0.1:49427/audio/slow/aria/pack-v2-110.mp3?v=5a217b732b37db21",
+      "at": 3945.4000000059605,
+      "position": 31.991633,
+      "rate": 1,
+      "ms": 4.5
+    },
+    {
+      "scenario": "390 scrolled library normal",
+      "type": "playing",
+      "id": 33,
+      "url": "http://127.0.0.1:49427/audio/aria/word-16.mp3?audio=clear-20261101-v1",
+      "at": 9514,
+      "position": 0,
+      "rate": 1,
+      "ms": 28.400000005960464
+    },
+    {
+      "scenario": "390 changed voice",
+      "type": "playing",
+      "id": 62,
+      "url": "http://127.0.0.1:49427/audio/guy/word-16.mp3?audio=clear-20261101-v1",
+      "at": 14879.59999999404,
+      "position": 0,
+      "rate": 1,
+      "ms": 27.799999982118607
+    },
+    {
+      "scenario": "390 scrolled daily normal",
+      "type": "playing",
+      "id": 105,
+      "url": "http://127.0.0.1:49427/audio/daily/guy/daily-word-sad.mp3?v=sad&audio=clear-20261101-v1",
+      "at": 19678.40000000596,
+      "position": 0,
+      "rate": 1,
+      "ms": 38.599999994039536
+    },
+    {
+      "scenario": "1440 course normal",
+      "type": "playing",
+      "id": 0,
+      "url": "http://127.0.0.1:49427/audio/aria/word-1.mp3?v=repository&audio=clear-20261101-v1",
+      "at": 2082.5999999940395,
+      "position": 0,
+      "rate": 1,
+      "ms": 14.900000005960464
+    },
+    {
+      "scenario": "1440 course slow",
+      "type": "playing",
+      "id": 15,
+      "url": "http://127.0.0.1:49427/audio/slow/aria/pack-v2-110.mp3?v=5a217b732b37db21",
+      "at": 4143.800000011921,
+      "position": 31.990363,
+      "rate": 1,
+      "ms": 4.800000011920929
+    },
+    {
+      "scenario": "1440 scrolled library normal",
+      "type": "playing",
+      "id": 32,
+      "url": "http://127.0.0.1:49427/audio/aria/word-16.mp3?audio=clear-20261101-v1",
+      "at": 8875.699999988079,
+      "position": 0,
+      "rate": 1,
+      "ms": 34.099999994039536
+    },
+    {
+      "scenario": "1440 changed voice",
+      "type": "playing",
+      "id": 63,
+      "url": "http://127.0.0.1:49427/audio/guy/word-16.mp3?audio=clear-20261101-v1",
+      "at": 12676.300000011921,
+      "position": 0,
+      "rate": 1,
+      "ms": 45.80000001192093
+    },
+    {
+      "scenario": "1440 scrolled daily normal",
+      "type": "playing",
+      "id": 121,
+      "url": "http://127.0.0.1:49427/audio/daily/guy/daily-word-sad.mp3?v=sad&audio=clear-20261101-v1",
+      "at": 17803.80000001192,
+      "position": 0,
+      "rate": 1,
+      "ms": 61.80000001192093
+    }
+  ],
+  "errors": [],
+  "network": [
+    {
+      "url": "/before/audio/slow/aria/pack-v2-124.mp3?v=0b01acd80051b812",
+      "at": 1794532825376
+    },
+    {
+      "url": "/before/audio/slow/aria/pack-v2-124.mp3?v=0b01acd80051b812",
+      "at": 1794532826378
+    },
+    {
+      "url": "/audio/slow/aria/pack-v2-124.mp3?v=0b01acd80051b812",
+      "at": 1794532830048
+    },
+    {
+      "url": "/audio/slow/guy/pack-v2-124.mp3?v=44701d362ef400d3",
+      "at": 1794532833754
+    },
+    {
+      "url": "/audio/slow/aria/pack-v2-110.mp3?v=5a217b732b37db21",
+      "at": 1794532837143
+    },
+    {
+      "url": "/audio/slow/aria/pack-v2-15.mp3?v=742ef8e09f35246e",
+      "at": 1794532837146
+    },
+    {
+      "url": "/audio/slow/aria/pack-v2-129.mp3?v=dc029989b12cb1f1",
+      "at": 1794532837146
+    },
+    {
+      "url": "/audio/slow/aria/pack-v2-105.mp3?v=c719285e07d5a1cc",
+      "at": 1794532837147
+    },
+    {
+      "url": "/audio/aria/word-1.mp3?v=repository&audio=clear-20261101-v1",
+      "at": 1794532837179
+    },
+    {
+      "url": "/audio/aria/example-1.mp3?v=Open+this+repository.&audio=clear-20261101-v1",
+      "at": 1794532837180
+    },
+    {
+      "url": "/audio/aria/word-2801.mp3?v=project&audio=clear-20261101-v1",
+      "at": 1794532838061
+    },
+    {
+      "url": "/audio/aria/example-2801.mp3?v=Open+this+project.&audio=clear-20261101-v1",
+      "at": 1794532838061
+    },
+    {
+      "url": "/audio/aria/word-3561.mp3?v=code&audio=clear-20261101-v1",
+      "at": 1794532838061
+    },
+    {
+      "url": "/audio/aria/example-3561.mp3?v=Read+this+code.&audio=clear-20261101-v1",
+      "at": 1794532838061
+    },
+    {
+      "url": "/audio/aria/word-20.mp3?v=readme&audio=clear-20261101-v1",
+      "at": 1794532838087
+    },
+    {
+      "url": "/audio/aria/example-20.mp3?v=Read+the+README+for+help.&audio=clear-20261101-v1",
+      "at": 1794532838087
+    },
+    {
+      "url": "/audio/aria/word-4.mp3?v=clone&audio=clear-20261101-v1",
+      "at": 1794532838970
+    },
+    {
+      "url": "/audio/aria/example-4.mp3?v=Clone+this+project.&audio=clear-20261101-v1",
+      "at": 1794532838970
+    },
+    {
+      "url": "/audio/aria/word-5.mp3?v=fork&audio=clear-20261101-v1",
+      "at": 1794532838970
+    },
+    {
+      "url": "/audio/aria/example-5.mp3?v=Fork+this+project+on+GitHub.&audio=clear-20261101-v1",
+      "at": 1794532838971
+    },
+    {
+      "url": "/audio/feedback/correct.mp3",
+      "at": 1794532838999
+    },
+    {
+      "url": "/audio/feedback/complete.mp3",
+      "at": 1794532838999
+    },
+    {
+      "url": "/audio/feedback/pair.mp3",
+      "at": 1794532839874
+    },
+    {
+      "url": "/audio/slow/aria/pack-v2-40.mp3?v=6cad049f4c8eb68b",
+      "at": 1794532842080
+    },
+    {
+      "url": "/audio/slow/aria/pack-v2-13.mp3?v=c5bbe7acbb105d55",
+      "at": 1794532842080
+    },
+    {
+      "url": "/audio/slow/aria/pack-v2-23.mp3?v=c49c65ea82c3dc07",
+      "at": 1794532842081
+    },
+    {
+      "url": "/audio/slow/aria/pack-v2-94.mp3?v=80007b702e8d6b6e",
+      "at": 1794532842081
+    },
+    {
+      "url": "/audio/aria/word-1.mp3?audio=clear-20261101-v1",
+      "at": 1794532842083
+    },
+    {
+      "url": "/audio/aria/word-2.mp3?audio=clear-20261101-v1",
+      "at": 1794532842084
+    },
+    {
+      "url": "/audio/aria/example-2.mp3?v=Make+a+new+branch.&audio=clear-20261101-v1",
+      "at": 1794532843002
+    },
+    {
+      "url": "/audio/aria/word-3.mp3?audio=clear-20261101-v1",
+      "at": 1794532843002
+    },
+    {
+      "url": "/audio/aria/example-3.mp3?v=Commit+your+code.&audio=clear-20261101-v1",
+      "at": 1794532843004
+    },
+    {
+      "url": "/audio/aria/word-4.mp3?audio=clear-20261101-v1",
+      "at": 1794532843004
+    },
+    {
+      "url": "/audio/aria/word-5.mp3?audio=clear-20261101-v1",
+      "at": 1794532843005
+    },
+    {
+      "url": "/audio/aria/word-6.mp3?audio=clear-20261101-v1",
+      "at": 1794532843005
+    },
+    {
+      "url": "/audio/aria/example-6.mp3?v=Merge+these+two+branches.&audio=clear-20261101-v1",
+      "at": 1794532843911
+    },
+    {
+      "url": "/audio/aria/word-17.mp3?audio=clear-20261101-v1",
+      "at": 1794532843912
+    },
+    {
+      "url": "/audio/aria/word-18.mp3?audio=clear-20261101-v1",
+      "at": 1794532843912
+    },
+    {
+      "url": "/audio/aria/word-11.mp3?audio=clear-20261101-v1",
+      "at": 1794532843912
+    },
+    {
+      "url": "/audio/aria/word-12.mp3?audio=clear-20261101-v1",
+      "at": 1794532843912
+    },
+    {
+      "url": "/audio/aria/word-20.mp3?audio=clear-20261101-v1",
+      "at": 1794532843912
+    },
+    {
+      "url": "/audio/aria/word-16.mp3?audio=clear-20261101-v1",
+      "at": 1794532844819
+    },
+    {
+      "url": "/audio/aria/word-13.mp3?audio=clear-20261101-v1",
+      "at": 1794532844819
+    },
+    {
+      "url": "/audio/aria/word-15.mp3?audio=clear-20261101-v1",
+      "at": 1794532844819
+    },
+    {
+      "url": "/audio/aria/word-14.mp3?audio=clear-20261101-v1",
+      "at": 1794532844819
+    },
+    {
+      "url": "/audio/aria/word-19.mp3?audio=clear-20261101-v1",
+      "at": 1794532844819
+    },
+    {
+      "url": "/audio/aria/word-21.mp3?audio=clear-20261101-v1",
+      "at": 1794532844819
+    },
+    {
+      "url": "/audio/aria/word-8.mp3?audio=clear-20261101-v1",
+      "at": 1794532846528
+    },
+    {
+      "url": "/audio/aria/word-9.mp3?audio=clear-20261101-v1",
+      "at": 1794532846529
+    },
+    {
+      "url": "/audio/aria/word-10.mp3?audio=clear-20261101-v1",
+      "at": 1794532846529
+    },
+    {
+      "url": "/audio/slow/guy/pack-v2-110.mp3?v=eb77a37e3cf13762",
+      "at": 1794532846559
+    },
+    {
+      "url": "/audio/slow/guy/pack-v2-15.mp3?v=f37ab8b546d16335",
+      "at": 1794532846559
+    },
+    {
+      "url": "/audio/slow/guy/pack-v2-129.mp3?v=cc590ff694070d0b",
+      "at": 1794532846559
+    },
+    {
+      "url": "/audio/slow/guy/pack-v2-40.mp3?v=284a2966cea1eaf4",
+      "at": 1794532847435
+    },
+    {
+      "url": "/audio/slow/guy/pack-v2-13.mp3?v=851cc53f17d9c2ae",
+      "at": 1794532847435
+    },
+    {
+      "url": "/audio/slow/guy/pack-v2-23.mp3?v=46862b33f9fffc8d",
+      "at": 1794532847435
+    },
+    {
+      "url": "/audio/slow/guy/pack-v2-94.mp3?v=894849fcbc6bbb9c",
+      "at": 1794532847467
+    },
+    {
+      "url": "/audio/guy/word-1.mp3?audio=clear-20261101-v1",
+      "at": 1794532847467
+    },
+    {
+      "url": "/audio/guy/example-1.mp3?v=Open+this+repository.&audio=clear-20261101-v1",
+      "at": 1794532847467
+    },
+    {
+      "url": "/audio/guy/word-2.mp3?audio=clear-20261101-v1",
+      "at": 1794532848349
+    },
+    {
+      "url": "/audio/guy/example-2.mp3?v=Make+a+new+branch.&audio=clear-20261101-v1",
+      "at": 1794532848349
+    },
+    {
+      "url": "/audio/guy/word-3.mp3?audio=clear-20261101-v1",
+      "at": 1794532848362
+    },
+    {
+      "url": "/audio/guy/example-3.mp3?v=Commit+your+code.&audio=clear-20261101-v1",
+      "at": 1794532848377
+    },
+    {
+      "url": "/audio/guy/word-4.mp3?audio=clear-20261101-v1",
+      "at": 1794532848377
+    },
+    {
+      "url": "/audio/guy/example-4.mp3?v=Clone+this+project.&audio=clear-20261101-v1",
+      "at": 1794532848392
+    },
+    {
+      "url": "/audio/guy/word-5.mp3?audio=clear-20261101-v1",
+      "at": 1794532849258
+    },
+    {
+      "url": "/audio/guy/example-5.mp3?v=Fork+this+project+on+GitHub.&audio=clear-20261101-v1",
+      "at": 1794532849258
+    },
+    {
+      "url": "/audio/guy/word-6.mp3?audio=clear-20261101-v1",
+      "at": 1794532849273
+    },
+    {
+      "url": "/audio/guy/example-6.mp3?v=Merge+these+two+branches.&audio=clear-20261101-v1",
+      "at": 1794532849288
+    },
+    {
+      "url": "/audio/guy/word-15.mp3?audio=clear-20261101-v1",
+      "at": 1794532849288
+    },
+    {
+      "url": "/audio/guy/word-11.mp3?audio=clear-20261101-v1",
+      "at": 1794532849304
+    },
+    {
+      "url": "/audio/guy/word-16.mp3?audio=clear-20261101-v1",
+      "at": 1794532850175
+    },
+    {
+      "url": "/audio/guy/word-14.mp3?audio=clear-20261101-v1",
+      "at": 1794532850175
+    },
+    {
+      "url": "/audio/guy/word-12.mp3?audio=clear-20261101-v1",
+      "at": 1794532850175
+    },
+    {
+      "url": "/audio/guy/word-9.mp3?audio=clear-20261101-v1",
+      "at": 1794532850205
+    },
+    {
+      "url": "/audio/guy/word-13.mp3?audio=clear-20261101-v1",
+      "at": 1794532850205
+    },
+    {
+      "url": "/audio/guy/word-8.mp3?audio=clear-20261101-v1",
+      "at": 1794532850205
+    },
+    {
+      "url": "/audio/guy/word-18.mp3?audio=clear-20261101-v1",
+      "at": 1794532851083
+    },
+    {
+      "url": "/audio/guy/word-10.mp3?audio=clear-20261101-v1",
+      "at": 1794532851083
+    },
+    {
+      "url": "/audio/guy/word-17.mp3?audio=clear-20261101-v1",
+      "at": 1794532851083
+    },
+    {
+      "url": "/audio/guy/word-21.mp3?audio=clear-20261101-v1",
+      "at": 1794532851111
+    },
+    {
+      "url": "/audio/guy/word-20.mp3?audio=clear-20261101-v1",
+      "at": 1794532851111
+    },
+    {
+      "url": "/audio/guy/word-19.mp3?audio=clear-20261101-v1",
+      "at": 1794532851111
+    },
+    {
+      "url": "/audio/slow/guy/pack-v2-10.mp3?v=8a494efa861154bc",
+      "at": 1794532851281
+    },
+    {
+      "url": "/audio/slow/guy/pack-v2-22.mp3?v=fcbb8faf20f96bcd",
+      "at": 1794532851283
+    },
+    {
+      "url": "/audio/slow/guy/pack-v2-28.mp3?v=05ec22a3e545b077",
+      "at": 1794532851283
+    },
+    {
+      "url": "/audio/slow/guy/pack-v2-3.mp3?v=9926104b1cf5e73a",
+      "at": 1794532851283
+    },
+    {
+      "url": "/audio/slow/guy/pack-v2-139.mp3?v=97bbf72d3af1ce7b",
+      "at": 1794532851283
+    },
+    {
+      "url": "/audio/slow/guy/pack-v2-30.mp3?v=d44aabf8906ac531",
+      "at": 1794532851315
+    },
+    {
+      "url": "/audio/daily/guy/daily-word-i.mp3?v=I&audio=clear-20261101-v1",
+      "at": 1794532852195
+    },
+    {
+      "url": "/audio/daily/guy/daily-word-i-example-1.mp3?v=I+am+Ben.&audio=clear-20261101-v1",
+      "at": 1794532852195
+    },
+    {
+      "url": "/audio/daily/guy/daily-word-you.mp3?v=you&audio=clear-20261101-v1",
+      "at": 1794532852196
+    },
+    {
+      "url": "/audio/daily/guy/daily-word-am.mp3?v=am&audio=clear-20261101-v1",
+      "at": 1794532852196
+    },
+    {
+      "url": "/audio/daily/guy/daily-word-you-example-1.mp3?v=You+are+Ben.&audio=clear-20261101-v1",
+      "at": 1794532852196
+    },
+    {
+      "url": "/audio/daily/guy/daily-word-am-example-1.mp3?v=I+am+Ben.&audio=clear-20261101-v1",
+      "at": 1794532852210
+    },
+    {
+      "url": "/audio/daily/guy/daily-word-are.mp3?v=are&audio=clear-20261101-v1",
+      "at": 1794532852210
+    },
+    {
+      "url": "/audio/daily/guy/daily-word-are-example-1.mp3?v=You+are+Ben.&audio=clear-20261101-v1",
+      "at": 1794532852222
+    },
+    {
+      "url": "/audio/daily/guy/daily-word-is.mp3?v=is&audio=clear-20261101-v1",
+      "at": 1794532852226
+    },
+    {
+      "url": "/audio/daily/guy/daily-word-is-example-1.mp3?v=Ben+is+a+student.&audio=clear-20261101-v1",
+      "at": 1794532853111
+    },
+    {
+      "url": "/audio/daily/guy/daily-word-a.mp3?v=a&audio=clear-20261101-v1",
+      "at": 1794532853111
+    },
+    {
+      "url": "/audio/daily/guy/daily-word-a-example-1.mp3?v=I+am+a+student.&audio=clear-20261101-v1",
+      "at": 1794532853111
+    },
+    {
+      "url": "/audio/daily/guy/hello.mp3?v=Hello%21&audio=clear-20261101-v1",
+      "at": 1794532853112
+    },
+    {
+      "url": "/audio/daily/guy/goodbye.mp3?v=Goodbye%21&audio=clear-20261101-v1",
+      "at": 1794532853128
+    },
+    {
+      "url": "/audio/daily/guy/daily-word-he.mp3?v=he&audio=clear-20261101-v1",
+      "at": 1794532853128
+    },
+    {
+      "url": "/audio/daily/guy/daily-word-she.mp3?v=she&audio=clear-20261101-v1",
+      "at": 1794532854021
+    },
+    {
+      "url": "/audio/daily/guy/daily-word-my.mp3?v=my&audio=clear-20261101-v1",
+      "at": 1794532854021
+    },
+    {
+      "url": "/audio/daily/guy/daily-word-name.mp3?v=name&audio=clear-20261101-v1",
+      "at": 1794532854021
+    },
+    {
+      "url": "/audio/daily/guy/daily-word-happy.mp3?v=happy&audio=clear-20261101-v1",
+      "at": 1794532854021
+    },
+    {
+      "url": "/audio/daily/guy/daily-word-student.mp3?v=student&audio=clear-20261101-v1",
+      "at": 1794532854036
+    },
+    {
+      "url": "/audio/daily/guy/daily-word-good.mp3?v=good&audio=clear-20261101-v1",
+      "at": 1794532854036
+    },
+    {
+      "url": "/audio/daily/guy/daily-word-tired.mp3?v=tired&audio=clear-20261101-v1",
+      "at": 1794532854928
+    },
+    {
+      "url": "/audio/daily/guy/daily-word-teacher.mp3?v=teacher&audio=clear-20261101-v1",
+      "at": 1794532854928
+    },
+    {
+      "url": "/audio/daily/guy/daily-word-not.mp3?v=not&audio=clear-20261101-v1",
+      "at": 1794532854930
+    },
+    {
+      "url": "/audio/daily/guy/daily-word-fine.mp3?v=fine&audio=clear-20261101-v1",
+      "at": 1794532854930
+    },
+    {
+      "url": "/audio/daily/guy/daily-word-where.mp3?v=where&audio=clear-20261101-v1",
+      "at": 1794532854942
+    },
+    {
+      "url": "/audio/daily/guy/daily-word-sad.mp3?v=sad&audio=clear-20261101-v1",
+      "at": 1794532854942
+    },
+    {
+      "url": "/audio/daily/guy/daily-word-china.mp3?v=China&audio=clear-20261101-v1",
+      "at": 1794532855836
+    },
+    {
+      "url": "/audio/daily/guy/daily-word-from.mp3?v=from&audio=clear-20261101-v1",
+      "at": 1794532855836
+    },
+    {
+      "url": "/audio/slow/aria/pack-v2-15.mp3?v=742ef8e09f35246e",
+      "at": 1794532859199
+    },
+    {
+      "url": "/audio/slow/aria/pack-v2-110.mp3?v=5a217b732b37db21",
+      "at": 1794532859199
+    },
+    {
+      "url": "/audio/slow/aria/pack-v2-129.mp3?v=dc029989b12cb1f1",
+      "at": 1794532859201
+    },
+    {
+      "url": "/audio/slow/aria/pack-v2-105.mp3?v=c719285e07d5a1cc",
+      "at": 1794532859202
+    },
+    {
+      "url": "/audio/aria/word-1.mp3?v=repository&audio=clear-20261101-v1",
+      "at": 1794532859276
+    },
+    {
+      "url": "/audio/aria/example-1.mp3?v=Open+this+repository.&audio=clear-20261101-v1",
+      "at": 1794532859277
+    },
+    {
+      "url": "/audio/aria/word-2801.mp3?v=project&audio=clear-20261101-v1",
+      "at": 1794532860115
+    },
+    {
+      "url": "/audio/aria/example-2801.mp3?v=Open+this+project.&audio=clear-20261101-v1",
+      "at": 1794532860115
+    },
+    {
+      "url": "/audio/aria/word-3561.mp3?v=code&audio=clear-20261101-v1",
+      "at": 1794532860115
+    },
+    {
+      "url": "/audio/aria/example-3561.mp3?v=Read+this+code.&audio=clear-20261101-v1",
+      "at": 1794532860126
+    },
+    {
+      "url": "/audio/aria/example-20.mp3?v=Read+the+README+for+help.&audio=clear-20261101-v1",
+      "at": 1794532860188
+    },
+    {
+      "url": "/audio/aria/word-20.mp3?v=readme&audio=clear-20261101-v1",
+      "at": 1794532860188
+    },
+    {
+      "url": "/audio/aria/word-4.mp3?v=clone&audio=clear-20261101-v1",
+      "at": 1794532861024
+    },
+    {
+      "url": "/audio/aria/example-4.mp3?v=Clone+this+project.&audio=clear-20261101-v1",
+      "at": 1794532861024
+    },
+    {
+      "url": "/audio/aria/word-5.mp3?v=fork&audio=clear-20261101-v1",
+      "at": 1794532861027
+    },
+    {
+      "url": "/audio/aria/example-5.mp3?v=Fork+this+project+on+GitHub.&audio=clear-20261101-v1",
+      "at": 1794532861027
+    },
+    {
+      "url": "/audio/feedback/correct.mp3",
+      "at": 1794532861100
+    },
+    {
+      "url": "/audio/feedback/complete.mp3",
+      "at": 1794532861100
+    },
+    {
+      "url": "/audio/feedback/pair.mp3",
+      "at": 1794532861934
+    },
+    {
+      "url": "/audio/slow/aria/pack-v2-40.mp3?v=6cad049f4c8eb68b",
+      "at": 1794532864169
+    },
+    {
+      "url": "/audio/slow/aria/pack-v2-13.mp3?v=c5bbe7acbb105d55",
+      "at": 1794532864170
+    },
+    {
+      "url": "/audio/slow/aria/pack-v2-94.mp3?v=80007b702e8d6b6e",
+      "at": 1794532864170
+    },
+    {
+      "url": "/audio/slow/aria/pack-v2-23.mp3?v=c49c65ea82c3dc07",
+      "at": 1794532864170
+    },
+    {
+      "url": "/audio/aria/word-1.mp3?audio=clear-20261101-v1",
+      "at": 1794532864173
+    },
+    {
+      "url": "/audio/aria/word-2.mp3?audio=clear-20261101-v1",
+      "at": 1794532864174
+    },
+    {
+      "url": "/audio/aria/example-2.mp3?v=Make+a+new+branch.&audio=clear-20261101-v1",
+      "at": 1794532864189
+    },
+    {
+      "url": "/audio/aria/word-3.mp3?audio=clear-20261101-v1",
+      "at": 1794532865087
+    },
+    {
+      "url": "/audio/aria/example-3.mp3?v=Commit+your+code.&audio=clear-20261101-v1",
+      "at": 1794532865090
+    },
+    {
+      "url": "/audio/aria/word-4.mp3?audio=clear-20261101-v1",
+      "at": 1794532865090
+    },
+    {
+      "url": "/audio/aria/word-5.mp3?audio=clear-20261101-v1",
+      "at": 1794532865090
+    },
+    {
+      "url": "/audio/aria/word-6.mp3?audio=clear-20261101-v1",
+      "at": 1794532865090
+    },
+    {
+      "url": "/audio/aria/example-6.mp3?v=Merge+these+two+branches.&audio=clear-20261101-v1",
+      "at": 1794532865091
+    },
+    {
+      "url": "/audio/aria/word-24.mp3?audio=clear-20261101-v1",
+      "at": 1794532865102
+    },
+    {
+      "url": "/audio/aria/word-20.mp3?audio=clear-20261101-v1",
+      "at": 1794532865994
+    },
+    {
+      "url": "/audio/aria/word-12.mp3?audio=clear-20261101-v1",
+      "at": 1794532865995
+    },
+    {
+      "url": "/audio/aria/word-18.mp3?audio=clear-20261101-v1",
+      "at": 1794532865995
+    },
+    {
+      "url": "/audio/aria/word-16.mp3?audio=clear-20261101-v1",
+      "at": 1794532865996
+    },
+    {
+      "url": "/audio/aria/word-9.mp3?audio=clear-20261101-v1",
+      "at": 1794532865996
+    },
+    {
+      "url": "/audio/aria/word-14.mp3?audio=clear-20261101-v1",
+      "at": 1794532866006
+    },
+    {
+      "url": "/audio/aria/word-17.mp3?audio=clear-20261101-v1",
+      "at": 1794532866906
+    },
+    {
+      "url": "/audio/aria/word-21.mp3?audio=clear-20261101-v1",
+      "at": 1794532866906
+    },
+    {
+      "url": "/audio/aria/word-19.mp3?audio=clear-20261101-v1",
+      "at": 1794532866907
+    },
+    {
+      "url": "/audio/aria/word-15.mp3?audio=clear-20261101-v1",
+      "at": 1794532866907
+    },
+    {
+      "url": "/audio/aria/word-23.mp3?audio=clear-20261101-v1",
+      "at": 1794532866907
+    },
+    {
+      "url": "/audio/aria/word-7.mp3?audio=clear-20261101-v1",
+      "at": 1794532866909
+    },
+    {
+      "url": "/audio/aria/word-11.mp3?audio=clear-20261101-v1",
+      "at": 1794532867814
+    },
+    {
+      "url": "/audio/aria/word-8.mp3?audio=clear-20261101-v1",
+      "at": 1794532867814
+    },
+    {
+      "url": "/audio/aria/word-22.mp3?audio=clear-20261101-v1",
+      "at": 1794532867814
+    },
+    {
+      "url": "/audio/aria/word-10.mp3?audio=clear-20261101-v1",
+      "at": 1794532867814
+    },
+    {
+      "url": "/audio/aria/word-13.mp3?audio=clear-20261101-v1",
+      "at": 1794532867814
+    },
+    {
+      "url": "/audio/aria/word-1.mp3?audio=clear-20261101-v1",
+      "at": 1794532867820
+    },
+    {
+      "url": "/audio/slow/guy/pack-v2-110.mp3?v=eb77a37e3cf13762",
+      "at": 1794532867969
+    },
+    {
+      "url": "/audio/slow/guy/pack-v2-15.mp3?v=f37ab8b546d16335",
+      "at": 1794532867972
+    },
+    {
+      "url": "/audio/slow/guy/pack-v2-40.mp3?v=284a2966cea1eaf4",
+      "at": 1794532867972
+    },
+    {
+      "url": "/audio/slow/guy/pack-v2-129.mp3?v=cc590ff694070d0b",
+      "at": 1794532867972
+    },
+    {
+      "url": "/audio/slow/guy/pack-v2-13.mp3?v=851cc53f17d9c2ae",
+      "at": 1794532867973
+    },
+    {
+      "url": "/audio/slow/guy/pack-v2-23.mp3?v=46862b33f9fffc8d",
+      "at": 1794532867973
+    },
+    {
+      "url": "/audio/guy/word-1.mp3?audio=clear-20261101-v1",
+      "at": 1794532868892
+    },
+    {
+      "url": "/audio/slow/guy/pack-v2-94.mp3?v=894849fcbc6bbb9c",
+      "at": 1794532868892
+    },
+    {
+      "url": "/audio/guy/example-1.mp3?v=Open+this+repository.&audio=clear-20261101-v1",
+      "at": 1794532868892
+    },
+    {
+      "url": "/audio/guy/word-2.mp3?audio=clear-20261101-v1",
+      "at": 1794532868906
+    },
+    {
+      "url": "/audio/guy/example-2.mp3?v=Make+a+new+branch.&audio=clear-20261101-v1",
+      "at": 1794532868906
+    },
+    {
+      "url": "/audio/guy/word-3.mp3?audio=clear-20261101-v1",
+      "at": 1794532868906
+    },
+    {
+      "url": "/audio/guy/example-3.mp3?v=Commit+your+code.&audio=clear-20261101-v1",
+      "at": 1794532868908
+    },
+    {
+      "url": "/audio/guy/word-4.mp3?audio=clear-20261101-v1",
+      "at": 1794532868913
+    },
+    {
+      "url": "/audio/guy/example-4.mp3?v=Clone+this+project.&audio=clear-20261101-v1",
+      "at": 1794532868916
+    },
+    {
+      "url": "/audio/guy/word-5.mp3?audio=clear-20261101-v1",
+      "at": 1794532868916
+    },
+    {
+      "url": "/audio/guy/example-5.mp3?v=Fork+this+project+on+GitHub.&audio=clear-20261101-v1",
+      "at": 1794532869800
+    },
+    {
+      "url": "/audio/guy/word-6.mp3?audio=clear-20261101-v1",
+      "at": 1794532869802
+    },
+    {
+      "url": "/audio/guy/example-6.mp3?v=Merge+these+two+branches.&audio=clear-20261101-v1",
+      "at": 1794532869808
+    },
+    {
+      "url": "/audio/guy/word-7.mp3?audio=clear-20261101-v1",
+      "at": 1794532869808
+    },
+    {
+      "url": "/audio/guy/word-16.mp3?audio=clear-20261101-v1",
+      "at": 1794532869808
+    },
+    {
+      "url": "/audio/guy/word-17.mp3?audio=clear-20261101-v1",
+      "at": 1794532869829
+    },
+    {
+      "url": "/audio/guy/word-15.mp3?audio=clear-20261101-v1",
+      "at": 1794532869829
+    },
+    {
+      "url": "/audio/guy/word-22.mp3?audio=clear-20261101-v1",
+      "at": 1794532870713
+    },
+    {
+      "url": "/audio/guy/word-19.mp3?audio=clear-20261101-v1",
+      "at": 1794532870713
+    },
+    {
+      "url": "/audio/guy/word-20.mp3?audio=clear-20261101-v1",
+      "at": 1794532870713
+    },
+    {
+      "url": "/audio/guy/word-24.mp3?audio=clear-20261101-v1",
+      "at": 1794532870713
+    },
+    {
+      "url": "/audio/guy/word-14.mp3?audio=clear-20261101-v1",
+      "at": 1794532870809
+    },
+    {
+      "url": "/audio/guy/word-8.mp3?audio=clear-20261101-v1",
+      "at": 1794532870809
+    },
+    {
+      "url": "/audio/slow/guy/pack-v2-10.mp3?v=8a494efa861154bc",
+      "at": 1794532871006
+    },
+    {
+      "url": "/audio/slow/guy/pack-v2-28.mp3?v=05ec22a3e545b077",
+      "at": 1794532871007
+    },
+    {
+      "url": "/audio/slow/guy/pack-v2-3.mp3?v=9926104b1cf5e73a",
+      "at": 1794532871007
+    },
+    {
+      "url": "/audio/slow/guy/pack-v2-22.mp3?v=fcbb8faf20f96bcd",
+      "at": 1794532871007
+    },
+    {
+      "url": "/audio/slow/guy/pack-v2-139.mp3?v=97bbf72d3af1ce7b",
+      "at": 1794532871007
+    },
+    {
+      "url": "/audio/slow/guy/pack-v2-30.mp3?v=d44aabf8906ac531",
+      "at": 1794532871085
+    },
+    {
+      "url": "/audio/daily/guy/daily-word-i.mp3?v=I&audio=clear-20261101-v1",
+      "at": 1794532871920
+    },
+    {
+      "url": "/audio/daily/guy/daily-word-you.mp3?v=you&audio=clear-20261101-v1",
+      "at": 1794532871921
+    },
+    {
+      "url": "/audio/daily/guy/daily-word-am.mp3?v=am&audio=clear-20261101-v1",
+      "at": 1794532871921
+    },
+    {
+      "url": "/audio/daily/guy/daily-word-are.mp3?v=are&audio=clear-20261101-v1",
+      "at": 1794532871921
+    },
+    {
+      "url": "/audio/daily/guy/daily-word-is.mp3?v=is&audio=clear-20261101-v1",
+      "at": 1794532871921
+    },
+    {
+      "url": "/audio/daily/guy/daily-word-a.mp3?v=a&audio=clear-20261101-v1",
+      "at": 1794532872006
+    },
+    {
+      "url": "/audio/daily/guy/daily-word-he.mp3?v=he&audio=clear-20261101-v1",
+      "at": 1794532872010
+    },
+    {
+      "url": "/audio/daily/guy/daily-word-she.mp3?v=she&audio=clear-20261101-v1",
+      "at": 1794532872836
+    },
+    {
+      "url": "/audio/daily/guy/daily-word-not.mp3?v=not&audio=clear-20261101-v1",
+      "at": 1794532872836
+    },
+    {
+      "url": "/audio/daily/guy/daily-word-there.mp3?v=there&audio=clear-20261101-v1",
+      "at": 1794532872836
+    },
+    {
+      "url": "/audio/daily/guy/daily-word-name.mp3?v=name&audio=clear-20261101-v1",
+      "at": 1794532872837
+    },
+    {
+      "url": "/audio/daily/guy/daily-word-chinese.mp3?v=Chinese&audio=clear-20261101-v1",
+      "at": 1794532872913
+    },
+    {
+      "url": "/audio/daily/guy/daily-word-happy.mp3?v=happy&audio=clear-20261101-v1",
+      "at": 1794532872913
+    },
+    {
+      "url": "/audio/daily/guy/daily-word-from.mp3?v=from&audio=clear-20261101-v1",
+      "at": 1794532873750
+    },
+    {
+      "url": "/audio/daily/guy/daily-word-japan.mp3?v=Japan&audio=clear-20261101-v1",
+      "at": 1794532873750
+    },
+    {
+      "url": "/audio/daily/guy/daily-word-home.mp3?v=home&audio=clear-20261101-v1",
+      "at": 1794532873750
+    },
+    {
+      "url": "/audio/daily/guy/daily-word-where.mp3?v=where&audio=clear-20261101-v1",
+      "at": 1794532873751
+    },
+    {
+      "url": "/audio/daily/guy/daily-word-good.mp3?v=good&audio=clear-20261101-v1",
+      "at": 1794532873822
+    },
+    {
+      "url": "/audio/daily/guy/daily-word-japanese.mp3?v=Japanese&audio=clear-20261101-v1",
+      "at": 1794532873822
+    },
+    {
+      "url": "/audio/daily/guy/daily-word-tired.mp3?v=tired&audio=clear-20261101-v1",
+      "at": 1794532874668
+    },
+    {
+      "url": "/audio/daily/guy/daily-word-student.mp3?v=student&audio=clear-20261101-v1",
+      "at": 1794532874668
+    },
+    {
+      "url": "/audio/daily/guy/daily-word-teacher.mp3?v=teacher&audio=clear-20261101-v1",
+      "at": 1794532874668
+    },
+    {
+      "url": "/audio/daily/guy/daily-word-school.mp3?v=school&audio=clear-20261101-v1",
+      "at": 1794532874668
+    },
+    {
+      "url": "/audio/daily/guy/daily-word-my.mp3?v=my&audio=clear-20261101-v1",
+      "at": 1794532874729
+    },
+    {
+      "url": "/audio/daily/guy/daily-word-sad.mp3?v=sad&audio=clear-20261101-v1",
+      "at": 1794532874729
+    },
+    {
+      "url": "/audio/daily/guy/daily-word-fine.mp3?v=fine&audio=clear-20261101-v1",
+      "at": 1794532875599
+    },
+    {
+      "url": "/audio/daily/guy/daily-word-china.mp3?v=China&audio=clear-20261101-v1",
+      "at": 1794532875607
+    }
+  ]
+}

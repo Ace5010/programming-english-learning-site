@@ -1,0 +1,482 @@
+{
+  "requests": [
+    {
+      "url": "https://programming-english-learning-site.pages.dev/audio/aria/word-1.mp3?v=repository&audio=clear-20261101-v1",
+      "at": 1794493487494
+    },
+    {
+      "url": "https://programming-english-learning-site.pages.dev/audio/aria/example-1.mp3?v=Open+this+repository.&audio=clear-20261101-v1",
+      "at": 1794493487495
+    },
+    {
+      "url": "https://programming-english-learning-site.pages.dev/audio/aria/word-2801.mp3?v=project&audio=clear-20261101-v1",
+      "at": 1794493487495
+    },
+    {
+      "url": "https://programming-english-learning-site.pages.dev/audio/aria/example-2801.mp3?v=Open+this+project.&audio=clear-20261101-v1",
+      "at": 1794493487495
+    },
+    {
+      "url": "https://programming-english-learning-site.pages.dev/audio/aria/word-3561.mp3?v=code&audio=clear-20261101-v1",
+      "at": 1794493487498
+    },
+    {
+      "url": "https://programming-english-learning-site.pages.dev/audio/aria/example-3561.mp3?v=Read+this+code.&audio=clear-20261101-v1",
+      "at": 1794493487498
+    },
+    {
+      "url": "https://programming-english-learning-site.pages.dev/audio/aria/word-20.mp3?v=readme&audio=clear-20261101-v1",
+      "at": 1794493487498
+    },
+    {
+      "url": "https://programming-english-learning-site.pages.dev/audio/aria/example-20.mp3?v=Read+the+README+for+help.&audio=clear-20261101-v1",
+      "at": 1794493487498
+    },
+    {
+      "url": "https://programming-english-learning-site.pages.dev/audio/aria/word-4.mp3?v=clone&audio=clear-20261101-v1",
+      "at": 1794493487499
+    },
+    {
+      "url": "https://programming-english-learning-site.pages.dev/audio/aria/example-4.mp3?v=Clone+this+project.&audio=clear-20261101-v1",
+      "at": 1794493487499
+    },
+    {
+      "url": "https://programming-english-learning-site.pages.dev/audio/aria/word-5.mp3?v=fork&audio=clear-20261101-v1",
+      "at": 1794493487499
+    },
+    {
+      "url": "https://programming-english-learning-site.pages.dev/audio/aria/example-5.mp3?v=Fork+this+project+on+GitHub.&audio=clear-20261101-v1",
+      "at": 1794493487499
+    },
+    {
+      "url": "https://programming-english-learning-site.pages.dev/audio/slow/aria/pack-v2-110.mp3?v=5a217b732b37db21",
+      "at": 1794493487499
+    },
+    {
+      "url": "https://programming-english-learning-site.pages.dev/audio/slow/aria/pack-v2-15.mp3?v=742ef8e09f35246e",
+      "at": 1794493487500
+    },
+    {
+      "url": "https://programming-english-learning-site.pages.dev/audio/slow/aria/pack-v2-129.mp3?v=dc029989b12cb1f1",
+      "at": 1794493487500
+    },
+    {
+      "url": "https://programming-english-learning-site.pages.dev/audio/slow/aria/pack-v2-105.mp3?v=c719285e07d5a1cc",
+      "at": 1794493487500
+    },
+    {
+      "url": "https://programming-english-learning-site.pages.dev/audio/feedback/correct.mp3",
+      "at": 1794493487500
+    },
+    {
+      "url": "https://programming-english-learning-site.pages.dev/audio/feedback/complete.mp3",
+      "at": 1794493487500
+    },
+    {
+      "url": "https://programming-english-learning-site.pages.dev/audio/feedback/pair.mp3",
+      "at": 1794493487501
+    },
+    {
+      "url": "https://programming-english-learning-site.pages.dev/audio/slow/aria/pack-v2-110.mp3?v=5a217b732b37db21",
+      "at": 1794493493565
+    }
+  ],
+  "headers": [
+    {
+      "url": "https://programming-english-learning-site.pages.dev/audio/aria/word-1.mp3?v=repository&audio=clear-20261101-v1",
+      "status": 200,
+      "size": "24812",
+      "timing": {
+        "startTime": 1794493487493.186,
+        "domainLookupStart": -1,
+        "domainLookupEnd": -1,
+        "connectStart": -1,
+        "secureConnectionStart": -1,
+        "connectEnd": -1,
+        "requestStart": 0.288,
+        "responseStart": 336.467,
+        "responseEnd": 482.737
+      }
+    },
+    {
+      "url": "https://programming-english-learning-site.pages.dev/audio/aria/example-1.mp3?v=Open+this+repository.&audio=clear-20261101-v1",
+      "status": 200,
+      "size": "29996",
+      "timing": {
+        "startTime": 1794493487493.8,
+        "domainLookupStart": -1,
+        "domainLookupEnd": -1,
+        "connectStart": -1,
+        "secureConnectionStart": -1,
+        "connectEnd": -1,
+        "requestStart": 0.097,
+        "responseStart": 481.69,
+        "responseEnd": 712.706
+      }
+    },
+    {
+      "url": "https://programming-english-learning-site.pages.dev/audio/aria/word-3561.mp3?v=code&audio=clear-20261101-v1",
+      "status": 200,
+      "size": "23372",
+      "timing": {
+        "startTime": 1794493487495.178,
+        "domainLookupStart": -1,
+        "domainLookupEnd": -1,
+        "connectStart": -1,
+        "secureConnectionStart": -1,
+        "connectEnd": -1,
+        "requestStart": 0.075,
+        "responseStart": 711.006,
+        "responseEnd": 896.302
+      }
+    },
+    {
+      "url": "https://programming-english-learning-site.pages.dev/audio/aria/example-2801.mp3?v=Open+this+project.&audio=clear-20261101-v1",
+      "status": 200,
+      "size": "27116",
+      "timing": {
+        "startTime": 1794493487495.016,
+        "domainLookupStart": -1,
+        "domainLookupEnd": -1,
+        "connectStart": -1,
+        "secureConnectionStart": -1,
+        "connectEnd": -1,
+        "requestStart": 0.084,
+        "responseStart": 896.513,
+        "responseEnd": 897.476
+      }
+    },
+    {
+      "url": "https://programming-english-learning-site.pages.dev/audio/aria/word-2801.mp3?v=project&audio=clear-20261101-v1",
+      "status": 200,
+      "size": "8108",
+      "timing": {
+        "startTime": 1794493487494.0068,
+        "domainLookupStart": -1,
+        "domainLookupEnd": -1,
+        "connectStart": -1,
+        "secureConnectionStart": -1,
+        "connectEnd": -1,
+        "requestStart": 0.075,
+        "responseStart": 897.967,
+        "responseEnd": 898.379
+      }
+    },
+    {
+      "url": "https://programming-english-learning-site.pages.dev/audio/aria/word-4.mp3?v=clone&audio=clear-20261101-v1",
+      "status": 200,
+      "size": "19340",
+      "timing": {
+        "startTime": 1794493487975.6418,
+        "domainLookupStart": -1,
+        "domainLookupEnd": -1,
+        "connectStart": -1,
+        "secureConnectionStart": -1,
+        "connectEnd": -1,
+        "requestStart": 0.128,
+        "responseStart": 416.631,
+        "responseEnd": 1188.431
+      }
+    },
+    {
+      "url": "https://programming-english-learning-site.pages.dev/audio/aria/example-3561.mp3?v=Read+this+code.&audio=clear-20261101-v1",
+      "status": 200,
+      "size": "11952",
+      "timing": {
+        "startTime": 1794493487829.8682,
+        "domainLookupStart": -1,
+        "domainLookupEnd": -1,
+        "connectStart": -1,
+        "secureConnectionStart": -1,
+        "connectEnd": -1,
+        "requestStart": 0.222,
+        "responseStart": 855.676,
+        "responseEnd": 1190.557
+      }
+    },
+    {
+      "url": "https://programming-english-learning-site.pages.dev/audio/aria/word-20.mp3?v=readme&audio=clear-20261101-v1",
+      "status": 200,
+      "size": "9836",
+      "timing": {
+        "startTime": 1794493487829.919,
+        "domainLookupStart": -1,
+        "domainLookupEnd": -1,
+        "connectStart": -1,
+        "secureConnectionStart": -1,
+        "connectEnd": -1,
+        "requestStart": 0.191,
+        "responseStart": 856.002,
+        "responseEnd": 1190.281
+      }
+    },
+    {
+      "url": "https://programming-english-learning-site.pages.dev/audio/aria/example-20.mp3?v=Read+the+README+for+help.&audio=clear-20261101-v1",
+      "status": 200,
+      "size": "14256",
+      "timing": {
+        "startTime": 1794493487829.937,
+        "domainLookupStart": -1,
+        "domainLookupEnd": -1,
+        "connectStart": -1,
+        "secureConnectionStart": -1,
+        "connectEnd": -1,
+        "requestStart": 0.191,
+        "responseStart": 856.352,
+        "responseEnd": 1190.199
+      }
+    },
+    {
+      "url": "https://programming-english-learning-site.pages.dev/audio/aria/example-4.mp3?v=Clone+this+project.&audio=clear-20261101-v1",
+      "status": 200,
+      "size": "26828",
+      "timing": {
+        "startTime": 1794493488206.4219,
+        "domainLookupStart": -1,
+        "domainLookupEnd": -1,
+        "connectStart": -1,
+        "secureConnectionStart": -1,
+        "connectEnd": -1,
+        "requestStart": 0.125,
+        "responseStart": 480.201,
+        "responseEnd": 1217.023
+      }
+    },
+    {
+      "url": "https://programming-english-learning-site.pages.dev/audio/aria/example-5.mp3?v=Fork+this+project+on+GitHub.&audio=clear-20261101-v1",
+      "status": 200,
+      "size": "34028",
+      "timing": {
+        "startTime": 1794493488392.424,
+        "domainLookupStart": -1,
+        "domainLookupEnd": -1,
+        "connectStart": -1,
+        "secureConnectionStart": -1,
+        "connectEnd": -1,
+        "requestStart": 0.238,
+        "responseStart": 322.396,
+        "responseEnd": 1608.582
+      }
+    },
+    {
+      "url": "https://programming-english-learning-site.pages.dev/audio/aria/word-5.mp3?v=fork&audio=clear-20261101-v1",
+      "status": 200,
+      "size": "20492",
+      "timing": {
+        "startTime": 1794493488391.659,
+        "domainLookupStart": -1,
+        "domainLookupEnd": -1,
+        "connectStart": -1,
+        "secureConnectionStart": -1,
+        "connectEnd": -1,
+        "requestStart": 0.858,
+        "responseStart": 715.752,
+        "responseEnd": 1609.7
+      }
+    },
+    {
+      "url": "https://programming-english-learning-site.pages.dev/audio/slow/aria/pack-v2-110.mp3?v=5a217b732b37db21",
+      "status": 200,
+      "size": "722348",
+      "timing": {
+        "startTime": 1794493488392.466,
+        "domainLookupStart": -1,
+        "domainLookupEnd": -1,
+        "connectStart": -1,
+        "secureConnectionStart": -1,
+        "connectEnd": -1,
+        "requestStart": 0.214,
+        "responseStart": 715.485,
+        "responseEnd": 1641.432
+      }
+    },
+    {
+      "url": "https://programming-english-learning-site.pages.dev/audio/slow/aria/pack-v2-129.mp3?v=dc029989b12cb1f1",
+      "status": 200,
+      "size": "540332",
+      "timing": {
+        "startTime": 1794493488686.121,
+        "domainLookupStart": -1,
+        "domainLookupEnd": -1,
+        "connectStart": -1,
+        "secureConnectionStart": -1,
+        "connectEnd": -1,
+        "requestStart": 0.845,
+        "responseStart": 690.797,
+        "responseEnd": 1927.19
+      }
+    },
+    {
+      "url": "https://programming-english-learning-site.pages.dev/audio/slow/aria/pack-v2-15.mp3?v=742ef8e09f35246e",
+      "status": 200,
+      "size": "584972",
+      "timing": {
+        "startTime": 1794493488686.031,
+        "domainLookupStart": -1,
+        "domainLookupEnd": -1,
+        "connectStart": -1,
+        "secureConnectionStart": -1,
+        "connectEnd": -1,
+        "requestStart": 0.904,
+        "responseStart": 744.43,
+        "responseEnd": 1974.798
+      }
+    },
+    {
+      "url": "https://programming-english-learning-site.pages.dev/audio/slow/aria/pack-v2-105.mp3?v=c719285e07d5a1cc",
+      "status": 200,
+      "size": "660428",
+      "timing": {
+        "startTime": 1794493488686.807,
+        "domainLookupStart": -1,
+        "domainLookupEnd": -1,
+        "connectStart": -1,
+        "secureConnectionStart": -1,
+        "connectEnd": -1,
+        "requestStart": 0.314,
+        "responseStart": 1020.056,
+        "responseEnd": 2520.363
+      }
+    },
+    {
+      "url": "https://programming-english-learning-site.pages.dev/audio/feedback/correct.mp3",
+      "status": 200,
+      "size": "9863",
+      "timing": {
+        "startTime": 1794493488686.863,
+        "domainLookupStart": -1,
+        "domainLookupEnd": -1,
+        "connectStart": -1,
+        "secureConnectionStart": -1,
+        "connectEnd": -1,
+        "requestStart": 0.285,
+        "responseStart": 1326.517,
+        "responseEnd": 2513.551
+      }
+    },
+    {
+      "url": "https://programming-english-learning-site.pages.dev/audio/feedback/complete.mp3",
+      "status": 200,
+      "size": "27716",
+      "timing": {
+        "startTime": 1794493488715.0312,
+        "domainLookupStart": -1,
+        "domainLookupEnd": -1,
+        "connectStart": -1,
+        "secureConnectionStart": -1,
+        "connectEnd": -1,
+        "requestStart": 0.145,
+        "responseStart": 1298.725,
+        "responseEnd": 2513.978
+      }
+    },
+    {
+      "url": "https://programming-english-learning-site.pages.dev/audio/feedback/pair.mp3",
+      "status": 200,
+      "size": "1606",
+      "timing": {
+        "startTime": 1794493489107.6748,
+        "domainLookupStart": -1,
+        "domainLookupEnd": -1,
+        "connectStart": -1,
+        "secureConnectionStart": -1,
+        "connectEnd": -1,
+        "requestStart": 0.537,
+        "responseStart": 906.76,
+        "responseEnd": 2514.058
+      }
+    },
+    {
+      "url": "https://programming-english-learning-site.pages.dev/audio/slow/aria/pack-v2-110.mp3?v=5a217b732b37db21",
+      "status": 200,
+      "size": "722348",
+      "timing": {
+        "startTime": 1794493493565.448,
+        "domainLookupStart": -1,
+        "domainLookupEnd": -1,
+        "connectStart": -1,
+        "secureConnectionStart": -1,
+        "connectEnd": -1,
+        "requestStart": 0.239,
+        "responseStart": 292.214,
+        "responseEnd": 832.724
+      }
+    }
+  ],
+  "failures": [
+    {
+      "url": "https://programming-english-learning-site.pages.dev/audio/slow/aria/pack-v2-110.mp3?v=5a217b732b37db21",
+      "error": {
+        "errorText": "net::ERR_ABORTED"
+      }
+    },
+    {
+      "url": "https://programming-english-learning-site.pages.dev/audio/slow/aria/pack-v2-129.mp3?v=dc029989b12cb1f1",
+      "error": {
+        "errorText": "net::ERR_ABORTED"
+      }
+    },
+    {
+      "url": "https://programming-english-learning-site.pages.dev/audio/slow/aria/pack-v2-15.mp3?v=742ef8e09f35246e",
+      "error": {
+        "errorText": "net::ERR_ABORTED"
+      }
+    },
+    {
+      "url": "https://programming-english-learning-site.pages.dev/audio/slow/aria/pack-v2-105.mp3?v=c719285e07d5a1cc",
+      "error": {
+        "errorText": "net::ERR_ABORTED"
+      }
+    }
+  ],
+  "clicks": [
+    {
+      "at": 6611.4000000059605,
+      "label": "朗读 repository",
+      "ms": 17.400000005960464,
+      "event": {
+        "id": 0,
+        "type": "playing",
+        "url": "https://programming-english-learning-site.pages.dev/audio/aria/word-1.mp3?v=repository&audio=clear-20261101-v1",
+        "at": 6628.800000011921,
+        "position": 0
+      }
+    },
+    {
+      "at": 7861.300000011921,
+      "label": "朗读 Open this repository.",
+      "ms": 16.5,
+      "event": {
+        "id": 1,
+        "type": "playing",
+        "url": "https://programming-english-learning-site.pages.dev/audio/aria/example-1.mp3?v=Open+this+repository.&audio=clear-20261101-v1",
+        "at": 7877.800000011921,
+        "position": 0
+      }
+    },
+    {
+      "at": 9120.600000023842,
+      "label": "慢速朗读 repository",
+      "ms": 784.5,
+      "event": {
+        "id": 19,
+        "type": "playing",
+        "url": "https://programming-english-learning-site.pages.dev/audio/slow/aria/pack-v2-110.mp3?v=5a217b732b37db21",
+        "at": 9905.100000023842,
+        "position": 0
+      }
+    },
+    {
+      "at": 11145.100000023842,
+      "label": "朗读 repository",
+      "ms": 6.799999982118607,
+      "event": {
+        "id": 0,
+        "type": "playing",
+        "url": "https://programming-english-learning-site.pages.dev/audio/aria/word-1.mp3?v=repository&audio=clear-20261101-v1",
+        "at": 11151.90000000596,
+        "position": 0
+      }
+    }
+  ]
+}

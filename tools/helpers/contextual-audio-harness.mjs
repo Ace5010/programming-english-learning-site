@@ -10,7 +10,7 @@ export function mount(voice,cases){
     const [speaking,setSpeaking]=React.useState('');
     const [player]=React.useState(()=>new AudioPlayback(setSpeaking,key=>{throw new Error('Audio failed: '+key)},undefined,url=>{
       const audio=new Audio(url);
-      audio.addEventListener('playing',()=>window.__contextEvents.push({url:audio.currentSrc,position:audio.currentTime,rate:audio.playbackRate,pitch:audio.preservesPitch}));return audio;
+      audio.addEventListener('playing',()=>window.__contextEvents.push({url:window.__audioSource?.(audio.currentSrc) ?? audio.currentSrc,position:audio.currentTime,rate:audio.playbackRate,pitch:audio.preservesPitch}));return audio;
     }));window.__contextPlayer=player;
     return React.createElement(ReadAloudProvider,{speaking,pageKey:voice,play:(text,slow,context)=>{
       const clips=contextualReadingQueue(text,context,'',voice,slow,document.baseURI);

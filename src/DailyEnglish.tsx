@@ -73,6 +73,7 @@ interface Props {
   play: (phrase: DailyPhrase, slow?: boolean) => void;
   playFeedback: (sound: FeedbackSound, eventId: string) => void;
   preload: (files: string[]) => void;
+  preloadVisible?: (files: string[]) => void;
   stopAudio: () => void;
   recordRef?: Ref<DailyEnglishHandle>;
   openLibrary: () => void;
@@ -94,7 +95,7 @@ function loadProgress(key: string, lessons: DailyLesson[]) {
   catch { return { progress: createDailyProgress(), writable: false, warning: '浏览器暂时无法读取课程记录。请恢复存储权限后重新加载。', raw: null }; }
 }
 
-export default function DailyEnglish({ active, view, navigation, speed, speaking, play, playFeedback, preload, stopAudio, recordRef, openLibrary, contentRef, headingRef, curriculum, renderReview, reviewDescription, foundationHelp }: Props) {
+export default function DailyEnglish({ active, view, navigation, speed, speaking, play, playFeedback, preload, preloadVisible, stopAudio, recordRef, openLibrary, contentRef, headingRef, curriculum, renderReview, reviewDescription, foundationHelp }: Props) {
   const reading = useReading();
   const storageKey = curriculum?.key ?? DAILY_KEY;
   const label = curriculum?.label ?? '日常英语';
@@ -586,7 +587,7 @@ export default function DailyEnglish({ active, view, navigation, speed, speaking
         {libraryPhrases.length ? <ul className="library-grid">{libraryPhrases.map(item => {
           const favorite = !!progress.favorites?.includes(item.id);
           const learned = phraseLearned(item.id);
-          return <li key={item.id}><LibraryCard word={item.en} meaning={item.zh} playing={speaking === `daily-${item.id}-normal`} slowPlaying={speaking === `daily-${item.id}-slow`} play={slow => play(item, slow)}>{close => {
+          return <li key={item.id}><LibraryCard word={item.en} meaning={item.zh} playing={speaking === `daily-${item.id}-normal`} slowPlaying={speaking === `daily-${item.id}-slow`} play={slow => play(item, slow)} audioFiles={[`${item.id}.mp3?v=${encodeURIComponent(item.en + (item.audioRevision ? `|${item.audioRevision}` : ''))}`]} preload={preloadVisible}>{close => {
             const details = dailyVocabularyWords.find(word => word.id === item.id);
             return <div className="daily-expression">
             <div className="daily-expression-copy"><span className="daily-meaning" lang="zh-CN"><ReadAloudText text={item.zh} /></span><div className="daily-inline-reading"><button type="button" className={`daily-expression-content${speaking.startsWith(`daily-${item.id}-`) ? ' playing' : ''}`} aria-label={`朗读 ${item.en}`} aria-pressed={speaking === `daily-${item.id}-normal`} onClick={() => play(item, false)}><strong lang="en">{item.en}</strong><Icon name="sound" /></button>{slowAudioButton(item)}</div>{details?.phonetic && <span className="library-detail-phonetic" lang="en">/{details.phonetic}/</span>}{item.note && <span><ReadAloudText text={item.note} /></span>}</div>

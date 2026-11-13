@@ -2,6 +2,7 @@ import type { ReactNode } from 'react';
 import Icon from './Icon';
 import type { VocabularyItem } from './vocabulary';
 import type { PlaybackSpeed } from './SpeechControls';
+import { useAudioWarmup } from './useAudioWarmup';
 
 interface Props {
   item: VocabularyItem;
@@ -14,13 +15,15 @@ interface Props {
   toggleFavorite: (id: number) => void;
   playWord: (item: VocabularyItem, slow?: boolean, key?: string) => void;
   playExample: (item: VocabularyItem, slow?: boolean, key?: string) => void;
+  preload?: (files: string[]) => void;
 }
 
-export default function VocabularyRow({ item, favorite, favoriteDisabled, speaking, speed, status, action, toggleFavorite, playWord, playExample }: Props) {
+export default function VocabularyRow({ item, favorite, favoriteDisabled, speaking, speed, status, action, toggleFavorite, playWord, playExample, preload }: Props) {
+  const audioRef = useAudioWarmup([`word-${item.id}.mp3`, `example-${item.id}.mp3?v=${encodeURIComponent(item.example)}`], preload);
   const wordPlaying = speaking === `word-${item.id}` || speaking === `slow-${item.id}`;
   const examplePlaying = speaking === `example-${item.id}` || speaking === `example-slow-${item.id}`;
   const example = <div className="example inline-example"><button className={examplePlaying && speed === 'normal' ? 'playing' : ''} onClick={() => playExample(item, false)} aria-label={`朗读例句 ${item.example}`} title="正常播放" aria-pressed={examplePlaying && speed === 'normal'}><span className="example-en" lang="en">{item.example}</span><span className="example-zh">{item.exampleZh}</span><Icon name="sound" /></button><button type="button" className={`slow-button${examplePlaying && speed === 'slow' ? ' playing' : ''}`} onClick={() => playExample(item, true, `example-slow-${item.id}`)} aria-label={`慢速朗读例句 ${item.example}`} aria-pressed={examplePlaying && speed === 'slow'}>慢速</button></div>;
-  return <article data-word-id={item.id} className={`word-card${wordPlaying ? ' word-playing' : ''}${examplePlaying ? ' example-playing' : ''}`} onClick={event => {
+  return <article ref={audioRef} data-word-id={item.id} className={`word-card${wordPlaying ? ' word-playing' : ''}${examplePlaying ? ' example-playing' : ''}`} onClick={event => {
     if ((event.target as HTMLElement).closest('button, a, input, select, summary, details') || window.getSelection()?.isCollapsed === false) return;
     playWord(item, false);
   }}>

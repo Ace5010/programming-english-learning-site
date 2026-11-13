@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState, type ReactNode } from 'react';
 import { createPortal } from 'react-dom';
 import Icon from './Icon';
+import { useAudioWarmup } from './useAudioWarmup';
 import './library.css';
 
 interface Props {
@@ -10,10 +11,13 @@ interface Props {
   playing: boolean;
   slowPlaying: boolean;
   play: (slow: boolean) => void;
+  audioFiles?: string[];
+  preload?: (files: string[]) => void;
   children: ReactNode | ((close: () => void) => ReactNode);
 }
 
-export default function LibraryCard({ word, meaning, playLabel = '朗读', playing, slowPlaying, play, children }: Props) {
+export default function LibraryCard({ word, meaning, playLabel = '朗读', playing, slowPlaying, play, audioFiles = [], preload, children }: Props) {
+  const audioRef = useAudioWarmup(audioFiles, preload);
   const [open, setOpen] = useState(false);
   const dialogRef = useRef<HTMLDialogElement>(null);
   const openRef = useRef<HTMLButtonElement>(null);
@@ -33,7 +37,7 @@ export default function LibraryCard({ word, meaning, playLabel = '朗读', playi
   }, [open]);
 
   return <>
-    <article className={`library-card${playing || slowPlaying ? ' playing' : ''}`} onClick={event => {
+    <article ref={audioRef} className={`library-card${playing || slowPlaying ? ' playing' : ''}`} onClick={event => {
       if ((event.target as HTMLElement).closest('button') || !window.getSelection()?.isCollapsed) return;
       play(false);
     }}>

@@ -4,22 +4,25 @@ import { createRequire } from 'node:module';
 import { mkdir, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { slowReadingQueue } from '../src/slowReading.ts';
+import { observeAudioSources } from './helpers/audio-source-observer.mjs';
 const require = createRequire(import.meta.url);
 const { chromium } = require(process.env.CODEWORDS_PLAYWRIGHT || 'C:/Users/shenwuqiang/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
 const base = process.env.CODEWORDS_TEST_URL || 'http://localhost:5186/';
 const output = path.resolve(process.env.CODEWORDS_ARTIFACT_DIR || 'artifacts/slow-reading'); await mkdir(output,{recursive:true});
 const browser = await chromium.launch({channel:'chrome',headless:true,args:['--no-proxy-server']});
 const results=[];
-async function open(voice,section='daily') {
+async function open(voice,section='daily',blocked) {
   const context=await browser.newContext({viewport:{width:390,height:844},reducedMotion:'reduce'});
+  if (blocked) await context.route(blocked,route=>route.fulfill({status:503,body:'unavailable'}));
   const page=await context.newPage(); page.setDefaultTimeout(20000); const errors=[];
   page.on('pageerror',error=>errors.push(error.message)); page.on('dialog',async d=>{errors.push(d.message());await d.dismiss();});
+  await page.addInitScript(observeAudioSources);
   await page.addInitScript(({voice,section})=>{
     localStorage.setItem('codewords-voice',voice); localStorage.setItem('codewords-section',section);
     const Original=window.Audio; window.__audio={items:[],events:[]};
     window.Audio=function(...args) {
       const audio=new Original(...args),id=window.__audio.items.length; window.__audio.items.push(audio);
-      for(const type of ['playing','pause','ended','error']) audio.addEventListener(type,()=>window.__audio.events.push({id,type,url:audio.currentSrc || audio.src,position:audio.currentTime,rate:audio.playbackRate,pitch:audio.preservesPitch,at:performance.now(),active:window.__audio.items.filter(a=>!a.paused&&!a.ended).length}));
+      for(const type of ['playing','pause','ended','error']) audio.addEventListener(type,()=>window.__audio.events.push({id,type,url:window.__audioSource(audio.currentSrc || audio.src),position:audio.currentTime,rate:audio.playbackRate,pitch:audio.preservesPitch,at:performance.now(),active:window.__audio.items.filter(a=>!a.paused&&!a.ended).length}));
       return audio;
     }; window.Audio.prototype=Original.prototype; Object.setPrototypeOf(window.Audio,Original);
   },{voice,section});
@@ -42,9 +45,13 @@ async function play(e,text,voice,slow=true) {
     const recorder = new MediaRecorder(destination.stream);
     recorder.ondataavailable = event => window.__capture.chunks.push(event.data);
     window.__capture.recorder = recorder;
-    window.Audio = function(...args) {
-      const audio = new Original(...args), source = context.createMediaElementSource(audio);
+    const connect = audio => {
+      const source = context.createMediaElementSource(audio);
       source.connect(destination); source.connect(context.destination); return audio;
+    };
+    for (const audio of window.__audio.items) connect(audio);
+    window.Audio = function(...args) {
+      return connect(new Original(...args));
     };
     window.Audio.prototype = Original.prototype; Object.setPrototypeOf(window.Audio, Original);
     document.addEventListener('click', () => { void context.resume(); recorder.start(); }, {capture:true,once:true});
@@ -56,7 +63,7 @@ async function play(e,text,voice,slow=true) {
   } else await e.page.waitForFunction(start=>window.__audio.events.slice(start).some(x=>x.type==='ended'),start);
   const events=await e.page.evaluate(start=>window.__audio.events.slice(start),start);
   const playing=events.filter(x=>x.type==='playing'), queue=slow?slowReadingQueue(text,voice,base):undefined;
-  assert.equal(playing.length,queue?.length??1,`${voice} ${text}`);
+  assert.equal(playing.length,queue?.length??1,`${voice} ${text}: ${JSON.stringify({events,errors:e.errors})}`);
   assert.equal(new Set(playing.map(x=>x.id)).size,1,'same task element');
   for(let i=0;i<playing.length;i++) {
     assert.equal(playing[i].rate,slow && !queue ? .6 : 1); assert.equal(playing[i].pitch,true); assert.ok(playing[i].active<=1);
@@ -100,13 +107,12 @@ try {
   await e.page.waitForFunction(()=>!document.querySelector('button[aria-label="慢速朗读单词 pull request"]')?.classList.contains('playing'));
   results.push({scenario:'multiword vocabulary',events:await e.page.evaluate(start=>window.__audio.events.slice(start),start)});
   assert.deepEqual(e.errors,[]); await e.context.close();
-  const broken=await open('aria');
   const blocked=slowReadingQueue('I am a student.','aria',base)[1].url;
-  await broken.context.route(blocked,route=>route.fulfill({status:503,body:'unavailable'}));
+  const broken=await open('aria','daily',blocked);
   const brokenRow=await select(broken,'I am a student.');
   const offset=await broken.page.evaluate(()=>window.__audio.events.length);
   await brokenRow.getByRole('button',{name:'慢速朗读 I am a student.',exact:true}).click();
-  await broken.page.waitForFunction(offset=>window.__audio.events.slice(offset).some(x=>x.type==='error'),offset);
+  // Download failures are reported by the player before constructing media.
   // Preload can report its own error before the active queue reaches the failed second word.
   for (let attempt=0; attempt<100 && !broken.errors.some(x=>x.includes('读音未能播放')); attempt++) await broken.page.waitForTimeout(100);
   const failedEvents=await broken.page.evaluate(offset=>window.__audio.events.slice(offset),offset);

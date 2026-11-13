@@ -135,25 +135,35 @@ export default function Home() {
     return () => { document.removeEventListener('visibilitychange', hide); window.removeEventListener('pagehide', leave); player.dispose(); feedbackPlayer.dispose(); };
   }, [player, feedbackPlayer]);
   useEffect(() => { feedbackPlayer.stop(); }, [section, view, navigation, showQuiz, feedbackPlayer]);
-  const preloadReading = useCallback((text: string) => {
+  const preloadReading = useCallback((text: string, normal = true) => {
     if (hasNativeAudio()) return;
+    const recording = findReadingAudio(text);
+    if (normal && recording) player.preload([revisedAudioURL(new URL(`audio/${recording.path.replace('{voice}', voice)}`, document.baseURI).href)]);
     try { const queue = slowReadingQueue(text, voice, document.baseURI); if (queue) player.preloadQueue(queue); }
     catch { /* The actual click reports missing data; build validation prevents shipping it. */ }
   }, [player, voice]);
-  const preloadProgramming = useCallback((files: string[]) => {
+  const preloadProgrammingFiles = useCallback((files: string[]) => {
     if (hasNativeAudio()) return;
     player.preload(files.map(file => revisedAudioURL(new URL(`audio/${voice}/${file}`, document.baseURI).href)));
+  }, [player, voice]);
+  const preloadProgramming = useCallback((files: string[]) => {
+    if (hasNativeAudio()) return;
+    preloadProgrammingFiles(files);
     for (const file of files.slice(0, 4)) {
       const match = /^(word|example)-(\d+)\.mp3/.exec(file);
       const item = match && vocabulary.find(item => item.id === Number(match[2]));
-      if (item && match) preloadReading(match[1] === 'word' ? item.word : item.example);
+      if (item && match) preloadReading(match[1] === 'word' ? item.word : item.example, false);
     }
-  }, [player, voice, preloadReading]);
-  const preloadDaily = useCallback((files: string[]) => {
+  }, [preloadProgrammingFiles, preloadReading]);
+  const preloadDailyFiles = useCallback((files: string[]) => {
     if (hasNativeAudio()) return;
     player.preload(files.map(file => revisedAudioURL(new URL(`audio/daily/${voice}/${file}`, document.baseURI).href)));
-    for (const file of files.slice(0, 4)) { const item = dailyPhrases.find(item => file.startsWith(`${item.id}.mp3`)); if (item) preloadReading(item.en); }
-  }, [player, voice, preloadReading]);
+  }, [player, voice]);
+  const preloadDaily = useCallback((files: string[]) => {
+    if (hasNativeAudio()) return;
+    preloadDailyFiles(files);
+    for (const file of files.slice(0, 4)) { const item = dailyPhrases.find(item => file.startsWith(`${item.id}.mp3`)); if (item) preloadReading(item.en, false); }
+  }, [preloadDailyFiles, preloadReading]);
   const refreshReview = useCallback(() => {
     try { setReviewProgress(initializeProgrammingReview(progressStorage)); setReviewWarning(''); }
     catch (error) { setReviewWarning(error instanceof Error ? error.message : '复习记录无法保存，原记录已保留。'); }
@@ -336,7 +346,7 @@ export default function Home() {
     {section === 'programming' && reviewWarning && <div className="content"><div className="daily-notice" role="alert"><p>{reviewWarning}</p><button className="daily-button" onClick={exportProgramming}>导出原始记录</button><button className="daily-button" onClick={refreshReview}>重新读取</button></div></div>}
     {programmingVisited && <DailyEnglish recordRef={programmingRecordRef} foundationHelp={foundationHelp} key={`programming-${syncRevision}`} active={section === 'programming' && !libraryActive} curriculum={curriculum} view={programmingView === 'library' || programmingView === 'favorites' ? 'course' : programmingView} navigation={navigation} speed={playbackSpeed} speaking={speaking} play={playProgramming} preload={preloadProgramming} stopAudio={stopAudio} openLibrary={() => changeView('library')} contentRef={section === 'programming' && !libraryActive ? contentRef : undefined} headingRef={section === 'programming' && !libraryActive ? headingRef : undefined}
       playFeedback={playFeedback} reviewDescription={`已学 ${reviewPool.length} 个词，${duePool.length} 个待复习。`}
-      renderReview={scenarios => <ReviewVocabulary words={reviewPool} progress={reviewProgress} favorites={favorites} favoriteWarning={favoriteState.warning} disabled={!!reviewWarning} speaking={speaking} speed={playbackSpeed} reviewButtonRef={reviewButton} scenarios={scenarios} startDue={() => startQuiz()} startWords={ids => startQuiz(true, ids)} toggleFavorite={toggleFavorite} playWord={playWord} playExample={playExample} openCourse={() => changeView('course')} />} />}
+      renderReview={scenarios => <ReviewVocabulary words={reviewPool} progress={reviewProgress} favorites={favorites} favoriteWarning={favoriteState.warning} disabled={!!reviewWarning} speaking={speaking} speed={playbackSpeed} reviewButtonRef={reviewButton} scenarios={scenarios} startDue={() => startQuiz()} startWords={ids => startQuiz(true, ids)} toggleFavorite={toggleFavorite} playWord={playWord} playExample={playExample} preload={preloadProgrammingFiles} openCourse={() => changeView('course')} />} />}
     <main ref={libraryActive ? contentRef : undefined} className="content" id="vocabulary-content" hidden={!libraryActive}>
       <header ref={libraryActive ? headingRef : undefined} className="page-heading"><div className="page-heading-copy"><h1>{showingFavorites ? '收藏的单词' : '编程英语词汇库'}</h1></div></header>
       {favoriteState.warning && <p role="alert">{favoriteState.warning}</p>}
@@ -349,13 +359,13 @@ export default function Home() {
         {filtered.length ? <><section className="library-grid">{filtered.slice(0, listVisibleCount).map(item => {
           const learned = !!reviewProgress[item.id];
           const nextDue = learned ? Math.min(...reviewAbilities.map(ability => getSkill(reviewProgress, item.id, ability).dueAt)) : 0;
-          return <LibraryCard key={item.id} word={item.word} meaning={item.meaning} playLabel="朗读单词" playing={speaking === `word-${item.id}`} slowPlaying={speaking === `slow-${item.id}`} play={slow => playWord(item, slow, slow ? `slow-${item.id}` : undefined)}>
-            <VocabularyRow item={item} favorite={favorites.has(item.id)} favoriteDisabled={!!favoriteState.warning} speaking={speaking} speed={playbackSpeed} toggleFavorite={toggleFavorite} playWord={playWord} playExample={playExample} status={!learned ? '尚未学习' : reviewProgress[item.id].reviewReadyAt === 0 ? '正在学习' : nextDue <= Date.now() ? '待复习' : `下次复习 ${new Date(nextDue).toLocaleDateString('zh-CN', { month: 'numeric', day: 'numeric' })}`} />
+          return <LibraryCard key={item.id} word={item.word} meaning={item.meaning} playLabel="朗读单词" playing={speaking === `word-${item.id}`} slowPlaying={speaking === `slow-${item.id}`} play={slow => playWord(item, slow, slow ? `slow-${item.id}` : undefined)} audioFiles={[`word-${item.id}.mp3`]} preload={preloadProgrammingFiles}>
+            <VocabularyRow item={item} favorite={favorites.has(item.id)} favoriteDisabled={!!favoriteState.warning} speaking={speaking} speed={playbackSpeed} toggleFavorite={toggleFavorite} playWord={playWord} playExample={playExample} preload={preloadProgrammingFiles} status={!learned ? '尚未学习' : reviewProgress[item.id].reviewReadyAt === 0 ? '正在学习' : nextDue <= Date.now() ? '待复习' : `下次复习 ${new Date(nextDue).toLocaleDateString('zh-CN', { month: 'numeric', day: 'numeric' })}`} />
           </LibraryCard>;
         })}</section>{listVisibleCount < filtered.length && <div className="load-more-area"><button className="load-more" onClick={() => showingFavorites ? setFavoritesVisibleCount(count => count + 24) : setVisibleCount(count => count + 24)}>再显示 24 个<Icon name="chevron" /></button><span>已显示 {Math.min(listVisibleCount, filtered.length)} / {filtered.length.toLocaleString()}</span></div>}</> : <section className="empty-state"><Icon name={showingFavorites && !favoriteCount ? 'star' : 'search'} /><h2>{showingFavorites && !favoriteCount ? '还没有收藏单词' : '没有匹配的词汇'}</h2><p>{showingFavorites && !favoriteCount ? '在词条旁点亮星标，就能在这里找到。' : showingFavorites ? '试试其他关键词。' : '试试其他关键词，或调整筛选范围。'}</p><button onClick={() => showingFavorites && !favoriteCount ? changeView('library') : resetListFilters()}>{showingFavorites ? favoriteCount ? '查看全部收藏' : '去词汇库收藏' : '查看全部词汇'}</button></section>}
       </section>
     </main>
-    {dailyVisited && <DailyEnglish recordRef={dailyRecordRef} foundationHelp={foundationHelp} key={`daily-${syncRevision}`} active={section === 'daily'} view={dailyView} navigation={navigation} speed={playbackSpeed} speaking={speaking} play={playDaily} playFeedback={playFeedback} preload={preloadDaily} stopAudio={stopAudio} openLibrary={() => changeView('library')} contentRef={section === 'daily' ? contentRef : undefined} headingRef={section === 'daily' ? headingRef : undefined} />}
+    {dailyVisited && <DailyEnglish recordRef={dailyRecordRef} foundationHelp={foundationHelp} key={`daily-${syncRevision}`} active={section === 'daily'} view={dailyView} navigation={navigation} speed={playbackSpeed} speaking={speaking} play={playDaily} playFeedback={playFeedback} preload={preloadDaily} preloadVisible={preloadDailyFiles} stopAudio={stopAudio} openLibrary={() => changeView('library')} contentRef={section === 'daily' ? contentRef : undefined} headingRef={section === 'daily' ? headingRef : undefined} />}
     {section === 'foundation' && foundationReturn && <div className="content foundation-return"><button className="daily-button" onClick={() => { changeSection(foundationReturn); setFoundationReturn(null); }}>返回{foundationReturn === 'daily' ? '日常英语' : '编程英语'}</button></div>}
     {foundationVisited && <FoundationEnglish openTopic={openFoundation} request={foundationRequest} active={section === 'foundation'} view={foundationView} speaking={speaking} play={playFoundation} playDemo={playFoundationDemo} foundationError={foundationError} playPhoneme={playPhoneme} phonemeError={phonemeError} stopAudio={stopAudio} contentRef={section === 'foundation' ? contentRef : undefined} headingRef={section === 'foundation' ? headingRef : undefined} />}
     {showQuiz && <ReviewQuiz pool={quizPool} onClose={closeReview} onFinished={finishReview} playWord={playWord} playExample={playExample} playFeedback={playFeedback} stopAudio={stopAudio} speaking={speaking} speed={playbackSpeed} onSpeedChange={changeSpeed} openSettings={openSettings} />}

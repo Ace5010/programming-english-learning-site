@@ -1,0 +1,1019 @@
+[
+  {
+    "voice": "aria",
+    "text": "I am a student.",
+    "slow": true,
+    "events": [
+      {
+        "id": 34,
+        "type": "playing",
+        "url": "http://127.0.0.1:5186/audio/slow/aria/pack-v2-10.mp3?v=72bfcb2ad4f7a4c8",
+        "position": 11.456489,
+        "rate": 1,
+        "pitch": true,
+        "at": 1776,
+        "active": 1
+      },
+      {
+        "id": 34,
+        "type": "pause",
+        "url": "http://127.0.0.1:5186/audio/slow/aria/pack-v2-10.mp3?v=72bfcb2ad4f7a4c8",
+        "position": 12.22372,
+        "rate": 1,
+        "pitch": true,
+        "at": 2545.100000023842,
+        "active": 0
+      },
+      {
+        "id": 34,
+        "type": "playing",
+        "url": "http://127.0.0.1:5186/audio/slow/aria/pack-v2-28.mp3?v=2b748f6b9efb04a3",
+        "position": 1.38,
+        "rate": 1,
+        "pitch": true,
+        "at": 2671.2000000178814,
+        "active": 1
+      },
+      {
+        "id": 34,
+        "type": "pause",
+        "url": "http://127.0.0.1:5186/audio/slow/aria/pack-v2-28.mp3?v=2b748f6b9efb04a3",
+        "position": 2.377282,
+        "rate": 1,
+        "pitch": true,
+        "at": 3666.100000023842,
+        "active": 0
+      },
+      {
+        "id": 34,
+        "type": "playing",
+        "url": "http://127.0.0.1:5186/audio/slow/aria/pack-v2-23.mp3?v=c49c65ea82c3dc07",
+        "position": 3.52,
+        "rate": 1,
+        "pitch": true,
+        "at": 3789.800000011921,
+        "active": 1
+      },
+      {
+        "id": 34,
+        "type": "pause",
+        "url": "http://127.0.0.1:5186/audio/slow/aria/pack-v2-23.mp3?v=c49c65ea82c3dc07",
+        "position": 4.293333,
+        "rate": 1,
+        "pitch": true,
+        "at": 4558.200000017881,
+        "active": 0
+      },
+      {
+        "id": 34,
+        "type": "playing",
+        "url": "http://127.0.0.1:5186/audio/slow/aria/pack-v2-124.mp3?v=0b01acd80051b812",
+        "position": 6.64,
+        "rate": 1,
+        "pitch": true,
+        "at": 4684.5,
+        "active": 1
+      }
+    ]
+  },
+  {
+    "voice": "aria",
+    "text": "What's your name?",
+    "slow": true,
+    "events": [
+      {
+        "id": 38,
+        "type": "playing",
+        "url": "http://127.0.0.1:5186/audio/slow/aria/pack-v2-22.mp3?v=80159b8e78bade7f",
+        "position": 5.59,
+        "rate": 1,
+        "pitch": true,
+        "at": 6409.4000000059605,
+        "active": 1
+      },
+      {
+        "id": 38,
+        "type": "pause",
+        "url": "http://127.0.0.1:5186/audio/slow/aria/pack-v2-22.mp3?v=80159b8e78bade7f",
+        "position": 6.63,
+        "rate": 1,
+        "pitch": true,
+        "at": 7447,
+        "active": 0
+      },
+      {
+        "id": 38,
+        "type": "playing",
+        "url": "http://127.0.0.1:5186/audio/slow/aria/pack-v2-140.mp3?v=3de512fc30f254eb",
+        "position": 1.12,
+        "rate": 1,
+        "pitch": true,
+        "at": 7573.100000023842,
+        "active": 1
+      },
+      {
+        "id": 38,
+        "type": "pause",
+        "url": "http://127.0.0.1:5186/audio/slow/aria/pack-v2-140.mp3?v=3de512fc30f254eb",
+        "position": 2.081389,
+        "rate": 1,
+        "pitch": true,
+        "at": 8532.40000000596,
+        "active": 0
+      },
+      {
+        "id": 38,
+        "type": "playing",
+        "url": "http://127.0.0.1:5186/audio/slow/aria/pack-v2-93.mp3?v=8c93fa76afbd05c9",
+        "position": 40.29,
+        "rate": 1,
+        "pitch": true,
+        "at": 8656.800000011921,
+        "active": 1
+      }
+    ]
+  },
+  {
+    "voice": "aria",
+    "text": "We are students.",
+    "slow": true,
+    "events": [
+      {
+        "id": 54,
+        "type": "playing",
+        "url": "http://127.0.0.1:5186/audio/slow/aria/pack-v2-21.mp3?v=8b00cde599a0960e",
+        "position": 49.62,
+        "rate": 1,
+        "pitch": true,
+        "at": 9831.800000011921,
+        "active": 1
+      },
+      {
+        "id": 54,
+        "type": "pause",
+        "url": "http://127.0.0.1:5186/audio/slow/aria/pack-v2-21.mp3?v=8b00cde599a0960e",
+        "position": 50.473333,
+        "rate": 1,
+        "pitch": true,
+        "at": 10689.5,
+        "active": 0
+      },
+      {
+        "id": 54,
+        "type": "playing",
+        "url": "http://127.0.0.1:5186/audio/slow/aria/pack-v2-30.mp3?v=e130bc0a84d0648b",
+        "position": 42.51,
+        "rate": 1,
+        "pitch": true,
+        "at": 10813.200000017881,
+        "active": 1
+      },
+      {
+        "id": 54,
+        "type": "pause",
+        "url": "http://127.0.0.1:5186/audio/slow/aria/pack-v2-30.mp3?v=e130bc0a84d0648b",
+        "position": 43.44043,
+        "rate": 1,
+        "pitch": true,
+        "at": 11743.40000000596,
+        "active": 0
+      },
+      {
+        "id": 54,
+        "type": "playing",
+        "url": "http://127.0.0.1:5186/audio/slow/aria/pack-v2-124.mp3?v=0b01acd80051b812",
+        "position": 7.94,
+        "rate": 1,
+        "pitch": true,
+        "at": 11867.600000023842,
+        "active": 1
+      }
+    ]
+  },
+  {
+    "voice": "aria",
+    "text": "He is Ben. He is from China. He is a teacher.",
+    "slow": true,
+    "events": [
+      {
+        "id": 51,
+        "type": "playing",
+        "url": "http://127.0.0.1:5186/audio/slow/aria/pack-v2-9.mp3?v=081a0f562b17a57d",
+        "position": 26.476145,
+        "rate": 1,
+        "pitch": true,
+        "at": 13331.800000011921,
+        "active": 1
+      },
+      {
+        "id": 51,
+        "type": "pause",
+        "url": "http://127.0.0.1:5186/audio/slow/aria/pack-v2-9.mp3?v=081a0f562b17a57d",
+        "position": 27.291333,
+        "rate": 1,
+        "pitch": true,
+        "at": 14148,
+        "active": 0
+      },
+      {
+        "id": 51,
+        "type": "playing",
+        "url": "http://127.0.0.1:5186/audio/slow/aria/pack-v2-82.mp3?v=119b893ae70fd7b0",
+        "position": 21.17,
+        "rate": 1,
+        "pitch": true,
+        "at": 14273.5,
+        "active": 1
+      },
+      {
+        "id": 51,
+        "type": "pause",
+        "url": "http://127.0.0.1:5186/audio/slow/aria/pack-v2-82.mp3?v=119b893ae70fd7b0",
+        "position": 22.203184,
+        "rate": 1,
+        "pitch": true,
+        "at": 15305,
+        "active": 0
+      },
+      {
+        "id": 51,
+        "type": "playing",
+        "url": "http://127.0.0.1:5186/audio/slow/aria/pack-v2-3.mp3?v=1d8577c5e1d681dd",
+        "position": 24.56,
+        "rate": 1,
+        "pitch": true,
+        "at": 15428.5,
+        "active": 1
+      },
+      {
+        "id": 51,
+        "type": "pause",
+        "url": "http://127.0.0.1:5186/audio/slow/aria/pack-v2-3.mp3?v=1d8577c5e1d681dd",
+        "position": 25.459956,
+        "rate": 1,
+        "pitch": true,
+        "at": 16325.100000023842,
+        "active": 0
+      },
+      {
+        "id": 51,
+        "type": "playing",
+        "url": "http://127.0.0.1:5186/audio/slow/aria/pack-v2-9.mp3?v=081a0f562b17a57d",
+        "position": 26.47,
+        "rate": 1,
+        "pitch": true,
+        "at": 16701.30000001192,
+        "active": 1
+      },
+      {
+        "id": 51,
+        "type": "pause",
+        "url": "http://127.0.0.1:5186/audio/slow/aria/pack-v2-9.mp3?v=081a0f562b17a57d",
+        "position": 27.29826,
+        "rate": 1,
+        "pitch": true,
+        "at": 17532.80000001192,
+        "active": 0
+      },
+      {
+        "id": 51,
+        "type": "playing",
+        "url": "http://127.0.0.1:5186/audio/slow/aria/pack-v2-82.mp3?v=119b893ae70fd7b0",
+        "position": 21.17,
+        "rate": 1,
+        "pitch": true,
+        "at": 17656.5,
+        "active": 1
+      },
+      {
+        "id": 51,
+        "type": "pause",
+        "url": "http://127.0.0.1:5186/audio/slow/aria/pack-v2-82.mp3?v=119b893ae70fd7b0",
+        "position": 22.194,
+        "rate": 1,
+        "pitch": true,
+        "at": 18679.90000000596,
+        "active": 0
+      },
+      {
+        "id": 51,
+        "type": "playing",
+        "url": "http://127.0.0.1:5186/audio/slow/aria/pack-v2-71.mp3?v=5cec390be0b57601",
+        "position": 35.46,
+        "rate": 1,
+        "pitch": true,
+        "at": 18806.30000001192,
+        "active": 1
+      },
+      {
+        "id": 51,
+        "type": "pause",
+        "url": "http://127.0.0.1:5186/audio/slow/aria/pack-v2-71.mp3?v=5cec390be0b57601",
+        "position": 36.472818,
+        "rate": 1,
+        "pitch": true,
+        "at": 19816,
+        "active": 0
+      },
+      {
+        "id": 51,
+        "type": "playing",
+        "url": "http://127.0.0.1:5186/audio/slow/aria/pack-v2-5.mp3?v=a9ff9c3c3613e8dc",
+        "position": 8.33,
+        "rate": 1,
+        "pitch": true,
+        "at": 19939.90000000596,
+        "active": 1
+      },
+      {
+        "id": 51,
+        "type": "pause",
+        "url": "http://127.0.0.1:5186/audio/slow/aria/pack-v2-5.mp3?v=a9ff9c3c3613e8dc",
+        "position": 9.421659,
+        "rate": 1,
+        "pitch": true,
+        "at": 21024.70000001788,
+        "active": 0
+      },
+      {
+        "id": 51,
+        "type": "playing",
+        "url": "http://127.0.0.1:5186/audio/slow/aria/pack-v2-9.mp3?v=081a0f562b17a57d",
+        "position": 26.47,
+        "rate": 1,
+        "pitch": true,
+        "at": 21401.40000000596,
+        "active": 1
+      },
+      {
+        "id": 51,
+        "type": "pause",
+        "url": "http://127.0.0.1:5186/audio/slow/aria/pack-v2-9.mp3?v=081a0f562b17a57d",
+        "position": 27.292685,
+        "rate": 1,
+        "pitch": true,
+        "at": 22212.70000001788,
+        "active": 0
+      },
+      {
+        "id": 51,
+        "type": "playing",
+        "url": "http://127.0.0.1:5186/audio/slow/aria/pack-v2-82.mp3?v=119b893ae70fd7b0",
+        "position": 21.17,
+        "rate": 1,
+        "pitch": true,
+        "at": 22340.100000023842,
+        "active": 1
+      },
+      {
+        "id": 51,
+        "type": "pause",
+        "url": "http://127.0.0.1:5186/audio/slow/aria/pack-v2-82.mp3?v=119b893ae70fd7b0",
+        "position": 22.194214,
+        "rate": 1,
+        "pitch": true,
+        "at": 23361.30000001192,
+        "active": 0
+      },
+      {
+        "id": 51,
+        "type": "playing",
+        "url": "http://127.0.0.1:5186/audio/slow/aria/pack-v2-23.mp3?v=c49c65ea82c3dc07",
+        "position": 3.52,
+        "rate": 1,
+        "pitch": true,
+        "at": 23484.5,
+        "active": 1
+      },
+      {
+        "id": 51,
+        "type": "pause",
+        "url": "http://127.0.0.1:5186/audio/slow/aria/pack-v2-23.mp3?v=c49c65ea82c3dc07",
+        "position": 4.293333,
+        "rate": 1,
+        "pitch": true,
+        "at": 24258.20000001788,
+        "active": 0
+      },
+      {
+        "id": 51,
+        "type": "playing",
+        "url": "http://127.0.0.1:5186/audio/slow/aria/pack-v2-126.mp3?v=0a9fce93c21fd932",
+        "position": 44.68,
+        "rate": 1,
+        "pitch": true,
+        "at": 24385.5,
+        "active": 1
+      }
+    ]
+  },
+  {
+    "voice": "aria",
+    "text": "I am a student.",
+    "slow": false,
+    "events": [
+      {
+        "id": 42,
+        "type": "playing",
+        "url": "http://127.0.0.1:5186/audio/daily/aria/i-am-a-student.mp3?v=I+am+a+student.&audio=clear-20261101-v1",
+        "position": 0.042667,
+        "rate": 1,
+        "pitch": true,
+        "at": 25598.5,
+        "active": 1
+      },
+      {
+        "id": 42,
+        "type": "pause",
+        "url": "http://127.0.0.1:5186/audio/daily/aria/i-am-a-student.mp3?v=I+am+a+student.&audio=clear-20261101-v1",
+        "position": 1.968,
+        "rate": 1,
+        "pitch": true,
+        "at": 27522,
+        "active": 0
+      },
+      {
+        "id": 42,
+        "type": "ended",
+        "url": "http://127.0.0.1:5186/audio/daily/aria/i-am-a-student.mp3?v=I+am+a+student.&audio=clear-20261101-v1",
+        "position": 1.968,
+        "rate": 1,
+        "pitch": true,
+        "at": 27522.100000023842,
+        "active": 0
+      }
+    ]
+  },
+  {
+    "voice": "aria",
+    "text": "student",
+    "slow": true,
+    "events": [
+      {
+        "id": 45,
+        "type": "playing",
+        "url": "http://127.0.0.1:5186/audio/slow/aria/pack-v2-124.mp3?v=0b01acd80051b812",
+        "position": 6.669993,
+        "rate": 1,
+        "pitch": true,
+        "at": 27674.70000001788,
+        "active": 1
+      },
+      {
+        "id": 45,
+        "type": "pause",
+        "url": "http://127.0.0.1:5186/audio/slow/aria/pack-v2-124.mp3?v=0b01acd80051b812",
+        "position": 7.856746,
+        "rate": 1,
+        "pitch": true,
+        "at": 28862.20000001788,
+        "active": 0
+      }
+    ]
+  },
+  {
+    "voice": "aria",
+    "scenario": "double-tap and navigation cancellation",
+    "passed": true
+  },
+  {
+    "voice": "guy",
+    "text": "I am a student.",
+    "slow": true,
+    "events": [
+      {
+        "id": 34,
+        "type": "playing",
+        "url": "http://127.0.0.1:5186/audio/slow/guy/pack-v2-10.mp3?v=8a494efa861154bc",
+        "position": 10.840315,
+        "rate": 1,
+        "pitch": true,
+        "at": 1871.2999999821186,
+        "active": 1
+      },
+      {
+        "id": 34,
+        "type": "pause",
+        "url": "http://127.0.0.1:5186/audio/slow/guy/pack-v2-10.mp3?v=8a494efa861154bc",
+        "position": 11.538986,
+        "rate": 1,
+        "pitch": true,
+        "at": 2571.5,
+        "active": 0
+      },
+      {
+        "id": 34,
+        "type": "playing",
+        "url": "http://127.0.0.1:5186/audio/slow/guy/pack-v2-28.mp3?v=05ec22a3e545b077",
+        "position": 1.26,
+        "rate": 1,
+        "pitch": true,
+        "at": 2697.7999999821186,
+        "active": 1
+      },
+      {
+        "id": 34,
+        "type": "pause",
+        "url": "http://127.0.0.1:5186/audio/slow/guy/pack-v2-28.mp3?v=05ec22a3e545b077",
+        "position": 2.14122,
+        "rate": 1,
+        "pitch": true,
+        "at": 3577.5999999940395,
+        "active": 0
+      },
+      {
+        "id": 34,
+        "type": "playing",
+        "url": "http://127.0.0.1:5186/audio/slow/guy/pack-v2-23.mp3?v=46862b33f9fffc8d",
+        "position": 3.31,
+        "rate": 1,
+        "pitch": true,
+        "at": 3702.699999988079,
+        "active": 1
+      },
+      {
+        "id": 34,
+        "type": "pause",
+        "url": "http://127.0.0.1:5186/audio/slow/guy/pack-v2-23.mp3?v=46862b33f9fffc8d",
+        "position": 4.092884,
+        "rate": 1,
+        "pitch": true,
+        "at": 4480.5999999940395,
+        "active": 0
+      },
+      {
+        "id": 34,
+        "type": "playing",
+        "url": "http://127.0.0.1:5186/audio/slow/guy/pack-v2-124.mp3?v=44701d362ef400d3",
+        "position": 6.55,
+        "rate": 1,
+        "pitch": true,
+        "at": 4608.5,
+        "active": 1
+      }
+    ]
+  },
+  {
+    "voice": "guy",
+    "text": "What's your name?",
+    "slow": true,
+    "events": [
+      {
+        "id": 37,
+        "type": "playing",
+        "url": "http://127.0.0.1:5186/audio/slow/guy/pack-v2-22.mp3?v=fcbb8faf20f96bcd",
+        "position": 5.225397,
+        "rate": 1,
+        "pitch": true,
+        "at": 6366.5,
+        "active": 1
+      },
+      {
+        "id": 37,
+        "type": "pause",
+        "url": "http://127.0.0.1:5186/audio/slow/guy/pack-v2-22.mp3?v=fcbb8faf20f96bcd",
+        "position": 6.110072,
+        "rate": 1,
+        "pitch": true,
+        "at": 7251.299999982119,
+        "active": 0
+      },
+      {
+        "id": 37,
+        "type": "playing",
+        "url": "http://127.0.0.1:5186/audio/slow/guy/pack-v2-140.mp3?v=837049be5720b047",
+        "position": 1.03,
+        "rate": 1,
+        "pitch": true,
+        "at": 7380.299999982119,
+        "active": 1
+      },
+      {
+        "id": 37,
+        "type": "pause",
+        "url": "http://127.0.0.1:5186/audio/slow/guy/pack-v2-140.mp3?v=837049be5720b047",
+        "position": 1.924462,
+        "rate": 1,
+        "pitch": true,
+        "at": 8270.399999976158,
+        "active": 0
+      },
+      {
+        "id": 37,
+        "type": "playing",
+        "url": "http://127.0.0.1:5186/audio/slow/guy/pack-v2-93.mp3?v=d08ca600b0cd6f87",
+        "position": 40.45,
+        "rate": 1,
+        "pitch": true,
+        "at": 8398.5,
+        "active": 1
+      }
+    ]
+  },
+  {
+    "voice": "guy",
+    "text": "We are students.",
+    "slow": true,
+    "events": [
+      {
+        "id": 54,
+        "type": "playing",
+        "url": "http://127.0.0.1:5186/audio/slow/guy/pack-v2-21.mp3?v=86bd746916597566",
+        "position": 49.39,
+        "rate": 1,
+        "pitch": true,
+        "at": 9544.199999988079,
+        "active": 1
+      },
+      {
+        "id": 54,
+        "type": "pause",
+        "url": "http://127.0.0.1:5186/audio/slow/guy/pack-v2-21.mp3?v=86bd746916597566",
+        "position": 50.254124,
+        "rate": 1,
+        "pitch": true,
+        "at": 10407,
+        "active": 0
+      },
+      {
+        "id": 54,
+        "type": "playing",
+        "url": "http://127.0.0.1:5186/audio/slow/guy/pack-v2-30.mp3?v=d44aabf8906ac531",
+        "position": 44.19,
+        "rate": 1,
+        "pitch": true,
+        "at": 10531.899999976158,
+        "active": 1
+      },
+      {
+        "id": 54,
+        "type": "pause",
+        "url": "http://127.0.0.1:5186/audio/slow/guy/pack-v2-30.mp3?v=d44aabf8906ac531",
+        "position": 45.095963,
+        "rate": 1,
+        "pitch": true,
+        "at": 11431.5,
+        "active": 0
+      },
+      {
+        "id": 54,
+        "type": "playing",
+        "url": "http://127.0.0.1:5186/audio/slow/guy/pack-v2-124.mp3?v=44701d362ef400d3",
+        "position": 8.02,
+        "rate": 1,
+        "pitch": true,
+        "at": 11556.09999999404,
+        "active": 1
+      }
+    ]
+  },
+  {
+    "voice": "guy",
+    "text": "He is Ben. He is from China. He is a teacher.",
+    "slow": true,
+    "events": [
+      {
+        "id": 51,
+        "type": "playing",
+        "url": "http://127.0.0.1:5186/audio/slow/guy/pack-v2-9.mp3?v=572ac7931d078409",
+        "position": 26.49,
+        "rate": 1,
+        "pitch": true,
+        "at": 13089.09999999404,
+        "active": 1
+      },
+      {
+        "id": 51,
+        "type": "pause",
+        "url": "http://127.0.0.1:5186/audio/slow/guy/pack-v2-9.mp3?v=572ac7931d078409",
+        "position": 27.267821,
+        "rate": 1,
+        "pitch": true,
+        "at": 13871.299999982119,
+        "active": 0
+      },
+      {
+        "id": 51,
+        "type": "playing",
+        "url": "http://127.0.0.1:5186/audio/slow/guy/pack-v2-82.mp3?v=4530388727916834",
+        "position": 21.93,
+        "rate": 1,
+        "pitch": true,
+        "at": 15024.59999999404,
+        "active": 1
+      },
+      {
+        "id": 51,
+        "type": "pause",
+        "url": "http://127.0.0.1:5186/audio/slow/guy/pack-v2-82.mp3?v=4530388727916834",
+        "position": 22.692667,
+        "rate": 1,
+        "pitch": true,
+        "at": 15785.299999982119,
+        "active": 0
+      },
+      {
+        "id": 51,
+        "type": "playing",
+        "url": "http://127.0.0.1:5186/audio/slow/guy/pack-v2-3.mp3?v=9926104b1cf5e73a",
+        "position": 24.36,
+        "rate": 1,
+        "pitch": true,
+        "at": 15909.5,
+        "active": 1
+      },
+      {
+        "id": 51,
+        "type": "pause",
+        "url": "http://127.0.0.1:5186/audio/slow/guy/pack-v2-3.mp3?v=9926104b1cf5e73a",
+        "position": 25.224,
+        "rate": 1,
+        "pitch": true,
+        "at": 16776.29999998212,
+        "active": 0
+      },
+      {
+        "id": 51,
+        "type": "playing",
+        "url": "http://127.0.0.1:5186/audio/slow/guy/pack-v2-9.mp3?v=572ac7931d078409",
+        "position": 26.49,
+        "rate": 1,
+        "pitch": true,
+        "at": 17153.399999976158,
+        "active": 1
+      },
+      {
+        "id": 51,
+        "type": "pause",
+        "url": "http://127.0.0.1:5186/audio/slow/guy/pack-v2-9.mp3?v=572ac7931d078409",
+        "position": 27.258359,
+        "rate": 1,
+        "pitch": true,
+        "at": 17917.399999976158,
+        "active": 0
+      },
+      {
+        "id": 51,
+        "type": "playing",
+        "url": "http://127.0.0.1:5186/audio/slow/guy/pack-v2-82.mp3?v=4530388727916834",
+        "position": 21.93,
+        "rate": 1,
+        "pitch": true,
+        "at": 18044.399999976158,
+        "active": 1
+      },
+      {
+        "id": 51,
+        "type": "pause",
+        "url": "http://127.0.0.1:5186/audio/slow/guy/pack-v2-82.mp3?v=4530388727916834",
+        "position": 22.690347,
+        "rate": 1,
+        "pitch": true,
+        "at": 18799.899999976158,
+        "active": 0
+      },
+      {
+        "id": 51,
+        "type": "playing",
+        "url": "http://127.0.0.1:5186/audio/slow/guy/pack-v2-71.mp3?v=96930bdf841e16bf",
+        "position": 35.3,
+        "rate": 1,
+        "pitch": true,
+        "at": 18926,
+        "active": 1
+      },
+      {
+        "id": 51,
+        "type": "pause",
+        "url": "http://127.0.0.1:5186/audio/slow/guy/pack-v2-71.mp3?v=96930bdf841e16bf",
+        "position": 36.382493,
+        "rate": 1,
+        "pitch": true,
+        "at": 20001.899999976158,
+        "active": 0
+      },
+      {
+        "id": 51,
+        "type": "playing",
+        "url": "http://127.0.0.1:5186/audio/slow/guy/pack-v2-5.mp3?v=3f3974d7450d5406",
+        "position": 8.22,
+        "rate": 1,
+        "pitch": true,
+        "at": 20127.899999976158,
+        "active": 1
+      },
+      {
+        "id": 51,
+        "type": "pause",
+        "url": "http://127.0.0.1:5186/audio/slow/guy/pack-v2-5.mp3?v=3f3974d7450d5406",
+        "position": 9.195334,
+        "rate": 1,
+        "pitch": true,
+        "at": 21101.69999998808,
+        "active": 0
+      },
+      {
+        "id": 51,
+        "type": "playing",
+        "url": "http://127.0.0.1:5186/audio/slow/guy/pack-v2-9.mp3?v=572ac7931d078409",
+        "position": 26.49,
+        "rate": 1,
+        "pitch": true,
+        "at": 21475.5,
+        "active": 1
+      },
+      {
+        "id": 51,
+        "type": "pause",
+        "url": "http://127.0.0.1:5186/audio/slow/guy/pack-v2-9.mp3?v=572ac7931d078409",
+        "position": 27.259989,
+        "rate": 1,
+        "pitch": true,
+        "at": 22238.79999998212,
+        "active": 0
+      },
+      {
+        "id": 51,
+        "type": "playing",
+        "url": "http://127.0.0.1:5186/audio/slow/guy/pack-v2-82.mp3?v=4530388727916834",
+        "position": 21.93,
+        "rate": 1,
+        "pitch": true,
+        "at": 22367.899999976158,
+        "active": 1
+      },
+      {
+        "id": 51,
+        "type": "pause",
+        "url": "http://127.0.0.1:5186/audio/slow/guy/pack-v2-82.mp3?v=4530388727916834",
+        "position": 22.689894,
+        "rate": 1,
+        "pitch": true,
+        "at": 23129.399999976158,
+        "active": 0
+      },
+      {
+        "id": 51,
+        "type": "playing",
+        "url": "http://127.0.0.1:5186/audio/slow/guy/pack-v2-23.mp3?v=46862b33f9fffc8d",
+        "position": 3.31,
+        "rate": 1,
+        "pitch": true,
+        "at": 23254,
+        "active": 1
+      },
+      {
+        "id": 51,
+        "type": "pause",
+        "url": "http://127.0.0.1:5186/audio/slow/guy/pack-v2-23.mp3?v=46862b33f9fffc8d",
+        "position": 4.083333,
+        "rate": 1,
+        "pitch": true,
+        "at": 24025.59999999404,
+        "active": 0
+      },
+      {
+        "id": 51,
+        "type": "playing",
+        "url": "http://127.0.0.1:5186/audio/slow/guy/pack-v2-126.mp3?v=16747a68a739d8b3",
+        "position": 42.99,
+        "rate": 1,
+        "pitch": true,
+        "at": 24151.69999998808,
+        "active": 1
+      }
+    ]
+  },
+  {
+    "voice": "guy",
+    "text": "I am a student.",
+    "slow": false,
+    "events": [
+      {
+        "id": 42,
+        "type": "playing",
+        "url": "http://127.0.0.1:5186/audio/daily/guy/i-am-a-student.mp3?v=I+am+a+student.&audio=clear-20261101-v1",
+        "position": 0.048,
+        "rate": 1,
+        "pitch": true,
+        "at": 25495.79999998212,
+        "active": 1
+      },
+      {
+        "id": 42,
+        "type": "pause",
+        "url": "http://127.0.0.1:5186/audio/daily/guy/i-am-a-student.mp3?v=I+am+a+student.&audio=clear-20261101-v1",
+        "position": 2.016,
+        "rate": 1,
+        "pitch": true,
+        "at": 27457.09999999404,
+        "active": 0
+      },
+      {
+        "id": 42,
+        "type": "ended",
+        "url": "http://127.0.0.1:5186/audio/daily/guy/i-am-a-student.mp3?v=I+am+a+student.&audio=clear-20261101-v1",
+        "position": 2.016,
+        "rate": 1,
+        "pitch": true,
+        "at": 27457.09999999404,
+        "active": 0
+      }
+    ]
+  },
+  {
+    "voice": "guy",
+    "text": "student",
+    "slow": true,
+    "events": [
+      {
+        "id": 45,
+        "type": "playing",
+        "url": "http://127.0.0.1:5186/audio/slow/guy/pack-v2-124.mp3?v=44701d362ef400d3",
+        "position": 6.590858,
+        "rate": 1,
+        "pitch": true,
+        "at": 27630.69999998808,
+        "active": 1
+      },
+      {
+        "id": 45,
+        "type": "pause",
+        "url": "http://127.0.0.1:5186/audio/slow/guy/pack-v2-124.mp3?v=44701d362ef400d3",
+        "position": 7.927719,
+        "rate": 1,
+        "pitch": true,
+        "at": 28969,
+        "active": 0
+      }
+    ]
+  },
+  {
+    "voice": "guy",
+    "scenario": "double-tap and navigation cancellation",
+    "passed": true
+  },
+  {
+    "scenario": "multiword vocabulary",
+    "events": [
+      {
+        "id": 53,
+        "type": "playing",
+        "url": "http://127.0.0.1:5186/audio/slow/aria/pack-v2-106.mp3?v=e5f0b6a67a73a02f",
+        "position": 26.13,
+        "rate": 1,
+        "pitch": true,
+        "at": 1677.4000000059605,
+        "active": 1
+      },
+      {
+        "id": 53,
+        "type": "pause",
+        "url": "http://127.0.0.1:5186/audio/slow/aria/pack-v2-106.mp3?v=e5f0b6a67a73a02f",
+        "position": 27.028038,
+        "rate": 1,
+        "pitch": true,
+        "at": 2788.800000011921,
+        "active": 0
+      },
+      {
+        "id": 53,
+        "type": "playing",
+        "url": "http://127.0.0.1:5186/audio/slow/aria/pack-v2-110.mp3?v=5a217b732b37db21",
+        "position": 41.06,
+        "rate": 1,
+        "pitch": true,
+        "at": 2926.800000011921,
+        "active": 1
+      }
+    ]
+  },
+  {
+    "scenario": "real second-word HTTP failure stops the task",
+    "events": [
+      {
+        "id": 34,
+        "type": "playing",
+        "url": "http://127.0.0.1:5186/audio/slow/aria/pack-v2-10.mp3?v=72bfcb2ad4f7a4c8",
+        "position": 11.436572,
+        "rate": 1,
+        "pitch": true,
+        "at": 1699.4000000059605,
+        "active": 1
+      },
+      {
+        "id": 34,
+        "type": "pause",
+        "url": "http://127.0.0.1:5186/audio/slow/aria/pack-v2-10.mp3?v=72bfcb2ad4f7a4c8",
+        "position": 12.214029,
+        "rate": 1,
+        "pitch": true,
+        "at": 2517.600000023842,
+        "active": 0
+      }
+    ],
+    "errors": [
+      "这次读音未能播放，请再点一次。"
+    ]
+  }
+]

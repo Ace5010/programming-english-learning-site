@@ -30,7 +30,7 @@ test('lossless units keep contractions, inflections, currency, acronyms, filenam
 });
 test('one task keeps playing and sync busy through gaps, reuses one element and ends once', t => {
   const e = setup(t); e.player.playQueue(clips, .72, 'sentence');
-  const audio = e.elements.at(-1); assert.equal(audio.currentTime,.1); audio.onplaying();
+  const audio = e.elements.find(item => !item.paused); assert.equal(audio.currentTime,.1); audio.onplaying();
   audio.currentTime=.6; t.mock.timers.tick(15);
   assert.equal(e.player.isBusy,true); assert.equal(e.events.at(-1),'sentence'); assert.equal(e.busy.at(-1),true);
   t.mock.timers.tick(179); assert.equal(audio.plays,1);
@@ -40,7 +40,7 @@ test('one task keeps playing and sync busy through gaps, reuses one element and 
   assert.equal(e.player.isBusy,false); assert.equal(e.busy.filter(x=>x).length,1); assert.deepEqual(e.errors,[]);
 });
 test('cancel in a gap and stale completion/rejection cannot resurrect or stop the next request', async t => {
-  const e=setup(t); e.player.playQueue(clips,.72,'old'); const audio=e.elements.at(-1);
+  const e=setup(t); e.player.playQueue(clips,.72,'old'); const audio=e.elements.find(item => !item.paused);
   audio.onplaying(); const oldEnded=audio.onended, reject=audio.reject;
   audio.currentTime=.6; t.mock.timers.tick(15); e.player.play('normal',1,'new');
   const current=e.elements.at(-1); current.onplaying(); oldEnded(); reject(new Error('stale'));
@@ -48,10 +48,91 @@ test('cancel in a gap and stale completion/rejection cannot resurrect or stop th
   assert.equal(audio.plays,1); assert.equal(e.events.at(-1),'new'); assert.deepEqual(e.errors,[]);
 });
 test('second-segment rejection fails the whole task, never skipping or falling back', async t => {
-  const e=setup(t); e.player.playQueue(clips,.72,'sentence'); const audio=e.elements.at(-1);
+  const e=setup(t); e.player.playQueue(clips,.72,'sentence'); const audio=e.elements.find(item => !item.paused);
   audio.onplaying(); audio.currentTime=.6; t.mock.timers.tick(15); t.mock.timers.tick(180);
   audio.reject(new Error('not allowed')); await Promise.resolve();
   assert.deepEqual(e.errors,['sentence']); assert.equal(e.player.isBusy,false);
+});
+test('a warmed single-word clip reuses its seeked element, including the next tap', t => {
+  const e = setup(t), clip = clips[1];
+  e.player.preloadQueue([clip]);
+  const warmed = e.elements[0];
+  warmed.onloadedmetadata?.();
+  assert.equal(warmed.currentTime, 5, 'warm the actual segment, not only the start of the pack');
+  e.player.playQueue([clip], 1, 'word');
+  assert.equal(e.elements.length, 1, 'a click must not create a second network request');
+  assert.equal(warmed.plays, 1);
+  warmed.onplaying(); warmed.currentTime = 5.4; t.mock.timers.tick(15);
+  e.player.playQueue([clip], 1, 'word');
+  assert.equal(e.elements.length, 1, 'keep the loaded recording after completion');
+  assert.equal(warmed.plays, 2);
+});
+test('queue reuse never leaves the old URL pointing at a different recording', t => {
+  const e = setup(t);
+  e.player.preloadQueue(clips);
+  const first = e.elements[0];
+  e.player.playQueue(clips, 1, 'sentence');
+  assert.equal(first.plays, 1);
+  first.onplaying(); first.currentTime = .6; t.mock.timers.tick(15); t.mock.timers.tick(180);
+  assert.equal(first.src, 'second');
+  e.player.stop();
+  e.player.play('first', 1, 'first-again');
+  const playing = e.elements.find(audio => !audio.paused);
+  assert.equal(playing.src, 'first');
+});
+test('background queue warmup does not seek the recording being played', t => {
+  const e = setup(t);
+  e.player.playQueue([clips[0]], 1, 'word');
+  const audio = e.elements.at(-1);
+  audio.onplaying(); audio.currentTime = .3;
+  const metadataHandler = audio.onloadedmetadata;
+  e.player.preloadQueue([{...clips[0], startMs: 10000, endMs: 11000}]);
+  assert.equal(audio.onloadedmetadata, metadataHandler);
+  assert.equal(audio.currentTime, .3);
+});
+function webPacks(t, fetch) {
+  const revoked = []; let next = 0;
+  globalThis.document = {baseURI:'https://example.test/'};
+  t.after(() => { delete globalThis.document; });
+  t.mock.method(globalThis, 'fetch', fetch);
+  t.mock.method(URL, 'createObjectURL', () => `blob:pack-${next++}`);
+  t.mock.method(URL, 'revokeObjectURL', url => revoked.push(url));
+  return revoked;
+}
+const flushDownloads = () => new Promise(resolve => setImmediate(resolve));
+const mp3Response = () => ({ok:true, blob:async () => new Blob(['mp3'], {type:'audio/mpeg'})});
+test('a pending web download cannot restart a cancelled queue', async t => {
+  let resolve;
+  webPacks(t, () => new Promise(done => {resolve = done;}));
+  const e = setup(t);
+  e.player.playQueue([clips[0]], 1, 'old'); e.player.stop();
+  resolve(mp3Response());
+  await flushDownloads();
+  assert.equal(e.elements.some(audio => audio.plays > 0), false);
+  assert.deepEqual(e.errors, []);
+  assert.equal(e.player.isBusy, false);
+});
+test('web pack download failure reports once and the next click retries', async t => {
+  let downloads = 0;
+  webPacks(t, async () => ++downloads === 1 ? {ok:false} : mp3Response());
+  const e = setup(t);
+  e.player.playQueue([clips[0]], 1, 'word'); await flushDownloads();
+  assert.deepEqual(e.errors, ['word']); assert.equal(downloads, 1);
+  e.player.playQueue([clips[0]], 1, 'word'); await flushDownloads();
+  assert.equal(downloads, 2);
+  assert.equal(e.elements.find(audio => !audio.paused).src, 'blob:pack-0');
+});
+test('web pack memory is bounded and disposal revokes retained Blob URLs', async t => {
+  const revoked = webPacks(t, async () => mp3Response());
+  const e = setup(t);
+  for (let i = 0; i < 18; i++) {
+    e.player.preloadQueue([{...clips[0], url:`https://example.test/pack-${i}`}]);
+    await flushDownloads();
+  }
+  assert.equal(revoked.length, 2);
+  assert.equal(e.elements.filter(audio => audio.src).length, 16);
+  e.player.dispose();
+  assert.equal(revoked.length, 18);
 });
 test('native queue gaps remain active; errors and timeouts do not replay the sentence on web', t => {
   let callback, stopped=0;

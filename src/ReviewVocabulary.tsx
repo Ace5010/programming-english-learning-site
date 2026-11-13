@@ -21,13 +21,14 @@ interface Props {
   toggleFavorite: (id: number) => void;
   playWord: (item: VocabularyItem, slow?: boolean, key?: string) => void;
   playExample: (item: VocabularyItem, slow?: boolean, key?: string) => void;
+  preload?: (files: string[]) => void;
   openCourse: () => void;
 }
 
 const abilityLabels = { meaning: '词义', context: '语境', spelling: '拼写', listening: '听力' };
 type Filter = 'all' | 'due' | 'weak' | 'scheduled';
 
-export default function ReviewVocabulary({ words, progress, favorites, favoriteWarning, disabled, speaking, speed, reviewButtonRef, scenarios, startDue, startWords, toggleFavorite, playWord, playExample, openCourse }: Props) {
+export default function ReviewVocabulary({ words, progress, favorites, favoriteWarning, disabled, speaking, speed, reviewButtonRef, scenarios, startDue, startWords, toggleFavorite, playWord, playExample, preload, openCourse }: Props) {
   const [query, setQuery] = useState('');
   const [filter, setFilter] = useState<Filter>('all');
   const [page, setPage] = useState(1);
@@ -69,7 +70,7 @@ export default function ReviewVocabulary({ words, progress, favorites, favoriteW
         <div className="list-guide" ref={listRef} tabIndex={-1}><span role="status">{filtered.length} 个词</span>{pagination}</div>
         {filtered.length ? <>
 
-          <div className="word-grid">{filtered.slice((currentPage - 1) * pageSize, currentPage * pageSize).map(({ item, weak, due, nextDue }) => <VocabularyRow key={item.id} item={item} favorite={favorites.has(item.id)} favoriteDisabled={!!favoriteWarning} speaking={speaking} speed={speed} toggleFavorite={toggleFavorite} playWord={playWord} playExample={playExample}
+          <div className="word-grid">{filtered.slice((currentPage - 1) * pageSize, currentPage * pageSize).map(({ item, weak, due, nextDue }) => <VocabularyRow key={item.id} item={item} favorite={favorites.has(item.id)} favoriteDisabled={!!favoriteWarning} speaking={speaking} speed={speed} toggleFavorite={toggleFavorite} playWord={playWord} playExample={playExample} preload={preload}
             status={<><span className={due ? 'review-due' : ''}>{due ? '待复习' : `下次复习 ${new Date(nextDue).toLocaleDateString('zh-CN', { month: 'numeric', day: 'numeric' })}`}</span>{weak.length > 0 && <span className="review-weak">需巩固：{weak.map(ability => abilityLabels[ability]).join('、')}</span>}</>}
             action={<button className="daily-button review-word-action" disabled={disabled} onClick={() => startWords([item.id])} aria-label={`练习 ${item.word}`}>练习</button>} />)}</div>
           {pagination}

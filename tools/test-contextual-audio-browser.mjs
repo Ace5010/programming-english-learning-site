@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import {createRequire} from 'node:module';
 import {mkdir,writeFile} from 'node:fs/promises';
 import {contextualReadingQueue} from '../src/contextualReading.ts';
+import {observeAudioSources} from './helpers/audio-source-observer.mjs';
 const require=createRequire(import.meta.url);
 const {chromium}=require(process.env.CODEWORDS_PLAYWRIGHT || 'C:/Users/shenwuqiang/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
 const base=process.env.CODEWORDS_TEST_URL || 'http://localhost:5186/';
@@ -12,6 +13,7 @@ const browser=await chromium.launch({channel:'chrome',headless:true,args:['--no-
 try {
   for(const voice of ['aria','guy']) {
     const context=await browser.newContext();const page=await context.newPage();const errors=[];page.on('pageerror',e=>errors.push(e.message));
+    await page.addInitScript(observeAudioSources);
     await page.goto(base);await page.getByRole('navigation',{name:'学习导航'}).waitFor();
     await page.evaluate(async({voice,cases})=>{
       const {mount}=await import('/tools/helpers/contextual-audio-harness.mjs');mount(voice,cases);

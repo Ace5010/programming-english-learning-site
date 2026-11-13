@@ -17,6 +17,10 @@ python tools/generate_neural_audio.py --workers 8
 
 所有音频经 App 的同一播放入口处理，沿用 `codewords-playback-speed` 供既有自动播放和语音设置使用。正常／慢速点击不会重建题目、不清除答案或学习记录。当前卡片、复习、语境读音和慢读分别由 `test-programming-word-check-browser.mjs`、`test-daily-review-availability-browser.mjs`、`test-contextual-audio-browser.mjs`、`test-slow-audio-browser.mjs` 验证。旧 `test-local-audio-controls-browser.mjs` 仍有旧列表／课程定位器，`artifacts/audio-speed/` 仅记录历史方案。
 
+在线点读的词库、收藏及编程复习列表通过 `useAudioWarmup` 提前加载进入视口及上下 240px 内的普通录音。慢速／语境音频包在浏览器中先完整下载为临时 Blob，再定位对应片段；这样即使静态站点向 Range 请求返回 200，也能播放正确的单词。音频包内存缓存通常最多 16 个，当前语句使用的包保留到播放结束后的缓存淘汰；播放器缓存最多 32 项，单个音频包上限 4 MiB。卸载播放器时释放缓存，失败下载可重试。安卓本地资源继续使用原生队列或本地 asset loader。
+
+`public/_headers` 为音频设置一天的浏览器缓存，并仅在媒体来源中允许 `blob:`；录音改版继续使用既有文本／音频版本参数。线上延迟回归运行 `node tools/test-audio-latency-browser.mjs`（先构建），使用隔离浏览器、真实 MP3 和每次未缓存请求 900ms 的模拟延迟，检查正确片段、完整播放、滚动预加载、切换声线及学习记录不变。验收记录见 `artifacts/audio-latency-20261112/verification.md`。
+
 双速选择参考[多邻国官方听力说明](https://blog.duolingo.com/covering-all-the-bases-duolingos-approach-to-listening-skills/)中的正常播放与慢速按钮。慢速取值由用户于 2026-11-01 对比 0.72 / 0.60 倍样音后选定为 0.60；对应独立合成参数 `-40%`，词间及句间停顿不变。音标、固定示范和单文件备用播放使用 0.60 倍保音高播放。
 
 ## 更新例句与录音
